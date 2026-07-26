@@ -531,7 +531,7 @@
     let data = [];
 
     async function init() {
-      const res = await fetch('./dist/sf-locations.json');
+      const res = await fetch('./data/locations.json');
       data = await res.json();
 
       document.getElementById('stat-total').textContent = data.length.toLocaleString();

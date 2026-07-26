@@ -145,8 +145,8 @@ function resolveRegion(district) {
 
 // ─── Data sources ───────────────────────────────────────────────────────
 async function fetchFromOfficialApi() {
-  console.log('Fetching locations from SF Express official API...');
-  const url = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=tc&region=hk';
+  console.log('Fetching locations from SF Express official API (lang=hk)...');
+  const url = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=hk&region=hk';
 
   const response = await fetch(url, {
     method: 'POST',

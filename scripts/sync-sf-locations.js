@@ -74,6 +74,7 @@ function cleanAndConvert(str, preserveAsterisk = true) {
     .replace(/平臺/g, '平台')
     .replace(/月臺/g, '月台')
     .replace(/幹洗/g, '乾洗')
+    .replace(/舖/g, '鋪')
     .replace(/廣福[裏裡]/g, '廣福里')
     .replace(/文明[裏裡]/g, '文明里')
     .replace(/大榮[裏裡]/g, '大榮里')

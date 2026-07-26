@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-07-26 23:17 (HKT UTC+8)",
+  "retrieved_at": "2026-07-26 23:18 (HKT UTC+8)",
   "count": 1478,
   "data": [
     {
@@ -21782,9 +21782,9 @@
     },
     {
       "serviceCode": "852PA2009",
-      "name": "OK便利店 (鰂魚湧)",
+      "name": "OK便利店 (鰂魚涌)",
       "address": "香港海光街13-15號海光苑地下16號舖",
-      "district": "鰂魚湧",
+      "district": "鰂魚涌",
       "city": "",
       "serviceTime": "24小時",
       "isPartner": true,
@@ -23245,9 +23245,9 @@
     },
     {
       "serviceCode": "852GH2001",
-      "name": "OK便利店 (東湧)",
-      "address": "新界東湧逸東街8號逸東邨逸東商場地下4號舖",
-      "district": "東湧",
+      "name": "OK便利店 (東涌)",
+      "address": "新界東涌逸東街8號逸東邨逸東商場地下4號舖",
+      "district": "東涌",
       "city": "",
       "serviceTime": "24小時",
       "isPartner": true,
@@ -24522,7 +24522,7 @@
     {
       "serviceCode": "852G2007",
       "name": "OK便利店 ()",
-      "address": "大嶼山東湧健東路1號映灣園映灣薈地面1號舖",
+      "address": "大嶼山東涌健東路1號映灣園映灣薈地面1號舖",
       "district": "",
       "city": "",
       "serviceTime": "06:30-23:30",
@@ -24533,7 +24533,7 @@
     {
       "serviceCode": "852G2020",
       "name": "OK便利店 ()",
-      "address": "大嶼山東湧健東路1號映灣園映灣薈地面一樓31號舖",
+      "address": "大嶼山東涌健東路1號映灣園映灣薈地面一樓31號舖",
       "district": "",
       "city": "",
       "serviceTime": "24小時",
@@ -24818,8 +24818,8 @@
     },
     {
       "serviceCode": "852PA3012",
-      "name": "鰂魚湧海光自提點",
-      "address": "香港鰂魚湧海光商場2A3號舖",
+      "name": "鰂魚涌海光自提點",
+      "address": "香港鰂魚涌海光商場2A3號舖",
       "district": "",
       "city": "",
       "serviceTime": "星期一至六: 12:00-19:30 星期日、公眾假期:12:00-16:00",
@@ -25478,8 +25478,8 @@
     },
     {
       "serviceCode": "852GH3013",
-      "name": "東湧極拚自提點",
-      "address": "香港東湧健東路1號映灣園映灣薈1樓6B號鋪",
+      "name": "東涌極拚自提點",
+      "address": "香港東涌健東路1號映灣園映灣薈1樓6B號鋪",
       "district": "",
       "city": "",
       "serviceTime": "星期一至日: 11:00-22:00 公眾假期: 休息",
@@ -25655,7 +25655,7 @@
     {
       "serviceCode": "852DA3003",
       "name": "荔景祖堯點",
-      "address": "葵湧荔景念祖街1號祖堯坊A座1樓A103號",
+      "address": "葵涌荔景念祖街1號祖堯坊A座1樓A103號",
       "district": "",
       "city": "",
       "serviceTime": "星期一至五:11:00-20:00 星期六：12:00-20：00 星期日、公眾假期: 休息",

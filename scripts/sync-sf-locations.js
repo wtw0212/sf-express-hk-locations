@@ -73,7 +73,14 @@ function cleanAndConvert(str, preserveAsterisk = true) {
     .replace(/天後/g, '天后')
     .replace(/平臺/g, '平台')
     .replace(/月臺/g, '月台')
-    .replace(/幹洗/g, '乾洗');
+    .replace(/幹洗/g, '乾洗')
+    .replace(/廣福[裏裡]/g, '廣福里')
+    .replace(/文明[裏裡]/g, '文明里')
+    .replace(/大榮[裏裡]/g, '大榮里')
+    .replace(/禾葵[裏裡]/g, '禾葵里')
+    .replace(/偉智[裏裡]/g, '偉智里')
+    .replace(/優景[裏裡]/g, '優景里')
+    .replace(/翔盈[裏裡]/g, '翔盈里');
 
   if (hasAsterisk) {
     result += '*';

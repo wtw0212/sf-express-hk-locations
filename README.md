@@ -1,4 +1,4 @@
-> 📅 **最後更新時間 (Last Updated)**: `2026-07-26 23:35 (HKT UTC+8)`
+> 📅 **最後更新時間 (Last Updated)**: `2026-07-27 01:12 (HKT UTC+8)`
 
 # 🚚 香港順豐速運自提點 / 順豐站 / 智能櫃資料集
 # SF Express Hong Kong Stores & Lockers Dataset (Bilingual 中英雙語)

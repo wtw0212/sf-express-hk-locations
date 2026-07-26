@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>香港順豐自提點查詢 | SF Express HK Locations</title>
+  <meta name="description" content="香港順豐速運自提點、順豐站、智能櫃、合作點完整查詢表。每日自動更新。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --border: #e5e5e5;
+      --border-light: #f0f0f0;
+      --text: #171717;
+      --text-secondary: #737373;
+      --text-tertiary: #a3a3a3;
+      --accent: #e11d48;
+      --tag-store-bg: #dbeafe;
+      --tag-store-text: #1e40af;
+      --tag-locker-bg: #d1fae5;
+      --tag-locker-text: #065f46;
+      --tag-partner-bg: #ede9fe;
+      --tag-partner-text: #5b21b6;
+      --hover: #f5f5f5;
+      --radius: 8px;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Sans TC', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+
+    .site-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+
+    .site-subtitle {
+      font-size: 11px;
+      color: var(--text-tertiary);
+    }
+
+    .header-right a {
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: all 0.15s;
+    }
+
+    .header-right a:hover {
+      background: var(--hover);
+      color: var(--text);
+    }
+
+    /* Main */
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+    }
+
+    .stat-value {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.5px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 20px;
+      background: var(--border);
+    }
+
+    #last-updated {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      margin-left: auto;
+    }
+
+    /* Filters */
+    .filters {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .search-wrap svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      color: var(--text-tertiary);
+    }
+
+    .search-wrap input {
+      width: 100%;
+      padding: 8px 12px 8px 32px;
+      font-size: 13px;
+      font-family: inherit;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .search-wrap input::placeholder {
+      color: var(--text-tertiary);
+    }
+
+    .search-wrap input:focus {
+      border-color: var(--text-secondary);
+    }
+
+    .filters select {
+      padding: 8px 28px 8px 10px;
+      font-size: 13px;
+      font-family: inherit;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a3a3a3' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 8px center;
+      transition: border-color 0.15s;
+    }
+
+    .filters select:focus {
+      border-color: var(--text-secondary);
+    }
+
+    /* Result count */
+    .result-info {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-bottom: 8px;
+      padding: 0 2px;
+    }
+
+    .result-info strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Table */
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      table-layout: fixed;
+    }
+
+    /* Fixed column widths */
+    col.w-code    { width: 110px; }
+    col.w-type    { width: 80px; }
+    col.w-name    { width: 180px; }
+    col.w-district{ width: 80px; }
+    col.w-address { width: auto; }
+    col.w-hours   { width: 180px; }
+    col.w-action  { width: 60px; }
+
+    thead th {
+      background: #f9fafb;
+      border-bottom: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border-light);
+      transition: background 0.1s;
+    }
+
+    tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: var(--hover);
+    }
+
+    tbody td {
+      padding: 10px 14px;
+      vertical-align: top;
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .col-code {
+      font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .col-code:hover {
+      text-decoration: underline;
+    }
+
+    .col-name {
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .col-address {
+      color: var(--text-secondary);
+      font-size: 12px;
+      word-break: break-all;
+    }
+
+    .col-district {
+      white-space: nowrap;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .col-hours {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      word-break: break-word;
+    }
+
+    /* Type tags */
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .tag-store {
+      background: var(--tag-store-bg);
+      color: var(--tag-store-text);
+    }
+
+    .tag-locker {
+      background: var(--tag-locker-bg);
+      color: var(--tag-locker-text);
+    }
+
+    .tag-partner {
+      background: var(--tag-partner-bg);
+      color: var(--tag-partner-text);
+    }
+
+    /* Copy button */
+    .copy-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: 11px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+
+    .copy-btn:hover {
+      background: var(--hover);
+      border-color: var(--text-secondary);
+      color: var(--text);
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-tertiary);
+      font-size: 14px;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--text);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all 0.2s;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 24px;
+      font-size: 11px;
+      color: var(--text-tertiary);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-inner { padding: 12px 16px; }
+      main { padding: 16px; }
+      .stats-bar { gap: 16px; }
+      .stat-value { font-size: 16px; }
+      #last-updated { margin-left: 0; width: 100%; }
+      .filters { flex-direction: column; }
+      .search-wrap { min-width: 100%; }
+
+      .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      table { min-width: 800px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="logo">SF</div>
+        <div>
+          <div class="site-title">香港順豐自提點查詢</div>
+          <div class="site-subtitle">SF Express HK Pickup Locations</div>
+        </div>
+      </div>
+      <div class="header-right">
+        <a href="https://github.com/wtw0212/sf-express-hk-locations" target="_blank">GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="stat-total">—</span>
+        <span class="stat-label">全部</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value" id="stat-stores">—</span>
+        <span class="stat-label">順豐站</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value" id="stat-lockers">—</span>
+        <span class="stat-label">智能櫃</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value" id="stat-partners">—</span>
+        <span class="stat-label">合作點</span>
+      </div>
+      <span id="last-updated"></span>
+    </div>
+
+    <div class="filters">
+      <div class="search-wrap">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" id="search" placeholder="搜尋點碼、名稱或地址…" />
+      </div>
+      <select id="filter-type">
+        <option value="all">全部類型</option>
+        <option value="store">順豐站</option>
+        <option value="locker">智能櫃</option>
+        <option value="partner">合作點</option>
+      </select>
+      <select id="filter-district">
+        <option value="all">全部地區</option>
+      </select>
+    </div>
+
+    <div class="result-info">顯示 <strong id="result-count">0</strong> 筆結果</div>
+
+    <div class="table-wrap">
+      <table>
+        <colgroup>
+          <col class="w-code" />
+          <col class="w-type" />
+          <col class="w-name" />
+          <col class="w-district" />
+          <col class="w-address" />
+          <col class="w-hours" />
+          <col class="w-action" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>點碼</th>
+            <th>類型</th>
+            <th>名稱</th>
+            <th>地區</th>
+            <th>地址</th>
+            <th>營業時間</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    資料來源：<a href="https://hk.sf-express.com" target="_blank">順豐速運官方</a> · 每日自動同步 · <a href="https://github.com/wtw0212/sf-express-hk-locations" target="_blank">GitHub Repo</a>
+  </footer>
+
+  <div class="toast" id="toast">已複製</div>
+
+  <script>
+    let data = [];
+
+    async function init() {
+      const res = await fetch('./dist/sf-locations.json');
+      data = await res.json();
+
+      document.getElementById('stat-total').textContent = data.length.toLocaleString();
+      document.getElementById('stat-stores').textContent = data.filter(d => d.type === 'store').length.toLocaleString();
+      document.getElementById('stat-lockers').textContent = data.filter(d => d.type === 'locker').length.toLocaleString();
+      document.getElementById('stat-partners').textContent = data.filter(d => d.type === 'partner').length.toLocaleString();
+
+      if (data.length && data[0].retrieved_at) {
+        document.getElementById('last-updated').textContent = '更新：' + data[0].retrieved_at;
+      }
+
+      const districts = [...new Set(data.map(d => d.district).filter(Boolean))].sort();
+      const sel = document.getElementById('filter-district');
+      districts.forEach(d => {
+        const o = document.createElement('option');
+        o.value = d;
+        o.textContent = d;
+        sel.appendChild(o);
+      });
+
+      render();
+
+      document.getElementById('search').addEventListener('input', render);
+      document.getElementById('filter-type').addEventListener('change', render);
+      document.getElementById('filter-district').addEventListener('change', render);
+    }
+
+    function render() {
+      const q = document.getElementById('search').value.trim().toLowerCase();
+      const type = document.getElementById('filter-type').value;
+      const district = document.getElementById('filter-district').value;
+
+      const filtered = data.filter(item => {
+        if (type !== 'all' && item.type !== type) return false;
+        if (district !== 'all' && item.district !== district) return false;
+        if (q) {
+          return (item.code || '').toLowerCase().includes(q)
+            || (item.name || '').toLowerCase().includes(q)
+            || (item.address || '').toLowerCase().includes(q);
+        }
+        return true;
+      });
+
+      document.getElementById('result-count').textContent = filtered.length.toLocaleString();
+
+      const tbody = document.getElementById('tbody');
+
+      if (!filtered.length) {
+        tbody.innerHTML = '<tr><td colspan="7" class="empty-state">找不到符合條件的結果</td></tr>';
+        return;
+      }
+
+      const rows = filtered.slice(0, 300);
+      tbody.innerHTML = rows.map(item => {
+        const tagClass = item.type === 'store' ? 'tag-store' : item.type === 'locker' ? 'tag-locker' : 'tag-partner';
+        const tagLabel = item.type === 'store' ? '順豐站' : item.type === 'locker' ? '智能櫃' : '合作點';
+        const safeAddr = (item.address || '').replace(/'/g, "\\'");
+        const safeName = (item.name || '').replace(/'/g, "\\'");
+        const copyStr = `[${item.code}] ${safeName} — ${safeAddr}`;
+
+        return `<tr>
+          <td class="col-code" title="點擊複製" onclick="copy('${item.code}')">${item.code}</td>
+          <td><span class="tag ${tagClass}">${tagLabel}</span></td>
+          <td class="col-name">${item.name || ''}</td>
+          <td class="col-district">${item.district || ''}</td>
+          <td class="col-address">${item.address || ''}</td>
+          <td class="col-hours">${item.business_hours || ''}</td>
+          <td><button class="copy-btn" onclick="copy('${copyStr.replace(/'/g, "\\'")}')">複製</button></td>
+        </tr>`;
+      }).join('');
+    }
+
+    function copy(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        const t = document.getElementById('toast');
+        t.textContent = '已複製';
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 1500);
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>

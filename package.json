@@ -1,0 +1,22 @@
+{
+  "name": "sf-express-hk-locations",
+  "version": "1.0.0",
+  "description": "Automated dataset and lookup website for SF Express Hong Kong Stores and Lockers",
+  "main": "scripts/sync-sf-locations.js",
+  "scripts": {
+    "sync": "node scripts/sync-sf-locations.js"
+  },
+  "keywords": [
+    "sf-express",
+    "hong-kong",
+    "stores",
+    "lockers",
+    "locations"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "opencc-js": "^1.0.5",
+    "pdf-parse": "^1.1.1"
+  }
+}

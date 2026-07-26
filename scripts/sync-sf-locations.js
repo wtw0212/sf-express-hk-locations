@@ -64,7 +64,12 @@ function cleanAndConvert(str, preserveAsterisk = true) {
     .replace(/节假日/g, '公眾假期')
     .replace(/劳工假期/g, '勞工假期')
     .replace(/自助櫃/g, '順豐智能櫃')
-    .replace(/自助柜/g, '順豐智能櫃');
+    .replace(/自助柜/g, '順豐智能櫃')
+    .replace(/皇後/g, '皇后')
+    .replace(/天後/g, '天后')
+    .replace(/平臺/g, '平台')
+    .replace(/月臺/g, '月台')
+    .replace(/幹洗/g, '乾洗');
 
   if (hasAsterisk) {
     result += '*';

@@ -21,6 +21,34 @@ const DISTRICT_TO_REGION = {
   '北區': '新界', '大埔區': '新界', '沙田區': '新界', '西貢區': '新界', '離島區': '新界'
 };
 
+const REGION_EN_MAP = {
+  '香港島': 'Hong Kong Island',
+  '九龍': 'Kowloon',
+  '新界': 'New Territories',
+  '離島': 'Outlying Islands'
+};
+
+const DISTRICT_EN_MAP = {
+  '中西區': 'Central and Western District',
+  '灣仔區': 'Wan Chai District',
+  '東區': 'Eastern District',
+  '南區': 'Southern District',
+  '油尖旺區': 'Yau Tsim Mong District',
+  '深水埗區': 'Sham Shui Po District',
+  '九龍城區': 'Kowloon City District',
+  '黃大仙區': 'Wong Tai Sin District',
+  '觀塘區': 'Kwun Tong District',
+  '葵青區': 'Kwai Tsing District',
+  '荃灣區': 'Tsuen Wan District',
+  '屯門區': 'Tuen Mun District',
+  '元朗區': 'Yuen Long District',
+  '北區': 'North District',
+  '大埔區': 'Tai Po District',
+  '沙田區': 'Sha Tin District',
+  '西貢區': 'Sai Kung District',
+  '離島區': 'Islands District'
+};
+
 const VALID_DISTRICTS = new Set(Object.keys(DISTRICT_TO_REGION));
 
 // API city field often has the district name without 區 suffix — build a lookup
@@ -144,7 +172,7 @@ function resolveRegion(district) {
 }
 
 // ─── Data sources ───────────────────────────────────────────────────────
-async function fetchFromOfficialApi() {
+async function fetchFromOfficialApiHk() {
   console.log('Fetching locations from SF Express official API (lang=hk)...');
   const url = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=hk&region=hk';
 
@@ -170,6 +198,39 @@ async function fetchFromOfficialApi() {
   }
 
   return data.result;
+}
+
+async function fetchFromOfficialApiEn() {
+  console.log('Fetching locations from SF Express official API (lang=en)...');
+  const url = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=en&region=hk';
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Referer': 'https://hk.sf-express.com/hk/en/store',
+        'Origin': 'https://hk.sf-express.com'
+      },
+      body: JSON.stringify({})
+    });
+
+    if (!response.ok) return new Map();
+    const data = await response.json();
+    if (!data.success || !Array.isArray(data.result)) return new Map();
+
+    const enMap = new Map();
+    data.result.forEach(item => {
+      const code = item.serviceCode || item.code;
+      if (code) enMap.set(code, item);
+    });
+    return enMap;
+  } catch (e) {
+    console.warn('Warning: Could not fetch EN API:', e.message);
+    return new Map();
+  }
 }
 
 async function fetchFromSsrPages() {
@@ -424,11 +485,12 @@ async function run() {
   console.log(`Current HKT Time: ${hktDateStr}`);
 
   try {
-    const rawApiList = await fetchFromOfficialApi();
+    const rawApiList = await fetchFromOfficialApiHk();
+    const rawApiEnMap = await fetchFromOfficialApiEn();
     const rawSsrList = await fetchFromSsrPages();
     const { partners: rawPartnerList, pdfSuccessCount, pdfFailCount, pdfTotal } = await fetchFromPartnerPdfs();
 
-    console.log(`Fetched ${rawApiList.length} items from API, ${rawSsrList.length} items from SSR pages, ${rawPartnerList.length} items from Partner PDFs.`);
+    console.log(`Fetched ${rawApiList.length} items from HK API (${rawApiEnMap.size} EN API matches), ${rawSsrList.length} items from SSR pages, ${rawPartnerList.length} items from Partner PDFs.`);
 
     // Source failure check: if ALL partner PDFs failed, abort
     if (pdfTotal > 0 && pdfSuccessCount === 0) {
@@ -480,19 +542,34 @@ async function run() {
       const name = cleanAndConvert(rawName, false);
       const address = cleanAndConvert(rawAddress, true);
 
-      // District/region: use API city field directly (review fix #1)
+      // District/region
       const district = resolveDistrict(item);
       const region = resolveRegion(district);
 
+      const districtEn = district ? (DISTRICT_EN_MAP[district] || null) : null;
+      const regionEn = region ? (REGION_EN_MAP[region] || null) : null;
+
+      // English fields from EN API
+      const enItem = rawApiEnMap.get(code);
+      const nameEn = enItem ? (enItem.name || '').trim() : null;
+      let addressEn = enItem ? (enItem.address || '').trim() : null;
+      if (addressEn) {
+        addressEn = addressEn.replace(/\*\^/g, '*').replace(/\^/g, '').trim();
+      }
+      const businessHoursEn = enItem ? (enItem.serviceTime || '').trim() : null;
+
       let type = 'store';
       let type_name = '順豐站';
+      let type_name_en = 'SF Store';
 
       if (code.startsWith('H852') || name.includes('智能櫃') || rawName.includes('自助櫃') || rawName.includes('自助柜')) {
         type = 'locker';
         type_name = '順豐智能櫃';
+        type_name_en = 'SF Locker';
       } else if (item.isPartner || name.includes('OK便利店') || name.includes('合作點') || name.includes('便利店') || code.match(/852[A-Z]{1,2}[23]\d{3}/)) {
         type = 'partner';
         type_name = '順豐合作點';
+        type_name_en = 'Service Partner';
       }
 
       const rawHours = item.serviceTime;
@@ -503,13 +580,19 @@ async function run() {
         code: code,
         type: type,
         type_name: type_name,
+        type_name_en: type_name_en,
         name: name,
+        name_en: nameEn,
         region: region,
+        region_en: regionEn,
         district: district,
+        district_en: districtEn,
         sub_district: cleanAndConvert(item.district || '', false) || null,
         address: address || null,
+        address_en: addressEn,
         telephone: item.telephone || null,
         business_hours: businessHours,
+        business_hours_en: businessHoursEn,
         location: {
           latitude: item.latitude || null,
           longitude: item.longitude || null

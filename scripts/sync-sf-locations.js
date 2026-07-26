@@ -552,6 +552,7 @@ async function run() {
       // English fields from EN API
       const enItem = rawApiEnMap.get(code);
       const nameEn = enItem ? (enItem.name || '').trim() : null;
+      const subDistrictEn = enItem ? (enItem.district || '').trim() : null;
       let addressEn = enItem ? (enItem.address || '').trim() : null;
       if (addressEn) {
         addressEn = addressEn.replace(/\*\^/g, '*').replace(/\^/g, '').trim();
@@ -588,6 +589,7 @@ async function run() {
         district: district,
         district_en: districtEn,
         sub_district: cleanAndConvert(item.district || '', false) || null,
+        sub_district_en: subDistrictEn,
         address: address || null,
         address_en: addressEn,
         telephone: item.telephone || null,

@@ -1,4 +1,4 @@
-> 📅 **最後更新時間 (Last Updated)**: `2026-07-26 23:32 (HKT UTC+8)`
+> 📅 **最後更新時間 (Last Updated)**: `2026-07-26 23:35 (HKT UTC+8)`
 
 # 🚚 香港順豐速運自提點 / 順豐站 / 智能櫃資料集
 # SF Express Hong Kong Stores & Lockers Dataset (Bilingual 中英雙語)
@@ -59,6 +59,7 @@ async function getSFLocations() {
   "district": "大埔區",
   "district_en": "Tai Po District",
   "sub_district": "大埔",
+  "sub_district_en": "Tai Po",
   "address": "香港大埔區大埔同茂坊1及3號北翼地鋪*",
   "address_en": "G/F, North Wing ,1 & 3 Tung Mau Square*,Tai Po,Tai Po District,Hong Kong",
   "telephone": "98160449",
@@ -69,7 +70,7 @@ async function getSFLocations() {
     "longitude": 114.167336
   },
   "source": "api",
-  "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+  "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
 }
 ```
 

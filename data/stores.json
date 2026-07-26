@@ -12,6 +12,7 @@
     "district": "大埔區",
     "district_en": "Tai Po District",
     "sub_district": "大埔",
+    "sub_district_en": "Tai Po",
     "address": "香港大埔區大埔同茂坊1及3號北翼地鋪*",
     "address_en": "G/F, North Wing ,1 & 3 Tung Mau Square*,Tai Po,Tai Po District,Hong Kong",
     "telephone": "98160449",
@@ -22,7 +23,7 @@
       "longitude": 114.167336
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852BA",
@@ -37,6 +38,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "太子",
+    "sub_district_en": "Prince Edward",
     "address": "香港油尖旺區太子汝州街58號地下*",
     "address_en": "G/F, 58 Yu Chau Street*,Prince Edward,Yau Tsim Mong District,Hong Kong",
     "telephone": "64635742",
@@ -47,7 +49,7 @@
       "longitude": 114.1657536
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852BB",
@@ -62,6 +64,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "油麻地",
+    "sub_district_en": "Yau Ma Tei",
     "address": "香港油尖旺區油麻地廣東道831號金華大廈B座地下B1鋪*",
     "address_en": "Shop B1, G/F, Kam Wah Building, No. 831 Canton Road*,Yau Ma Tei,Yau Tsim Mong District,Hong Kong",
     "telephone": "64426542",
@@ -72,7 +75,7 @@
       "longitude": 114.168363
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852BD",
@@ -87,6 +90,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "大角咀",
+    "sub_district_en": "Tai Kok Tsui",
     "address": "香港油尖旺區大角咀櫸樹街 15-21號華源工廠大廈地下5號鋪*",
     "address_en": "Shop 5, G/F, Wah Yuen Factory Building, Nos.15-21 Beech Street*,Tai Kok Tsui,Yau Tsim Mong District,Hong Kong",
     "telephone": "61478643",
@@ -97,7 +101,7 @@
       "longitude": 114.163071
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852BE",
@@ -112,6 +116,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "旺角",
+    "sub_district_en": "Mong Kok",
     "address": "香港油尖旺區旺角黑布街15號地鋪*",
     "address_en": "Ground Floor, 15 Hak Po Street*,Mong Kok,Yau Tsim Mong District,Hong Kong",
     "telephone": "65049838",
@@ -122,7 +127,7 @@
       "longitude": 114.17258
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852BF",
@@ -137,6 +142,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "旺角",
+    "sub_district_en": "Mong Kok",
     "address": "香港油尖旺區旺角上海街683號地下*",
     "address_en": "G/F, No. 683 Shanghai Street*,Mong Kok,Yau Tsim Mong District,Hong Kong",
     "telephone": "93299413",
@@ -147,7 +153,7 @@
       "longitude": 114.16729
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852C",
@@ -162,6 +168,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
     "address": "香港觀塘區觀塘偉業街170號豐業大廈B地鋪*",
     "address_en": "Room B, G/F, Fung Yip Industrial Building, No. 170 Wai Yip Street*,Kwun Tong,Kwun Tong District,Hong Kong",
     "telephone": "65082396",
@@ -172,7 +179,7 @@
       "longitude": 114.220582
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852CAB",
@@ -187,6 +194,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
     "address": "香港觀塘區觀塘鴻圖道80號鴻圖工業大廈地下1號鋪*",
     "address_en": "Workshop No. 1, G/F, Hung To Industrial Building, No. 80 Hung To Road*,Kwun Tong,Kwun Tong District,Hong Kong",
     "telephone": "96605766",
@@ -197,7 +205,7 @@
       "longitude": 114.224233
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852CAC",
@@ -212,6 +220,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
     "address": "香港觀塘區觀塘巧明街112號友聯大廈地倉*",
     "address_en": "G/F, Union Building, No. 112 How Ming Street*,Kwun Tong,Kwun Tong District,Hong Kong",
     "telephone": "67911149",
@@ -222,7 +231,7 @@
       "longitude": 114.224082
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852CAD",
@@ -237,6 +246,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "油塘",
+    "sub_district_en": "Yau Tong",
     "address": "香港觀塘區油塘仁宇圍味千集團大廈B座地庫(蔚藍東岸對面)*",
     "address_en": "B/F(Opposite to Montego Bay), Block B, Ajisen Group Tower, Yan Yue Wai*,Yau Tong,Kwun Tong District,Hong Kong",
     "telephone": "60255685",
@@ -247,7 +257,7 @@
       "longitude": 114.236609
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852D",
@@ -262,6 +272,7 @@
     "district": "深水埗區",
     "district_en": "Sham Shui Po District",
     "sub_district": "荔枝角",
+    "sub_district_en": "Lai Chi Kok",
     "address": "香港深水埗區荔枝角永康街24&26號順昌工業大廈地下A鋪*",
     "address_en": "Unit A, G/F, Shun Cheung Industrial Building, No. 24 & 26 Wing Hong Street*,Lai Chi Kok,Sham Shui Po District,Hong Kong",
     "telephone": "67911226",
@@ -272,7 +283,7 @@
       "longitude": 114.14937
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852DA",
@@ -287,6 +298,7 @@
     "district": "深水埗區",
     "district_en": "Sham Shui Po District",
     "sub_district": "長沙灣",
+    "sub_district_en": "Cheung Sha Wan",
     "address": "香港深水埗區長沙灣香港九龍長沙灣長順街19號楊耀松第六工業大廈地下A鋪*",
     "address_en": "Factory A, G/F, Yeung Yiu Chung (No.6) Industrial Building, No.19 Cheung Shun Street, Cheung Sha Wan, Sham Shui Po District, Kowloon, Hong Kong*,Cheung Sha Wan,Sham Shui Po District,Hong Kong",
     "telephone": "51349252",
@@ -297,7 +309,7 @@
       "longitude": 114.1469397
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852DB",
@@ -312,6 +324,7 @@
     "district": "深水埗區",
     "district_en": "Sham Shui Po District",
     "sub_district": "荔枝角",
+    "sub_district_en": "Lai Chi Kok",
     "address": "香港深水埗區荔枝角永康街37號福源廣場地下A2鋪*",
     "address_en": "Unit A2, G/F, Ford Glory Plaza, No. 37 Wing Hong Street*,Lai Chi Kok,Sham Shui Po District,Hong Kong",
     "telephone": "96811096",
@@ -322,7 +335,7 @@
       "longitude": 114.146761
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852E",
@@ -337,6 +350,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
     "address": "香港油尖旺區尖沙咀漆鹹道南11-15號餘仁生中心地下A, B及C鋪*",
     "address_en": "Unit A, B & C, G/F, Eu Yan Sang Tower, Nos. 11-15 Chatham Road South*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
     "telephone": "98639179",
@@ -347,7 +361,7 @@
       "longitude": 114.17512
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852EA",
@@ -362,6 +376,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "佐敦",
+    "sub_district_en": "Jordan",
     "address": "香港油尖旺區佐敦廟街271號地下*",
     "address_en": "G/F, Wah Hing Building, No. 271 Temple Street*,Jordan,Yau Tsim Mong District,Hong Kong",
     "telephone": "62755824",
@@ -372,7 +387,7 @@
       "longitude": 114.169562
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852EB",
@@ -387,6 +402,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
     "address": "香港油尖旺區尖沙咀麼地道75號南洋中心UG層21&22室*",
     "address_en": "Unit no. 21-22 on Upper Ground Floor, South Seas Centre, 75 Mody Road*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
     "telephone": "64681576",
@@ -397,7 +413,7 @@
       "longitude": 114.178759
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852ED",
@@ -412,6 +428,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
     "address": "香港油尖旺區尖沙咀廣東道28號力寶太陽廣場310室*",
     "address_en": "Unit 310, 3/F., Lippo Sun Plaza, No. 28 Canton Road*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
     "telephone": "64634748",
@@ -422,7 +439,7 @@
       "longitude": 114.169772
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852EE",
@@ -437,6 +454,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
     "address": "香港油尖旺區尖沙咀漆鹹圍10-12號意公寓地下商鋪*",
     "address_en": "Shop on Ground Floor, Yi Serviced Apartments, 10-12 Chatham Court*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
     "telephone": "63297805",
@@ -447,7 +465,7 @@
       "longitude": 114.1760179
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852F",
@@ -462,6 +480,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "火炭",
+    "sub_district_en": "Fo Tan",
     "address": "香港沙田區火炭坳背灣街53-55號美高工業大廈地下B室*",
     "address_en": "Workshop B, G/F, Mecco Industrial Building, No. 53-55 Au Pui Wan Street*,Fo Tan,Sha Tin District,Hong Kong",
     "telephone": "64681516",
@@ -472,7 +491,7 @@
       "longitude": 114.193514
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FB",
@@ -487,6 +506,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "沙田",
+    "sub_district_en": "Sha Tin",
     "address": "香港沙田區沙田安平街6號新貿中心B座地下7號*",
     "address_en": "Workshop 7 on G/F, New Trade Plaza, No. 6 On Ping Street*,Sha Tin,Sha Tin District,Hong Kong",
     "telephone": "64682330",
@@ -497,7 +517,7 @@
       "longitude": 114.207053
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FE",
@@ -512,6 +532,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "沙田",
+    "sub_district_en": "Sha Tin",
     "address": "香港沙田區沙田源順圍5-7號沙田工業中心B座地下16室*",
     "address_en": "Workshop 16 on G/F of Block B, Shatin Industrial Centre, Nos. 5-7 Yuen Shun Circuit*,Sha Tin,Sha Tin District,Hong Kong",
     "telephone": "64686834",
@@ -522,7 +543,7 @@
       "longitude": 114.20611
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FH",
@@ -537,6 +558,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "火炭",
+    "sub_district_en": "Fo Tan",
     "address": "香港沙田區火炭牛湖托街華樂工業中心2期UG樓C5室*",
     "address_en": "Workshop C5 on UG/F, Wah Lok Industrial Centre(Phase II),Ngau Wu Tok Street, Fo Tan*,Fo Tan,Sha Tin District,Hong Kong",
     "telephone": "94522651",
@@ -547,7 +569,7 @@
       "longitude": 114.191268
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852G",
@@ -562,6 +584,7 @@
     "district": "荃灣區",
     "district_en": "Tsuen Wan District",
     "sub_district": "荃灣",
+    "sub_district_en": "Tsuen Wan",
     "address": "香港荃灣區荃灣沙咀道26-38號匯力工業中心地下7號鋪*",
     "address_en": "Room 7& 8B, G/F, Thriving Industrial Centre, No. 26-38 Sha Tsui Road*,Tsuen Wan,Tsuen Wan District,Hong Kong",
     "telephone": "64634785",
@@ -572,7 +595,7 @@
       "longitude": 114.108459
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852GA",
@@ -587,6 +610,7 @@
     "district": "荃灣區",
     "district_en": "Tsuen Wan District",
     "sub_district": "荃灣",
+    "sub_district_en": "Tsuen Wan",
     "address": "香港荃灣區荃灣楊屋道127-135號金銘聯閤中心地下*",
     "address_en": "G/F, Crowning-United Centre,127-135 Yeung Uk Road*,Tsuen Wan,Tsuen Wan District,Hong Kong",
     "telephone": "64609537",
@@ -597,7 +621,7 @@
       "longitude": 114.11798
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852GH",
@@ -612,6 +636,7 @@
     "district": "葵青區",
     "district_en": "Kwai Tsing District",
     "sub_district": "青衣",
+    "sub_district_en": "Tsing Yi",
     "address": "香港葵青區青衣長隆街青衣工業中心1期B座地下G樓B2室*",
     "address_en": "Workshop Nos. B2, G/F, Tsing Yi Industrial Centre Phase 1, Cheung Lung Street*,Tsing Yi,Kwai Tsing District,Hong Kong",
     "telephone": "64688873",
@@ -622,7 +647,7 @@
       "longitude": 114.110186
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852H",
@@ -637,6 +662,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "九龍灣",
+    "sub_district_en": "Kowloon Bay",
     "address": "香港觀塘區九龍灣臨興街19號同力工業中心B座地下*",
     "address_en": "G/F, Block B, Tonic Industrial Centre, No. 19 Lam Hing Street*,Kowloon Bay,Kwun Tong District,Hong Kong",
     "telephone": "60826831",
@@ -647,7 +673,7 @@
       "longitude": 114.210307
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852HC",
@@ -662,6 +688,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "九龍灣",
+    "sub_district_en": "Kowloon Bay",
     "address": "香港觀塘區九龍灣宏泰道12號榮發工業大廈地下5號鋪*",
     "address_en": "Workshop No. 5, G/F, Wing Fat Industrial Building, No. 12 Wang Tai Road*,Kowloon Bay,Kwun Tong District,Hong Kong",
     "telephone": "56814976",
@@ -672,7 +699,7 @@
       "longitude": 114.209156
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852HD",
@@ -687,6 +714,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
     "address": "香港觀塘區觀塘偉業街103號振邦工業大廈地下*",
     "address_en": "G/F, Peter Leung Industrial Building , No. 103 Wai Yip Street*,Kwun Tong,Kwun Tong District,Hong Kong",
     "telephone": "64685585",
@@ -697,7 +725,7 @@
       "longitude": 114.215414
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852J",
@@ -712,6 +740,7 @@
     "district": "黃大仙區",
     "district_en": "Wong Tai Sin District",
     "sub_district": "新蒲崗",
+    "sub_district_en": "San Po Kong",
     "address": "香港黃大仙區新蒲崗九龍雙喜街5號福和工業大廈地下*",
     "address_en": "G/F, Fuk Wo Industrial Building, No. 5 Sheung Hei Street*,San Po Kong,Wong Tai Sin District,Hong Kong",
     "telephone": "97005361",
@@ -722,7 +751,7 @@
       "longitude": 114.198043
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852K",
@@ -737,6 +766,7 @@
     "district": "九龍城區",
     "district_en": "Kowloon City District",
     "sub_district": "紅磡",
+    "sub_district_en": "Hung Hom",
     "address": "香港九龍城區紅磡鶴園街2G號恆豐工業大廈2期地下A2室*",
     "address_en": "Room A2, G/F, Phase 2, Hang Fung Industrial Building, 2G Hok Yuen Street*,Hung Hom,Kowloon City District,Hong Kong",
     "telephone": "64634943",
@@ -747,7 +777,7 @@
       "longitude": 114.188795
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852L",
@@ -762,6 +792,7 @@
     "district": "葵青區",
     "district_en": "Kwai Tsing District",
     "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
     "address": "香港葵青區葵涌大連排道葵昌路1-7號禎昌工業大廈地下C鋪*",
     "address_en": "Workshop C, G/F, Ching Cheong Industrial Building, No. 1-7 Kwai Cheong Road*,Kwai Chung,Kwai Tsing District,Hong Kong",
     "telephone": "94191937",
@@ -772,7 +803,7 @@
       "longitude": 114.134068
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852LA",
@@ -787,6 +818,7 @@
     "district": "葵青區",
     "district_en": "Kwai Tsing District",
     "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
     "address": "香港葵青區葵涌打磚坪街68號和豐工業大廈地下6號6B室*",
     "address_en": "Sub-Unit 06B, Unit 6, G/F, Well Fung Industrial Centre, No. 68 Ta Chuen Ping Street*,Kwai Chung,Kwai Tsing District,Hong Kong",
     "telephone": "65753413",
@@ -797,7 +829,7 @@
       "longitude": 114.13694
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852LB",
@@ -812,6 +844,7 @@
     "district": "葵青區",
     "district_en": "Kwai Tsing District",
     "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
     "address": "香港葵青區葵涌貨櫃碼頭路71-75號鍾意恆勝中心地下3室*",
     "address_en": "Unit 3, G/F, Join In Hang Sing Centre, 71-75 Container Port Rd*,Kwai Chung,Kwai Tsing District,Hong Kong",
     "telephone": "55001079",
@@ -822,7 +855,7 @@
       "longitude": 114.125078
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852LC",
@@ -837,6 +870,7 @@
     "district": "葵青區",
     "district_en": "Kwai Tsing District",
     "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
     "address": "香港葵青區葵涌嘉慶路5-9號嘉慶中心地下B鋪*",
     "address_en": "Unit B, G/F, King Center, Nos. 5-9 Ka Hing Road*,Kwai Chung,Kwai Tsing District,Hong Kong",
     "telephone": "55001079",
@@ -847,7 +881,7 @@
       "longitude": 114.131859
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852M",
@@ -862,6 +896,7 @@
     "district": "中西區",
     "district_en": "Central and Western District",
     "sub_district": "上環",
+    "sub_district_en": "Sheung Wan",
     "address": "香港中西區上環文鹹東街91號及永樂街117號文樂商業大廈地下A號鋪*",
     "address_en": "Shop A, G/F, Man Lok Building, No. 91 Bonham Strand & No. 117 Wing Lok Street*,Sheung Wan,Central and Western District,Hong Kong",
     "telephone": "64686106",
@@ -872,7 +907,7 @@
       "longitude": 114.151342
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852MA",
@@ -887,6 +922,7 @@
     "district": "中西區",
     "district_en": "Central and Western District",
     "sub_district": "西營盤",
+    "sub_district_en": "Sai Ying Pun",
     "address": "香港中西區西營盤朝光街4A號兆祥坊A2地下*",
     "address_en": "Shop A2, G/F, Siu Cheung Building, Siu Cheung Fong, No. 4A Chiu Kwong Street*,Sai Ying Pun,Central and Western District,Hong Kong",
     "telephone": "59039602",
@@ -897,7 +933,7 @@
       "longitude": 114.139597
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852MB",
@@ -912,6 +948,7 @@
     "district": "中西區",
     "district_en": "Central and Western District",
     "sub_district": "中環",
+    "sub_district_en": "Central",
     "address": "香港中西區中環皇后大道中208號勝基中心地下D鋪*",
     "address_en": "Unit D, G/F, Winbase Centre, No. 208 Queen's Road Central*,Central,Central and Western District,Hong Kong",
     "telephone": "93299023",
@@ -922,7 +959,7 @@
       "longitude": 114.152098
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852MD",
@@ -937,6 +974,7 @@
     "district": "中西區",
     "district_en": "Central and Western District",
     "sub_district": "上環",
+    "sub_district_en": "Sheung Wan",
     "address": "香港中西區上環新街市街15-27號，幹諾道西8-14號嘉安大廈地下15號鋪*",
     "address_en": "Shop No. 15, G/F, Ka On Building, Nos. 8-14 Connaught Road West, Nos. 15-27 New Market Street*,Sheung Wan,Central and Western District,Hong Kong",
     "telephone": "64628189",
@@ -947,7 +985,7 @@
       "longitude": 114.149866
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852NC",
@@ -962,6 +1000,7 @@
     "district": "深水埗區",
     "district_en": "Sham Shui Po District",
     "sub_district": "荔枝角",
+    "sub_district_en": "Lai Chi Kok",
     "address": "香港深水埗區荔枝角荔枝角青山道479-479A號麗昌工廠大廈地下3號鋪*",
     "address_en": "Unit No. 3, G/F, Lai Cheong Factory Building, Nos, 479-479A Castle Peak Road*,Lai Chi Kok,Sham Shui Po District,Hong Kong",
     "telephone": "67911146",
@@ -972,7 +1011,7 @@
       "longitude": 114.151229
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852P",
@@ -987,6 +1026,7 @@
     "district": "東區",
     "district_en": "Eastern District",
     "sub_district": "炮台山",
+    "sub_district_en": "Fortress Hill",
     "address": "香港東區炮台山威非路道1-1B號, 電氣道141-155號海城洋樓地下E鋪*",
     "address_en": "Shop E, G/F, Hoi Shing Building, 141-155 Electric Road, 1-1B Whitefield Road*,Fortress Hill,Eastern District,Hong Kong",
     "telephone": "64686104",
@@ -997,7 +1037,7 @@
       "longitude": 114.191308
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852PB",
@@ -1012,6 +1052,7 @@
     "district": "東區",
     "district_en": "Eastern District",
     "sub_district": "柴灣",
+    "sub_district_en": "Chai Wan",
     "address": "香港東區柴灣嘉業街10號益高工業大廈地下B室*",
     "address_en": "Workshop B, G/F, Yiko Industrial Building, No. 10 Ka Yip Street*,Chai Wan,Eastern District,Hong Kong",
     "telephone": "65089993",
@@ -1022,7 +1063,7 @@
       "longitude": 114.243764
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852PC",
@@ -1037,6 +1078,7 @@
     "district": "東區",
     "district_en": "Eastern District",
     "sub_district": "筲箕灣",
+    "sub_district_en": "Shau Kei Wan",
     "address": "香港東區筲箕灣阿公巖村道6號新高聲工業大廈地下1號鋪*",
     "address_en": "Shop 1, G/F, Centro-Sound Industrial Building ,6A A Kung Ngam Village Road*,Shau Kei Wan,Eastern District,Hong Kong",
     "telephone": "64687697",
@@ -1047,7 +1089,7 @@
       "longitude": 114.232392
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852PD",
@@ -1062,6 +1104,7 @@
     "district": "東區",
     "district_en": "Eastern District",
     "sub_district": "北角",
+    "sub_district_en": "North Point",
     "address": "香港東區北角錦屏街59&61號東發大廈D座地下19&20號鋪*",
     "address_en": "Shop 19&20 on G/F, Tung Fat Building Block D, No. 59 & 61 Kam Ping Street,North Point,Eastern District,Hong Kong",
     "telephone": "64686104",
@@ -1072,7 +1115,7 @@
       "longitude": 114.2001389
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852T",
@@ -1087,6 +1130,7 @@
     "district": "灣仔區",
     "district_en": "Wan Chai District",
     "sub_district": "灣仔",
+    "sub_district_en": "Wan Chai",
     "address": "香港灣仔區灣仔謝斐道404-406號文石大廈地下A&B號鋪*",
     "address_en": "Shop A & B, G/F, Man Shek Building, No. 404-406 Jaffe Road*,Wan Chai,Wan Chai District,Hong Kong",
     "telephone": "61015796",
@@ -1097,7 +1141,7 @@
       "longitude": 114.180184
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852TA",
@@ -1112,6 +1156,7 @@
     "district": "灣仔區",
     "district_en": "Wan Chai District",
     "sub_district": "灣仔",
+    "sub_district_en": "Wan Chai",
     "address": "香港灣仔區灣仔聯發街9, 11-13號莊士敦大樓地下D鋪*",
     "address_en": "Shop D, G/F, Johnston Court,  No. 9, 11 & 13 Lun Fat Street*,Wan Chai,Wan Chai District,Hong Kong",
     "telephone": "59058751",
@@ -1122,7 +1167,7 @@
       "longitude": 114.170479
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852TB",
@@ -1137,6 +1182,7 @@
     "district": "南區",
     "district_en": "Southern District",
     "sub_district": "黃竹坑",
+    "sub_district_en": "Wong Chuk Hang",
     "address": "香港南區黃竹坑香業道6號及業發街6號益年工業大廈地下A2號鋪*",
     "address_en": "Unit A2, G/F, Yally Industrial Building, No. 6 Heung Yip Road & No. 6 Yip Fat Street*,Wong Chuk Hang,Southern District,Hong Kong",
     "telephone": "59236803",
@@ -1147,7 +1193,7 @@
       "longitude": 114.167991
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852TC",
@@ -1162,6 +1208,7 @@
     "district": "灣仔區",
     "district_en": "Wan Chai District",
     "sub_district": "灣仔",
+    "sub_district_en": "Wan Chai",
     "address": "香港灣仔區灣仔灣仔菲林明道22-26號東惠商業大廈地下6號鋪*",
     "address_en": "Shop 6, G/F, Tung Wai Commercial Mansion, 22-26 Fleming Road, Wan Chai, Hong Kong Island, Hong Kong*,Wan Chai,Wan Chai District,Hong Kong",
     "telephone": "64785647",
@@ -1172,7 +1219,7 @@
       "longitude": 114.174459
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852TD",
@@ -1187,6 +1234,7 @@
     "district": "灣仔區",
     "district_en": "Wan Chai District",
     "sub_district": "銅鑼灣",
+    "sub_district_en": "Causeway Bay",
     "address": "香港灣仔區銅鑼灣希雲街15號地下*",
     "address_en": "G/F, No. 15 Haven Street*,Causeway Bay,Wan Chai District,Hong Kong",
     "telephone": "26832337",
@@ -1197,7 +1245,7 @@
       "longitude": 114.186752
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852TE",
@@ -1212,6 +1260,7 @@
     "district": "南區",
     "district_en": "Southern District",
     "sub_district": "黃竹坑",
+    "sub_district_en": "Wong Chuk Hang",
     "address": "香港南區黃竹坑黃竹坑道28號保濟工業大廈地下A室*",
     "address_en": "Unit A, G/F, Po Chai Industrial Building, No.28 Wong Chuk Hang Road*,Wong Chuk Hang,Southern District,Hong Kong",
     "telephone": "66553935",
@@ -1222,7 +1271,7 @@
       "longitude": 114.1649042
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852U",
@@ -1237,6 +1286,7 @@
     "district": "屯門區",
     "district_en": "Tuen Mun District",
     "sub_district": "屯門",
+    "sub_district_en": "Tuen Mun",
     "address": "香港屯門區屯門河田街4號凱昌工業大廈地下F鋪*",
     "address_en": "Unit F, G/F, Hoi Cheung Industrial Building, No. 4 Ho Tin Street*,Tuen Mun,Tuen Mun District,Hong Kong",
     "telephone": "96640636",
@@ -1247,7 +1297,7 @@
       "longitude": 113.971019
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852UAA",
@@ -1262,6 +1312,7 @@
     "district": "元朗區",
     "district_en": "Yuen Long District",
     "sub_district": "元朗",
+    "sub_district_en": "Yuen Long",
     "address": "香港元朗區元朗宏業東街26號麗新元朗中心地下12C*",
     "address_en": "Unit 12C, G/F, Lai Sun Yuen Long Centre, No.27 Wang Yip Street East*,Yuen Long,Yuen Long District,Hong Kong",
     "telephone": "63096879",
@@ -1272,7 +1323,7 @@
       "longitude": 114.029522
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852UAB",
@@ -1287,6 +1338,7 @@
     "district": "元朗區",
     "district_en": "Yuen Long District",
     "sub_district": "元朗",
+    "sub_district_en": "Yuen Long",
     "address": "香港元朗區元朗喜業街1-5號雄偉工業大廈地下F室*",
     "address_en": "Unit no. F, G/F, Hung Wai Industrial Building,Nos.1-5 Hi Yip Street West*,Yuen Long,Yuen Long District,Hong Kong",
     "telephone": "63096879",
@@ -1297,7 +1349,7 @@
       "longitude": 114.028084
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852UC",
@@ -1312,6 +1364,7 @@
     "district": "屯門區",
     "district_en": "Tuen Mun District",
     "sub_district": "屯門",
+    "sub_district_en": "Tuen Mun",
     "address": "香港屯門區屯門建羣路3號永發工業大廈地下B室*",
     "address_en": "Unit B, G/F, Winfield Building, No. 3 Kin Kwan Street*,Tuen Mun,Tuen Mun District,Hong Kong",
     "telephone": "96640636",
@@ -1322,7 +1375,7 @@
       "longitude": 113.96931
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852UD",
@@ -1337,6 +1390,7 @@
     "district": "屯門區",
     "district_en": "Tuen Mun District",
     "sub_district": "屯門",
+    "sub_district_en": "Tuen Mun",
     "address": "香港屯門區屯門海榮路9號萬能閣地下1號鋪*",
     "address_en": "Unit G01 on G/F of My Loft, No.9 Hoi Wing Road*,Tuen Mun,Tuen Mun District,Hong Kong",
     "telephone": "94479757",
@@ -1347,7 +1401,7 @@
       "longitude": 113.97512
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "853A",
@@ -1362,6 +1416,7 @@
     "district": null,
     "district_en": null,
     "sub_district": "澳門半島",
+    "sub_district_en": "Península de Macau",
     "address": "澳門澳門半島黑沙環第五街3B永豐工業大廈地下",
     "address_en": "G/F, 3B Veng Fung Industrial Building, Rua Cinco Bairro Da Areia Preta,Península de Macau,Macau",
     "telephone": "(+853)66982004",
@@ -1372,7 +1427,7 @@
       "longitude": 113.55128
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "853AA",
@@ -1387,6 +1442,7 @@
     "district": null,
     "district_en": null,
     "sub_district": "氹仔",
+    "sub_district_en": "Ilha da Taipa",
     "address": "澳門氹仔奧林匹克大馬路522-568號華南工業大廈地下B座",
     "address_en": "Block B, G/F, Va Nam Industrial Building, Nos. 522-568 Av. Olimpica,Ilha da Taipa,Macau",
     "telephone": "(+853)63998198",
@@ -1397,7 +1453,7 @@
       "longitude": 113.558696
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852AAL",
@@ -1412,6 +1468,7 @@
     "district": "西貢區",
     "district_en": "Sai Kung District",
     "sub_district": "將軍澳",
+    "sub_district_en": "Tseung Kwan O",
     "address": "香港西貢區將軍澳貿泰路8號茵怡花園第1座地下6號鋪*",
     "address_en": "Shop No. 6, G/F, Block 1, Verbena Heights, 8 Mau Tai Road*,Tseung Kwan O,Sai Kung District,Hong Kong",
     "telephone": "64635030",
@@ -1422,7 +1479,7 @@
       "longitude": 114.255703
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852ABL",
@@ -1437,6 +1494,7 @@
     "district": "西貢區",
     "district_en": "Sai Kung District",
     "sub_district": "將軍澳",
+    "sub_district_en": "Tseung Kwan O",
     "address": "香港西貢區將軍澳唐俊街11號寶盈花園商場一樓S21-S21A號鋪*",
     "address_en": "Shop Nos. S21 & S21A on The First Floor of Commercial Centre, Bauhinia Garden, 11 Tong Chun Street*,Tseung Kwan O,Sai Kung District,Hong Kong",
     "telephone": "64635030",
@@ -1447,7 +1505,7 @@
       "longitude": 114.2617571
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852ACL",
@@ -1462,6 +1520,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "藍田",
+    "sub_district_en": "Lam Tin",
     "address": "香港觀塘區藍田匯景道8號匯景廣場3樓4A20-22號鋪*",
     "address_en": "Shop 4A20-22, 3/F , Sceneway Plaza, 8 Sceneway Road*,Lam Tin,Kwun Tong District,Hong Kong",
     "telephone": "55261667",
@@ -1472,7 +1531,7 @@
       "longitude": 114.2335701
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852AJL",
@@ -1487,6 +1546,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "油塘",
+    "sub_district_en": "Yau Tong",
     "address": "香港觀塘區油塘大本型2樓229號鋪*",
     "address_en": "Shop 229, 2/F, Domain*,Yau Tong,Kwun Tong District,Hong Kong",
     "telephone": "55261667",
@@ -1497,7 +1557,7 @@
       "longitude": 114.238758
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852BAL",
@@ -1512,6 +1572,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "旺角",
+    "sub_district_en": "Mong Kok",
     "address": "香港油尖旺區旺角海庭道8號富榮花園2期地下38號鋪*",
     "address_en": "Shop 38, G/F, Charming Garden Phase 2, Hoi Wang Road*,Mong Kok,Yau Tsim Mong District,Hong Kong",
     "telephone": "64684261",
@@ -1522,7 +1583,7 @@
       "longitude": 114.16458
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852BDL",
@@ -1537,6 +1598,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "太子",
+    "sub_district_en": "Prince Edward",
     "address": "香港油尖旺區太子太子大南街24, 24A及26號地下A鋪*",
     "address_en": "Shop A, G/F, No. 24, 24A & 26 Tai Nan Street*,Prince Edward,Yau Tsim Mong District,Hong Kong",
     "telephone": "64635273",
@@ -1547,7 +1609,7 @@
       "longitude": 114.167222
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852BFL",
@@ -1562,6 +1624,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "大角咀",
+    "sub_district_en": "Tai Kok Tsui",
     "address": "香港油尖旺區大角咀中匯街41號中興樓地下12號鋪*",
     "address_en": "Shop 12, G/F, Chung Hing Building, 41 Chung Wui Street*,Tai Kok Tsui,Yau Tsim Mong District,Hong Kong",
     "telephone": "64635273",
@@ -1572,7 +1635,7 @@
       "longitude": 114.160828
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852CLL",
@@ -1587,6 +1650,7 @@
     "district": "西貢區",
     "district_en": "Sai Kung District",
     "sub_district": "將軍澳",
+    "sub_district_en": "Tseung Kwan O",
     "address": "香港西貢區將軍澳唐明街2號尚德邨尚德廣場2樓215號鋪*",
     "address_en": "Shop 215, 2/F, Sheung Tak Plaza, Sheung Tak Estate, 2 Tong Ming Street*,Tseung Kwan O,Sai Kung District,Hong Kong",
     "telephone": "64635030",
@@ -1597,7 +1661,7 @@
       "longitude": 114.258924
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852CNL",
@@ -1612,6 +1676,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "秀茂坪",
+    "sub_district_en": "Sau Mau Ping",
     "address": "香港觀塘區秀茂坪安達邨安達商場LG21號鋪*",
     "address_en": "Shop 21, Level LG/1, On Tat shopping Center, On Tat Estate*,Sau Mau Ping,Kwun Tong District,Hong Kong",
     "telephone": "55261667",
@@ -1622,7 +1687,7 @@
       "longitude": 114.23438
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852DCL",
@@ -1637,6 +1702,7 @@
     "district": "深水埗區",
     "district_en": "Sham Shui Po District",
     "sub_district": "荔枝角",
+    "sub_district_en": "Lai Chi Kok",
     "address": "香港深水埗區荔枝角荔枝角道863號泓景台泓景匯地下2A號鋪*",
     "address_en": "Shop 2A, G/F, Banyan Mall, Banyan Garden, 863 Lai Chi Kok Road*,Lai Chi Kok,Sham Shui Po District,Hong Kong",
     "telephone": "64684261",
@@ -1647,7 +1713,7 @@
       "longitude": 114.148029
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852DDL",
@@ -1662,6 +1728,7 @@
     "district": "深水埗區",
     "district_en": "Sham Shui Po District",
     "sub_district": "長沙灣",
+    "sub_district_en": "Cheung Sha Wan",
     "address": "香港深水埗區長沙灣青山道143號地下*",
     "address_en": "G/F, No.143 Castle Peak Road*,Cheung Sha Wan,Sham Shui Po District,Hong Kong",
     "telephone": "64684261",
@@ -1672,7 +1739,7 @@
       "longitude": 114.16094
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852DEL",
@@ -1687,6 +1754,7 @@
     "district": "葵青區",
     "district_en": "Kwai Tsing District",
     "sub_district": "荔景",
+    "sub_district_en": "Lai King",
     "address": "香港葵青區荔景荔景邨明景樓地下4號鋪*",
     "address_en": "Shop No. 4, G/F, Ming King House, Lai King Estate*,Lai King,Kwai Tsing District,Hong Kong",
     "telephone": "64684261",
@@ -1697,7 +1765,7 @@
       "longitude": 114.126374
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FBL",
@@ -1712,6 +1780,7 @@
     "district": "元朗區",
     "district_en": "Yuen Long District",
     "sub_district": "天水圍",
+    "sub_district_en": "Tin Shui Wai",
     "address": "香港元朗區天水圍天瑞邨天瑞商場地下24-25號鋪*",
     "address_en": "Shop Nos. 24 & 25, G/F, Tin Shui Shopping Centre, Tin Shui Estate*,Tin Shui Wai,Yuen Long District,Hong Kong",
     "telephone": "65082310",
@@ -1722,7 +1791,7 @@
       "longitude": 113.998453
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FCL",
@@ -1737,6 +1806,7 @@
     "district": "大埔區",
     "district_en": "Tai Po District",
     "sub_district": "大埔",
+    "sub_district_en": "Tai Po",
     "address": "香港大埔區大埔安慈路4號昌運中心地下A5 鋪*",
     "address_en": "Shop A5, G/F, Fortune Plaza, 4 On Chee Road*,Tai Po,Tai Po District,Hong Kong",
     "telephone": "64688642",
@@ -1747,7 +1817,7 @@
       "longitude": 114.1680178
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FDL",
@@ -1762,6 +1832,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "馬鞍山",
+    "sub_district_en": "Ma On Shan",
     "address": "香港沙田區馬鞍山新港城中心大街地下G-3/68B號鋪*",
     "address_en": "Shop No. G-3/68B, G/F, MOSTown Street*,Ma On Shan,Sha Tin District,Hong Kong",
     "telephone": "64635237",
@@ -1772,7 +1843,7 @@
       "longitude": 114.231938
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FEL",
@@ -1787,6 +1858,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "大圍",
+    "sub_district_en": "Tai Wai",
     "address": "香港沙田區大圍積運街2-8號海福花園地下16A及17號鋪*",
     "address_en": "Shop Nos. 16A & 17 on Ground Floor, Holford Gardens, Nos. 2-8 Chik Wan Street*,Tai Wai,Sha Tin District,Hong Kong",
     "telephone": "64687323",
@@ -1797,7 +1869,7 @@
       "longitude": 114.177031
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FFL",
@@ -1812,6 +1884,7 @@
     "district": "屯門區",
     "district_en": "Tuen Mun District",
     "sub_district": "屯門",
+    "sub_district_en": "Tuen Mun",
     "address": "香港屯門區屯門良德街9號盈豐商場地下A13號鋪*",
     "address_en": "Shop A13 on G/F, Goodrich Garden, No.9 Leung Tak Street*,Tuen Mun,Tuen Mun District,Hong Kong",
     "telephone": "65082353",
@@ -1822,7 +1895,7 @@
       "longitude": 113.967824
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FHL",
@@ -1837,6 +1910,7 @@
     "district": "北區",
     "district_en": "North District",
     "sub_district": "粉嶺",
+    "sub_district_en": "Fanling",
     "address": "香港北區粉嶺新運路38號祥華邨祥頌樓地下111及112 號鋪*",
     "address_en": "Shop 111 & 112, G/F, Cheung Chung House, Cheung Wah Estate, 38 San Wan Road*,Fanling,North District,Hong Kong",
     "telephone": "64781595",
@@ -1847,7 +1921,7 @@
       "longitude": 114.1406376
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FLL",
@@ -1862,6 +1936,7 @@
     "district": "元朗區",
     "district_en": "Yuen Long District",
     "sub_district": "元朗",
+    "sub_district_en": "Yuen Long",
     "address": "香港元朗區元朗屏會路9號同發大廈地下F鋪(連閣樓)*",
     "address_en": "Shop F and Cockloft on Ground Floor, Tung Fat Building, No.9 Ping Wui Street*,Yuen Long,Yuen Long District,Hong Kong",
     "telephone": "62730015",
@@ -1872,7 +1947,7 @@
       "longitude": 114.022276
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FSL",
@@ -1887,6 +1962,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "沙田",
+    "sub_district_en": "Sha Tin",
     "address": "香港沙田區沙田百得街置富第一城樂薈地下G41號鋪*",
     "address_en": "Shop G41, G/F, Fortune City One Plus, Pak Tak Street*,Sha Tin,Sha Tin District,Hong Kong",
     "telephone": "64635237",
@@ -1897,7 +1973,7 @@
       "longitude": 114.202315
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FTL",
@@ -1912,6 +1988,7 @@
     "district": "北區",
     "district_en": "North District",
     "sub_district": "上水",
+    "sub_district_en": "Sheung Shui",
     "address": "香港北區上水彩園路彩園邨彩珠樓地下117號鋪*",
     "address_en": "Shop 117, G/F, Choi Chu House, Choi Yuen Estate*,Sheung Shui,North District,Hong Kong",
     "telephone": "64781595",
@@ -1922,7 +1999,7 @@
       "longitude": 114.125775
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FUL",
@@ -1937,6 +2014,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "馬鞍山",
+    "sub_district_en": "Ma On Shan",
     "address": "香港沙田區馬鞍山保泰街16號WeGoMall地下G09鋪*",
     "address_en": "Shop No. 9, G/F, We Go Mall, 16 Po Tai Street*,Ma On Shan,Sha Tin District,Hong Kong",
     "telephone": "64635237",
@@ -1947,7 +2025,7 @@
       "longitude": 114.223843
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852FVL",
@@ -1962,6 +2040,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "大圍",
+    "sub_district_en": "Tai Wai",
     "address": "香港沙田區大圍田心街20-30號雲疊花園地下3A號鋪*",
     "address_en": "Shop 3A, Commercial Complex, Carado Garden, Fu Tin Lane*,Tai Wai,Sha Tin District,Hong Kong",
     "telephone": "64687323",
@@ -1972,7 +2051,7 @@
       "longitude": 114.177626
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852HAL",
@@ -1987,6 +2066,7 @@
     "district": "黃大仙區",
     "district_en": "Wong Tai Sin District",
     "sub_district": "黃大仙",
+    "sub_district_en": "Wong Tai Sin",
     "address": "香港黃大仙區黃大仙龍翔道110號豪苑地下29A號鋪*",
     "address_en": "Shop 29A, G/F, Tropicana Gardens, 110 Lung Cheung Road*,Wong Tai Sin,Wong Tai Sin District,Hong Kong",
     "telephone": "56847740",
@@ -1997,7 +2077,7 @@
       "longitude": 114.1968364
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852HBL",
@@ -2012,6 +2092,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "九龍灣",
+    "sub_district_en": "Kowloon Bay",
     "address": "香港觀塘區九龍灣牛頭角道3號得寶花園得寶商場1樓209號鋪*",
     "address_en": "Shop 209, 1/F, Tak Bo Mall, 3 Ngau Tau Kok Road*,Kowloon Bay,Kwun Tong District,Hong Kong",
     "telephone": "64686946",
@@ -2022,7 +2103,7 @@
       "longitude": 114.214171
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852HCL",
@@ -2037,6 +2118,7 @@
     "district": "黃大仙區",
     "district_en": "Wong Tai Sin District",
     "sub_district": "黃大仙",
+    "sub_district_en": "Wong Tai Sin",
     "address": "香港黃大仙區黃大仙竹園路15號竹園南邨竹園廣場2樓S215A號鋪*",
     "address_en": "Shop S215A, 2/F, Chuk Yuen Plaza, Chuk Yuen South Estate, 15 Chuk Yuen Road*,Wong Tai Sin,Wong Tai Sin District,Hong Kong",
     "telephone": "56847740",
@@ -2047,7 +2129,7 @@
       "longitude": 114.193225
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852HHUM",
@@ -2062,6 +2144,7 @@
     "district": "西貢區",
     "district_en": "Sai Kung District",
     "sub_district": "坑口",
+    "sub_district_en": "Hang Hau",
     "address": "香港西貢區坑口培成路8號南豐廣場1樓B28-B31鋪*",
     "address_en": "Shop B28-B31, 1/F Nan Fung Plaza, 8 Pui Shing Road*,Hang Hau,Sai Kung District,Hong Kong",
     "telephone": "64635030",
@@ -2072,7 +2155,7 @@
       "longitude": 114.263893
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852KBL",
@@ -2087,6 +2170,7 @@
     "district": "九龍城區",
     "district_en": "Kowloon City District",
     "sub_district": "何文田",
+    "sub_district_en": "Ho Man Tin",
     "address": "香港九龍城區何文田九龍忠孝街60號愛民邨康民樓(C座)地下5號鋪*",
     "address_en": "Shop No.5, G/F, Hong Man House (Block C), Upper Oi Man Estate, No.60 Chung Hau Street*,Ho Man Tin,Kowloon City District,Hong Kong",
     "telephone": "64635340",
@@ -2097,7 +2181,7 @@
       "longitude": 114.178877
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852KDL",
@@ -2112,6 +2196,7 @@
     "district": "九龍城區",
     "district_en": "Kowloon City District",
     "sub_district": "土瓜灣",
+    "sub_district_en": "To Kwa Wan",
     "address": "香港九龍城區土瓜灣炮仗街178號興基豪園地下B鋪*",
     "address_en": "Shop B, G/F, Kingsgate, 178 Pau Chung Street*,To Kwa Wan,Kowloon City District,Hong Kong",
     "telephone": "64635340",
@@ -2122,7 +2207,7 @@
       "longitude": 114.190367
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852KEL",
@@ -2137,6 +2222,7 @@
     "district": "九龍城區",
     "district_en": "Kowloon City District",
     "sub_district": "紅磡",
+    "sub_district_en": "Hung Hom",
     "address": "香港九龍城區紅磡黃埔花園12期地庫9A及9B號鋪*",
     "address_en": "Shop Nos. 9A and 9B in the 1st Basement, Site 12, Whampoa Garden*,Hung Hom,Kowloon City District,Hong Kong",
     "telephone": "62086145",
@@ -2147,7 +2233,7 @@
       "longitude": 114.190988
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852KFL",
@@ -2162,6 +2248,7 @@
     "district": "九龍城區",
     "district_en": "Kowloon City District",
     "sub_district": "土瓜灣",
+    "sub_district_en": "To Kwa Wan",
     "address": "香港九龍城區土瓜灣靠背壟道126號樂民新邨G座平台地下126號鋪 (連閣樓)*",
     "address_en": "Shop 126, G/F, Block G, Lok Man Sun Chuen*,To Kwa Wan,Kowloon City District,Hong Kong",
     "telephone": "64635340",
@@ -2172,7 +2259,7 @@
       "longitude": 114.186284
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852LAL",
@@ -2187,6 +2274,7 @@
     "district": "葵青區",
     "district_en": "Kwai Tsing District",
     "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
     "address": "香港葵青區葵涌榮芳路9號恆景花園恆景商場地下G16號*",
     "address_en": "Shop G16, G/F, Hang King Garden, 9 Wing Fong Road*,Kwai Chung,Kwai Tsing District,Hong Kong",
     "telephone": "60317464",
@@ -2197,7 +2285,7 @@
       "longitude": 114.128044
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852LBL",
@@ -2212,6 +2300,7 @@
     "district": "葵青區",
     "district_en": "Kwai Tsing District",
     "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
     "address": "香港葵青區葵涌大隴街129-151號葵都大廈地下7號鋪*",
     "address_en": "Shop 7, G/F, Kwai Do Building, 129-151 Tai Loong Street*,Kwai Chung,Kwai Tsing District,Hong Kong",
     "telephone": "60317464",
@@ -2222,7 +2311,7 @@
       "longitude": 114.138658
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852NAL",
@@ -2237,6 +2326,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "沙田",
+    "sub_district_en": "Sha Tin",
     "address": "香港沙田區沙田乙明邨街3號明信樓地下51號鋪*",
     "address_en": "Shop No. 51, G/F, Ming Shun Lau, No.3 Jat Min Chuen Street*,Sha Tin,Sha Tin District,Hong Kong",
     "telephone": "64635237",
@@ -2247,7 +2337,7 @@
       "longitude": 114.191045
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852NBL",
@@ -2262,6 +2352,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "大圍",
+    "sub_district_en": "Tai Wai",
     "address": "香港沙田區大圍車公廟道69號顯徑邨顯徑商場1樓203號鋪*",
     "address_en": "Shop No. 203, First Floor, Commercial / Car Park Complex (Wing A of Hin Keng Shopping Centre), Hin Keng Estate, No. 69 Che Kung Mui Road*,Tai Wai,Sha Tin District,Hong Kong",
     "telephone": "64687323",
@@ -2272,7 +2363,7 @@
       "longitude": 114.172104
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852NDL",
@@ -2287,6 +2378,7 @@
     "district": "北區",
     "district_en": "North District",
     "sub_district": "上水",
+    "sub_district_en": "Sheung Shui",
     "address": "香港北區上水符興街4號地下*",
     "address_en": "G/F, 4 Fu Hing Street*,Sheung Shui,North District,Hong Kong",
     "telephone": "64781595",
@@ -2297,7 +2389,7 @@
       "longitude": 114.129232
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852NFL",
@@ -2312,6 +2404,7 @@
     "district": "北區",
     "district_en": "North District",
     "sub_district": "粉嶺",
+    "sub_district_en": "Fanling",
     "address": "香港北區粉嶺聯和墟和泰街17號地下A鋪*",
     "address_en": "Shop A, G/F, 17 Wo Tai Street, Luen Wo Market*,Fanling,North District,Hong Kong",
     "telephone": "64688642",
@@ -2322,7 +2415,7 @@
       "longitude": 114.141684
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852NJL",
@@ -2337,6 +2430,7 @@
     "district": "沙田區",
     "district_en": "Sha Tin District",
     "sub_district": "沙田",
+    "sub_district_en": "Sha Tin",
     "address": "香港沙田區沙田瀝源街6號瀝源邨華豐樓地下ST5號鋪*",
     "address_en": "Shop ST5, G/F, Wah Fung House, Lek Yuen Estate, 6 Lek Yuen Street*,Sha Tin,Sha Tin District,Hong Kong",
     "telephone": "64687323",
@@ -2347,7 +2441,7 @@
       "longitude": 114.191595
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852NLL",
@@ -2362,6 +2456,7 @@
     "district": "大埔區",
     "district_en": "Tai Po District",
     "sub_district": "大埔",
+    "sub_district_en": "Tai Po",
     "address": "香港大埔區大埔安埔路12號富善商場1樓F122B號鋪*",
     "address_en": "Shop F122B on 1/F., Fu Shin Shopping Centre*,Tai Po,Tai Po District,Hong Kong",
     "telephone": "64688642",
@@ -2372,7 +2467,7 @@
       "longitude": 114.17461
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852NPTM",
@@ -2387,6 +2482,7 @@
     "district": "東區",
     "district_en": "Eastern District",
     "sub_district": "北角",
+    "sub_district_en": "North Point",
     "address": "香港東區北角英皇道480號豐富商場地下8號鋪*",
     "address_en": "Shop 8, G/F, Fung Full Plaza, 480 King's Road*,North Point,Eastern District,Hong Kong",
     "telephone": "64634947",
@@ -2397,7 +2493,7 @@
       "longitude": 114.20129
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852PAL",
@@ -2412,6 +2508,7 @@
     "district": "東區",
     "district_en": "Eastern District",
     "sub_district": "筲箕灣",
+    "sub_district_en": "Shau Kei Wan",
     "address": "香港東區筲箕灣南康街17號天悦筲箕灣廣場1樓1142及1143號鋪*",
     "address_en": "Shop 1142 & 1143, 1/F, Smiling Shaukeiwan Plaza, 17 Nam Hong Street*,Shau Kei Wan,Eastern District,Hong Kong",
     "telephone": "64634947",
@@ -2422,7 +2519,7 @@
       "longitude": 114.226465
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852PCL",
@@ -2437,6 +2534,7 @@
     "district": "東區",
     "district_en": "Eastern District",
     "sub_district": "柴灣",
+    "sub_district_en": "Chai Wan",
     "address": "香港東區柴灣祥利街29號國貿中心5樓1室*",
     "address_en": "Workshop 1, 5/F, Trend Centre, 29 Cheung Lee Street*,Chai Wan,Eastern District,Hong Kong",
     "telephone": "64634947",
@@ -2447,7 +2545,7 @@
       "longitude": 114.235291
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852PDL",
@@ -2462,6 +2560,7 @@
     "district": "東區",
     "district_en": "Eastern District",
     "sub_district": "北角",
+    "sub_district_en": "North Point",
     "address": "香港東區北角英皇道255號國都廣場2樓202及203號鋪*",
     "address_en": "Shop 202 & 203, 2/F, Olympia Plaza, 255 King's Road*,North Point,Eastern District,Hong Kong",
     "telephone": "64634947",
@@ -2472,7 +2571,7 @@
       "longitude": 114.19453
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852PGL",
@@ -2487,6 +2586,7 @@
     "district": "東區",
     "district_en": "Eastern District",
     "sub_district": "西灣河",
+    "sub_district_en": "Sai Wan Ho",
     "address": "香港東區西灣河興民街28-36號地下E鋪A部份*",
     "address_en": "Portion A of Shop E, G/F, 28-36 Hing Man Street*,Sai Wan Ho,Eastern District,Hong Kong",
     "telephone": "64634947",
@@ -2497,7 +2597,7 @@
       "longitude": 114.223438
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852SKL",
@@ -2512,6 +2612,7 @@
     "district": "西貢區",
     "district_en": "Sai Kung District",
     "sub_district": "西貢",
+    "sub_district_en": "Sai Kung",
     "address": "香港西貢區西貢宜春街66號地下10號鋪*",
     "address_en": "Shop 10, G/F, 66 Yi Chun Street*,Sai Kung,Sai Kung District,Hong Kong",
     "telephone": "67934923",
@@ -2522,7 +2623,7 @@
       "longitude": 114.271875
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852TAL",
@@ -2537,6 +2638,7 @@
     "district": "南區",
     "district_en": "Southern District",
     "sub_district": "香港仔",
+    "sub_district_en": "Aberdeen",
     "address": "香港南區香港仔香港仔大道234號富嘉工業大廈9樓6室*",
     "address_en": "Workshop No. 6, 9/F, Fullagar Industrial Building, 234 Aberdeen Main Road*,Aberdeen,Southern District,Hong Kong",
     "telephone": "98319090",
@@ -2547,7 +2649,7 @@
       "longitude": 114.15272
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852TBL",
@@ -2562,6 +2664,7 @@
     "district": "南區",
     "district_en": "Southern District",
     "sub_district": "香港仔",
+    "sub_district_en": "Aberdeen",
     "address": "香港南區香港仔華富道18號華富（一）邨華安樓119號鋪*",
     "address_en": "Shop 119, Wah On House, Wah Fu (I) Estate, 18 Wah Fu Road*,Aberdeen,Southern District,Hong Kong",
     "telephone": "98319090",
@@ -2572,7 +2675,7 @@
       "longitude": 114.138105
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852TCL",
@@ -2587,6 +2690,7 @@
     "district": "南區",
     "district_en": "Southern District",
     "sub_district": "鴨脷洲",
+    "sub_district_en": "Ap Lei Chau",
     "address": "香港南區鴨脷洲鴨脷洲大街57-63號利是大廈地下A鋪*",
     "address_en": "Shop A on G/F, Fortune Mansion, Nos. 57-63 Main Street Ap Lei Chau, Nos. 14-24 Hung Shing Street*,Ap Lei Chau,Southern District,Hong Kong",
     "telephone": "98319090",
@@ -2597,7 +2701,7 @@
       "longitude": 114.155952
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852TCSM",
@@ -2612,6 +2716,7 @@
     "district": "屯門區",
     "district_en": "Tuen Mun District",
     "sub_district": "屯門",
+    "sub_district_en": "Tuen Mun",
     "address": "香港屯門區屯門井財街11號仁愛大廈地下9號鋪*",
     "address_en": "Shop No. 9, G/F, Yan Oi Building, No. 11 Tseng Choi Street*,Tuen Mun,Tuen Mun District,Hong Kong",
     "telephone": "65082353",
@@ -2622,7 +2727,7 @@
       "longitude": 113.978158
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852UAL",
@@ -2637,6 +2742,7 @@
     "district": "屯門區",
     "district_en": "Tuen Mun District",
     "sub_district": "屯門",
+    "sub_district_en": "Tuen Mun",
     "address": "香港屯門區屯門屯門碼頭美樂花園商場65號鋪*",
     "address_en": "Shop 65, G/F, Melody Garden, Tuen Mun Ferry Pier*,Tuen Mun,Tuen Mun District,Hong Kong",
     "telephone": "64686958",
@@ -2647,7 +2753,7 @@
       "longitude": 113.961061
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852UCL",
@@ -2662,6 +2768,7 @@
     "district": "元朗區",
     "district_en": "Yuen Long District",
     "sub_district": "天水圍",
+    "sub_district_en": "Tin Shui Wai",
     "address": "香港元朗區天水圍天瑞路71-77號天澤商場3樓310鋪*",
     "address_en": "Shop No. 310, 3/F., Tin Chak Shopping Centre, Nos. 71,73,75 and 77 Tin Shui Road*,Tin Shui Wai,Yuen Long District,Hong Kong",
     "telephone": "65082310",
@@ -2672,7 +2779,7 @@
       "longitude": 113.998561
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852UFL",
@@ -2687,6 +2794,7 @@
     "district": "元朗區",
     "district_en": "Yuen Long District",
     "sub_district": "元朗",
+    "sub_district_en": "Yuen Long",
     "address": "香港元朗區元朗鳯攸南街9號好順利大廈地下79號鋪*",
     "address_en": "Shop No.79 on the Ground Floor of Ho Shun Lee Building, No.9 Fung Yau Street South*,Yuen Long,Yuen Long District,Hong Kong",
     "telephone": "62730015",
@@ -2697,7 +2805,7 @@
       "longitude": 114.034504
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852UGL",
@@ -2712,6 +2820,7 @@
     "district": "元朗區",
     "district_en": "Yuen Long District",
     "sub_district": "元朗",
+    "sub_district_en": "Yuen Long",
     "address": "香港元朗區元朗安興街59-67號安泰樓地下3號鋪*",
     "address_en": "Shop 3, G/F and Cockloft, On Tai Building, 59-67 Yuen Long On Hing Street*,Yuen Long,Yuen Long District,Hong Kong",
     "telephone": "62730015",
@@ -2722,7 +2831,7 @@
       "longitude": 114.02376
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852UHL",
@@ -2737,6 +2846,7 @@
     "district": "元朗區",
     "district_en": "Yuen Long District",
     "sub_district": "元朗",
+    "sub_district_en": "Yuen Long",
     "address": "香港元朗區元朗水車館街28號萬金中心地下23鋪*",
     "address_en": "G/F23, Floor G, Golden Plaza, No. 28 Shui Che Kwun Street*,Yuen Long,Yuen Long District,Hong Kong",
     "telephone": "62730015",
@@ -2747,7 +2857,7 @@
       "longitude": 114.031224
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852UJL",
@@ -2762,6 +2872,7 @@
     "district": "元朗區",
     "district_en": "Yuen Long District",
     "sub_district": "天水圍",
+    "sub_district_en": "Tin Shui Wai",
     "address": "香港元朗區天水圍天秀路8號天一商城3樓3007號鋪*",
     "address_en": "Shop 3007, 3/F, 8 Tin Sau Rd*,Tin Shui Wai,Yuen Long District,Hong Kong",
     "telephone": "65082310",
@@ -2772,7 +2883,7 @@
       "longitude": 114.003161
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852WCLM",
@@ -2787,6 +2898,7 @@
     "district": "深水埗區",
     "district_en": "Sham Shui Po District",
     "sub_district": "石硤尾",
+    "sub_district_en": "Shek Kip Mei",
     "address": "香港深水埗區石硤尾偉智里2號金玉大廈地下222號鋪*",
     "address_en": "Shop 222, G/F, Kam Yuck Building, 2 Wai Chi Lane*,Shek Kip Mei,Sham Shui Po District,Hong Kong",
     "telephone": "64635273",
@@ -2797,7 +2909,7 @@
       "longitude": 114.167044
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852YMCM",
@@ -2812,6 +2924,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
     "address": "香港觀塘區觀塘牛頭角道300-302號裕民中心地下53號鋪*",
     "address_en": "Shop No. 53 on Ground Floor., Yue Man Centre, Nos. 300 & 302 Ngau Tau Kok Road*,Kwun Tong,Kwun Tong District,Hong Kong",
     "telephone": "67934923",
@@ -2822,7 +2935,7 @@
       "longitude": 114.222762
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z010",
@@ -2837,6 +2950,7 @@
     "district": "北區",
     "district_en": "North District",
     "sub_district": "粉嶺",
+    "sub_district_en": "Fanling",
     "address": "香港北區粉嶺皇后山邨皇后山商場地下7號鋪*",
     "address_en": "Shop No. 7, G/F, Queens Hill Shopping Centre, Queens Hill Estate*,Fanling,North District,Hong Kong",
     "telephone": "64781595",
@@ -2847,7 +2961,7 @@
       "longitude": 114.156047
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z011",
@@ -2862,6 +2976,7 @@
     "district": "北區",
     "district_en": "North District",
     "sub_district": "粉嶺",
+    "sub_district_en": "Fanling",
     "address": "香港北區粉嶺百和路88號花都廣場地下103鋪*",
     "address_en": "Shop No. 103, G/F, Flora Plaza, 88 Pak Wo Road*,Fanling,North District,Hong Kong",
     "telephone": "64688642",
@@ -2872,7 +2987,7 @@
       "longitude": 114.141308
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z051",
@@ -2887,6 +3002,7 @@
     "district": "九龍城區",
     "district_en": "Kowloon City District",
     "sub_district": "九龍塘",
+    "sub_district_en": "Kowloon Tong",
     "address": "香港九龍城區九龍塘達之路80號又一城地下G36C號鋪(近的士站旁)*",
     "address_en": "Shop G36C (Near Taxi Station), Level G, Festival Walk, 80 Tat Chee Avenue*,Kowloon Tong,Kowloon City District,Hong Kong",
     "telephone": null,
@@ -2897,7 +3013,7 @@
       "longitude": 114.174464
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z053",
@@ -2912,6 +3028,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "旺角",
+    "sub_district_en": "Mong Kok",
     "address": "香港油尖旺區旺角煙廠街33號地下A鋪^*",
     "address_en": "Shop A, G/F, Nos.33 Yin Chong Street*,Mong Kok,Yau Tsim Mong District,Hong Kong",
     "telephone": "63297806",
@@ -2922,7 +3039,7 @@
       "longitude": 114.172732
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z101",
@@ -2937,6 +3054,7 @@
     "district": "西貢區",
     "district_en": "Sai Kung District",
     "sub_district": "康城",
+    "sub_district_en": "LOHAS Park",
     "address": "香港西貢區康城康城路1號康城3樓340號鋪*",
     "address_en": "Shop 340, Level 3, The Lohas, No.1 Lohas Park Road*,LOHAS Park,Sai Kung District,Hong Kong",
     "telephone": "64635030",
@@ -2947,7 +3065,7 @@
       "longitude": 114.2697184
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z102",
@@ -2962,6 +3080,7 @@
     "district": "西貢區",
     "district_en": "Sai Kung District",
     "sub_district": "調景嶺",
+    "sub_district_en": "Tiu Keng Leng",
     "address": "香港西貢區調景嶺香港新界西貢區調景嶺澳景路88號維景灣畔3期低層地下2樓A1號鋪*",
     "address_en": "Shop A1, LG2/F, Phase III Ocean Shores, 88 O King Road, Tiu Keng Leng, Sai Kung District, New Territories, Hong Kong*,Tiu Keng Leng,Sai Kung District,Hong Kong",
     "telephone": "63320238",
@@ -2972,7 +3091,7 @@
       "longitude": 114.252515
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z151",
@@ -2987,6 +3106,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
     "address": "香港觀塘區觀塘成業街6號泓富廣場7樓708室*",
     "address_en": "Unit 708, 7/F, Prosperity Place, No. 6 Shing Yip Street*,Kwun Tong,Kwun Tong District,Hong Kong",
     "telephone": "67934923",
@@ -2997,7 +3117,7 @@
       "longitude": 114.225721
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z152",
@@ -3012,6 +3132,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "油塘",
+    "sub_district_en": "Yau Tong",
     "address": "香港觀塘區油塘秀茂坪寶達邨寶達商場P1樓108號鋪*",
     "address_en": "Shop No. 108, P1 Floor, Po Tat Shopping Centre, Po tat Estate, Kwun Tong, Kwun Tong District, Kowloon, Hong Kong*,Yau Tong,Kwun Tong District,Hong Kong",
     "telephone": "67934923",
@@ -3022,7 +3143,7 @@
       "longitude": 114.236184
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z201",
@@ -3037,6 +3158,7 @@
     "district": "深水埗區",
     "district_en": "Sham Shui Po District",
     "sub_district": "南昌",
+    "sub_district_en": "Nam Cheong",
     "address": "香港深水埗區南昌港鐵南昌站NAC 22-23號鋪 (非入閘區)*",
     "address_en": "MTR Station Shop NAC 22-23 at Nam Cheong Station*,Nam Cheong,Sham Shui Po District,Hong Kong",
     "telephone": "64684261",
@@ -3047,7 +3169,7 @@
       "longitude": 114.15311
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z251",
@@ -3062,6 +3184,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
     "address": "香港油尖旺區尖沙咀廣東道3-27號海港城港威商場四樓（客户服務中心內）（只提供寄件服務）",
     "address_en": "Gateway Arcade Level 4 (Inside the customer service center), Harbour City, 3-27 Canton Road,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
     "telephone": "62086145",
@@ -3072,7 +3195,7 @@
       "longitude": 114.168166
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z252",
@@ -3087,6 +3210,7 @@
     "district": "油尖旺區",
     "district_en": "Yau Tsim Mong District",
     "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
     "address": "香港油尖旺區尖沙咀西九龍站G層WEK G-5號鋪*",
     "address_en": "Shop WEK G-5, G/F, Hong Kong West Kowloon Station*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
     "telephone": "62086145",
@@ -3097,7 +3221,7 @@
       "longitude": 114.1649
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z253",
@@ -3112,6 +3236,7 @@
     "district": "九龍城區",
     "district_en": "Kowloon City District",
     "sub_district": "九龍城",
+    "sub_district_en": "Kowloon City",
     "address": "香港九龍城區九龍城太子道西368-374號龍珠樓地下*",
     "address_en": "G/F, Pearl House, Nos.368-374 Prince Edward Road West*,Kowloon City,Kowloon City District,Hong Kong",
     "telephone": "64635340",
@@ -3122,7 +3247,7 @@
       "longitude": 114.18794
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z351",
@@ -3137,6 +3262,7 @@
     "district": null,
     "district_en": null,
     "sub_district": "東涌",
+    "sub_district_en": "Tung Chung",
     "address": "香港大嶼山區東涌達東路20號東薈城2樓顧客服務中心(近259號鋪)（只提供自寄服務：只限東薈城購物人仕、東薈城一座辦公室員工及諾富特東薈城酒店住客使用）",
     "address_en": "Customer Service Centre (near Shop 259), L2 Citygate Outlets, 20 Tat Tung Road(self drop-off only),Tung Chung,Lantau District,Hong Kong",
     "telephone": "61125020",
@@ -3147,7 +3273,7 @@
       "longitude": 113.941301
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z352",
@@ -3162,6 +3288,7 @@
     "district": "葵青區",
     "district_en": "Kwai Tsing District",
     "sub_district": "青衣",
+    "sub_district_en": "Tsing Yi",
     "address": "香港葵青區青衣港鐵站機場快綫大堂U2層14-15號鋪*",
     "address_en": "TSY 14-15, U2 Airport Express Platform, Tsing Yi Station*,Tsing Yi,Kwai Tsing District,Hong Kong",
     "telephone": "61125020",
@@ -3172,7 +3299,7 @@
       "longitude": 114.108129
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z355",
@@ -3187,6 +3314,7 @@
     "district": "荃灣區",
     "district_en": "Tsuen Wan District",
     "sub_district": "荃灣",
+    "sub_district_en": "Tsuen Wan",
     "address": "香港荃灣區荃灣西樓角路64-98號及荃灣青山公路264-298號南豐中心807-808室*",
     "address_en": "Unit Nos. 807 & 808 on 8/F of Nan Fung Centre,  264-298 Castle Peak Road Tsuen Wan & 64-98 Sai Lau Kok Road*,Tsuen Wan,Tsuen Wan District,Hong Kong",
     "telephone": "61125020",
@@ -3197,7 +3325,7 @@
       "longitude": 114.116563
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z401",
@@ -3212,6 +3340,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "九龍灣",
+    "sub_district_en": "Kowloon Bay",
     "address": "香港觀塘區九龍灣香港九龍觀塘區九龍灣宏光道80號麗晶花園2樓211號鋪*",
     "address_en": "Unit 211, 2/F, Richland Gardens, 80 Wang Kwong Road, Kowloon Bay, Kwun Tong District, Kowloon, Hong Kong*,Kowloon Bay,Kwun Tong District,Hong Kong",
     "telephone": "64686946",
@@ -3222,7 +3351,7 @@
       "longitude": 114.205985
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z402",
@@ -3237,6 +3366,7 @@
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
     "sub_district": "九龍灣",
+    "sub_district_en": "Kowloon Bay",
     "address": "香港觀塘區九龍灣慈雲山毓華街23號慈雲山中心4樓410B鋪*",
     "address_en": "Shop No.410B, Tsz Wan Shan Shopping Centre, 23 Yuk Wah Street, Tsz Wan Shan, Wong Tai Sin District, Kowloon, Hong Kong,Kowloon Bay,Kwun Tong District,Hong Kong",
     "telephone": "56847740",
@@ -3247,7 +3377,7 @@
       "longitude": 114.200472
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z403",
@@ -3262,6 +3392,7 @@
     "district": "九龍城區",
     "district_en": "Kowloon City District",
     "sub_district": "啟德",
+    "sub_district_en": "Kai Tak",
     "address": "香港九龍城區啟德香港九龍九龍城區啟德啟德體育園零售館2期2樓M2-205室鋪*",
     "address_en": "Shop No. M2-205, Level 2, Kai Tak Mall 2, Kai Tak Sports Park, Kai Tak, Kowloon City District, Kowloon, Hong Kong,Kai Tak,Kowloon City District,Hong Kong",
     "telephone": "64686946",
@@ -3272,7 +3403,7 @@
       "longitude": 114.19586
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z501",
@@ -3287,6 +3418,7 @@
     "district": "中西區",
     "district_en": "Central and Western District",
     "sub_district": "西環",
+    "sub_district_en": "Sai Wan",
     "address": "香港中西區西環卑路乍街1L-1Q號曉暉大廈地下1號*",
     "address_en": "Shop No.1, G/F, Sunglow Building, Nos. 1L-1Q Belcher's Street,Sai Wan,Central and Western District,Hong Kong",
     "telephone": "55235742",
@@ -3297,7 +3429,7 @@
       "longitude": 114.1324
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z502",
@@ -3312,6 +3444,7 @@
     "district": "中西區",
     "district_en": "Central and Western District",
     "sub_district": "堅尼地城",
+    "sub_district_en": "Kennedy Town",
     "address": "香港中西區堅尼地城香港香港島中西區堅尼地城加多近街45-55號恆裕大廈地下3號鋪*",
     "address_en": "Shop Nos 3 and 4, G/F, Han Yu Building, Nos. 45-55 Cadogan Street,Kennedy Town,Central and Western District,Hong Kong",
     "telephone": "55235742",
@@ -3322,7 +3455,7 @@
       "longitude": 114.1263858
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z552",
@@ -3337,6 +3470,7 @@
     "district": "東區",
     "district_en": "Eastern District",
     "sub_district": "小西灣",
+    "sub_district_en": "Siu Sai Wan",
     "address": "香港東區小西灣小西灣道18號富景花園商場1樓173號鋪 & 128號鋪*",
     "address_en": "Shop No. 173 & 128, 1/F, Fullview Garden Commercial Centre, 18 Siu Sai Wan Road*,Siu Sai Wan,Eastern District,Hong Kong",
     "telephone": "64634947",
@@ -3347,7 +3481,7 @@
       "longitude": 114.251355
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z601",
@@ -3362,6 +3496,7 @@
     "district": "南區",
     "district_en": "Southern District",
     "sub_district": "鴨脷洲",
+    "sub_district_en": "Ap Lei Chau",
     "address": "香港南區鴨脷洲海怡廣場西翼2樓209D鋪*",
     "address_en": "209D, 2/F, Marina Square West Centre, 12A South Horizon Drive*,Ap Lei Chau,Southern District,Hong Kong",
     "telephone": "98319090",
@@ -3372,7 +3507,7 @@
       "longitude": 114.146854
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z660",
@@ -3387,6 +3522,7 @@
     "district": "屯門區",
     "district_en": "Tuen Mun District",
     "sub_district": "屯門",
+    "sub_district_en": "Tuen Mun",
     "address": "香港屯門區屯門鄉事會路2A號安定邨愛定商場3樓N-313號鋪*",
     "address_en": "Shop Nos. N313, 3/F, Zone N, H.A.N.D.S, On Ting Estate*,Tuen Mun,Tuen Mun District,Hong Kong",
     "telephone": "65755840",
@@ -3397,7 +3533,7 @@
       "longitude": 113.975233
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z661",
@@ -3412,6 +3548,7 @@
     "district": "屯門區",
     "district_en": "Tuen Mun District",
     "sub_district": "屯門",
+    "sub_district_en": "Tuen Mun",
     "address": "香港屯門區屯門屯門時代廣場北翼L2-32鋪*",
     "address_en": "Shop No. 32, Level 2, North Wing, Trend Plaza,Tuen Mun*,Tuen Mun,Tuen Mun District,Hong Kong",
     "telephone": "64686958",
@@ -3422,7 +3559,7 @@
       "longitude": 113.975477
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z662",
@@ -3437,6 +3574,7 @@
     "district": "元朗區",
     "district_en": "Yuen Long District",
     "sub_district": "洪水橋",
+    "sub_district_en": "Hung Shui Kiu",
     "address": "香港元朗區洪水橋洪水橋大街1號德祥樓地下25 ,26A & 12B號鋪*",
     "address_en": "Shop 25, 26A & 12B on G/F, Tak Cheung Building, No.1 Hung Shui Kiu Main Street*,Hung Shui Kiu,Yuen Long District,Hong Kong",
     "telephone": "65082353",
@@ -3447,7 +3585,7 @@
       "longitude": 113.995815
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "852Z701",
@@ -3462,6 +3600,7 @@
     "district": "元朗區",
     "district_en": "Yuen Long District",
     "sub_district": "元朗",
+    "sub_district_en": "Yuen Long",
     "address": "香港元朗區元朗合益路81-97號安景樓地下A鋪*",
     "address_en": "Shop A,G/F,On King Building Nos. 81-97 Hop Yick Road*,Yuen Long,Yuen Long District,Hong Kong",
     "telephone": "62730015",
@@ -3472,7 +3611,7 @@
       "longitude": 114.029795
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   },
   {
     "id": "H853Z001P",
@@ -3487,6 +3626,7 @@
     "district": null,
     "district_en": null,
     "sub_district": null,
+    "sub_district_en": "",
     "address": "澳門黑沙環永豐工業大廈地下(指定人員專用)*",
     "address_en": "Macau Test Locker*",
     "telephone": null,
@@ -3497,6 +3637,6 @@
       "longitude": 110.13114
     },
     "source": "api",
-    "retrieved_at": "2026-07-26 23:32 (HKT UTC+8)"
+    "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
   }
 ]

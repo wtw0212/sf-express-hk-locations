@@ -35,6 +35,8 @@ const validRecord = {
 
 const validMetadata = {
   schema_version: 2,
+  source_retrieved_at: '2026-07-27 10:00 (HKT UTC+8)',
+  generated_at: '2026-07-27 10:00 (HKT UTC+8)',
   retrieved_at: '2026-07-27 10:00 (HKT UTC+8)',
   counts: { total: 1, stores: 1, lockers: 0, partners: 0 },
   count_deltas: {
@@ -59,6 +61,7 @@ const validMetadata = {
       valid_record_count: 475,
       quarantined_record_count: 0,
       quarantine_ratio: 0,
+      cross_pdf_duplicate_conflict_count: 0,
       status: 'success',
       errors: [],
       details: [
@@ -69,6 +72,7 @@ const validMetadata = {
           http_ok: true,
           parse_ok: true,
           semantic_ok: true,
+          within_quality_threshold: true,
           attempts: 1,
           raw_code_count: 50,
           candidate_count: 50,
@@ -79,6 +83,16 @@ const validMetadata = {
           quarantine_ratio: 0
         }
       ]
+    }
+  },
+  source_policy: {
+    canonical_priority: ['api_tc', 'api_en', 'ssr', 'reviewed_pdf_partner'],
+    audit_only_sources: ['pdf_partner'],
+    counts: {
+      api_canonical_count: 1,
+      ssr_only_count: 0,
+      reviewed_pdf_supplement_count: 0,
+      unreviewed_pdf_candidate_count: 0
     }
   },
   coverage: {

@@ -4,15 +4,19 @@
   "type": "object",
   "required": [
     "schema_version",
-    "retrieved_at",
+    "source_retrieved_at",
+    "generated_at",
     "counts",
     "count_deltas",
     "source_status",
+    "source_policy",
     "coverage",
     "quality"
   ],
   "properties": {
     "schema_version": { "type": "integer", "enum": [2] },
+    "source_retrieved_at": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string", "minLength": 1 },
     "retrieved_at": { "type": "string", "minLength": 1 },
     "counts": {
       "type": "object",
@@ -83,6 +87,7 @@
             "valid_record_count",
             "quarantined_record_count",
             "quarantine_ratio",
+            "cross_pdf_duplicate_conflict_count",
             "status",
             "errors",
             "details"
@@ -124,6 +129,7 @@
                   "http_ok",
                   "parse_ok",
                   "semantic_ok",
+                  "within_quality_threshold",
                   "attempts",
                   "raw_code_count",
                   "candidate_count",
@@ -153,6 +159,41 @@
                 "additionalProperties": false
               }
             }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_policy": {
+      "type": "object",
+      "required": [
+        "canonical_priority",
+        "audit_only_sources",
+        "counts"
+      ],
+      "properties": {
+        "canonical_priority": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "audit_only_sources": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "counts": {
+          "type": "object",
+          "required": [
+            "api_canonical_count",
+            "ssr_only_count",
+            "reviewed_pdf_supplement_count",
+            "unreviewed_pdf_candidate_count"
+          ],
+          "properties": {
+            "api_canonical_count": { "type": "integer", "minimum": 0 },
+            "ssr_only_count": { "type": "integer", "minimum": 0 },
+            "reviewed_pdf_supplement_count": { "type": "integer", "minimum": 0 },
+            "unreviewed_pdf_candidate_count": { "type": "integer", "minimum": 0 }
           },
           "additionalProperties": false
         }

@@ -106,15 +106,14 @@ test('validatePreviousDataset: fails closed on invalid previous dataset', () => 
 test('checkCompletenessGates: PDF failure scenarios', () => {
   const records = Array(1100).fill(validRecord).map((r, i) => ({ ...r, id: `852${i}`, code: `852${i}` }));
 
-  // All PDFs failed -> blocking gate
+  // All PDFs failed -> audit warning generated
   const resAllFailed = checkCompletenessGates({
     tcResults: [{ ok: true, records: [] }],
     enResults: [{ ok: true, records: [] }],
     pdfResult: { pdfTotal: 8, pdfSuccessCount: 0, pdfFailCount: 8, status: 'all_pdfs_failed', errors: ['HTTP 500'] },
     records
   });
-  assert.equal(resAllFailed.pass, false);
-  assert.ok(resAllFailed.errors.some(e => e.includes('All partner PDFs failed')));
+  assert.ok(resAllFailed.warnings.some(w => w.includes('All partner PDFs failed')));
 
   // Partial PDF failure -> warning generated
   const resPartial = checkCompletenessGates({

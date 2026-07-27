@@ -19,6 +19,7 @@ async function getValidators() {
   const locationsArraySchema = JSON.parse(await readFile(resolve(SCHEMA_DIR, 'locations-array.schema.json'), 'utf8'));
   const locationsByDistrictSchema = JSON.parse(await readFile(resolve(SCHEMA_DIR, 'locations-by-district.schema.json'), 'utf8'));
   const metadataSchema = JSON.parse(await readFile(resolve(SCHEMA_DIR, 'metadata.schema.json'), 'utf8'));
+  const pdfAuditSchema = JSON.parse(await readFile(resolve(SCHEMA_DIR, 'pdf-audit.schema.json'), 'utf8'));
 
   ajv.addSchema(locationSchema, 'location.schema.json');
   ajv.addSchema(locationsArraySchema, 'locations-array.schema.json');
@@ -27,7 +28,8 @@ async function getValidators() {
     location: ajv.compile(locationSchema),
     locationsArray: ajv.compile(locationsArraySchema),
     locationsByDistrict: ajv.compile(locationsByDistrictSchema),
-    metadata: ajv.compile(metadataSchema)
+    metadata: ajv.compile(metadataSchema),
+    pdfAudit: ajv.compile(pdfAuditSchema)
   };
 
   ajvInstance = ajv;
@@ -107,6 +109,20 @@ export async function validateLocationsByDistrictSchema(byDistrict) {
 }
 
 /**
+ * Validate PDF audit object against pdf-audit.schema.json.
+ * @param {object} pdfAudit
+ * @returns {Promise<{ valid: boolean, errors: string[] }>}
+ */
+export async function validatePdfAuditSchema(pdfAudit) {
+  const { pdfAudit: valPdfAudit } = await getValidators();
+  const valid = valPdfAudit(pdfAudit);
+  return {
+    valid: Boolean(valid),
+    errors: valid ? [] : formatAjvErrors(valPdfAudit.errors, '[PDF Audit Schema]')
+  };
+}
+
+/**
  * Validate all generated release artifacts against official JSON Schemas before publishing.
  * Throws a detailed Error if any artifact fails schema validation.
  *
@@ -117,6 +133,7 @@ export async function validateLocationsByDistrictSchema(byDistrict) {
  * @param {Array} params.partners
  * @param {object} params.byDistrict
  * @param {object} params.metadata
+ * @param {object} [params.pdfAudit]
  * @returns {Promise<void>}
  */
 export async function validateAllReleaseArtifactsSchemas({
@@ -125,7 +142,8 @@ export async function validateAllReleaseArtifactsSchemas({
   lockers,
   partners,
   byDistrict,
-  metadata
+  metadata,
+  pdfAudit
 }) {
   const allErrors = [];
 
@@ -146,6 +164,11 @@ export async function validateAllReleaseArtifactsSchemas({
 
   const metadataRes = await validateMetadataSchema(metadata);
   if (!metadataRes.valid) allErrors.push(...metadataRes.errors);
+
+  if (pdfAudit) {
+    const pdfAuditRes = await validatePdfAuditSchema(pdfAudit);
+    if (!pdfAuditRes.valid) allErrors.push(...pdfAuditRes.errors);
+  }
 
   if (allErrors.length > 0) {
     throw new Error(`JSON Schema validation failed for release artifacts:\n${allErrors.slice(0, 15).join('\n')}`);

@@ -33,6 +33,7 @@ import { validateAllReleaseArtifactsSchemas } from './schema-validator.js';
 export async function atomicPublish({
   records,
   metadata,
+  pdfAudit,
   reportMarkdown,
   dataDir,
   reportsDir,
@@ -74,6 +75,10 @@ export async function atomicPublish({
       { name: 'metadata.json', data: metadata, targetDir: dataDir }
     ];
 
+    if (pdfAudit) {
+      dataFiles.push({ name: 'pdf-audit.json', data: pdfAudit, targetDir: dataDir });
+    }
+
     // ─── Step 2: Write release files to staging ───────────────────────
     for (const file of dataFiles) {
       const content = JSON.stringify(file.data, null, 2);
@@ -86,7 +91,7 @@ export async function atomicPublish({
 
     // ─── Step 3: Validate Schemas & Cross-File Constraints ─────────────
     await validateAllReleaseArtifactsSchemas({
-      records, stores, lockers, partners, byDistrict, metadata
+      records, stores, lockers, partners, byDistrict, metadata, pdfAudit
     });
     validateCrossFile(records, stores, lockers, partners, byDistrict, metadata);
 

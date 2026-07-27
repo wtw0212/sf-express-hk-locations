@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SF Express HK Reviewed PDF Partners Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "code",
+      "name",
+      "address",
+      "source_key",
+      "source_url",
+      "reviewed",
+      "reviewed_at"
+    ],
+    "properties": {
+      "code": {
+        "type": "string",
+        "pattern": "^852[A-Z][A-Z0-9]*\\d+$"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "name_en": {
+        "type": ["string", "null"]
+      },
+      "address": {
+        "type": "string",
+        "minLength": 1
+      },
+      "address_en": {
+        "type": ["string", "null"]
+      },
+      "district": {
+        "type": ["string", "null"]
+      },
+      "district_en": {
+        "type": ["string", "null"]
+      },
+      "sub_district": {
+        "type": ["string", "null"]
+      },
+      "sub_district_en": {
+        "type": ["string", "null"]
+      },
+      "business_hours": {
+        "type": ["string", "null"]
+      },
+      "business_hours_en": {
+        "type": ["string", "null"]
+      },
+      "source_key": {
+        "type": "string",
+        "minLength": 1
+      },
+      "source_url": {
+        "type": "string",
+        "minLength": 1
+      },
+      "reviewed": {
+        "type": "boolean",
+        "const": true
+      },
+      "reviewed_at": {
+        "type": "string",
+        "minLength": 1
+      },
+      "review_note": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false
+  }
+}

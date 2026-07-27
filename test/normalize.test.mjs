@@ -87,7 +87,7 @@ test('quality_flags is always an array', () => {
   assert.ok(Array.isArray(records[0].quality_flags));
 });
 
-test('SSR and PDF records used only when not in TC API', () => {
+test('SSR and Reviewed PDF records used only when not in TC API', () => {
   const tcMap = new Map([['852AA', {
     serviceCode: '852AA', name: 'API Version', address: 'API Addr', city: '大埔區', district: '大埔',
     serviceTime: '', latitude: 22.45, longitude: 114.17
@@ -102,7 +102,7 @@ test('SSR and PDF records used only when not in TC API', () => {
   assert.equal(aaRecord.source, 'api_tc');
 
   const bbRecord = records.find(r => r.code === '852BB');
-  assert.equal(bbRecord.source, 'pdf_partner');
+  assert.equal(bbRecord.source, 'reviewed_pdf_partner');
 });
 
 test('no OpenCC or global character conversion exists', () => {

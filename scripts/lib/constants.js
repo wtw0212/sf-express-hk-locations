@@ -123,6 +123,7 @@ export const SOURCES = {
   API_TC: 'api_tc',
   API_EN: 'api_en',
   SSR: 'ssr',
+  REVIEWED_PDF_PARTNER: 'reviewed_pdf_partner',
   PDF_PARTNER: 'pdf_partner',
   DERIVED: 'derived'
 };
@@ -131,7 +132,7 @@ export const VALID_SOURCES = [
   SOURCES.API_TC,
   SOURCES.API_EN,
   SOURCES.SSR,
-  SOURCES.PDF_PARTNER,
+  SOURCES.REVIEWED_PDF_PARTNER,
   SOURCES.DERIVED
 ];
 

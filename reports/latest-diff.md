@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-07-27 15:16 (HKT UTC+8)`
+> **Last Updated**: `2026-07-27 15:49 (HKT UTC+8)`
 
 ---
 
@@ -15,8 +15,8 @@
 | **Partners** | 480 |
 | **Added** | 0 |
 | **Removed** | 0 |
-| **Updated** | 3 |
-| **Unchanged** | 1670 |
+| **Updated** | 0 |
+| **Unchanged** | 1673 |
 
 ---
 
@@ -50,8 +50,8 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 186 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1670 |
-| District unresolved | 3 |
+| District resolved | 1673 |
+| District unresolved | 0 |
 | With English data | 1666 |
 | Missing English | 7 |
 
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 274 |
+| **Record Quality Warnings** | 271 |
 | **Record Quality Info Flags** | 58 |
 | **Record Quality Errors** | 0 |
 
@@ -81,7 +81,6 @@
 | DUPLICATE_ADDRESS_SUFFIX | 9 |
 | MISSING_ENGLISH_RECORD | 7 |
 | MISSING_COORDINATES | 7 |
-| UNRESOLVED_ADMIN_DISTRICT | 3 |
 | SUBDISTRICT_ADDRESS_CONFLICT | 2 |
 | SOURCE_FORMATTING_ARTIFACT | 1 |
 
@@ -109,11 +108,6 @@
 
 ---
 
-## Updated Locations (3)
+## Updated Locations (0)
 
-- `852FE3012` 公斤或以下馬鞍山錦英苑自提點
-  - name: `"體積: 53 x 32 x 23 cm 重量: 15公斤或以下馬鞍山錦英苑自提點"` -> `"公斤或以下馬鞍山錦英苑自提點"`
-- `852G3004` 公斤或以下荃灣提點坪有限公司
-  - name: `"體積: 53 x 32 x 23 cm 重量: 15公斤或以下荃灣提點坪有限公司"` -> `"公斤或以下荃灣提點坪有限公司"`
-- `852G3008` 公斤或以下荃灣星羽便利店
-  - name: `"體積: 53 x 32 x 23 cm 重量: 15公斤或以下荃灣星羽便利店"` -> `"公斤或以下荃灣星羽便利店"`
+*(No updated locations)*

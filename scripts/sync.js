@@ -4,18 +4,19 @@
 /**
  * SF Express HK Location Data Sync — Main Orchestrator
  *
- * Modular pipeline phases:
+ * API-First Source Architecture:
  *   1. Read previous dataset & metadata from baselinePaths (fail-closed)
- *   2. Fetch all current sources (or load snapshot fixtures)
- *   3. Save raw snapshot (including per-PDF diagnostics & quarantined records)
- *   4. Normalize into nextList
- *   5. Run completeness gates & compute count deltas
- *   6. Compute diff against baseline dataset
- *   7. Generate diff report
- *   8. Generate metadata object with separate pipeline vs record quality metrics
- *   9. buildReleaseArtifacts()
- *  10. validateReleaseArtifacts() -> Always runs (Ajv schema, cross-file, domain checks)
- *  11. publishReleaseArtifacts() -> Transactional publication to outputPaths
+ *   2. Load reviewed PDF partner registry (fail-closed)
+ *   3. Fetch all current sources (or load snapshot fixtures)
+ *   4. Save raw snapshot
+ *   5. Normalize canonical sources (TC API > SSR > Reviewed PDF Registry)
+ *   6. Audit live PDF records against canonical sources (generate pdf-audit.json)
+ *   7. Run completeness gates & compute count deltas
+ *   8. Compute diff against baseline dataset
+ *   9. Generate diff report
+ *  10. Generate metadata object with separate pipeline vs record quality metrics
+ *  11. validateReleaseArtifacts() -> Always runs (Ajv schema, cross-file, domain checks)
+ *  12. publishReleaseArtifacts() -> Transactional publication to outputPaths
  */
 
 import { readFile, writeFile } from 'node:fs/promises';
@@ -31,6 +32,8 @@ import { computeDiff } from './lib/diff.js';
 import { generateMarkdownReport } from './lib/report.js';
 import { atomicPublish } from './lib/atomic-publish.js';
 import { validateAllReleaseArtifactsSchemas } from './lib/schema-validator.js';
+import { loadReviewedPdfRegistry } from './lib/reviewed-pdf-registry.js';
+import { auditPartnerPdfRecords } from './lib/pdf-audit.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = resolve(__dirname, '..');
@@ -52,86 +55,20 @@ export function getHKTDateString() {
   return `${YYYY}-${MM}-${DD} ${hh}:${mm} (HKT UTC+8)`;
 }
 
-/**
- * Phase 1: Build release artifacts in memory.
- */
-export function buildReleaseArtifacts({ records, metadata, reportMarkdown }) {
-  const stores = records.filter(r => r.type === 'store');
-  const lockers = records.filter(r => r.type === 'locker');
-  const partners = records.filter(r => r.type === 'partner');
-
-  const byDistrict = {};
-  for (const r of records) {
-    const key = r.district || '_unresolved';
-    if (!byDistrict[key]) byDistrict[key] = [];
-    byDistrict[key].push(r);
-  }
-
-  return {
-    records,
-    stores,
-    lockers,
-    partners,
-    byDistrict,
-    metadata,
-    reportMarkdown
-  };
-}
-
-/**
- * Phase 2: Validate release artifacts (Ajv Schemas, Cross-File, Domain).
- * MUST execute in BOTH dry-run mode and live mode.
- */
-export async function validateReleaseArtifacts(artifacts) {
-  const { records, stores, lockers, partners, byDistrict, metadata } = artifacts;
-
-  const { errors: recordErrors } = validateRecords(records);
-  if (recordErrors.length > 0) {
-    throw new Error(`Domain record validation failed:\n${recordErrors.join('\n')}`);
-  }
-
-  await validateAllReleaseArtifactsSchemas({
-    records, stores, lockers, partners, byDistrict, metadata
-  });
-
-  validateCrossFile(records, stores, lockers, partners, byDistrict, metadata);
-}
-
-/**
- * Phase 3: Transactional atomic publication to output paths.
- */
-export async function publishReleaseArtifacts(artifacts, outputPaths) {
-  const { records, metadata, reportMarkdown } = artifacts;
-  await atomicPublish({
-    records,
-    metadata,
-    reportMarkdown,
-    dataDir: outputPaths.dataDir,
-    reportsDir: outputPaths.reportsDir,
-    rootDir: outputPaths.rootDir
-  });
-}
-
-/**
- * Main Sync Orchestrator
- */
 export async function runSync(options = {}) {
-  const args = process.argv;
-  const isFixtureCli = args.includes('--fixture');
-  const isDryRunCli = args.includes('--dry-run');
+  const isFixtureMode = options.fixture || options.isFixture || process.argv.includes('--fixture');
+  const isDryRunCli = process.argv.includes('--dry-run');
 
-  const baselineDirCliIdx = args.indexOf('--baseline-dir');
-  const customBaselineDirCli = baselineDirCliIdx !== -1 && args[baselineDirCliIdx + 1] ? args[baselineDirCliIdx + 1] : null;
+  const customBaselineDirCli = process.argv.find(arg => arg.startsWith('--baseline-dir='))?.split('=')[1] ||
+    (process.argv.indexOf('--baseline-dir') >= 0 ? process.argv[process.argv.indexOf('--baseline-dir') + 1] : null);
 
-  const outputDirIdx = args.indexOf('--output-dir');
-  const customOutputDirCli = outputDirIdx !== -1 && args[outputDirIdx + 1] ? args[outputDirIdx + 1] : null;
+  const customOutputDirCli = process.argv.find(arg => arg.startsWith('--output-dir='))?.split('=')[1] ||
+    (process.argv.indexOf('--output-dir') >= 0 ? process.argv[process.argv.indexOf('--output-dir') + 1] : null);
 
-  const isFixtureMode = options.mode === 'fixture' || options.isFixture || isFixtureCli;
   const shouldPublish = options.publish !== undefined
     ? options.publish
     : (isFixtureMode || isDryRunCli ? false : true);
 
-  // Baseline input paths vs Output generated paths
   const baselineDir = options.baselinePaths?.dataDir || options.baselineDir || (customBaselineDirCli ? resolve(customBaselineDirCli) : resolve(ROOT_DIR, 'data'));
   const customOutDir = customOutputDirCli || options.outputDir;
   const baseRootDir = options.outputPaths?.rootDir || options.paths?.rootDir || options.rootDir || (customOutDir ? resolve(customOutDir) : ROOT_DIR);
@@ -181,8 +118,22 @@ export async function runSync(options = {}) {
     console.log(`No previous baseline dataset found at ${prevDataPath}. First run.`);
   }
 
+  // Load reviewed PDF partner registry
+  const reviewedPdfPath = resolve(baselineDir, 'reviewed-pdf-partners.json');
+  const fallbackReviewedPdfPath = resolve(ROOT_DIR, 'data', 'reviewed-pdf-partners.json');
+  const pathToReadReviewed = existsSync(reviewedPdfPath) ? reviewedPdfPath : fallbackReviewedPdfPath;
+
+  let reviewedPdfList = [];
+  try {
+    reviewedPdfList = await loadReviewedPdfRegistry(pathToReadReviewed);
+    console.log(`Loaded reviewed PDF registry: ${reviewedPdfList.length} records`);
+  } catch (e) {
+    throw new Error(`Failed to load reviewed PDF registry: ${e.message}`);
+  }
+
   // ─── 2. Fetch current sources (or load fixtures) ───────────────────
   let tcResults, enResults, ssrResult, pdfResult;
+  let sourceRetrievedAt = hktDateStr;
 
   if (isFixtureMode) {
     console.log('Loading source data from raw snapshot fixture...');
@@ -194,6 +145,7 @@ export async function runSync(options = {}) {
       throw new Error(`Fixture file not found at ${snapshotPath} or ${fallbackPath}`);
     }
     const rawSnap = JSON.parse(await readFile(pathToRead, 'utf8'));
+    sourceRetrievedAt = rawSnap.retrieved_at || rawSnap.created_at || hktDateStr;
 
     const rawTcResults = rawSnap.sources.api_tc?.results || [];
     tcResults = rawTcResults.map(r => ({
@@ -250,7 +202,7 @@ export async function runSync(options = {}) {
   const tcMap = buildRecordMap(tcResults);
   const enMap = buildRecordMap(enResults);
 
-  console.log(`\nSource summary: TC=${tcMap.size}, EN=${enMap.size}, SSR=${ssrResult.records.length}, PDF=${pdfResult.records.length} (status: ${pdfResult.status})`);
+  console.log(`\nSource summary: TC=${tcMap.size}, EN=${enMap.size}, SSR=${ssrResult.records.length}, ReviewedPDF=${reviewedPdfList.length}, LivePDFParsed=${pdfResult.records.length} (status: ${pdfResult.status})`);
 
   // ─── 3. Save raw snapshot ──────────────────────────────────────────
   if (!isFixtureMode && shouldPublish) {
@@ -268,20 +220,35 @@ export async function runSync(options = {}) {
       ssrErrors: ssrResult.errors,
       pdfDetails: pdfResult.pdfDetails,
       quarantinedRecords: pdfResult.quarantinedRecords
-    }, hktDateStr);
+    }, sourceRetrievedAt);
     console.log('Saved raw snapshot.');
   }
 
-  // ─── 4. Normalize ──────────────────────────────────────────────────
-  const { records: nextList, stats } = normalizeRecords(
-    tcMap, enMap, ssrResult.records, pdfResult.records, hktDateStr
-  );
+  // ─── 4. Normalize Canonical Sources (TC API > SSR > Reviewed PDF Registry) ──
+  const { records: nextList, stats } = normalizeRecords({
+    tcMap,
+    enMap,
+    ssrList: ssrResult.records,
+    reviewedPdfList,
+    generatedAt: hktDateStr,
+    sourceRetrievedAt
+  });
   console.log(`\nNormalized: Total=${stats.total}, Stores=${stats.stores}, Lockers=${stats.lockers}, Partners=${stats.partners}`);
 
-  // ─── 5. Validate next records ──────────────────────────────────────
+  // ─── 5. Audit Live PDF Records ──────────────────────────────────────
+  const pdfAudit = auditPartnerPdfRecords({
+    tcMap,
+    ssrList: ssrResult.records,
+    reviewedPdfList,
+    parsedPdfRecords: pdfResult.records,
+    quarantinedRecords: pdfResult.quarantinedRecords,
+    sourceRetrievedAt,
+    generatedAt: hktDateStr
+  });
+
+  // ─── 6. Validate next records & Completeness gates ──────────────────
   const { errors: validationErrors, warnings: validationWarnings } = validateRecords(nextList);
 
-  // ─── 6. Completeness gates & Count deltas ──────────────────────────
   const gateResult = checkCompletenessGates({
     tcResults,
     enResults,
@@ -339,9 +306,22 @@ export async function runSync(options = {}) {
     }
   }
 
+  const ssrCodesInMap = new Set();
+  for (const item of ssrResult.records) {
+    const code = item.serviceCode || item.code;
+    if (code && !tcMap.has(code)) ssrCodesInMap.add(code);
+  }
+  const reviewedCodesInMap = new Set();
+  for (const item of reviewedPdfList) {
+    const code = item.serviceCode || item.code;
+    if (code && !tcMap.has(code) && !ssrCodesInMap.has(code)) reviewedCodesInMap.add(code);
+  }
+
   const metadata = {
     schema_version: 2,
-    retrieved_at: hktDateStr,
+    source_retrieved_at: sourceRetrievedAt,
+    generated_at: hktDateStr,
+    retrieved_at: sourceRetrievedAt,
     counts: {
       total: stats.total,
       stores: stats.stores,
@@ -382,6 +362,16 @@ export async function runSync(options = {}) {
         details: pdfResult.pdfDetails || []
       }
     },
+    source_policy: {
+      canonical_priority: ['api_tc', 'api_en', 'ssr', 'reviewed_pdf_partner'],
+      audit_only_sources: ['pdf_partner'],
+      counts: {
+        api_canonical_count: tcMap.size,
+        ssr_only_count: ssrCodesInMap.size,
+        reviewed_pdf_supplement_count: reviewedCodesInMap.size,
+        unreviewed_pdf_candidate_count: pdfAudit.summary.new_pdf_only_candidate_count
+      }
+    },
     coverage: {
       tc_record_count: gateResult.metrics.tc_unique_codes,
       en_record_count: gateResult.metrics.en_unique_codes,
@@ -398,25 +388,57 @@ export async function runSync(options = {}) {
   };
 
   // ─── 10 & 11. Build, Validate & Publish Release Artifacts ─────────
-  const releaseArtifacts = buildReleaseArtifacts({
-    records: nextList,
-    metadata,
-    reportMarkdown
-  });
+  const stores = nextList.filter(r => r.type === 'store');
+  const lockers = nextList.filter(r => r.type === 'locker');
+  const partners = nextList.filter(r => r.type === 'partner');
 
-  // Always run release validation (Ajv JSON Schema, Cross-File, Domain) in BOTH dry-run and live modes
-  await validateReleaseArtifacts(releaseArtifacts);
+  const byDistrict = {};
+  for (const r of nextList) {
+    const key = r.district || '_unresolved';
+    if (!byDistrict[key]) byDistrict[key] = [];
+    byDistrict[key].push(r);
+  }
+
+  const releaseArtifacts = {
+    records: nextList,
+    stores,
+    lockers,
+    partners,
+    byDistrict,
+    metadata,
+    pdfAudit,
+    reportMarkdown
+  };
+
+  // Always run release validation in BOTH dry-run and live modes
+  await validateAllReleaseArtifactsSchemas(releaseArtifacts);
+  validateCrossFile(
+    nextList,
+    stores,
+    lockers,
+    partners,
+    byDistrict,
+    metadata
+  );
   console.log('Full release artifacts validation (Ajv JSON Schema & Cross-File) passed.');
 
   if (shouldPublish) {
-    await publishReleaseArtifacts(releaseArtifacts, {
+    await atomicPublish({
+      records: nextList,
+      metadata,
+      pdfAudit,
+      reportMarkdown,
       dataDir: targetDataDir,
       reportsDir: targetReportsDir,
       rootDir: baseRootDir
     });
     console.log(`\nAll output files published atomically to ${targetDataDir}.`);
   } else if (customOutDir || options.outputPaths?.dataDir || options.outputDir) {
-    await publishReleaseArtifacts(releaseArtifacts, {
+    await atomicPublish({
+      records: nextList,
+      metadata,
+      pdfAudit,
+      reportMarkdown,
       dataDir: targetDataDir,
       reportsDir: targetReportsDir,
       rootDir: baseRootDir
@@ -425,6 +447,42 @@ export async function runSync(options = {}) {
   } else {
     console.log('\n[Dry-Run Mode] Validation, diff, and report generation completed. No files published.');
   }
+}
+
+export function buildReleaseArtifacts({ records, metadata, pdfAudit, reportMarkdown }) {
+  return { records, metadata, pdfAudit, reportMarkdown };
+}
+
+export async function validateReleaseArtifacts(artifacts) {
+  const { records, metadata, pdfAudit } = artifacts;
+  const stores = records.filter(r => r.type === 'store');
+  const lockers = records.filter(r => r.type === 'locker');
+  const partners = records.filter(r => r.type === 'partner');
+  const byDistrict = {};
+  for (const r of records) {
+    const key = r.district || '_unresolved';
+    if (!byDistrict[key]) byDistrict[key] = [];
+    byDistrict[key].push(r);
+  }
+
+  await validateAllReleaseArtifactsSchemas({
+    records, stores, lockers, partners, byDistrict, metadata, pdfAudit
+  });
+  validateCrossFile(records, stores, lockers, partners, byDistrict, metadata);
+}
+
+export async function publishReleaseArtifacts(artifacts, options) {
+  const { records, metadata, pdfAudit, reportMarkdown } = artifacts;
+  await atomicPublish({
+    records,
+    metadata,
+    pdfAudit,
+    reportMarkdown,
+    dataDir: options.dataDir,
+    reportsDir: options.reportsDir,
+    rootDir: options.rootDir,
+    options
+  });
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

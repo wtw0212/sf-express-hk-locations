@@ -1,6 +1,8 @@
 {
   "schema_version": 2,
-  "retrieved_at": "2026-07-27 15:16 (HKT UTC+8)",
+  "source_retrieved_at": "2026-07-27 15:49 (HKT UTC+8)",
+  "generated_at": "2026-07-27 15:49 (HKT UTC+8)",
+  "retrieved_at": "2026-07-27 15:49 (HKT UTC+8)",
   "counts": {
     "total": 1673,
     "stores": 137,
@@ -231,19 +233,36 @@
       ]
     }
   },
+  "source_policy": {
+    "canonical_priority": [
+      "api_tc",
+      "api_en",
+      "ssr",
+      "reviewed_pdf_partner"
+    ],
+    "audit_only_sources": [
+      "pdf_partner"
+    ],
+    "counts": {
+      "api_canonical_count": 1666,
+      "ssr_only_count": 2,
+      "reviewed_pdf_supplement_count": 5,
+      "unreviewed_pdf_candidate_count": 0
+    }
+  },
   "coverage": {
     "tc_record_count": 1666,
     "en_record_count": 1666,
     "bilingual_match_rate": 0.9993997599039616,
-    "district_resolved_count": 1670,
-    "district_unresolved_count": 3
+    "district_resolved_count": 1673,
+    "district_unresolved_count": 0
   },
   "quality": {
     "pipeline_blocking_errors": 0,
     "pipeline_warnings": 5,
     "record_flag_counts_by_severity": {
       "info": 58,
-      "warning": 274,
+      "warning": 271,
       "error": 0
     },
     "flag_counts_by_type": {
@@ -256,8 +275,7 @@
       "MISSING_ENGLISH_RECORD": 7,
       "SUBDISTRICT_ADDRESS_CONFLICT": 2,
       "SOURCE_FORMATTING_ARTIFACT": 1,
-      "MISSING_COORDINATES": 7,
-      "UNRESOLVED_ADMIN_DISTRICT": 3
+      "MISSING_COORDINATES": 7
     }
   }
 }

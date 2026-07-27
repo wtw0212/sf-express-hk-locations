@@ -217,15 +217,15 @@ export function checkCompletenessGates({
   const pdfRecordsCount = pdfResult.records?.length ?? 0;
 
   if (pdfTotal > 0 && pdfSuccess === 0) {
-    errors.push(`All partner PDFs failed (${pdfFail}/${pdfTotal} failed)`);
+    warnings.push(`[Audit warning] All partner PDFs failed (${pdfFail}/${pdfTotal} failed); audit incomplete`);
   } else if (pdfTotal > 0 && pdfFail > 0) {
     warnings.push(`Partial partner PDF failures: ${pdfFail}/${pdfTotal} failed`);
   }
 
-  // ─── 1. PDF Gate ────────────────────────────────────────────────────────
+  // ─── 1. PDF Audit Gate ──────────────────────────────────────────────────
   const pdfDiscoveryTotal = pdfResult.parseSuccessCount ?? pdfRecordsCount;
   if (pdfDiscoveryTotal === 0) {
-    errors.push('No partner PDFs were discovered; refusing to publish without the expected supplementary source');
+    warnings.push('[Audit warning] No partner PDFs were discovered; audit incomplete');
   }
 
   const EXPECTED_PARTNER_PDF_SOURCE_KEYS = new Set([

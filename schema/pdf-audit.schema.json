@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SF Express HK PDF Audit Artifact Schema",
+  "type": "object",
+  "required": [
+    "source_retrieved_at",
+    "generated_at",
+    "summary",
+    "api_pdf_conflicts",
+    "reviewed_pdf_drift",
+    "new_pdf_only_candidates",
+    "missing_reviewed_records",
+    "quarantined_records"
+  ],
+  "properties": {
+    "source_retrieved_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "parsed_pdf_record_count",
+        "api_pdf_conflict_count",
+        "reviewed_pdf_drift_count",
+        "new_pdf_only_candidate_count",
+        "missing_reviewed_record_count",
+        "quarantined_record_count"
+      ],
+      "properties": {
+        "parsed_pdf_record_count": { "type": "integer", "minimum": 0 },
+        "api_pdf_conflict_count": { "type": "integer", "minimum": 0 },
+        "reviewed_pdf_drift_count": { "type": "integer", "minimum": 0 },
+        "new_pdf_only_candidate_count": { "type": "integer", "minimum": 0 },
+        "missing_reviewed_record_count": { "type": "integer", "minimum": 0 },
+        "quarantined_record_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "api_pdf_conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "differing_fields"],
+        "properties": {
+          "code": { "type": "string" },
+          "api_name": { "type": ["string", "null"] },
+          "pdf_name": { "type": ["string", "null"] },
+          "api_address": { "type": ["string", "null"] },
+          "pdf_address": { "type": ["string", "null"] },
+          "api_business_hours": { "type": ["string", "null"] },
+          "pdf_business_hours": { "type": ["string", "null"] },
+          "differing_fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "reviewed_pdf_drift": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "differing_fields"],
+        "properties": {
+          "code": { "type": "string" },
+          "reviewed_name": { "type": ["string", "null"] },
+          "pdf_name": { "type": ["string", "null"] },
+          "reviewed_address": { "type": ["string", "null"] },
+          "pdf_address": { "type": ["string", "null"] },
+          "reviewed_business_hours": { "type": ["string", "null"] },
+          "pdf_business_hours": { "type": ["string", "null"] },
+          "differing_fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "new_pdf_only_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "name"],
+        "properties": {
+          "code": { "type": "string" },
+          "name": { "type": "string" },
+          "address": { "type": ["string", "null"] },
+          "district": { "type": ["string", "null"] },
+          "sub_district": { "type": ["string", "null"] },
+          "business_hours": { "type": ["string", "null"] },
+          "source_url": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "missing_reviewed_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code"],
+        "properties": {
+          "code": { "type": "string" },
+          "name": { "type": ["string", "null"] },
+          "address": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "quarantined_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["reasonCodes"],
+        "properties": {
+          "extractedCode": { "type": ["string", "null"] },
+          "involvedCodes": { "type": "array", "items": { "type": "string" } },
+          "rawSegment": { "type": "string" },
+          "candidateRecord": { "type": ["object", "null"] },
+          "reasonCodes": { "type": "array", "items": { "type": "string" } },
+          "provenance": { "type": "object" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

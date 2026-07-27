@@ -34,6 +34,8 @@ const mockRecord = {
 
 const mockMetadata = {
   schema_version: 2,
+  source_retrieved_at: '2026-07-27',
+  generated_at: '2026-07-27',
   retrieved_at: '2026-07-27',
   counts: { total: 1, stores: 1, lockers: 0, partners: 0 },
   count_deltas: {
@@ -58,9 +60,20 @@ const mockMetadata = {
       valid_record_count: 0,
       quarantined_record_count: 0,
       quarantine_ratio: 0,
+      cross_pdf_duplicate_conflict_count: 0,
       status: 'success',
       errors: [],
       details: []
+    }
+  },
+  source_policy: {
+    canonical_priority: ['api_tc', 'api_en', 'ssr', 'reviewed_pdf_partner'],
+    audit_only_sources: ['pdf_partner'],
+    counts: {
+      api_canonical_count: 1,
+      ssr_only_count: 0,
+      reviewed_pdf_supplement_count: 0,
+      unreviewed_pdf_candidate_count: 0
     }
   },
   coverage: { tc_record_count: 1, en_record_count: 1, bilingual_match_rate: 1, district_resolved_count: 1, district_unresolved_count: 0 },

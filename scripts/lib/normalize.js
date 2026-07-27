@@ -5,21 +5,58 @@ import { classifyLocation } from './classify.js';
 import { generateQualityFlags } from './quality-flags.js';
 
 /**
- * Normalize and merge records from all sources.
- * Source priority: TC API > SSR > PDF
- * English data comes from EN API and is merged by service code.
+ * Get current time as HKT string.
+ */
+function getHKTDateString() {
+  const now = new Date();
+  const hktOffset = 8 * 60 * 60 * 1000;
+  const hktDate = new Date(now.getTime() + hktOffset);
+
+  const YYYY = hktDate.getUTCFullYear();
+  const MM = String(hktDate.getUTCMonth() + 1).padStart(2, '0');
+  const DD = String(hktDate.getUTCDate()).padStart(2, '0');
+  const hh = String(hktDate.getUTCHours()).padStart(2, '0');
+  const mm = String(hktDate.getUTCMinutes()).padStart(2, '0');
+
+  return `${YYYY}-${MM}-${DD} ${hh}:${mm} (HKT UTC+8)`;
+}
+
+/**
+ * Normalize and merge records from canonical sources in order:
+ * 1. TC API
+ * 2. SSR (supplementary only)
+ * 3. Reviewed PDF partner registry (supplementary only)
  *
- * No cleanAndConvert, no convertObjectProperties, no global character replacement.
- * The only mutation is ^ removal from EN addresses (display-safe cleanup).
+ * Live parsed PDF records are audit-only and are NEVER passed to normalizeRecords.
  *
- * @param {Map<string, object>} tcMap - TC API records keyed by service code
- * @param {Map<string, object>} enMap - EN API records keyed by service code
- * @param {Array} ssrList - SSR supplementary records
- * @param {Array} pdfList - PDF partner records
- * @param {string} retrievedAt - HKT timestamp
+ * @param {object|Map} options - Options object or legacy tcMap
+ * @param {Map} [enMapArg]
+ * @param {Array} [ssrListArg]
+ * @param {Array} [reviewedPdfListArg]
+ * @param {string} [timestampArg]
  * @returns {{ records: Array, stats: object }}
  */
-export function normalizeRecords(tcMap, enMap, ssrList, pdfList, retrievedAt) {
+export function normalizeRecords(options, enMapArg, ssrListArg, reviewedPdfListArg, timestampArg) {
+  let tcMap, enMap, ssrList, reviewedPdfList, generatedAt, sourceRetrievedAt;
+
+  if (options instanceof Map) {
+    tcMap = options;
+    enMap = enMapArg || new Map();
+    ssrList = ssrListArg || [];
+    reviewedPdfList = reviewedPdfListArg || [];
+    generatedAt = timestampArg || getHKTDateString();
+    sourceRetrievedAt = generatedAt;
+  } else {
+    ({
+      tcMap = new Map(),
+      enMap = new Map(),
+      ssrList = [],
+      reviewedPdfList = [],
+      generatedAt = getHKTDateString(),
+      sourceRetrievedAt = generatedAt
+    } = options || {});
+  }
+
   const mergedMap = new Map();
 
   // Priority 1: TC API records
@@ -35,11 +72,11 @@ export function normalizeRecords(tcMap, enMap, ssrList, pdfList, retrievedAt) {
     }
   }
 
-  // Priority 3: PDF partners (only if not already present)
-  for (const item of pdfList) {
+  // Priority 3: Reviewed PDF partner registry (only if not already present)
+  for (const item of reviewedPdfList) {
     const code = item.serviceCode || item.code;
     if (code && !mergedMap.has(code)) {
-      mergedMap.set(code, { item, source: SOURCES.PDF_PARTNER });
+      mergedMap.set(code, { item, source: SOURCES.REVIEWED_PDF_PARTNER });
     }
   }
 
@@ -63,15 +100,12 @@ export function normalizeRecords(tcMap, enMap, ssrList, pdfList, retrievedAt) {
     const nameEn = enItem ? (enItem.name || '').trim() || null : null;
     const subDistrictEn = enItem ? (enItem.district || '').trim() || null : null;
     let addressEn = enItem ? (enItem.address || '').trim() || null : null;
-    // Remove caret separators from EN address (display-safe cleanup only)
     if (addressEn) {
       addressEn = addressEn.replace(/\*\^/g, '*').replace(/\^/g, '').trim();
     }
     const businessHoursEn = enItem ? (enItem.serviceTime || '').trim() || null : null;
-
     const businessHours = (item.serviceTime || '').trim() || null;
 
-    // Build normalized record — preserve source values, no character conversion
     const normalized = {
       id: code,
       code,
@@ -107,10 +141,9 @@ export function normalizeRecords(tcMap, enMap, ssrList, pdfList, retrievedAt) {
         business_hours: source,
         business_hours_en: enItem ? SOURCES.API_EN : null
       },
-      retrieved_at: retrievedAt
+      retrieved_at: sourceRetrievedAt
     };
 
-    // Generate quality flags (bilingual checks, formatting checks, etc.)
     const bilingualFlags = generateQualityFlags(item, enItem, normalized);
     normalized.quality_flags = [
       ...districtResult.flags,

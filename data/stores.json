@@ -23,7 +23,7 @@
       "longitude": 113.941301
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852PC",
@@ -49,7 +49,7 @@
       "longitude": 114.232392
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852PAL",
@@ -75,85 +75,7 @@
       "longitude": 114.226465
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852PD",
-    "code": "852PD",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "北角錦屏街順豐站",
-    "name_en": "Kam Ping Street, North Point",
-    "region": "香港島",
-    "region_en": "Hong Kong Island",
-    "district": "東區",
-    "district_en": "Eastern District",
-    "sub_district": "北角",
-    "sub_district_en": "North Point",
-    "address": "香港東區北角錦屏街59&61號東發大廈D座地下19&20號鋪*",
-    "address_en": "Shop 19&20 on G/F, Tung Fat Building Block D, No. 59 & 61 Kam Ping Street,North Point,Eastern District,Hong Kong",
-    "telephone": "64686104",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.2902126,
-      "longitude": 114.2001389
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852NPTM",
-    "code": "852NPTM",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "北角豐富商場順豐站",
-    "name_en": "Fung Full Plaza, North Point",
-    "region": "香港島",
-    "region_en": "Hong Kong Island",
-    "district": "東區",
-    "district_en": "Eastern District",
-    "sub_district": "北角",
-    "sub_district_en": "North Point",
-    "address": "香港東區北角英皇道480號豐富商場地下8號鋪*",
-    "address_en": "Shop 8, G/F, Fung Full Plaza, 480 King's Road*,North Point,Eastern District,Hong Kong",
-    "telephone": "64634947",
-    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 10:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.29089,
-      "longitude": 114.20129
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852PDL",
-    "code": "852PDL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "北角國都廣場順豐站",
-    "name_en": "Olympia Plaza, North Point",
-    "region": "香港島",
-    "region_en": "Hong Kong Island",
-    "district": "東區",
-    "district_en": "Eastern District",
-    "sub_district": "北角",
-    "sub_district_en": "North Point",
-    "address": "香港東區北角英皇道255號國都廣場2樓202及203號鋪*",
-    "address_en": "Shop 202 & 203, 2/F, Olympia Plaza, 255 King's Road*,North Point,Eastern District,Hong Kong",
-    "telephone": "64634947",
-    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.289759,
-      "longitude": 114.19453
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852PB",
@@ -179,7 +101,7 @@
       "longitude": 114.243764
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852PCL",
@@ -205,7 +127,85 @@
       "longitude": 114.235291
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852PD",
+    "code": "852PD",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "北角錦屏街順豐站",
+    "name_en": "Kam Ping Street, North Point",
+    "region": "香港島",
+    "region_en": "Hong Kong Island",
+    "district": "東區",
+    "district_en": "Eastern District",
+    "sub_district": "北角",
+    "sub_district_en": "North Point",
+    "address": "香港東區北角錦屏街59&61號東發大廈D座地下19&20號鋪*",
+    "address_en": "Shop 19&20 on G/F, Tung Fat Building Block D, No. 59 & 61 Kam Ping Street,North Point,Eastern District,Hong Kong",
+    "telephone": "64686104",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.2902126,
+      "longitude": 114.2001389
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852NPTM",
+    "code": "852NPTM",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "北角豐富商場順豐站",
+    "name_en": "Fung Full Plaza, North Point",
+    "region": "香港島",
+    "region_en": "Hong Kong Island",
+    "district": "東區",
+    "district_en": "Eastern District",
+    "sub_district": "北角",
+    "sub_district_en": "North Point",
+    "address": "香港東區北角英皇道480號豐富商場地下8號鋪*",
+    "address_en": "Shop 8, G/F, Fung Full Plaza, 480 King's Road*,North Point,Eastern District,Hong Kong",
+    "telephone": "64634947",
+    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 10:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.29089,
+      "longitude": 114.20129
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852PDL",
+    "code": "852PDL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "北角國都廣場順豐站",
+    "name_en": "Olympia Plaza, North Point",
+    "region": "香港島",
+    "region_en": "Hong Kong Island",
+    "district": "東區",
+    "district_en": "Eastern District",
+    "sub_district": "北角",
+    "sub_district_en": "North Point",
+    "address": "香港東區北角英皇道255號國都廣場2樓202及203號鋪*",
+    "address_en": "Shop 202 & 203, 2/F, Olympia Plaza, 255 King's Road*,North Point,Eastern District,Hong Kong",
+    "telephone": "64634947",
+    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.289759,
+      "longitude": 114.19453
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852AA",
@@ -231,7 +231,7 @@
       "longitude": 114.167336
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852FCL",
@@ -257,7 +257,7 @@
       "longitude": 114.1680178
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852NLL",
@@ -283,7 +283,7 @@
       "longitude": 114.17461
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852AA4001",
@@ -309,241 +309,7 @@
       "longitude": 114.151876
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852Z552",
-    "code": "852Z552",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "小西灣富景花園商場順豐站",
-    "name_en": "Fullview Garden Commercial Centre, Siu Sai Wan",
-    "region": "香港島",
-    "region_en": "Hong Kong Island",
-    "district": "東區",
-    "district_en": "Eastern District",
-    "sub_district": "小西灣",
-    "sub_district_en": "Siu Sai Wan",
-    "address": "香港東區小西灣小西灣道18號富景花園商場1樓173號鋪 & 128號鋪*",
-    "address_en": "Shop No. 173 & 128, 1/F, Fullview Garden Commercial Centre, 18 Siu Sai Wan Road*,Siu Sai Wan,Eastern District,Hong Kong",
-    "telephone": "64634947",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.262566,
-      "longitude": 114.251355
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852CAD",
-    "code": "852CAD",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "油塘味千集團大廈順豐站",
-    "name_en": "Ajisen Group Tower, Yau Tong",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "油塘",
-    "sub_district_en": "Yau Tong",
-    "address": "香港觀塘區油塘仁宇圍味千集團大廈B座地庫(蔚藍東岸對面)*",
-    "address_en": "B/F(Opposite to Montego Bay), Block B, Ajisen Group Tower, Yan Yue Wai*,Yau Tong,Kwun Tong District,Hong Kong",
-    "telephone": "60255685",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.292587,
-      "longitude": 114.236609
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852AJL",
-    "code": "852AJL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "油塘大本型順豐站",
-    "name_en": "Domain, Yau Tong",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "油塘",
-    "sub_district_en": "Yau Tong",
-    "address": "香港觀塘區油塘大本型2樓229號鋪*",
-    "address_en": "Shop 229, 2/F, Domain*,Yau Tong,Kwun Tong District,Hong Kong",
-    "telephone": "55261667",
-    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
-    "business_hours_en": "Mon to Fri 10:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.296592,
-      "longitude": 114.238758
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852Z152",
-    "code": "852Z152",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "秀茂坪寶達商場順豐站",
-    "name_en": "Sau Mau Ping, Po Tat shopping CTR",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "油塘",
-    "sub_district_en": "Yau Tong",
-    "address": "香港觀塘區油塘秀茂坪寶達邨寶達商場P1樓108號鋪*",
-    "address_en": "Shop No. 108, P1 Floor, Po Tat Shopping Centre, Po tat Estate, Kwun Tong, Kwun Tong District, Kowloon, Hong Kong*,Yau Tong,Kwun Tong District,Hong Kong",
-    "telephone": "67934923",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
-    "business_hours_en": "Mon - Fri: 11:00-21:00, Sat, Sun and Public Holiday: 12:00-20:00",
-    "location": {
-      "latitude": 22.317409,
-      "longitude": 114.236184
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852H",
-    "code": "852H",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "九龍灣同力工業中心順豐站",
-    "name_en": "Tonic Industrial Centre, Kowloon Bay",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "九龍灣",
-    "sub_district_en": "Kowloon Bay",
-    "address": "香港觀塘區九龍灣臨興街19號同力工業中心B座地下*",
-    "address_en": "G/F, Block B, Tonic Industrial Centre, No. 19 Lam Hing Street*,Kowloon Bay,Kwun Tong District,Hong Kong",
-    "telephone": "60826831",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
-    "location": {
-      "latitude": 22.324842,
-      "longitude": 114.210307
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852HC",
-    "code": "852HC",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "九龍灣榮發工廈順豐站",
-    "name_en": "Wing Fat Industrial Building, Kowloon Bay",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "九龍灣",
-    "sub_district_en": "Kowloon Bay",
-    "address": "香港觀塘區九龍灣宏泰道12號榮發工業大廈地下5號鋪*",
-    "address_en": "Workshop No. 5, G/F, Wing Fat Industrial Building, No. 12 Wang Tai Road*,Kowloon Bay,Kwun Tong District,Hong Kong",
-    "telephone": "56814976",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.3231756,
-      "longitude": 114.209156
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852HBL",
-    "code": "852HBL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "九龍灣得寶商場順豐站",
-    "name_en": "Tak Bo Mall, Kowloon Bay",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "九龍灣",
-    "sub_district_en": "Kowloon Bay",
-    "address": "香港觀塘區九龍灣牛頭角道3號得寶花園得寶商場1樓209號鋪*",
-    "address_en": "Shop 209, 1/F, Tak Bo Mall, 3 Ngau Tau Kok Road*,Kowloon Bay,Kwun Tong District,Hong Kong",
-    "telephone": "64686946",
-    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.327001,
-      "longitude": 114.214171
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852Z401",
-    "code": "852Z401",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "九龍灣麗晶花園順豐站",
-    "name_en": "Richland Gardens, Kowloon Bay",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "九龍灣",
-    "sub_district_en": "Kowloon Bay",
-    "address": "香港觀塘區九龍灣香港九龍觀塘區九龍灣宏光道80號麗晶花園2樓211號鋪*",
-    "address_en": "Unit 211, 2/F, Richland Gardens, 80 Wang Kwong Road, Kowloon Bay, Kwun Tong District, Kowloon, Hong Kong*,Kowloon Bay,Kwun Tong District,Hong Kong",
-    "telephone": "64686946",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六,12:00-20:00",
-    "business_hours_en": "Mon - Fri: 11:00-21:00, Sat & Sun & Public Hoilday: 12:00-20:00",
-    "location": {
-      "latitude": 22.329308,
-      "longitude": 114.205985
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852Z402",
-    "code": "852Z402",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "慈雲山中心順豐站",
-    "name_en": "Tsz Wan Shan Shopping Centre",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "九龍灣",
-    "sub_district_en": "Kowloon Bay",
-    "address": "香港觀塘區九龍灣慈雲山毓華街23號慈雲山中心4樓410B鋪*",
-    "address_en": "Shop No.410B, Tsz Wan Shan Shopping Centre, 23 Yuk Wah Street, Tsz Wan Shan, Wong Tai Sin District, Kowloon, Hong Kong,Kowloon Bay,Kwun Tong District,Hong Kong",
-    "telephone": "56847740",
-    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri: 11:00-21:00, Sat to Sun, Public: 12:00-20:00",
-    "location": {
-      "latitude": 22.347802,
-      "longitude": 114.200472
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852PGL",
@@ -569,7 +335,7 @@
       "longitude": 114.223438
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852P",
@@ -595,163 +361,7 @@
       "longitude": 114.191308
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852C",
-    "code": "852C",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "觀塘豐業大廈順豐站",
-    "name_en": "Fung Yip Industrial Building, Kwun Tong",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "觀塘",
-    "sub_district_en": "Kwun Tong",
-    "address": "香港觀塘區觀塘偉業街170號豐業大廈B地鋪*",
-    "address_en": "Room B, G/F, Fung Yip Industrial Building, No. 170 Wai Yip Street*,Kwun Tong,Kwun Tong District,Hong Kong",
-    "telephone": "65082396",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
-    "location": {
-      "latitude": 22.310527,
-      "longitude": 114.220582
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852CAB",
-    "code": "852CAB",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "觀塘鴻圖工廈順豐站",
-    "name_en": "Hung To Industrial Building, Kwun Tong",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "觀塘",
-    "sub_district_en": "Kwun Tong",
-    "address": "香港觀塘區觀塘鴻圖道80號鴻圖工業大廈地下1號鋪*",
-    "address_en": "Workshop No. 1, G/F, Hung To Industrial Building, No. 80 Hung To Road*,Kwun Tong,Kwun Tong District,Hong Kong",
-    "telephone": "96605766",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
-    "location": {
-      "latitude": 22.308332,
-      "longitude": 114.224233
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852CAC",
-    "code": "852CAC",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "觀塘友聯大廈順豐站",
-    "name_en": "Union Building, Kwun Tong",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "觀塘",
-    "sub_district_en": "Kwun Tong",
-    "address": "香港觀塘區觀塘巧明街112號友聯大廈地倉*",
-    "address_en": "G/F, Union Building, No. 112 How Ming Street*,Kwun Tong,Kwun Tong District,Hong Kong",
-    "telephone": "67911149",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.311375,
-      "longitude": 114.224082
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852HD",
-    "code": "852HD",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "觀塘振邦工業大廈順豐站",
-    "name_en": "Peter Leung Industrial Building, Kwun Tong",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "觀塘",
-    "sub_district_en": "Kwun Tong",
-    "address": "香港觀塘區觀塘偉業街103號振邦工業大廈地下*",
-    "address_en": "G/F, Peter Leung Industrial Building , No. 103 Wai Yip Street*,Kwun Tong,Kwun Tong District,Hong Kong",
-    "telephone": "64685585",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.315798,
-      "longitude": 114.215414
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852YMCM",
-    "code": "852YMCM",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "觀塘裕民中心順豐站",
-    "name_en": "Yue Man Centre, Kwun Tong",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "觀塘",
-    "sub_district_en": "Kwun Tong",
-    "address": "香港觀塘區觀塘牛頭角道300-302號裕民中心地下53號鋪*",
-    "address_en": "Shop No. 53 on Ground Floor., Yue Man Centre, Nos. 300 & 302 Ngau Tau Kok Road*,Kwun Tong,Kwun Tong District,Hong Kong",
-    "telephone": "67934923",
-    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.314448,
-      "longitude": 114.222762
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852Z151",
-    "code": "852Z151",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "觀塘泓富廣場順豐站",
-    "name_en": "Prosperity Place, Kwun Tong",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "觀塘區",
-    "district_en": "Kwun Tong District",
-    "sub_district": "觀塘",
-    "sub_district_en": "Kwun Tong",
-    "address": "香港觀塘區觀塘成業街6號泓富廣場7樓708室*",
-    "address_en": "Unit 708, 7/F, Prosperity Place, No. 6 Shing Yip Street*,Kwun Tong,Kwun Tong District,Hong Kong",
-    "telephone": "67934923",
-    "business_hours": "星期一至星期五,11:00-20:00;星期日及公眾假期,休息;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-20:00; Sun & Public Holidays Closed; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.31055,
-      "longitude": 114.225721
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852ACL",
@@ -777,85 +387,397 @@
       "longitude": 114.2335701
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
-    "id": "852HAL",
-    "code": "852HAL",
+    "id": "852Z552",
+    "code": "852Z552",
     "type": "store",
     "type_name": "順豐站",
     "type_name_en": "SF Store",
-    "name": "黃大仙豪苑順豐站",
-    "name_en": "Tropicana Gardens, Wong Tai Sin",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "黃大仙區",
-    "district_en": "Wong Tai Sin District",
-    "sub_district": "黃大仙",
-    "sub_district_en": "Wong Tai Sin",
-    "address": "香港黃大仙區黃大仙龍翔道110號豪苑地下29A號鋪*",
-    "address_en": "Shop 29A, G/F, Tropicana Gardens, 110 Lung Cheung Road*,Wong Tai Sin,Wong Tai Sin District,Hong Kong",
-    "telephone": "56847740",
-    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "name": "小西灣富景花園商場順豐站",
+    "name_en": "Fullview Garden Commercial Centre, Siu Sai Wan",
+    "region": "香港島",
+    "region_en": "Hong Kong Island",
+    "district": "東區",
+    "district_en": "Eastern District",
+    "sub_district": "小西灣",
+    "sub_district_en": "Siu Sai Wan",
+    "address": "香港東區小西灣小西灣道18號富景花園商場1樓173號鋪 & 128號鋪*",
+    "address_en": "Shop No. 173 & 128, 1/F, Fullview Garden Commercial Centre, 18 Siu Sai Wan Road*,Siu Sai Wan,Eastern District,Hong Kong",
+    "telephone": "64634947",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
     "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
     "location": {
-      "latitude": 22.3420395,
-      "longitude": 114.1968364
+      "latitude": 22.262566,
+      "longitude": 114.251355
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
-    "id": "852HCL",
-    "code": "852HCL",
+    "id": "852H",
+    "code": "852H",
     "type": "store",
     "type_name": "順豐站",
     "type_name_en": "SF Store",
-    "name": "黃大仙竹園廣場順豐站",
-    "name_en": "Chuk Yuen Plaza, Wong Tai Sin",
+    "name": "九龍灣同力工業中心順豐站",
+    "name_en": "Tonic Industrial Centre, Kowloon Bay",
     "region": "九龍",
     "region_en": "Kowloon",
-    "district": "黃大仙區",
-    "district_en": "Wong Tai Sin District",
-    "sub_district": "黃大仙",
-    "sub_district_en": "Wong Tai Sin",
-    "address": "香港黃大仙區黃大仙竹園路15號竹園南邨竹園廣場2樓S215A號鋪*",
-    "address_en": "Shop S215A, 2/F, Chuk Yuen Plaza, Chuk Yuen South Estate, 15 Chuk Yuen Road*,Wong Tai Sin,Wong Tai Sin District,Hong Kong",
-    "telephone": "56847740",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-20:30; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.344965,
-      "longitude": 114.193225
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852J",
-    "code": "852J",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "新蒲崗福和工廈順豐站",
-    "name_en": "Fuk Wo Industrial Building, San Po Kong",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "黃大仙區",
-    "district_en": "Wong Tai Sin District",
-    "sub_district": "新蒲崗",
-    "sub_district_en": "San Po Kong",
-    "address": "香港黃大仙區新蒲崗九龍雙喜街5號福和工業大廈地下*",
-    "address_en": "G/F, Fuk Wo Industrial Building, No. 5 Sheung Hei Street*,San Po Kong,Wong Tai Sin District,Hong Kong",
-    "telephone": "97005361",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "九龍灣",
+    "sub_district_en": "Kowloon Bay",
+    "address": "香港觀塘區九龍灣臨興街19號同力工業中心B座地下*",
+    "address_en": "G/F, Block B, Tonic Industrial Centre, No. 19 Lam Hing Street*,Kowloon Bay,Kwun Tong District,Hong Kong",
+    "telephone": "60826831",
     "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
     "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
     "location": {
-      "latitude": 22.338205,
-      "longitude": 114.198043
+      "latitude": 22.324842,
+      "longitude": 114.210307
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852HC",
+    "code": "852HC",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "九龍灣榮發工廈順豐站",
+    "name_en": "Wing Fat Industrial Building, Kowloon Bay",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "九龍灣",
+    "sub_district_en": "Kowloon Bay",
+    "address": "香港觀塘區九龍灣宏泰道12號榮發工業大廈地下5號鋪*",
+    "address_en": "Workshop No. 5, G/F, Wing Fat Industrial Building, No. 12 Wang Tai Road*,Kowloon Bay,Kwun Tong District,Hong Kong",
+    "telephone": "56814976",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.3231756,
+      "longitude": 114.209156
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852HBL",
+    "code": "852HBL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "九龍灣得寶商場順豐站",
+    "name_en": "Tak Bo Mall, Kowloon Bay",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "九龍灣",
+    "sub_district_en": "Kowloon Bay",
+    "address": "香港觀塘區九龍灣牛頭角道3號得寶花園得寶商場1樓209號鋪*",
+    "address_en": "Shop 209, 1/F, Tak Bo Mall, 3 Ngau Tau Kok Road*,Kowloon Bay,Kwun Tong District,Hong Kong",
+    "telephone": "64686946",
+    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.327001,
+      "longitude": 114.214171
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z401",
+    "code": "852Z401",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "九龍灣麗晶花園順豐站",
+    "name_en": "Richland Gardens, Kowloon Bay",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "九龍灣",
+    "sub_district_en": "Kowloon Bay",
+    "address": "香港觀塘區九龍灣香港九龍觀塘區九龍灣宏光道80號麗晶花園2樓211號鋪*",
+    "address_en": "Unit 211, 2/F, Richland Gardens, 80 Wang Kwong Road, Kowloon Bay, Kwun Tong District, Kowloon, Hong Kong*,Kowloon Bay,Kwun Tong District,Hong Kong",
+    "telephone": "64686946",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六,12:00-20:00",
+    "business_hours_en": "Mon - Fri: 11:00-21:00, Sat & Sun & Public Hoilday: 12:00-20:00",
+    "location": {
+      "latitude": 22.329308,
+      "longitude": 114.205985
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z402",
+    "code": "852Z402",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "慈雲山中心順豐站",
+    "name_en": "Tsz Wan Shan Shopping Centre",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "九龍灣",
+    "sub_district_en": "Kowloon Bay",
+    "address": "香港觀塘區九龍灣慈雲山毓華街23號慈雲山中心4樓410B鋪*",
+    "address_en": "Shop No.410B, Tsz Wan Shan Shopping Centre, 23 Yuk Wah Street, Tsz Wan Shan, Wong Tai Sin District, Kowloon, Hong Kong,Kowloon Bay,Kwun Tong District,Hong Kong",
+    "telephone": "56847740",
+    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri: 11:00-21:00, Sat to Sun, Public: 12:00-20:00",
+    "location": {
+      "latitude": 22.347802,
+      "longitude": 114.200472
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852CAD",
+    "code": "852CAD",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "油塘味千集團大廈順豐站",
+    "name_en": "Ajisen Group Tower, Yau Tong",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "油塘",
+    "sub_district_en": "Yau Tong",
+    "address": "香港觀塘區油塘仁宇圍味千集團大廈B座地庫(蔚藍東岸對面)*",
+    "address_en": "B/F(Opposite to Montego Bay), Block B, Ajisen Group Tower, Yan Yue Wai*,Yau Tong,Kwun Tong District,Hong Kong",
+    "telephone": "60255685",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.292587,
+      "longitude": 114.236609
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852AJL",
+    "code": "852AJL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "油塘大本型順豐站",
+    "name_en": "Domain, Yau Tong",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "油塘",
+    "sub_district_en": "Yau Tong",
+    "address": "香港觀塘區油塘大本型2樓229號鋪*",
+    "address_en": "Shop 229, 2/F, Domain*,Yau Tong,Kwun Tong District,Hong Kong",
+    "telephone": "55261667",
+    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
+    "business_hours_en": "Mon to Fri 10:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.296592,
+      "longitude": 114.238758
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z152",
+    "code": "852Z152",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "秀茂坪寶達商場順豐站",
+    "name_en": "Sau Mau Ping, Po Tat shopping CTR",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "油塘",
+    "sub_district_en": "Yau Tong",
+    "address": "香港觀塘區油塘秀茂坪寶達邨寶達商場P1樓108號鋪*",
+    "address_en": "Shop No. 108, P1 Floor, Po Tat Shopping Centre, Po tat Estate, Kwun Tong, Kwun Tong District, Kowloon, Hong Kong*,Yau Tong,Kwun Tong District,Hong Kong",
+    "telephone": "67934923",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
+    "business_hours_en": "Mon - Fri: 11:00-21:00, Sat, Sun and Public Holiday: 12:00-20:00",
+    "location": {
+      "latitude": 22.317409,
+      "longitude": 114.236184
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852C",
+    "code": "852C",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "觀塘豐業大廈順豐站",
+    "name_en": "Fung Yip Industrial Building, Kwun Tong",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
+    "address": "香港觀塘區觀塘偉業街170號豐業大廈B地鋪*",
+    "address_en": "Room B, G/F, Fung Yip Industrial Building, No. 170 Wai Yip Street*,Kwun Tong,Kwun Tong District,Hong Kong",
+    "telephone": "65082396",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
+    "location": {
+      "latitude": 22.310527,
+      "longitude": 114.220582
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852CAB",
+    "code": "852CAB",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "觀塘鴻圖工廈順豐站",
+    "name_en": "Hung To Industrial Building, Kwun Tong",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
+    "address": "香港觀塘區觀塘鴻圖道80號鴻圖工業大廈地下1號鋪*",
+    "address_en": "Workshop No. 1, G/F, Hung To Industrial Building, No. 80 Hung To Road*,Kwun Tong,Kwun Tong District,Hong Kong",
+    "telephone": "96605766",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
+    "location": {
+      "latitude": 22.308332,
+      "longitude": 114.224233
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852CAC",
+    "code": "852CAC",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "觀塘友聯大廈順豐站",
+    "name_en": "Union Building, Kwun Tong",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
+    "address": "香港觀塘區觀塘巧明街112號友聯大廈地倉*",
+    "address_en": "G/F, Union Building, No. 112 How Ming Street*,Kwun Tong,Kwun Tong District,Hong Kong",
+    "telephone": "67911149",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.311375,
+      "longitude": 114.224082
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852HD",
+    "code": "852HD",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "觀塘振邦工業大廈順豐站",
+    "name_en": "Peter Leung Industrial Building, Kwun Tong",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
+    "address": "香港觀塘區觀塘偉業街103號振邦工業大廈地下*",
+    "address_en": "G/F, Peter Leung Industrial Building , No. 103 Wai Yip Street*,Kwun Tong,Kwun Tong District,Hong Kong",
+    "telephone": "64685585",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.315798,
+      "longitude": 114.215414
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852YMCM",
+    "code": "852YMCM",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "觀塘裕民中心順豐站",
+    "name_en": "Yue Man Centre, Kwun Tong",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
+    "address": "香港觀塘區觀塘牛頭角道300-302號裕民中心地下53號鋪*",
+    "address_en": "Shop No. 53 on Ground Floor., Yue Man Centre, Nos. 300 & 302 Ngau Tau Kok Road*,Kwun Tong,Kwun Tong District,Hong Kong",
+    "telephone": "67934923",
+    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.314448,
+      "longitude": 114.222762
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z151",
+    "code": "852Z151",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "觀塘泓富廣場順豐站",
+    "name_en": "Prosperity Place, Kwun Tong",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "觀塘區",
+    "district_en": "Kwun Tong District",
+    "sub_district": "觀塘",
+    "sub_district_en": "Kwun Tong",
+    "address": "香港觀塘區觀塘成業街6號泓富廣場7樓708室*",
+    "address_en": "Unit 708, 7/F, Prosperity Place, No. 6 Shing Yip Street*,Kwun Tong,Kwun Tong District,Hong Kong",
+    "telephone": "67934923",
+    "business_hours": "星期一至星期五,11:00-20:00;星期日及公眾假期,休息;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-20:00; Sun & Public Holidays Closed; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.31055,
+      "longitude": 114.225721
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852CNL",
@@ -881,33 +803,85 @@
       "longitude": 114.23438
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
-    "id": "852Z051",
-    "code": "852Z051",
+    "id": "852HAL",
+    "code": "852HAL",
     "type": "store",
     "type_name": "順豐站",
     "type_name_en": "SF Store",
-    "name": "九龍塘又一城順豐站",
-    "name_en": "Kowloon Tong, Festival Walk",
+    "name": "黃大仙豪苑順豐站",
+    "name_en": "Tropicana Gardens, Wong Tai Sin",
     "region": "九龍",
     "region_en": "Kowloon",
-    "district": "九龍城區",
-    "district_en": "Kowloon City District",
-    "sub_district": "九龍塘",
-    "sub_district_en": "Kowloon Tong",
-    "address": "香港九龍城區九龍塘達之路80號又一城地下G36C號鋪(近的士站旁)*",
-    "address_en": "Shop G36C (Near Taxi Station), Level G, Festival Walk, 80 Tat Chee Avenue*,Kowloon Tong,Kowloon City District,Hong Kong",
-    "telephone": null,
+    "district": "黃大仙區",
+    "district_en": "Wong Tai Sin District",
+    "sub_district": "黃大仙",
+    "sub_district_en": "Wong Tai Sin",
+    "address": "香港黃大仙區黃大仙龍翔道110號豪苑地下29A號鋪*",
+    "address_en": "Shop 29A, G/F, Tropicana Gardens, 110 Lung Cheung Road*,Wong Tai Sin,Wong Tai Sin District,Hong Kong",
+    "telephone": "56847740",
     "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
     "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
     "location": {
-      "latitude": 22.337588,
-      "longitude": 114.174464
+      "latitude": 22.3420395,
+      "longitude": 114.1968364
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852HCL",
+    "code": "852HCL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "黃大仙竹園廣場順豐站",
+    "name_en": "Chuk Yuen Plaza, Wong Tai Sin",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "黃大仙區",
+    "district_en": "Wong Tai Sin District",
+    "sub_district": "黃大仙",
+    "sub_district_en": "Wong Tai Sin",
+    "address": "香港黃大仙區黃大仙竹園路15號竹園南邨竹園廣場2樓S215A號鋪*",
+    "address_en": "Shop S215A, 2/F, Chuk Yuen Plaza, Chuk Yuen South Estate, 15 Chuk Yuen Road*,Wong Tai Sin,Wong Tai Sin District,Hong Kong",
+    "telephone": "56847740",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-20:30; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.344965,
+      "longitude": 114.193225
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852J",
+    "code": "852J",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "新蒲崗福和工廈順豐站",
+    "name_en": "Fuk Wo Industrial Building, San Po Kong",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "黃大仙區",
+    "district_en": "Wong Tai Sin District",
+    "sub_district": "新蒲崗",
+    "sub_district_en": "San Po Kong",
+    "address": "香港黃大仙區新蒲崗九龍雙喜街5號福和工業大廈地下*",
+    "address_en": "G/F, Fuk Wo Industrial Building, No. 5 Sheung Hei Street*,San Po Kong,Wong Tai Sin District,Hong Kong",
+    "telephone": "97005361",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
+    "location": {
+      "latitude": 22.338205,
+      "longitude": 114.198043
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852Z253",
@@ -933,7 +907,7 @@
       "longitude": 114.18794
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852K",
@@ -959,7 +933,7 @@
       "longitude": 114.188795
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852KEL",
@@ -985,241 +959,7 @@
       "longitude": 114.190988
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852KDL",
-    "code": "852KDL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "土瓜灣興基豪園順豐站",
-    "name_en": "Pau Chung Street, To Kwa Wan",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "九龍城區",
-    "district_en": "Kowloon City District",
-    "sub_district": "土瓜灣",
-    "sub_district_en": "To Kwa Wan",
-    "address": "香港九龍城區土瓜灣炮仗街178號興基豪園地下B鋪*",
-    "address_en": "Shop B, G/F, Kingsgate, 178 Pau Chung Street*,To Kwa Wan,Kowloon City District,Hong Kong",
-    "telephone": "64635340",
-    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.322319,
-      "longitude": 114.190367
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852KFL",
-    "code": "852KFL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "土瓜灣樂民新邨順豐站",
-    "name_en": "Lok Man Sun Chuen, To Kwa Wan",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "九龍城區",
-    "district_en": "Kowloon City District",
-    "sub_district": "土瓜灣",
-    "sub_district_en": "To Kwa Wan",
-    "address": "香港九龍城區土瓜灣靠背壟道126號樂民新邨G座平台地下126號鋪 (連閣樓)*",
-    "address_en": "Shop 126, G/F, Block G, Lok Man Sun Chuen*,To Kwa Wan,Kowloon City District,Hong Kong",
-    "telephone": "64635340",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六: 12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.317972,
-      "longitude": 114.186284
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852L",
-    "code": "852L",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "葵涌禎昌工廈順豐站",
-    "name_en": "Ching Cheong Industrial Building, Kwai Chung",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "葵青區",
-    "district_en": "Kwai Tsing District",
-    "sub_district": "葵涌",
-    "sub_district_en": "Kwai Chung",
-    "address": "香港葵青區葵涌大連排道葵昌路1-7號禎昌工業大廈地下C鋪*",
-    "address_en": "Workshop C, G/F, Ching Cheong Industrial Building, No. 1-7 Kwai Cheong Road*,Kwai Chung,Kwai Tsing District,Hong Kong",
-    "telephone": "94191937",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
-    "location": {
-      "latitude": 22.36474,
-      "longitude": 114.134068
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852LA",
-    "code": "852LA",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "葵涌和豐工廈順豐站",
-    "name_en": "Well Fung Industrial Centre, Kwai Chung",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "葵青區",
-    "district_en": "Kwai Tsing District",
-    "sub_district": "葵涌",
-    "sub_district_en": "Kwai Chung",
-    "address": "香港葵青區葵涌打磚坪街68號和豐工業大廈地下6號6B室*",
-    "address_en": "Sub-Unit 06B, Unit 6, G/F, Well Fung Industrial Centre, No. 68 Ta Chuen Ping Street*,Kwai Chung,Kwai Tsing District,Hong Kong",
-    "telephone": "65753413",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.367971,
-      "longitude": 114.13694
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852LB",
-    "code": "852LB",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "葵涌鐘意恆勝中心順豐站",
-    "name_en": "Join In Hang Sing Centre, Kwai Chung",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "葵青區",
-    "district_en": "Kwai Tsing District",
-    "sub_district": "葵涌",
-    "sub_district_en": "Kwai Chung",
-    "address": "香港葵青區葵涌貨櫃碼頭路71-75號鐘意恆勝中心地下3室*",
-    "address_en": "Unit 3, G/F, Join In Hang Sing Centre, 71-75 Container Port Rd*,Kwai Chung,Kwai Tsing District,Hong Kong",
-    "telephone": "55001079",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.35516,
-      "longitude": 114.125078
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852LC",
-    "code": "852LC",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "葵涌嘉慶中心順豐站",
-    "name_en": "King Center, Kwai Chung",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "葵青區",
-    "district_en": "Kwai Tsing District",
-    "sub_district": "葵涌",
-    "sub_district_en": "Kwai Chung",
-    "address": "香港葵青區葵涌嘉慶路5-9號嘉慶中心地下B鋪*",
-    "address_en": "Unit B, G/F, King Center, Nos. 5-9 Ka Hing Road*,Kwai Chung,Kwai Tsing District,Hong Kong",
-    "telephone": "55001079",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.359647,
-      "longitude": 114.131859
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852LAL",
-    "code": "852LAL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "葵涌恆景商場順豐站",
-    "name_en": "Hang King Garden, Kwai Fong",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "葵青區",
-    "district_en": "Kwai Tsing District",
-    "sub_district": "葵涌",
-    "sub_district_en": "Kwai Chung",
-    "address": "香港葵青區葵涌榮芳路9號恆景花園恆景商場地下G16號*",
-    "address_en": "Shop G16, G/F, Hang King Garden, 9 Wing Fong Road*,Kwai Chung,Kwai Tsing District,Hong Kong",
-    "telephone": "60317464",
-    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.360612,
-      "longitude": 114.128044
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852LBL",
-    "code": "852LBL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "葵涌大隴街葵都大廈順豐站",
-    "name_en": "Tai Loong Street, Kwai Chung",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "葵青區",
-    "district_en": "Kwai Tsing District",
-    "sub_district": "葵涌",
-    "sub_district_en": "Kwai Chung",
-    "address": "香港葵青區葵涌大隴街129-151號葵都大廈地下7號鋪*",
-    "address_en": "Shop 7, G/F, Kwai Do Building, 129-151 Tai Loong Street*,Kwai Chung,Kwai Tsing District,Hong Kong",
-    "telephone": "60317464",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.366191,
-      "longitude": 114.138658
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852Z403",
-    "code": "852Z403",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "啟德零售館順豐站",
-    "name_en": "Kai Tak Mall, Kai Tak",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "九龍城區",
-    "district_en": "Kowloon City District",
-    "sub_district": "啟德",
-    "sub_district_en": "Kai Tak",
-    "address": "香港九龍城區啟德香港九龍九龍城區啟德啟德體育園零售館2期2樓M2-205室鋪*",
-    "address_en": "Shop No. M2-205, Level 2, Kai Tak Mall 2, Kai Tak Sports Park, Kai Tak, Kowloon City District, Kowloon, Hong Kong,Kai Tak,Kowloon City District,Hong Kong",
-    "telephone": "64686946",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
-    "business_hours_en": "Mon to Fri: 12:00-21:00, Sat, Sun and Public Holiday: 12:00-20:00",
-    "location": {
-      "latitude": 22.32612,
-      "longitude": 114.19586
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852GH",
@@ -1245,7 +985,7 @@
       "longitude": 114.110186
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852Z352",
@@ -1271,7 +1011,7 @@
       "longitude": 114.108129
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852KBL",
@@ -1297,59 +1037,267 @@
       "longitude": 114.178877
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
-    "id": "852TCL",
-    "code": "852TCL",
+    "id": "852Z051",
+    "code": "852Z051",
     "type": "store",
     "type_name": "順豐站",
     "type_name_en": "SF Store",
-    "name": "鴨脷洲利是大廈順豐站",
-    "name_en": "Fortune Mansion, Ap Lei Chau",
-    "region": "香港島",
-    "region_en": "Hong Kong Island",
-    "district": "南區",
-    "district_en": "Southern District",
-    "sub_district": "鴨脷洲",
-    "sub_district_en": "Ap Lei Chau",
-    "address": "香港南區鴨脷洲鴨脷洲大街57-63號利是大廈地下A鋪*",
-    "address_en": "Shop A on G/F, Fortune Mansion, Nos. 57-63 Main Street Ap Lei Chau, Nos. 14-24 Hung Shing Street*,Ap Lei Chau,Southern District,Hong Kong",
-    "telephone": "98319090",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六: 12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.243973,
-      "longitude": 114.155952
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852Z601",
-    "code": "852Z601",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "鴨脷洲海怡西廣場順豐站",
-    "name_en": "Marina Square West Centre, Aberdeen",
-    "region": "香港島",
-    "region_en": "Hong Kong Island",
-    "district": "南區",
-    "district_en": "Southern District",
-    "sub_district": "鴨脷洲",
-    "sub_district_en": "Ap Lei Chau",
-    "address": "香港南區鴨脷洲海怡廣場西翼2樓209D鋪*",
-    "address_en": "209D, 2/F, Marina Square West Centre, 12A South Horizon Drive*,Ap Lei Chau,Southern District,Hong Kong",
-    "telephone": "98319090",
+    "name": "九龍塘又一城順豐站",
+    "name_en": "Kowloon Tong, Festival Walk",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "九龍城區",
+    "district_en": "Kowloon City District",
+    "sub_district": "九龍塘",
+    "sub_district_en": "Kowloon Tong",
+    "address": "香港九龍城區九龍塘達之路80號又一城地下G36C號鋪(近的士站旁)*",
+    "address_en": "Shop G36C (Near Taxi Station), Level G, Festival Walk, 80 Tat Chee Avenue*,Kowloon Tong,Kowloon City District,Hong Kong",
+    "telephone": null,
     "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
     "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
     "location": {
-      "latitude": 22.243808,
-      "longitude": 114.146854
+      "latitude": 22.337588,
+      "longitude": 114.174464
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852KDL",
+    "code": "852KDL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "土瓜灣興基豪園順豐站",
+    "name_en": "Pau Chung Street, To Kwa Wan",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "九龍城區",
+    "district_en": "Kowloon City District",
+    "sub_district": "土瓜灣",
+    "sub_district_en": "To Kwa Wan",
+    "address": "香港九龍城區土瓜灣炮仗街178號興基豪園地下B鋪*",
+    "address_en": "Shop B, G/F, Kingsgate, 178 Pau Chung Street*,To Kwa Wan,Kowloon City District,Hong Kong",
+    "telephone": "64635340",
+    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.322319,
+      "longitude": 114.190367
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852KFL",
+    "code": "852KFL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "土瓜灣樂民新邨順豐站",
+    "name_en": "Lok Man Sun Chuen, To Kwa Wan",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "九龍城區",
+    "district_en": "Kowloon City District",
+    "sub_district": "土瓜灣",
+    "sub_district_en": "To Kwa Wan",
+    "address": "香港九龍城區土瓜灣靠背壟道126號樂民新邨G座平台地下126號鋪 (連閣樓)*",
+    "address_en": "Shop 126, G/F, Block G, Lok Man Sun Chuen*,To Kwa Wan,Kowloon City District,Hong Kong",
+    "telephone": "64635340",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六: 12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.317972,
+      "longitude": 114.186284
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852L",
+    "code": "852L",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "葵涌禎昌工廈順豐站",
+    "name_en": "Ching Cheong Industrial Building, Kwai Chung",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "葵青區",
+    "district_en": "Kwai Tsing District",
+    "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
+    "address": "香港葵青區葵涌大連排道葵昌路1-7號禎昌工業大廈地下C鋪*",
+    "address_en": "Workshop C, G/F, Ching Cheong Industrial Building, No. 1-7 Kwai Cheong Road*,Kwai Chung,Kwai Tsing District,Hong Kong",
+    "telephone": "94191937",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
+    "location": {
+      "latitude": 22.36474,
+      "longitude": 114.134068
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852LA",
+    "code": "852LA",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "葵涌和豐工廈順豐站",
+    "name_en": "Well Fung Industrial Centre, Kwai Chung",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "葵青區",
+    "district_en": "Kwai Tsing District",
+    "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
+    "address": "香港葵青區葵涌打磚坪街68號和豐工業大廈地下6號6B室*",
+    "address_en": "Sub-Unit 06B, Unit 6, G/F, Well Fung Industrial Centre, No. 68 Ta Chuen Ping Street*,Kwai Chung,Kwai Tsing District,Hong Kong",
+    "telephone": "65753413",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.367971,
+      "longitude": 114.13694
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852LB",
+    "code": "852LB",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "葵涌鐘意恆勝中心順豐站",
+    "name_en": "Join In Hang Sing Centre, Kwai Chung",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "葵青區",
+    "district_en": "Kwai Tsing District",
+    "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
+    "address": "香港葵青區葵涌貨櫃碼頭路71-75號鐘意恆勝中心地下3室*",
+    "address_en": "Unit 3, G/F, Join In Hang Sing Centre, 71-75 Container Port Rd*,Kwai Chung,Kwai Tsing District,Hong Kong",
+    "telephone": "55001079",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.35516,
+      "longitude": 114.125078
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852LC",
+    "code": "852LC",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "葵涌嘉慶中心順豐站",
+    "name_en": "King Center, Kwai Chung",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "葵青區",
+    "district_en": "Kwai Tsing District",
+    "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
+    "address": "香港葵青區葵涌嘉慶路5-9號嘉慶中心地下B鋪*",
+    "address_en": "Unit B, G/F, King Center, Nos. 5-9 Ka Hing Road*,Kwai Chung,Kwai Tsing District,Hong Kong",
+    "telephone": "55001079",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.359647,
+      "longitude": 114.131859
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852LAL",
+    "code": "852LAL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "葵涌恆景商場順豐站",
+    "name_en": "Hang King Garden, Kwai Fong",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "葵青區",
+    "district_en": "Kwai Tsing District",
+    "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
+    "address": "香港葵青區葵涌榮芳路9號恆景花園恆景商場地下G16號*",
+    "address_en": "Shop G16, G/F, Hang King Garden, 9 Wing Fong Road*,Kwai Chung,Kwai Tsing District,Hong Kong",
+    "telephone": "60317464",
+    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.360612,
+      "longitude": 114.128044
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852LBL",
+    "code": "852LBL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "葵涌大隴街葵都大廈順豐站",
+    "name_en": "Tai Loong Street, Kwai Chung",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "葵青區",
+    "district_en": "Kwai Tsing District",
+    "sub_district": "葵涌",
+    "sub_district_en": "Kwai Chung",
+    "address": "香港葵青區葵涌大隴街129-151號葵都大廈地下7號鋪*",
+    "address_en": "Shop 7, G/F, Kwai Do Building, 129-151 Tai Loong Street*,Kwai Chung,Kwai Tsing District,Hong Kong",
+    "telephone": "60317464",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.366191,
+      "longitude": 114.138658
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z403",
+    "code": "852Z403",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "啟德零售館順豐站",
+    "name_en": "Kai Tak Mall, Kai Tak",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "九龍城區",
+    "district_en": "Kowloon City District",
+    "sub_district": "啟德",
+    "sub_district_en": "Kai Tak",
+    "address": "香港九龍城區啟德香港九龍九龍城區啟德啟德體育園零售館2期2樓M2-205室鋪*",
+    "address_en": "Shop No. M2-205, Level 2, Kai Tak Mall 2, Kai Tak Sports Park, Kai Tak, Kowloon City District, Kowloon, Hong Kong,Kai Tak,Kowloon City District,Hong Kong",
+    "telephone": "64686946",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
+    "business_hours_en": "Mon to Fri: 12:00-21:00, Sat, Sun and Public Holiday: 12:00-20:00",
+    "location": {
+      "latitude": 22.32612,
+      "longitude": 114.19586
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852DEL",
@@ -1375,7 +1323,59 @@
       "longitude": 114.126374
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852TCL",
+    "code": "852TCL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "鴨脷洲利是大廈順豐站",
+    "name_en": "Fortune Mansion, Ap Lei Chau",
+    "region": "香港島",
+    "region_en": "Hong Kong Island",
+    "district": "南區",
+    "district_en": "Southern District",
+    "sub_district": "鴨脷洲",
+    "sub_district_en": "Ap Lei Chau",
+    "address": "香港南區鴨脷洲鴨脷洲大街57-63號利是大廈地下A鋪*",
+    "address_en": "Shop A on G/F, Fortune Mansion, Nos. 57-63 Main Street Ap Lei Chau, Nos. 14-24 Hung Shing Street*,Ap Lei Chau,Southern District,Hong Kong",
+    "telephone": "98319090",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六: 12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.243973,
+      "longitude": 114.155952
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z601",
+    "code": "852Z601",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "鴨脷洲海怡西廣場順豐站",
+    "name_en": "Marina Square West Centre, Aberdeen",
+    "region": "香港島",
+    "region_en": "Hong Kong Island",
+    "district": "南區",
+    "district_en": "Southern District",
+    "sub_district": "鴨脷洲",
+    "sub_district_en": "Ap Lei Chau",
+    "address": "香港南區鴨脷洲海怡廣場西翼2樓209D鋪*",
+    "address_en": "209D, 2/F, Marina Square West Centre, 12A South Horizon Drive*,Ap Lei Chau,Southern District,Hong Kong",
+    "telephone": "98319090",
+    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.243808,
+      "longitude": 114.146854
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852TAL",
@@ -1401,7 +1401,7 @@
       "longitude": 114.15272
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852TBL",
@@ -1427,345 +1427,7 @@
       "longitude": 114.138105
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852FEL",
-    "code": "852FEL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "大圍海福花園順豐站",
-    "name_en": "Holford Gardens, Tai Wai",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "沙田區",
-    "district_en": "Sha Tin District",
-    "sub_district": "大圍",
-    "sub_district_en": "Tai Wai",
-    "address": "香港沙田區大圍積運街2-8號海福花園地下16A及17號鋪*",
-    "address_en": "Shop Nos. 16A & 17 on Ground Floor, Holford Gardens, Nos. 2-8 Chik Wan Street*,Tai Wai,Sha Tin District,Hong Kong",
-    "telephone": "64687323",
-    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.372962,
-      "longitude": 114.177031
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852FVL",
-    "code": "852FVL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "大圍雲疊花園商場順豐站",
-    "name_en": "Carado Garden, Tai Wai",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "沙田區",
-    "district_en": "Sha Tin District",
-    "sub_district": "大圍",
-    "sub_district_en": "Tai Wai",
-    "address": "香港沙田區大圍田心街20-30號雲疊花園地下3A號鋪*",
-    "address_en": "Shop 3A, Commercial Complex, Carado Garden, Fu Tin Lane*,Tai Wai,Sha Tin District,Hong Kong",
-    "telephone": "64687323",
-    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.368716,
-      "longitude": 114.177626
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852NBL",
-    "code": "852NBL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "大圍顯徑商場順豐站",
-    "name_en": "Hin Keng Estate, Tai Wai",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "沙田區",
-    "district_en": "Sha Tin District",
-    "sub_district": "大圍",
-    "sub_district_en": "Tai Wai",
-    "address": "香港沙田區大圍車公廟道69號顯徑邨顯徑商場1樓203號鋪*",
-    "address_en": "Shop No. 203, First Floor, Commercial / Car Park Complex (Wing A of Hin Keng Shopping Centre), Hin Keng Estate, No. 69 Che Kung Mui Road*,Tai Wai,Sha Tin District,Hong Kong",
-    "telephone": "64687323",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00, 星期六, 12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.363498,
-      "longitude": 114.172104
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852TB",
-    "code": "852TB",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "黃竹坑益年工廈順豐站",
-    "name_en": "Yally Industrial Building, Wong Chuk Hang",
-    "region": "香港島",
-    "region_en": "Hong Kong Island",
-    "district": "南區",
-    "district_en": "Southern District",
-    "sub_district": "黃竹坑",
-    "sub_district_en": "Wong Chuk Hang",
-    "address": "香港南區黃竹坑香業道6號及業發街6號益年工業大廈地下A2號鋪*",
-    "address_en": "Unit A2, G/F, Yally Industrial Building, No. 6 Heung Yip Road & No. 6 Yip Fat Street*,Wong Chuk Hang,Southern District,Hong Kong",
-    "telephone": "59236803",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.248578,
-      "longitude": 114.167991
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852TE",
-    "code": "852TE",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "黃竹坑保濟工廈順豐站",
-    "name_en": "Po Chai Industrial Building, Wong Chuk Hang",
-    "region": "香港島",
-    "region_en": "Hong Kong Island",
-    "district": "南區",
-    "district_en": "Southern District",
-    "sub_district": "黃竹坑",
-    "sub_district_en": "Wong Chuk Hang",
-    "address": "香港南區黃竹坑黃竹坑道28號保濟工業大廈地下A室*",
-    "address_en": "Unit A, G/F, Po Chai Industrial Building, No.28 Wong Chuk Hang Road*,Wong Chuk Hang,Southern District,Hong Kong",
-    "telephone": "66553935",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.2482146,
-      "longitude": 114.1649042
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852G",
-    "code": "852G",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "荃灣匯力工業中心順豐站",
-    "name_en": "Thriving Industrial Centre, Tsuen Wan",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "荃灣區",
-    "district_en": "Tsuen Wan District",
-    "sub_district": "荃灣",
-    "sub_district_en": "Tsuen Wan",
-    "address": "香港荃灣區荃灣沙咀道26-38號匯力工業中心地下7號鋪*",
-    "address_en": "Room 7& 8B, G/F, Thriving Industrial Centre, No. 26-38 Sha Tsui Road*,Tsuen Wan,Tsuen Wan District,Hong Kong",
-    "telephone": "64634785",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
-    "location": {
-      "latitude": 22.374084,
-      "longitude": 114.108459
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852GA",
-    "code": "852GA",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "荃灣金銘聯合中心順豐站",
-    "name_en": "Crowning-United Centre, Tsuen Wan",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "荃灣區",
-    "district_en": "Tsuen Wan District",
-    "sub_district": "荃灣",
-    "sub_district_en": "Tsuen Wan",
-    "address": "香港荃灣區荃灣楊屋道127-135號金銘聯合中心地下*",
-    "address_en": "G/F, Crowning-United Centre,127-135 Yeung Uk Road*,Tsuen Wan,Tsuen Wan District,Hong Kong",
-    "telephone": "64609537",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.366953,
-      "longitude": 114.11798
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852Z355",
-    "code": "852Z355",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "荃灣南豐中心順豐站",
-    "name_en": "Nan Fung Centre, Tsuen Wan",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "荃灣區",
-    "district_en": "Tsuen Wan District",
-    "sub_district": "荃灣",
-    "sub_district_en": "Tsuen Wan",
-    "address": "香港荃灣區荃灣西樓角路64-98號及荃灣青山公路264-298號南豐中心807-808室*",
-    "address_en": "Unit Nos. 807 & 808 on 8/F of Nan Fung Centre,  264-298 Castle Peak Road Tsuen Wan & 64-98 Sai Lau Kok Road*,Tsuen Wan,Tsuen Wan District,Hong Kong",
-    "telephone": "61125020",
-    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.373709,
-      "longitude": 114.116563
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852FB",
-    "code": "852FB",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "沙田新貿中心順豐站",
-    "name_en": "New Trade Plaza, Sha Tin",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "沙田區",
-    "district_en": "Sha Tin District",
-    "sub_district": "沙田",
-    "sub_district_en": "Sha Tin",
-    "address": "香港沙田區沙田安平街6號新貿中心B座地下7號*",
-    "address_en": "Workshop 7 on G/F, New Trade Plaza, No. 6 On Ping Street*,Sha Tin,Sha Tin District,Hong Kong",
-    "telephone": "64682330",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.390737,
-      "longitude": 114.207053
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852FE",
-    "code": "852FE",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "沙田工業中心順豐站",
-    "name_en": "Shatin Industrial Centre, Sha Tin",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "沙田區",
-    "district_en": "Sha Tin District",
-    "sub_district": "沙田",
-    "sub_district_en": "Sha Tin",
-    "address": "香港沙田區沙田源順圍5-7號沙田工業中心B座地下16室*",
-    "address_en": "Workshop 16 on G/F of Block B, Shatin Industrial Centre, Nos. 5-7 Yuen Shun Circuit*,Sha Tin,Sha Tin District,Hong Kong",
-    "telephone": "64686834",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.3846,
-      "longitude": 114.20611
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852FSL",
-    "code": "852FSL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "沙田第一城樂薈順豐站",
-    "name_en": "Fortune City One Plus, Sha Tin",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "沙田區",
-    "district_en": "Sha Tin District",
-    "sub_district": "沙田",
-    "sub_district_en": "Sha Tin",
-    "address": "香港沙田區沙田百得街置富第一城樂薈地下G41號鋪*",
-    "address_en": "Shop G41, G/F, Fortune City One Plus, Pak Tak Street*,Sha Tin,Sha Tin District,Hong Kong",
-    "telephone": "64635237",
-    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.387125,
-      "longitude": 114.202315
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852NAL",
-    "code": "852NAL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "沙田乙明邨明信樓順豐站",
-    "name_en": "Jat Min Chuen, Sha Tin",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "沙田區",
-    "district_en": "Sha Tin District",
-    "sub_district": "沙田",
-    "sub_district_en": "Sha Tin",
-    "address": "香港沙田區沙田乙明邨街3號明信樓地下51號鋪*",
-    "address_en": "Shop No. 51, G/F, Ming Shun Lau, No.3 Jat Min Chuen Street*,Sha Tin,Sha Tin District,Hong Kong",
-    "telephone": "64635237",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00, 星期六, 12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.376665,
-      "longitude": 114.191045
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852NJL",
-    "code": "852NJL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "沙田瀝源邨華豐樓順豐站",
-    "name_en": "Lek Yuen Estate, Sha Tin",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "沙田區",
-    "district_en": "Sha Tin District",
-    "sub_district": "沙田",
-    "sub_district_en": "Sha Tin",
-    "address": "香港沙田區沙田瀝源街6號瀝源邨華豐樓地下ST5號鋪*",
-    "address_en": "Shop ST5, G/F, Wah Fung House, Lek Yuen Estate, 6 Lek Yuen Street*,Sha Tin,Sha Tin District,Hong Kong",
-    "telephone": "64687323",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.384203,
-      "longitude": 114.191595
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852F",
@@ -1791,7 +1453,7 @@
       "longitude": 114.193514
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852FH",
@@ -1817,7 +1479,293 @@
       "longitude": 114.191268
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852FEL",
+    "code": "852FEL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "大圍海福花園順豐站",
+    "name_en": "Holford Gardens, Tai Wai",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "沙田區",
+    "district_en": "Sha Tin District",
+    "sub_district": "大圍",
+    "sub_district_en": "Tai Wai",
+    "address": "香港沙田區大圍積運街2-8號海福花園地下16A及17號鋪*",
+    "address_en": "Shop Nos. 16A & 17 on Ground Floor, Holford Gardens, Nos. 2-8 Chik Wan Street*,Tai Wai,Sha Tin District,Hong Kong",
+    "telephone": "64687323",
+    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.372962,
+      "longitude": 114.177031
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852FVL",
+    "code": "852FVL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "大圍雲疊花園商場順豐站",
+    "name_en": "Carado Garden, Tai Wai",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "沙田區",
+    "district_en": "Sha Tin District",
+    "sub_district": "大圍",
+    "sub_district_en": "Tai Wai",
+    "address": "香港沙田區大圍田心街20-30號雲疊花園地下3A號鋪*",
+    "address_en": "Shop 3A, Commercial Complex, Carado Garden, Fu Tin Lane*,Tai Wai,Sha Tin District,Hong Kong",
+    "telephone": "64687323",
+    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.368716,
+      "longitude": 114.177626
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852NBL",
+    "code": "852NBL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "大圍顯徑商場順豐站",
+    "name_en": "Hin Keng Estate, Tai Wai",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "沙田區",
+    "district_en": "Sha Tin District",
+    "sub_district": "大圍",
+    "sub_district_en": "Tai Wai",
+    "address": "香港沙田區大圍車公廟道69號顯徑邨顯徑商場1樓203號鋪*",
+    "address_en": "Shop No. 203, First Floor, Commercial / Car Park Complex (Wing A of Hin Keng Shopping Centre), Hin Keng Estate, No. 69 Che Kung Mui Road*,Tai Wai,Sha Tin District,Hong Kong",
+    "telephone": "64687323",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00, 星期六, 12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.363498,
+      "longitude": 114.172104
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852FB",
+    "code": "852FB",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "沙田新貿中心順豐站",
+    "name_en": "New Trade Plaza, Sha Tin",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "沙田區",
+    "district_en": "Sha Tin District",
+    "sub_district": "沙田",
+    "sub_district_en": "Sha Tin",
+    "address": "香港沙田區沙田安平街6號新貿中心B座地下7號*",
+    "address_en": "Workshop 7 on G/F, New Trade Plaza, No. 6 On Ping Street*,Sha Tin,Sha Tin District,Hong Kong",
+    "telephone": "64682330",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.390737,
+      "longitude": 114.207053
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852FE",
+    "code": "852FE",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "沙田工業中心順豐站",
+    "name_en": "Shatin Industrial Centre, Sha Tin",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "沙田區",
+    "district_en": "Sha Tin District",
+    "sub_district": "沙田",
+    "sub_district_en": "Sha Tin",
+    "address": "香港沙田區沙田源順圍5-7號沙田工業中心B座地下16室*",
+    "address_en": "Workshop 16 on G/F of Block B, Shatin Industrial Centre, Nos. 5-7 Yuen Shun Circuit*,Sha Tin,Sha Tin District,Hong Kong",
+    "telephone": "64686834",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.3846,
+      "longitude": 114.20611
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852FSL",
+    "code": "852FSL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "沙田第一城樂薈順豐站",
+    "name_en": "Fortune City One Plus, Sha Tin",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "沙田區",
+    "district_en": "Sha Tin District",
+    "sub_district": "沙田",
+    "sub_district_en": "Sha Tin",
+    "address": "香港沙田區沙田百得街置富第一城樂薈地下G41號鋪*",
+    "address_en": "Shop G41, G/F, Fortune City One Plus, Pak Tak Street*,Sha Tin,Sha Tin District,Hong Kong",
+    "telephone": "64635237",
+    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.387125,
+      "longitude": 114.202315
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852NAL",
+    "code": "852NAL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "沙田乙明邨明信樓順豐站",
+    "name_en": "Jat Min Chuen, Sha Tin",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "沙田區",
+    "district_en": "Sha Tin District",
+    "sub_district": "沙田",
+    "sub_district_en": "Sha Tin",
+    "address": "香港沙田區沙田乙明邨街3號明信樓地下51號鋪*",
+    "address_en": "Shop No. 51, G/F, Ming Shun Lau, No.3 Jat Min Chuen Street*,Sha Tin,Sha Tin District,Hong Kong",
+    "telephone": "64635237",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00, 星期六, 12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.376665,
+      "longitude": 114.191045
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852NJL",
+    "code": "852NJL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "沙田瀝源邨華豐樓順豐站",
+    "name_en": "Lek Yuen Estate, Sha Tin",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "沙田區",
+    "district_en": "Sha Tin District",
+    "sub_district": "沙田",
+    "sub_district_en": "Sha Tin",
+    "address": "香港沙田區沙田瀝源街6號瀝源邨華豐樓地下ST5號鋪*",
+    "address_en": "Shop ST5, G/F, Wah Fung House, Lek Yuen Estate, 6 Lek Yuen Street*,Sha Tin,Sha Tin District,Hong Kong",
+    "telephone": "64687323",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.384203,
+      "longitude": 114.191595
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852G",
+    "code": "852G",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "荃灣匯力工業中心順豐站",
+    "name_en": "Thriving Industrial Centre, Tsuen Wan",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "荃灣區",
+    "district_en": "Tsuen Wan District",
+    "sub_district": "荃灣",
+    "sub_district_en": "Tsuen Wan",
+    "address": "香港荃灣區荃灣沙咀道26-38號匯力工業中心地下7號鋪*",
+    "address_en": "Room 7& 8B, G/F, Thriving Industrial Centre, No. 26-38 Sha Tsui Road*,Tsuen Wan,Tsuen Wan District,Hong Kong",
+    "telephone": "64634785",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
+    "location": {
+      "latitude": 22.374084,
+      "longitude": 114.108459
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852GA",
+    "code": "852GA",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "荃灣金銘聯合中心順豐站",
+    "name_en": "Crowning-United Centre, Tsuen Wan",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "荃灣區",
+    "district_en": "Tsuen Wan District",
+    "sub_district": "荃灣",
+    "sub_district_en": "Tsuen Wan",
+    "address": "香港荃灣區荃灣楊屋道127-135號金銘聯合中心地下*",
+    "address_en": "G/F, Crowning-United Centre,127-135 Yeung Uk Road*,Tsuen Wan,Tsuen Wan District,Hong Kong",
+    "telephone": "64609537",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.366953,
+      "longitude": 114.11798
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z355",
+    "code": "852Z355",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "荃灣南豐中心順豐站",
+    "name_en": "Nan Fung Centre, Tsuen Wan",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "荃灣區",
+    "district_en": "Tsuen Wan District",
+    "sub_district": "荃灣",
+    "sub_district_en": "Tsuen Wan",
+    "address": "香港荃灣區荃灣西樓角路64-98號及荃灣青山公路264-298號南豐中心807-808室*",
+    "address_en": "Unit Nos. 807 & 808 on 8/F of Nan Fung Centre,  264-298 Castle Peak Road Tsuen Wan & 64-98 Sai Lau Kok Road*,Tsuen Wan,Tsuen Wan District,Hong Kong",
+    "telephone": "61125020",
+    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.373709,
+      "longitude": 114.116563
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852FDL",
@@ -1843,7 +1791,7 @@
       "longitude": 114.231938
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852FUL",
@@ -1869,33 +1817,59 @@
       "longitude": 114.223843
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
-    "id": "852WCLM",
-    "code": "852WCLM",
+    "id": "852TB",
+    "code": "852TB",
     "type": "store",
     "type_name": "順豐站",
     "type_name_en": "SF Store",
-    "name": "石硤尾偉智里順豐站",
-    "name_en": "Wei Chi Lane, Shek Kip Mei",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "深水埗區",
-    "district_en": "Sham Shui Po District",
-    "sub_district": "石硤尾",
-    "sub_district_en": "Shek Kip Mei",
-    "address": "香港深水埗區石硤尾偉智里2號金玉大廈地下222號鋪*",
-    "address_en": "Shop 222, G/F, Kam Yuck Building, 2 Wai Chi Lane*,Shek Kip Mei,Sham Shui Po District,Hong Kong",
-    "telephone": "64635273",
-    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "name": "黃竹坑益年工廈順豐站",
+    "name_en": "Yally Industrial Building, Wong Chuk Hang",
+    "region": "香港島",
+    "region_en": "Hong Kong Island",
+    "district": "南區",
+    "district_en": "Southern District",
+    "sub_district": "黃竹坑",
+    "sub_district_en": "Wong Chuk Hang",
+    "address": "香港南區黃竹坑香業道6號及業發街6號益年工業大廈地下A2號鋪*",
+    "address_en": "Unit A2, G/F, Yally Industrial Building, No. 6 Heung Yip Road & No. 6 Yip Fat Street*,Wong Chuk Hang,Southern District,Hong Kong",
+    "telephone": "59236803",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
     "location": {
-      "latitude": 22.33464,
-      "longitude": 114.167044
+      "latitude": 22.248578,
+      "longitude": 114.167991
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852TE",
+    "code": "852TE",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "黃竹坑保濟工廈順豐站",
+    "name_en": "Po Chai Industrial Building, Wong Chuk Hang",
+    "region": "香港島",
+    "region_en": "Hong Kong Island",
+    "district": "南區",
+    "district_en": "Southern District",
+    "sub_district": "黃竹坑",
+    "sub_district_en": "Wong Chuk Hang",
+    "address": "香港南區黃竹坑黃竹坑道28號保濟工業大廈地下A室*",
+    "address_en": "Unit A, G/F, Po Chai Industrial Building, No.28 Wong Chuk Hang Road*,Wong Chuk Hang,Southern District,Hong Kong",
+    "telephone": "66553935",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.2482146,
+      "longitude": 114.1649042
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852Z201",
@@ -1921,7 +1895,33 @@
       "longitude": 114.15311
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852WCLM",
+    "code": "852WCLM",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "石硤尾偉智里順豐站",
+    "name_en": "Wei Chi Lane, Shek Kip Mei",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "深水埗區",
+    "district_en": "Sham Shui Po District",
+    "sub_district": "石硤尾",
+    "sub_district_en": "Shek Kip Mei",
+    "address": "香港深水埗區石硤尾偉智里2號金玉大廈地下222號鋪*",
+    "address_en": "Shop 222, G/F, Kam Yuck Building, 2 Wai Chi Lane*,Shek Kip Mei,Sham Shui Po District,Hong Kong",
+    "telephone": "64635273",
+    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.33464,
+      "longitude": 114.167044
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852D",
@@ -1947,7 +1947,7 @@
       "longitude": 114.14937
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852DB",
@@ -1973,7 +1973,7 @@
       "longitude": 114.146761
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852NC",
@@ -1999,7 +1999,7 @@
       "longitude": 114.151229
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852DCL",
@@ -2025,7 +2025,7 @@
       "longitude": 114.148029
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852DA",
@@ -2051,7 +2051,7 @@
       "longitude": 114.1469397
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852DDL",
@@ -2077,7 +2077,7 @@
       "longitude": 114.16094
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852U",
@@ -2103,7 +2103,7 @@
       "longitude": 113.971019
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852UC",
@@ -2129,7 +2129,7 @@
       "longitude": 113.96931
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852UD",
@@ -2155,7 +2155,7 @@
       "longitude": 113.97512
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852FFL",
@@ -2181,7 +2181,7 @@
       "longitude": 113.967824
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852TCSM",
@@ -2207,7 +2207,7 @@
       "longitude": 113.978158
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852UAL",
@@ -2233,7 +2233,7 @@
       "longitude": 113.961061
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852Z660",
@@ -2259,7 +2259,7 @@
       "longitude": 113.975233
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852Z661",
@@ -2285,7 +2285,7 @@
       "longitude": 113.975477
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852TD",
@@ -2311,33 +2311,7 @@
       "longitude": 114.186752
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852SKL",
-    "code": "852SKL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "西貢宜春街順豐站",
-    "name_en": "Yi Chun Street, Sai Kung",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "西貢區",
-    "district_en": "Sai Kung District",
-    "sub_district": "西貢",
-    "sub_district_en": "Sai Kung",
-    "address": "香港西貢區西貢宜春街66號地下10號鋪*",
-    "address_en": "Shop 10, G/F, 66 Yi Chun Street*,Sai Kung,Sai Kung District,Hong Kong",
-    "telephone": "67934923",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
-    "business_hours_en": "Mon to Fri 12:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.380383,
-      "longitude": 114.271875
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852T",
@@ -2363,7 +2337,7 @@
       "longitude": 114.180184
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852TA",
@@ -2389,7 +2363,7 @@
       "longitude": 114.170479
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852TC",
@@ -2415,33 +2389,33 @@
       "longitude": 114.174459
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
-    "id": "852Z102",
-    "code": "852Z102",
+    "id": "852SKL",
+    "code": "852SKL",
     "type": "store",
     "type_name": "順豐站",
     "type_name_en": "SF Store",
-    "name": "調景嶺維景灣畔順豐站",
-    "name_en": "Ocean Shores, Tiu Keng Leng",
+    "name": "西貢宜春街順豐站",
+    "name_en": "Yi Chun Street, Sai Kung",
     "region": "新界",
     "region_en": "New Territories",
     "district": "西貢區",
     "district_en": "Sai Kung District",
-    "sub_district": "調景嶺",
-    "sub_district_en": "Tiu Keng Leng",
-    "address": "香港西貢區調景嶺香港新界西貢區調景嶺澳景路88號維景灣畔3期低層地下2樓A1號鋪*",
-    "address_en": "Shop A1, LG2/F, Phase III Ocean Shores, 88 O King Road, Tiu Keng Leng, Sai Kung District, New Territories, Hong Kong*,Tiu Keng Leng,Sai Kung District,Hong Kong",
-    "telephone": "63320238",
-    "business_hours": "星期一至星期五,12:00-22:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
-    "business_hours_en": "Mon-Fri: 12:00-21:00 Sat, Sun and Public Holilday: 12:00-20:00",
+    "sub_district": "西貢",
+    "sub_district_en": "Sai Kung",
+    "address": "香港西貢區西貢宜春街66號地下10號鋪*",
+    "address_en": "Shop 10, G/F, 66 Yi Chun Street*,Sai Kung,Sai Kung District,Hong Kong",
+    "telephone": "67934923",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
+    "business_hours_en": "Mon to Fri 12:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
     "location": {
-      "latitude": 22.30372,
-      "longitude": 114.252515
+      "latitude": 22.380383,
+      "longitude": 114.271875
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852HHUM",
@@ -2467,33 +2441,7 @@
       "longitude": 114.263893
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852BB",
-    "code": "852BB",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "油麻地金華大廈順豐站",
-    "name_en": "Kam Wah Building, Yau Ma Tei",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "油麻地",
-    "sub_district_en": "Yau Ma Tei",
-    "address": "香港油尖旺區油麻地廣東道831號金華大廈B座地下B1鋪*",
-    "address_en": "Shop B1, G/F, Kam Wah Building, No. 831 Canton Road*,Yau Ma Tei,Yau Tsim Mong District,Hong Kong",
-    "telephone": "64426542",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.313058,
-      "longitude": 114.168363
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852EA",
@@ -2519,397 +2467,7 @@
       "longitude": 114.169562
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852E",
-    "code": "852E",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "尖沙咀余仁生中心順豐站",
-    "name_en": "Eu Yan Sang Tower, Tsim Sha Tsui",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "尖沙咀",
-    "sub_district_en": "Tsim Sha Tsui",
-    "address": "香港油尖旺區尖沙咀漆咸道南11-15號余仁生中心地下A, B及C鋪*",
-    "address_en": "Unit A, B & C, G/F, Eu Yan Sang Tower, Nos. 11-15 Chatham Road South*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
-    "telephone": "98639179",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
-    "location": {
-      "latitude": 22.296973,
-      "longitude": 114.17512
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852EB",
-    "code": "852EB",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "尖沙咀南洋中心順豐站",
-    "name_en": "South Seas Centre, Tsim Sha Tsui",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "尖沙咀",
-    "sub_district_en": "Tsim Sha Tsui",
-    "address": "香港油尖旺區尖沙咀么地道75號南洋中心UG層21&22室*",
-    "address_en": "Unit no. 21-22 on Upper Ground Floor, South Seas Centre, 75 Mody Road*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
-    "telephone": "64681576",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.299624,
-      "longitude": 114.178759
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852ED",
-    "code": "852ED",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "尖沙咀力寶太陽廣場順豐站",
-    "name_en": "Lippo Sun Plaza, Tsim Sha Tsui",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "尖沙咀",
-    "sub_district_en": "Tsim Sha Tsui",
-    "address": "香港油尖旺區尖沙咀廣東道28號力寶太陽廣場310室*",
-    "address_en": "Unit 310, 3/F., Lippo Sun Plaza, No. 28 Canton Road*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
-    "telephone": "64634748",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.297009,
-      "longitude": 114.169772
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852EE",
-    "code": "852EE",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "尖沙咀漆咸圍順豐站",
-    "name_en": "Chatham Court, Tsim Sha Tsui",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "尖沙咀",
-    "sub_district_en": "Tsim Sha Tsui",
-    "address": "香港油尖旺區尖沙咀漆咸圍10-12號意公寓地下商鋪*",
-    "address_en": "Shop on Ground Floor, Yi Serviced Apartments, 10-12 Chatham Court*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
-    "telephone": "63297805",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.3016181,
-      "longitude": 114.1760179
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852Z251",
-    "code": "852Z251",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "尖沙咀海港城順豐站(只限寄件)",
-    "name_en": "Harbour City, Tsim Sha Tsui(self drop-off only)",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "尖沙咀",
-    "sub_district_en": "Tsim Sha Tsui",
-    "address": "香港油尖旺區尖沙咀廣東道3-27號海港城港威商場四樓（客戶服務中心內）（只提供寄件服務）",
-    "address_en": "Gateway Arcade Level 4 (Inside the customer service center), Harbour City, 3-27 Canton Road,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
-    "telephone": "62086145",
-    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-21:00;星期六,12:00-21:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-21:00; Sat 12:00-21:00",
-    "location": {
-      "latitude": 22.298629,
-      "longitude": 114.168166
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852Z252",
-    "code": "852Z252",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "尖沙咀西九龍高鐵順豐站",
-    "name_en": "Hong Kong West Kowloon Station SF Store",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "尖沙咀",
-    "sub_district_en": "Tsim Sha Tsui",
-    "address": "香港油尖旺區尖沙咀西九龍站G層WEK G-5號鋪*",
-    "address_en": "Shop WEK G-5, G/F, Hong Kong West Kowloon Station*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
-    "telephone": "62086145",
-    "business_hours": "星期一至星期五,11:00-20:00;星期日及公眾假期,11:00-20:00;星期六,11:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-20:00; Sun & Public Holidays 11:00-20:00; Sat 11:00-20:00",
-    "location": {
-      "latitude": 22.30499,
-      "longitude": 114.1649
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852AAL",
-    "code": "852AAL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "將軍澳茵怡花園順豐站",
-    "name_en": "Verbena Heights, Tseung Kwan O",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "西貢區",
-    "district_en": "Sai Kung District",
-    "sub_district": "將軍澳",
-    "sub_district_en": "Tseung Kwan O",
-    "address": "香港西貢區將軍澳貿泰路8號茵怡花園第1座地下6號鋪*",
-    "address_en": "Shop No. 6, G/F, Block 1, Verbena Heights, 8 Mau Tai Road*,Tseung Kwan O,Sai Kung District,Hong Kong",
-    "telephone": "64635030",
-    "business_hours": "星期一至星期五,10:30-22:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.322014,
-      "longitude": 114.255703
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852ABL",
-    "code": "852ABL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "將軍澳寶盈花園商場順豐站",
-    "name_en": "Bauhinia Garden, Tseung Kwan O",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "西貢區",
-    "district_en": "Sai Kung District",
-    "sub_district": "將軍澳",
-    "sub_district_en": "Tseung Kwan O",
-    "address": "香港西貢區將軍澳唐俊街11號寶盈花園商場一樓S21-S21A號鋪*",
-    "address_en": "Shop Nos. S21 & S21A on The First Floor of Commercial Centre, Bauhinia Garden, 11 Tong Chun Street*,Tseung Kwan O,Sai Kung District,Hong Kong",
-    "telephone": "64635030",
-    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00; 星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.3069383,
-      "longitude": 114.2617571
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852CLL",
-    "code": "852CLL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "將軍澳尚德廣場順豐站",
-    "name_en": "Sheung Tak Plaza, Tseung Kwan O",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "西貢區",
-    "district_en": "Sai Kung District",
-    "sub_district": "將軍澳",
-    "sub_district_en": "Tseung Kwan O",
-    "address": "香港西貢區將軍澳唐明街2號尚德邨尚德廣場2樓215號鋪*",
-    "address_en": "Shop 215, 2/F, Sheung Tak Plaza, Sheung Tak Estate, 2 Tong Ming Street*,Tseung Kwan O,Sai Kung District,Hong Kong",
-    "telephone": "64635030",
-    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.310937,
-      "longitude": 114.258924
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852BA",
-    "code": "852BA",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "太子汝洲街順豐站",
-    "name_en": "Yu Chau Street, Prince Edward",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "太子",
-    "sub_district_en": "Prince Edward",
-    "address": "香港油尖旺區太子汝州街58號地下*",
-    "address_en": "G/F, 58 Yu Chau Street*,Prince Edward,Yau Tsim Mong District,Hong Kong",
-    "telephone": "64635742",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.3268229,
-      "longitude": 114.1657536
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852BDL",
-    "code": "852BDL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "太子大南街順豐站",
-    "name_en": "Tai Nan Street, Prince Edward",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "太子",
-    "sub_district_en": "Prince Edward",
-    "address": "香港油尖旺區太子太子大南街24, 24A及26號地下A鋪*",
-    "address_en": "Shop A, G/F, No. 24, 24A & 26 Tai Nan Street*,Prince Edward,Yau Tsim Mong District,Hong Kong",
-    "telephone": "64635273",
-    "business_hours": "星期一至星期五,10:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 10:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.324361,
-      "longitude": 114.167222
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852BE",
-    "code": "852BE",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "旺角黑布街順豐站",
-    "name_en": "Kwong Wa Street, Mong Kok",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "旺角",
-    "sub_district_en": "Mong Kok",
-    "address": "香港油尖旺區旺角黑布街15號地鋪*",
-    "address_en": "Ground Floor, 15 Hak Po Street*,Mong Kok,Yau Tsim Mong District,Hong Kong",
-    "telephone": "65049838",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.317465,
-      "longitude": 114.17258
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852BF",
-    "code": "852BF",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "旺角上海街順豐站",
-    "name_en": "Shanghai Street, Mong Kok",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "旺角",
-    "sub_district_en": "Mong Kok",
-    "address": "香港油尖旺區旺角上海街683號地下*",
-    "address_en": "G/F, No. 683 Shanghai Street*,Mong Kok,Yau Tsim Mong District,Hong Kong",
-    "telephone": "93299413",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.324645,
-      "longitude": 114.16729
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852BAL",
-    "code": "852BAL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "旺角富榮花園順豐站",
-    "name_en": "Charming Garden, Mong Kok",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "旺角",
-    "sub_district_en": "Mong Kok",
-    "address": "香港油尖旺區旺角海庭道8號富榮花園2期地下38號鋪*",
-    "address_en": "Shop 38, G/F, Charming Garden Phase 2, Hoi Wang Road*,Mong Kok,Yau Tsim Mong District,Hong Kong",
-    "telephone": "64684261",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.31391,
-      "longitude": 114.16458
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852Z053",
-    "code": "852Z053",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "旺角煙廠街順豐站",
-    "name_en": "Yin Chong Street, Mong Kok",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "油尖旺區",
-    "district_en": "Yau Tsim Mong District",
-    "sub_district": "旺角",
-    "sub_district_en": "Mong Kok",
-    "address": "香港油尖旺區旺角煙廠街33號地下A鋪^*",
-    "address_en": "Shop A, G/F, Nos.33 Yin Chong Street*,Mong Kok,Yau Tsim Mong District,Hong Kong",
-    "telephone": "63297806",
-    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00; 星期六: 12:00-20:00",
-    "business_hours_en": "Mon to Fri: 11:00-22:00; Sat、Sun and Public Holiday: 12:00-20:00",
-    "location": {
-      "latitude": 22.316656,
-      "longitude": 114.172732
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852Z101",
@@ -2935,33 +2493,449 @@
       "longitude": 114.2697184
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
-    "id": "852Z662",
-    "code": "852Z662",
+    "id": "852BA",
+    "code": "852BA",
     "type": "store",
     "type_name": "順豐站",
     "type_name_en": "SF Store",
-    "name": "洪水橋德祥樓順豐站",
-    "name_en": "Tak Cheung Building, Hung Shui Kiu",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "元朗區",
-    "district_en": "Yuen Long District",
-    "sub_district": "洪水橋",
-    "sub_district_en": "Hung Shui Kiu",
-    "address": "香港元朗區洪水橋洪水橋大街1號德祥樓地下25 ,26A & 12B號鋪*",
-    "address_en": "Shop 25, 26A & 12B on G/F, Tak Cheung Building, No.1 Hung Shui Kiu Main Street*,Hung Shui Kiu,Yuen Long District,Hong Kong",
-    "telephone": "65082353",
-    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00, 星期六: 12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "name": "太子汝洲街順豐站",
+    "name_en": "Yu Chau Street, Prince Edward",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "太子",
+    "sub_district_en": "Prince Edward",
+    "address": "香港油尖旺區太子汝州街58號地下*",
+    "address_en": "G/F, 58 Yu Chau Street*,Prince Edward,Yau Tsim Mong District,Hong Kong",
+    "telephone": "64635742",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
     "location": {
-      "latitude": 22.432767,
-      "longitude": 113.995815
+      "latitude": 22.3268229,
+      "longitude": 114.1657536
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852BDL",
+    "code": "852BDL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "太子大南街順豐站",
+    "name_en": "Tai Nan Street, Prince Edward",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "太子",
+    "sub_district_en": "Prince Edward",
+    "address": "香港油尖旺區太子太子大南街24, 24A及26號地下A鋪*",
+    "address_en": "Shop A, G/F, No. 24, 24A & 26 Tai Nan Street*,Prince Edward,Yau Tsim Mong District,Hong Kong",
+    "telephone": "64635273",
+    "business_hours": "星期一至星期五,10:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 10:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.324361,
+      "longitude": 114.167222
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852BE",
+    "code": "852BE",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "旺角黑布街順豐站",
+    "name_en": "Kwong Wa Street, Mong Kok",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "旺角",
+    "sub_district_en": "Mong Kok",
+    "address": "香港油尖旺區旺角黑布街15號地鋪*",
+    "address_en": "Ground Floor, 15 Hak Po Street*,Mong Kok,Yau Tsim Mong District,Hong Kong",
+    "telephone": "65049838",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.317465,
+      "longitude": 114.17258
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852BF",
+    "code": "852BF",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "旺角上海街順豐站",
+    "name_en": "Shanghai Street, Mong Kok",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "旺角",
+    "sub_district_en": "Mong Kok",
+    "address": "香港油尖旺區旺角上海街683號地下*",
+    "address_en": "G/F, No. 683 Shanghai Street*,Mong Kok,Yau Tsim Mong District,Hong Kong",
+    "telephone": "93299413",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.324645,
+      "longitude": 114.16729
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852BAL",
+    "code": "852BAL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "旺角富榮花園順豐站",
+    "name_en": "Charming Garden, Mong Kok",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "旺角",
+    "sub_district_en": "Mong Kok",
+    "address": "香港油尖旺區旺角海庭道8號富榮花園2期地下38號鋪*",
+    "address_en": "Shop 38, G/F, Charming Garden Phase 2, Hoi Wang Road*,Mong Kok,Yau Tsim Mong District,Hong Kong",
+    "telephone": "64684261",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00; 星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.31391,
+      "longitude": 114.16458
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z053",
+    "code": "852Z053",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "旺角煙廠街順豐站",
+    "name_en": "Yin Chong Street, Mong Kok",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "旺角",
+    "sub_district_en": "Mong Kok",
+    "address": "香港油尖旺區旺角煙廠街33號地下A鋪^*",
+    "address_en": "Shop A, G/F, Nos.33 Yin Chong Street*,Mong Kok,Yau Tsim Mong District,Hong Kong",
+    "telephone": "63297806",
+    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00; 星期六: 12:00-20:00",
+    "business_hours_en": "Mon to Fri: 11:00-22:00; Sat、Sun and Public Holiday: 12:00-20:00",
+    "location": {
+      "latitude": 22.316656,
+      "longitude": 114.172732
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z102",
+    "code": "852Z102",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "調景嶺維景灣畔順豐站",
+    "name_en": "Ocean Shores, Tiu Keng Leng",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "西貢區",
+    "district_en": "Sai Kung District",
+    "sub_district": "調景嶺",
+    "sub_district_en": "Tiu Keng Leng",
+    "address": "香港西貢區調景嶺香港新界西貢區調景嶺澳景路88號維景灣畔3期低層地下2樓A1號鋪*",
+    "address_en": "Shop A1, LG2/F, Phase III Ocean Shores, 88 O King Road, Tiu Keng Leng, Sai Kung District, New Territories, Hong Kong*,Tiu Keng Leng,Sai Kung District,Hong Kong",
+    "telephone": "63320238",
+    "business_hours": "星期一至星期五,12:00-22:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
+    "business_hours_en": "Mon-Fri: 12:00-21:00 Sat, Sun and Public Holilday: 12:00-20:00",
+    "location": {
+      "latitude": 22.30372,
+      "longitude": 114.252515
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852E",
+    "code": "852E",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "尖沙咀余仁生中心順豐站",
+    "name_en": "Eu Yan Sang Tower, Tsim Sha Tsui",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
+    "address": "香港油尖旺區尖沙咀漆咸道南11-15號余仁生中心地下A, B及C鋪*",
+    "address_en": "Unit A, B & C, G/F, Eu Yan Sang Tower, Nos. 11-15 Chatham Road South*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
+    "telephone": "98639179",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,09:00-18:00",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
+    "location": {
+      "latitude": 22.296973,
+      "longitude": 114.17512
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852EB",
+    "code": "852EB",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "尖沙咀南洋中心順豐站",
+    "name_en": "South Seas Centre, Tsim Sha Tsui",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
+    "address": "香港油尖旺區尖沙咀么地道75號南洋中心UG層21&22室*",
+    "address_en": "Unit no. 21-22 on Upper Ground Floor, South Seas Centre, 75 Mody Road*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
+    "telephone": "64681576",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.299624,
+      "longitude": 114.178759
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852ED",
+    "code": "852ED",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "尖沙咀力寶太陽廣場順豐站",
+    "name_en": "Lippo Sun Plaza, Tsim Sha Tsui",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
+    "address": "香港油尖旺區尖沙咀廣東道28號力寶太陽廣場310室*",
+    "address_en": "Unit 310, 3/F., Lippo Sun Plaza, No. 28 Canton Road*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
+    "telephone": "64634748",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.297009,
+      "longitude": 114.169772
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852EE",
+    "code": "852EE",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "尖沙咀漆咸圍順豐站",
+    "name_en": "Chatham Court, Tsim Sha Tsui",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
+    "address": "香港油尖旺區尖沙咀漆咸圍10-12號意公寓地下商鋪*",
+    "address_en": "Shop on Ground Floor, Yi Serviced Apartments, 10-12 Chatham Court*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
+    "telephone": "63297805",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.3016181,
+      "longitude": 114.1760179
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z251",
+    "code": "852Z251",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "尖沙咀海港城順豐站(只限寄件)",
+    "name_en": "Harbour City, Tsim Sha Tsui(self drop-off only)",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
+    "address": "香港油尖旺區尖沙咀廣東道3-27號海港城港威商場四樓（客戶服務中心內）（只提供寄件服務）",
+    "address_en": "Gateway Arcade Level 4 (Inside the customer service center), Harbour City, 3-27 Canton Road,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
+    "telephone": "62086145",
+    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-21:00;星期六,12:00-21:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-21:00; Sat 12:00-21:00",
+    "location": {
+      "latitude": 22.298629,
+      "longitude": 114.168166
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z252",
+    "code": "852Z252",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "尖沙咀西九龍高鐵順豐站",
+    "name_en": "Hong Kong West Kowloon Station SF Store",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "尖沙咀",
+    "sub_district_en": "Tsim Sha Tsui",
+    "address": "香港油尖旺區尖沙咀西九龍站G層WEK G-5號鋪*",
+    "address_en": "Shop WEK G-5, G/F, Hong Kong West Kowloon Station*,Tsim Sha Tsui,Yau Tsim Mong District,Hong Kong",
+    "telephone": "62086145",
+    "business_hours": "星期一至星期五,11:00-20:00;星期日及公眾假期,11:00-20:00;星期六,11:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-20:00; Sun & Public Holidays 11:00-20:00; Sat 11:00-20:00",
+    "location": {
+      "latitude": 22.30499,
+      "longitude": 114.1649
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852AAL",
+    "code": "852AAL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "將軍澳茵怡花園順豐站",
+    "name_en": "Verbena Heights, Tseung Kwan O",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "西貢區",
+    "district_en": "Sai Kung District",
+    "sub_district": "將軍澳",
+    "sub_district_en": "Tseung Kwan O",
+    "address": "香港西貢區將軍澳貿泰路8號茵怡花園第1座地下6號鋪*",
+    "address_en": "Shop No. 6, G/F, Block 1, Verbena Heights, 8 Mau Tai Road*,Tseung Kwan O,Sai Kung District,Hong Kong",
+    "telephone": "64635030",
+    "business_hours": "星期一至星期五,10:30-22:00;星期日及公眾假期,12:00-20:00; 星期六, 12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.322014,
+      "longitude": 114.255703
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852ABL",
+    "code": "852ABL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "將軍澳寶盈花園商場順豐站",
+    "name_en": "Bauhinia Garden, Tseung Kwan O",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "西貢區",
+    "district_en": "Sai Kung District",
+    "sub_district": "將軍澳",
+    "sub_district_en": "Tseung Kwan O",
+    "address": "香港西貢區將軍澳唐俊街11號寶盈花園商場一樓S21-S21A號鋪*",
+    "address_en": "Shop Nos. S21 & S21A on The First Floor of Commercial Centre, Bauhinia Garden, 11 Tong Chun Street*,Tseung Kwan O,Sai Kung District,Hong Kong",
+    "telephone": "64635030",
+    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00; 星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.3069383,
+      "longitude": 114.2617571
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852CLL",
+    "code": "852CLL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "將軍澳尚德廣場順豐站",
+    "name_en": "Sheung Tak Plaza, Tseung Kwan O",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "西貢區",
+    "district_en": "Sai Kung District",
+    "sub_district": "將軍澳",
+    "sub_district_en": "Tseung Kwan O",
+    "address": "香港西貢區將軍澳唐明街2號尚德邨尚德廣場2樓215號鋪*",
+    "address_en": "Shop 215, 2/F, Sheung Tak Plaza, Sheung Tak Estate, 2 Tong Ming Street*,Tseung Kwan O,Sai Kung District,Hong Kong",
+    "telephone": "64635030",
+    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.310937,
+      "longitude": 114.258924
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852BB",
+    "code": "852BB",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "油麻地金華大廈順豐站",
+    "name_en": "Kam Wah Building, Yau Ma Tei",
+    "region": "九龍",
+    "region_en": "Kowloon",
+    "district": "油尖旺區",
+    "district_en": "Yau Tsim Mong District",
+    "sub_district": "油麻地",
+    "sub_district_en": "Yau Ma Tei",
+    "address": "香港油尖旺區油麻地廣東道831號金華大廈B座地下B1鋪*",
+    "address_en": "Shop B1, G/F, Kam Wah Building, No. 831 Canton Road*,Yau Ma Tei,Yau Tsim Mong District,Hong Kong",
+    "telephone": "64426542",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.313058,
+      "longitude": 114.168363
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852BD",
@@ -2987,7 +2961,7 @@
       "longitude": 114.163071
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852BFL",
@@ -3013,7 +2987,33 @@
       "longitude": 114.160828
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852Z662",
+    "code": "852Z662",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "洪水橋德祥樓順豐站",
+    "name_en": "Tak Cheung Building, Hung Shui Kiu",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "元朗區",
+    "district_en": "Yuen Long District",
+    "sub_district": "洪水橋",
+    "sub_district_en": "Hung Shui Kiu",
+    "address": "香港元朗區洪水橋洪水橋大街1號德祥樓地下25 ,26A & 12B號鋪*",
+    "address_en": "Shop 25, 26A & 12B on G/F, Tak Cheung Building, No.1 Hung Shui Kiu Main Street*,Hung Shui Kiu,Yuen Long District,Hong Kong",
+    "telephone": "65082353",
+    "business_hours": "星期一至星期五,12:00-21:00;星期日及公眾假期,12:00-20:00, 星期六: 12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.432767,
+      "longitude": 113.995815
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852FBL",
@@ -3039,7 +3039,7 @@
       "longitude": 113.998453
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852UCL",
@@ -3065,7 +3065,7 @@
       "longitude": 113.998561
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852UJL",
@@ -3091,7 +3091,7 @@
       "longitude": 114.003161
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852UAA",
@@ -3117,7 +3117,7 @@
       "longitude": 114.029522
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852UAB",
@@ -3143,7 +3143,7 @@
       "longitude": 114.028084
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852FLL",
@@ -3169,7 +3169,7 @@
       "longitude": 114.022276
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852UFL",
@@ -3195,7 +3195,7 @@
       "longitude": 114.034504
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852UGL",
@@ -3221,7 +3221,7 @@
       "longitude": 114.02376
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852UHL",
@@ -3247,7 +3247,7 @@
       "longitude": 114.031224
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852Z701",
@@ -3273,7 +3273,7 @@
       "longitude": 114.029795
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852M",
@@ -3299,7 +3299,7 @@
       "longitude": 114.151342
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852MD",
@@ -3325,59 +3325,7 @@
       "longitude": 114.149866
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852MA",
-    "code": "852MA",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "西營盤兆祥坊順豐站",
-    "name_en": "Siu Cheung Fong, Sai Ying Pun",
-    "region": "香港島",
-    "region_en": "Hong Kong Island",
-    "district": "中西區",
-    "district_en": "Central and Western District",
-    "sub_district": "西營盤",
-    "sub_district_en": "Sai Ying Pun",
-    "address": "香港中西區西營盤朝光街4A號兆祥坊A2地下*",
-    "address_en": "Shop A2, G/F, Siu Cheung Building, Siu Cheung Fong, No. 4A Chiu Kwong Street*,Sai Ying Pun,Central and Western District,Hong Kong",
-    "telephone": "59039602",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.287374,
-      "longitude": 114.139597
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852MB",
-    "code": "852MB",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "中環勝基中心順豐站",
-    "name_en": "Winbase Centre, Central",
-    "region": "香港島",
-    "region_en": "Hong Kong Island",
-    "district": "中西區",
-    "district_en": "Central and Western District",
-    "sub_district": "中環",
-    "sub_district_en": "Central",
-    "address": "香港中西區中環皇后大道中208號勝基中心地下D鋪*",
-    "address_en": "Unit D, G/F, Winbase Centre, No. 208 Queen's Road Central*,Central,Central and Western District,Hong Kong",
-    "telephone": "93299023",
-    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
-    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
-    "location": {
-      "latitude": 22.284683,
-      "longitude": 114.152098
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852Z501",
@@ -3403,59 +3351,7 @@
       "longitude": 114.1324
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852FTL",
-    "code": "852FTL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "上水彩園邨彩珠樓順豐站",
-    "name_en": "Choi Yuen Estate, Sheung Shui",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "北區",
-    "district_en": "North District",
-    "sub_district": "上水",
-    "sub_district_en": "Sheung Shui",
-    "address": "香港北區上水彩園路彩園邨彩珠樓地下117號鋪*",
-    "address_en": "Shop 117, G/F, Choi Chu House, Choi Yuen Estate*,Sheung Shui,North District,Hong Kong",
-    "telephone": "64781595",
-    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.500736,
-      "longitude": 114.125775
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
-  },
-  {
-    "id": "852NDL",
-    "code": "852NDL",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "上水符興街順豐站",
-    "name_en": "Fu Hing Street, Sheung Shui",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "北區",
-    "district_en": "North District",
-    "sub_district": "上水",
-    "sub_district_en": "Sheung Shui",
-    "address": "香港北區上水符興街4號地下*",
-    "address_en": "G/F, 4 Fu Hing Street*,Sheung Shui,North District,Hong Kong",
-    "telephone": "64781595",
-    "business_hours": "星期一至星期五,10:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 10:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.504559,
-      "longitude": 114.129232
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852FHL",
@@ -3481,7 +3377,7 @@
       "longitude": 114.1406376
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852NFL",
@@ -3507,7 +3403,7 @@
       "longitude": 114.141684
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852Z010",
@@ -3533,7 +3429,7 @@
       "longitude": 114.156047
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852Z011",
@@ -3559,7 +3455,111 @@
       "longitude": 114.141308
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852MB",
+    "code": "852MB",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "中環勝基中心順豐站",
+    "name_en": "Winbase Centre, Central",
+    "region": "香港島",
+    "region_en": "Hong Kong Island",
+    "district": "中西區",
+    "district_en": "Central and Western District",
+    "sub_district": "中環",
+    "sub_district_en": "Central",
+    "address": "香港中西區中環皇后大道中208號勝基中心地下D鋪*",
+    "address_en": "Unit D, G/F, Winbase Centre, No. 208 Queen's Road Central*,Central,Central and Western District,Hong Kong",
+    "telephone": "93299023",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.284683,
+      "longitude": 114.152098
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852MA",
+    "code": "852MA",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "西營盤兆祥坊順豐站",
+    "name_en": "Siu Cheung Fong, Sai Ying Pun",
+    "region": "香港島",
+    "region_en": "Hong Kong Island",
+    "district": "中西區",
+    "district_en": "Central and Western District",
+    "sub_district": "西營盤",
+    "sub_district_en": "Sai Ying Pun",
+    "address": "香港中西區西營盤朝光街4A號兆祥坊A2地下*",
+    "address_en": "Shop A2, G/F, Siu Cheung Building, Siu Cheung Fong, No. 4A Chiu Kwong Street*,Sai Ying Pun,Central and Western District,Hong Kong",
+    "telephone": "59039602",
+    "business_hours": "星期一至星期六,09:00-20:00;星期日及勞工假期,休息",
+    "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed",
+    "location": {
+      "latitude": 22.287374,
+      "longitude": 114.139597
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852FTL",
+    "code": "852FTL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "上水彩園邨彩珠樓順豐站",
+    "name_en": "Choi Yuen Estate, Sheung Shui",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "北區",
+    "district_en": "North District",
+    "sub_district": "上水",
+    "sub_district_en": "Sheung Shui",
+    "address": "香港北區上水彩園路彩園邨彩珠樓地下117號鋪*",
+    "address_en": "Shop 117, G/F, Choi Chu House, Choi Yuen Estate*,Sheung Shui,North District,Hong Kong",
+    "telephone": "64781595",
+    "business_hours": "星期一至星期五,11:00-21:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.500736,
+      "longitude": 114.125775
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
+  },
+  {
+    "id": "852NDL",
+    "code": "852NDL",
+    "type": "store",
+    "type_name": "順豐站",
+    "type_name_en": "SF Store",
+    "name": "上水符興街順豐站",
+    "name_en": "Fu Hing Street, Sheung Shui",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "北區",
+    "district_en": "North District",
+    "sub_district": "上水",
+    "sub_district_en": "Sheung Shui",
+    "address": "香港北區上水符興街4號地下*",
+    "address_en": "G/F, 4 Fu Hing Street*,Sheung Shui,North District,Hong Kong",
+    "telephone": "64781595",
+    "business_hours": "星期一至星期五,10:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
+    "business_hours_en": "Mon to Fri 10:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
+    "location": {
+      "latitude": 22.504559,
+      "longitude": 114.129232
+    },
+    "source": "api",
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   },
   {
     "id": "852Z502",
@@ -3585,6 +3585,6 @@
       "longitude": 114.1263858
     },
     "source": "api",
-    "retrieved_at": "2026-07-27 09:30 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
   }
 ]

@@ -1,8 +1,6 @@
-> **最後更新時間 (Last Updated)**: `2026-07-27 09:30 (HKT UTC+8)`
+> **最後更新時間 (Last Updated)**: `2026-07-27 09:31 (HKT UTC+8)`
 
-> 📅 **最後更新時間 (Last Updated)**: `2026-07-27 09:18 (HKT UTC+8)`
-
-# 🚚 香港順豐速運自提點 / 順豐站 / 智能櫃資料集
+# 香港順豐速運自提點 / 順豐站 / 智能櫃資料集
 # SF Express Hong Kong Stores & Lockers Dataset (Bilingual 中英雙語)
 
 [中文] | [English]
@@ -11,15 +9,15 @@
 
 An automated, up-to-date bilingual dataset (Traditional Chinese & English) and lookup website for SF Express Hong Kong Stores, Lockers, and Service Partners. Provides clean JSON files and GitHub Raw direct access.
 
-🌐 **GitHub Pages 門市搜尋網站 (Online Lookup Website)**:  
-👉 [https://wtw0212.github.io/sf-express-hk-locations/](https://wtw0212.github.io/sf-express-hk-locations/)
+**GitHub Pages 門市搜尋網站 (Online Lookup Website)**:  
+[https://wtw0212.github.io/sf-express-hk-locations/](https://wtw0212.github.io/sf-express-hk-locations/)
 
-📊 **最新每日網點異動報告 (Latest Daily Sync Report)**:  
-👉 [檢視最新每日更新報告 (View Latest Report)](reports/latest-diff.md)
+**最新每日網點異動報告 (Latest Daily Sync Report)**:  
+[檢視最新每日更新報告 (View Latest Report)](reports/latest-diff.md)
 
 ---
 
-## 📦 GitHub Direct Raw 存取 (Direct Access URLs in `data/`)
+## GitHub Direct Raw 存取 (Direct Access URLs in `data/`)
 
 您可以直接在您的網店（如 Next.js, Shopify, WooCommerce, iOS/Android App）中透過 **GitHub Raw** 存取所有位於 `data/` 資料夾內的雙語分類 JSON：
 
@@ -33,7 +31,7 @@ An automated, up-to-date bilingual dataset (Traditional Chinese & English) and l
 
 ---
 
-## 💻 代碼調用範例 (Usage Examples)
+## 代碼調用範例 (Usage Examples)
 
 ### JavaScript / TypeScript / Next.js
 ```javascript
@@ -48,7 +46,7 @@ async function getSFLocations() {
 
 ---
 
-## 📄 JSON Schema 雙語結構說明 (Bilingual Data Schema)
+## JSON Schema 雙語結構說明 (Bilingual Data Schema)
 
 ```json
 {
@@ -81,12 +79,12 @@ async function getSFLocations() {
 
 ---
 
-## 🤖 自動更新機制 (Automated Sync)
+## 自動更新機制 (Automated Sync)
 
 本 Repository 使用 **GitHub Actions** 每天定時（每日 00:07 HKT）自動執行雙語 API 抓取、動態 PDF 解析、18區校正與 Quality Gate 驗證腳本，自動更新 `data/` 資料夾下的所有雙語 JSON 檔，並同步更新 README 最頂部的最後更新時間。
 
 ---
 
-## 📜 聲明 (Disclaimer)
+## 聲明 (Disclaimer)
 
 本專案資料來自順豐速運官方公開管道，版權歸順豐速運所有。本專案僅作開源數據整理與社群方便使用。

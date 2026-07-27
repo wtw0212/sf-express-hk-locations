@@ -635,12 +635,12 @@ async function run() {
     const { errors, warnings } = validateDataset(normalizedList, prevDataPath);
 
     if (warnings.length > 0) {
-      console.log('\n⚠️  Validation warnings:');
+      console.log('\nValidation warnings:');
       warnings.forEach(w => console.log(`  - ${w}`));
     }
 
     if (errors.length > 0) {
-      console.error('\n❌ Validation errors (blocking publish):');
+      console.error('\nValidation errors (blocking publish):');
       errors.forEach(e => console.error(`  - ${e}`));
       throw new Error('Dataset validation failed. Previous data preserved.');
     }
@@ -725,10 +725,10 @@ async function run() {
     // Update README timestamp
     if (fs.existsSync(README_PATH)) {
       let readmeContent = fs.readFileSync(README_PATH, 'utf8');
-      const timestampLine = `> 📅 **最後更新時間 (Last Updated)**: \`${hktDateStr}\`\n\n`;
+      const timestampLine = `> **最後更新時間 (Last Updated)**: \`${hktDateStr}\`\n\n`;
 
-      if (readmeContent.startsWith('> 📅 **最後更新時間')) {
-        readmeContent = readmeContent.replace(/^> 📅 \*\*最後更新時間[^\n]*\n+/m, timestampLine);
+      if (readmeContent.startsWith('> **最後更新時間')) {
+        readmeContent = readmeContent.replace(/^> \*\*最後更新時間[^\n]*\n+/m, timestampLine);
       } else {
         readmeContent = timestampLine + readmeContent;
       }
@@ -737,9 +737,9 @@ async function run() {
       console.log('Updated README.md timestamp.');
     }
 
-    console.log('\n✅ Sync completed successfully!');
+    console.log('\nSync completed successfully!');
   } catch (error) {
-    console.error('\n❌ Sync failed:', error.message || error);
+    console.error('\nSync failed:', error.message || error);
     process.exit(1);
   }
 }
@@ -766,21 +766,21 @@ function generateReportMarkdown({
     ? '*（無更動網點 / No updated locations）*'
     : updatedList.map(u => {
         const changes = [];
-        if (u.old.name !== u.new.name) changes.push(`店名: \`${u.old.name}\` ➔ \`${u.new.name}\``);
-        if (u.old.address !== u.new.address) changes.push(`地址: \`${u.old.address}\` ➔ \`${u.new.address}\``);
-        if (u.old.district !== u.new.district) changes.push(`地區: \`${u.old.district}\` ➔ \`${u.new.district}\``);
+        if (u.old.name !== u.new.name) changes.push(`店名: \`${u.old.name}\` -> \`${u.new.name}\``);
+        if (u.old.address !== u.new.address) changes.push(`地址: \`${u.old.address}\` -> \`${u.new.address}\``);
+        if (u.old.district !== u.new.district) changes.push(`地區: \`${u.old.district}\` -> \`${u.new.district}\``);
         if (u.old.business_hours !== u.new.business_hours) changes.push(`營業時間變更`);
         return `- **\`${u.code}\`** ${u.new.name || u.old.name}\n  - ${changes.join('\n  - ')}`;
       }).join('\n');
 
-  return `# 📊 最新每日順豐網點同步報告 (Latest SF Location Sync Report)
+  return `# 最新每日順豐網點同步報告 (Latest SF Location Sync Report)
 
-> 🕒 **最後更新時間 (Last Updated)**: \`${hktDateStr}\`  
-> 🔗 **異動報告連結 (Report Link)**: [reports/latest-diff.md](https://github.com/wtw0212/sf-express-hk-locations/blob/main/reports/latest-diff.md)
+> **最後更新時間 (Last Updated)**: \`${hktDateStr}\`  
+> **異動報告連結 (Report Link)**: [reports/latest-diff.md](https://github.com/wtw0212/sf-express-hk-locations/blob/main/reports/latest-diff.md)
 
 ---
 
-### 📈 數據變動總覽 (Summary Overview)
+### 數據變動總覽 (Summary Overview)
 
 | 統計項目 (Metric) | 數量 (Count) |
 | :--- | :--- |
@@ -788,25 +788,25 @@ function generateReportMarkdown({
 | **順豐站 (Stores)** | \`${storesCount.toLocaleString()}\` |
 | **順豐智能櫃 (Lockers)** | \`${lockersCount.toLocaleString()}\` |
 | **合作點 (Partners)** | \`${partnersCount.toLocaleString()}\` |
-| ➕ **新增網點 (Added)** | \`${addedList.length}\` |
-| ➖ **下架網點 (Removed)** | \`${removedList.length}\` |
-| ✏️ **內容變異 (Updated)** | \`${updatedList.length}\` |
+| **新增網點 (Added)** | \`${addedList.length}\` |
+| **下架網點 (Removed)** | \`${removedList.length}\` |
+| **內容變異 (Updated)** | \`${updatedList.length}\` |
 
 ---
 
-### 🆕 新增網點 (Added Locations - ${addedList.length})
+### 新增網點 (Added Locations - ${addedList.length})
 
 ${addedLines}
 
 ---
 
-### ❌ 下架網點 (Removed Locations - ${removedList.length})
+### 下架網點 (Removed Locations - ${removedList.length})
 
 ${removedLines}
 
 ---
 
-### ✏️ 內容更動網點 (Updated Locations - ${updatedList.length})
+### 內容更動網點 (Updated Locations - ${updatedList.length})
 
 ${updatedLines}
 `;

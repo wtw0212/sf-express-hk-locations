@@ -55,6 +55,34 @@ function compareField(field, canonicalValue, pdfValue) {
   };
 }
 
+function compareOptionalField(field, canonicalValue, evidenceValue) {
+  if (evidenceValue == null || evidenceValue === '') return null;
+  return compareField(field, canonicalValue, evidenceValue);
+}
+
+function projectApiLocation(item) {
+  return {
+    district: item.city ?? null,
+    sub_district: item.district ?? null
+  };
+}
+
+function projectReviewedLocation(item) {
+  return {
+    district: item.district ?? null,
+    sub_district: item.sub_district ?? null
+  };
+}
+
+function projectPdfLocation(item) {
+  return {
+    // The partner PDF parser does not provide a reliable administrative
+    // district. Its city/district fields both represent a sub-district label.
+    district: null,
+    sub_district: item.city ?? item.district ?? null
+  };
+}
+
 function classifyEntry(comparison) {
   const values = Object.values(comparison);
   if (values.some(value => value.classification === 'semantic_conflict')) return 'semantic_conflict';
@@ -79,13 +107,21 @@ function getPdfEvidence(pdfRec, sourceRetrievedAt) {
   };
 }
 
-function compareCanonicalToPdf(canonicalItem, pdfRec, canonicalHours) {
+function compareCanonicalToPdf(canonicalItem, pdfRec, canonicalHours, canonicalSource) {
   const comparison = {};
   const name = compareField('name', canonicalItem.name, pdfRec.name);
   const address = compareField('address', canonicalItem.address, pdfRec.address);
   const businessHours = compareField('business_hours', canonicalHours, pdfRec.serviceTime);
-  const district = compareField('district', canonicalItem.district, pdfRec.district);
-  const subDistrict = compareField('sub_district', canonicalItem.district, pdfRec.city || pdfRec.district);
+  const canonicalLocation = canonicalSource === 'reviewed'
+    ? projectReviewedLocation(canonicalItem)
+    : projectApiLocation(canonicalItem);
+  const pdfLocation = projectPdfLocation(pdfRec);
+  const district = compareOptionalField('district', canonicalLocation.district, pdfLocation.district);
+  const subDistrict = compareOptionalField(
+    'sub_district',
+    canonicalLocation.sub_district,
+    pdfLocation.sub_district
+  );
   if (name) comparison.name = name;
   if (address) comparison.address = address;
   if (businessHours) comparison.business_hours = businessHours;
@@ -125,7 +161,7 @@ export function auditPartnerPdfRecords({
     const evidence = getPdfEvidence(pdfRec, sourceRetrievedAt);
 
     if (apiItem) {
-      const comparison = compareCanonicalToPdf(apiItem, pdfRec, apiItem.serviceTime);
+      const comparison = compareCanonicalToPdf(apiItem, pdfRec, apiItem.serviceTime, 'api');
       if (Object.keys(comparison).length > 0) {
         apiPdfConflicts.push({
           code,
@@ -145,7 +181,12 @@ export function auditPartnerPdfRecords({
     }
 
     if (reviewedItem) {
-      const comparison = compareCanonicalToPdf(reviewedItem, pdfRec, reviewedItem.business_hours || reviewedItem.serviceTime);
+      const comparison = compareCanonicalToPdf(
+        reviewedItem,
+        pdfRec,
+        reviewedItem.business_hours || reviewedItem.serviceTime,
+        'reviewed'
+      );
       if (Object.keys(comparison).length > 0) {
         reviewedPdfDrift.push({
           code,
@@ -169,8 +210,8 @@ export function auditPartnerPdfRecords({
         code,
         name: pdfRec.name || '順豐合作點',
         address: pdfRec.address || null,
-        district: pdfRec.district || null,
-        sub_district: pdfRec.city || pdfRec.district || null,
+        district: projectPdfLocation(pdfRec).district,
+        sub_district: projectPdfLocation(pdfRec).sub_district,
         business_hours: pdfRec.serviceTime || null,
         source_url: evidence.source_url,
         evidence
@@ -182,15 +223,17 @@ export function auditPartnerPdfRecords({
   for (const reviewedItem of reviewedPdfList) {
     const code = reviewedItem.code || reviewedItem.serviceCode;
     if (!livePdfCodes.has(code)) {
+      const registryEvidence = reviewedItem._registry_evidence || {};
       missingReviewedRecords.push({
         code,
         name: reviewedItem.name || null,
         address: reviewedItem.address || null,
         evidence: {
-          source_key: reviewedItem._source_key || null,
-          source_url: reviewedItem._source_url || null,
-          document_retrieved_at: reviewedItem._reviewed_at || null,
-          document_sha256: null,
+          source_key: registryEvidence.source_key || reviewedItem._source_key || null,
+          source_url: registryEvidence.reviewed_source_url || reviewedItem._source_url || null,
+          document_retrieved_at:
+            registryEvidence.reviewed_source_retrieved_at || reviewedItem._reviewed_at || null,
+          document_sha256: registryEvidence.reviewed_document_sha256 || null,
           parser_location: null
         }
       });
@@ -216,11 +259,24 @@ export function auditPartnerPdfRecords({
   }));
 
   const classifiedDifferences = [...apiPdfConflicts, ...reviewedPdfDrift];
-  const classificationCounts = Object.fromEntries(
+  const entryClassificationCounts = Object.fromEntries(
     ['semantic_conflict', 'name_specificity_difference', 'formatting_difference', 'equivalent_difference'].map(classification => [
       classification,
       classifiedDifferences.filter(item => item.classification === classification).length
     ])
+  );
+  const fieldClassificationCounts = Object.fromEntries(
+    ['semantic_conflict', 'name_specificity_difference', 'formatting_difference', 'equivalent_difference'].map(classification => [
+      classification,
+      classifiedDifferences.reduce(
+        (count, item) => count + Object.values(item.comparison)
+          .filter(field => field.classification === classification).length,
+        0
+      )
+    ])
+  );
+  const apiSemanticConflicts = apiPdfConflicts.filter(
+    item => item.classification === 'semantic_conflict'
   );
 
   return {
@@ -228,13 +284,11 @@ export function auditPartnerPdfRecords({
     generated_at: generatedAt,
     summary: {
       parsed_pdf_record_count: parsedPdfRecords.length,
-      api_pdf_conflict_count: apiPdfConflicts.length,
+      api_pdf_conflict_count: apiSemanticConflicts.length,
       api_pdf_difference_count: apiPdfConflicts.length,
       reviewed_pdf_drift_count: reviewedPdfDrift.length,
-      semantic_conflict_count: classificationCounts.semantic_conflict,
-      name_specificity_difference_count: classificationCounts.name_specificity_difference,
-      formatting_difference_count: classificationCounts.formatting_difference,
-      equivalent_difference_count: classificationCounts.equivalent_difference,
+      entry_classification_counts: entryClassificationCounts,
+      field_classification_counts: fieldClassificationCounts,
       new_pdf_only_candidate_count: newPdfOnlyCandidates.length,
       missing_reviewed_record_count: missingReviewedRecords.length,
       quarantined_record_count: formattedQuarantine.length

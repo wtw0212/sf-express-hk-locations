@@ -64,10 +64,10 @@ test('reviewed registry carries immutable document evidence', async () => {
   const aspRecord = registry.records.find(record => record.code === '852LA3007');
 
   assert.equal(okRecord._registry_evidence.reviewed_source_url, 'https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf');
-  assert.equal(okRecord._registry_evidence.reviewed_document_sha256, 'a83821a509d042762210c85544959a0e2936afbd3406c8f7d66e79aade50f520');
+  assert.equal(okRecord._registry_evidence.reviewed_document_sha256, '8c9fd67e2458bcca149b7556c71a2d0908b5fc9e0c930ec01bbcc5e5baa7695d');
   assert.equal(aspRecord._registry_evidence.reviewed_source_url, 'https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf');
-  assert.equal(aspRecord._registry_evidence.reviewed_document_sha256, '9b13d21f52e855eecb23de5f6a024be0cfaf0f897850f32ab0ff2ce6e4a3854a');
-  assert.equal(aspRecord._registry_evidence.reviewed_source_retrieved_at, '2026-07-27 16:43 (HKT UTC+8)');
+  assert.equal(aspRecord._registry_evidence.reviewed_document_sha256, 'c0f4ffc4d15d126151195450d0d91fc89dbc64f0281c281eb07f92e51a979432');
+  assert.equal(aspRecord._registry_evidence.reviewed_source_retrieved_at, '2026-07-27 15:49 (HKT UTC+8)');
 });
 
 test('PDF audit distinguishes formatting, equivalent hours, and semantic conflicts with evidence', () => {
@@ -141,6 +141,36 @@ test('canonical source and count anomalies remain publication gates', () => {
   assert.ok(result.errors.some(item => item.includes('Record count')));
 });
 
+test('SSR failure blocks publication only when it would remove a previously published SSR record', () => {
+  const previousRecords = [
+    { code: '852API1', source: 'api_tc', type: 'store' },
+    { code: 'H852SSR1', source: 'ssr', type: 'locker' }
+  ];
+  const common = {
+    tcResults: [{ ok: true, records: [{ serviceCode: '852API1' }] }],
+    enResults: [{ ok: true, records: [{ serviceCode: '852API1' }] }],
+    ssrResult: { ok: false, records: [], errors: ['temporary SSR outage'] },
+    previousRecords,
+    config: { minCount: 1 }
+  };
+
+  const destructive = checkCompletenessGates({
+    ...common,
+    records: [{ code: '852API1', source: 'api_tc', type: 'store' }]
+  });
+  assert.equal(destructive.pass, false);
+  assert.ok(destructive.errors.some(error =>
+    error.includes('SSR source failure would remove previously published SSR-only records: H852SSR1')
+  ));
+
+  const preserved = checkCompletenessGates({
+    ...common,
+    records: previousRecords
+  });
+  assert.equal(preserved.errors.some(error => error.includes('SSR source failure would remove')), false);
+  assert.ok(preserved.warnings.some(warning => warning.includes('[SSR Source] temporary SSR outage')));
+});
+
 test('sync rejects an explicit missing reviewed registry instead of falling back', async () => {
   const root = await mkdtemp(join(tmpdir(), 'sf-registry-missing-'));
   const baselineDir = join(root, 'baseline');
@@ -160,7 +190,7 @@ test('sync rejects an explicit missing reviewed registry instead of falling back
   await rm(root, { recursive: true, force: true });
 });
 
-test('audit compares district and sub-district and summarizes classifications', () => {
+test('audit projects API district fields and skips unavailable PDF administrative district', () => {
   const audit = auditPartnerPdfRecords({
     tcMap: new Map([['852DIST1', {
       serviceCode: '852DIST1',
@@ -174,19 +204,55 @@ test('audit compares district and sub-district and summarizes classifications', 
       serviceCode: '852DIST1',
       name: '測試店',
       address: '香港地址',
-      district: '中西區',
-      city: '中環',
+      district: '中環',
+      city: null,
       serviceTime: '09:00-18:00'
     }]
   });
 
   const conflict = audit.api_pdf_conflicts[0];
-  assert.equal(conflict.comparison.district.classification, 'semantic_conflict');
+  assert.equal(conflict.comparison.district, undefined);
   assert.equal(conflict.comparison.sub_district.classification, 'semantic_conflict');
+  assert.deepEqual(conflict.differing_fields, ['sub_district']);
   assert.equal(audit.summary.api_pdf_difference_count, 1);
-  assert.equal(audit.summary.semantic_conflict_count, 1);
-  assert.equal(audit.summary.formatting_difference_count, 0);
-  assert.equal(audit.summary.equivalent_difference_count, 0);
+  assert.equal(audit.summary.api_pdf_conflict_count, 1);
+});
+
+test('audit reports entry and field classifications independently', () => {
+  const audit = auditPartnerPdfRecords({
+    tcMap: new Map([['852MIX1', {
+      serviceCode: '852MIX1',
+      name: '置富南區廣場OK便利店',
+      address: '香港 灣仔道 1 號',
+      city: '灣仔區',
+      district: '灣仔',
+      serviceTime: '09:00-18:00'
+    }]]),
+    parsedPdfRecords: [{
+      serviceCode: '852MIX1',
+      name: 'OK便利店 (灣仔)',
+      address: '香港灣仔道1號',
+      district: '灣仔',
+      city: '灣仔',
+      serviceTime: '10:00-19:00'
+    }]
+  });
+
+  assert.equal(audit.api_pdf_conflicts[0].classification, 'semantic_conflict');
+  assert.equal(audit.summary.api_pdf_difference_count, 1);
+  assert.equal(audit.summary.api_pdf_conflict_count, 1);
+  assert.deepEqual(audit.summary.entry_classification_counts, {
+    semantic_conflict: 1,
+    name_specificity_difference: 0,
+    formatting_difference: 0,
+    equivalent_difference: 0
+  });
+  assert.deepEqual(audit.summary.field_classification_counts, {
+    semantic_conflict: 1,
+    name_specificity_difference: 1,
+    formatting_difference: 1,
+    equivalent_difference: 0
+  });
 });
 
 test('audit classifies shared retailer names with differing specificity separately', () => {
@@ -210,7 +276,29 @@ test('audit classifies shared retailer names with differing specificity separate
 
   assert.equal(audit.api_pdf_conflicts[0].comparison.name.classification, 'name_specificity_difference');
   assert.equal(audit.api_pdf_conflicts[0].classification, 'name_specificity_difference');
-  assert.equal(audit.summary.name_specificity_difference_count, 1);
+  assert.equal(audit.summary.entry_classification_counts.name_specificity_difference, 1);
+  assert.equal(audit.summary.field_classification_counts.name_specificity_difference, 1);
+});
+
+test('committed reviewed evidence matches the immutable raw snapshot and artifact chronology', async () => {
+  const registry = JSON.parse(await readFile(reviewedPath, 'utf8'));
+  const rawSnapshot = JSON.parse(await readFile(resolve('raw/latest-fetch.json'), 'utf8'));
+  const metadata = JSON.parse(await readFile(resolve('data/metadata.json'), 'utf8'));
+  const documentsByUrl = new Map(
+    rawSnapshot.sources.partner_pdf.documents.map(document => [document.url, document])
+  );
+
+  for (const record of registry) {
+    const document = documentsByUrl.get(record.reviewed_source_url);
+    assert.ok(document, `${record.code} reviewed source must exist in raw snapshot`);
+    assert.equal(record.reviewed_document_sha256, document.document_sha256);
+    assert.equal(record.reviewed_source_retrieved_at, document.document_retrieved_at);
+    assert.ok(
+      Date.parse(metadata.generated_at.replace(' (HKT UTC+8)', '+08:00')) >=
+        Date.parse(record.reviewed_source_retrieved_at.replace(' (HKT UTC+8)', '+08:00')),
+      `${record.code} review evidence cannot be newer than generated artifacts`
+    );
+  }
 });
 
 test('PDF parser quality detail uses the shared ten-percent threshold', () => {

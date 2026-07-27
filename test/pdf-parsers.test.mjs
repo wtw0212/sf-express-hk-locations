@@ -241,6 +241,11 @@ test('required invariant holds for all parsed PDF records', async () => {
 
   for (const record of result.validRecords) {
     assert.ok(record.name && record.name !== '順豐合作點', `Record ${record.serviceCode} must have valid name`);
+    assert.doesNotMatch(
+      record.name,
+      /^(?:公斤或以下|重量|體積|快件限制)/u,
+      `Record ${record.serviceCode} must not expose parcel-limit text as its name`
+    );
 
     const hoursValidation = validateBusinessHours(record.serviceTime);
     assert.ok(
@@ -254,4 +259,24 @@ test('required invariant holds for all parsed PDF records', async () => {
       assert.deepEqual(foreignCodes, [], `Record ${record.serviceCode} must not contain foreign code in ${value}`);
     }
   }
+});
+
+test('ASP parser removes a complete parcel-limit prefix before extracting the shop name', () => {
+  const result = parseAspPartnerPdfText({
+    sourceUrl: 'https://example.test/ASP_NT_TC.pdf',
+    text: '最大體積: 60 x 40 x 30 cm 重量限制: 5公斤或以下 藍地進達餐廳852A1001香港藍地大街1號^852A1001^星期一至日:10:00-20:00'
+  });
+
+  assert.equal(result.validRecords.length, 1);
+  assert.equal(result.validRecords[0].name, '藍地進達餐廳');
+});
+
+test('ASP parser quarantines a parcel-limit prefix that cannot be safely cleaned', () => {
+  const result = parseAspPartnerPdfText({
+    sourceUrl: 'https://example.test/ASP_NT_TC.pdf',
+    text: '重量資料不詳藍地進達餐廳852A1002香港藍地大街2號^852A1002^星期一至日:10:00-20:00'
+  });
+
+  assert.equal(result.validRecords.length, 0);
+  assert.ok(result.quarantinedRecords[0].reasonCodes.includes('PARCEL_LIMIT_PREFIX_LEAK'));
 });

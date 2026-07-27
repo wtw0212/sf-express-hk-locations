@@ -137,7 +137,20 @@ test('14 & 15. Reviewed/PDF differences create drift, missing reviewed records d
 
   assert.equal(audit.summary.reviewed_pdf_drift_count, 1);
   assert.equal(audit.summary.missing_reviewed_record_count, 4);
-  assert.ok(audit.missing_reviewed_records.some(item => item.code === '852GC2003'));
+  const missingReviewed = audit.missing_reviewed_records.find(item => item.code === '852GC2003');
+  assert.ok(missingReviewed);
+  assert.equal(
+    missingReviewed.evidence.source_url,
+    'https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf'
+  );
+  assert.equal(
+    missingReviewed.evidence.document_sha256,
+    '8c9fd67e2458bcca149b7556c71a2d0908b5fc9e0c930ec01bbcc5e5baa7695d'
+  );
+  assert.equal(
+    missingReviewed.evidence.document_retrieved_at,
+    '2026-07-27 15:49 (HKT UTC+8)'
+  );
 
   const { records } = normalizeRecords({ tcMap: new Map(), reviewedPdfRegistry });
   assert.equal(records.length, 5);

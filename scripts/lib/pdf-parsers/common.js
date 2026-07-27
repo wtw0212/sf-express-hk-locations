@@ -40,18 +40,42 @@ export function looksLikeRecordPrefix(line = '') {
 }
 
 /**
+ * Remove parcel-limit labels that pdf-parse can concatenate with the first
+ * location name on a row. The patterns deliberately require numeric limit
+ * values; ambiguous leading restriction text is left for validation to
+ * quarantine instead of being guessed away.
+ *
+ * @param {string} value
+ * @returns {string}
+ */
+export function stripParcelLimitPrefix(value) {
+  return String(value || '')
+    .replace(
+      /(?:最大)?體積\s*[:：]?\s*[\d\s.xX×*]+(?:cm|厘米)?/gi,
+      ' '
+    )
+    .replace(
+      /(?:重量限制|重量)\s*[:：]?\s*\d+(?:\.\d+)?\s*(?:公斤|kg)?(?:或以下)?/gi,
+      ' '
+    )
+    .replace(/^公斤或以下\s*/u, '')
+    .replace(/^[\s，,;；:：\-]+/u, '')
+    .trim();
+}
+
+/**
  * Extract subdistrict and shop name from a raw prefix string.
  *
  * @param {string} rawPrefix
  * @returns {{ subdistrict: string, name: string }}
  */
 export function extractSubdistrictAndShopName(rawPrefix) {
-  let text = (rawPrefix || '')
-    .replace(/(?:體積|重量|最大體積|快件限制|重量限制):\s*[\d\w\s.\-xX]*\s*/gi, '')
+  let text = String(rawPrefix || '')
     .replace(/^服務時間[^\n]*\)\s*/, '')
     .replace(/^快件限制\s*/, '')
     .replace(/[\^&]/g, '')
     .trim();
+  text = stripParcelLimitPrefix(text);
 
   let matchedSub = '';
   for (const sub of SUBDISTRICT_PREFIXES) {
@@ -219,6 +243,9 @@ export function validateParsedPartnerRecord(record, rawRow, codeEvidence) {
   };
 
   if (!fields.name) reasonCodes.push('EMPTY_NAME');
+  if (/^(?:公斤或以下|重量(?:限制)?|(?:最大)?體積|快件限制)/u.test(fields.name)) {
+    reasonCodes.push('PARCEL_LIMIT_PREFIX_LEAK');
+  }
 
   if (!fields.address) reasonCodes.push('EMPTY_ADDRESS');
   if (fields.name && fields.address && fields.name === fields.address) {

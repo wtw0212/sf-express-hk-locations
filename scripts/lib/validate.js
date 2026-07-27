@@ -2,7 +2,8 @@
 import {
   VALID_DISTRICTS, DISTRICT_TO_REGION, VALID_TYPES, VALID_SOURCES,
   HK_BOUNDING_BOX, MIN_LOCATION_COUNT,
-  CATEGORY_ANOMALY_CONFIG, PDF_PARSE_QUALITY_CONFIG, EN_MATCH_RATE_THRESHOLD
+  CATEGORY_ANOMALY_CONFIG, PDF_PARSE_QUALITY_CONFIG, EN_MATCH_RATE_THRESHOLD,
+  SOURCES
 } from './constants.js';
 
 /**
@@ -380,6 +381,23 @@ export function checkCompletenessGates({
   }
   if (ssrResult.errors && ssrResult.errors.length > 0) {
     ssrResult.errors.forEach(e => warnings.push(`[SSR Source] ${e}`));
+
+    const previousSsrCodes = new Set(
+      (previousRecords || [])
+        .filter(record => record.source === SOURCES.SSR)
+        .map(record => record.code)
+        .filter(Boolean)
+    );
+    const finalCodes = new Set(records.map(record => record.code));
+    const removedSsrCodes = [...previousSsrCodes]
+      .filter(code => !finalCodes.has(code))
+      .sort();
+
+    if (removedSsrCodes.length > 0) {
+      errors.push(
+        `SSR source failure would remove previously published SSR-only records: ${removedSsrCodes.join(', ')}`
+      );
+    }
   }
 
   // ─── 2. TC API Gate ─────────────────────────────────────────────────────

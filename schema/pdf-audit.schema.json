@@ -33,6 +33,22 @@
         },
         "additionalProperties": false
       }
+    },
+    "classificationCounts": {
+      "type": "object",
+      "required": [
+        "semantic_conflict",
+        "name_specificity_difference",
+        "formatting_difference",
+        "equivalent_difference"
+      ],
+      "properties": {
+        "semantic_conflict": { "type": "integer", "minimum": 0 },
+        "name_specificity_difference": { "type": "integer", "minimum": 0 },
+        "formatting_difference": { "type": "integer", "minimum": 0 },
+        "equivalent_difference": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
     }
   },
   "type": "object",
@@ -62,10 +78,8 @@
         "api_pdf_conflict_count",
         "api_pdf_difference_count",
         "reviewed_pdf_drift_count",
-        "semantic_conflict_count",
-        "name_specificity_difference_count",
-        "formatting_difference_count",
-        "equivalent_difference_count",
+        "entry_classification_counts",
+        "field_classification_counts",
         "new_pdf_only_candidate_count",
         "missing_reviewed_record_count",
         "quarantined_record_count"
@@ -75,10 +89,8 @@
         "api_pdf_conflict_count": { "type": "integer", "minimum": 0 },
         "api_pdf_difference_count": { "type": "integer", "minimum": 0 },
         "reviewed_pdf_drift_count": { "type": "integer", "minimum": 0 },
-        "semantic_conflict_count": { "type": "integer", "minimum": 0 },
-        "name_specificity_difference_count": { "type": "integer", "minimum": 0 },
-        "formatting_difference_count": { "type": "integer", "minimum": 0 },
-        "equivalent_difference_count": { "type": "integer", "minimum": 0 },
+        "entry_classification_counts": { "$ref": "#/definitions/classificationCounts" },
+        "field_classification_counts": { "$ref": "#/definitions/classificationCounts" },
         "new_pdf_only_candidate_count": { "type": "integer", "minimum": 0 },
         "missing_reviewed_record_count": { "type": "integer", "minimum": 0 },
         "quarantined_record_count": { "type": "integer", "minimum": 0 }

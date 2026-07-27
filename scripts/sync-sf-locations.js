@@ -153,38 +153,81 @@ function resolveRegion(district) {
 }
 
 // ─── Data sources ───────────────────────────────────────────────────────
-async function fetchFromOfficialApiHk() {
-  console.log('Fetching locations from SF Express official API (lang=hk)...');
-  const url = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=hk&region=hk';
+async function fetchDistrictTreeAreas() {
+  const versionUrl = "https://ucmp-static.sf-express.com/proxy/ccspBase/cxDistrictData/queryDistrictActiveVersionData?area=hkmotw";
+  const vRes = await fetch(versionUrl).then(r => r.json());
+  const fileUrl = vRes?.obj?.fileTcUrl;
+  if (!fileUrl) throw new Error("SF district version response did not include fileTcUrl");
 
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'Referer': 'https://hk.sf-express.com/hk/tc/store',
-      'Origin': 'https://hk.sf-express.com'
-    },
-    body: JSON.stringify({})
-  });
+  const regionData = await fetch(fileUrl).then(r => r.json());
+  const hongKong = regionData.find((region) => region?.f === "香港");
+  const city = hongKong?.city?.find((item) => item?.f === "香港");
+  const counties = city?.county || [];
 
-  if (!response.ok) {
-    throw new Error(`API error: ${response.status} ${response.statusText}`);
+  const areas = [];
+  for (const county of counties) {
+    for (const town of (county.town || [])) {
+      areas.push({
+        sourceRegion: (county.f || '').trim(),
+        district: (town.f || '').trim()
+      });
+    }
+  }
+  return areas;
+}
+
+async function fetchFromOfficialApiHk(areas) {
+  console.log(`Fetching locations from SF Express official API by sub-districts (${areas.length} areas, lang=tc)...`);
+  const url = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=tc&region=hk&translate=tc';
+
+  const hkMap = new Map();
+  const chunkSize = 10;
+  for (let i = 0; i < areas.length; i += chunkSize) {
+    const chunk = areas.slice(i, i + chunkSize);
+    await Promise.all(chunk.map(async (area) => {
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'Referer': 'https://hk.sf-express.com/hk/tc/store',
+            'Origin': 'https://hk.sf-express.com'
+          },
+          body: JSON.stringify({
+            province: '香港',
+            city: area.sourceRegion,
+            district: area.district,
+            serviceType: '',
+            locationCode: '852',
+            keyWord: '',
+            bizTypeCodes: ''
+          })
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success && Array.isArray(data.result)) {
+            data.result.forEach(item => {
+              const code = item.serviceCode || item.code;
+              if (code) hkMap.set(code, item);
+            });
+          }
+        }
+      } catch (err) {}
+    }));
   }
 
-  const data = await response.json();
-  if (!data.success || !Array.isArray(data.result)) {
-    throw new Error(`API returned failure: ${data.message || 'Unknown error'}`);
-  }
-
-  return data.result;
+  console.log(`Fetched ${hkMap.size} unique HK locations via sub-district queries.`);
+  return Array.from(hkMap.values());
 }
 
 async function fetchFromOfficialApiEn() {
-  console.log('Fetching locations from SF Express official API (lang=en)...');
-  const url = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=en&region=hk';
+  console.log('Fetching English locations from SF Express official API (lang=en)...');
+  const url = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=en&region=hk&translate=en';
 
+  const enMap = new Map();
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -195,23 +238,24 @@ async function fetchFromOfficialApiEn() {
         'Referer': 'https://hk.sf-express.com/hk/en/store',
         'Origin': 'https://hk.sf-express.com'
       },
-      body: JSON.stringify({})
+      body: JSON.stringify({ locationCode: '852' })
     });
 
-    if (!response.ok) return new Map();
-    const data = await response.json();
-    if (!data.success || !Array.isArray(data.result)) return new Map();
-
-    const enMap = new Map();
-    data.result.forEach(item => {
-      const code = item.serviceCode || item.code;
-      if (code) enMap.set(code, item);
-    });
-    return enMap;
+    if (response.ok) {
+      const data = await response.json();
+      if (data.success && Array.isArray(data.result)) {
+        data.result.forEach(item => {
+          const code = item.serviceCode || item.code;
+          if (code) enMap.set(code, item);
+        });
+      }
+    }
   } catch (e) {
     console.warn('Warning: Could not fetch EN API:', e.message);
-    return new Map();
   }
+
+  console.log(`Fetched ${enMap.size} EN locations via API.`);
+  return enMap;
 }
 
 async function fetchFromSsrPages() {
@@ -466,7 +510,8 @@ async function run() {
   console.log(`Current HKT Time: ${hktDateStr}`);
 
   try {
-    const rawApiList = await fetchFromOfficialApiHk();
+    const areas = await fetchDistrictTreeAreas();
+    const rawApiList = await fetchFromOfficialApiHk(areas);
     const rawApiEnMap = await fetchFromOfficialApiEn();
     const rawSsrList = await fetchFromSsrPages();
     const { partners: rawPartnerList, pdfSuccessCount, pdfFailCount, pdfTotal } = await fetchFromPartnerPdfs();

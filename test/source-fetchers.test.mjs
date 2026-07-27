@@ -2,8 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   extractLineSegments,
-  validateParsedPartnerRecord
+  validateParsedPartnerRecord,
+  validateServiceNetworkApiPayload
 } from '../scripts/lib/source-fetchers.js';
+import { normalizeRecords } from '../scripts/lib/normalize.js';
 
 test('source-fetchers: extractLineSegments splits multi-code lines deterministically', () => {
   const line = '香港柴灣 852PC3002 興華邨和興樓210號鋪^09:00-20:00 852PC3004 興華邨安興樓101號鋪^10:00-20:00';
@@ -77,4 +79,58 @@ test('source-fetchers: validateParsedPartnerRecord quarantines exact regression 
   const res5 = validateParsedPartnerRecord(corrupt5, 'raw');
   assert.equal(res5.valid, false);
   assert.ok(res5.reasonCodes.includes('PLACEHOLDER_ADDRESS'));
+});
+
+test('source-fetchers: validateServiceNetworkApiPayload validates response envelope & contracts', () => {
+  const validPayload = {
+    success: true,
+    result: [
+      { serviceCode: '852A', name: 'Store A', address: 'Address A' }
+    ]
+  };
+  assert.doesNotThrow(() => validateServiceNetworkApiPayload(validPayload));
+
+  assert.throws(
+    () => validateServiceNetworkApiPayload({ success: false, result: [] }),
+    /Unexpected SF service-network API response envelope/
+  );
+
+  assert.throws(
+    () => validateServiceNetworkApiPayload({ success: true, result: [{ serviceCode: '852A' }] }),
+    /SF service-network API contract changed/
+  );
+});
+
+test('source-fetchers: precedence policy ensures PDF cannot overwrite API-backed fields', () => {
+  const tcRecord = {
+    serviceCode: '852A',
+    name: 'API Name',
+    address: 'API Address',
+    district: '灣仔區',
+    serviceTime: '09:00-20:00',
+    latitude: '22.28',
+    longitude: '114.17'
+  };
+  const pdfRecord = {
+    serviceCode: '852A',
+    name: 'PDF Name',
+    address: 'PDF Address',
+    serviceTime: '10:00-18:00',
+    isPartner: true
+  };
+
+  const { records } = normalizeRecords(
+    new Map([['852A', tcRecord]]),
+    new Map(),
+    [],
+    [pdfRecord],
+    '2026-07-27 14:00'
+  );
+
+  const finalRecord = records.find(r => r.code === '852A');
+  assert.ok(finalRecord);
+  assert.equal(finalRecord.name, 'API Name');
+  assert.equal(finalRecord.address, 'API Address');
+  assert.equal(finalRecord.business_hours, '09:00-20:00');
+  assert.equal(finalRecord.source, 'api_tc');
 });

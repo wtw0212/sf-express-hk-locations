@@ -83,6 +83,34 @@ export async function fetchDistrictTree() {
 }
 
 /**
+ * Validate SF service-network API response payload envelope and field structure.
+ *
+ * @param {object} payload
+ * @throws {Error} If API payload envelope or record contracts are invalid
+ */
+export function validateServiceNetworkApiPayload(payload) {
+  if (!payload || payload.success !== true || !Array.isArray(payload.result)) {
+    throw new Error('Unexpected SF service-network API response envelope');
+  }
+
+  for (const record of payload.result) {
+    if (typeof record !== 'object' || record === null) {
+      throw new Error('SF service-network API returned a non-object record');
+    }
+
+    if (!record.serviceCode || typeof record.serviceCode !== 'string') {
+      throw new Error('SF service-network API record is missing serviceCode');
+    }
+
+    if (!('address' in record) || !('name' in record)) {
+      throw new Error(
+        `SF service-network API contract changed for ${record.serviceCode}`
+      );
+    }
+  }
+}
+
+/**
  * Fetch all TC API records by querying each sub-district area.
  * Returns per-area results with success/failure tracking.
  *
@@ -107,16 +135,30 @@ export async function fetchTcApi(tcAreas) {
       })
     });
 
-    if (result.ok && result.data?.success && Array.isArray(result.data.result)) {
-      return {
-        area,
-        language: 'tc',
-        ok: true,
-        status: result.status,
-        attempts: result.attempts,
-        error: null,
-        records: result.data.result
-      };
+    if (result.ok && result.data) {
+      try {
+        validateServiceNetworkApiPayload(result.data);
+        return {
+          area,
+          language: 'tc',
+          ok: true,
+          status: result.status,
+          attempts: result.attempts,
+          error: null,
+          records: result.data.result
+        };
+      } catch (err) {
+        console.warn(`  TC API contract check failed: ${area.sourceRegion}/${area.district} — ${err.message}`);
+        return {
+          area,
+          language: 'tc',
+          ok: false,
+          status: result.status,
+          attempts: result.attempts,
+          error: err.message,
+          records: []
+        };
+      }
     }
 
     const error = result.error || 'API returned success=false or no result array';
@@ -168,16 +210,30 @@ export async function fetchEnApi(enAreas) {
       })
     });
 
-    if (result.ok && result.data?.success && Array.isArray(result.data.result)) {
-      return {
-        area,
-        language: 'en',
-        ok: true,
-        status: result.status,
-        attempts: result.attempts,
-        error: null,
-        records: result.data.result
-      };
+    if (result.ok && result.data) {
+      try {
+        validateServiceNetworkApiPayload(result.data);
+        return {
+          area,
+          language: 'en',
+          ok: true,
+          status: result.status,
+          attempts: result.attempts,
+          error: null,
+          records: result.data.result
+        };
+      } catch (err) {
+        console.warn(`  EN API contract check failed: ${area.sourceRegion}/${area.district} — ${err.message}`);
+        return {
+          area,
+          language: 'en',
+          ok: false,
+          status: result.status,
+          attempts: result.attempts,
+          error: err.message,
+          records: []
+        };
+      }
     }
 
     const error = result.error || 'API returned success=false or no result array';

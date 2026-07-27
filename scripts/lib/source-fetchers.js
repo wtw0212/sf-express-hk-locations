@@ -433,7 +433,7 @@ export function parsePartnerPdfDocuments(documents = []) {
   let pdfFailCount = 0;
 
   for (const doc of documents) {
-    const { source_key: sourceKey, url, http_ok: httpOk, attempts, text, error: docErr } = doc;
+    const { source_key: sourceKey, url, http_ok: httpOk, parse_ok: parseOk, attempts, text, error: docErr, parse_error: parseErr } = doc;
     if (!httpOk) {
       errors.push(`PDF fetch failed for ${url}: ${docErr || 'HTTP Error'}`);
       pdfFailCount++;
@@ -457,6 +457,29 @@ export function parsePartnerPdfDocuments(documents = []) {
     }
 
     httpSuccessCount++;
+
+    if (parseOk === false || text === null) {
+      pdfFailCount++;
+      errors.push(`PDF parse failed for ${url}: ${parseErr || docErr || 'Unknown parse error'}`);
+      pdfDetails.push({
+        source_key: sourceKey,
+        url,
+        status: 'parse_failure',
+        http_ok: true,
+        parse_ok: false,
+        semantic_ok: false,
+        attempts: attempts || 1,
+        raw_code_count: 0,
+        candidate_count: 0,
+        valid_record_count: 0,
+        quarantined_record_count: 0,
+        duplicate_code_count: 0,
+        duplicate_conflict_count: 0,
+        quarantine_ratio: 0
+      });
+      continue;
+    }
+
     const isOkStore = (url || '').includes('OK_');
 
     try {
@@ -635,6 +658,7 @@ export async function fetchPartnerPdfs() {
         source_key: sourceKey,
         url,
         http_ok: true,
+        parse_ok: true,
         attempts: pdfRes.attempts,
         text: data.text || ''
       });
@@ -643,9 +667,10 @@ export async function fetchPartnerPdfs() {
         source_key: sourceKey,
         url,
         http_ok: true,
+        parse_ok: false,
         attempts: pdfRes.attempts,
-        error: e.message,
-        text: ''
+        parse_error: e.message,
+        text: null
       });
     }
   }

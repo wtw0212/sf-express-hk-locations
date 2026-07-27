@@ -9,6 +9,36 @@ export const SUBDISTRICT_PREFIXES = [
   '荃灣', '葵涌', '青衣', '屯門', '元朗', '天水圍', '沙田', '大圍', '火炭', '馬鞍山', '大埔', '粉嶺', '上水', '將軍澳', '西貢', '東涌', '深井', '長洲', '坪洲', '南丫島', '梅窩', '愉景灣', '大嶼山', '藍地'
 ];
 
+const BUSINESS_HOURS_LINE = /(?:星期|周[一二三四五六日]|公眾假期|節假日|24小時|\b\d{1,2}:\d{2}\s*[-至]\s*\d{1,2}:\d{2}\b|休息|OFF)/i;
+
+/**
+ * Check if a text line resembles business hours.
+ *
+ * @param {string} [line='']
+ * @returns {boolean}
+ */
+export function looksLikeBusinessHours(line = '') {
+  return BUSINESS_HOURS_LINE.test(String(line).trim());
+}
+
+/**
+ * Check if a line resembles a shop name or location prefix.
+ *
+ * @param {string} [line='']
+ * @returns {boolean}
+ */
+export function looksLikeRecordPrefix(line = '') {
+  const value = String(line).trim();
+  if (!value || findServiceCodes(value).length > 0) return false;
+  if (looksLikeBusinessHours(value)) return false;
+  if (isPdfHeaderLine(value)) return false;
+
+  return (
+    SUBDISTRICT_PREFIXES.some(prefix => value.startsWith(prefix)) ||
+    /(?:自提點|自取點|便利店|合作點|士多|集運|商店|公司|店)$/.test(value)
+  );
+}
+
 /**
  * Extract subdistrict and shop name from a raw prefix string.
  *
@@ -79,6 +109,32 @@ export function cleanBusinessHours(rawHours) {
 }
 
 /**
+ * Validate semantic correctness of business hours.
+ *
+ * @param {string} value
+ * @returns {{ valid: boolean, reasonCodes: string[] }}
+ */
+export function validateBusinessHours(value) {
+  const text = String(value ?? '').trim();
+  if (!text) return { valid: true, reasonCodes: [] };
+
+  const reasons = [];
+  const hasHoursSignal = looksLikeBusinessHours(text);
+  const suspiciousLeakText = SUBDISTRICT_PREFIXES.some(sub => text.includes(sub)) &&
+    /(?:自提點|自取點|便利店|合作點|士多|集運|有限公司|公司|店)/.test(text) &&
+    !hasHoursSignal;
+
+  if (suspiciousLeakText) {
+    reasons.push('NEXT_RECORD_PREFIX_LEAK');
+  }
+
+  return {
+    valid: reasons.length === 0,
+    reasonCodes: reasons
+  };
+}
+
+/**
  * Validate a parsed partner location record against quality standards.
  *
  * @param {object} record
@@ -98,13 +154,15 @@ export function validateParsedPartnerRecord(record, rawRow, codeEvidence) {
     reasonCodes.push('SERVICE_CODE_MISMATCH');
   }
 
+  const name = String(record?.name ?? '').trim();
   const fields = {
-    name: String(record?.name ?? '').trim(),
+    name,
     address: String(record?.address ?? '').trim(),
     serviceTime: String(record?.serviceTime ?? '').trim()
   };
 
   if (!fields.name) reasonCodes.push('EMPTY_NAME');
+
   if (!fields.address) reasonCodes.push('EMPTY_ADDRESS');
   if (fields.name && fields.address && fields.name === fields.address) {
     reasonCodes.push('NAME_EQUALS_ADDRESS');
@@ -126,6 +184,9 @@ export function validateParsedPartnerRecord(record, rawRow, codeEvidence) {
     }
   }
 
+  const hoursValidation = validateBusinessHours(record?.serviceTime);
+  reasonCodes.push(...hoursValidation.reasonCodes);
+
   if (!rawRow || !rawRow.includes(serviceCode ?? '')) {
     reasonCodes.push('RAW_ROW_MISSING_CODE');
   }
@@ -137,29 +198,24 @@ export function validateParsedPartnerRecord(record, rawRow, codeEvidence) {
 }
 
 /**
- * Check if a line is a header or limit line in PDF.
+ * Check if a line is a header line in PDF.
  *
  * @param {string} line
  * @returns {boolean}
  */
-export function isPdfHeaderOrLimitLine(line) {
+export function isPdfHeaderLine(line) {
   return (
     line.includes('順豐速運') ||
     line.includes('服務範圍') ||
     line.includes('地區點碼地址') ||
     line.includes('地區店鋪名稱') ||
-    line.includes('快件限制') ||
-    line.includes('最大體積') ||
-    line.includes('重量限制') ||
-    line.includes('體積:') ||
-    line.includes('重量:') ||
     line.startsWith('頁 ') ||
     line.startsWith('Page ')
   );
 }
 
 /**
- * Group PDF lines into logical table rows. Any line containing a new service code starts a new logical record.
+ * Group PDF lines into logical table rows using a precise code & limit boundary state machine.
  *
  * @param {string} text
  * @returns {Array<{ rawRow: string, lineStart: number }>}
@@ -170,32 +226,43 @@ export function groupPdfLinesIntoRows(text) {
   const lines = text.split('\n').map(line => line.trim()).filter(Boolean);
   const rows = [];
   let currentLines = [];
+  let lineNumber = 0;
 
-  const flush = () => {
+  const flushCurrent = () => {
     if (currentLines.length === 0) return;
-    rows.push({ rawRow: currentLines.join(' '), lineStart: rows.length + 1 });
+    rows.push({
+      rawRow: currentLines.join(' '),
+      lineStart: lineNumber - currentLines.length + 1
+    });
     currentLines = [];
   };
 
   for (const line of lines) {
-    if (isPdfHeaderOrLimitLine(line)) continue;
+    lineNumber++;
+    if (isPdfHeaderLine(line)) continue;
 
     const currentText = currentLines.join(' ');
     const currentCodes = findServiceCodes(currentText);
-    const nextCodes = findServiceCodes(line);
+    const lineCodes = findServiceCodes(line);
 
     const isSameCodeContinuation =
       currentCodes.length > 0 &&
-      nextCodes.length > 0 &&
-      nextCodes.every(c => currentCodes.includes(c));
+      lineCodes.length > 0 &&
+      lineCodes.every(c => currentCodes.includes(c));
 
-    if (currentLines.length > 0 && currentCodes.length > 0 && nextCodes.length > 0 && !isSameCodeContinuation) {
-      flush();
+    if (currentCodes.length > 0 && lineCodes.length > 0 && !isSameCodeContinuation) {
+      flushCurrent();
+    } else if (
+      currentCodes.length > 0 &&
+      (currentText.includes('體積:') || currentText.includes('重量:') || currentText.includes('重量限制')) &&
+      (looksLikeRecordPrefix(line) || SUBDISTRICT_PREFIXES.some(s => line.startsWith(s)))
+    ) {
+      flushCurrent();
     }
 
     currentLines.push(line);
   }
 
-  flush();
+  flushCurrent();
   return rows;
 }

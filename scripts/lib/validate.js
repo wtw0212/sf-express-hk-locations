@@ -222,6 +222,30 @@ export function checkCompletenessGates({
     warnings.push(`Partial partner PDF failures: ${pdfFail}/${pdfTotal} failed`);
   }
 
+  // ─── 1. PDF Gate ────────────────────────────────────────────────────────
+  const pdfDiscoveryTotal = pdfResult.parseSuccessCount ?? pdfRecordsCount;
+  if (pdfDiscoveryTotal === 0) {
+    errors.push('No partner PDFs were discovered; refusing to publish without the expected supplementary source');
+  }
+
+  const EXPECTED_PARTNER_PDF_SOURCE_KEYS = new Set([
+    'OK_HK_TC',
+    'OK_KLN_TC',
+    'OK_NT_TC',
+    'OK_IL_TC',
+    'ASP_HK_TC',
+    'ASP_KLN_TC',
+    'ASP_NT_TC',
+    'ASP_ISLANDS_TC'
+  ]);
+
+  const discoveredKeys = new Set((pdfResult.documents || []).map(d => d.source_key));
+  const missingKeys = [...EXPECTED_PARTNER_PDF_SOURCE_KEYS].filter(key => !discoveredKeys.has(key));
+
+  if (missingKeys.length > 0) {
+    errors.push(`Missing expected partner PDF sources: ${missingKeys.join(', ')}`);
+  }
+
   if (pdfTotal > 0 && pdfSuccess > 0 && pdfRecordsCount === 0) {
     errors.push('Partner PDFs succeeded but parsed zero valid records');
   }
@@ -277,7 +301,7 @@ export function checkCompletenessGates({
     }
   }
 
-  // Quarantine checks: record warning for severe corrupted or duplicate conflict records in quarantine
+  // Quarantine checks: record warning or error for severe corrupted or duplicate conflict records in quarantine
   if (quarantinedRecords.length > 0) {
     const severeReasons = [
       'SERVICE_CODE_MISMATCH',
@@ -285,15 +309,34 @@ export function checkCompletenessGates({
       'EMBEDDED_SERVICE_CODE_IN_NAME',
       'EMBEDDED_SERVICE_CODE_IN_ADDRESS',
       'EMBEDDED_SERVICE_CODE_IN_SERVICETIME',
+      'NEXT_RECORD_PREFIX_LEAK',
+      'INCOMPLETE_RECORD_PREFIX',
+      'PLACEHOLDER_NAME',
       'RESIDUAL_SEPARATOR',
       'PLACEHOLDER_ADDRESS',
       'NAME_EQUALS_ADDRESS',
       'DUPLICATE_CODE_CONFLICT'
     ];
-    const severeQuarantined = quarantinedRecords.filter(q => q.reasonCodes.some(r => severeReasons.includes(r)));
 
-    if (severeQuarantined.length > 0) {
-      warnings.push(`Quarantined ${severeQuarantined.length} corrupted or ambiguous partner PDF records (reasons: ${[...new Set(severeQuarantined.flatMap(q => q.reasonCodes))].join(', ')})`);
+    const previousCodes = new Set((previousRecords || []).map(r => r.code));
+    const severeQuarantined = quarantinedRecords.filter(q =>
+      q.reasonCodes.some(r => severeReasons.includes(r))
+    );
+    const finalPublishedCodes = new Set(records.map(r => r.code));
+    const severePublishedRemovals = severeQuarantined.filter(q =>
+      q.extractedCode && previousCodes.has(q.extractedCode) && !finalPublishedCodes.has(q.extractedCode)
+    );
+
+    if (severePublishedRemovals.length > 0) {
+      errors.push(
+        `Severe PDF parser quarantines would remove previously published records: ${
+          severePublishedRemovals.map(q => q.extractedCode).join(', ')
+        }`
+      );
+    } else if (severeQuarantined.length > 0) {
+      warnings.push(
+        `Quarantined ${severeQuarantined.length} corrupted or ambiguous partner PDF records (reasons: ${[...new Set(severeQuarantined.flatMap(q => q.reasonCodes))].join(', ')})`
+      );
     }
   }
 

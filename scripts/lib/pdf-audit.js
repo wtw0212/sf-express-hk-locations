@@ -15,14 +15,17 @@ function normalizeTextForComparison(value) {
 function normalizeAddressForComparison(value) {
   return normalizeTextForComparison(value)
     .replace(/[－–—-]/g, '')
-    .replace(/號鋪/g, '號舖');
+    .replace(/平台/g, '平臺')
+    .replace(/鋪/g, '舖')
+    .replace(/葵湧/g, '葵涌');
 }
 
 function normalizeBusinessHoursForComparison(value) {
   return normalizeTextForComparison(value)
     .replace(/24小時|24hours?/gi, '0000-2359')
     .replace(/00:00[-至到]23:59/g, '0000-2359')
-    .replace(/[－–—至到]/g, '-');
+    .replace(/[－–—至到]/g, '-')
+    .replace(/-2400(?=$|星期|公眾|假期)/g, '-0000');
 }
 
 function isRetailerNameSpecificityDifference(canonical, pdf) {

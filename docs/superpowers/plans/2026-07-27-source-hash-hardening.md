@@ -279,7 +279,7 @@ const extracted_text_sha256 = sha256(data.text || '');
 
 Run: `node --test --test-name-pattern='binary|extracted|reviewed evidence' test/migration-safety.test.mjs test/pdf-parsers.test.mjs`
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/lib/source-fetchers.js scripts/lib/reviewed-pdf-registry.js scripts/lib/pdf-audit.js data/reviewed-pdf-partners.json schema/reviewed-pdf-partners.schema.json schema/pdf-audit.schema.json test/migration-safety.test.mjs test/pdf-parsers.test.mjs
@@ -296,18 +296,18 @@ git commit -m "Split PDF binary and text evidence"
 - Address comparison treats `平台/平臺`, `鋪/舖`, and `葵湧/葵涌` as formatting-only.
 - Hours comparison treats an end time of `24:00` and `00:00` as equivalent only when all other content matches.
 
-- [ ] **Step 1: Add exact positive and negative equivalence tests**
+- [x] **Step 1: Add exact positive and negative equivalence tests**
 
 ```js
 assert.equal(compare('06:30-24:00', '06:30-00:00'), 'equivalent_difference');
 assert.equal(compare('06:30-23:00', '06:30-00:00'), 'semantic_conflict');
 ```
 
-- [ ] **Step 2: Run focused audit tests and verify RED**
+- [x] **Step 2: Run focused audit tests and verify RED**
 
 Run: `node --test --test-name-pattern='平台|鋪|24:00|23:00' test/migration-safety.test.mjs`
 
-- [ ] **Step 3: Extend comparison-only normalizers**
+- [x] **Step 3: Extend comparison-only normalizers**
 
 ```js
 return normalizeTextForComparison(value)
@@ -316,7 +316,7 @@ return normalizeTextForComparison(value)
   .replace(/葵湧/g, '葵涌');
 ```
 
-- [ ] **Step 4: Run focused tests and verify GREEN**
+- [x] **Step 4: Run focused tests and verify GREEN**
 
 Run: `node --test --test-name-pattern='平台|鋪|24:00|23:00' test/migration-safety.test.mjs`
 

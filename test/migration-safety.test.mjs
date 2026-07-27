@@ -359,6 +359,66 @@ test('audit classifies shared retailer names with differing specificity separate
   assert.equal(audit.summary.field_classification_counts.name_specificity_difference, 1);
 });
 
+test('PDF comparison treats 平台/平臺, 鋪/舖, and 葵湧/葵涌 as formatting only', () => {
+  const audit = auditPartnerPdfRecords({
+    tcMap: new Map([['852ADDR1', {
+      serviceCode: '852ADDR1',
+      name: '測試店',
+      address: '葵湧商場平台1號鋪',
+      serviceTime: '09:00-18:00'
+    }]]),
+    parsedPdfRecords: [{
+      serviceCode: '852ADDR1',
+      name: '測試店',
+      address: '葵涌商場平臺1號舖',
+      serviceTime: '09:00-18:00'
+    }]
+  });
+
+  assert.equal(
+    audit.api_pdf_conflicts[0].comparison.address.classification,
+    'formatting_difference'
+  );
+});
+
+test('PDF hours comparison equates 24:00 with 00:00 only when all other content matches', () => {
+  const audit = auditPartnerPdfRecords({
+    tcMap: new Map([
+      ['852HOUR1', {
+        serviceCode: '852HOUR1',
+        name: '測試店一',
+        address: '地址一',
+        serviceTime: '06:30-24:00'
+      }],
+      ['852HOUR2', {
+        serviceCode: '852HOUR2',
+        name: '測試店二',
+        address: '地址二',
+        serviceTime: '06:30-23:00'
+      }]
+    ]),
+    parsedPdfRecords: [
+      {
+        serviceCode: '852HOUR1',
+        name: '測試店一',
+        address: '地址一',
+        serviceTime: '06:30-00:00'
+      },
+      {
+        serviceCode: '852HOUR2',
+        name: '測試店二',
+        address: '地址二',
+        serviceTime: '06:30-00:00'
+      }
+    ]
+  });
+
+  const equivalent = audit.api_pdf_conflicts.find(item => item.code === '852HOUR1');
+  const semantic = audit.api_pdf_conflicts.find(item => item.code === '852HOUR2');
+  assert.equal(equivalent.comparison.business_hours.classification, 'equivalent_difference');
+  assert.equal(semantic.comparison.business_hours.classification, 'semantic_conflict');
+});
+
 test('committed reviewed evidence matches the immutable raw snapshot and artifact chronology', async () => {
   const registry = JSON.parse(await readFile(reviewedPath, 'utf8'));
   const rawSnapshot = JSON.parse(await readFile(resolve('raw/latest-fetch.json'), 'utf8'));

@@ -3,7 +3,10 @@ import * as nodeFs from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { validateCrossFile } from './validate.js';
-import { validateAllReleaseArtifactsSchemas } from './schema-validator.js';
+import {
+  validateAllReleaseArtifactsSchemas,
+  validateRawSnapshotSchema
+} from './schema-validator.js';
 
 /**
  * Real Atomic Release Publication (All-or-Nothing with Atomic Rename and Journaled Rollback).
@@ -34,8 +37,10 @@ export async function atomicPublish({
   records,
   metadata,
   pdfAudit,
+  rawSnapshot,
   reportMarkdown,
   dataDir,
+  rawDir,
   reportsDir,
   rootDir,
   options = {}
@@ -78,6 +83,10 @@ export async function atomicPublish({
     if (pdfAudit) {
       dataFiles.push({ name: 'pdf-audit.json', data: pdfAudit, targetDir: dataDir });
     }
+    if (rawSnapshot) {
+      if (!rawDir) throw new Error('rawDir is required when rawSnapshot is published');
+      dataFiles.push({ name: 'latest-fetch.json', data: rawSnapshot, targetDir: rawDir });
+    }
 
     // ─── Step 2: Write release files to staging ───────────────────────
     for (const file of dataFiles) {
@@ -93,6 +102,12 @@ export async function atomicPublish({
     await validateAllReleaseArtifactsSchemas({
       records, stores, lockers, partners, byDistrict, metadata, pdfAudit
     });
+    if (rawSnapshot) {
+      const rawSchemaResult = await validateRawSnapshotSchema(rawSnapshot);
+      if (!rawSchemaResult.valid) {
+        throw new Error(`Raw snapshot schema validation failed:\n${rawSchemaResult.errors.join('\n')}`);
+      }
+    }
     validateCrossFile(records, stores, lockers, partners, byDistrict, metadata);
 
     // ─── Step 4: Prepare backups & journal ────────────────────────────
@@ -102,6 +117,7 @@ export async function atomicPublish({
 
     await fs.mkdir(backupDir, { recursive: true });
     await fs.mkdir(dataDir, { recursive: true });
+    if (rawSnapshot) await fs.mkdir(rawDir, { recursive: true });
     await fs.mkdir(reportsDir, { recursive: true });
 
     const publishTasks = [

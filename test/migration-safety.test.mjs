@@ -70,7 +70,22 @@ test('reviewed registry carries immutable document evidence', async () => {
   assert.equal(aspRecord._registry_evidence.reviewed_source_url, 'https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf');
   assert.equal(aspRecord._registry_evidence.reviewed_document_binary_sha256, '9b13d21f52e855eecb23de5f6a024be0cfaf0f897850f32ab0ff2ce6e4a3854a');
   assert.equal(aspRecord._registry_evidence.reviewed_extracted_text_sha256, 'c0f4ffc4d15d126151195450d0d91fc89dbc64f0281c281eb07f92e51a979432');
-  assert.equal(aspRecord._registry_evidence.reviewed_source_retrieved_at, '2026-07-27 15:49 (HKT UTC+8)');
+  assert.equal(aspRecord._registry_evidence.reviewed_source_retrieved_at, '2026-07-27T11:28:51.007Z');
+});
+
+test('reviewed registry rejects extracted-text hash substitution for the PDF binary hash', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'sf-registry-hash-substitution-'));
+  const registry = JSON.parse(await readFile(reviewedPath, 'utf8'));
+  registry[0].reviewed_document_binary_sha256 =
+    registry[0].reviewed_extracted_text_sha256;
+  const path = join(root, 'reviewed.json');
+  await writeFile(path, JSON.stringify(registry), 'utf8');
+
+  await assert.rejects(
+    loadReviewedPdfRegistry(path),
+    /cannot use the extracted-text hash as its binary hash/
+  );
+  await rm(root, { recursive: true, force: true });
 });
 
 test('PDF audit distinguishes formatting, equivalent hours, and semantic conflicts with evidence', () => {

@@ -1,5 +1,9 @@
 import { fetchWithRetry, withConcurrency } from './api-client.js';
-import { sha256 } from './source-hashes.js';
+import {
+  canonicalizeApiRecord,
+  sha256,
+  stableStringify
+} from './source-hashes.js';
 import { PDF_PARSE_QUALITY_CONFIG } from './constants.js';
 import { parseOkPartnerPdfText } from './pdf-parsers/ok-partner-parser.js';
 import { parseAspPartnerPdfText } from './pdf-parsers/asp-partner-parser.js';
@@ -277,12 +281,27 @@ export async function fetchEnApi(enAreas) {
  * @returns {Map<string, object>}
  */
 export function buildRecordMap(results) {
-  const map = new Map();
+  const grouped = new Map();
   for (const r of results) {
     for (const item of r.records) {
       const code = item.serviceCode || item.code;
-      if (code) map.set(code, item);
+      if (!code) continue;
+      if (!grouped.has(code)) grouped.set(code, []);
+      grouped.get(code).push(item);
     }
+  }
+  const map = new Map();
+  for (const code of [...grouped.keys()].sort()) {
+    const selected = grouped.get(code)
+      .map(item => ({
+        item,
+        semantic: stableStringify(canonicalizeApiRecord(item)),
+        full: stableStringify(item)
+      }))
+      .sort((a, b) =>
+        a.semantic.localeCompare(b.semantic) || a.full.localeCompare(b.full)
+      )[0];
+    map.set(code, selected.item);
   }
   return map;
 }

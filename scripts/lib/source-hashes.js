@@ -93,7 +93,9 @@ export function canonicalizeApiRecord(record) {
     serviceTime: record?.serviceTime ?? null,
     latitude: record?.latitude ?? null,
     longitude: record?.longitude ?? null,
-    serviceType: record?.serviceType ?? null
+    serviceType: record?.serviceType ?? null,
+    telephone: record?.telephone ?? null,
+    serviceContent: record?.serviceContent ?? null
   };
 }
 

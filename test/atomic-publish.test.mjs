@@ -5,6 +5,13 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { atomicPublish } from '../scripts/lib/atomic-publish.js';
+import { buildRawSnapshot } from '../scripts/lib/raw-snapshot.js';
+import {
+  calculateCanonicalDatasetHash,
+  calculateReviewedRegistryHash,
+  calculateSsrHash,
+  sha256
+} from '../scripts/lib/source-hashes.js';
 
 const mockRecord = {
   id: '852A',
@@ -31,6 +38,32 @@ const mockRecord = {
   provenance: { name: 'api_tc', address: 'api_tc', district: 'api_tc' },
   retrieved_at: '2026-07-27'
 };
+
+const tcRaw = '{"success":true,"result":[{"serviceCode":"852A","name":"Test","address":"Address"}]}';
+const enRaw = '{"success":true,"result":[{"serviceCode":"852A","name":"Test EN","address":"Address EN"}]}';
+const mockRawSnapshot = buildRawSnapshot({
+  tcResults: [{
+    area: { sourceRegion: '香港', district: '灣仔' },
+    language: 'tc', ok: true, status: 200, attempts: 1, error: null,
+    rawText: tcRaw, raw_sha256: sha256(tcRaw), records: JSON.parse(tcRaw).result
+  }],
+  enResults: [{
+    area: { sourceRegion: 'Hong Kong', district: 'Wan Chai' },
+    language: 'en', ok: true, status: 200, attempts: 1, error: null,
+    rawText: enRaw, raw_sha256: sha256(enRaw), records: JSON.parse(enRaw).result
+  }],
+  ssrRecords: [],
+  ssrErrors: [],
+  pdfDocuments: [],
+  pdfRecords: [],
+  quarantinedRecords: [],
+  pdfDetails: [],
+  pdfErrors: [],
+  pdfTotal: 0,
+  pdfSuccessCount: 0,
+  pdfFailCount: 0,
+  pdfStatus: 'success'
+}, '2026-07-27');
 
 const mockMetadata = {
   schema_version: 2,
@@ -82,6 +115,25 @@ const mockMetadata = {
     pipeline_warnings: 0,
     record_flag_counts_by_severity: { info: 0, warning: 0, error: 0 },
     flag_counts_by_type: {}
+  },
+  source_integrity: {
+    api_tc: {
+      raw_snapshot_sha256: mockRawSnapshot.sources.api_tc.raw_snapshot_sha256,
+      semantic_sha256: mockRawSnapshot.sources.api_tc.semantic_sha256,
+      record_count: mockRawSnapshot.sources.api_tc.record_count,
+      record_hashes: mockRawSnapshot.sources.api_tc.record_hashes,
+      duplicate_codes: mockRawSnapshot.sources.api_tc.duplicate_codes
+    },
+    api_en: {
+      raw_snapshot_sha256: mockRawSnapshot.sources.api_en.raw_snapshot_sha256,
+      semantic_sha256: mockRawSnapshot.sources.api_en.semantic_sha256,
+      record_count: mockRawSnapshot.sources.api_en.record_count,
+      record_hashes: mockRawSnapshot.sources.api_en.record_hashes,
+      duplicate_codes: mockRawSnapshot.sources.api_en.duplicate_codes
+    },
+    ssr: calculateSsrHash([]),
+    reviewed_registry: calculateReviewedRegistryHash([]),
+    canonical: calculateCanonicalDatasetHash([mockRecord])
   }
 };
 
@@ -89,6 +141,7 @@ test('atomicPublish: successful publication updates all files atomically', async
   const rootDir = join(tmpdir(), `test-pub-success-${Date.now()}`);
   const dataDir = join(rootDir, 'data');
   const reportsDir = join(rootDir, 'reports');
+  const rawDir = join(rootDir, 'raw');
 
   await mkdir(dataDir, { recursive: true });
   await mkdir(reportsDir, { recursive: true });
@@ -96,8 +149,9 @@ test('atomicPublish: successful publication updates all files atomically', async
   await atomicPublish({
     records: [mockRecord],
     metadata: mockMetadata,
+    rawSnapshot: mockRawSnapshot,
     reportMarkdown: '# Test Report',
-    dataDir,
+    dataDir, rawDir,
     reportsDir,
     rootDir
   });
@@ -108,8 +162,43 @@ test('atomicPublish: successful publication updates all files atomically', async
   assert.ok(existsSync(join(dataDir, 'partners.json')));
   assert.ok(existsSync(join(dataDir, 'locations-by-district.json')));
   assert.ok(existsSync(join(dataDir, 'metadata.json')));
+  assert.ok(existsSync(join(rawDir, 'latest-fetch.json')));
   assert.ok(existsSync(join(reportsDir, 'latest-diff.md')));
 
+  await rm(rootDir, { recursive: true, force: true });
+});
+
+test('atomicPublish failure injection: raw snapshot rename rolls back data and raw evidence', async () => {
+  const rootDir = join(tmpdir(), `test-pub-raw-rename-${Date.now()}`);
+  const dataDir = join(rootDir, 'data');
+  const rawDir = join(rootDir, 'raw');
+  const reportsDir = join(rootDir, 'reports');
+  await mkdir(dataDir, { recursive: true });
+  await mkdir(rawDir, { recursive: true });
+  await mkdir(reportsDir, { recursive: true });
+
+  const originalLocations = JSON.stringify([{ code: 'ORIGINAL' }]);
+  const originalRaw = JSON.stringify({ original: true });
+  await writeFile(join(dataDir, 'locations.json'), originalLocations, 'utf8');
+  await writeFile(join(rawDir, 'latest-fetch.json'), originalRaw, 'utf8');
+
+  await assert.rejects(
+    atomicPublish({
+      records: [mockRecord],
+      metadata: mockMetadata,
+      rawSnapshot: mockRawSnapshot,
+      reportMarkdown: '# New',
+      dataDir,
+      rawDir,
+      reportsDir,
+      rootDir,
+      options: { failAtFile: 'latest-fetch.json' }
+    }),
+    /Atomic publish failed with full rollback executed/
+  );
+
+  assert.equal(await readFile(join(dataDir, 'locations.json'), 'utf8'), originalLocations);
+  assert.equal(await readFile(join(rawDir, 'latest-fetch.json'), 'utf8'), originalRaw);
   await rm(rootDir, { recursive: true, force: true });
 });
 

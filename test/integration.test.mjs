@@ -4,6 +4,8 @@ import { readFile, writeFile, mkdir, rm, mkdtemp } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 
 import {
   runSync,
@@ -13,6 +15,8 @@ import {
 } from '../scripts/sync.js';
 import { checkCompletenessGates } from '../scripts/lib/validate.js';
 import { computeDiff } from '../scripts/lib/diff.js';
+
+const execFileAsync = promisify(execFile);
 
 test('integration: runSync with isFixture defaults to publish=false and does not modify repo paths', async () => {
   const repoDataStat = existsSync('data/locations.json') ? await readFile('data/locations.json', 'utf8') : null;
@@ -47,8 +51,29 @@ test('integration: baselinePaths vs outputPaths separation in dry-run mode', asy
   // Dry-run output files were written inside tempOutputDir
   assert.ok(existsSync(join(tempOutputDir, 'data', 'locations.json')));
   assert.ok(existsSync(join(tempOutputDir, 'data', 'metadata.json')));
+  assert.ok(existsSync(join(tempOutputDir, 'raw', 'latest-fetch.json')));
   assert.ok(existsSync(join(tempOutputDir, 'reports', 'latest-diff.md')));
 
+  await rm(tempOutputDir, { recursive: true, force: true });
+});
+
+test('integration: verifier CLI independently validates fixture output hashes', async () => {
+  const tempOutputDir = await mkdtemp(join(tmpdir(), 'sf-verifier-cli-'));
+  await runSync({
+    isFixture: true,
+    publish: false,
+    baselineDir: resolve('data'),
+    outputDir: tempOutputDir
+  });
+
+  const { stdout } = await execFileAsync(process.execPath, [
+    resolve('scripts/verify-source-hashes.js'),
+    '--snapshot',
+    join(tempOutputDir, 'raw', 'latest-fetch.json'),
+    '--metadata',
+    join(tempOutputDir, 'data', 'metadata.json')
+  ]);
+  assert.match(stdout, /Source hash verification passed/);
   await rm(tempOutputDir, { recursive: true, force: true });
 });
 

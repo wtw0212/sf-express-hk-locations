@@ -320,7 +320,7 @@ return normalizeTextForComparison(value)
 
 Run: `node --test --test-name-pattern='平台|鋪|24:00|23:00' test/migration-safety.test.mjs`
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/lib/pdf-audit.js test/migration-safety.test.mjs
@@ -348,7 +348,7 @@ git commit -m "Normalize PDF audit equivalences"
 - CLI: `node scripts/verify-source-hashes.js --snapshot <path> --metadata <path>`.
 - CI supports PR and PR-branch push events with read-only permissions and event-safe immutable baseline selection.
 
-- [ ] **Step 1: Add atomic raw rollback and verifier CLI integration tests**
+- [x] **Step 1: Add atomic raw rollback and verifier CLI integration tests**
 
 ```js
 await assert.rejects(
@@ -357,28 +357,28 @@ await assert.rejects(
 );
 ```
 
-- [ ] **Step 2: Run integration tests and verify RED**
+- [x] **Step 2: Run integration tests and verify RED**
 
 Run: `node --test test/atomic-publish.test.mjs test/integration.test.mjs`
 
-- [ ] **Step 3: Include raw snapshot in release artifacts and atomic publication**
+- [x] **Step 3: Include raw snapshot in release artifacts and atomic publication**
 
 ```js
 dataFiles.push({ name: 'latest-fetch.json', data: rawSnapshot, targetDir: rawDir });
 ```
 
-- [ ] **Step 4: Implement verifier CLI and CI steps**
+- [x] **Step 4: Implement verifier CLI and CI steps**
 
 ```yaml
 - name: Verify Source Hashes
   run: node scripts/verify-source-hashes.js --snapshot "$RUNNER_TEMP/sf-fixture-output/raw/latest-fetch.json" --metadata "$RUNNER_TEMP/sf-fixture-output/data/metadata.json"
 ```
 
-- [ ] **Step 5: Generate a live non-publishing snapshot with exact API response text, then regenerate committed artifacts against an immutable baseline**
+- [x] **Step 5: Generate a live non-publishing snapshot with exact API response text, then regenerate committed artifacts against an immutable baseline**
 
 Run: `npm run sync -- --dry-run --baseline-dir "$PWD/data" --reviewed-registry "$PWD/data/reviewed-pdf-partners.json" --output-dir /tmp/sf-live-verification`
 
-- [ ] **Step 6: Run the complete local verification contract**
+- [x] **Step 6: Run the complete local verification contract**
 
 ```bash
 npm ci

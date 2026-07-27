@@ -494,8 +494,10 @@ export async function runSync(options = {}) {
       records: nextList,
       metadata,
       pdfAudit,
+      rawSnapshot,
       reportMarkdown,
       dataDir: targetDataDir,
+      rawDir: targetRawDir,
       reportsDir: targetReportsDir,
       rootDir: baseRootDir
     });
@@ -505,8 +507,10 @@ export async function runSync(options = {}) {
       records: nextList,
       metadata,
       pdfAudit,
+      rawSnapshot,
       reportMarkdown,
       dataDir: targetDataDir,
+      rawDir: targetRawDir,
       reportsDir: targetReportsDir,
       rootDir: baseRootDir
     });
@@ -516,12 +520,12 @@ export async function runSync(options = {}) {
   }
 }
 
-export function buildReleaseArtifacts({ records, metadata, pdfAudit, reportMarkdown }) {
-  return { records, metadata, pdfAudit, reportMarkdown };
+export function buildReleaseArtifacts({ records, metadata, pdfAudit, rawSnapshot, reportMarkdown }) {
+  return { records, metadata, pdfAudit, rawSnapshot, reportMarkdown };
 }
 
 export async function validateReleaseArtifacts(artifacts) {
-  const { records, metadata, pdfAudit } = artifacts;
+  const { records, metadata, pdfAudit, rawSnapshot } = artifacts;
   const stores = records.filter(r => r.type === 'store');
   const lockers = records.filter(r => r.type === 'locker');
   const partners = records.filter(r => r.type === 'partner');
@@ -535,17 +539,26 @@ export async function validateReleaseArtifacts(artifacts) {
   await validateAllReleaseArtifactsSchemas({
     records, stores, lockers, partners, byDistrict, metadata, pdfAudit
   });
+  if (rawSnapshot) {
+    verifySourceHashes(rawSnapshot, metadata);
+    const rawSchemaResult = await validateRawSnapshotSchema(rawSnapshot);
+    if (!rawSchemaResult.valid) {
+      throw new Error(`Raw snapshot schema validation failed:\n${rawSchemaResult.errors.join('\n')}`);
+    }
+  }
   validateCrossFile(records, stores, lockers, partners, byDistrict, metadata);
 }
 
 export async function publishReleaseArtifacts(artifacts, options) {
-  const { records, metadata, pdfAudit, reportMarkdown } = artifacts;
+  const { records, metadata, pdfAudit, rawSnapshot, reportMarkdown } = artifacts;
   await atomicPublish({
     records,
     metadata,
     pdfAudit,
+    rawSnapshot,
     reportMarkdown,
     dataDir: options.dataDir,
+    rawDir: options.rawDir,
     reportsDir: options.reportsDir,
     rootDir: options.rootDir,
     options

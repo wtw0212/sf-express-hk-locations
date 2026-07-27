@@ -65,6 +65,11 @@ export async function loadReviewedPdfRegistry(registryPath) {
     if (item.reviewed !== true) {
       throw new Error(`Reviewed PDF registry record at index ${i} (${item.code}) must have reviewed === true`);
     }
+    if (item.reviewed_document_binary_sha256 === item.reviewed_extracted_text_sha256) {
+      throw new Error(
+        `Reviewed PDF registry record ${item.code} cannot use the extracted-text hash as its binary hash`
+      );
+    }
 
     if (seenCodes.has(item.code)) {
       throw new Error(`Duplicate code '${item.code}' found in reviewed PDF registry at index ${i}`);

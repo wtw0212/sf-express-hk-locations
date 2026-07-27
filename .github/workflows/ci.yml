@@ -3,6 +3,8 @@ name: CI
 on:
   pull_request:
     branches: [ main ]
+  push:
+    branches: [ refactor/pipeline-hardening ]
 
 permissions:
   contents: read
@@ -10,6 +12,8 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      IMMUTABLE_BASELINE_SHA: 9b6a14e24116da9973052d6bfff7ae07b793e025
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,16 +34,19 @@ jobs:
       - name: Run Test Suite
         run: npm test
 
-      - name: Materialize immutable PR parent baseline
+      - name: Materialize immutable migration baseline
         run: |
           mkdir -p "$RUNNER_TEMP/sf-parent-baseline"
-          git show "${{ github.event.pull_request.base.sha }}:data/locations.json" > "$RUNNER_TEMP/sf-parent-baseline/locations.json"
-          if git cat-file -e "${{ github.event.pull_request.base.sha }}:data/metadata.json"; then
-            git show "${{ github.event.pull_request.base.sha }}:data/metadata.json" > "$RUNNER_TEMP/sf-parent-baseline/metadata.json"
+          git show "$IMMUTABLE_BASELINE_SHA:data/locations.json" > "$RUNNER_TEMP/sf-parent-baseline/locations.json"
+          if git cat-file -e "$IMMUTABLE_BASELINE_SHA:data/metadata.json"; then
+            git show "$IMMUTABLE_BASELINE_SHA:data/metadata.json" > "$RUNNER_TEMP/sf-parent-baseline/metadata.json"
           fi
 
       - name: Run Fixture Sync Against Parent Baseline
         run: npm run sync -- --fixture --dry-run --baseline-dir "$RUNNER_TEMP/sf-parent-baseline" --reviewed-registry "$GITHUB_WORKSPACE/data/reviewed-pdf-partners.json" --output-dir "$RUNNER_TEMP/sf-fixture-output"
+
+      - name: Verify Source Hashes and Schemas
+        run: node scripts/verify-source-hashes.js --snapshot "$RUNNER_TEMP/sf-fixture-output/raw/latest-fetch.json" --metadata "$RUNNER_TEMP/sf-fixture-output/data/metadata.json"
 
       - name: Re-run Test Suite After Dry-Run
         run: npm test

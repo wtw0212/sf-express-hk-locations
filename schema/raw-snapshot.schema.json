@@ -35,7 +35,10 @@
             "errors"
           ],
           "properties": {
-            "documents": { "type": "array", "items": { "type": "object" } },
+            "documents": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/pdfDocument" }
+            },
             "pdf_total": { "type": "integer", "minimum": 0 },
             "pdf_success_count": { "type": "integer", "minimum": 0 },
             "pdf_failure_count": { "type": "integer", "minimum": 0 },
@@ -141,6 +144,41 @@
           "items": { "$ref": "#/definitions/apiResult" }
         },
         "records": { "type": "array", "items": { "type": "object" } }
+      },
+      "additionalProperties": false
+    },
+    "pdfDocument": {
+      "type": "object",
+      "required": [
+        "source_key",
+        "url",
+        "http_ok",
+        "attempts",
+        "document_binary_sha256",
+        "extracted_text_sha256"
+      ],
+      "properties": {
+        "source_key": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "minLength": 1 },
+        "http_ok": { "type": "boolean" },
+        "parse_ok": { "type": "boolean" },
+        "attempts": { "type": "integer", "minimum": 0 },
+        "error": { "type": "string" },
+        "parse_error": { "type": "string" },
+        "text": { "type": ["string", "null"] },
+        "document_retrieved_at": { "type": "string", "minLength": 1 },
+        "document_binary_sha256": {
+          "anyOf": [
+            { "$ref": "#/definitions/sha256" },
+            { "type": "null" }
+          ]
+        },
+        "extracted_text_sha256": {
+          "anyOf": [
+            { "$ref": "#/definitions/sha256" },
+            { "type": "null" }
+          ]
+        }
       },
       "additionalProperties": false
     }

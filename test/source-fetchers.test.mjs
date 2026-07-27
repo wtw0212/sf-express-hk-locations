@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  buildRecordMap,
   extractLineSegments,
   validateParsedPartnerRecord,
   validateServiceNetworkApiPayload
@@ -152,4 +153,23 @@ test('source-fetchers: precedence policy ensures PDF cannot overwrite API-backed
   assert.equal(finalRecord.address, 'API Address');
   assert.equal(finalRecord.business_hours, '09:00-20:00');
   assert.equal(finalRecord.source, 'api_tc');
+});
+
+test('source-fetchers: duplicate API selection is deterministic across area order', () => {
+  const a = {
+    serviceCode: '852DUP',
+    name: 'A',
+    address: 'Address',
+    telephone: '1111'
+  };
+  const b = {
+    serviceCode: '852DUP',
+    name: 'B',
+    address: 'Address',
+    telephone: '2222'
+  };
+
+  const forward = buildRecordMap([{ records: [a] }, { records: [b] }]).get('852DUP');
+  const reverse = buildRecordMap([{ records: [b] }, { records: [a] }]).get('852DUP');
+  assert.deepEqual(forward, reverse);
 });

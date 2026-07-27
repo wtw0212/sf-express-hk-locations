@@ -21,7 +21,9 @@ const apiRecord = {
   serviceTime: '09:00-18:00',
   latitude: 22.28,
   longitude: 114.17,
-  serviceType: '1'
+  serviceType: '1',
+  telephone: '12345678',
+  serviceContent: '1'
 };
 
 test('sha256 hashes exact raw text bytes', () => {
@@ -63,6 +65,8 @@ test('API semantic hashes ignore object key order and record order', () => {
   const second = { ...apiRecord, serviceCode: '852A1002', name: '第二站' };
   const reorderedKeys = {
     serviceType: apiRecord.serviceType,
+    serviceContent: apiRecord.serviceContent,
+    telephone: apiRecord.telephone,
     longitude: apiRecord.longitude,
     latitude: apiRecord.latitude,
     serviceTime: apiRecord.serviceTime,

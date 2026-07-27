@@ -19,8 +19,9 @@ An automated dataset and lookup web interface for SF Express Hong Kong Stores, L
 
 1. **官方 Traditional Chinese API** 為中文欄位的主要來源。
 2. **官方 English API** 為英文欄位的主要來源。
-3. **SSR 頁面與官方合作點 PDF** 為補充來源 (Supplementary sources)。
-4. **來源衝突處理原則**：
+3. **SSR 頁面**可補充 API 未提供的記錄；只有經 schema 驗證及人工審核的 PDF registry 記錄才可補充 canonical dataset。
+4. **即時 PDF 解析結果只供 audit 比對**，不會直接進入 canonical output。
+5. **來源衝突處理原則**：
    - 官方中英文資料若有歧異（如門牌號碼、營業時間、店名 mismatch），本資料集**完整保留雙方官方原值**，絕不依據第三方或單一方隨意覆蓋。
    - 衝突資訊會記錄於紀錄內的 `quality_flags` 機器可讀陣列中。
    - 不使用任何 OpenCC 或全域繁簡/字符自動替換規則。
@@ -29,8 +30,12 @@ An automated dataset and lookup web interface for SF Express Hong Kong Stores, L
 
 ## 原始快照與正規化資料 (Raw vs Normalized Data)
 
-- **`raw/latest-fetch.json`**：存放**完全未經過加工/轉換/清理**的官方 API、SSR 與 PDF 原始響應 snapshot。包含每筆請求的 Context、HTTP 狀態碼與失敗原因。
+- **`raw/latest-fetch.json`**：保存每個 TC/EN area 在 JSON parsing 前取得的 exact HTTP response text、raw SHA-256、deterministic semantic SHA-256、record-level hashes，以及 SSR/PDF audit evidence。
 - **`data/locations.json`**：正規化後的發布資料集。針對行政區劃進行標準18區對應與品質檢測，並附帶 `quality_flags` 與 `provenance`。
+- **`data/metadata.json`**：保存 TC、EN、SSR、reviewed registry 與 canonical dataset 的 semantic integrity hashes。
+- **`data/pdf-audit.json`**：只記錄比較結果；PDF binary hash (`document_binary_sha256`) 與 extracted-text hash (`extracted_text_sha256`) 分開保存。
+
+Repository 未保存 PDF binary，所以 fixture/offline verification 會從 committed extracted text 獨立重算 `extracted_text_sha256`；`document_binary_sha256` 是 live fetch 時按實際 PDF bytes 計算的 evidence，不會由 extracted text 代替。
 
 ---
 
@@ -65,7 +70,7 @@ An automated dataset and lookup web interface for SF Express Hong Kong Stores, L
 ## 局限性與注意事項 (Limitations)
 
 1. **英文覆蓋率與官方差異**：順豐官方 Traditional Chinese 與 English API 在部分新網點上可能存在更新時間差或拼寫差異，具體中英匹配率請參考 `data/metadata.json`。
-2. **合作點 PDF 解析局限**：部分合作點（如 OK便利店、小型店舖）來自 PDF 文本解析，營業時間或鋪號格式可能隨 PDF 排版而有所變化。
+2. **合作點 PDF 解析局限**：即時 PDF 解析只供 audit；只有經審核 registry 記錄可進入 canonical dataset。PDF 排版變動不會直接改寫已發布記錄。
 
 ---
 

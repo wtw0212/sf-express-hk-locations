@@ -153,7 +153,7 @@ test('14 & 15. Reviewed/PDF differences create drift, missing reviewed records d
   );
   assert.equal(
     missingReviewed.evidence.document_retrieved_at,
-    '2026-07-27 15:49 (HKT UTC+8)'
+    '2026-07-27T11:28:50.373Z'
   );
 
   const { records } = normalizeRecords({ tcMap: new Map(), reviewedPdfRegistry });

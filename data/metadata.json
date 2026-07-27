@@ -1,11 +1,67 @@
 {
   "schema_version": 2,
-  "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)",
+  "retrieved_at": "2026-07-27 12:12 (HKT UTC+8)",
   "counts": {
-    "total": 1678,
+    "total": 1672,
     "stores": 137,
     "lockers": 1056,
-    "partners": 485
+    "partners": 479
+  },
+  "count_deltas": {
+    "total": {
+      "previous": 1678,
+      "current": 1672,
+      "delta": -6,
+      "delta_pct": -0.36,
+      "baseline_available": true,
+      "baseline_source": "previous_locations_feed",
+      "gate_result": "pass"
+    },
+    "stores": {
+      "previous": 137,
+      "current": 137,
+      "delta": 0,
+      "delta_pct": 0,
+      "baseline_available": true,
+      "baseline_source": "previous_locations_feed",
+      "gate_result": "pass"
+    },
+    "lockers": {
+      "previous": 1056,
+      "current": 1056,
+      "delta": 0,
+      "delta_pct": 0,
+      "baseline_available": true,
+      "baseline_source": "previous_locations_feed",
+      "gate_result": "pass"
+    },
+    "partners": {
+      "previous": 485,
+      "current": 479,
+      "delta": -6,
+      "delta_pct": -1.24,
+      "baseline_available": true,
+      "baseline_source": "previous_locations_feed",
+      "gate_result": "pass"
+    },
+    "tcCodes": {
+      "previous": 1666,
+      "current": 1666,
+      "delta": 0,
+      "delta_pct": 0,
+      "baseline_available": true,
+      "baseline_source": "previous_metadata.coverage.tc_record_count",
+      "gate_result": "pass"
+    },
+    "enCodes": {
+      "previous": 1666,
+      "current": 1666,
+      "delta": 0,
+      "delta_pct": 0,
+      "baseline_available": true,
+      "baseline_source": "previous_metadata.coverage.en_record_count",
+      "gate_result": "pass"
+    }
   },
   "source_status": {
     "api_tc": {
@@ -26,9 +82,107 @@
       "pdf_total": 8,
       "pdf_success": 8,
       "pdf_failed": 0,
-      "status": "success",
-      "records": 460,
-      "errors": []
+      "status": "partial_parse_quality_failure",
+      "records": 424,
+      "errors": [],
+      "details": [
+        {
+          "url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
+          "ok": true,
+          "status": "partial_parse_quality_failure",
+          "http_ok": true,
+          "parse_ok": true,
+          "attempts": 1,
+          "error": null,
+          "raw_code_count": 116,
+          "valid_record_count": 58,
+          "quarantined_record_count": 58
+        },
+        {
+          "url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
+          "ok": true,
+          "status": "partial_parse_quality_failure",
+          "http_ok": true,
+          "parse_ok": true,
+          "attempts": 1,
+          "error": null,
+          "raw_code_count": 209,
+          "valid_record_count": 102,
+          "quarantined_record_count": 107
+        },
+        {
+          "url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
+          "ok": true,
+          "status": "partial_parse_quality_failure",
+          "http_ok": true,
+          "parse_ok": true,
+          "attempts": 1,
+          "error": null,
+          "raw_code_count": 280,
+          "valid_record_count": 139,
+          "quarantined_record_count": 141
+        },
+        {
+          "url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
+          "ok": true,
+          "status": "partial_parse_quality_failure",
+          "http_ok": true,
+          "parse_ok": true,
+          "attempts": 1,
+          "error": null,
+          "raw_code_count": 6,
+          "valid_record_count": 3,
+          "quarantined_record_count": 3
+        },
+        {
+          "url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
+          "ok": true,
+          "status": "partial_parse_quality_failure",
+          "http_ok": true,
+          "parse_ok": true,
+          "attempts": 1,
+          "error": null,
+          "raw_code_count": 47,
+          "valid_record_count": 23,
+          "quarantined_record_count": 23
+        },
+        {
+          "url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
+          "ok": true,
+          "status": "partial_parse_quality_failure",
+          "http_ok": true,
+          "parse_ok": true,
+          "attempts": 1,
+          "error": null,
+          "raw_code_count": 83,
+          "valid_record_count": 33,
+          "quarantined_record_count": 50
+        },
+        {
+          "url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
+          "ok": true,
+          "status": "partial_parse_quality_failure",
+          "http_ok": true,
+          "parse_ok": true,
+          "attempts": 1,
+          "error": null,
+          "raw_code_count": 139,
+          "valid_record_count": 65,
+          "quarantined_record_count": 74
+        },
+        {
+          "url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
+          "ok": true,
+          "status": "partial_parse_quality_failure",
+          "http_ok": true,
+          "parse_ok": true,
+          "attempts": 1,
+          "error": null,
+          "raw_code_count": 12,
+          "valid_record_count": 1,
+          "quarantined_record_count": 11
+        }
+      ]
     }
   },
   "coverage": {
@@ -36,23 +190,28 @@
     "en_record_count": 1666,
     "bilingual_match_rate": 0.9993997599039616,
     "district_resolved_count": 1670,
-    "district_unresolved_count": 8
+    "district_unresolved_count": 2
   },
   "quality": {
-    "blocking_errors": 0,
-    "warnings": 0,
-    "flag_counts": {
+    "pipeline_blocking_errors": 0,
+    "pipeline_warnings": 1,
+    "record_flag_counts_by_severity": {
+      "info": 57,
+      "warning": 272,
+      "error": 0
+    },
+    "flag_counts_by_type": {
       "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT": 21,
       "ENGLISH_FIELD_CONTAINS_CJK": 105,
       "SOURCE_TC_EN_UNIT_CONFLICT": 38,
       "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 98,
       "ADMIN_DISTRICT_ALIAS_APPLIED": 41,
       "DUPLICATE_ADDRESS_SUFFIX": 9,
-      "MISSING_ENGLISH_RECORD": 12,
+      "MISSING_ENGLISH_RECORD": 6,
       "SUBDISTRICT_ADDRESS_CONFLICT": 2,
-      "SOURCE_FORMATTING_ARTIFACT": 6,
-      "MISSING_COORDINATES": 12,
-      "UNRESOLVED_ADMIN_DISTRICT": 8
+      "SOURCE_FORMATTING_ARTIFACT": 1,
+      "MISSING_COORDINATES": 6,
+      "UNRESOLVED_ADMIN_DISTRICT": 2
     }
   }
 }

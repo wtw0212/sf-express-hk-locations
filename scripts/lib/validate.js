@@ -218,7 +218,29 @@ export function checkCompletenessGates({
   }
 
   if (pdfTotal > 0 && pdfSuccess > 0 && pdfRecordsCount === 0) {
-    errors.push('Partner PDFs succeeded but parsed zero records');
+    errors.push('Partner PDFs succeeded but parsed zero valid records');
+  }
+
+  // Check individual per-PDF status for zero records or layout failure
+  if (pdfResult.pdfDetails && pdfResult.pdfDetails.length > 0) {
+    for (const detail of pdfResult.pdfDetails) {
+      if (detail.status === 'zero_records_parsed') {
+        errors.push(`Partner PDF parsed zero records: ${detail.url}`);
+      }
+    }
+  }
+
+  // Quarantine checks: block publication if corrupted records were quarantined
+  const quarantinedRecords = pdfResult.quarantinedRecords || [];
+  if (quarantinedRecords.length > 0) {
+    const severeReasons = ['EMBEDDED_SERVICE_CODE', 'RESIDUAL_SEPARATOR', 'PLACEHOLDER_ADDRESS', 'NAME_EQUALS_ADDRESS'];
+    const severeQuarantined = quarantinedRecords.filter(q => q.reasonCodes.some(r => severeReasons.includes(r)));
+
+    if (severeQuarantined.length > 0) {
+      errors.push(`Publication blocked due to ${severeQuarantined.length} corrupted partner PDF records in quarantine (reasons: ${[...new Set(severeQuarantined.flatMap(q => q.reasonCodes))].join(', ')})`);
+    } else {
+      warnings.push(`${quarantinedRecords.length} partner PDF records quarantined during parsing`);
+    }
   }
 
   // Append supplementary errors to gate warnings/errors
@@ -293,50 +315,53 @@ export function checkCompletenessGates({
     enCodes: enCodes.size
   };
 
-  let prevCounts = { total: 0, stores: 0, lockers: 0, partners: 0, tcCodes: 0, enCodes: 0 };
-  if (previousRecords && previousRecords.length > 0) {
-    prevCounts = {
-      total: previousRecords.length,
-      stores: previousRecords.filter(r => r.type === 'store').length,
-      lockers: previousRecords.filter(r => r.type === 'locker').length,
-      partners: previousRecords.filter(r => r.type === 'partner').length,
-      tcCodes: previousRecords.filter(r => r.source === 'api_tc' || r.source === 'api').length,
-      enCodes: previousRecords.filter(r => r.name_en != null).length
-    };
-  }
+  const previousMetadata = config.previousMetadata || null;
+  const baselineAvailable = previousRecords != null && previousRecords.length > 0;
 
-  const countDeltas = {
-    total: computeCategoryDelta(prevCounts.total, currCounts.total),
-    stores: computeCategoryDelta(prevCounts.stores, currCounts.stores),
-    lockers: computeCategoryDelta(prevCounts.lockers, currCounts.lockers),
-    partners: computeCategoryDelta(prevCounts.partners, currCounts.partners),
-    tcCodes: computeCategoryDelta(prevCounts.tcCodes, currCounts.tcCodes),
-    enCodes: computeCategoryDelta(prevCounts.enCodes, currCounts.enCodes)
+  const prevCounts = {
+    total: baselineAvailable ? previousRecords.length : 0,
+    stores: baselineAvailable ? previousRecords.filter(r => r.type === 'store').length : 0,
+    lockers: baselineAvailable ? previousRecords.filter(r => r.type === 'locker').length : 0,
+    partners: baselineAvailable ? previousRecords.filter(r => r.type === 'partner').length : 0,
+    tcCodes: previousMetadata?.coverage?.tc_record_count ?? null,
+    enCodes: previousMetadata?.coverage?.en_record_count ?? null
   };
 
-  // Evaluate gates for each category if previous dataset existed
-  if (previousRecords && previousRecords.length > 0) {
-    for (const [cat, deltaInfo] of Object.entries(countDeltas)) {
+  const countDeltas = {};
+  for (const cat of ['total', 'stores', 'lockers', 'partners', 'tcCodes', 'enCodes']) {
+    const prevVal = prevCounts[cat];
+    const currVal = currCounts[cat];
+    const isCatAvailable = (cat === 'tcCodes' || cat === 'enCodes')
+      ? (prevVal !== null && prevVal !== undefined)
+      : baselineAvailable;
+
+    const sourceInfo = (cat === 'tcCodes' || cat === 'enCodes')
+      ? (prevVal !== null ? `previous_metadata.coverage.${cat === 'tcCodes' ? 'tc_record_count' : 'en_record_count'}` : 'unavailable')
+      : (baselineAvailable ? 'previous_locations_feed' : 'unavailable');
+
+    const deltaInfo = computeCategoryDelta(isCatAvailable ? prevVal : 0, currVal);
+    deltaInfo.baseline_available = isCatAvailable;
+    deltaInfo.baseline_source = sourceInfo;
+    deltaInfo.gate_result = 'pass';
+
+    if (isCatAvailable && prevVal > 0) {
       const cfg = anomalyConfig[cat] || anomalyConfig.total;
-      const { previous: prevVal, current: currVal, delta_pct } = deltaInfo;
-
-      if (prevVal === 0) continue; // Division-by-zero protection
-
-      const dropPct = -delta_pct;
+      const dropPct = -deltaInfo.delta_pct;
       if (dropPct > cfg.dropBlockPct) {
-        errors.push(
-          `Category '${cat}' count dropped by ${dropPct.toFixed(1)}% (${prevVal} -> ${currVal}), blocking threshold: ${cfg.dropBlockPct}%`
-        );
-      } else if (delta_pct > cfg.increaseBlockPct) {
-        errors.push(
-          `Category '${cat}' count increased by ${delta_pct.toFixed(1)}% (${prevVal} -> ${currVal}), blocking threshold: ${cfg.increaseBlockPct}%`
-        );
-      } else if (delta_pct > cfg.increaseWarnPct) {
-        warnings.push(
-          `Category '${cat}' count increased by ${delta_pct.toFixed(1)}% (${prevVal} -> ${currVal}), warning threshold: ${cfg.increaseWarnPct}%`
-        );
+        deltaInfo.gate_result = 'block';
+        errors.push(`Category '${cat}' count dropped by ${dropPct.toFixed(1)}% (${prevVal} -> ${currVal}), blocking threshold: ${cfg.dropBlockPct}%`);
+      } else if (deltaInfo.delta_pct > cfg.increaseBlockPct) {
+        deltaInfo.gate_result = 'block';
+        errors.push(`Category '${cat}' count increased by ${deltaInfo.delta_pct.toFixed(1)}% (${prevVal} -> ${currVal}), blocking threshold: ${cfg.increaseBlockPct}%`);
+      } else if (deltaInfo.delta_pct > cfg.increaseWarnPct) {
+        deltaInfo.gate_result = 'warn';
+        warnings.push(`Category '${cat}' count increased by ${deltaInfo.delta_pct.toFixed(1)}% (${prevVal} -> ${currVal}), warning threshold: ${cfg.increaseWarnPct}%`);
       }
+    } else if (!isCatAvailable && (cat === 'tcCodes' || cat === 'enCodes')) {
+      warnings.push(`Category '${cat}' baseline comparison skipped: previous metadata unavailable`);
     }
+
+    countDeltas[cat] = deltaInfo;
   }
 
   const metrics = {

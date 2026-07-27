@@ -133,7 +133,7 @@ test('checkCompletenessGates: PDF failure scenarios', () => {
     records
   });
   assert.equal(resZeroRecs.pass, false);
-  assert.ok(resZeroRecs.errors.some(e => e.includes('parsed zero records')));
+  assert.ok(resZeroRecs.errors.some(e => e.includes('zero')));
 });
 
 test('checkCompletenessGates: partner subset unexpectedly drops -> blocked', () => {

@@ -2,10 +2,15 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir, rm, mkdtemp } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 
-import { runSync } from '../scripts/sync.js';
+import {
+  runSync,
+  buildReleaseArtifacts,
+  validateReleaseArtifacts,
+  publishReleaseArtifacts
+} from '../scripts/sync.js';
 import { checkCompletenessGates } from '../scripts/lib/validate.js';
 import { computeDiff } from '../scripts/lib/diff.js';
 
@@ -22,42 +27,75 @@ test('integration: runSync with isFixture defaults to publish=false and does not
   }
 });
 
-test('integration: runSync fixture mode writes only to provided temporary directory when outputDir specified', async () => {
-  const tempDir = await mkdtemp(join(tmpdir(), 'sf-test-fixture-'));
-  const tempDataDir = join(tempDir, 'data');
-  const tempReportsDir = join(tempDir, 'reports');
+test('integration: baselinePaths vs outputPaths separation in dry-run mode', async () => {
+  const tempOutputDir = await mkdtemp(join(tmpdir(), 'sf-test-out-'));
+  const baselineDataDir = resolve('data');
 
-  await runSync({
-    isFixture: true,
-    publish: true,
-    outputDir: tempDir
-  });
-
-  // Verify files were written ONLY inside tempDir
-  assert.ok(existsSync(join(tempDataDir, 'locations.json')));
-  assert.ok(existsSync(join(tempDataDir, 'metadata.json')));
-  assert.ok(existsSync(join(tempReportsDir, 'latest-diff.md')));
-
-  await rm(tempDir, { recursive: true, force: true });
-});
-
-test('integration: publish=false performs full pipeline without writing output files', async () => {
-  const tempDir = await mkdtemp(join(tmpdir(), 'sf-test-dryrun-'));
-  const tempDataDir = join(tempDir, 'data');
+  const baselineBefore = await readFile(join(baselineDataDir, 'locations.json'), 'utf8');
 
   await runSync({
     isFixture: true,
     publish: false,
-    paths: {
-      rootDir: tempDir,
-      dataDir: tempDataDir,
-      rawDir: join(tempDir, 'raw'),
-      reportsDir: join(tempDir, 'reports')
-    }
+    baselineDir: baselineDataDir,
+    outputDir: tempOutputDir
   });
 
-  // Because publish is false and no custom outputDir was passed, tempDataDir/locations.json must NOT exist
-  assert.equal(existsSync(join(tempDataDir, 'locations.json')), false);
+  // Baseline data/locations.json must remain 100% unchanged
+  const baselineAfter = await readFile(join(baselineDataDir, 'locations.json'), 'utf8');
+  assert.equal(baselineBefore, baselineAfter, 'Baseline data must not be mutated by dry-run sync');
+
+  // Dry-run output files were written inside tempOutputDir
+  assert.ok(existsSync(join(tempOutputDir, 'data', 'locations.json')));
+  assert.ok(existsSync(join(tempOutputDir, 'data', 'metadata.json')));
+  assert.ok(existsSync(join(tempOutputDir, 'reports', 'latest-diff.md')));
+
+  await rm(tempOutputDir, { recursive: true, force: true });
+});
+
+test('integration: dry-run executes Ajv schema validation and rejects invalid metadata', async () => {
+  const tempDir = await mkdtemp(join(tmpdir(), 'sf-test-schema-fail-'));
+
+  const validRecord = {
+    id: '852A', code: '852A', type: 'store', type_name: '順豐站', type_name_en: 'SF Store',
+    name: 'Test', region: '香港島', region_en: 'Hong Kong Island', district: '灣仔區', district_en: 'Wan Chai District',
+    address: 'Address', location: { latitude: 22.28, longitude: 114.17 }, source: 'api_tc', quality_flags: [],
+    provenance: { name: 'api_tc', address: 'api_tc', district: 'api_tc' }, retrieved_at: '2026-07-27'
+  };
+
+  const invalidMetadata = {
+    schema_version: 2,
+    retrieved_at: '2026-07-27',
+    counts: { total: 1, stores: 1, lockers: 0, partners: 0 },
+    count_deltas: {},
+    source_status: {
+      api_tc: { areas_total: 1, areas_success: 1, areas_failed: 0 },
+      api_en: { areas_total: 1, areas_success: 1, areas_failed: 0 },
+      ssr: { count: 0, errors: [] },
+      partner_pdf: { pdf_total: 0, pdf_success: 0, pdf_failed: 0, status: 'success', records: 0, errors: [] }
+    },
+    coverage: {
+      tc_record_count: 1, en_record_count: 1,
+      bilingual_match_rate: 1.5, // INVALID: must be <= 1
+      district_resolved_count: 1, district_unresolved_count: 0
+    },
+    quality: {
+      pipeline_blocking_errors: 0, pipeline_warnings: 0,
+      record_flag_counts_by_severity: { info: 0, warning: 0, error: 0 },
+      flag_counts_by_type: {}
+    }
+  };
+
+  const artifacts = buildReleaseArtifacts({
+    records: [validRecord],
+    metadata: invalidMetadata,
+    reportMarkdown: '# Report'
+  });
+
+  // Verify validateReleaseArtifacts throws in dry-run when metadata is invalid
+  await assert.rejects(
+    validateReleaseArtifacts(artifacts),
+    /JSON Schema validation failed for release artifacts/
+  );
 
   await rm(tempDir, { recursive: true, force: true });
 });
@@ -89,20 +127,14 @@ test('integration: on-disk malformed previous dataset blocks runSync startup', a
   const tempDataDir = join(tempDir, 'data');
   await mkdir(tempDataDir, { recursive: true });
 
-  // Write malformed JSON to temporary locations.json
   await writeFile(join(tempDataDir, 'locations.json'), '{ malformed_json: ', 'utf8');
 
-  // Verify runSync rejects startup when encountering malformed published dataset
   await assert.rejects(
     runSync({
       isFixture: true,
       publish: false,
-      paths: {
-        rootDir: tempDir,
-        dataDir: tempDataDir,
-        rawDir: join(tempDir, 'raw'),
-        reportsDir: join(tempDir, 'reports')
-      }
+      baselineDir: tempDataDir,
+      outputDir: tempDir
     }),
     /Published locations.json is malformed JSON/
   );

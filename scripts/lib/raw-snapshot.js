@@ -56,7 +56,9 @@ export async function saveRawSnapshot(rawDir, sources, retrievedAt) {
         pdf_success_count: sources.pdfSuccessCount ?? 0,
         pdf_failure_count: sources.pdfFailCount ?? 0,
         status: sources.pdfStatus ?? 'success',
+        details: sources.pdfDetails ?? [],
         records: sources.pdfRecords ?? [],
+        quarantined_records: sources.quarantinedRecords ?? [],
         errors: sources.pdfErrors ?? []
       }
     }

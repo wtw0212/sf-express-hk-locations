@@ -9,8 +9,8 @@
  * @param {object} params.stats - Normalization stats
  * @param {object} params.metrics - Completeness gate metrics
  * @param {Array} params.records - Normalized records
- * @param {string[]} [params.gateErrors] - Blocking errors from gates
- * @param {string[]} [params.gateWarnings] - Warnings from gates
+ * @param {string[]} [params.gateErrors] - Blocking errors from pipeline execution
+ * @param {string[]} [params.gateWarnings] - Pipeline execution warnings
  * @param {object} [params.ssrResult] - SSR fetch result
  * @param {object} [params.pdfResult] - PDF fetch result
  * @returns {string} Markdown report
@@ -24,20 +24,40 @@ export function generateMarkdownReport({
   gateErrors = [],
   gateWarnings = [],
   ssrResult = { errors: [] },
-  pdfResult = { pdfTotal: 0, pdfSuccessCount: 0, pdfFailCount: 0, status: 'success', errors: [] }
+  pdfResult = { pdfTotal: 0, pdfSuccessCount: 0, pdfFailCount: 0, status: 'success', errors: [], pdfDetails: [] }
 }) {
   const { added, removed, updated, unchanged, isMigration } = diff;
 
-  // Count quality flags by category
+  // Count record quality flags by category & severity
   const flagCounts = {};
+  let recordWarningCount = 0;
+  let recordInfoCount = 0;
+  let recordErrorCount = 0;
+
   for (const r of records) {
     for (const f of (r.quality_flags || [])) {
       flagCounts[f.type] = (flagCounts[f.type] || 0) + 1;
+      if (f.severity === 'error') recordErrorCount++;
+      else if (f.severity === 'warning') recordWarningCount++;
+      else recordInfoCount++;
     }
   }
+
   const flagCountLines = Object.entries(flagCounts)
     .sort(([, a], [, b]) => b - a)
     .map(([type, count]) => `| ${type} | ${count} |`)
+    .join('\n');
+
+  // Count Deltas Table
+  const deltas = metrics?.count_deltas || {};
+  const deltaLines = Object.entries(deltas)
+    .map(([cat, info]) => {
+      const prevStr = info.baseline_available && info.previous !== null ? info.previous : 'N/A';
+      const pctStr = info.baseline_available ? `${info.delta_pct >= 0 ? '+' : ''}${info.delta_pct}%` : 'N/A';
+      const deltaStr = info.baseline_available ? `${info.delta >= 0 ? '+' : ''}${info.delta}` : 'N/A';
+      const resStr = info.gate_result === 'block' ? '❌ BLOCK' : (info.gate_result === 'warn' ? '⚠️ WARN' : '✅ PASS');
+      return `| ${cat} | ${prevStr} | ${info.current} | ${deltaStr} | ${pctStr} | ${info.baseline_source} | ${resStr} |`;
+    })
     .join('\n');
 
   // Added locations
@@ -50,7 +70,7 @@ export function generateMarkdownReport({
     ? '*(No removed locations)*'
     : removed.map(i => `- \`${i.code}\` [${i.type_name}] ${i.name || ''} -- ${i.address || ''}`).join('\n');
 
-  // Updated locations with field-level changes & quality flags diffs
+  // Updated locations
   const updatedLines = updated.length === 0
     ? '*(No updated locations)*'
     : updated.map(u => {
@@ -85,15 +105,8 @@ export function generateMarkdownReport({
 | Bilingual match rate | ${(metrics.en_match_rate * 100).toFixed(1)}% |`
     : '| Source metrics | unavailable |';
 
-  const prevCount = metrics?.previous_count ?? 0;
-
-  const pdfErrorList = (pdfResult.errors || [])
-    .map(e => `- ${e}`)
-    .join('\n');
-
-  const ssrErrorList = (ssrResult.errors || [])
-    .map(e => `- ${e}`)
-    .join('\n');
+  const pdfErrorList = (pdfResult.errors || []).map(e => `- ${e}`).join('\n');
+  const ssrErrorList = (ssrResult.errors || []).map(e => `- ${e}`).join('\n');
 
   const migrationHeader = isMigration
     ? `> [!NOTE]\n> **Schema Migration Notice**: This dataset sync represents a Schema v1 -> v2 migration. Field additions and source identifier updates are demarcated.\n\n`
@@ -109,7 +122,7 @@ ${migrationHeader}---
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | ${prevCount} |
+| **Previous total** | ${metrics?.previous_count ?? 'N/A'} |
 | **Current total** | ${stats.total} |
 | **Stores** | ${stats.stores} |
 | **Lockers** | ${stats.lockers} |
@@ -118,6 +131,14 @@ ${migrationHeader}---
 | **Removed** | ${removed.length} |
 | **Updated** | ${updated.length} |
 | **Unchanged** | ${unchanged} |
+
+---
+
+## Count Deltas
+
+| Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
+| :--- | ---: | ---: | ---: | ---: | :--- | :--- |
+${deltaLines || '| (none) | | | | | | |'}
 
 ---
 
@@ -133,15 +154,27 @@ ${sourceSummary}
 
 ${pdfErrorList || ssrErrorList ? `### Supplementary Source Failures / Warnings\n\n${pdfErrorList ? `#### Partner PDF Errors:\n${pdfErrorList}\n` : ''}${ssrErrorList ? `#### SSR Errors:\n${ssrErrorList}\n` : ''}\n` : ''}---
 
-## Quality Flags Summary
+## Pipeline Execution Status
 
-| Flag | Count |
+| Metric | Count |
+| :--- | :--- |
+| **Pipeline Blocking Errors** | ${gateErrors.length} |
+| **Pipeline Execution Warnings** | ${gateWarnings.length} |
+| **Record Quality Warnings** | ${recordWarningCount} |
+| **Record Quality Info Flags** | ${recordInfoCount} |
+| **Record Quality Errors** | ${recordErrorCount} |
+
+---
+
+## Record Quality Flags Summary
+
+| Flag Type | Count |
 | :--- | :--- |
 ${flagCountLines || '| (none) | 0 |'}
 
 ---
 
-${gateErrors.length > 0 ? `## Blocking Errors (${gateErrors.length})\n\n${gateErrors.map(e => `- ${e}`).join('\n')}\n\n---\n\n` : ''}${gateWarnings.length > 0 ? `## Warnings (${gateWarnings.length})\n\n${gateWarnings.map(w => `- ${w}`).join('\n')}\n\n---\n\n` : ''}## Added Locations (${added.length})
+${gateErrors.length > 0 ? `## Pipeline Blocking Errors (${gateErrors.length})\n\n${gateErrors.map(e => `- ❌ ${e}`).join('\n')}\n\n---\n\n` : ''}${gateWarnings.length > 0 ? `## Pipeline Execution Warnings (${gateWarnings.length})\n\n${gateWarnings.map(w => `- ⚠️ ${w}`).join('\n')}\n\n---\n\n` : ''}## Added Locations (${added.length})
 
 ${addedLines}
 

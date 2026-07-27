@@ -38,6 +38,9 @@ const validMetadata = {
   schema_version: 2,
   retrieved_at: '2026-07-27 10:00 (HKT UTC+8)',
   counts: { total: 1, stores: 1, lockers: 0, partners: 0 },
+  count_deltas: {
+    total: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' }
+  },
   source_status: {
     api_tc: { areas_total: 112, areas_success: 112, areas_failed: 0 },
     api_en: { areas_total: 112, areas_success: 112, areas_failed: 0 },
@@ -51,7 +54,12 @@ const validMetadata = {
     district_resolved_count: 1665,
     district_unresolved_count: 1
   },
-  quality: { blocking_errors: 0, warnings: 0, flag_counts: {} }
+  quality: {
+    pipeline_blocking_errors: 0,
+    pipeline_warnings: 0,
+    record_flag_counts_by_severity: { info: 0, warning: 0, error: 0 },
+    flag_counts_by_type: {}
+  }
 };
 
 test('schema-validator: valid record passes schema', async () => {

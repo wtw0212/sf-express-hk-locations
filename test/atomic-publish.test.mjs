@@ -36,6 +36,9 @@ const mockMetadata = {
   schema_version: 2,
   retrieved_at: '2026-07-27',
   counts: { total: 1, stores: 1, lockers: 0, partners: 0 },
+  count_deltas: {
+    total: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' }
+  },
   source_status: {
     api_tc: { areas_total: 1, areas_success: 1, areas_failed: 0 },
     api_en: { areas_total: 1, areas_success: 1, areas_failed: 0 },
@@ -43,7 +46,12 @@ const mockMetadata = {
     partner_pdf: { pdf_total: 0, pdf_success: 0, pdf_failed: 0, status: 'success', records: 0, errors: [] }
   },
   coverage: { tc_record_count: 1, en_record_count: 1, bilingual_match_rate: 1, district_resolved_count: 1, district_unresolved_count: 0 },
-  quality: { blocking_errors: 0, warnings: 0, flag_counts: {} }
+  quality: {
+    pipeline_blocking_errors: 0,
+    pipeline_warnings: 0,
+    record_flag_counts_by_severity: { info: 0, warning: 0, error: 0 },
+    flag_counts_by_type: {}
+  }
 };
 
 test('atomicPublish: successful publication updates all files atomically', async () => {

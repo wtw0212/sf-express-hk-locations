@@ -246,6 +246,90 @@ export async function fetchSsrPages() {
   return { records, errors, ok: errors.length === 0 };
 }
 
+const SERVICE_CODE_REGEX = /\b(852[A-Z][A-Z0-9]*\d+)\b/g;
+
+/**
+ * Split a single PDF text line into isolated single-code segments.
+ * Prevents subsequent service codes/addresses from bleeding into earlier records.
+ *
+ * @param {string} line
+ * @returns {Array<{ code: string, segment: string }>}
+ */
+export function extractLineSegments(line) {
+  if (!line) return [];
+  const matches = [...line.matchAll(SERVICE_CODE_REGEX)];
+  if (matches.length === 0) return [];
+
+  const segments = [];
+  for (let idx = 0; idx < matches.length; idx++) {
+    const match = matches[idx];
+    const code = match[1];
+
+    const startPos = idx === 0 ? 0 : match.index;
+    const endPos = idx + 1 < matches.length ? matches[idx + 1].index : line.length;
+
+    const segment = line.slice(startPos, endPos);
+    segments.push({ code, segment });
+  }
+
+  return segments;
+}
+
+/**
+ * Validate a candidate partner record extracted from PDF.
+ * Checks for embedded service codes, residual '^' separators, placeholder addresses, etc.
+ *
+ * @param {object} record
+ * @param {string} rawSegment
+ * @returns {{ valid: boolean, reasonCodes: string[] }}
+ */
+export function validateParsedPartnerRecord(record, rawSegment) {
+  const reasonCodes = [];
+  const { serviceCode, name, address } = record;
+
+  if (!serviceCode || !/^852[A-Z][A-Z0-9]*\d+$/.test(serviceCode)) {
+    reasonCodes.push('INVALID_SERVICE_CODE');
+  }
+
+  const trimmedName = (name || '').trim();
+  const trimmedAddr = (address || '').trim();
+
+  if (!trimmedName) reasonCodes.push('EMPTY_NAME');
+  if (!trimmedAddr) reasonCodes.push('EMPTY_ADDRESS');
+
+  if (trimmedName && trimmedAddr && trimmedName === trimmedAddr) {
+    reasonCodes.push('NAME_EQUALS_ADDRESS');
+  }
+
+  const placeholders = ['順豐合作點', 'OK便利店', '合作點', '自取點', '^'];
+  if (placeholders.includes(trimmedAddr) || trimmedAddr.startsWith('852')) {
+    reasonCodes.push('PLACEHOLDER_ADDRESS');
+  }
+
+  const otherCodeRegex = /\b852[A-Z][A-Z0-9]*\d+\b/g;
+  if (trimmedName) {
+    const nameCodes = [...trimmedName.matchAll(otherCodeRegex)].map(m => m[0]);
+    if (nameCodes.some(c => c !== serviceCode)) {
+      reasonCodes.push('EMBEDDED_SERVICE_CODE');
+    }
+  }
+  if (trimmedAddr) {
+    const addrCodes = [...trimmedAddr.matchAll(otherCodeRegex)].map(m => m[0]);
+    if (addrCodes.some(c => c !== serviceCode)) {
+      reasonCodes.push('EMBEDDED_SERVICE_CODE');
+    }
+  }
+
+  if ((trimmedName && trimmedName.includes('^')) || (trimmedAddr && trimmedAddr.includes('^'))) {
+    reasonCodes.push('RESIDUAL_SEPARATOR');
+  }
+
+  return {
+    valid: reasonCodes.length === 0,
+    reasonCodes: [...new Set(reasonCodes)]
+  };
+}
+
 /**
  * Fetch and parse partner PDF records.
  * Non-blocking — errors are collected, not thrown.
@@ -256,6 +340,7 @@ export async function fetchPartnerPdfs() {
   console.log('Fetching official Service Partner PDFs...');
   const errors = [];
   const pdfDetails = [];
+  const quarantinedRecords = [];
 
   // Dynamically discover PDF URLs from the official partner page
   let partnerPdfs = [];
@@ -305,7 +390,8 @@ export async function fetchPartnerPdfs() {
         pdfFailCount: partnerPdfs.length,
         status: partnerPdfs.length > 0 ? 'all_pdfs_failed' : 'no_pdfs_discovered',
         errors,
-        pdfDetails: partnerPdfs.map(url => ({ url, ok: false, error: errMsg }))
+        pdfDetails: partnerPdfs.map(url => ({ url, ok: false, status: 0, attempts: 0, error: errMsg, recordCount: 0, valid_record_count: 0, quarantined_record_count: 0, status: 'http_failure' })),
+        quarantinedRecords: []
       };
     }
   }
@@ -322,7 +408,18 @@ export async function fetchPartnerPdfs() {
       const errMsg = `PDF fetch failed (HTTP ${pdfRes.status || 'NET_ERR'}): ${url} - ${pdfRes.error}`;
       errors.push(errMsg);
       pdfFailCount++;
-      pdfDetails.push({ url, ok: false, status: pdfRes.status, attempts: pdfRes.attempts, error: pdfRes.error, recordCount: 0 });
+      pdfDetails.push({
+        url,
+        ok: false,
+        status: 'http_failure',
+        http_ok: false,
+        parse_ok: false,
+        attempts: pdfRes.attempts,
+        error: pdfRes.error,
+        raw_code_count: 0,
+        valid_record_count: 0,
+        quarantined_record_count: 0
+      });
       continue;
     }
 
@@ -331,102 +428,138 @@ export async function fetchPartnerPdfs() {
       const data = await pdf(Buffer.from(buffer));
       const lines = (data.text || '').split('\n').map(l => l.trim()).filter(Boolean);
 
-      let parsedCountForPdf = 0;
+      let pdfRawCodeCount = 0;
+      let pdfValidCount = 0;
+      let pdfQuarantineCount = 0;
+
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
-        const allMatches = [...line.matchAll(/\b(852[A-Z][A-Z0-9]*\d+)\b/g)];
-        const lineCodes = [...new Set(allMatches.map(m => m[1]))];
+        const lineSegments = extractLineSegments(line);
 
-        for (const code of lineCodes) {
-          if (partnerMap.has(code)) continue;
+        for (const { code, segment } of lineSegments) {
+          pdfRawCodeCount++;
 
           let subDistrict = '';
-          let name = isOkStore ? 'OK便利店' : '順豐合作點';
+          let name = '';
           let address = '';
           let hours = null;
 
+          const parts = segment.split(code);
           if (isOkStore) {
-            const parts = line.split(code);
-            subDistrict = parts[0] || '';
+            subDistrict = (parts[0] || '').replace(/\^/g, '').trim();
             const rest = parts.slice(1).join(code);
-            const addrAndHours = rest.split('^');
-            address = addrAndHours[0] || '';
-            const rawHours = (addrAndHours[2] || '').trim();
-            hours = rawHours || null;
-            name = `OK便利店 (${subDistrict.trim()})`;
+            const addrAndHours = rest.split('^').map(s => s.trim());
+            address = (addrAndHours[0] || '').replace(/\^/g, '').trim();
+            hours = addrAndHours[2] || addrAndHours[1] || null;
+            if (hours && hours.includes('852')) hours = null;
+            name = `OK便利店${subDistrict ? ` (${subDistrict})` : ''}`;
           } else {
-            const parts = line.split(code);
-            name = parts[0] || '順豐合作點';
+            name = (parts[0] || '').replace(/\^/g, '').trim();
+            if (!name) name = '順豐合作點';
             const rest = parts.slice(1).join(code);
-            const addrParts = rest.split('^');
-            address = addrParts[0] || '';
-
-            const hoursLines = [];
-            let j = i + 1;
-            while (j < lines.length) {
-              const curLine = lines[j];
-              if (curLine.includes('體積:') || curLine.includes('重量:') || curLine.match(/\b852[A-Z][A-Z0-9]*\d+\b/)) break;
-              if (curLine.includes('星期') || curLine.includes('公眾假期') || curLine.includes('午休') ||
-                  curLine.includes('休息') || curLine.includes('OFF') || curLine.match(/^\d{2}:\d{2}/) ||
-                  (hoursLines.length > 0 && curLine.match(/^\d{2}:\d{2}\)/))) {
-                hoursLines.push(curLine);
-              } else if (hoursLines.length > 0) {
-                hoursLines.push(curLine);
-              } else {
-                break;
-              }
-              j++;
-            }
-            hours = hoursLines.length > 0 ? hoursLines.join(' ') : null;
+            const addrParts = rest.split('^').map(s => s.trim());
+            address = (addrParts[0] || '').replace(/\^/g, '').trim();
+            hours = addrParts[1] || null;
+            if (hours && (hours.includes('852') || hours.length > 100)) hours = null;
           }
 
-          partnerMap.set(code, {
+          const candidate = {
             serviceCode: code,
-            name: name.trim(),
-            address: address.trim(),
-            district: subDistrict.trim(),
+            name,
+            address,
+            district: subDistrict,
             city: '',
             serviceTime: hours,
             isPartner: true,
             _source: 'pdf_partner',
             _source_url: url
-          });
-          parsedCountForPdf++;
+          };
+
+          const validation = validateParsedPartnerRecord(candidate, segment);
+
+          if (!validation.valid) {
+            pdfQuarantineCount++;
+            quarantinedRecords.push({
+              sourceUrl: url,
+              rawSegment: segment,
+              extractedCode: code,
+              candidateRecord: candidate,
+              reasonCodes: validation.reasonCodes
+            });
+          } else {
+            if (!partnerMap.has(code)) {
+              partnerMap.set(code, candidate);
+              pdfValidCount++;
+            }
+          }
         }
       }
+
       pdfSuccessCount++;
-      pdfDetails.push({ url, ok: true, status: pdfRes.status, attempts: pdfRes.attempts, error: null, recordCount: parsedCountForPdf });
+
+      let pdfStatus = 'success';
+      if (pdfValidCount === 0 && pdfRawCodeCount === 0) {
+        pdfStatus = 'zero_records_parsed';
+      } else if (pdfQuarantineCount > 0) {
+        pdfStatus = 'partial_parse_quality_failure';
+      }
+
+      pdfDetails.push({
+        url,
+        ok: pdfStatus === 'success' || pdfStatus === 'partial_parse_quality_failure',
+        status: pdfStatus,
+        http_ok: true,
+        parse_ok: true,
+        attempts: pdfRes.attempts,
+        error: null,
+        raw_code_count: pdfRawCodeCount,
+        valid_record_count: pdfValidCount,
+        quarantined_record_count: pdfQuarantineCount
+      });
     } catch (e) {
       const errMsg = `PDF parse error (${url}): ${e.message}`;
       errors.push(errMsg);
       pdfFailCount++;
-      pdfDetails.push({ url, ok: false, status: pdfRes.status, attempts: pdfRes.attempts, error: e.message, recordCount: 0 });
+      pdfDetails.push({
+        url,
+        ok: false,
+        status: 'parse_failure',
+        http_ok: true,
+        parse_ok: false,
+        attempts: pdfRes.attempts,
+        error: e.message,
+        raw_code_count: 0,
+        valid_record_count: 0,
+        quarantined_record_count: 0
+      });
     }
   }
 
-  const records = Array.from(partnerMap.values());
+  const validPartnerRecords = [...partnerMap.values()];
 
-  // Determine categorical status
-  let status = 'success';
+  let overallStatus = 'success';
   if (partnerPdfs.length === 0) {
-    status = 'no_pdfs_discovered';
+    overallStatus = 'no_pdfs_discovered';
   } else if (pdfSuccessCount === 0) {
-    status = 'all_pdfs_failed';
+    overallStatus = 'all_pdfs_failed';
   } else if (pdfFailCount > 0) {
-    status = 'partial_pdf_failures';
-  } else if (records.length === 0) {
-    status = 'zero_records_parsed';
+    overallStatus = 'partial_pdf_failures';
+  } else if (validPartnerRecords.length === 0) {
+    overallStatus = 'zero_records_parsed';
+  } else if (quarantinedRecords.length > 0) {
+    overallStatus = 'partial_parse_quality_failure';
   }
 
-  console.log(`  PDF: ${pdfSuccessCount}/${partnerPdfs.length} succeeded (${status}), ${pdfFailCount} failed, ${records.length} records`);
+  console.log(`  PDF: ${pdfSuccessCount}/${partnerPdfs.length} succeeded (${overallStatus}), ${pdfFailCount} failed, ${validPartnerRecords.length} valid records, ${quarantinedRecords.length} quarantined`);
 
   return {
-    records,
+    records: validPartnerRecords,
     pdfTotal: partnerPdfs.length,
     pdfSuccessCount,
     pdfFailCount,
-    status,
+    status: overallStatus,
     errors,
-    pdfDetails
+    pdfDetails,
+    quarantinedRecords
   };
 }

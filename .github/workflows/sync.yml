@@ -2,7 +2,7 @@ name: Sync Locations Data
 
 on:
   schedule:
-    # Run daily at 00:00 UTC (08:00 HKT)
+    # Run daily at 00:00 UTC (08:00 HKT) — aligns with standard HK start of business day
     - cron: '0 0 * * *'
   workflow_dispatch:
 
@@ -31,7 +31,7 @@ jobs:
         run: npm test
 
       - name: Run Fixture Dry-Run Sync
-        run: npm run sync -- --fixture --dry-run --output-dir "$RUNNER_TEMP/sf-fixture-output"
+        run: npm run sync -- --fixture --dry-run --baseline-dir "$GITHUB_WORKSPACE/data" --output-dir "$RUNNER_TEMP/sf-fixture-output"
 
       - name: Ensure Working Tree Clean Pre-Live
         run: git diff --exit-code

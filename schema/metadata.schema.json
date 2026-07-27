@@ -6,6 +6,7 @@
     "schema_version",
     "retrieved_at",
     "counts",
+    "count_deltas",
     "source_status",
     "coverage",
     "quality"
@@ -23,6 +24,23 @@
         "partners": { "type": "integer", "minimum": 0 }
       },
       "additionalProperties": false
+    },
+    "count_deltas": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["previous", "current", "delta", "delta_pct", "baseline_available", "baseline_source", "gate_result"],
+        "properties": {
+          "previous": { "type": ["integer", "null"] },
+          "current": { "type": "integer" },
+          "delta": { "type": "integer" },
+          "delta_pct": { "type": "number" },
+          "baseline_available": { "type": "boolean" },
+          "baseline_source": { "type": "string" },
+          "gate_result": { "type": "string", "enum": ["pass", "warn", "block"] }
+        },
+        "additionalProperties": false
+      }
     },
     "source_status": {
       "type": "object",
@@ -64,9 +82,10 @@
             "pdf_total": { "type": "integer", "minimum": 0 },
             "pdf_success": { "type": "integer", "minimum": 0 },
             "pdf_failed": { "type": "integer", "minimum": 0 },
-            "status": { "type": "string", "enum": ["success", "no_pdfs_discovered", "all_pdfs_failed", "partial_pdf_failures", "zero_records_parsed"] },
+            "status": { "type": "string", "enum": ["success", "no_pdfs_discovered", "all_pdfs_failed", "partial_pdf_failures", "zero_records_parsed", "partial_parse_quality_failure"] },
             "records": { "type": "integer", "minimum": 0 },
-            "errors": { "type": "array", "items": { "type": "string" } }
+            "errors": { "type": "array", "items": { "type": "string" } },
+            "details": { "type": "array" }
           },
           "additionalProperties": false
         }
@@ -93,11 +112,26 @@
     },
     "quality": {
       "type": "object",
-      "required": ["blocking_errors", "warnings", "flag_counts"],
+      "required": [
+        "pipeline_blocking_errors",
+        "pipeline_warnings",
+        "record_flag_counts_by_severity",
+        "flag_counts_by_type"
+      ],
       "properties": {
-        "blocking_errors": { "type": "integer", "minimum": 0 },
-        "warnings": { "type": "integer", "minimum": 0 },
-        "flag_counts": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
+        "pipeline_blocking_errors": { "type": "integer", "minimum": 0 },
+        "pipeline_warnings": { "type": "integer", "minimum": 0 },
+        "record_flag_counts_by_severity": {
+          "type": "object",
+          "required": ["info", "warning", "error"],
+          "properties": {
+            "info": { "type": "integer", "minimum": 0 },
+            "warning": { "type": "integer", "minimum": 0 },
+            "error": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "flag_counts_by_type": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
       },
       "additionalProperties": false
     }

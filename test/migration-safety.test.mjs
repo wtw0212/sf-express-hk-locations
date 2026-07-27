@@ -14,6 +14,31 @@ import { sha256 } from '../scripts/lib/source-hashes.js';
 
 const reviewedPath = resolve('data/reviewed-pdf-partners.json');
 
+function reviewedEvidencePredatesCurrentDocument(reviewedAt, currentDocumentAt) {
+  const reviewedTime = Date.parse(reviewedAt);
+  const currentDocumentTime = Date.parse(currentDocumentAt);
+  return Number.isFinite(reviewedTime) &&
+    Number.isFinite(currentDocumentTime) &&
+    reviewedTime <= currentDocumentTime;
+}
+
+test('reviewed evidence timestamp remains valid after a later live document refresh', () => {
+  assert.equal(
+    reviewedEvidencePredatesCurrentDocument(
+      '2026-07-27T11:28:50.373Z',
+      '2026-07-27T12:50:22.924Z'
+    ),
+    true
+  );
+  assert.equal(
+    reviewedEvidencePredatesCurrentDocument(
+      '2026-07-27T12:50:22.924Z',
+      '2026-07-27T11:28:50.373Z'
+    ),
+    false
+  );
+});
+
 test('reviewed registry records retain every reviewed fallback field and provenance', async () => {
   const reviewedPdfRegistry = await loadReviewedPdfRegistry(reviewedPath);
   const { records } = normalizeRecords({
@@ -517,7 +542,13 @@ test('committed reviewed evidence matches the immutable raw snapshot and artifac
     assert.equal(record.reviewed_extracted_text_sha256, sha256(document.text));
     assert.equal(record.reviewed_extracted_text_sha256, document.extracted_text_sha256);
     assert.notEqual(document.document_binary_sha256, document.extracted_text_sha256);
-    assert.equal(record.reviewed_source_retrieved_at, document.document_retrieved_at);
+    assert.ok(
+      reviewedEvidencePredatesCurrentDocument(
+        record.reviewed_source_retrieved_at,
+        document.document_retrieved_at
+      ),
+      `${record.code} reviewed evidence cannot be newer than the latest live document`
+    );
     assert.ok(
       Date.parse(metadata.generated_at.replace(' (HKT UTC+8)', '+08:00')) >=
         Date.parse(record.reviewed_source_retrieved_at.replace(' (HKT UTC+8)', '+08:00')),

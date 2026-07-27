@@ -144,7 +144,11 @@ test('14 & 15. Reviewed/PDF differences create drift, missing reviewed records d
     'https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf'
   );
   assert.equal(
-    missingReviewed.evidence.document_sha256,
+    missingReviewed.evidence.document_binary_sha256,
+    'a83821a509d042762210c85544959a0e2936afbd3406c8f7d66e79aade50f520'
+  );
+  assert.equal(
+    missingReviewed.evidence.extracted_text_sha256,
     '8c9fd67e2458bcca149b7556c71a2d0908b5fc9e0c930ec01bbcc5e5baa7695d'
   );
   assert.equal(

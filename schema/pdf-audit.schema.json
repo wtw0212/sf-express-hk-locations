@@ -4,12 +4,13 @@
   "definitions": {
     "evidence": {
       "type": "object",
-      "required": ["source_key", "source_url", "document_retrieved_at", "document_sha256", "parser_location"],
+      "required": ["source_key", "source_url", "document_retrieved_at", "document_binary_sha256", "extracted_text_sha256", "parser_location"],
       "properties": {
         "source_key": { "type": ["string", "null"] },
         "source_url": { "type": ["string", "null"] },
         "document_retrieved_at": { "type": ["string", "null"] },
-        "document_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+        "document_binary_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+        "extracted_text_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
         "parser_location": {
           "type": ["object", "null"],
           "properties": {

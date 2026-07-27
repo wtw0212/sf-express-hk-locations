@@ -10,6 +10,7 @@ import { auditPartnerPdfRecords } from '../scripts/lib/pdf-audit.js';
 import { checkCompletenessGates, checkPipelineRegression, validatePreviousDataset } from '../scripts/lib/validate.js';
 import { parsePartnerPdfDocuments } from '../scripts/lib/source-fetchers.js';
 import { runSync } from '../scripts/sync.js';
+import { sha256 } from '../scripts/lib/source-hashes.js';
 
 const reviewedPath = resolve('data/reviewed-pdf-partners.json');
 
@@ -64,9 +65,11 @@ test('reviewed registry carries immutable document evidence', async () => {
   const aspRecord = registry.records.find(record => record.code === '852LA3007');
 
   assert.equal(okRecord._registry_evidence.reviewed_source_url, 'https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf');
-  assert.equal(okRecord._registry_evidence.reviewed_document_sha256, '8c9fd67e2458bcca149b7556c71a2d0908b5fc9e0c930ec01bbcc5e5baa7695d');
+  assert.equal(okRecord._registry_evidence.reviewed_document_binary_sha256, 'a83821a509d042762210c85544959a0e2936afbd3406c8f7d66e79aade50f520');
+  assert.equal(okRecord._registry_evidence.reviewed_extracted_text_sha256, '8c9fd67e2458bcca149b7556c71a2d0908b5fc9e0c930ec01bbcc5e5baa7695d');
   assert.equal(aspRecord._registry_evidence.reviewed_source_url, 'https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf');
-  assert.equal(aspRecord._registry_evidence.reviewed_document_sha256, 'c0f4ffc4d15d126151195450d0d91fc89dbc64f0281c281eb07f92e51a979432');
+  assert.equal(aspRecord._registry_evidence.reviewed_document_binary_sha256, '9b13d21f52e855eecb23de5f6a024be0cfaf0f897850f32ab0ff2ce6e4a3854a');
+  assert.equal(aspRecord._registry_evidence.reviewed_extracted_text_sha256, 'c0f4ffc4d15d126151195450d0d91fc89dbc64f0281c281eb07f92e51a979432');
   assert.equal(aspRecord._registry_evidence.reviewed_source_retrieved_at, '2026-07-27 15:49 (HKT UTC+8)');
 });
 
@@ -80,13 +83,15 @@ test('PDF audit distinguishes formatting, equivalent hours, and semantic conflic
       {
         serviceCode: '852FMT1', name: '測試店', address: '香港灣仔道1號', serviceTime: '00:00-23:59',
         _source_key: 'OK_HK_TC', _source_url: 'https://example.test/ok.pdf',
-        _document_retrieved_at: '2026-07-27T00:00:00.000Z', _document_sha256: 'a'.repeat(64),
+        _document_retrieved_at: '2026-07-27T00:00:00.000Z',
+        _document_binary_sha256: 'a'.repeat(64), _extracted_text_sha256: 'c'.repeat(64),
         _parser_location: { row_index: 7, raw_row: 'raw PDF row' }
       },
       {
         serviceCode: '852SEM1', name: 'PDF名稱', address: 'PDF地址', serviceTime: '10:00-19:00',
         _source_key: 'ASP_HK_TC', _source_url: 'https://example.test/asp.pdf',
-        _document_retrieved_at: '2026-07-27T00:00:00.000Z', _document_sha256: 'b'.repeat(64),
+        _document_retrieved_at: '2026-07-27T00:00:00.000Z',
+        _document_binary_sha256: 'b'.repeat(64), _extracted_text_sha256: 'd'.repeat(64),
         _parser_location: { row_index: 8, raw_row: 'other raw PDF row' }
       }
     ]
@@ -97,7 +102,8 @@ test('PDF audit distinguishes formatting, equivalent hours, and semantic conflic
   assert.equal(formatting.comparison.address.classification, 'formatting_difference');
   assert.equal(formatting.comparison.business_hours.classification, 'equivalent_difference');
   assert.equal(formatting.evidence.source_key, 'OK_HK_TC');
-  assert.equal(formatting.evidence.document_sha256, 'a'.repeat(64));
+  assert.equal(formatting.evidence.document_binary_sha256, 'a'.repeat(64));
+  assert.equal(formatting.evidence.extracted_text_sha256, 'c'.repeat(64));
   assert.equal(formatting.evidence.parser_location.raw_row, 'raw PDF row');
 
   const semantic = audit.api_pdf_conflicts.find(item => item.code === '852SEM1');
@@ -364,7 +370,10 @@ test('committed reviewed evidence matches the immutable raw snapshot and artifac
   for (const record of registry) {
     const document = documentsByUrl.get(record.reviewed_source_url);
     assert.ok(document, `${record.code} reviewed source must exist in raw snapshot`);
-    assert.equal(record.reviewed_document_sha256, document.document_sha256);
+    assert.equal(record.reviewed_document_binary_sha256, document.document_binary_sha256);
+    assert.equal(record.reviewed_extracted_text_sha256, sha256(document.text));
+    assert.equal(record.reviewed_extracted_text_sha256, document.extracted_text_sha256);
+    assert.notEqual(document.document_binary_sha256, document.extracted_text_sha256);
     assert.equal(record.reviewed_source_retrieved_at, document.document_retrieved_at);
     assert.ok(
       Date.parse(metadata.generated_at.replace(' (HKT UTC+8)', '+08:00')) >=

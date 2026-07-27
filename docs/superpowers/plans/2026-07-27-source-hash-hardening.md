@@ -233,7 +233,7 @@ const explained =
 
 Run: `node --test --test-name-pattern='pipeline regression|source_integrity' test/migration-safety.test.mjs test/schema-validator.test.mjs`
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/lib/source-hashes.js scripts/lib/validate.js scripts/sync.js schema/metadata.schema.json test/migration-safety.test.mjs test/schema-validator.test.mjs
@@ -257,25 +257,25 @@ git commit -m "Gate unexplained canonical drift"
 - Reviewed entries expose `reviewed_document_binary_sha256` and `reviewed_extracted_text_sha256`.
 - Fixture verification recalculates extracted-text hashes and never derives binary hashes from text.
 
-- [ ] **Step 1: Add binary/text separation and reviewed-evidence recalculation tests**
+- [x] **Step 1: Add binary/text separation and reviewed-evidence recalculation tests**
 
 ```js
 assert.equal(record.reviewed_extracted_text_sha256, sha256(rawDocument.text));
 assert.notEqual(rawDocument.document_binary_sha256, rawDocument.extracted_text_sha256);
 ```
 
-- [ ] **Step 2: Run focused tests and verify RED**
+- [x] **Step 2: Run focused tests and verify RED**
 
 Run: `node --test --test-name-pattern='binary|extracted|reviewed evidence' test/migration-safety.test.mjs test/pdf-parsers.test.mjs`
 
-- [ ] **Step 3: Split live, fixture, registry, audit, and schema fields**
+- [x] **Step 3: Split live, fixture, registry, audit, and schema fields**
 
 ```js
 const document_binary_sha256 = sha256(Buffer.from(buffer));
 const extracted_text_sha256 = sha256(data.text || '');
 ```
 
-- [ ] **Step 4: Run focused tests and verify GREEN**
+- [x] **Step 4: Run focused tests and verify GREEN**
 
 Run: `node --test --test-name-pattern='binary|extracted|reviewed evidence' test/migration-safety.test.mjs test/pdf-parsers.test.mjs`
 

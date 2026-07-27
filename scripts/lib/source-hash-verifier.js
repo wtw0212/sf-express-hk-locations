@@ -76,6 +76,22 @@ export function verifySourceHashes(snapshot) {
     ...verifyApiSource('api_tc', snapshot?.sources?.api_tc),
     ...verifyApiSource('api_en', snapshot?.sources?.api_en)
   ];
+  for (const [index, document] of (snapshot?.sources?.partner_pdf?.documents || []).entries()) {
+    if (typeof document.text === 'string') {
+      if (sha256(document.text) !== document.extracted_text_sha256) {
+        errors.push(`partner_pdf document ${index}: extracted text hash mismatch`);
+      }
+    } else if (document.extracted_text_sha256 !== null) {
+      errors.push(`partner_pdf document ${index}: extracted text hash must be null without text`);
+    }
+    if (
+      document.http_ok &&
+      (typeof document.document_binary_sha256 !== 'string' ||
+        !/^[a-f0-9]{64}$/.test(document.document_binary_sha256))
+    ) {
+      errors.push(`partner_pdf document ${index}: document binary hash missing or invalid`);
+    }
+  }
   if (errors.length > 0) {
     throw new Error(`Source hash verification failed:\n${errors.join('\n')}`);
   }

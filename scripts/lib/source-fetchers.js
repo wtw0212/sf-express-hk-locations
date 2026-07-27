@@ -1,5 +1,5 @@
 import { fetchWithRetry, withConcurrency } from './api-client.js';
-import { createHash } from 'node:crypto';
+import { sha256 } from './source-hashes.js';
 import { PDF_PARSE_QUALITY_CONFIG } from './constants.js';
 import { parseOkPartnerPdfText } from './pdf-parsers/ok-partner-parser.js';
 import { parseAspPartnerPdfText } from './pdf-parsers/asp-partner-parser.js';
@@ -446,12 +446,17 @@ export function parsePartnerPdfDocuments(documents = []) {
   let pdfFailCount = 0;
   let crossPdfDuplicateConflictCount = 0;
 
-  for (const doc of documents) {
+  const normalizedDocuments = documents.map(doc => ({
+    ...doc,
+    document_binary_sha256: doc.document_binary_sha256 ?? null,
+    extracted_text_sha256: typeof doc.text === 'string' ? sha256(doc.text) : null
+  }));
+
+  for (const doc of normalizedDocuments) {
     const { source_key: sourceKey, url, http_ok: httpOk, parse_ok: parseOk, attempts, text, error: docErr, parse_error: parseErr } = doc;
     const documentRetrievedAt = doc.document_retrieved_at || doc.retrieved_at || null;
-    const documentSha256 = doc.document_sha256 || (typeof text === 'string'
-      ? createHash('sha256').update(text).digest('hex')
-      : null);
+    const documentBinarySha256 = doc.document_binary_sha256;
+    const extractedTextSha256 = doc.extracted_text_sha256;
     if (!httpOk) {
       errors.push(`PDF fetch failed for ${url}: ${docErr || 'HTTP Error'}`);
       pdfFailCount++;
@@ -516,7 +521,8 @@ export function parsePartnerPdfDocuments(documents = []) {
           source_key: sourceKey,
           source_url: url,
           document_retrieved_at: documentRetrievedAt,
-          document_sha256: documentSha256
+          document_binary_sha256: documentBinarySha256,
+          extracted_text_sha256: extractedTextSha256
         }
       })));
 
@@ -524,14 +530,21 @@ export function parsePartnerPdfDocuments(documents = []) {
         rec._source_key = sourceKey;
         rec._source_url = url;
         rec._document_retrieved_at = documentRetrievedAt;
-        rec._document_sha256 = documentSha256;
+        rec._document_binary_sha256 = documentBinarySha256;
+        rec._extracted_text_sha256 = extractedTextSha256;
         if (conflictedCodes.has(rec.serviceCode)) {
           quarantinedRecords.push({
             extractedCode: rec.serviceCode,
             involvedCodes: [rec.serviceCode],
             candidateRecord: rec,
             reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
-            provenance: { source_key: sourceKey, source_url: url, document_retrieved_at: documentRetrievedAt, document_sha256: documentSha256 }
+            provenance: {
+              source_key: sourceKey,
+              source_url: url,
+              document_retrieved_at: documentRetrievedAt,
+              document_binary_sha256: documentBinarySha256,
+              extracted_text_sha256: extractedTextSha256
+            }
           });
           continue;
         }
@@ -560,14 +573,26 @@ export function parsePartnerPdfDocuments(documents = []) {
             involvedCodes: [rec.serviceCode],
             candidateRecord: existing.record,
             reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
-            provenance: { source_key: existing.sourceKey, source_url: existing.sourceUrl, document_retrieved_at: existing.record._document_retrieved_at || null, document_sha256: existing.record._document_sha256 || null }
+            provenance: {
+              source_key: existing.sourceKey,
+              source_url: existing.sourceUrl,
+              document_retrieved_at: existing.record._document_retrieved_at || null,
+              document_binary_sha256: existing.record._document_binary_sha256 || null,
+              extracted_text_sha256: existing.record._extracted_text_sha256 || null
+            }
           },
           {
             extractedCode: rec.serviceCode,
             involvedCodes: [rec.serviceCode],
             candidateRecord: rec,
             reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
-            provenance: { source_key: sourceKey, source_url: url, document_retrieved_at: documentRetrievedAt, document_sha256: documentSha256 }
+            provenance: {
+              source_key: sourceKey,
+              source_url: url,
+              document_retrieved_at: documentRetrievedAt,
+              document_binary_sha256: documentBinarySha256,
+              extracted_text_sha256: extractedTextSha256
+            }
           }
         );
       }
@@ -651,7 +676,7 @@ export function parsePartnerPdfDocuments(documents = []) {
 
   return {
     records: validPartnerRecords,
-    documents,
+    documents: normalizedDocuments,
     pdfTotal: documents.length,
     httpSuccessCount,
     parseSuccessCount,
@@ -711,7 +736,8 @@ export async function fetchPartnerPdfs() {
         attempts: pdfRes.attempts,
         text: data.text || '',
         document_retrieved_at: new Date().toISOString(),
-        document_sha256: createHash('sha256').update(Buffer.from(buffer)).digest('hex')
+        document_binary_sha256: sha256(Buffer.from(buffer)),
+        extracted_text_sha256: sha256(data.text || '')
       });
     } catch (e) {
       pdfDocuments.push({
@@ -723,7 +749,8 @@ export async function fetchPartnerPdfs() {
         parse_error: e.message,
         text: null,
         document_retrieved_at: new Date().toISOString(),
-        document_sha256: createHash('sha256').update(Buffer.from(pdfRes.data)).digest('hex')
+        document_binary_sha256: sha256(Buffer.from(pdfRes.data)),
+        extracted_text_sha256: null
       });
     }
   }

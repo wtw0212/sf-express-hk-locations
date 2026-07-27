@@ -75,3 +75,21 @@ test('source hash verifier rejects forged per-area and global semantic hashes', 
   globalTampered.sources.api_en.semantic_sha256 = '0'.repeat(64);
   assert.throws(() => verifySourceHashes(globalTampered), /api_en.*global semantic hash mismatch/i);
 });
+
+test('source hash verifier independently recalculates extracted PDF text hashes', () => {
+  const snapshot = fixtureSnapshot();
+  snapshot.sources.partner_pdf.documents = [{
+    source_key: 'OK_TEST_TC',
+    url: 'https://example.test/test.pdf',
+    http_ok: true,
+    parse_ok: true,
+    attempts: 1,
+    text: 'exact extracted text',
+    document_binary_sha256: 'a'.repeat(64),
+    extracted_text_sha256: sha256('exact extracted text')
+  }];
+  assert.doesNotThrow(() => verifySourceHashes(snapshot));
+
+  snapshot.sources.partner_pdf.documents[0].text += 'tampered';
+  assert.throws(() => verifySourceHashes(snapshot), /extracted text hash mismatch/i);
+});

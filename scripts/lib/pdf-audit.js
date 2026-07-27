@@ -97,7 +97,8 @@ function getPdfEvidence(pdfRec, sourceRetrievedAt) {
     source_key: pdfRec._source_key || parserLocation?.source_key || null,
     source_url: pdfRec._source_url || parserLocation?.source_url || null,
     document_retrieved_at: pdfRec._document_retrieved_at || sourceRetrievedAt || null,
-    document_sha256: pdfRec._document_sha256 || null,
+    document_binary_sha256: pdfRec._document_binary_sha256 || null,
+    extracted_text_sha256: pdfRec._extracted_text_sha256 || null,
     parser_location: parserLocation
       ? {
           row_index: parserLocation.row_index ?? null,
@@ -233,7 +234,8 @@ export function auditPartnerPdfRecords({
           source_url: registryEvidence.reviewed_source_url || reviewedItem._source_url || null,
           document_retrieved_at:
             registryEvidence.reviewed_source_retrieved_at || reviewedItem._reviewed_at || null,
-          document_sha256: registryEvidence.reviewed_document_sha256 || null,
+          document_binary_sha256: registryEvidence.reviewed_document_binary_sha256 || null,
+          extracted_text_sha256: registryEvidence.reviewed_extracted_text_sha256 || null,
           parser_location: null
         }
       });
@@ -251,7 +253,8 @@ export function auditPartnerPdfRecords({
       source_key: q.provenance?.source_key || null,
       source_url: q.provenance?.source_url || null,
       document_retrieved_at: q.provenance?.document_retrieved_at || sourceRetrievedAt || null,
-      document_sha256: q.provenance?.document_sha256 || null,
+      document_binary_sha256: q.provenance?.document_binary_sha256 || null,
+      extracted_text_sha256: q.provenance?.extracted_text_sha256 || null,
       parser_location: q.provenance
         ? { row_index: q.provenance.row_index ?? null, raw_row: q.provenance.raw_row ?? null }
         : null

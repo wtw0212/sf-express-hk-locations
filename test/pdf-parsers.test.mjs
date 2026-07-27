@@ -8,6 +8,7 @@ import { parseOkPartnerPdfText } from '../scripts/lib/pdf-parsers/ok-partner-par
 import { parseAspPartnerPdfText } from '../scripts/lib/pdf-parsers/asp-partner-parser.js';
 import { findServiceCodes, validateBusinessHours } from '../scripts/lib/pdf-parsers/common.js';
 import { parsePartnerPdfDocuments } from '../scripts/lib/source-fetchers.js';
+import { sha256 } from '../scripts/lib/source-hashes.js';
 import { checkCompletenessGates } from '../scripts/lib/validate.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -202,6 +203,24 @@ test('parsePartnerPdfDocuments sets semantic_ok = false when quarantine count > 
 
   const result = parsePartnerPdfDocuments(documents);
   assert.equal(result.pdfDetails[0].semantic_ok, false);
+});
+
+test('parsePartnerPdfDocuments keeps binary and extracted-text evidence separate', () => {
+  const text = '測試店852A1001香港測試道1號^852A1001^星期一至六:10:00-18:00';
+  const binaryHash = 'a'.repeat(64);
+  const result = parsePartnerPdfDocuments([{
+    source_key: 'ASP_TEST_TC',
+    url: 'https://example.test/ASP_TEST_TC.pdf',
+    http_ok: true,
+    parse_ok: true,
+    attempts: 1,
+    text,
+    document_binary_sha256: binaryHash
+  }]);
+
+  assert.equal(result.documents[0].document_binary_sha256, binaryHash);
+  assert.equal(result.documents[0].extracted_text_sha256, sha256(text));
+  assert.notEqual(result.documents[0].document_binary_sha256, result.documents[0].extracted_text_sha256);
 });
 
 test('sticky cross-PDF duplicate conflict keeps third occurrence quarantined', () => {

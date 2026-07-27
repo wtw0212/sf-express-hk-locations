@@ -63,7 +63,7 @@ if (removedSsrCodes.length) {
 
 Run: `node --test --test-name-pattern='SSR' test/migration-safety.test.mjs`
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/lib/validate.js test/migration-safety.test.mjs
@@ -80,7 +80,7 @@ git commit -m "Block silent SSR-only removals"
 - Produces: `sha256`, `stableStringify`, `canonicalizeApiRecord`, `canonicalizeApiRecords`, `calculateApiSnapshotHashes`, `calculateCanonicalDatasetHash`, `diffRecordHashes`.
 - Duplicate result: `{ records, record_hashes, duplicate_codes }`, where duplicate selection is based on sorted canonical serialization rather than arrival order.
 
-- [ ] **Step 1: Add raw, stable serialization, ordering, volatile-field, duplicate, and record-diff tests**
+- [x] **Step 1: Add raw, stable serialization, ordering, volatile-field, duplicate, and record-diff tests**
 
 ```js
 assert.notEqual(sha256('{"a":1}'), sha256('{ "a": 1 }'));
@@ -94,13 +94,13 @@ assert.deepEqual(diffRecordHashes(previous, current), {
 });
 ```
 
-- [ ] **Step 2: Run the new test and verify RED**
+- [x] **Step 2: Run the new test and verify RED**
 
 Run: `node --test test/source-hashes.test.mjs`
 
 Expected: module-not-found failure.
 
-- [ ] **Step 3: Implement strict stable serialization and semantic contracts**
+- [x] **Step 3: Implement strict stable serialization and semantic contracts**
 
 ```js
 export function canonicalizeApiRecord(record) {
@@ -118,7 +118,7 @@ export function canonicalizeApiRecord(record) {
 }
 ```
 
-- [ ] **Step 4: Run the source-hash tests and verify GREEN**
+- [x] **Step 4: Run the source-hash tests and verify GREEN**
 
 Run: `node --test test/source-hashes.test.mjs`
 

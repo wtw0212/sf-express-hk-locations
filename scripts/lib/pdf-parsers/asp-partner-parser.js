@@ -4,7 +4,8 @@ import {
   extractRowCodeEvidence,
   validateParsedPartnerRecord,
   extractSubdistrictAndShopName,
-  SUBDISTRICT_PREFIXES
+  createQuarantineEntry,
+  findServiceCodes
 } from './common.js';
 
 /**
@@ -38,11 +39,9 @@ export function parseAspPartnerPdfText({ text, sourceUrl }) {
   const grouped = groupPdfLinesIntoRows(text);
 
   for (let idx = 0; idx < grouped.length; idx++) {
-    const { rawRow } = grouped[idx];
+    const { rawRow, incomplete } = grouped[idx];
     const codeEvidence = extractRowCodeEvidence(rawRow);
     rawCodeCount += codeEvidence.allCodes.length;
-
-    const serviceCode = codeEvidence.visibleCode ?? codeEvidence.caretCode;
 
     const provenance = {
       source_url: sourceUrl,
@@ -51,14 +50,27 @@ export function parseAspPartnerPdfText({ text, sourceUrl }) {
       parsed_fields: null
     };
 
+    if (incomplete) {
+      quarantinedRecords.push(createQuarantineEntry({
+        rawRow,
+        candidateRecord: null,
+        reasonCodes: ['INCOMPLETE_RECORD_PREFIX'],
+        provenance,
+        codeEvidence
+      }));
+      continue;
+    }
+
+    const serviceCode = codeEvidence.visibleCode ?? codeEvidence.caretCode;
+
     if (!serviceCode) {
-      quarantinedRecords.push({
-        extractedCode: null,
-        rawSegment: rawRow,
+      quarantinedRecords.push(createQuarantineEntry({
+        rawRow,
         candidateRecord: null,
         reasonCodes: ['INVALID_SERVICE_CODE'],
-        provenance
-      });
+        provenance,
+        codeEvidence
+      }));
       continue;
     }
 
@@ -133,13 +145,13 @@ export function parseAspPartnerPdfText({ text, sourceUrl }) {
     const validation = validateParsedPartnerRecord(candidateRecord, rawRow, codeEvidence);
 
     if (!validation.valid) {
-      quarantinedRecords.push({
-        extractedCode: serviceCode,
-        rawSegment: rawRow,
+      quarantinedRecords.push(createQuarantineEntry({
+        rawRow,
         candidateRecord,
         reasonCodes: validation.reasonCodes,
-        provenance
-      });
+        provenance,
+        codeEvidence
+      }));
       continue;
     }
 
@@ -153,13 +165,13 @@ export function parseAspPartnerPdfText({ text, sourceUrl }) {
 
       if (!isIdentical) {
         duplicateConflictCount++;
-        quarantinedRecords.push({
-          extractedCode: serviceCode,
-          rawSegment: rawRow,
+        quarantinedRecords.push(createQuarantineEntry({
+          rawRow,
           candidateRecord,
           reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
-          provenance
-        });
+          provenance,
+          codeEvidence
+        }));
       }
       continue;
     }

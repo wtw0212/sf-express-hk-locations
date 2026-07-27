@@ -323,14 +323,31 @@ export function checkCompletenessGates({
       q.reasonCodes.some(r => severeReasons.includes(r))
     );
     const finalPublishedCodes = new Set(records.map(r => r.code));
-    const severePublishedRemovals = severeQuarantined.filter(q =>
-      q.extractedCode && previousCodes.has(q.extractedCode) && !finalPublishedCodes.has(q.extractedCode)
-    );
 
-    if (severePublishedRemovals.length > 0) {
+    const severeRemovalCodes = new Set();
+
+    for (const quarantine of severeQuarantined) {
+      const involvedCodes =
+        quarantine.involvedCodes?.length > 0
+          ? quarantine.involvedCodes
+          : [quarantine.extractedCode].filter(Boolean);
+
+      for (const code of involvedCodes) {
+        if (
+          previousCodes.has(code) &&
+          !finalPublishedCodes.has(code)
+        ) {
+          severeRemovalCodes.add(code);
+        }
+      }
+    }
+
+    if (severeRemovalCodes.size > 0) {
       errors.push(
         `Severe PDF parser quarantines would remove previously published records: ${
-          severePublishedRemovals.map(q => q.extractedCode).join(', ')
+          [...severeRemovalCodes]
+            .sort()
+            .join(', ')
         }`
       );
     } else if (severeQuarantined.length > 0) {

@@ -6,7 +6,8 @@ import { fileURLToPath } from 'node:url';
 
 import { parseOkPartnerPdfText } from '../scripts/lib/pdf-parsers/ok-partner-parser.js';
 import { parseAspPartnerPdfText } from '../scripts/lib/pdf-parsers/asp-partner-parser.js';
-import { findServiceCodes } from '../scripts/lib/pdf-parsers/common.js';
+import { findServiceCodes, validateBusinessHours } from '../scripts/lib/pdf-parsers/common.js';
+import { parsePartnerPdfDocuments } from '../scripts/lib/source-fetchers.js';
 import { checkCompletenessGates } from '../scripts/lib/validate.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -80,7 +81,6 @@ test('pdf-parsers: parseAspPartnerPdfText preserves business hours for valid rec
   assert.ok(g3008);
   assert.equal(g3008.serviceTime, '星期一至六:10:00-21:00 星期日:10:00-21:00 公眾假期:休息');
 
-  // Verify that code mismatches (e.g. 852FE3022 vs 852FE3018) are quarantined with SERVICE_CODE_MISMATCH
   assert.ok(res.quarantinedRecords.some(q => q.reasonCodes.includes('SERVICE_CODE_MISMATCH')));
 });
 
@@ -124,4 +124,134 @@ test('pdf-parsers: quarantine quality threshold gates block > 5% quarantine rati
 
   assert.equal(gateResult.pass, false);
   assert.ok(gateResult.errors.some(e => e.includes('quarantine ratio 10.0% exceeds blocking threshold 5%')));
+});
+
+test('ASP parser does not append the next prefix to 852LA3007 hours', () => {
+  const result = parseAspPartnerPdfText({
+    text: `
+葵涌康力達環保貿易公司852LA3007葵涌和宜合道167-175號金威工業大廈一期低層地下B7室^852LA3007^取件
+星期一至六:12:00-18:00
+星期日及公眾假期:休息
+葵涌 GS集運王（瑞景大廈）
+852LA3008葵涌下一個地址^852LA3008^取件
+星期一至六:12:00-20:00
+`,
+    sourceUrl: 'fixture://ASP_NT_TC'
+  });
+
+  const la3007 = result.validRecords.find(record => record.serviceCode === '852LA3007');
+  assert.ok(la3007);
+  assert.equal(la3007.name, '葵涌康力達環保貿易公司');
+  assert.equal(la3007.district, '葵涌');
+  assert.equal(la3007.serviceTime, '星期一至六:12:00-18:00 星期日及公眾假期:休息');
+  assert.ok(!la3007.serviceTime.includes('GS集運王'));
+
+  const la3008 = result.validRecords.find(record => record.serviceCode === '852LA3008');
+  assert.ok(la3008);
+  assert.ok(la3008.name.includes('GS集運王'));
+});
+
+test('business-hours validation rejects mixed hours and location text', () => {
+  const result = validateBusinessHours(
+    '星期一至六:12:00-18:00 星期日及公眾假期:休息 葵涌 GS集運王（瑞景大廈）'
+  );
+
+  assert.equal(result.valid, false);
+  assert.ok(result.reasonCodes.includes('NEXT_RECORD_PREFIX_LEAK'));
+});
+
+test('severe-removal gate checks all involvedCodes when caret code was previously published', () => {
+  const pdfResult = {
+    records: [],
+    quarantinedRecords: [
+      {
+        extractedCode: '852PC3004',
+        involvedCodes: ['852PC3004', '852PC3002'],
+        reasonCodes: ['SERVICE_CODE_MISMATCH']
+      }
+    ],
+    documents: [{ source_key: 'OK_HK_TC' }]
+  };
+  const prevRecords = [{ code: '852PC3002' }];
+  const currentRecords = [];
+
+  const gateResult = checkCompletenessGates({
+    tcResults: [{ ok: true, records: [] }],
+    enResults: [{ ok: true, records: [] }],
+    pdfResult,
+    records: currentRecords,
+    previousRecords: prevRecords
+  });
+
+  assert.ok(gateResult.errors.some(e => e.includes('Severe PDF parser quarantines would remove previously published records')));
+});
+
+test('parsePartnerPdfDocuments sets semantic_ok = false when quarantine count > 0', () => {
+  const documents = [
+    {
+      source_key: 'ASP_HK_TC',
+      url: 'https://example.com/test.pdf',
+      http_ok: true,
+      parse_ok: true,
+      text: `
+852PC3004 柴灣安興樓101號鋪^852PC3002^
+星期一至六:10:00-20:00
+`
+    }
+  ];
+
+  const result = parsePartnerPdfDocuments(documents);
+  assert.equal(result.pdfDetails[0].semantic_ok, false);
+});
+
+test('sticky cross-PDF duplicate conflict keeps third occurrence quarantined', () => {
+  const documents = [
+    {
+      source_key: 'PDF_1',
+      url: 'https://example.com/pdf1.pdf',
+      http_ok: true,
+      parse_ok: true,
+      text: '店鋪1 852DUP1001 柴灣1號^852DUP1001^\n星期一:10:00-18:00\n'
+    },
+    {
+      source_key: 'PDF_2',
+      url: 'https://example.com/pdf2.pdf',
+      http_ok: true,
+      parse_ok: true,
+      text: '店鋪2 852DUP1001 柴灣2號^852DUP1001^\n星期一:10:00-19:00\n'
+    },
+    {
+      source_key: 'PDF_3',
+      url: 'https://example.com/pdf3.pdf',
+      http_ok: true,
+      parse_ok: true,
+      text: '店鋪3 852DUP1001 柴灣3號^852DUP1001^\n星期一:10:00-20:00\n'
+    }
+  ];
+
+  const result = parsePartnerPdfDocuments(documents);
+  assert.equal(result.records.find(r => r.serviceCode === '852DUP1001'), undefined);
+  const quarantinedDupes = result.quarantinedRecords.filter(q => q.extractedCode === '852DUP1001');
+  assert.equal(quarantinedDupes.length, 3);
+});
+
+test('required invariant holds for all parsed PDF records', async () => {
+  const aspText = await readFile(resolve(__dirname, 'fixtures/pdf/asp-nt-page-sample.txt'), 'utf8');
+  const result = parseAspPartnerPdfText({ text: aspText, sourceUrl: 'https://hk.sf-express.com/uploads/ASP_NT_TC.pdf' });
+
+  for (const record of result.validRecords) {
+    assert.ok(record.name && record.name !== '順豐合作點', `Record ${record.serviceCode} must have valid name`);
+
+    const hoursValidation = validateBusinessHours(record.serviceTime);
+    assert.ok(
+      !hoursValidation.reasonCodes.includes('NEXT_RECORD_PREFIX_LEAK'),
+      `Record ${record.serviceCode} must not leak next prefix in hours`
+    );
+
+    for (const value of [record.name, record.address, record.serviceTime]) {
+      if (!value) continue;
+      const foreignCodes = findServiceCodes(value).filter(code => code !== record.serviceCode);
+      assert.deepEqual(foreignCodes, [], `Record ${record.serviceCode} must not contain foreign code in ${value}`);
+    }
+  }
 });

@@ -376,6 +376,7 @@ export async function runSync(options = {}) {
         quarantine_ratio: Number((pdfResult.records?.length + (pdfResult.quarantinedRecords?.length || 0)) > 0
           ? ((pdfResult.quarantinedRecords?.length || 0) / (pdfResult.records.length + (pdfResult.quarantinedRecords?.length || 0))).toFixed(4)
           : 0),
+        cross_pdf_duplicate_conflict_count: pdfResult.cross_pdf_duplicate_conflict_count ?? 0,
         status: pdfResult.status,
         errors: pdfResult.errors || [],
         details: pdfResult.pdfDetails || []

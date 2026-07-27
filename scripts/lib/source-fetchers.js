@@ -412,18 +412,17 @@ export function validateParsedPartnerRecord(record, rawSegment) {
  *
  * @returns {Promise<{ records: Array, pdfTotal: number, pdfSuccessCount: number, pdfFailCount: number, status: string, errors: string[], pdfDetails: Array }>}
  */
-
-
 /**
  * Parse raw PDF documents (text, URLs, and metadata) into structured partner records.
  *
- * @param {Array<{ source_key: string, url: string, http_ok: boolean, attempts: number, text?: string, error?: string }>} documents
+ * @param {Array<{ source_key: string, url: string, http_ok: boolean, attempts: number, text?: string, error?: string, parse_ok?: boolean, parse_error?: string }>} documents
  * @returns {object}
  */
 export function parsePartnerPdfDocuments(documents = []) {
   const pdfDetails = [];
   const quarantinedRecords = [];
   const partnerMap = new Map();
+  const conflictedCodes = new Set();
   const errors = [];
 
   let httpSuccessCount = 0;
@@ -431,6 +430,7 @@ export function parsePartnerPdfDocuments(documents = []) {
   let semanticSuccessCount = 0;
   let partialQualityFailureCount = 0;
   let pdfFailCount = 0;
+  let crossPdfDuplicateConflictCount = 0;
 
   for (const doc of documents) {
     const { source_key: sourceKey, url, http_ok: httpOk, parse_ok: parseOk, attempts, text, error: docErr, parse_error: parseErr } = doc;
@@ -444,6 +444,7 @@ export function parsePartnerPdfDocuments(documents = []) {
         http_ok: false,
         parse_ok: false,
         semantic_ok: false,
+        within_quality_threshold: false,
         attempts: attempts || 1,
         raw_code_count: 0,
         candidate_count: 0,
@@ -468,6 +469,7 @@ export function parsePartnerPdfDocuments(documents = []) {
         http_ok: true,
         parse_ok: false,
         semantic_ok: false,
+        within_quality_threshold: false,
         attempts: attempts || 1,
         raw_code_count: 0,
         candidate_count: 0,
@@ -492,6 +494,17 @@ export function parsePartnerPdfDocuments(documents = []) {
       quarantinedRecords.push(...fileQuarantined);
 
       for (const rec of validRecords) {
+        if (conflictedCodes.has(rec.serviceCode)) {
+          quarantinedRecords.push({
+            extractedCode: rec.serviceCode,
+            involvedCodes: [rec.serviceCode],
+            candidateRecord: rec,
+            reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
+            provenance: { source_key: sourceKey, source_url: url }
+          });
+          continue;
+        }
+
         const existing = partnerMap.get(rec.serviceCode);
         if (!existing) {
           partnerMap.set(rec.serviceCode, { record: rec, sourceKey, sourceUrl: url });
@@ -507,15 +520,20 @@ export function parsePartnerPdfDocuments(documents = []) {
         }
 
         partnerMap.delete(rec.serviceCode);
+        conflictedCodes.add(rec.serviceCode);
+        crossPdfDuplicateConflictCount++;
+
         quarantinedRecords.push(
           {
             extractedCode: rec.serviceCode,
+            involvedCodes: [rec.serviceCode],
             candidateRecord: existing.record,
             reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
             provenance: { source_key: existing.sourceKey, source_url: existing.sourceUrl }
           },
           {
             extractedCode: rec.serviceCode,
+            involvedCodes: [rec.serviceCode],
             candidateRecord: rec,
             reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
             provenance: { source_key: sourceKey, source_url: url }
@@ -526,21 +544,19 @@ export function parsePartnerPdfDocuments(documents = []) {
       const totalFileCandidates = metrics.validCount + metrics.quarantineCount;
       const fileQuarantineRatio = totalFileCandidates > 0 ? metrics.quarantineCount / totalFileCandidates : 0;
 
+      const semanticClean = metrics.quarantineCount === 0;
+      const withinQualityThreshold = fileQuarantineRatio <= 0.05;
+
       let pdfStatus = 'success';
-      let semanticOk = true;
 
       if (metrics.validCount === 0 && metrics.rawCodeCount === 0) {
         pdfStatus = 'zero_records_parsed';
-        semanticOk = false;
       } else if (metrics.quarantineCount > 0) {
         pdfStatus = 'partial_parse_quality_failure';
         partialQualityFailureCount++;
-        if (fileQuarantineRatio > 0.05) {
-          semanticOk = false;
-        }
       }
 
-      if (semanticOk) {
+      if (semanticClean) {
         semanticSuccessCount++;
       }
 
@@ -550,7 +566,8 @@ export function parsePartnerPdfDocuments(documents = []) {
         status: pdfStatus,
         http_ok: true,
         parse_ok: true,
-        semantic_ok: semanticOk,
+        semantic_ok: semanticClean,
+        within_quality_threshold: withinQualityThreshold,
         attempts: attempts || 1,
         raw_code_count: metrics.rawCodeCount,
         candidate_count: totalFileCandidates,
@@ -571,6 +588,7 @@ export function parsePartnerPdfDocuments(documents = []) {
         http_ok: true,
         parse_ok: false,
         semantic_ok: false,
+        within_quality_threshold: false,
         attempts: attempts || 1,
         raw_code_count: 0,
         candidate_count: 0,
@@ -585,8 +603,6 @@ export function parsePartnerPdfDocuments(documents = []) {
 
   const validPartnerRecords = [...partnerMap.values()].map(v => v.record);
   const totalQuarantined = quarantinedRecords.length;
-  const totalCandidates = validPartnerRecords.length + totalQuarantined;
-  const overallQuarantineRatio = totalCandidates > 0 ? totalQuarantined / totalCandidates : 0;
 
   let overallStatus = 'success';
   if (documents.length === 0) {
@@ -612,6 +628,7 @@ export function parsePartnerPdfDocuments(documents = []) {
     failedCount: pdfFailCount,
     pdfSuccessCount: httpSuccessCount,
     pdfFailCount,
+    cross_pdf_duplicate_conflict_count: crossPdfDuplicateConflictCount,
     status: overallStatus,
     errors,
     pdfDetails,

@@ -46,7 +46,12 @@ export function looksLikeRecordPrefix(line = '') {
  * @returns {{ subdistrict: string, name: string }}
  */
 export function extractSubdistrictAndShopName(rawPrefix) {
-  let text = (rawPrefix || '').replace(/^服務時間[^\n]*\)\s*/, '').replace(/[\^&]/g, '').trim();
+  let text = (rawPrefix || '')
+    .replace(/(?:體積|重量|最大體積|快件限制|重量限制):\s*[\d\w\s.\-xX]*\s*/gi, '')
+    .replace(/^服務時間[^\n]*\)\s*/, '')
+    .replace(/^快件限制\s*/, '')
+    .replace(/[\^&]/g, '')
+    .trim();
 
   let matchedSub = '';
   for (const sub of SUBDISTRICT_PREFIXES) {
@@ -56,6 +61,8 @@ export function extractSubdistrictAndShopName(rawPrefix) {
       break;
     }
   }
+
+  text = text.replace(/([\u4e00-\u9fa5])\s+([\u4e00-\u9fa5])/g, '$1$2');
 
   const name = text || (matchedSub ? `${matchedSub}合作點` : '順豐合作點');
   return { subdistrict: matchedSub, name };
@@ -116,21 +123,71 @@ export function cleanBusinessHours(rawHours) {
  */
 export function validateBusinessHours(value) {
   const text = String(value ?? '').trim();
-  if (!text) return { valid: true, reasonCodes: [] };
 
-  const reasons = [];
+  if (!text) {
+    return {
+      valid: true,
+      reasonCodes: []
+    };
+  }
+
+  const reasonCodes = [];
+
   const hasHoursSignal = looksLikeBusinessHours(text);
-  const suspiciousLeakText = SUBDISTRICT_PREFIXES.some(sub => text.includes(sub)) &&
-    /(?:自提點|自取點|便利店|合作點|士多|集運|有限公司|公司|店)/.test(text) &&
-    !hasHoursSignal;
 
-  if (suspiciousLeakText) {
-    reasons.push('NEXT_RECORD_PREFIX_LEAK');
+  const containsLocationPrefix =
+    SUBDISTRICT_PREFIXES.some(subdistrict => text.includes(subdistrict)) &&
+    /(?:自提點|自取點|便利店|合作點|士多|集運|有限公司|公司|商店|大廈|商場|店)/.test(text);
+
+  if (!hasHoursSignal) {
+    reasonCodes.push('INVALID_BUSINESS_HOURS_FORMAT');
+  }
+
+  if (containsLocationPrefix) {
+    reasonCodes.push('NEXT_RECORD_PREFIX_LEAK');
   }
 
   return {
-    valid: reasons.length === 0,
-    reasonCodes: reasons
+    valid: reasonCodes.length === 0,
+    reasonCodes: [...new Set(reasonCodes)]
+  };
+}
+
+/**
+ * Create a standardized quarantine entry object preserving all involved code evidence.
+ *
+ * @param {object} params
+ * @param {string} [params.rawRow]
+ * @param {object|null} [params.candidateRecord]
+ * @param {string[]} params.reasonCodes
+ * @param {object} [params.provenance]
+ * @param {object} [params.codeEvidence]
+ * @returns {object}
+ */
+export function createQuarantineEntry({
+  rawRow,
+  candidateRecord,
+  reasonCodes,
+  provenance,
+  codeEvidence
+}) {
+  return {
+    extractedCode:
+      candidateRecord?.serviceCode ??
+      codeEvidence?.visibleCode ??
+      codeEvidence?.caretCode ??
+      null,
+
+    involvedCodes: [...new Set([
+      codeEvidence?.visibleCode,
+      codeEvidence?.caretCode,
+      ...(codeEvidence?.allCodes ?? [])
+    ].filter(Boolean))],
+
+    rawSegment: rawRow ?? '',
+    candidateRecord: candidateRecord ?? null,
+    reasonCodes: [...new Set(reasonCodes)],
+    provenance: provenance ?? {}
   };
 }
 
@@ -215,54 +272,108 @@ export function isPdfHeaderLine(line) {
 }
 
 /**
- * Group PDF lines into logical table rows using a precise code & limit boundary state machine.
+ * Group PDF lines into logical table rows using a state machine for pending prefixes.
  *
  * @param {string} text
- * @returns {Array<{ rawRow: string, lineStart: number }>}
+ * @returns {Array<{ rawRow: string, lineStart: number, incomplete?: boolean }>}
  */
 export function groupPdfLinesIntoRows(text) {
   if (!text) return [];
 
-  const lines = text.split('\n').map(line => line.trim()).filter(Boolean);
+  const lines = text
+    .split('\n')
+    .map(line => line.trim())
+    .filter(Boolean);
+
   const rows = [];
   let currentLines = [];
-  let lineNumber = 0;
+  let pendingPrefix = [];
+  let currentStartLine = 1;
 
   const flushCurrent = () => {
     if (currentLines.length === 0) return;
+
     rows.push({
       rawRow: currentLines.join(' '),
-      lineStart: lineNumber - currentLines.length + 1
+      lineStart: currentStartLine,
+      incomplete: false
     });
+
     currentLines = [];
   };
 
-  for (const line of lines) {
-    lineNumber++;
+  for (let index = 0; index < lines.length; index++) {
+    const line = lines[index];
+    const lineNumber = index + 1;
+
     if (isPdfHeaderLine(line)) continue;
 
-    const currentText = currentLines.join(' ');
-    const currentCodes = findServiceCodes(currentText);
+    const currentCodes = findServiceCodes(currentLines.join(' '));
     const lineCodes = findServiceCodes(line);
-
+    const currentHasCode = currentCodes.length > 0;
+    const lineHasCode = lineCodes.length > 0;
     const isSameCodeContinuation =
-      currentCodes.length > 0 &&
-      lineCodes.length > 0 &&
+      currentHasCode &&
+      lineHasCode &&
       lineCodes.every(c => currentCodes.includes(c));
 
-    if (currentCodes.length > 0 && lineCodes.length > 0 && !isSameCodeContinuation) {
-      flushCurrent();
-    } else if (
-      currentCodes.length > 0 &&
-      (currentText.includes('體積:') || currentText.includes('重量:') || currentText.includes('重量限制')) &&
-      (looksLikeRecordPrefix(line) || SUBDISTRICT_PREFIXES.some(s => line.startsWith(s)))
-    ) {
-      flushCurrent();
+    if (!currentHasCode) {
+      if (currentLines.length === 0) {
+        currentStartLine = lineNumber;
+      }
+
+      currentLines.push(line);
+      continue;
     }
 
-    currentLines.push(line);
+    if (lineHasCode && !isSameCodeContinuation) {
+      flushCurrent();
+
+      currentStartLine = pendingPrefix.length > 0
+        ? lineNumber - pendingPrefix.length
+        : lineNumber;
+
+      currentLines = [...pendingPrefix, line];
+      pendingPrefix = [];
+      continue;
+    }
+
+    if (looksLikeBusinessHours(line) || isSameCodeContinuation) {
+      if (pendingPrefix.length > 0) {
+        currentLines.push(...pendingPrefix);
+        pendingPrefix = [];
+      }
+      currentLines.push(line);
+      continue;
+    }
+
+    if (looksLikeRecordPrefix(line)) {
+      pendingPrefix.push(line);
+      continue;
+    }
+
+    pendingPrefix.push(line);
   }
 
   flushCurrent();
+
+  if (pendingPrefix.length > 0) {
+    const textPrefix = pendingPrefix.join(' ');
+    const isRealPrefix =
+      looksLikeRecordPrefix(textPrefix) ||
+      SUBDISTRICT_PREFIXES.some(s => textPrefix.includes(s));
+
+    if (isRealPrefix) {
+      rows.push({
+        rawRow: textPrefix,
+        lineStart: Math.max(
+          1,
+          lines.length - pendingPrefix.length + 1
+        ),
+        incomplete: true
+      });
+    }
+  }
+
   return rows;
 }

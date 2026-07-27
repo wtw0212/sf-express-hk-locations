@@ -97,6 +97,7 @@
             "valid_record_count": { "type": "integer", "minimum": 0 },
             "quarantined_record_count": { "type": "integer", "minimum": 0 },
             "quarantine_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+            "cross_pdf_duplicate_conflict_count": { "type": "integer", "minimum": 0 },
             "status": {
               "type": "string",
               "enum": [
@@ -139,6 +140,7 @@
                   "http_ok": { "type": "boolean" },
                   "parse_ok": { "type": "boolean" },
                   "semantic_ok": { "type": "boolean" },
+                  "within_quality_threshold": { "type": "boolean" },
                   "attempts": { "type": "integer", "minimum": 0 },
                   "raw_code_count": { "type": "integer", "minimum": 0 },
                   "candidate_count": { "type": "integer", "minimum": 0 },

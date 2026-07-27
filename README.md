@@ -1,4 +1,4 @@
-> **最後更新時間 (Last Updated)**: `2026-07-27 09:31 (HKT UTC+8)`
+> **最後更新時間與動態元數據 (Last Updated & Metadata)**: 請參考 [`data/metadata.json`](data/metadata.json) 中的 `retrieved_at` 欄位。 (Refer to `retrieved_at` in `data/metadata.json`).
 
 # 香港順豐速運自提點 / 順豐站 / 智能櫃資料集
 # SF Express Hong Kong Stores & Lockers Dataset

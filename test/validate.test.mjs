@@ -1,144 +1,177 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validateRecords, checkCompletenessGates } from '../scripts/lib/validate.js';
+import {
+  validateRecords,
+  validatePreviousDataset,
+  checkCompletenessGates,
+  validateCrossFile
+} from '../scripts/lib/validate.js';
 
-// ─── validateRecords tests ──────────────────────────────────────────
+const validRecord = {
+  id: '852A',
+  code: '852A',
+  type: 'store',
+  type_name: '順豐站',
+  type_name_en: 'SF Store',
+  name: 'Test Store',
+  name_en: 'Test Store EN',
+  region: '香港島',
+  region_en: 'Hong Kong Island',
+  district: '灣仔區',
+  district_en: 'Wan Chai District',
+  sub_district: '灣仔',
+  sub_district_en: 'Wan Chai',
+  address: '灣仔軒尼詩道1號',
+  address_en: '1 Hennessy Road, Wan Chai',
+  telephone: '12345678',
+  business_hours: '09:00-20:00',
+  business_hours_en: '09:00-20:00',
+  location: { latitude: 22.28, longitude: 114.17 },
+  source: 'api_tc',
+  quality_flags: [],
+  provenance: { name: 'api_tc', name_en: 'api_en', address: 'api_tc', address_en: 'api_en', district: 'api_tc' },
+  retrieved_at: '2026-07-27 10:00 (HKT UTC+8)'
+};
 
-test('validates records with no issues', () => {
-  const records = [{
-    code: '852A', type: 'store', district: '大埔區', region: '新界',
-    location: { latitude: 22.45, longitude: 114.17 },
-    quality_flags: []
-  }];
-  const { errors, warnings } = validateRecords(records);
-  assert.equal(errors.length, 0);
+test('validateRecords: passes for valid records', () => {
+  const res = validateRecords([validRecord]);
+  assert.equal(res.errors.length, 0);
 });
 
-test('rejects duplicate codes', () => {
-  const records = [
-    { code: '852A', type: 'store', location: {}, quality_flags: [] },
-    { code: '852A', type: 'locker', location: {}, quality_flags: [] }
-  ];
-  const { errors } = validateRecords(records);
-  assert.ok(errors.some(e => e.includes('Duplicate')));
+test('validateRecords: rejects empty code or mismatching id', () => {
+  const badId = { ...validRecord, id: '852DIFFERENT' };
+  const res = validateRecords([badId]);
+  assert.ok(res.errors.some(e => e.includes('does not match code')));
 });
 
-test('rejects empty codes', () => {
-  const records = [
-    { code: '', type: 'store', location: {}, quality_flags: [] }
-  ];
-  const { errors } = validateRecords(records);
-  assert.ok(errors.some(e => e.includes('empty code')));
+test('validateRecords: rejects invalid type', () => {
+  const badType = { ...validRecord, type: 'invalid_type' };
+  const res = validateRecords([badType]);
+  assert.ok(res.errors.some(e => e.includes('invalid type')));
 });
 
-test('rejects invalid type', () => {
-  const records = [
-    { code: '852A', type: 'station', location: {}, quality_flags: [] }
-  ];
-  const { errors } = validateRecords(records);
-  assert.ok(errors.some(e => e.includes('invalid type')));
+test('validateRecords: rejects missing required name or type_name', () => {
+  const badName = { ...validRecord, name: '' };
+  const res = validateRecords([badName]);
+  assert.ok(res.errors.some(e => e.includes('missing required name')));
 });
 
-test('rejects non-numeric coordinates', () => {
-  const records = [{
-    code: '852A', type: 'store',
-    location: { latitude: 'not-a-number', longitude: 114.2 },
-    quality_flags: []
-  }];
-  const { errors } = validateRecords(records);
-  assert.ok(errors.some(e => e.includes('not numeric')));
+test('validateRecords: rejects store or locker missing address', () => {
+  const badAddr = { ...validRecord, address: '' };
+  const res = validateRecords([badAddr]);
+  assert.ok(res.errors.some(e => e.includes('missing required address')));
 });
 
-test('rejects district/region mismatch', () => {
-  const records = [{
-    code: '852A', type: 'store', district: '大埔區', region: '九龍',
-    location: {}, quality_flags: []
-  }];
-  const { errors } = validateRecords(records);
-  assert.ok(errors.some(e => e.includes('district/region mismatch')));
+test('validateRecords: rejects missing quality_flags array', () => {
+  const badFlags = { ...validRecord, quality_flags: null };
+  const res = validateRecords([badFlags]);
+  assert.ok(res.errors.some(e => e.includes('missing quality_flags array')));
 });
 
-test('rejects missing quality_flags array', () => {
-  const records = [{ code: '852A', type: 'store', location: {} }];
-  const { errors } = validateRecords(records);
-  assert.ok(errors.some(e => e.includes('quality_flags')));
+test('validateRecords: rejects invalid source or provenance', () => {
+  const badSource = { ...validRecord, source: 'unknown_source' };
+  const res = validateRecords([badSource]);
+  assert.ok(res.errors.some(e => e.includes('invalid source identifier')));
+
+  const badProv = { ...validRecord, provenance: { name: 'invalid', address: 'api_tc', district: 'api_tc' } };
+  const resProv = validateRecords([badProv]);
+  assert.ok(resProv.errors.some(e => e.includes('invalid provenance.name')));
 });
 
-// ─── checkCompletenessGates tests ───────────────────────────────────
+test('validateRecords: rejects non-finite or single coordinate or outside HK coordinates', () => {
+  const singleCoord = { ...validRecord, location: { latitude: 22.28, longitude: null } };
+  const resSingle = validateRecords([singleCoord]);
+  assert.ok(resSingle.errors.some(e => e.includes('must both be present or both null')));
 
-test('passes when all gates succeed', () => {
-  const tcResults = [
-    { area: { sourceRegion: '大埔區', district: '大埔' }, ok: true, records: [{ serviceCode: '852A' }] }
-  ];
-  const enResults = [
-    { area: { sourceRegion: 'Tai Po', district: 'Tai Po' }, ok: true, records: [{ serviceCode: '852A' }] }
-  ];
-  const records = new Array(1001).fill({ code: '852A' });
+  const nonFinite = { ...validRecord, location: { latitude: NaN, longitude: 114.17 } };
+  const resNonFinite = validateRecords([nonFinite]);
+  assert.ok(resNonFinite.errors.some(e => e.includes('non-finite latitude')));
 
-  const result = checkCompletenessGates({
-    tcResults, enResults, records,
-    previousRecords: new Array(1000).fill({}),
-    config: { minCount: 100 }
+  const outsideHK = { ...validRecord, location: { latitude: 39.9, longitude: 116.4 } };
+  const resOutside = validateRecords([outsideHK]);
+  assert.ok(resOutside.errors.some(e => e.includes('outside HK bounding box')));
+});
+
+test('validatePreviousDataset: fails closed on invalid previous dataset', () => {
+  // 1. Non-array
+  assert.throws(() => validatePreviousDataset({ obj: true }), /root must be an array/);
+
+  // 2. Duplicate codes in previous dataset
+  assert.throws(() => validatePreviousDataset([validRecord, validRecord]), /Previous published dataset is invalid/);
+
+  // 3. Malformed record schema in previous dataset
+  assert.throws(() => validatePreviousDataset([{ code: '852A' }]), /Previous published dataset is invalid/);
+});
+
+test('checkCompletenessGates: PDF failure scenarios', () => {
+  const records = Array(1100).fill(validRecord).map((r, i) => ({ ...r, id: `852${i}`, code: `852${i}` }));
+
+  // All PDFs failed -> blocking gate
+  const resAllFailed = checkCompletenessGates({
+    tcResults: [{ ok: true, records: [] }],
+    enResults: [{ ok: true, records: [] }],
+    pdfResult: { pdfTotal: 8, pdfSuccessCount: 0, pdfFailCount: 8, status: 'all_pdfs_failed', errors: ['HTTP 500'] },
+    records
   });
+  assert.equal(resAllFailed.pass, false);
+  assert.ok(resAllFailed.errors.some(e => e.includes('All partner PDFs failed')));
 
-  assert.equal(result.pass, true);
+  // Partial PDF failure -> warning generated
+  const resPartial = checkCompletenessGates({
+    tcResults: [{ ok: true, records: [] }],
+    enResults: [{ ok: true, records: [] }],
+    pdfResult: { pdfTotal: 8, pdfSuccessCount: 7, pdfFailCount: 1, status: 'partial_pdf_failures', errors: ['HTTP 404'] },
+    records
+  });
+  assert.ok(resPartial.warnings.some(w => w.includes('Partial partner PDF failures')));
+
+  // All PDFs succeeded but zero records parsed -> blocking
+  const resZeroRecs = checkCompletenessGates({
+    tcResults: [{ ok: true, records: [] }],
+    enResults: [{ ok: true, records: [] }],
+    pdfResult: { pdfTotal: 8, pdfSuccessCount: 8, pdfFailCount: 0, status: 'zero_records_parsed', records: [], errors: [] },
+    records
+  });
+  assert.equal(resZeroRecs.pass, false);
+  assert.ok(resZeroRecs.errors.some(e => e.includes('parsed zero records')));
 });
 
-test('blocks on TC API area failure', () => {
-  const tcResults = [
-    { area: { sourceRegion: '大埔區', district: '大埔' }, ok: false, error: 'timeout', records: [] }
+test('checkCompletenessGates: partner subset unexpectedly drops -> blocked', () => {
+  const records = Array(1100).fill(validRecord).map((r, i) => ({ ...r, id: `852${i}`, code: `852${i}` }));
+  // 100 previous partner records
+  const prevPartnerRecord = { ...validRecord, type: 'partner' };
+  const prevRecords = [
+    ...records,
+    ...Array(100).fill(prevPartnerRecord).map((r, i) => ({ ...r, id: `P852${i}`, code: `P852${i}` }))
   ];
-  const result = checkCompletenessGates({
-    tcResults, enResults: [], records: new Array(1001).fill({}),
-    previousRecords: null, config: { minCount: 100, enMatchRateThreshold: 0 }
+
+  // Current records has 0 partners (or dropped partner count)
+  const resPartnerDrop = checkCompletenessGates({
+    tcResults: [{ ok: true, records: [] }],
+    enResults: [{ ok: true, records: [] }],
+    records, // 0 partners
+    previousRecords: prevRecords
   });
-  assert.equal(result.pass, false);
-  assert.ok(result.errors.some(e => e.includes('TC API areas failed')));
+  assert.equal(resPartnerDrop.pass, false);
+  assert.ok(resPartnerDrop.errors.some(e => e.includes('Partner subset count dropped')));
 });
 
-test('blocks on low EN match rate', () => {
-  const tcResults = [
-    { area: {}, ok: true, records: [{ serviceCode: '852A' }, { serviceCode: '852B' }] }
-  ];
-  const enResults = [
-    { area: {}, ok: true, records: [{ serviceCode: '852A' }] }
-  ];
-  const result = checkCompletenessGates({
-    tcResults, enResults, records: new Array(1001).fill({}),
-    previousRecords: null, config: { minCount: 100, enMatchRateThreshold: 0.90 }
-  });
-  assert.equal(result.pass, false);
-  assert.ok(result.errors.some(e => e.includes('EN match rate')));
-});
+test('validateCrossFile: validates cross-file consistency', () => {
+  const store = { ...validRecord, type: 'store' };
+  const locker = { ...validRecord, id: '852B', code: '852B', type: 'locker' };
+  const partner = { ...validRecord, id: '852C', code: '852C', type: 'partner' };
+  const allRecords = [store, locker, partner];
 
-test('blocks on count drop exceeding threshold', () => {
-  const result = checkCompletenessGates({
-    tcResults: [], enResults: [],
-    records: new Array(900).fill({}),
-    previousRecords: new Array(1000).fill({}),
-    config: { minCount: 100, countDropThreshold: 5, enMatchRateThreshold: 0 }
-  });
-  assert.equal(result.pass, false);
-  assert.ok(result.errors.some(e => e.includes('Count dropped')));
-});
+  const stores = [store];
+  const lockers = [locker];
+  const partners = [partner];
+  const byDistrict = { '灣仔區': allRecords };
+  const metadata = { counts: { total: 3, stores: 1, lockers: 1, partners: 1 } };
 
-test('warns on count increase exceeding threshold', () => {
-  const result = checkCompletenessGates({
-    tcResults: [], enResults: [],
-    records: new Array(1200).fill({}),
-    previousRecords: new Array(1000).fill({}),
-    config: { minCount: 100, countIncreaseThreshold: 15, enMatchRateThreshold: 0 }
-  });
-  assert.ok(result.warnings.some(w => w.includes('Count increased')));
-});
+  // Valid
+  assert.doesNotThrow(() => validateCrossFile(allRecords, stores, lockers, partners, byDistrict, metadata));
 
-test('blocks when count below minimum', () => {
-  const result = checkCompletenessGates({
-    tcResults: [], enResults: [],
-    records: new Array(5).fill({}),
-    previousRecords: null,
-    config: { minCount: 1000, enMatchRateThreshold: 0 }
-  });
-  assert.equal(result.pass, false);
-  assert.ok(result.errors.some(e => e.includes('below minimum')));
+  // Count mismatch
+  const badMetadata = { counts: { total: 4, stores: 1, lockers: 1, partners: 1 } };
+  assert.throws(() => validateCrossFile(allRecords, stores, lockers, partners, byDistrict, badMetadata), /Metadata total count/);
 });

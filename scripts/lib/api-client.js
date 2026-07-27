@@ -37,7 +37,14 @@ export async function fetchWithRetry(url, options = {}, config = {}) {
       lastStatus = response.status;
 
       if (response.ok) {
-        const data = await response.json();
+        let data;
+        if (config.responseType === 'arrayBuffer') {
+          data = await response.arrayBuffer();
+        } else if (config.responseType === 'text') {
+          data = await response.text();
+        } else {
+          data = await response.json();
+        }
         return { ok: true, status: response.status, attempts: attempt, error: null, data };
       }
 

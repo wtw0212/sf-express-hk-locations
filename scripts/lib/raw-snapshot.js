@@ -27,7 +27,8 @@ export async function saveRawSnapshot(rawDir, sources, retrievedAt) {
           status: r.status,
           attempts: r.attempts,
           error: r.error,
-          record_count: r.records?.length ?? 0
+          record_count: r.records?.length ?? 0,
+          records: r.records || []
         })),
         records: (sources.tcResults ?? []).flatMap(r => r.records ?? [])
       },
@@ -41,18 +42,22 @@ export async function saveRawSnapshot(rawDir, sources, retrievedAt) {
           status: r.status,
           attempts: r.attempts,
           error: r.error,
-          record_count: r.records?.length ?? 0
+          record_count: r.records?.length ?? 0,
+          records: r.records || []
         })),
         records: (sources.enResults ?? []).flatMap(r => r.records ?? [])
       },
       ssr: {
-        records: sources.ssrRecords ?? []
+        records: sources.ssrRecords ?? [],
+        errors: sources.ssrErrors ?? []
       },
       partner_pdf: {
         pdf_total: sources.pdfTotal ?? 0,
         pdf_success_count: sources.pdfSuccessCount ?? 0,
         pdf_failure_count: sources.pdfFailCount ?? 0,
-        records: sources.pdfRecords ?? []
+        status: sources.pdfStatus ?? 'success',
+        records: sources.pdfRecords ?? [],
+        errors: sources.pdfErrors ?? []
       }
     }
   };

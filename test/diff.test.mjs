@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { computeDiff } from '../scripts/lib/diff.js';
+import { computeDiff, canonicalizeQualityFlags, computeQualityFlagsDiff } from '../scripts/lib/diff.js';
 
 test('detects added records', () => {
   const prev = [{ code: '852A', type: 'store', name: 'Test', address: 'Addr' }];
@@ -70,4 +70,53 @@ test('detects coordinate changes', () => {
   const diff = computeDiff(prev, next);
   assert.equal(diff.updated.length, 1);
   assert.ok(diff.updated[0].changes['location.latitude']);
+});
+
+test('quality flags diff: same flags in different order -> unchanged', () => {
+  const prevFlags = [
+    { type: 'FLAG_B', severity: 'warning', fields: ['address'], details: { val: 1 } },
+    { type: 'FLAG_A', severity: 'info', fields: ['name'], details: { val: 2 } }
+  ];
+  const nextFlags = [
+    { type: 'FLAG_A', severity: 'info', fields: ['name'], details: { val: 2 } },
+    { type: 'FLAG_B', severity: 'warning', fields: ['address'], details: { val: 1 } }
+  ];
+
+  const prev = [{ code: '852A', type: 'store', name: 'Test', quality_flags: prevFlags }];
+  const next = [{ code: '852A', type: 'store', name: 'Test', quality_flags: nextFlags }];
+
+  const diff = computeDiff(prev, next);
+  assert.equal(diff.updated.length, 0, 'Reordered identical quality_flags should be considered unchanged');
+  assert.equal(diff.unchanged, 1);
+});
+
+test('quality flags diff: flag added, removed, details or severity changed', () => {
+  const flagA = { type: 'MISSING_ENGLISH_RECORD', severity: 'warning', fields: ['name_en'], details: { code: '852A' } };
+  const flagB = { type: 'DUPLICATE_ADDRESS_SUFFIX', severity: 'info', fields: ['address_en'], details: { pattern: 'p' } };
+  const flagBModified = { type: 'DUPLICATE_ADDRESS_SUFFIX', severity: 'warning', fields: ['address_en'], details: { pattern: 'p2' } };
+
+  // 1. Added flag
+  const diff1 = computeDiff(
+    [{ code: '852A', type: 'store', name: 'T', quality_flags: [flagA] }],
+    [{ code: '852A', type: 'store', name: 'T', quality_flags: [flagA, flagB] }]
+  );
+  assert.equal(diff1.updated.length, 1);
+  assert.deepEqual(diff1.updated[0].changes.quality_flags.added, [flagB]);
+
+  // 2. Removed flag
+  const diff2 = computeDiff(
+    [{ code: '852A', type: 'store', name: 'T', quality_flags: [flagA, flagB] }],
+    [{ code: '852A', type: 'store', name: 'T', quality_flags: [flagA] }]
+  );
+  assert.equal(diff2.updated.length, 1);
+  assert.deepEqual(diff2.updated[0].changes.quality_flags.removed, [flagB]);
+
+  // 3. Modified severity/details
+  const diff3 = computeDiff(
+    [{ code: '852A', type: 'store', name: 'T', quality_flags: [flagB] }],
+    [{ code: '852A', type: 'store', name: 'T', quality_flags: [flagBModified] }]
+  );
+  assert.equal(diff3.updated.length, 1);
+  assert.equal(diff3.updated[0].changes.quality_flags.modified.length, 1);
+  assert.equal(diff3.updated[0].changes.quality_flags.modified[0].type, 'DUPLICATE_ADDRESS_SUFFIX');
 });

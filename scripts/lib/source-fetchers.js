@@ -201,16 +201,22 @@ export function buildRecordMap(results) {
  * Fetch supplementary records from SSR HTML pages.
  * Non-blocking — errors are collected, not thrown.
  *
- * @returns {Promise<{ records: Array, errors: string[] }>}
+ * @returns {Promise<{ records: Array, errors: string[], ok: boolean }>}
  */
 export async function fetchSsrPages() {
   console.log('Fetching supplementary SSR HTML tables...');
   const records = [];
   const errors = [];
 
+  const res = await fetchWithRetry('https://hk.sf-express.com/hk/tc/more/sf-locker', {}, { responseType: 'text' });
+  if (!res.ok) {
+    errors.push(`SSR fetch error: HTTP ${res.status || 'NET_ERR'} (${res.error})`);
+    console.warn('  Warning: Could not fetch SSR pages:', res.error);
+    return { records, errors, ok: false };
+  }
+
   try {
-    const lockerRes = await fetch('https://hk.sf-express.com/hk/tc/more/sf-locker');
-    const lockerHtml = await lockerRes.text();
+    const lockerHtml = res.data || '';
     const lockerUnescaped = lockerHtml
       .replace(/\\u003c/g, '<').replace(/\\u003e/g, '>')
       .replace(/\\u0022/g, '"').replace(/\\"/g, '"');
@@ -232,38 +238,39 @@ export async function fetchSsrPages() {
       }
     }
   } catch (e) {
-    errors.push(`SSR fetch error: ${e.message}`);
-    console.warn('  Warning: Could not fetch SSR pages:', e.message);
+    errors.push(`SSR parse error: ${e.message}`);
+    console.warn('  Warning: Could not parse SSR content:', e.message);
   }
 
   console.log(`  SSR: ${records.length} records`);
-  return { records, errors };
+  return { records, errors, ok: errors.length === 0 };
 }
 
 /**
  * Fetch and parse partner PDF records.
  * Non-blocking — errors are collected, not thrown.
  *
- * @returns {Promise<{ records: Array, pdfTotal: number, pdfSuccessCount: number, pdfFailCount: number, errors: string[] }>}
+ * @returns {Promise<{ records: Array, pdfTotal: number, pdfSuccessCount: number, pdfFailCount: number, status: string, errors: string[], pdfDetails: Array }>}
  */
 export async function fetchPartnerPdfs() {
   console.log('Fetching official Service Partner PDFs...');
   const errors = [];
+  const pdfDetails = [];
 
   // Dynamically discover PDF URLs from the official partner page
   let partnerPdfs = [];
-  try {
-    const pageRes = await fetch('https://hk.sf-express.com/hk/tc/more/sf-service-partner-address');
-    const pageHtml = await pageRes.text();
+  const discoveryRes = await fetchWithRetry('https://hk.sf-express.com/hk/tc/more/sf-service-partner-address', {}, { responseType: 'text' });
+  if (discoveryRes.ok) {
+    const pageHtml = discoveryRes.data || '';
     const pdfPaths = pageHtml.match(/uploads\/(?:OK|ASP)_[^"'\\\s]+\.pdf/gi) || [];
     const uniquePaths = [...new Set(pdfPaths)];
     partnerPdfs = uniquePaths
       .filter(p => !p.includes('_MAC_'))
       .map(p => `https://hk.sf-express.com/${p}`);
     console.log(`  Discovered ${partnerPdfs.length} HK partner PDFs.`);
-  } catch (e) {
-    errors.push(`PDF discovery error: ${e.message}`);
-    console.warn('  Warning: Could not discover PDFs dynamically:', e.message);
+  } else {
+    errors.push(`PDF discovery error: HTTP ${discoveryRes.status || 'NET_ERR'} (${discoveryRes.error})`);
+    console.warn('  Warning: Could not discover PDFs dynamically:', discoveryRes.error);
   }
 
   if (partnerPdfs.length === 0) {
@@ -285,8 +292,18 @@ export async function fetchPartnerPdfs() {
   try {
     pdf = (await import('pdf-parse')).default;
   } catch {
+    const errMsg = 'pdf-parse dependency not available';
+    errors.push(errMsg);
     console.warn('  Warning: pdf-parse not available. Skipping partner PDFs.');
-    return { records: [], pdfTotal: partnerPdfs.length, pdfSuccessCount: 0, pdfFailCount: partnerPdfs.length, errors: ['pdf-parse not available'] };
+    return {
+      records: [],
+      pdfTotal: partnerPdfs.length,
+      pdfSuccessCount: 0,
+      pdfFailCount: partnerPdfs.length,
+      status: partnerPdfs.length > 0 ? 'all_pdfs_failed' : 'no_pdfs_discovered',
+      errors,
+      pdfDetails: partnerPdfs.map(url => ({ url, ok: false, error: errMsg }))
+    };
   }
 
   const partnerMap = new Map();
@@ -294,18 +311,23 @@ export async function fetchPartnerPdfs() {
   let pdfFailCount = 0;
 
   for (const url of partnerPdfs) {
+    const isOkStore = url.includes('OK_');
+    const pdfRes = await fetchWithRetry(url, {}, { responseType: 'arrayBuffer' });
+
+    if (!pdfRes.ok) {
+      const errMsg = `PDF fetch failed (HTTP ${pdfRes.status || 'NET_ERR'}): ${url} - ${pdfRes.error}`;
+      errors.push(errMsg);
+      pdfFailCount++;
+      pdfDetails.push({ url, ok: false, status: pdfRes.status, attempts: pdfRes.attempts, error: pdfRes.error, recordCount: 0 });
+      continue;
+    }
+
     try {
-      const isOkStore = url.includes('OK_');
-      const res = await fetch(url);
-      if (!res.ok) {
-        errors.push(`PDF fetch failed (HTTP ${res.status}): ${url}`);
-        pdfFailCount++;
-        continue;
-      }
-      const buffer = await res.arrayBuffer();
+      const buffer = pdfRes.data;
       const data = await pdf(Buffer.from(buffer));
       const lines = (data.text || '').split('\n').map(l => l.trim()).filter(Boolean);
 
+      let parsedCountForPdf = 0;
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         const allMatches = [...line.matchAll(/\b(852[A-Z][A-Z0-9]*\d+)\b/g)];
@@ -365,17 +387,42 @@ export async function fetchPartnerPdfs() {
             _source: 'pdf_partner',
             _source_url: url
           });
+          parsedCountForPdf++;
         }
       }
       pdfSuccessCount++;
+      pdfDetails.push({ url, ok: true, status: pdfRes.status, attempts: pdfRes.attempts, error: null, recordCount: parsedCountForPdf });
     } catch (e) {
-      errors.push(`PDF parse error (${url}): ${e.message}`);
+      const errMsg = `PDF parse error (${url}): ${e.message}`;
+      errors.push(errMsg);
       pdfFailCount++;
+      pdfDetails.push({ url, ok: false, status: pdfRes.status, attempts: pdfRes.attempts, error: e.message, recordCount: 0 });
     }
   }
 
   const records = Array.from(partnerMap.values());
-  console.log(`  PDF: ${pdfSuccessCount} succeeded, ${pdfFailCount} failed, ${records.length} records`);
 
-  return { records, pdfTotal: partnerPdfs.length, pdfSuccessCount, pdfFailCount, errors };
+  // Determine categorical status
+  let status = 'success';
+  if (partnerPdfs.length === 0) {
+    status = 'no_pdfs_discovered';
+  } else if (pdfSuccessCount === 0) {
+    status = 'all_pdfs_failed';
+  } else if (pdfFailCount > 0) {
+    status = 'partial_pdf_failures';
+  } else if (records.length === 0) {
+    status = 'zero_records_parsed';
+  }
+
+  console.log(`  PDF: ${pdfSuccessCount}/${partnerPdfs.length} succeeded (${status}), ${pdfFailCount} failed, ${records.length} records`);
+
+  return {
+    records,
+    pdfTotal: partnerPdfs.length,
+    pdfSuccessCount,
+    pdfFailCount,
+    status,
+    errors,
+    pdfDetails
+  };
 }

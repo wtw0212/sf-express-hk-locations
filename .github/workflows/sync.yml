@@ -24,8 +24,14 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Code Syntax Verification
+        run: node --check scripts/*.js scripts/lib/*.js test/*.mjs
+
       - name: Pre-sync Verification Tests
         run: npm test
+
+      - name: Dry-Run Fixture Verification
+        run: npm run sync -- --fixture
 
       - name: Run Data Synchronization Pipeline
         run: npm run sync

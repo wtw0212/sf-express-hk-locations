@@ -5,19 +5,19 @@
  * SF Express HK Location Data Sync — Main Orchestrator
  *
  * Execution order:
- *   1. Read previous published dataset
- *   2. Fetch all current sources (TC API, EN API, SSR, PDFs)
- *   3. Save genuinely raw source snapshots
+ *   1. Read & validate previous published dataset (fail-closed)
+ *   2. Fetch all current sources (or use fixtures if --fixture)
+ *   3. Save raw source snapshot
  *   4. Normalize into nextList
- *   5. Validate nextList
- *   6. Run completeness gates
- *   7. Diff previousList vs nextList
+ *   5. Validate nextList against schema rules
+ *   6. Run completeness gates (including partner PDF and count anomaly gates)
+ *   7. Diff previousList vs nextList (canonicalized quality flags & migration aware)
  *   8. Generate diff report
  *   9. Generate metadata
- *   10. Atomic publish (all-or-nothing)
+ *   10. Transactional atomic publish (all-or-nothing with rollback)
  */
 
-import { readFile, mkdir } from 'node:fs/promises';
+import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -25,7 +25,7 @@ import { fileURLToPath } from 'node:url';
 import { fetchDistrictTree, fetchTcApi, fetchEnApi, fetchSsrPages, fetchPartnerPdfs, buildRecordMap } from './lib/source-fetchers.js';
 import { saveRawSnapshot } from './lib/raw-snapshot.js';
 import { normalizeRecords } from './lib/normalize.js';
-import { validateRecords, checkCompletenessGates } from './lib/validate.js';
+import { validateRecords, validatePreviousDataset, checkCompletenessGates } from './lib/validate.js';
 import { computeDiff } from './lib/diff.js';
 import { generateMarkdownReport } from './lib/report.js';
 import { atomicPublish } from './lib/atomic-publish.js';
@@ -39,7 +39,7 @@ const REPORTS_DIR = resolve(ROOT_DIR, 'reports');
 /**
  * Get current time as HKT string.
  */
-function getHKTDateString() {
+export function getHKTDateString() {
   const now = new Date();
   const hktOffset = 8 * 60 * 60 * 1000;
   const hktDate = new Date(now.getTime() + hktOffset);
@@ -53,53 +53,110 @@ function getHKTDateString() {
   return `${YYYY}-${MM}-${DD} ${hh}:${mm} (HKT UTC+8)`;
 }
 
-async function run() {
-  console.log('Starting SF Express HK Location Data Sync...');
+export async function runSync(options = {}) {
+  const isFixtureMode = options.isFixture || process.argv.includes('--fixture');
+  console.log(`Starting SF Express HK Location Data Sync... (${isFixtureMode ? 'FIXTURE MODE' : 'LIVE MODE'})`);
   const hktDateStr = getHKTDateString();
   console.log(`Current HKT Time: ${hktDateStr}`);
 
-  // ─── 1. Read previous published dataset ───────────────────────────
+  // ─── 1. Read & validate previous published dataset (fail closed) ────
   let previousList = [];
   const prevDataPath = resolve(DATA_DIR, 'locations.json');
   if (existsSync(prevDataPath)) {
+    let prevRaw;
     try {
-      const prevRaw = await readFile(prevDataPath, 'utf8');
-      previousList = JSON.parse(prevRaw);
-      if (!Array.isArray(previousList)) previousList = [];
-      console.log(`Loaded previous dataset: ${previousList.length} records`);
+      prevRaw = await readFile(prevDataPath, 'utf8');
     } catch (e) {
-      console.warn(`Warning: Could not read previous dataset: ${e.message}`);
+      throw new Error(`Failed to read published locations.json: ${e.message}`);
     }
+
+    try {
+      previousList = JSON.parse(prevRaw);
+    } catch (e) {
+      throw new Error(`Published locations.json is malformed JSON: ${e.message}`);
+    }
+
+    validatePreviousDataset(previousList);
+    console.log(`Loaded previous dataset: ${previousList.length} records`);
   } else {
     console.log('No previous dataset found. First run.');
   }
 
-  // ─── 2. Fetch all current sources ─────────────────────────────────
-  const { tcAreas, enAreas } = await fetchDistrictTree();
-  const tcResults = await fetchTcApi(tcAreas);
-  const enResults = await fetchEnApi(enAreas);
-  const ssrResult = await fetchSsrPages();
-  const pdfResult = await fetchPartnerPdfs();
+  // ─── 2. Fetch current sources (or load fixtures) ───────────────────
+  let tcResults, enResults, ssrResult, pdfResult;
+
+  if (isFixtureMode) {
+    console.log('Loading source data from raw snapshot fixture...');
+    const snapshotPath = resolve(RAW_DIR, 'latest-fetch.json');
+    if (!existsSync(snapshotPath)) {
+      throw new Error(`Fixture file not found at ${snapshotPath}`);
+    }
+    const rawSnap = JSON.parse(await readFile(snapshotPath, 'utf8'));
+
+    const rawTcResults = rawSnap.sources.api_tc?.results || [];
+    const flatTcRecords = rawSnap.sources.api_tc?.records || [];
+    tcResults = rawTcResults.map(r => ({
+      ...r,
+      records: r.records && r.records.length > 0
+        ? r.records
+        : (r.ok ? flatTcRecords.filter(rec => rec.district === r.area?.district) : [])
+    }));
+
+    const rawEnResults = rawSnap.sources.api_en?.results || [];
+    const flatEnRecords = rawSnap.sources.api_en?.records || [];
+    enResults = rawEnResults.map(r => ({
+      ...r,
+      records: r.records && r.records.length > 0
+        ? r.records
+        : (r.ok ? flatEnRecords.filter(rec => rec.district === r.area?.district) : [])
+    }));
+
+    ssrResult = {
+      records: rawSnap.sources.ssr?.records || [],
+      errors: rawSnap.sources.ssr?.errors || [],
+      ok: true
+    };
+    pdfResult = {
+      records: rawSnap.sources.partner_pdf?.records || [],
+      pdfTotal: rawSnap.sources.partner_pdf?.pdf_total ?? 8,
+      pdfSuccessCount: rawSnap.sources.partner_pdf?.pdf_success_count ?? 8,
+      pdfFailCount: rawSnap.sources.partner_pdf?.pdf_failure_count ?? 0,
+      status: rawSnap.sources.partner_pdf?.status || 'success',
+      errors: rawSnap.sources.partner_pdf?.errors || [],
+      pdfDetails: []
+    };
+  } else {
+    const { tcAreas, enAreas } = await fetchDistrictTree();
+    tcResults = await fetchTcApi(tcAreas);
+    enResults = await fetchEnApi(enAreas);
+    ssrResult = await fetchSsrPages();
+    pdfResult = await fetchPartnerPdfs();
+  }
 
   // Build record maps for normalization
   const tcMap = buildRecordMap(tcResults);
   const enMap = buildRecordMap(enResults);
 
-  console.log(`\nSource summary: TC=${tcMap.size}, EN=${enMap.size}, SSR=${ssrResult.records.length}, PDF=${pdfResult.records.length}`);
+  console.log(`\nSource summary: TC=${tcMap.size}, EN=${enMap.size}, SSR=${ssrResult.records.length}, PDF=${pdfResult.records.length} (status: ${pdfResult.status})`);
 
-  // ─── 3. Save genuinely raw source snapshots ───────────────────────
-  await saveRawSnapshot(RAW_DIR, {
-    tcResults,
-    enResults,
-    ssrRecords: ssrResult.records,
-    pdfRecords: pdfResult.records,
-    pdfTotal: pdfResult.pdfTotal,
-    pdfSuccessCount: pdfResult.pdfSuccessCount,
-    pdfFailCount: pdfResult.pdfFailCount
-  }, hktDateStr);
-  console.log('Saved raw snapshot.');
+  // ─── 3. Save raw snapshot ──────────────────────────────────────────
+  if (!isFixtureMode) {
+    await saveRawSnapshot(RAW_DIR, {
+      tcResults,
+      enResults,
+      ssrRecords: ssrResult.records,
+      pdfRecords: pdfResult.records,
+      pdfTotal: pdfResult.pdfTotal,
+      pdfSuccessCount: pdfResult.pdfSuccessCount,
+      pdfFailCount: pdfResult.pdfFailCount,
+      pdfStatus: pdfResult.status,
+      pdfErrors: pdfResult.errors,
+      ssrErrors: ssrResult.errors
+    }, hktDateStr);
+    console.log('Saved raw snapshot.');
+  }
 
-  // ─── 4. Normalize ─────────────────────────────────────────────────
+  // ─── 4. Normalize ──────────────────────────────────────────────────
   const { records: nextList, stats } = normalizeRecords(
     tcMap, enMap, ssrResult.records, pdfResult.records, hktDateStr
   );
@@ -107,7 +164,7 @@ async function run() {
   console.log(`District: ${stats.district_resolved} resolved, ${stats.district_unresolved} unresolved`);
   console.log(`English: ${stats.with_english} with EN data, ${stats.missing_english} missing`);
 
-  // ─── 5. Validate ──────────────────────────────────────────────────
+  // ─── 5. Validate next records ──────────────────────────────────────
   const { errors: validationErrors, warnings: validationWarnings } = validateRecords(nextList);
 
   if (validationWarnings.length > 0) {
@@ -121,10 +178,12 @@ async function run() {
     throw new Error('Dataset validation failed. Previous data preserved.');
   }
 
-  // ─── 6. Completeness gates ────────────────────────────────────────
+  // ─── 6. Completeness gates ─────────────────────────────────────────
   const gateResult = checkCompletenessGates({
     tcResults,
     enResults,
+    ssrResult,
+    pdfResult,
     records: nextList,
     previousRecords: previousList
   });
@@ -140,11 +199,11 @@ async function run() {
     throw new Error('Completeness gates failed. Previous data preserved.');
   }
 
-  // ─── 7. Diff ──────────────────────────────────────────────────────
+  // ─── 7. Diff ───────────────────────────────────────────────────────
   const diff = computeDiff(previousList, nextList);
   console.log(`\nDiff: +${diff.added.length} added, -${diff.removed.length} removed, ~${diff.updated.length} updated, =${diff.unchanged} unchanged`);
 
-  // ─── 8. Generate report ───────────────────────────────────────────
+  // ─── 8. Generate report ────────────────────────────────────────────
   const allErrors = [...validationErrors, ...gateResult.errors];
   const allWarnings = [...validationWarnings, ...gateResult.warnings];
 
@@ -155,10 +214,17 @@ async function run() {
     metrics: gateResult.metrics,
     records: nextList,
     gateErrors: allErrors,
-    gateWarnings: allWarnings
+    gateWarnings: allWarnings,
+    ssrResult,
+    pdfResult
   });
 
-  // ─── 9. Generate metadata ────────────────────────────────────────
+  // Write GitHub Step Summary if running in Actions environment
+  if (process.env.GITHUB_STEP_SUMMARY) {
+    await writeFile(process.env.GITHUB_STEP_SUMMARY, reportMarkdown, 'utf8').catch(() => {});
+  }
+
+  // ─── 9. Generate metadata ─────────────────────────────────────────
   const flagCounts = {};
   for (const r of nextList) {
     for (const f of (r.quality_flags || [])) {
@@ -186,11 +252,17 @@ async function run() {
         areas_success: gateResult.metrics.en_areas_success,
         areas_failed: gateResult.metrics.en_areas_failed
       },
-      ssr: { count: ssrResult.records.length },
+      ssr: {
+        count: ssrResult.records.length,
+        errors: ssrResult.errors || []
+      },
       partner_pdf: {
         pdf_total: pdfResult.pdfTotal,
         pdf_success: pdfResult.pdfSuccessCount,
-        pdf_failed: pdfResult.pdfFailCount
+        pdf_failed: pdfResult.pdfFailCount,
+        status: pdfResult.status,
+        records: pdfResult.records.length,
+        errors: pdfResult.errors || []
       }
     },
     coverage: {
@@ -207,7 +279,7 @@ async function run() {
     }
   };
 
-  // ─── 10. Atomic publish ───────────────────────────────────────────
+  // ─── 10. Atomic publish (release-level transactional) ─────────────
   await atomicPublish({
     records: nextList,
     metadata,
@@ -221,7 +293,9 @@ async function run() {
   console.log('Sync completed successfully!');
 }
 
-run().catch(error => {
-  console.error('\nSync failed:', error.message || error);
-  process.exit(1);
-});
+if (import.meta.url === `file://${process.argv[1]}`) {
+  runSync().catch(error => {
+    console.error('\nSync failed:', error.message || error);
+    process.exit(1);
+  });
+}

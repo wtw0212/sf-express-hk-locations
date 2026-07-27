@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SF Express HK Location Record",
+  "type": "object",
+  "required": [
+    "id",
+    "code",
+    "type",
+    "type_name",
+    "type_name_en",
+    "name",
+    "region",
+    "district",
+    "address",
+    "location",
+    "source",
+    "quality_flags",
+    "provenance",
+    "retrieved_at"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "code": { "type": "string", "minLength": 1 },
+    "type": { "type": "string", "enum": ["store", "locker", "partner"] },
+    "type_name": { "type": "string", "minLength": 1 },
+    "type_name_en": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "name_en": { "type": ["string", "null"] },
+    "region": { "type": ["string", "null"] },
+    "region_en": { "type": ["string", "null"] },
+    "district": { "type": ["string", "null"] },
+    "district_en": { "type": ["string", "null"] },
+    "sub_district": { "type": ["string", "null"] },
+    "sub_district_en": { "type": ["string", "null"] },
+    "address": { "type": "string", "minLength": 1 },
+    "address_en": { "type": ["string", "null"] },
+    "telephone": { "type": ["string", "null"] },
+    "business_hours": { "type": ["string", "null"] },
+    "business_hours_en": { "type": ["string", "null"] },
+    "location": {
+      "type": "object",
+      "required": ["latitude", "longitude"],
+      "properties": {
+        "latitude": { "type": ["number", "null"] },
+        "longitude": { "type": ["number", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "string",
+      "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived"]
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "severity", "fields", "details"],
+        "properties": {
+          "type": { "type": "string" },
+          "severity": { "type": "string", "enum": ["info", "warning", "error"] },
+          "fields": { "type": "array", "items": { "type": "string" } },
+          "details": { "type": ["object", "null"] }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["name", "address", "district"],
+      "properties": {
+        "name": { "type": "string", "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived"] },
+        "name_en": { "type": ["string", "null"], "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived", null] },
+        "address": { "type": "string", "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived"] },
+        "address_en": { "type": ["string", "null"], "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived", null] },
+        "district": { "type": "string", "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived"] }
+      }
+    },
+    "retrieved_at": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -87,8 +87,11 @@ export const DIFF_COMPARE_FIELDS = [
 /** Maximum allowed percentage drop in record count before blocking publication */
 export const COUNT_DROP_THRESHOLD_PCT = 5;
 
-/** Maximum allowed percentage increase before warning (may indicate duplicates) */
-export const COUNT_INCREASE_THRESHOLD_PCT = 15;
+/** Warning threshold for percentage increase */
+export const COUNT_INCREASE_WARN_PCT = 5;
+
+/** Maximum allowed percentage increase before blocking publication */
+export const COUNT_INCREASE_BLOCK_PCT = 15;
 
 /** Minimum English match rate (fraction 0-1) required for publication */
 export const EN_MATCH_RATE_THRESHOLD = 0.80;
@@ -112,6 +115,14 @@ export const SOURCES = {
   PDF_PARTNER: 'pdf_partner',
   DERIVED: 'derived'
 };
+
+export const VALID_SOURCES = [
+  SOURCES.API_TC,
+  SOURCES.API_EN,
+  SOURCES.SSR,
+  SOURCES.PDF_PARTNER,
+  SOURCES.DERIVED
+];
 
 // ─── Valid location types ───────────────────────────────────────────────
 

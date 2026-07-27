@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SF Express HK Metadata Schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "retrieved_at",
+    "counts",
+    "source_status",
+    "coverage",
+    "quality"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer" },
+    "retrieved_at": { "type": "string" },
+    "counts": {
+      "type": "object",
+      "required": ["total", "stores", "lockers", "partners"],
+      "properties": {
+        "total": { "type": "integer", "minimum": 0 },
+        "stores": { "type": "integer", "minimum": 0 },
+        "lockers": { "type": "integer", "minimum": 0 },
+        "partners": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "source_status": {
+      "type": "object",
+      "required": ["api_tc", "api_en", "ssr", "partner_pdf"],
+      "properties": {
+        "api_tc": {
+          "type": "object",
+          "required": ["areas_total", "areas_success", "areas_failed"],
+          "properties": {
+            "areas_total": { "type": "integer" },
+            "areas_success": { "type": "integer" },
+            "areas_failed": { "type": "integer" }
+          }
+        },
+        "api_en": {
+          "type": "object",
+          "required": ["areas_total", "areas_success", "areas_failed"],
+          "properties": {
+            "areas_total": { "type": "integer" },
+            "areas_success": { "type": "integer" },
+            "areas_failed": { "type": "integer" }
+          }
+        },
+        "ssr": {
+          "type": "object",
+          "required": ["count"],
+          "properties": {
+            "count": { "type": "integer" },
+            "errors": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "partner_pdf": {
+          "type": "object",
+          "required": ["pdf_total", "pdf_success", "pdf_failed", "records", "errors"],
+          "properties": {
+            "pdf_total": { "type": "integer" },
+            "pdf_success": { "type": "integer" },
+            "pdf_failed": { "type": "integer" },
+            "records": { "type": "integer" },
+            "status": { "type": "string" },
+            "errors": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "tc_record_count",
+        "en_record_count",
+        "bilingual_match_rate",
+        "district_resolved_count",
+        "district_unresolved_count"
+      ]
+    },
+    "quality": {
+      "type": "object",
+      "required": ["blocking_errors", "warnings", "flag_counts"],
+      "properties": {
+        "blocking_errors": { "type": "integer" },
+        "warnings": { "type": "integer" },
+        "flag_counts": { "type": "object" }
+      }
+    }
+  }
+}

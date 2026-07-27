@@ -170,6 +170,41 @@ export function validatePreviousDataset(previousList, options = {}) {
   }
 }
 
+export function checkPipelineRegression({
+  previousIntegrity,
+  currentIntegrity,
+  migrationApproved = false,
+  schemaMigration = false
+}) {
+  const errors = [];
+  const warnings = [];
+  const requiredSources = ['api_tc', 'api_en', 'ssr', 'reviewed_registry', 'canonical'];
+
+  if (
+    !previousIntegrity ||
+    !currentIntegrity ||
+    requiredSources.some(key => !previousIntegrity[key]?.semantic_sha256) ||
+    requiredSources.some(key => !currentIntegrity[key]?.semantic_sha256)
+  ) {
+    warnings.push('Pipeline regression comparison unavailable: baseline source_integrity is missing or incomplete');
+    return { pass: true, errors, warnings };
+  }
+
+  const canonicalChanged =
+    previousIntegrity.canonical.semantic_sha256 !== currentIntegrity.canonical.semantic_sha256;
+  const sourceChanged = ['api_tc', 'api_en', 'ssr', 'reviewed_registry'].some(key =>
+    previousIntegrity[key].semantic_sha256 !== currentIntegrity[key].semantic_sha256
+  );
+
+  if (canonicalChanged && !sourceChanged && !migrationApproved && !schemaMigration) {
+    errors.push(
+      'Canonical output changed unexpectedly while all source semantic hashes remained unchanged'
+    );
+  }
+
+  return { pass: errors.length === 0, errors, warnings };
+}
+
 /**
  * Calculate count delta metrics with division-by-zero protection.
  * @param {number} previous

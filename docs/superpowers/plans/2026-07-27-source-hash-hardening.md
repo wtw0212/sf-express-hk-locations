@@ -186,7 +186,7 @@ await validateRawSnapshotSchema(rawSnap);
 
 Run: `node --test test/source-fetchers.test.mjs test/source-hash-verifier.test.mjs`
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add scripts/lib/api-client.js scripts/lib/source-fetchers.js scripts/lib/raw-snapshot.js scripts/sync.js schema/raw-snapshot.schema.json scripts/lib/schema-validator.js test/source-fetchers.test.mjs test/source-hash-verifier.test.mjs
@@ -207,7 +207,7 @@ git commit -m "Preserve and verify raw API responses"
 - Metadata adds `source_integrity.api_tc`, `source_integrity.api_en`, `source_integrity.canonical`, `source_integrity.ssr`, and `source_integrity.reviewed_registry`.
 - Produces: `checkPipelineRegression({ previousIntegrity, currentIntegrity, migrationApproved })`.
 
-- [ ] **Step 1: Add unchanged-source/changed-canonical and approved-migration tests**
+- [x] **Step 1: Add unchanged-source/changed-canonical and approved-migration tests**
 
 ```js
 assert.equal(checkPipelineRegression({
@@ -216,11 +216,11 @@ assert.equal(checkPipelineRegression({
 }).pass, false);
 ```
 
-- [ ] **Step 2: Run focused tests and verify RED**
+- [x] **Step 2: Run focused tests and verify RED**
 
 Run: `node --test --test-name-pattern='pipeline regression|source_integrity' test/migration-safety.test.mjs test/schema-validator.test.mjs`
 
-- [ ] **Step 3: Calculate metadata hashes and gate unexplained canonical drift**
+- [x] **Step 3: Calculate metadata hashes and gate unexplained canonical drift**
 
 ```js
 const explained =
@@ -229,7 +229,7 @@ const explained =
   previousIntegrity.reviewed_registry.semantic_sha256 !== currentIntegrity.reviewed_registry.semantic_sha256;
 ```
 
-- [ ] **Step 4: Run focused tests and verify GREEN**
+- [x] **Step 4: Run focused tests and verify GREEN**
 
 Run: `node --test --test-name-pattern='pipeline regression|source_integrity' test/migration-safety.test.mjs test/schema-validator.test.mjs`
 

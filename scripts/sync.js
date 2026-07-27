@@ -27,12 +27,17 @@ import { fileURLToPath } from 'node:url';
 import { fetchDistrictTree, fetchTcApi, fetchEnApi, fetchSsrPages, fetchPartnerPdfs, parsePartnerPdfDocuments, buildRecordMap } from './lib/source-fetchers.js';
 import { buildRawSnapshot } from './lib/raw-snapshot.js';
 import { normalizeRecords } from './lib/normalize.js';
-import { validateRecords, validatePreviousDataset, checkCompletenessGates, validateCrossFile } from './lib/validate.js';
+import { validateRecords, validatePreviousDataset, checkCompletenessGates, checkPipelineRegression, validateCrossFile } from './lib/validate.js';
 import { computeDiff } from './lib/diff.js';
 import { generateMarkdownReport } from './lib/report.js';
 import { atomicPublish } from './lib/atomic-publish.js';
 import { validateAllReleaseArtifactsSchemas, validateRawSnapshotSchema } from './lib/schema-validator.js';
 import { verifySourceHashes } from './lib/source-hash-verifier.js';
+import {
+  calculateCanonicalDatasetHash,
+  calculateReviewedRegistryHash,
+  calculateSsrHash
+} from './lib/source-hashes.js';
 import { loadReviewedPdfRegistry } from './lib/reviewed-pdf-registry.js';
 import { auditPartnerPdfRecords } from './lib/pdf-audit.js';
 
@@ -277,6 +282,35 @@ export async function runSync(options = {}) {
     generatedAt: hktDateStr
   });
 
+  const sourceIntegrity = {
+    api_tc: {
+      raw_snapshot_sha256: rawSnapshot.sources.api_tc.raw_snapshot_sha256,
+      semantic_sha256: rawSnapshot.sources.api_tc.semantic_sha256,
+      record_count: rawSnapshot.sources.api_tc.record_count,
+      record_hashes: rawSnapshot.sources.api_tc.record_hashes,
+      duplicate_codes: rawSnapshot.sources.api_tc.duplicate_codes
+    },
+    api_en: {
+      raw_snapshot_sha256: rawSnapshot.sources.api_en.raw_snapshot_sha256,
+      semantic_sha256: rawSnapshot.sources.api_en.semantic_sha256,
+      record_count: rawSnapshot.sources.api_en.record_count,
+      record_hashes: rawSnapshot.sources.api_en.record_hashes,
+      duplicate_codes: rawSnapshot.sources.api_en.duplicate_codes
+    },
+    ssr: calculateSsrHash(ssrResult.records),
+    reviewed_registry: calculateReviewedRegistryHash(reviewedPdfList),
+    canonical: calculateCanonicalDatasetHash(nextList)
+  };
+
+  const regressionGate = checkPipelineRegression({
+    previousIntegrity: previousMetadata?.source_integrity,
+    currentIntegrity: sourceIntegrity,
+    migrationApproved: options.migrationApproved === true,
+    schemaMigration:
+      previousMetadata?.schema_version != null &&
+      previousMetadata.schema_version !== 2
+  });
+
   // ─── 6. Validate next records & Completeness gates ──────────────────
   const { errors: validationErrors, warnings: validationWarnings } = validateRecords(nextList);
 
@@ -290,8 +324,8 @@ export async function runSync(options = {}) {
     config: { previousMetadata }
   });
 
-  const allErrors = [...validationErrors, ...gateResult.errors];
-  const allWarnings = [...validationWarnings, ...gateResult.warnings];
+  const allErrors = [...validationErrors, ...gateResult.errors, ...regressionGate.errors];
+  const allWarnings = [...validationWarnings, ...gateResult.warnings, ...regressionGate.warnings];
 
   if (allWarnings.length > 0) {
     console.log('\nPipeline warnings:');
@@ -415,7 +449,8 @@ export async function runSync(options = {}) {
       pipeline_warnings: allWarnings.length,
       record_flag_counts_by_severity: flagSeverityCounts,
       flag_counts_by_type: flagCounts
-    }
+    },
+    source_integrity: sourceIntegrity
   };
 
   // ─── 10 & 11. Build, Validate & Publish Release Artifacts ─────────

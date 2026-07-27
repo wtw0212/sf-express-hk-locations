@@ -11,7 +11,8 @@
     "source_status",
     "source_policy",
     "coverage",
-    "quality"
+    "quality",
+    "source_integrity"
   ],
   "properties": {
     "schema_version": { "type": "integer", "enum": [2] },
@@ -242,9 +243,69 @@
         "flag_counts_by_type": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
       },
       "additionalProperties": false
+    },
+    "source_integrity": {
+      "type": "object",
+      "required": ["api_tc", "api_en", "ssr", "reviewed_registry", "canonical"],
+      "properties": {
+        "api_tc": { "$ref": "#/definitions/apiIntegrity" },
+        "api_en": { "$ref": "#/definitions/apiIntegrity" },
+        "ssr": { "$ref": "#/definitions/semanticIntegrity" },
+        "reviewed_registry": { "$ref": "#/definitions/semanticIntegrity" },
+        "canonical": { "$ref": "#/definitions/semanticIntegrity" }
+      },
+      "additionalProperties": false
     }
   },
   "definitions": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "recordHashes": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/definitions/sha256" }
+    },
+    "semanticIntegrity": {
+      "type": "object",
+      "required": ["semantic_sha256", "record_count", "record_hashes"],
+      "properties": {
+        "semantic_sha256": { "$ref": "#/definitions/sha256" },
+        "record_count": { "type": "integer", "minimum": 0 },
+        "record_hashes": { "$ref": "#/definitions/recordHashes" }
+      },
+      "additionalProperties": false
+    },
+    "apiIntegrity": {
+      "type": "object",
+      "required": [
+        "raw_snapshot_sha256",
+        "semantic_sha256",
+        "record_count",
+        "record_hashes",
+        "duplicate_codes"
+      ],
+      "properties": {
+        "raw_snapshot_sha256": { "$ref": "#/definitions/sha256" },
+        "semantic_sha256": { "$ref": "#/definitions/sha256" },
+        "record_count": { "type": "integer", "minimum": 0 },
+        "record_hashes": { "$ref": "#/definitions/recordHashes" },
+        "duplicate_codes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["serviceCode", "occurrences", "conflicting"],
+            "properties": {
+              "serviceCode": { "type": "string", "minLength": 1 },
+              "occurrences": { "type": "integer", "minimum": 2 },
+              "conflicting": { "type": "boolean" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
     "countDeltaItem": {
       "type": "object",
       "required": ["previous", "current", "delta", "delta_pct", "baseline_available", "baseline_source", "gate_result"],

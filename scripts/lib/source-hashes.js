@@ -260,6 +260,70 @@ export function calculateCanonicalDatasetHash(records = []) {
   };
 }
 
+function calculateNamedRecordSetHash(records, canonicalize, codeField = 'code') {
+  const grouped = new Map();
+  for (const sourceRecord of records || []) {
+    const record = canonicalize(sourceRecord);
+    const code = record[codeField];
+    if (typeof code !== 'string' || code.length === 0) {
+      throw new Error('Semantic source record is missing code');
+    }
+    if (!grouped.has(code)) grouped.set(code, []);
+    grouped.get(code).push(record);
+  }
+
+  const selected = [];
+  const recordHashes = {};
+  for (const code of [...grouped.keys()].sort()) {
+    const variants = grouped.get(code)
+      .map(record => ({ record, serialized: stableStringify(record) }))
+      .sort((a, b) => a.serialized.localeCompare(b.serialized));
+    selected.push(variants[0].record);
+    recordHashes[code] = sha256(variants[0].serialized);
+  }
+  return {
+    semantic_sha256: sha256(stableStringify(selected)),
+    record_count: selected.length,
+    record_hashes: recordHashes
+  };
+}
+
+export function calculateSsrHash(records = []) {
+  return calculateNamedRecordSetHash(records, record => ({
+    code: record?.serviceCode ?? record?.code ?? null,
+    name: record?.name ?? null,
+    name_en: record?.name_en ?? null,
+    address: record?.address ?? null,
+    address_en: record?.address_en ?? null,
+    city: record?.city ?? null,
+    district: record?.district ?? null,
+    sub_district: record?.sub_district ?? null,
+    serviceTime: record?.serviceTime ?? record?.business_hours ?? null,
+    business_hours_en: record?.business_hours_en ?? null,
+    latitude: record?.latitude ?? record?.location?.latitude ?? null,
+    longitude: record?.longitude ?? record?.location?.longitude ?? null
+  }));
+}
+
+export function calculateReviewedRegistryHash(records = []) {
+  return calculateNamedRecordSetHash(records, record => ({
+    code: record?.code ?? record?.serviceCode ?? null,
+    name: record?.name ?? null,
+    name_en: record?.name_en ?? null,
+    address: record?.address ?? null,
+    address_en: record?.address_en ?? null,
+    district: record?.district ?? null,
+    district_en: record?.district_en ?? null,
+    sub_district: record?.sub_district ?? null,
+    sub_district_en: record?.sub_district_en ?? null,
+    business_hours: record?.business_hours ?? null,
+    business_hours_en: record?.business_hours_en ?? null,
+    source_key: record?._source_key ?? record?.source_key ?? null,
+    source_url: record?._source_url ?? record?.source_url ?? null,
+    evidence: record?._registry_evidence ?? null
+  }));
+}
+
 /**
  * @param {Record<string,string>} previous
  * @param {Record<string,string>} current

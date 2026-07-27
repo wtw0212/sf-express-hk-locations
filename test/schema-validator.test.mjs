@@ -107,6 +107,37 @@ const validMetadata = {
     pipeline_warnings: 0,
     record_flag_counts_by_severity: { info: 0, warning: 0, error: 0 },
     flag_counts_by_type: {}
+  },
+  source_integrity: {
+    api_tc: {
+      raw_snapshot_sha256: 'a'.repeat(64),
+      semantic_sha256: 'b'.repeat(64),
+      record_count: 1,
+      record_hashes: { '852A': 'c'.repeat(64) },
+      duplicate_codes: []
+    },
+    api_en: {
+      raw_snapshot_sha256: 'd'.repeat(64),
+      semantic_sha256: 'e'.repeat(64),
+      record_count: 1,
+      record_hashes: { '852A': 'f'.repeat(64) },
+      duplicate_codes: []
+    },
+    ssr: {
+      semantic_sha256: '1'.repeat(64),
+      record_count: 0,
+      record_hashes: {}
+    },
+    reviewed_registry: {
+      semantic_sha256: '2'.repeat(64),
+      record_count: 0,
+      record_hashes: {}
+    },
+    canonical: {
+      semantic_sha256: '3'.repeat(64),
+      record_count: 1,
+      record_hashes: { '852A': '4'.repeat(64) }
+    }
   }
 };
 
@@ -155,4 +186,11 @@ test('schema-validator: validates all release artifacts together', async () => {
   };
 
   await assert.doesNotReject(validateAllReleaseArtifactsSchemas(artifacts));
+});
+
+test('schema-validator: source_integrity requires complete SHA-256 evidence', async () => {
+  const invalid = structuredClone(validMetadata);
+  invalid.source_integrity.api_tc.semantic_sha256 = 'not-a-hash';
+  const result = await validateMetadataSchema(invalid);
+  assert.equal(result.valid, false);
 });

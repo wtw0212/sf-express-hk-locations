@@ -7,7 +7,7 @@ import { tmpdir } from 'node:os';
 import { normalizeRecords } from '../scripts/lib/normalize.js';
 import { loadReviewedPdfRegistry } from '../scripts/lib/reviewed-pdf-registry.js';
 import { auditPartnerPdfRecords } from '../scripts/lib/pdf-audit.js';
-import { checkCompletenessGates, validatePreviousDataset } from '../scripts/lib/validate.js';
+import { checkCompletenessGates, checkPipelineRegression, validatePreviousDataset } from '../scripts/lib/validate.js';
 import { parsePartnerPdfDocuments } from '../scripts/lib/source-fetchers.js';
 import { runSync } from '../scripts/sync.js';
 
@@ -201,6 +201,47 @@ test('SSR zero records do not create a removal blocker without previous SSR-only
   });
 
   assert.equal(result.errors.some(error => error.includes('SSR-only records were removed')), false);
+});
+
+test('pipeline regression gate blocks unexplained canonical drift when all semantic sources are unchanged', () => {
+  const previousIntegrity = {
+    api_tc: { semantic_sha256: 'a' },
+    api_en: { semantic_sha256: 'b' },
+    ssr: { semantic_sha256: 'c' },
+    reviewed_registry: { semantic_sha256: 'd' },
+    canonical: { semantic_sha256: 'old' }
+  };
+  const currentIntegrity = structuredClone(previousIntegrity);
+  currentIntegrity.canonical.semantic_sha256 = 'new';
+
+  const result = checkPipelineRegression({ previousIntegrity, currentIntegrity });
+  assert.equal(result.pass, false);
+  assert.match(result.errors[0], /canonical output changed.*source semantic hashes remained unchanged/i);
+});
+
+test('pipeline regression gate accepts source-explained drift or an explicit migration approval', () => {
+  const previousIntegrity = {
+    api_tc: { semantic_sha256: 'a' },
+    api_en: { semantic_sha256: 'b' },
+    ssr: { semantic_sha256: 'c' },
+    reviewed_registry: { semantic_sha256: 'd' },
+    canonical: { semantic_sha256: 'old' }
+  };
+  const changedSsr = structuredClone(previousIntegrity);
+  changedSsr.ssr.semantic_sha256 = 'new-ssr';
+  changedSsr.canonical.semantic_sha256 = 'new-canonical';
+  assert.equal(checkPipelineRegression({
+    previousIntegrity,
+    currentIntegrity: changedSsr
+  }).pass, true);
+
+  const approved = structuredClone(previousIntegrity);
+  approved.canonical.semantic_sha256 = 'new-canonical';
+  assert.equal(checkPipelineRegression({
+    previousIntegrity,
+    currentIntegrity: approved,
+    migrationApproved: true
+  }).pass, true);
 });
 
 test('sync rejects an explicit missing reviewed registry instead of falling back', async () => {

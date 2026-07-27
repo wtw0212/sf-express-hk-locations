@@ -339,39 +339,13 @@
     "retrieved_at": "2026-07-27 19:28 (HKT UTC+8)"
   },
   {
-    "id": "852HHUM",
-    "code": "852HHUM",
+    "id": "852BD",
+    "code": "852BD",
     "type": "store",
     "type_name": "順豐站",
     "type_name_en": "SF Store",
-    "name": "坑口南豐廣場順豐站",
-    "name_en": "Nan Fung Plaza, Hang Hau",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "西貢區",
-    "district_en": "Sai Kung District",
-    "sub_district": "坑口",
-    "sub_district_en": "Hang Hau",
-    "address": "香港西貢區坑口培成路8號南豐廣場1樓B28-B31鋪*",
-    "address_en": "Shop B28-B31, 1/F Nan Fung Plaza, 8 Pui Shing Road*,Hang Hau,Sai Kung District,Hong Kong",
-    "telephone": "64635030",
-    "business_hours": "星期一至星期五,11:00-22:00;星期日及公眾假期,12:00-20:00;星期六,12:00-20:00",
-    "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
-    "location": {
-      "latitude": 22.314736,
-      "longitude": 114.263893
-    },
-    "source": "api",
-    "retrieved_at": "2026-07-27 09:32 (HKT UTC+8)"
-  },
-  {
-    "id": "852EA",
-    "code": "852EA",
-    "type": "store",
-    "type_name": "順豐站",
-    "type_name_en": "SF Store",
-    "name": "佐敦廟街順豐站",
-    "name_en": "Temple Street, Jordan",
+    "name": "大角咀華源工廈順豐站",
+    "name_en": "Wah Yuen Factory Building, Tai Kok Tsui",
     "region": "九龍",
     "region_en": "Kowloon",
     "district": "油尖旺區",
@@ -384,8 +358,8 @@
     "business_hours": "周一至周六,09:00-20:00;周日及勞工假期,09:00-18:00",
     "business_hours_en": "Mon to Sat 09:00-20:00; Sun & Statutory Holidays 09:00-18:00",
     "location": {
-      "latitude": 22.296973,
-      "longitude": 114.17512
+      "latitude": 22.320747,
+      "longitude": 114.163071
     },
     "source": "api_tc",
     "quality_flags": [],
@@ -522,13 +496,13 @@
     "retrieved_at": "2026-07-27 19:28 (HKT UTC+8)"
   },
   {
-    "id": "852EB",
-    "code": "852EB",
+    "id": "852BFL",
+    "code": "852BFL",
     "type": "store",
     "type_name": "順豐站",
     "type_name_en": "SF Store",
-    "name": "尖沙咀南洋中心順豐站",
-    "name_en": "South Seas Centre, Tsim Sha Tsui",
+    "name": "大角咀中興樓順豐站",
+    "name_en": "Chung Hing Building, Tai Kok Tsui",
     "region": "九龍",
     "region_en": "Kowloon",
     "district": "油尖旺區",
@@ -541,8 +515,8 @@
     "business_hours": "周一至周五,11:00-21:00;周日及公眾假期,12:00-20:00;周六,12:00-20:00",
     "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
     "location": {
-      "latitude": 22.299624,
-      "longitude": 114.178759
+      "latitude": 22.322359,
+      "longitude": 114.160828
     },
     "source": "api_tc",
     "quality_flags": [],
@@ -1342,8 +1316,8 @@
     "retrieved_at": "2026-07-27 19:28 (HKT UTC+8)"
   },
   {
-    "id": "852BD",
-    "code": "852BD",
+    "id": "852FBL",
+    "code": "852FBL",
     "type": "store",
     "type_name": "順豐站",
     "type_name_en": "SF Store",
@@ -1361,8 +1335,8 @@
     "business_hours": "周一至周五,10:30-22:00",
     "business_hours_en": "Mon to Fri 11:00-22:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
     "location": {
-      "latitude": 22.320747,
-      "longitude": 114.163071
+      "latitude": 22.457061,
+      "longitude": 113.998453
     },
     "source": "api_tc",
     "quality_flags": [
@@ -1626,8 +1600,8 @@
     "business_hours": "周一至周五,11:00-21:00;周日及公眾假期,12:00-20:00;周六,12:00-20:00",
     "business_hours_en": "Mon to Fri 11:00-21:00; Sun & Public Holidays 12:00-20:00; Sat 12:00-20:00",
     "location": {
-      "latitude": 22.457061,
-      "longitude": 113.998453
+      "latitude": 22.4925454,
+      "longitude": 114.1406376
     },
     "source": "api_tc",
     "quality_flags": [],

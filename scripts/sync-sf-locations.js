@@ -1,9 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const pdf = require('pdf-parse');
-const OpenCC = require('opencc-js');
-
-const converter = OpenCC.Converter({ from: 'cn', to: 'hk' });
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT_DIR, 'data');
@@ -78,8 +75,7 @@ function cleanAndConvert(str, preserveAsterisk = true) {
 
   const hasAsterisk = preserveAsterisk && String(str).includes('*');
 
-  let result = converter(String(str));
-  result = result.replace(/\*/g, '').trim();
+  let result = String(str).replace(/\*/g, '').trim();
 
   result = result
     .replace(/周一/g, '星期一')
@@ -92,24 +88,7 @@ function cleanAndConvert(str, preserveAsterisk = true) {
     .replace(/节假日/g, '公眾假期')
     .replace(/劳工假期/g, '勞工假期')
     .replace(/自助櫃/g, '順豐智能櫃')
-    .replace(/自助柜/g, '順豐智能櫃')
-    .replace(/東湧/g, '東涌')
-    .replace(/鰂魚湧/g, '鰂魚涌')
-    .replace(/葵湧/g, '葵涌')
-    .replace(/深井湧/g, '深井涌')
-    .replace(/皇後/g, '皇后')
-    .replace(/天後/g, '天后')
-    .replace(/平臺/g, '平台')
-    .replace(/月臺/g, '月台')
-    .replace(/幹洗/g, '乾洗')
-    .replace(/舖/g, '鋪')
-    .replace(/廣福[裏裡]/g, '廣福里')
-    .replace(/文明[裏裡]/g, '文明里')
-    .replace(/大榮[裏裡]/g, '大榮里')
-    .replace(/禾葵[裏裡]/g, '禾葵里')
-    .replace(/偉智[裏裡]/g, '偉智里')
-    .replace(/優景[裏裡]/g, '優景里')
-    .replace(/翔盈[裏裡]/g, '翔盈里');
+    .replace(/自助柜/g, '順豐智能櫃');
 
   if (hasAsterisk) {
     result += '*';

@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 import { parseOkPartnerPdfText } from '../scripts/lib/pdf-parsers/ok-partner-parser.js';
 import { parseAspPartnerPdfText } from '../scripts/lib/pdf-parsers/asp-partner-parser.js';
+import { findServiceCodes } from '../scripts/lib/pdf-parsers/common.js';
 import { checkCompletenessGates } from '../scripts/lib/validate.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -13,9 +14,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 test('pdf-parsers: parseOkPartnerPdfText correctly parses multiline wrapped OK PDF fixture', async () => {
   const text = await readFile(resolve(__dirname, 'fixtures/pdf/ok-hk-page-sample.txt'), 'utf8');
   const res = parseOkPartnerPdfText({ text, sourceUrl: 'https://hk.sf-express.com/uploads/OK_HK_TC.pdf' });
-
-  assert.equal(res.metrics.quarantineCount, 0, 'Fixture quarantine count must be 0');
-  assert.equal(res.validRecords.length, 5);
 
   const tb2011 = res.validRecords.find(r => r.serviceCode === '852TB2011');
   assert.ok(tb2011, '852TB2011 record must exist');
@@ -30,35 +28,41 @@ test('pdf-parsers: parseOkPartnerPdfText correctly parses multiline wrapped OK P
   assert.equal(ma2013.serviceTime, '24小時');
 });
 
-test('pdf-parsers: parseAspPartnerPdfText handles ASP HK fixture & regression code pairs', async () => {
+test('pdf-parsers: ASP parser quarantines conflicting visible and caret service codes', async () => {
   const text = await readFile(resolve(__dirname, 'fixtures/pdf/asp-hk-page-sample.txt'), 'utf8');
-  const res = parseAspPartnerPdfText({ text, sourceUrl: 'https://hk.sf-express.com/uploads/ASP_HK_TC.pdf' });
+  const result = parseAspPartnerPdfText({ text, sourceUrl: 'https://hk.sf-express.com/uploads/ASP_HK_TC.pdf' });
 
-  assert.equal(res.metrics.quarantineCount, 0);
-  assert.equal(res.validRecords.length, 4);
+  for (const code of ['852PC3002', '852MA3003']) {
+    assert.ok(
+      !result.validRecords.some(record => record.serviceCode === code),
+      `${code} must not be published from an unresolved code mismatch`
+    );
+  }
 
-  // Check 852PC3002 regression pair (raw text contained typo 852PC3004 before address)
-  const pc3002 = res.validRecords.find(r => r.serviceCode === '852PC3002');
-  assert.ok(pc3002, '852PC3002 must be extracted cleanly');
-  assert.equal(pc3002.name, '筲箕灣愛蝶灣自提點');
-  assert.equal(pc3002.address, '筲箕湾愛禮街2號愛蝶灣25號地下');
-  assert.ok(!pc3002.name.includes('852PC3004'), '852PC3004 must not leak into 852PC3002 name');
-  assert.ok(!pc3002.address.includes('852PC3004'), '852PC3004 must not leak into 852PC3002 address');
-  assert.ok(pc3002.serviceTime.includes('12:00-21:00'));
-
-  // Check 852MA3003 regression pair
-  const ma3003 = res.validRecords.find(r => r.serviceCode === '852MA3003');
-  assert.ok(ma3003, '852MA3003 must be extracted cleanly');
-  assert.equal(ma3003.name, '西營盤港大自提點');
-  assert.equal(ma3003.address, '石塘咀皇后大道西425Z永華大廈後座地舖');
-  assert.ok(!ma3003.name.includes('852MA3017'));
+  assert.ok(
+    result.quarantinedRecords.some(record => record.reasonCodes.includes('SERVICE_CODE_MISMATCH'))
+  );
 });
 
-test('pdf-parsers: parseAspPartnerPdfText preserves business hours for 852GC2003, 852FE3012, 852G3004, 852G3008', async () => {
+test('pdf-parsers: no published PDF field contains another service code', async () => {
+  const text = await readFile(resolve(__dirname, 'fixtures/pdf/asp-nt-page-sample.txt'), 'utf8');
+  const result = parseAspPartnerPdfText({ text, sourceUrl: 'https://hk.sf-express.com/uploads/ASP_NT_TC.pdf' });
+
+  for (const record of result.validRecords) {
+    for (const value of [record.name, record.address, record.serviceTime]) {
+      const foreignCodes = findServiceCodes(value).filter(code => code !== record.serviceCode);
+      assert.deepEqual(
+        foreignCodes,
+        [],
+        `${record.serviceCode} contains foreign code(s): ${foreignCodes.join(', ')}`
+      );
+    }
+  }
+});
+
+test('pdf-parsers: parseAspPartnerPdfText preserves business hours for valid records & quarantines code mismatches', async () => {
   const text = await readFile(resolve(__dirname, 'fixtures/pdf/asp-nt-page-sample.txt'), 'utf8');
   const res = parseAspPartnerPdfText({ text, sourceUrl: 'https://hk.sf-express.com/uploads/ASP_NT_TC.pdf' });
-
-  assert.equal(res.metrics.quarantineCount, 0);
 
   const gc2003 = res.validRecords.find(r => r.serviceCode === '852GC2003');
   assert.ok(gc2003);
@@ -75,6 +79,9 @@ test('pdf-parsers: parseAspPartnerPdfText preserves business hours for 852GC2003
   const g3008 = res.validRecords.find(r => r.serviceCode === '852G3008');
   assert.ok(g3008);
   assert.equal(g3008.serviceTime, '星期一至六:10:00-21:00 星期日:10:00-21:00 公眾假期:休息');
+
+  // Verify that code mismatches (e.g. 852FE3022 vs 852FE3018) are quarantined with SERVICE_CODE_MISMATCH
+  assert.ok(res.quarantinedRecords.some(q => q.reasonCodes.includes('SERVICE_CODE_MISMATCH')));
 });
 
 test('pdf-parsers: quarantine quality threshold gates block > 5% quarantine ratio', () => {
@@ -102,7 +109,7 @@ test('pdf-parsers: quarantine quality threshold gates block > 5% quarantine rati
         quarantined_record_count: 10,
         duplicate_code_count: 0,
         duplicate_conflict_count: 0,
-        quarantine_ratio: 0.10 // 10% quarantine ratio > 5% block threshold
+        quarantine_ratio: 0.10
       }
     ]
   };

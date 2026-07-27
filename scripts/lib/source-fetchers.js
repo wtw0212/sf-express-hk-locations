@@ -5,6 +5,25 @@ import { parseAspPartnerPdfText } from './pdf-parsers/asp-partner-parser.js';
 const TC_API_URL = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=tc&region=hk&translate=tc';
 const EN_API_URL = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=en&region=hk&translate=en';
 const DISTRICT_VERSION_URL = 'https://ucmp-static.sf-express.com/proxy/ccspBase/cxDistrictData/queryDistrictActiveVersionData?area=hkmotw';
+const PARTNER_PDF_DIRECTORY_URL = 'https://hk.sf-express.com/hk/tc/more/sf-service-partner-address';
+
+function extractPdfUrlsFromHtml(html = '') {
+  const pdfPaths = html.match(/uploads\/(?:OK|ASP)_[^"'\\\s]+\.pdf/gi) || [];
+  const uniquePaths = [...new Set(pdfPaths)];
+  return uniquePaths
+    .filter(p => !p.includes('_MAC_'))
+    .map(p => `https://hk.sf-express.com/${p}`);
+}
+
+async function parsePdfBuffer(buffer) {
+  let pdf;
+  try {
+    pdf = (await import('pdf-parse/lib/pdf-parse.js')).default;
+  } catch {
+    pdf = (await import('pdf-parse')).default;
+  }
+  return await pdf(Buffer.from(buffer));
+}
 
 const API_HEADERS = {
   'Content-Type': 'application/json',
@@ -337,84 +356,30 @@ export function validateParsedPartnerRecord(record, rawSegment) {
  *
  * @returns {Promise<{ records: Array, pdfTotal: number, pdfSuccessCount: number, pdfFailCount: number, status: string, errors: string[], pdfDetails: Array }>}
  */
-export async function fetchPartnerPdfs() {
-  console.log('Fetching official Service Partner PDFs...');
-  const errors = [];
+
+
+/**
+ * Parse raw PDF documents (text, URLs, and metadata) into structured partner records.
+ *
+ * @param {Array<{ source_key: string, url: string, http_ok: boolean, attempts: number, text?: string, error?: string }>} documents
+ * @returns {object}
+ */
+export function parsePartnerPdfDocuments(documents = []) {
   const pdfDetails = [];
   const quarantinedRecords = [];
-
-  // Dynamically discover PDF URLs from the official partner page
-  let partnerPdfs = [];
-  const discoveryRes = await fetchWithRetry('https://hk.sf-express.com/hk/tc/more/sf-service-partner-address', {}, { responseType: 'text' });
-  if (discoveryRes.ok) {
-    const pageHtml = discoveryRes.data || '';
-    const pdfPaths = pageHtml.match(/uploads\/(?:OK|ASP)_[^"'\\\s]+\.pdf/gi) || [];
-    const uniquePaths = [...new Set(pdfPaths)];
-    partnerPdfs = uniquePaths
-      .filter(p => !p.includes('_MAC_'))
-      .map(p => `https://hk.sf-express.com/${p}`);
-    console.log(`  Discovered ${partnerPdfs.length} HK partner PDFs.`);
-  } else {
-    errors.push(`PDF discovery error: HTTP ${discoveryRes.status || 'NET_ERR'} (${discoveryRes.error})`);
-    console.warn('  Warning: Could not discover PDFs dynamically:', discoveryRes.error);
-  }
-
-  if (partnerPdfs.length === 0) {
-    console.log('  Using fallback hardcoded PDF URLs...');
-    partnerPdfs = [
-      'https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf',
-      'https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf',
-      'https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf',
-      'https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf',
-      'https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf',
-      'https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf',
-      'https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf',
-      'https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf'
-    ];
-  }
-
-  // pdf-parse library import: target lib file directly to avoid index.js test file bug
-  let pdf;
-  try {
-    pdf = (await import('pdf-parse/lib/pdf-parse.js')).default;
-  } catch {
-    try {
-      pdf = (await import('pdf-parse')).default;
-    } catch {
-      const errMsg = 'pdf-parse dependency not available';
-      errors.push(errMsg);
-      console.warn('  Warning: pdf-parse not available. Skipping partner PDFs.');
-      return {
-        records: [],
-        pdfTotal: partnerPdfs.length,
-        pdfSuccessCount: 0,
-        pdfFailCount: partnerPdfs.length,
-        status: partnerPdfs.length > 0 ? 'all_pdfs_failed' : 'no_pdfs_discovered',
-        errors,
-        pdfDetails: partnerPdfs.map(url => ({ url, ok: false, status: 0, attempts: 0, error: errMsg, recordCount: 0, valid_record_count: 0, quarantined_record_count: 0, status: 'http_failure' })),
-        quarantinedRecords: []
-      };
-    }
-  }
-
   const partnerMap = new Map();
+  const errors = [];
+
   let httpSuccessCount = 0;
   let parseSuccessCount = 0;
   let semanticSuccessCount = 0;
   let partialQualityFailureCount = 0;
   let pdfFailCount = 0;
 
-  for (const url of partnerPdfs) {
-    const filename = url.split('/').pop() || '';
-    const sourceKeyMatch = filename.match(/^(OK_[A-Z]+_TC|ASP_[A-Z]+_TC)/i);
-    const sourceKey = sourceKeyMatch ? sourceKeyMatch[1].toUpperCase() : filename.replace(/\.pdf$/i, '');
-
-    const isOkStore = url.includes('OK_');
-    const pdfRes = await fetchWithRetry(url, {}, { responseType: 'arrayBuffer' });
-
-    if (!pdfRes.ok) {
-      const errMsg = `PDF fetch failed (HTTP ${pdfRes.status || 'NET_ERR'}): ${url} - ${pdfRes.error}`;
-      errors.push(errMsg);
+  for (const doc of documents) {
+    const { source_key: sourceKey, url, http_ok: httpOk, attempts, text, error: docErr } = doc;
+    if (!httpOk) {
+      errors.push(`PDF fetch failed for ${url}: ${docErr || 'HTTP Error'}`);
       pdfFailCount++;
       pdfDetails.push({
         source_key: sourceKey,
@@ -423,7 +388,7 @@ export async function fetchPartnerPdfs() {
         http_ok: false,
         parse_ok: false,
         semantic_ok: false,
-        attempts: pdfRes.attempts,
+        attempts: attempts || 1,
         raw_code_count: 0,
         candidate_count: 0,
         valid_record_count: 0,
@@ -436,23 +401,47 @@ export async function fetchPartnerPdfs() {
     }
 
     httpSuccessCount++;
+    const isOkStore = (url || '').includes('OK_');
 
     try {
-      const buffer = pdfRes.data;
-      const data = await pdf(Buffer.from(buffer));
       parseSuccessCount++;
-
       const parseResult = isOkStore
-        ? parseOkPartnerPdfText({ text: data.text || '', sourceUrl: url })
-        : parseAspPartnerPdfText({ text: data.text || '', sourceUrl: url });
+        ? parseOkPartnerPdfText({ text: text || '', sourceUrl: url })
+        : parseAspPartnerPdfText({ text: text || '', sourceUrl: url });
 
       const { validRecords, quarantinedRecords: fileQuarantined, metrics } = parseResult;
       quarantinedRecords.push(...fileQuarantined);
 
       for (const rec of validRecords) {
-        if (!partnerMap.has(rec.serviceCode)) {
-          partnerMap.set(rec.serviceCode, rec);
+        const existing = partnerMap.get(rec.serviceCode);
+        if (!existing) {
+          partnerMap.set(rec.serviceCode, { record: rec, sourceKey, sourceUrl: url });
+          continue;
         }
+
+        if (
+          existing.record.name === rec.name &&
+          existing.record.address === rec.address &&
+          existing.record.serviceTime === rec.serviceTime
+        ) {
+          continue;
+        }
+
+        partnerMap.delete(rec.serviceCode);
+        quarantinedRecords.push(
+          {
+            extractedCode: rec.serviceCode,
+            candidateRecord: existing.record,
+            reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
+            provenance: { source_key: existing.sourceKey, source_url: existing.sourceUrl }
+          },
+          {
+            extractedCode: rec.serviceCode,
+            candidateRecord: rec,
+            reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
+            provenance: { source_key: sourceKey, source_url: url }
+          }
+        );
       }
 
       const totalFileCandidates = metrics.validCount + metrics.quarantineCount;
@@ -483,7 +472,7 @@ export async function fetchPartnerPdfs() {
         http_ok: true,
         parse_ok: true,
         semantic_ok: semanticOk,
-        attempts: pdfRes.attempts,
+        attempts: attempts || 1,
         raw_code_count: metrics.rawCodeCount,
         candidate_count: totalFileCandidates,
         valid_record_count: metrics.validCount,
@@ -503,7 +492,7 @@ export async function fetchPartnerPdfs() {
         http_ok: true,
         parse_ok: false,
         semantic_ok: false,
-        attempts: pdfRes.attempts,
+        attempts: attempts || 1,
         raw_code_count: 0,
         candidate_count: 0,
         valid_record_count: 0,
@@ -515,13 +504,13 @@ export async function fetchPartnerPdfs() {
     }
   }
 
-  const validPartnerRecords = [...partnerMap.values()];
+  const validPartnerRecords = [...partnerMap.values()].map(v => v.record);
   const totalQuarantined = quarantinedRecords.length;
   const totalCandidates = validPartnerRecords.length + totalQuarantined;
   const overallQuarantineRatio = totalCandidates > 0 ? totalQuarantined / totalCandidates : 0;
 
   let overallStatus = 'success';
-  if (partnerPdfs.length === 0) {
+  if (documents.length === 0) {
     overallStatus = 'no_pdfs_discovered';
   } else if (httpSuccessCount === 0) {
     overallStatus = 'all_pdfs_failed';
@@ -533,21 +522,84 @@ export async function fetchPartnerPdfs() {
     overallStatus = 'partial_parse_quality_failure';
   }
 
-  console.log(`  PDF: ${httpSuccessCount}/${partnerPdfs.length} HTTP OK, ${parseSuccessCount}/${partnerPdfs.length} parsed, ${semanticSuccessCount}/${partnerPdfs.length} semantic OK (${overallStatus}), ${validPartnerRecords.length} valid records, ${totalQuarantined} quarantined (${(overallQuarantineRatio * 100).toFixed(1)}%)`);
-
   return {
     records: validPartnerRecords,
-    pdfTotal: partnerPdfs.length,
+    documents,
+    pdfTotal: documents.length,
     httpSuccessCount,
     parseSuccessCount,
     semanticSuccessCount,
     partialQualityFailureCount,
     failedCount: pdfFailCount,
-    pdfSuccessCount: httpSuccessCount, // backwards compatibility
+    pdfSuccessCount: httpSuccessCount,
     pdfFailCount,
     status: overallStatus,
     errors,
     pdfDetails,
     quarantinedRecords
   };
+}
+
+/**
+ * Discover and parse official SF Express HK partner location PDFs.
+ *
+ * @returns {Promise<object>}
+ */
+export async function fetchPartnerPdfs() {
+  const discoveryRes = await fetchWithRetry(PARTNER_PDF_DIRECTORY_URL, {}, { responseType: 'text' });
+  const partnerPdfs = discoveryRes.ok ? extractPdfUrlsFromHtml(discoveryRes.data) : [];
+
+  console.log(`Fetching official Service Partner PDFs...`);
+  console.log(`  Discovered ${partnerPdfs.length} HK partner PDFs.`);
+
+  const pdfDocuments = [];
+
+  for (const url of partnerPdfs) {
+    const filename = url.split('/').pop() || '';
+    const sourceKeyMatch = filename.match(/^(OK_[A-Z]+_TC|ASP_[A-Z]+_TC)/i);
+    const sourceKey = sourceKeyMatch ? sourceKeyMatch[1].toUpperCase() : filename.replace(/\.pdf$/i, '');
+
+    const pdfRes = await fetchWithRetry(url, {}, { responseType: 'arrayBuffer' });
+
+    if (!pdfRes.ok) {
+      pdfDocuments.push({
+        source_key: sourceKey,
+        url,
+        http_ok: false,
+        attempts: pdfRes.attempts,
+        error: pdfRes.error
+      });
+      continue;
+    }
+
+    try {
+      const buffer = pdfRes.data;
+      const data = await parsePdfBuffer(buffer);
+      pdfDocuments.push({
+        source_key: sourceKey,
+        url,
+        http_ok: true,
+        attempts: pdfRes.attempts,
+        text: data.text || ''
+      });
+    } catch (e) {
+      pdfDocuments.push({
+        source_key: sourceKey,
+        url,
+        http_ok: true,
+        attempts: pdfRes.attempts,
+        error: e.message,
+        text: ''
+      });
+    }
+  }
+
+  const result = parsePartnerPdfDocuments(pdfDocuments);
+  const totalQuarantined = result.quarantinedRecords.length;
+  const totalCandidates = result.records.length + totalQuarantined;
+  const overallQuarantineRatio = totalCandidates > 0 ? totalQuarantined / totalCandidates : 0;
+
+  console.log(`  PDF: ${result.httpSuccessCount}/${result.pdfTotal} HTTP OK, ${result.parseSuccessCount}/${result.pdfTotal} parsed, ${result.semanticSuccessCount}/${result.pdfTotal} semantic OK (${result.status}), ${result.records.length} valid records, ${totalQuarantined} quarantined (${(overallQuarantineRatio * 100).toFixed(1)}%)`);
+
+  return result;
 }

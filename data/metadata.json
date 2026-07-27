@@ -1,18 +1,18 @@
 {
   "schema_version": 2,
-  "retrieved_at": "2026-07-27 14:04 (HKT UTC+8)",
+  "retrieved_at": "2026-07-27 14:29 (HKT UTC+8)",
   "counts": {
-    "total": 1678,
+    "total": 1673,
     "stores": 137,
     "lockers": 1056,
-    "partners": 485
+    "partners": 480
   },
   "count_deltas": {
     "total": {
-      "previous": 1672,
-      "current": 1678,
-      "delta": 6,
-      "delta_pct": 0.36,
+      "previous": 1678,
+      "current": 1673,
+      "delta": -5,
+      "delta_pct": -0.3,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -36,10 +36,10 @@
       "gate_result": "pass"
     },
     "partners": {
-      "previous": 479,
-      "current": 485,
-      "delta": 6,
-      "delta_pct": 1.25,
+      "previous": 485,
+      "current": 480,
+      "delta": -5,
+      "delta_pct": -1.03,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -82,13 +82,13 @@
       "pdf_total": 8,
       "http_success_count": 8,
       "parse_success_count": 8,
-      "semantic_success_count": 8,
-      "partial_quality_failure_count": 0,
+      "semantic_success_count": 7,
+      "partial_quality_failure_count": 3,
       "failed_count": 0,
-      "valid_record_count": 451,
-      "quarantined_record_count": 0,
-      "quarantine_ratio": 0,
-      "status": "success",
+      "valid_record_count": 449,
+      "quarantined_record_count": 6,
+      "quarantine_ratio": 0.0132,
+      "status": "partial_parse_quality_failure",
       "errors": [],
       "details": [
         {
@@ -99,7 +99,7 @@
           "parse_ok": true,
           "semantic_ok": true,
           "attempts": 1,
-          "raw_code_count": 116,
+          "raw_code_count": 59,
           "candidate_count": 59,
           "valid_record_count": 59,
           "quarantined_record_count": 0,
@@ -115,7 +115,7 @@
           "parse_ok": true,
           "semantic_ok": true,
           "attempts": 1,
-          "raw_code_count": 209,
+          "raw_code_count": 105,
           "candidate_count": 105,
           "valid_record_count": 105,
           "quarantined_record_count": 0,
@@ -131,7 +131,7 @@
           "parse_ok": true,
           "semantic_ok": true,
           "attempts": 1,
-          "raw_code_count": 280,
+          "raw_code_count": 140,
           "candidate_count": 140,
           "valid_record_count": 140,
           "quarantined_record_count": 0,
@@ -147,9 +147,9 @@
           "parse_ok": true,
           "semantic_ok": true,
           "attempts": 1,
-          "raw_code_count": 6,
-          "candidate_count": 2,
-          "valid_record_count": 2,
+          "raw_code_count": 3,
+          "candidate_count": 3,
+          "valid_record_count": 3,
           "quarantined_record_count": 0,
           "duplicate_code_count": 0,
           "duplicate_conflict_count": 0,
@@ -158,50 +158,50 @@
         {
           "source_key": "ASP_HK_TC",
           "url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-          "status": "success",
+          "status": "partial_parse_quality_failure",
           "http_ok": true,
           "parse_ok": true,
-          "semantic_ok": true,
+          "semantic_ok": false,
           "attempts": 1,
-          "raw_code_count": 47,
-          "candidate_count": 22,
+          "raw_code_count": 26,
+          "candidate_count": 24,
           "valid_record_count": 22,
-          "quarantined_record_count": 0,
+          "quarantined_record_count": 2,
           "duplicate_code_count": 0,
           "duplicate_conflict_count": 0,
-          "quarantine_ratio": 0
+          "quarantine_ratio": 0.0833
         },
         {
           "source_key": "ASP_KLN_TC",
           "url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-          "status": "success",
+          "status": "partial_parse_quality_failure",
           "http_ok": true,
           "parse_ok": true,
           "semantic_ok": true,
           "attempts": 1,
-          "raw_code_count": 83,
-          "candidate_count": 44,
+          "raw_code_count": 45,
+          "candidate_count": 45,
           "valid_record_count": 44,
-          "quarantined_record_count": 0,
+          "quarantined_record_count": 1,
           "duplicate_code_count": 0,
           "duplicate_conflict_count": 0,
-          "quarantine_ratio": 0
+          "quarantine_ratio": 0.0222
         },
         {
           "source_key": "ASP_NT_TC",
           "url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-          "status": "success",
+          "status": "partial_parse_quality_failure",
           "http_ok": true,
           "parse_ok": true,
           "semantic_ok": true,
           "attempts": 1,
-          "raw_code_count": 139,
+          "raw_code_count": 76,
           "candidate_count": 73,
-          "valid_record_count": 73,
-          "quarantined_record_count": 0,
+          "valid_record_count": 70,
+          "quarantined_record_count": 3,
           "duplicate_code_count": 0,
           "duplicate_conflict_count": 0,
-          "quarantine_ratio": 0
+          "quarantine_ratio": 0.0411
         },
         {
           "source_key": "ASP_ISLANDS_TC",
@@ -211,7 +211,7 @@
           "parse_ok": true,
           "semantic_ok": true,
           "attempts": 1,
-          "raw_code_count": 12,
+          "raw_code_count": 6,
           "candidate_count": 6,
           "valid_record_count": 6,
           "quarantined_record_count": 0,
@@ -226,15 +226,15 @@
     "tc_record_count": 1666,
     "en_record_count": 1666,
     "bilingual_match_rate": 0.9993997599039616,
-    "district_resolved_count": 1672,
-    "district_unresolved_count": 6
+    "district_resolved_count": 1670,
+    "district_unresolved_count": 3
   },
   "quality": {
     "pipeline_blocking_errors": 0,
-    "pipeline_warnings": 0,
+    "pipeline_warnings": 5,
     "record_flag_counts_by_severity": {
-      "info": 63,
-      "warning": 282,
+      "info": 58,
+      "warning": 274,
       "error": 0
     },
     "flag_counts_by_type": {
@@ -244,11 +244,11 @@
       "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 98,
       "ADMIN_DISTRICT_ALIAS_APPLIED": 41,
       "DUPLICATE_ADDRESS_SUFFIX": 9,
-      "MISSING_ENGLISH_RECORD": 12,
+      "MISSING_ENGLISH_RECORD": 7,
       "SUBDISTRICT_ADDRESS_CONFLICT": 2,
       "SOURCE_FORMATTING_ARTIFACT": 1,
-      "MISSING_COORDINATES": 12,
-      "UNRESOLVED_ADMIN_DISTRICT": 6
+      "MISSING_COORDINATES": 7,
+      "UNRESOLVED_ADMIN_DISTRICT": 3
     }
   }
 }

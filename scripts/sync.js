@@ -23,7 +23,7 @@ import { existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { fetchDistrictTree, fetchTcApi, fetchEnApi, fetchSsrPages, fetchPartnerPdfs, buildRecordMap } from './lib/source-fetchers.js';
+import { fetchDistrictTree, fetchTcApi, fetchEnApi, fetchSsrPages, fetchPartnerPdfs, parsePartnerPdfDocuments, buildRecordMap } from './lib/source-fetchers.js';
 import { saveRawSnapshot } from './lib/raw-snapshot.js';
 import { normalizeRecords } from './lib/normalize.js';
 import { validateRecords, validatePreviousDataset, checkCompletenessGates, validateCrossFile } from './lib/validate.js';
@@ -213,21 +213,31 @@ export async function runSync(options = {}) {
       ok: true
     };
 
-    pdfResult = {
-      records: rawSnap.sources.partner_pdf?.records || [],
-      pdfTotal: rawSnap.sources.partner_pdf?.pdf_total ?? 8,
-      httpSuccessCount: rawSnap.sources.partner_pdf?.http_success_count ?? 8,
-      parseSuccessCount: rawSnap.sources.partner_pdf?.parse_success_count ?? 8,
-      semanticSuccessCount: rawSnap.sources.partner_pdf?.semantic_success_count ?? 8,
-      partialQualityFailureCount: rawSnap.sources.partner_pdf?.partial_quality_failure_count ?? 0,
-      failedCount: rawSnap.sources.partner_pdf?.failed_count ?? 0,
-      pdfSuccessCount: rawSnap.sources.partner_pdf?.http_success_count ?? 8,
-      pdfFailCount: rawSnap.sources.partner_pdf?.failed_count ?? 0,
-      status: rawSnap.sources.partner_pdf?.status || 'success',
-      errors: rawSnap.sources.partner_pdf?.errors || [],
-      pdfDetails: rawSnap.sources.partner_pdf?.details || [],
-      quarantinedRecords: rawSnap.sources.partner_pdf?.quarantined_records || []
-    };
+    const pdfDocs = rawSnap.sources.partner_pdf?.documents;
+    if (Array.isArray(pdfDocs) && pdfDocs.length > 0) {
+      pdfResult = parsePartnerPdfDocuments(pdfDocs);
+    } else if (Array.isArray(rawSnap.sources.partner_pdf?.records) && rawSnap.sources.partner_pdf.records.length > 0) {
+      throw new Error(
+        'Current fixture snapshot is missing partner_pdf.documents; refusing to trust pre-parsed PDF records'
+      );
+    } else {
+      pdfResult = {
+        records: [],
+        documents: [],
+        pdfTotal: 0,
+        httpSuccessCount: 0,
+        parseSuccessCount: 0,
+        semanticSuccessCount: 0,
+        partialQualityFailureCount: 0,
+        failedCount: 0,
+        pdfSuccessCount: 0,
+        pdfFailCount: 0,
+        status: 'no_pdfs_discovered',
+        errors: [],
+        pdfDetails: [],
+        quarantinedRecords: []
+      };
+    }
   } else {
     const { tcAreas, enAreas } = await fetchDistrictTree();
     tcResults = await fetchTcApi(tcAreas);
@@ -248,6 +258,7 @@ export async function runSync(options = {}) {
       tcResults,
       enResults,
       ssrRecords: ssrResult.records,
+      pdfDocuments: pdfResult.documents,
       pdfRecords: pdfResult.records,
       pdfTotal: pdfResult.pdfTotal,
       pdfSuccessCount: pdfResult.pdfSuccessCount,

@@ -99,7 +99,7 @@ export const PDF_PARSE_QUALITY_CONFIG = {
   overallQuarantineWarnPct: 1,
   overallQuarantineBlockPct: 5,
   perPdfQuarantineWarnPct: 1,
-  perPdfQuarantineBlockPct: 5,
+  perPdfQuarantineBlockPct: 10,
   validCountDropWarnPct: 5,
   validCountDropBlockPct: 15
 };

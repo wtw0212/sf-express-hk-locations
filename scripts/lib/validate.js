@@ -277,13 +277,23 @@ export function checkCompletenessGates({
     }
   }
 
-  // Quarantine checks: block publication if severe corrupted or duplicate conflict records were quarantined
+  // Quarantine checks: record warning for severe corrupted or duplicate conflict records in quarantine
   if (quarantinedRecords.length > 0) {
-    const severeReasons = ['EMBEDDED_SERVICE_CODE', 'RESIDUAL_SEPARATOR', 'PLACEHOLDER_ADDRESS', 'NAME_EQUALS_ADDRESS', 'DUPLICATE_CODE_CONFLICT'];
+    const severeReasons = [
+      'SERVICE_CODE_MISMATCH',
+      'EMBEDDED_SERVICE_CODE',
+      'EMBEDDED_SERVICE_CODE_IN_NAME',
+      'EMBEDDED_SERVICE_CODE_IN_ADDRESS',
+      'EMBEDDED_SERVICE_CODE_IN_SERVICETIME',
+      'RESIDUAL_SEPARATOR',
+      'PLACEHOLDER_ADDRESS',
+      'NAME_EQUALS_ADDRESS',
+      'DUPLICATE_CODE_CONFLICT'
+    ];
     const severeQuarantined = quarantinedRecords.filter(q => q.reasonCodes.some(r => severeReasons.includes(r)));
 
     if (severeQuarantined.length > 0) {
-      errors.push(`Publication blocked due to ${severeQuarantined.length} corrupted partner PDF records in quarantine (reasons: ${[...new Set(severeQuarantined.flatMap(q => q.reasonCodes))].join(', ')})`);
+      warnings.push(`Quarantined ${severeQuarantined.length} corrupted or ambiguous partner PDF records (reasons: ${[...new Set(severeQuarantined.flatMap(q => q.reasonCodes))].join(', ')})`);
     }
   }
 

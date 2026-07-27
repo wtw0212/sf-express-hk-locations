@@ -52,6 +52,7 @@ export async function saveRawSnapshot(rawDir, sources, retrievedAt) {
         errors: sources.ssrErrors ?? []
       },
       partner_pdf: {
+        documents: sources.pdfDocuments ?? [],
         pdf_total: sources.pdfTotal ?? 0,
         pdf_success_count: sources.pdfSuccessCount ?? 0,
         pdf_failure_count: sources.pdfFailCount ?? 0,

@@ -2,8 +2,7 @@
 import {
   VALID_DISTRICTS, DISTRICT_TO_REGION, VALID_TYPES, VALID_SOURCES,
   HK_BOUNDING_BOX, MIN_LOCATION_COUNT,
-  COUNT_DROP_THRESHOLD_PCT, COUNT_INCREASE_WARN_PCT, COUNT_INCREASE_BLOCK_PCT,
-  EN_MATCH_RATE_THRESHOLD
+  CATEGORY_ANOMALY_CONFIG, EN_MATCH_RATE_THRESHOLD
 } from './constants.js';
 
 /**
@@ -156,7 +155,24 @@ export function validatePreviousDataset(previousList) {
 }
 
 /**
- * Check source completeness and count anomaly gates before publication.
+ * Calculate count delta metrics with division-by-zero protection.
+ * @param {number} previous
+ * @param {number} current
+ * @returns {{ previous: number, current: number, delta: number, delta_pct: number }}
+ */
+function computeCategoryDelta(previous = 0, current = 0) {
+  const delta = current - previous;
+  const delta_pct = previous > 0 ? (delta / previous) * 100 : 0;
+  return {
+    previous,
+    current,
+    delta,
+    delta_pct: Number(delta_pct.toFixed(2))
+  };
+}
+
+/**
+ * Check source completeness and category-specific count anomaly gates before publication.
  * Blocks publication if any required gate fails.
  *
  * @param {object} params
@@ -166,7 +182,7 @@ export function validatePreviousDataset(previousList) {
  * @param {object} [params.pdfResult] - PDF result object
  * @param {Array} params.records - Normalized next records
  * @param {Array|null} params.previousRecords - Previous dataset records
- * @param {object} [params.config] - Configurable thresholds
+ * @param {object} [params.config] - Configurable category thresholds
  * @returns {{ pass: boolean, errors: string[], warnings: string[], metrics: object }}
  */
 export function checkCompletenessGates({
@@ -181,11 +197,13 @@ export function checkCompletenessGates({
   const errors = [];
   const warnings = [];
 
-  const countDropBlockPct = config.countDropBlockPct ?? COUNT_DROP_THRESHOLD_PCT;
-  const countIncreaseWarnPct = config.countIncreaseWarnPct ?? COUNT_INCREASE_WARN_PCT;
-  const countIncreaseBlockPct = config.countIncreaseBlockPct ?? COUNT_INCREASE_BLOCK_PCT;
-  const enMatchRateThreshold = config.enMatchRateThreshold ?? EN_MATCH_RATE_THRESHOLD;
+  const anomalyConfig = {
+    ...CATEGORY_ANOMALY_CONFIG,
+    ...config
+  };
+
   const minCount = config.minCount ?? MIN_LOCATION_COUNT;
+  const enMatchRateThreshold = config.enMatchRateThreshold ?? EN_MATCH_RATE_THRESHOLD;
 
   // ─── 1. Partner PDF Gates ───────────────────────────────────────────────
   const pdfTotal = pdfResult.pdfTotal ?? 0;
@@ -260,46 +278,62 @@ export function checkCompletenessGates({
     );
   }
 
-  // ─── 5. Record Count Anomaly Gates ──────────────────────────────────────
+  // ─── 5. Category-Specific Anomaly Gates ─────────────────────────────
   const currentCount = records.length;
   if (currentCount < minCount) {
     errors.push(`Record count ${currentCount} is below minimum required ${minCount}`);
   }
 
+  const currCounts = {
+    total: currentCount,
+    stores: records.filter(r => r.type === 'store').length,
+    lockers: records.filter(r => r.type === 'locker').length,
+    partners: records.filter(r => r.type === 'partner').length,
+    tcCodes: tcCodes.size,
+    enCodes: enCodes.size
+  };
+
+  let prevCounts = { total: 0, stores: 0, lockers: 0, partners: 0, tcCodes: 0, enCodes: 0 };
   if (previousRecords && previousRecords.length > 0) {
-    const prevCount = previousRecords.length;
-    const dropPct = ((prevCount - currentCount) / prevCount) * 100;
-    const increasePct = ((currentCount - prevCount) / prevCount) * 100;
+    prevCounts = {
+      total: previousRecords.length,
+      stores: previousRecords.filter(r => r.type === 'store').length,
+      lockers: previousRecords.filter(r => r.type === 'locker').length,
+      partners: previousRecords.filter(r => r.type === 'partner').length,
+      tcCodes: previousRecords.filter(r => r.source === 'api_tc' || r.source === 'api').length,
+      enCodes: previousRecords.filter(r => r.name_en != null).length
+    };
+  }
 
-    if (dropPct > countDropBlockPct) {
-      errors.push(
-        `Total count dropped by ${dropPct.toFixed(1)}% (${prevCount} -> ${currentCount}), blocking threshold: ${countDropBlockPct}%`
-      );
-    }
-    if (increasePct > countIncreaseBlockPct) {
-      errors.push(
-        `Total count increased by ${increasePct.toFixed(1)}% (${prevCount} -> ${currentCount}), blocking threshold: ${countIncreaseBlockPct}%`
-      );
-    } else if (increasePct > countIncreaseWarnPct) {
-      warnings.push(
-        `Total count increased by ${increasePct.toFixed(1)}% (${prevCount} -> ${currentCount}), warning threshold: ${countIncreaseWarnPct}%`
-      );
-    }
+  const countDeltas = {
+    total: computeCategoryDelta(prevCounts.total, currCounts.total),
+    stores: computeCategoryDelta(prevCounts.stores, currCounts.stores),
+    lockers: computeCategoryDelta(prevCounts.lockers, currCounts.lockers),
+    partners: computeCategoryDelta(prevCounts.partners, currCounts.partners),
+    tcCodes: computeCategoryDelta(prevCounts.tcCodes, currCounts.tcCodes),
+    enCodes: computeCategoryDelta(prevCounts.enCodes, currCounts.enCodes)
+  };
 
-    // Category-specific count checks (stores, lockers, partners)
-    const prevStores = previousRecords.filter(r => r.type === 'store').length;
-    const currStores = records.filter(r => r.type === 'store').length;
-    const prevLockers = previousRecords.filter(r => r.type === 'locker').length;
-    const currLockers = records.filter(r => r.type === 'locker').length;
-    const prevPartners = previousRecords.filter(r => r.type === 'partner').length;
-    const currPartners = records.filter(r => r.type === 'partner').length;
+  // Evaluate gates for each category if previous dataset existed
+  if (previousRecords && previousRecords.length > 0) {
+    for (const [cat, deltaInfo] of Object.entries(countDeltas)) {
+      const cfg = anomalyConfig[cat] || anomalyConfig.total;
+      const { previous: prevVal, current: currVal, delta_pct } = deltaInfo;
 
-    // Check Partner Subset count drop anomaly gate
-    if (prevPartners > 0) {
-      const partnerDropPct = ((prevPartners - currPartners) / prevPartners) * 100;
-      if (partnerDropPct > countDropBlockPct) {
+      if (prevVal === 0) continue; // Division-by-zero protection
+
+      const dropPct = -delta_pct;
+      if (dropPct > cfg.dropBlockPct) {
         errors.push(
-          `Partner subset count dropped by ${partnerDropPct.toFixed(1)}% (${prevPartners} -> ${currPartners}), blocking threshold: ${countDropBlockPct}%`
+          `Category '${cat}' count dropped by ${dropPct.toFixed(1)}% (${prevVal} -> ${currVal}), blocking threshold: ${cfg.dropBlockPct}%`
+        );
+      } else if (delta_pct > cfg.increaseBlockPct) {
+        errors.push(
+          `Category '${cat}' count increased by ${delta_pct.toFixed(1)}% (${prevVal} -> ${currVal}), blocking threshold: ${cfg.increaseBlockPct}%`
+        );
+      } else if (delta_pct > cfg.increaseWarnPct) {
+        warnings.push(
+          `Category '${cat}' count increased by ${delta_pct.toFixed(1)}% (${prevVal} -> ${currVal}), warning threshold: ${cfg.increaseWarnPct}%`
         );
       }
     }
@@ -319,7 +353,8 @@ export function checkCompletenessGates({
     en_unique_codes: enCodes.size,
     en_match_rate: enMatchRate,
     current_count: currentCount,
-    previous_count: previousRecords?.length ?? 0
+    previous_count: previousRecords?.length ?? 0,
+    count_deltas: countDeltas
   };
 
   return { pass: errors.length === 0, errors, warnings, metrics };

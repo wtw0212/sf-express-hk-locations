@@ -1,19 +1,21 @@
 // @ts-check
-import { writeFile, readFile, mkdir, copyFile, rm } from 'node:fs/promises';
+import * as nodeFs from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { validateCrossFile } from './validate.js';
+import { validateAllReleaseArtifactsSchemas } from './schema-validator.js';
 
 /**
- * Release-level transactional publication (All-or-Nothing).
+ * Real Atomic Release Publication (All-or-Nothing with Atomic Rename and Journaled Rollback).
  *
- * 1. Generates all release outputs in a versioned release folder `.tmp-output/release-<runId>/`.
- * 2. Validates JSON parsing and structure of every file.
- * 3. Validates cross-file counts and district/category membership consistency.
- * 4. Backs up existing published files into `.tmp-backup-<runId>/`.
- * 5. Replaces published files sequentially.
- * 6. If ANY file replacement fails, rolls back ALL previously replaced files to original state.
- * 7. Cleans up temp and backup folders after completion.
+ * 1. Generates all release outputs in a versioned staging directory `.tmp-output/release-<runId>/`.
+ * 2. Validates JSON Schemas and cross-file domain constraints.
+ * 3. Backs up existing published files into `.tmp-backup/backup-<runId>/`.
+ * 4. Writes complete temporary files `${dest}.new-${runId}` in destination directories.
+ * 5. Journals destination status BEFORE calling atomic `rename()`.
+ * 6. Atomically renames temporary files over destinations.
+ * 7. If ANY step fails, rolls back all replaced files from backup journal.
+ * 8. If rollback fails, PRESERVES backup files for manual recovery.
  *
  * @param {object} params
  * @param {Array} params.records - Normalized location records
@@ -22,18 +24,35 @@ import { validateCrossFile } from './validate.js';
  * @param {string} params.dataDir - Path to data/ directory
  * @param {string} params.reportsDir - Path to reports/ directory
  * @param {string} params.rootDir - Repository root
- * @param {object} [params.options] - Optional flags (e.g. failure injection for testing)
- * @param {string} [params.options.failAtFile] - Injected failure file name
+ * @param {object} [params.options] - Optional flags & dependency injections
+ * @param {object} [params.options.fs] - Custom FS implementation for failure injection testing
+ * @param {string} [params.options.failAtStep] - Injected failure step name
+ * @param {string} [params.options.failAtFile] - Injected failure target file
  * @returns {Promise<void>}
  */
-export async function atomicPublish({ records, metadata, reportMarkdown, dataDir, reportsDir, rootDir, options = {} }) {
+export async function atomicPublish({
+  records,
+  metadata,
+  reportMarkdown,
+  dataDir,
+  reportsDir,
+  rootDir,
+  options = {}
+}) {
+  const fs = options.fs || nodeFs;
   const runId = Date.now().toString(36) + Math.random().toString(36).substring(2, 6);
+
   const releaseDir = join(rootDir, '.tmp-output', `release-${runId}`);
   const backupDir = join(rootDir, '.tmp-backup', `backup-${runId}`);
 
+  let publicationSucceeded = false;
+  let rollbackExecuted = false;
+  let rollbackFailed = false;
+  const journal = [];
+
   try {
     // ─── Step 1: Create release directory ─────────────────────────────
-    await mkdir(releaseDir, { recursive: true });
+    await fs.mkdir(releaseDir, { recursive: true });
 
     const stores = records.filter(r => r.type === 'store');
     const lockers = records.filter(r => r.type === 'locker');
@@ -55,99 +74,128 @@ export async function atomicPublish({ records, metadata, reportMarkdown, dataDir
       { name: 'metadata.json', data: metadata, targetDir: dataDir }
     ];
 
-    // ─── Step 2: Write and validate JSON files in release directory ───
+    // ─── Step 2: Write release files to staging ───────────────────────
     for (const file of dataFiles) {
       const content = JSON.stringify(file.data, null, 2);
       const filePath = join(releaseDir, file.name);
-      await writeFile(filePath, content, 'utf8');
-
-      // Re-parse to verify JSON integrity
-      const parsed = JSON.parse(content);
-      if (file.name === 'locations.json' && !Array.isArray(parsed)) {
-        throw new Error('locations.json root must be an array');
-      }
+      await fs.writeFile(filePath, content, 'utf8');
     }
 
-    // Write Markdown report
     const reportPath = join(releaseDir, 'latest-diff.md');
-    await writeFile(reportPath, reportMarkdown, 'utf8');
-    if (!reportMarkdown || typeof reportMarkdown !== 'string' || !reportMarkdown.trim()) {
-      throw new Error('Markdown report generation failed or produced empty output');
-    }
+    await fs.writeFile(reportPath, reportMarkdown, 'utf8');
 
-    // ─── Step 3: Validate cross-file counts & set membership ─────────
+    // ─── Step 3: Validate Schemas & Cross-File Constraints ─────────────
+    await validateAllReleaseArtifactsSchemas({
+      records, stores, lockers, partners, byDistrict, metadata
+    });
     validateCrossFile(records, stores, lockers, partners, byDistrict, metadata);
 
-    // ─── Step 4: Prepare backups of existing published files ──────────
-    await mkdir(backupDir, { recursive: true });
+    // ─── Step 4: Prepare backups & journal ────────────────────────────
+    if (options.failAtStep === 'backup') {
+      throw new Error('Injected failure during backup creation');
+    }
+
+    await fs.mkdir(backupDir, { recursive: true });
+    await fs.mkdir(dataDir, { recursive: true });
+    await fs.mkdir(reportsDir, { recursive: true });
+
     const publishTasks = [
       ...dataFiles.map(f => ({ name: f.name, src: join(releaseDir, f.name), dest: join(f.targetDir, f.name) })),
       { name: 'latest-diff.md', src: reportPath, dest: join(reportsDir, 'latest-diff.md') }
     ];
 
-    const backedUpFiles = [];
     for (const task of publishTasks) {
-      if (existsSync(task.dest)) {
-        const bPath = join(backupDir, task.name);
-        await copyFile(task.dest, bPath);
-        backedUpFiles.push({ name: task.name, dest: task.dest, backupPath: bPath });
+      const existedBefore = existsSync(task.dest);
+      let backupPath = null;
+
+      if (existedBefore) {
+        backupPath = join(backupDir, task.name);
+        await fs.copyFile(task.dest, backupPath);
       }
+
+      journal.push({
+        name: task.name,
+        dest: task.dest,
+        existedBefore,
+        backupPath,
+        replaced: false
+      });
     }
 
-    // Ensure target destination directories exist
-    await mkdir(dataDir, { recursive: true });
-    await mkdir(reportsDir, { recursive: true });
+    // ─── Step 5: Sequential atomic replacement (temp file + rename) ──
+    for (let i = 0; i < publishTasks.length; i++) {
+      const task = publishTasks[i];
+      const entry = journal[i];
 
-    // ─── Step 5: Execute release replacements sequentially ───────────
-    const replacedFiles = [];
+      if (options.failAtStep === 'tempCopy' || (options.failAtFile === task.name && options.failAtStep === 'tempCopy')) {
+        throw new Error(`Injected failure during temp copy of ${task.name}`);
+      }
+
+      const tempDestPath = `${task.dest}.new-${runId}`;
+      await fs.copyFile(task.src, tempDestPath);
+
+      if (
+        options.failAtFile === task.name ||
+        (options.failAtStep === 'firstRename' && i === 0) ||
+        (options.failAtStep === 'middleRename' && i === 2) ||
+        (options.failAtStep === 'reportRename' && task.name === 'latest-diff.md')
+      ) {
+        // Clean temp file before throwing injected error
+        await fs.rm(tempDestPath, { force: true }).catch(() => {});
+        throw new Error(`Injected failure before rename of ${task.name}`);
+      }
+
+      // Atomic rename completed temp file over destination
+      await fs.rename(tempDestPath, task.dest);
+      entry.replaced = true;
+    }
+
+    publicationSucceeded = true;
+
+    // ─── Step 6: Clean up temporary release directory on success ─────
+    if (options.failAtStep === 'cleanup') {
+      throw new Error('Injected failure during cleanup');
+    }
+
+    await fs.rm(releaseDir, { recursive: true, force: true }).catch(() => {});
+    await fs.rm(backupDir, { recursive: true, force: true }).catch(() => {});
+
+  } catch (err) {
+    // ─── Step 7: Journaled Rollback on Failure ────────────────────────
+    console.error(`\nAtomic publication failed (${err.message}). Initiating journaled rollback...`);
+    rollbackExecuted = true;
+
+    const rollbackErrors = [];
     try {
-      for (const task of publishTasks) {
-        // Failure injection point for automated tests
-        if (options.failAtFile && task.name === options.failAtFile) {
-          throw new Error(`Injected failure during replacement of ${task.name}`);
-        }
-
-        const tmpDest = task.dest + `.tmp-${runId}`;
-        await copyFile(task.src, tmpDest);
-        await writeFile(task.dest, await readFile(tmpDest, 'utf8'), 'utf8');
-        await rm(tmpDest, { force: true });
-
-        replacedFiles.push(task);
-      }
-    } catch (publishErr) {
-      // ─── Step 6: Transaction Rollback on Failure ────────────────────
-      console.error(`\nPublication error encountered during '${replacedFiles.length > 0 ? replacedFiles[replacedFiles.length - 1].name : 'initial publish'}'. Initiating full rollback...`);
-
-      for (const task of replacedFiles) {
-        const backupInfo = backedUpFiles.find(b => b.name === task.name);
-        if (backupInfo && existsSync(backupInfo.backupPath)) {
-          await copyFile(backupInfo.backupPath, task.dest);
-        } else {
-          // If file didn't exist prior to run, remove newly published file
-          if (existsSync(task.dest)) {
-            await rm(task.dest, { force: true });
-          }
-        }
+      if (options.failAtStep === 'rollback') {
+        throw new Error('Injected failure during rollback execution');
       }
 
-      throw new Error(`Atomic publish failed with rollback executed: ${publishErr.message}`);
+      // Rollback journal entries in reverse order
+      const journalToRollback = [...journal].reverse();
+      for (const entry of journalToRollback) {
+        if (entry.existedBefore && entry.backupPath && existsSync(entry.backupPath)) {
+          await fs.copyFile(entry.backupPath, entry.dest);
+        } else if (!entry.existedBefore && existsSync(entry.dest)) {
+          await fs.rm(entry.dest, { force: true });
+        }
+      }
+    } catch (rbErr) {
+      rollbackFailed = true;
+      rollbackErrors.push(rbErr.message);
+      console.error(`CRITICAL: Rollback failed! Backups preserved at '${backupDir}'. Error: ${rbErr.message}`);
     }
 
-    // ─── Step 7: Clean up temp and backup directories on success ─────
-    await rm(releaseDir, { recursive: true, force: true });
-    await rm(backupDir, { recursive: true, force: true });
+    if (rollbackFailed) {
+      throw new Error(`CRITICAL_ROLLBACK_FAILURE: Publication failed (${err.message}) AND rollback failed (${rollbackErrors.join('; ')}). Backup files preserved at '${backupDir}'.`);
+    }
 
-    const tmpOutputDir = join(rootDir, '.tmp-output');
-    const tmpBackupDir = join(rootDir, '.tmp-backup');
-    await rm(tmpOutputDir, { recursive: true, force: true }).catch(() => {});
-    await rm(tmpBackupDir, { recursive: true, force: true }).catch(() => {});
+    throw new Error(`Atomic publish failed with full rollback executed: ${err.message}`);
   } finally {
-    // Safety cleanup of leftover temp/backup folders for this runId
-    if (existsSync(releaseDir)) await rm(releaseDir, { recursive: true, force: true }).catch(() => {});
-    if (existsSync(backupDir)) await rm(backupDir, { recursive: true, force: true }).catch(() => {});
-    const tmpOutputDir = join(rootDir, '.tmp-output');
-    const tmpBackupDir = join(rootDir, '.tmp-backup');
-    if (existsSync(tmpOutputDir)) await rm(tmpOutputDir, { recursive: true, force: true }).catch(() => {});
-    if (existsSync(tmpBackupDir)) await rm(tmpBackupDir, { recursive: true, force: true }).catch(() => {});
+    // Preserves backupDir if rollback failed, ensuring recovery copies are never lost
+    if (publicationSucceeded || (rollbackExecuted && !rollbackFailed)) {
+      if (existsSync(releaseDir)) await fs.rm(releaseDir, { recursive: true, force: true }).catch(() => {});
+      if (existsSync(backupDir)) await fs.rm(backupDir, { recursive: true, force: true }).catch(() => {});
+    }
   }
 }

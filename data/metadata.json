@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)",
+  "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)",
   "counts": {
-    "total": 1666,
+    "total": 1678,
     "stores": 137,
-    "lockers": 1054,
-    "partners": 475
+    "lockers": 1056,
+    "partners": 485
   },
   "source_status": {
     "api_tc": {
@@ -27,32 +27,32 @@
       "pdf_success": 8,
       "pdf_failed": 0,
       "status": "success",
-      "records": 475,
+      "records": 460,
       "errors": []
     }
   },
   "coverage": {
-    "tc_record_count": 1662,
+    "tc_record_count": 1666,
     "en_record_count": 1666,
-    "bilingual_match_rate": 0.9993983152827918,
-    "district_resolved_count": 1665,
-    "district_unresolved_count": 1
+    "bilingual_match_rate": 0.9993997599039616,
+    "district_resolved_count": 1670,
+    "district_unresolved_count": 8
   },
   "quality": {
     "blocking_errors": 0,
     "warnings": 0,
     "flag_counts": {
-      "SOURCE_TC_EN_UNIT_CONFLICT": 635,
       "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT": 21,
       "ENGLISH_FIELD_CONTAINS_CJK": 105,
+      "SOURCE_TC_EN_UNIT_CONFLICT": 38,
       "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 98,
       "ADMIN_DISTRICT_ALIAS_APPLIED": 41,
       "DUPLICATE_ADDRESS_SUFFIX": 9,
-      "MISSING_ENGLISH_RECORD": 3,
+      "MISSING_ENGLISH_RECORD": 12,
       "SUBDISTRICT_ADDRESS_CONFLICT": 2,
-      "SOURCE_FORMATTING_ARTIFACT": 1,
-      "MISSING_COORDINATES": 4,
-      "UNRESOLVED_ADMIN_DISTRICT": 1
+      "SOURCE_FORMATTING_ARTIFACT": 6,
+      "MISSING_COORDINATES": 12,
+      "UNRESOLVED_ADMIN_DISTRICT": 8
     }
   }
 }

@@ -6,7 +6,8 @@
   "main": "scripts/sync.js",
   "scripts": {
     "sync": "node scripts/sync.js",
-    "test": "node --test"
+    "test": "node --test",
+    "check:syntax": "node scripts/lib/check-syntax.js"
   },
   "keywords": [
     "sf-express",
@@ -18,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "ajv": "^8.20.0",
     "pdf-parse": "^1.1.1"
   }
 }

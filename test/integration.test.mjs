@@ -1,31 +1,65 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, rm, mkdtemp } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 
 import { runSync } from '../scripts/sync.js';
-import { validateRecords, validatePreviousDataset, checkCompletenessGates } from '../scripts/lib/validate.js';
+import { checkCompletenessGates } from '../scripts/lib/validate.js';
 import { computeDiff } from '../scripts/lib/diff.js';
 
-test('integration: complete orchestrator pipeline run in fixture mode', async () => {
-  // Execute runSync in fixture mode
+test('integration: runSync with isFixture defaults to publish=false and does not modify repo paths', async () => {
+  const repoDataStat = existsSync('data/locations.json') ? await readFile('data/locations.json', 'utf8') : null;
+
+  // Run in fixture mode without explicit publish -> dry-run only
   await assert.doesNotReject(runSync({ isFixture: true }));
 
-  // Verify published output files exist and are valid JSON
-  const locationsRaw = await readFile('data/locations.json', 'utf8');
-  const metadataRaw = await readFile('data/metadata.json', 'utf8');
-  const reportRaw = await readFile('reports/latest-diff.md', 'utf8');
+  // Verify repo data/locations.json remained unchanged
+  if (repoDataStat) {
+    const currentRepoData = await readFile('data/locations.json', 'utf8');
+    assert.equal(currentRepoData, repoDataStat, 'Fixture mode must NOT overwrite repository data/locations.json');
+  }
+});
 
-  const locations = JSON.parse(locationsRaw);
-  const metadata = JSON.parse(metadataRaw);
+test('integration: runSync fixture mode writes only to provided temporary directory when outputDir specified', async () => {
+  const tempDir = await mkdtemp(join(tmpdir(), 'sf-test-fixture-'));
+  const tempDataDir = join(tempDir, 'data');
+  const tempReportsDir = join(tempDir, 'reports');
 
-  assert.ok(Array.isArray(locations));
-  assert.ok(locations.length > 1000, 'Pipeline output should contain >1000 locations');
-  assert.equal(metadata.schema_version, 2);
-  assert.ok(metadata.counts.total > 0);
-  assert.ok(reportRaw.includes('SF Express HK Location Sync Report'));
+  await runSync({
+    isFixture: true,
+    publish: true,
+    outputDir: tempDir
+  });
+
+  // Verify files were written ONLY inside tempDir
+  assert.ok(existsSync(join(tempDataDir, 'locations.json')));
+  assert.ok(existsSync(join(tempDataDir, 'metadata.json')));
+  assert.ok(existsSync(join(tempReportsDir, 'latest-diff.md')));
+
+  await rm(tempDir, { recursive: true, force: true });
+});
+
+test('integration: publish=false performs full pipeline without writing output files', async () => {
+  const tempDir = await mkdtemp(join(tmpdir(), 'sf-test-dryrun-'));
+  const tempDataDir = join(tempDir, 'data');
+
+  await runSync({
+    isFixture: true,
+    publish: false,
+    paths: {
+      rootDir: tempDir,
+      dataDir: tempDataDir,
+      rawDir: join(tempDir, 'raw'),
+      reportsDir: join(tempDir, 'reports')
+    }
+  });
+
+  // Because publish is false and no custom outputDir was passed, tempDataDir/locations.json must NOT exist
+  assert.equal(existsSync(join(tempDataDir, 'locations.json')), false);
+
+  await rm(tempDir, { recursive: true, force: true });
 });
 
 test('integration: source failure propagation blocks publication', () => {
@@ -50,29 +84,27 @@ test('integration: migration-aware diff identifies legacy source tags', () => {
   assert.deepEqual(diff.updated[0].changes.source, { old: 'api', new: 'api_tc' });
 });
 
-test('integration: corrupted previous dataset blocks pipeline startup', async () => {
-  const tempDir = join(tmpdir(), `test-corrupt-prev-${Date.now()}`);
-  const dataDir = join(tempDir, 'data');
-  await mkdir(dataDir, { recursive: true });
+test('integration: on-disk malformed previous dataset blocks runSync startup', async () => {
+  const tempDir = await mkdtemp(join(tmpdir(), 'sf-test-corrupt-'));
+  const tempDataDir = join(tempDir, 'data');
+  await mkdir(tempDataDir, { recursive: true });
 
-  // 1. Invalid JSON
-  await writeFile(join(dataDir, 'locations.json'), '{ invalid_json: ', 'utf8');
-  assert.throws(
-    () => validatePreviousDataset('{ invalid_json: '),
-    /Published locations.json root must be an array/
-  );
+  // Write malformed JSON to temporary locations.json
+  await writeFile(join(tempDataDir, 'locations.json'), '{ malformed_json: ', 'utf8');
 
-  // 2. Object instead of array
-  assert.throws(
-    () => validatePreviousDataset({ root: 'not_an_array' }),
-    /root must be an array/
-  );
-
-  // 3. Duplicate codes in previous data
-  const dupRec = { code: '852DUP', type: 'store', name: 'Store', location: { latitude: 22.3, longitude: 114.2 }, quality_flags: [], source: 'api_tc', provenance: { name: 'api_tc', address: 'api_tc', district: 'api_tc' } };
-  assert.throws(
-    () => validatePreviousDataset([dupRec, dupRec]),
-    /Previous published dataset is invalid/
+  // Verify runSync rejects startup when encountering malformed published dataset
+  await assert.rejects(
+    runSync({
+      isFixture: true,
+      publish: false,
+      paths: {
+        rootDir: tempDir,
+        dataDir: tempDataDir,
+        rawDir: join(tempDir, 'raw'),
+        reportsDir: join(tempDir, 'reports')
+      }
+    }),
+    /Published locations.json is malformed JSON/
   );
 
   await rm(tempDir, { recursive: true, force: true });

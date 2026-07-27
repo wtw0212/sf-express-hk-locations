@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "SF Express HK Location Record",
+  "title": "SF Express HK Location Record Schema",
   "type": "object",
   "required": [
     "id",
@@ -60,7 +60,8 @@
           "severity": { "type": "string", "enum": ["info", "warning", "error"] },
           "fields": { "type": "array", "items": { "type": "string" } },
           "details": { "type": ["object", "null"] }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "provenance": {
@@ -71,8 +72,11 @@
         "name_en": { "type": ["string", "null"], "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived", null] },
         "address": { "type": "string", "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived"] },
         "address_en": { "type": ["string", "null"], "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived", null] },
-        "district": { "type": "string", "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived"] }
-      }
+        "district": { "type": "string", "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived"] },
+        "business_hours": { "type": ["string", "null"], "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived", null] },
+        "business_hours_en": { "type": ["string", "null"], "enum": ["api_tc", "api_en", "ssr", "pdf_partner", "derived", null] }
+      },
+      "additionalProperties": false
     },
     "retrieved_at": { "type": "string" }
   },

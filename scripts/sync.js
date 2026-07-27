@@ -10,11 +10,11 @@
  *   3. Save raw source snapshot
  *   4. Normalize into nextList
  *   5. Validate nextList against schema rules
- *   6. Run completeness gates (including partner PDF and count anomaly gates)
+ *   6. Run completeness gates (including category anomaly gates)
  *   7. Diff previousList vs nextList (canonicalized quality flags & migration aware)
  *   8. Generate diff report
  *   9. Generate metadata
- *   10. Transactional atomic publish (all-or-nothing with rollback)
+ *   10. Transactional atomic publish (or dry-run to custom test directory)
  */
 
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
@@ -32,9 +32,6 @@ import { atomicPublish } from './lib/atomic-publish.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = resolve(__dirname, '..');
-const DATA_DIR = resolve(ROOT_DIR, 'data');
-const RAW_DIR = resolve(ROOT_DIR, 'raw');
-const REPORTS_DIR = resolve(ROOT_DIR, 'reports');
 
 /**
  * Get current time as HKT string.
@@ -53,21 +50,50 @@ export function getHKTDateString() {
   return `${YYYY}-${MM}-${DD} ${hh}:${mm} (HKT UTC+8)`;
 }
 
+/**
+ * Run location data synchronization pipeline.
+ *
+ * Options:
+ *   - mode: 'live' | 'fixture'
+ *   - isFixture: boolean
+ *   - publish: boolean (defaults to false in fixture/dry-run mode, true in live mode)
+ *   - outputDir: string (custom output directory for dry-run/test writes)
+ *   - paths: { rootDir, dataDir, rawDir, reportsDir }
+ */
 export async function runSync(options = {}) {
-  const isFixtureMode = options.isFixture || process.argv.includes('--fixture');
-  console.log(`Starting SF Express HK Location Data Sync... (${isFixtureMode ? 'FIXTURE MODE' : 'LIVE MODE'})`);
+  const args = process.argv;
+  const isFixtureCli = args.includes('--fixture');
+  const isDryRunCli = args.includes('--dry-run');
+
+  const outputDirIdx = args.indexOf('--output-dir');
+  const customOutputDirCli = outputDirIdx !== -1 && args[outputDirIdx + 1] ? args[outputDirIdx + 1] : null;
+
+  const isFixtureMode = options.mode === 'fixture' || options.isFixture || isFixtureCli;
+
+  const shouldPublish = options.publish !== undefined
+    ? options.publish
+    : (isFixtureMode || isDryRunCli ? false : true);
+
+  const customOutDir = customOutputDirCli || options.outputDir;
+  const baseRootDir = options.paths?.rootDir || options.rootDir || (customOutDir ? resolve(customOutDir) : ROOT_DIR);
+
+  const targetDataDir = options.paths?.dataDir || options.dataDir || (customOutDir ? resolve(customOutDir, 'data') : resolve(baseRootDir, 'data'));
+  const targetRawDir = options.paths?.rawDir || options.rawDir || (customOutDir ? resolve(customOutDir, 'raw') : resolve(baseRootDir, 'raw'));
+  const targetReportsDir = options.paths?.reportsDir || options.reportsDir || (customOutDir ? resolve(customOutDir, 'reports') : resolve(baseRootDir, 'reports'));
+
+  console.log(`Starting SF Express HK Location Data Sync... (${isFixtureMode ? 'FIXTURE MODE' : 'LIVE MODE'}, publish=${shouldPublish})`);
   const hktDateStr = getHKTDateString();
   console.log(`Current HKT Time: ${hktDateStr}`);
 
   // ─── 1. Read & validate previous published dataset (fail closed) ────
   let previousList = [];
-  const prevDataPath = resolve(DATA_DIR, 'locations.json');
+  const prevDataPath = resolve(targetDataDir, 'locations.json');
   if (existsSync(prevDataPath)) {
     let prevRaw;
     try {
       prevRaw = await readFile(prevDataPath, 'utf8');
     } catch (e) {
-      throw new Error(`Failed to read published locations.json: ${e.message}`);
+      throw new Error(`Failed to read published locations.json at ${prevDataPath}: ${e.message}`);
     }
 
     try {
@@ -79,7 +105,7 @@ export async function runSync(options = {}) {
     validatePreviousDataset(previousList);
     console.log(`Loaded previous dataset: ${previousList.length} records`);
   } else {
-    console.log('No previous dataset found. First run.');
+    console.log(`No previous dataset found at ${prevDataPath}. First run.`);
   }
 
   // ─── 2. Fetch current sources (or load fixtures) ───────────────────
@@ -87,11 +113,14 @@ export async function runSync(options = {}) {
 
   if (isFixtureMode) {
     console.log('Loading source data from raw snapshot fixture...');
-    const snapshotPath = resolve(RAW_DIR, 'latest-fetch.json');
-    if (!existsSync(snapshotPath)) {
-      throw new Error(`Fixture file not found at ${snapshotPath}`);
+    const snapshotPath = options.fixturePath || resolve(targetRawDir, 'latest-fetch.json');
+    const fallbackPath = resolve(ROOT_DIR, 'raw', 'latest-fetch.json');
+    const pathToRead = existsSync(snapshotPath) ? snapshotPath : fallbackPath;
+
+    if (!existsSync(pathToRead)) {
+      throw new Error(`Fixture file not found at ${snapshotPath} or ${fallbackPath}`);
     }
-    const rawSnap = JSON.parse(await readFile(snapshotPath, 'utf8'));
+    const rawSnap = JSON.parse(await readFile(pathToRead, 'utf8'));
 
     const rawTcResults = rawSnap.sources.api_tc?.results || [];
     const flatTcRecords = rawSnap.sources.api_tc?.records || [];
@@ -116,6 +145,7 @@ export async function runSync(options = {}) {
       errors: rawSnap.sources.ssr?.errors || [],
       ok: true
     };
+
     pdfResult = {
       records: rawSnap.sources.partner_pdf?.records || [],
       pdfTotal: rawSnap.sources.partner_pdf?.pdf_total ?? 8,
@@ -140,8 +170,8 @@ export async function runSync(options = {}) {
   console.log(`\nSource summary: TC=${tcMap.size}, EN=${enMap.size}, SSR=${ssrResult.records.length}, PDF=${pdfResult.records.length} (status: ${pdfResult.status})`);
 
   // ─── 3. Save raw snapshot ──────────────────────────────────────────
-  if (!isFixtureMode) {
-    await saveRawSnapshot(RAW_DIR, {
+  if (!isFixtureMode && shouldPublish) {
+    await saveRawSnapshot(targetRawDir, {
       tcResults,
       enResults,
       ssrRecords: ssrResult.records,
@@ -219,8 +249,7 @@ export async function runSync(options = {}) {
     pdfResult
   });
 
-  // Write GitHub Step Summary if running in Actions environment
-  if (process.env.GITHUB_STEP_SUMMARY) {
+  if (process.env.GITHUB_STEP_SUMMARY && shouldPublish) {
     await writeFile(process.env.GITHUB_STEP_SUMMARY, reportMarkdown, 'utf8').catch(() => {});
   }
 
@@ -280,17 +309,19 @@ export async function runSync(options = {}) {
   };
 
   // ─── 10. Atomic publish (release-level transactional) ─────────────
-  await atomicPublish({
-    records: nextList,
-    metadata,
-    reportMarkdown,
-    dataDir: DATA_DIR,
-    reportsDir: REPORTS_DIR,
-    rootDir: ROOT_DIR
-  });
-
-  console.log('\nAll output files published atomically.');
-  console.log('Sync completed successfully!');
+  if (shouldPublish) {
+    await atomicPublish({
+      records: nextList,
+      metadata,
+      reportMarkdown,
+      dataDir: targetDataDir,
+      reportsDir: targetReportsDir,
+      rootDir: baseRootDir
+    });
+    console.log(`\nAll output files published atomically to ${targetDataDir}.`);
+  } else {
+    console.log('\n[Dry-Run Mode] Validation, diff, and report generation completed. No files published.');
+  }
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

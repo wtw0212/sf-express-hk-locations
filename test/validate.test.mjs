@@ -153,7 +153,7 @@ test('checkCompletenessGates: partner subset unexpectedly drops -> blocked', () 
     previousRecords: prevRecords
   });
   assert.equal(resPartnerDrop.pass, false);
-  assert.ok(resPartnerDrop.errors.some(e => e.includes('Partner subset count dropped')));
+  assert.ok(resPartnerDrop.errors.some(e => e.includes("Category 'partners' count dropped")));
 });
 
 test('validateCrossFile: validates cross-file consistency', () => {

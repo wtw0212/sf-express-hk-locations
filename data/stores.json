@@ -33,7 +33,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FCL",
@@ -59,20 +59,7 @@
       "longitude": 114.1680178
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "5,A5",
-          "en": "A5,Fortune"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -82,7 +69,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852NLL",
@@ -110,18 +97,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "122B",
-          "en": "F122B"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -143,7 +118,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z351",
@@ -191,7 +166,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852PD",
@@ -240,7 +215,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852NPTM",
@@ -268,18 +243,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "8",
-          "en": "8,Fung"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -301,7 +264,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852PDL",
@@ -327,20 +290,7 @@
       "longitude": 114.19453
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "202,203",
-          "en": "202,203,Olympia"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -350,7 +300,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852PB",
@@ -376,20 +326,7 @@
       "longitude": 114.243764
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "B",
-          "en": "B,Yiko"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -399,7 +336,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852PCL",
@@ -435,7 +372,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852PC",
@@ -473,18 +410,6 @@
           "tc": "6",
           "en": "6A"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "1",
-          "en": "1,Centro,Sound"
-        }
       }
     ],
     "provenance": {
@@ -496,7 +421,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852PAL",
@@ -524,18 +449,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "1142,1143",
-          "en": "1142,1143,Smiling"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -557,7 +470,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852PGL",
@@ -583,20 +496,7 @@
       "longitude": 114.223438
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "E",
-          "en": "28,36,E"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -606,7 +506,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z552",
@@ -646,18 +546,6 @@
         }
       },
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "128,173",
-          "en": "No"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -679,7 +567,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852P",
@@ -705,20 +593,7 @@
       "longitude": 114.191308
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "E",
-          "en": "E,Hoi"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -728,7 +603,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852C",
@@ -764,7 +639,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852CAB",
@@ -802,18 +677,6 @@
           "tc": "80",
           "en": "1, 80"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "1",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -825,7 +688,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852CAC",
@@ -861,7 +724,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852HD",
@@ -897,7 +760,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852YMCM",
@@ -935,18 +798,6 @@
           "tc": "300-302",
           "en": "53, 302"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "53",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -958,7 +809,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z151",
@@ -994,7 +845,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852ACL",
@@ -1020,20 +871,7 @@
       "longitude": 114.2335701
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "20,22",
-          "en": "22,4A20,Sceneway"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -1043,7 +881,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852CAD",
@@ -1079,7 +917,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852AJL",
@@ -1107,18 +945,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "229",
-          "en": "229,Domain"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -1140,7 +966,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z152",
@@ -1167,18 +993,6 @@
     },
     "source": "api_tc",
     "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "108",
-          "en": "No"
-        }
-      },
       {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
@@ -1223,7 +1037,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852H",
@@ -1259,7 +1073,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852HC",
@@ -1297,18 +1111,6 @@
           "tc": "12",
           "en": "5, 12"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "5",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -1320,7 +1122,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852HBL",
@@ -1346,20 +1148,7 @@
       "longitude": 114.214171
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "209",
-          "en": "209,Tak"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -1369,7 +1158,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z401",
@@ -1396,18 +1185,6 @@
     },
     "source": "api_tc",
     "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "211",
-          "en": "211,Richl"
-        }
-      },
       {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
@@ -1440,7 +1217,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z402",
@@ -1480,18 +1257,6 @@
         }
       },
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "410B",
-          "en": "No"
-        }
-      },
-      {
         "type": "DUPLICATE_ADDRESS_SUFFIX",
         "severity": "info",
         "fields": [
@@ -1511,7 +1276,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852CNL",
@@ -1546,8 +1311,8 @@
           "address_en"
         ],
         "details": {
-          "tc": "21",
-          "en": "21,Level"
+          "tc": "LG21",
+          "en": "21"
         }
       },
       {
@@ -1572,7 +1337,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852HAL",
@@ -1598,20 +1363,7 @@
       "longitude": 114.1968364
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "29A",
-          "en": "29A,Tropicana"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -1621,7 +1373,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852HCL",
@@ -1649,18 +1401,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "215A",
-          "en": "Chuk,S215A"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -1682,7 +1422,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852J",
@@ -1718,7 +1458,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852K",
@@ -1744,20 +1484,7 @@
       "longitude": 114.188795
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "A2",
-          "en": "A2,Phase"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -1767,7 +1494,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852KEL",
@@ -1793,20 +1520,7 @@
       "longitude": 114.190988
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "9A,9B",
-          "en": "Nos"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -1816,7 +1530,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z253",
@@ -1852,7 +1566,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z051",
@@ -1878,20 +1592,7 @@
       "longitude": 114.174464
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "36C,G36C",
-          "en": "G36C"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -1901,7 +1602,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852KDL",
@@ -1927,20 +1628,7 @@
       "longitude": 114.190367
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "B",
-          "en": "178,B,Kingsgate"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -1950,7 +1638,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852KFL",
@@ -1978,18 +1666,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "126",
-          "en": "126,Block"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -2011,7 +1687,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852KBL",
@@ -2049,18 +1725,6 @@
           "tc": "60",
           "en": "5, 60"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "5",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -2072,7 +1736,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z403",
@@ -2119,7 +1783,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852L",
@@ -2145,20 +1809,7 @@
       "longitude": 114.134068
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "C",
-          "en": "C,Ching"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -2168,7 +1819,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852LA",
@@ -2216,7 +1867,7 @@
         ],
         "details": {
           "tc": "6",
-          "en": "06B,Unit"
+          "en": "06B,6"
         }
       }
     ],
@@ -2229,7 +1880,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852LB",
@@ -2255,20 +1906,7 @@
       "longitude": 114.125078
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "3",
-          "en": "3,Join"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -2278,7 +1916,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852LC",
@@ -2304,20 +1942,7 @@
       "longitude": 114.131859
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "B",
-          "en": "B,King"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -2327,7 +1952,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852LAL",
@@ -2365,18 +1990,6 @@
           "tc": "9, 16",
           "en": "9"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "G16",
-          "en": "G16,Hang"
-        }
       }
     ],
     "provenance": {
@@ -2388,7 +2001,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852LBL",
@@ -2416,18 +2029,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "7",
-          "en": "7,Kwai"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -2449,7 +2050,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852GH",
@@ -2475,20 +2076,7 @@
       "longitude": 114.110186
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "G",
-          "en": "Nos"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -2498,7 +2086,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z352",
@@ -2534,7 +2122,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852DEL",
@@ -2560,20 +2148,7 @@
       "longitude": 114.126374
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "4",
-          "en": "No"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -2583,7 +2158,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852TAL",
@@ -2632,7 +2207,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852TBL",
@@ -2658,20 +2233,7 @@
       "longitude": 114.138105
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "119",
-          "en": "119,Wah"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -2681,7 +2243,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852TCL",
@@ -2742,7 +2304,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z601",
@@ -2778,7 +2340,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852TB",
@@ -2804,20 +2366,7 @@
       "longitude": 114.167991
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "2,A2",
-          "en": "A2,Yally"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -2827,7 +2376,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852TE",
@@ -2853,20 +2402,7 @@
       "longitude": 114.1649042
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "A",
-          "en": "A,Po"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -2876,7 +2412,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852G",
@@ -2912,7 +2448,7 @@
         ],
         "details": {
           "tc": "7",
-          "en": "7,8B,Thriving"
+          "en": "7,8B"
         }
       }
     ],
@@ -2925,7 +2461,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852GA",
@@ -2961,7 +2497,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z355",
@@ -2997,7 +2533,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FB",
@@ -3046,7 +2582,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FE",
@@ -3082,7 +2618,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FSL",
@@ -3108,20 +2644,7 @@
       "longitude": 114.202315
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "41,G41",
-          "en": "Fortune,G41"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -3131,7 +2654,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852NAL",
@@ -3171,18 +2694,6 @@
         }
       },
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "51",
-          "en": "No"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -3204,7 +2715,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852NJL",
@@ -3232,18 +2743,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "5,ST5",
-          "en": "ST5,Wah"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -3265,7 +2764,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FEL",
@@ -3291,20 +2790,7 @@
       "longitude": 114.177031
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "16A,17",
-          "en": "Nos"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -3314,7 +2800,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FVL",
@@ -3340,20 +2826,7 @@
       "longitude": 114.177626
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "3A",
-          "en": "3A,Commercial"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -3363,7 +2836,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852NBL",
@@ -3403,18 +2876,6 @@
         }
       },
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "203",
-          "en": "No"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -3436,7 +2897,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FDL",
@@ -3462,20 +2923,7 @@
       "longitude": 114.231938
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "3,68B,G",
-          "en": "No"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -3485,7 +2933,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FUL",
@@ -3523,18 +2971,6 @@
           "tc": "16",
           "en": "9, 16"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "09,G09",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -3546,7 +2982,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852F",
@@ -3572,20 +3008,7 @@
       "longitude": 114.193514
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "B",
-          "en": "B,Mecco"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -3595,7 +3018,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FH",
@@ -3631,7 +3054,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852DA",
@@ -3690,7 +3113,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852DDL",
@@ -3726,7 +3149,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852D",
@@ -3764,18 +3187,6 @@
           "tc": "26",
           "en": "24, 26"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "A",
-          "en": "A,Shun"
-        }
       }
     ],
     "provenance": {
@@ -3787,7 +3198,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852DB",
@@ -3813,20 +3224,7 @@
       "longitude": 114.146761
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "2,A2",
-          "en": "A2,Ford"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -3836,7 +3234,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852NC",
@@ -3874,18 +3272,6 @@
           "tc": "479-479A",
           "en": "3, 479-479A"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "3",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -3897,7 +3283,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852DCL",
@@ -3923,20 +3309,7 @@
       "longitude": 114.148029
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "2A",
-          "en": "2A,Banyan"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -3946,7 +3319,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852WCLM",
@@ -3972,20 +3345,7 @@
       "longitude": 114.167044
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "222",
-          "en": "222,Kam"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -3995,7 +3355,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z201",
@@ -4021,20 +3381,7 @@
       "longitude": 114.15311
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "22,23",
-          "en": "NAC"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -4044,7 +3391,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852U",
@@ -4070,20 +3417,7 @@
       "longitude": 113.971019
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "F",
-          "en": "F,Hoi"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -4093,7 +3427,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852UC",
@@ -4119,20 +3453,7 @@
       "longitude": 113.96931
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "B",
-          "en": "B,Winfield"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -4142,7 +3463,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852UD",
@@ -4191,7 +3512,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FFL",
@@ -4217,20 +3538,7 @@
       "longitude": 113.967824
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "13,A13",
-          "en": "A13"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -4240,7 +3548,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852TCSM",
@@ -4278,18 +3586,6 @@
           "tc": "11",
           "en": "9, 11"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "9",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -4301,7 +3597,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852UAL",
@@ -4327,20 +3623,7 @@
       "longitude": 113.961061
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "65",
-          "en": "65,Melody"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -4350,7 +3633,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z660",
@@ -4376,20 +3659,7 @@
       "longitude": 113.975233
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "313",
-          "en": "Nos"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -4399,7 +3669,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z661",
@@ -4427,18 +3697,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "2,32",
-          "en": "No"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -4460,7 +3718,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852T",
@@ -4486,20 +3744,7 @@
       "longitude": 114.180184
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "A,B",
-          "en": "A,B,Man"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -4509,7 +3754,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852TA",
@@ -4547,18 +3792,6 @@
           "tc": "11-13",
           "en": "9, 13"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "D",
-          "en": "D,Johnston"
-        }
       }
     ],
     "provenance": {
@@ -4570,7 +3803,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852TC",
@@ -4598,18 +3831,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "6",
-          "en": "6,Tung"
-        }
-      },
-      {
         "type": "DUPLICATE_ADDRESS_SUFFIX",
         "severity": "info",
         "fields": [
@@ -4629,7 +3850,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852TD",
@@ -4665,7 +3886,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852SKL",
@@ -4691,20 +3912,7 @@
       "longitude": 114.271875
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "10",
-          "en": "10,66"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -4714,7 +3922,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z102",
@@ -4749,8 +3957,8 @@
           "address_en"
         ],
         "details": {
-          "tc": "1,2",
-          "en": "A1,Phase"
+          "tc": "2,A1",
+          "en": "A1"
         }
       },
       {
@@ -4785,7 +3993,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852AAL",
@@ -4825,18 +4033,6 @@
         }
       },
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "6",
-          "en": "No"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -4858,7 +4054,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852ABL",
@@ -4884,20 +4080,7 @@
       "longitude": 114.2617571
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "21A",
-          "en": "Nos"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -4907,7 +4090,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852CLL",
@@ -4933,20 +4116,7 @@
       "longitude": 114.258924
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "215",
-          "en": "215,Sheung"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -4956,7 +4126,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852HHUM",
@@ -4982,20 +4152,7 @@
       "longitude": 114.263893
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "31",
-          "en": "B28,B31"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -5005,7 +4162,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z101",
@@ -5031,20 +4188,7 @@
       "longitude": 114.2697184
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "340",
-          "en": "340,Level"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -5054,7 +4198,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852BB",
@@ -5080,20 +4224,7 @@
       "longitude": 114.168363
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "1,B1",
-          "en": "B1,Kam"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -5103,7 +4234,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852EA",
@@ -5139,7 +4270,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852E",
@@ -5165,20 +4296,7 @@
       "longitude": 114.17512
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "A,B,C",
-          "en": "A,B,C,Eu"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -5188,7 +4306,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852EB",
@@ -5237,7 +4355,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852ED",
@@ -5273,7 +4391,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852EE",
@@ -5309,7 +4427,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z251",
@@ -5345,7 +4463,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z252",
@@ -5371,20 +4489,7 @@
       "longitude": 114.1649
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "5",
-          "en": "WEK"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -5394,7 +4499,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852BE",
@@ -5430,7 +4535,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852BF",
@@ -5466,7 +4571,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852BAL",
@@ -5494,18 +4599,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "38",
-          "en": "38,Charming"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -5527,7 +4620,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z053",
@@ -5555,18 +4648,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "A",
-          "en": "A,Nos"
-        }
-      },
-      {
         "type": "SOURCE_FORMATTING_ARTIFACT",
         "severity": "info",
         "fields": [
@@ -5587,7 +4668,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852BA",
@@ -5623,7 +4704,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852BDL",
@@ -5661,18 +4742,6 @@
           "tc": "26",
           "en": "24, 26"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "A",
-          "en": "A,No"
-        }
       }
     ],
     "provenance": {
@@ -5684,7 +4753,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852BD",
@@ -5710,20 +4779,7 @@
       "longitude": 114.163071
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "5",
-          "en": "5,Wah"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -5733,7 +4789,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852BFL",
@@ -5759,20 +4815,7 @@
       "longitude": 114.160828
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "12",
-          "en": "12,Chung"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -5782,7 +4825,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852UAA",
@@ -5820,18 +4863,6 @@
           "tc": "26",
           "en": "27"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "12C",
-          "en": "12C,Lai"
-        }
       }
     ],
     "provenance": {
@@ -5843,7 +4874,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852UAB",
@@ -5869,20 +4900,7 @@
       "longitude": 114.028084
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "F",
-          "en": "no"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -5892,7 +4910,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FLL",
@@ -5918,20 +4936,7 @@
       "longitude": 114.022276
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "F",
-          "en": "Cockloft,F"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -5941,7 +4946,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852UFL",
@@ -5979,18 +4984,6 @@
           "tc": "9",
           "en": "79, 9"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "79",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -6002,7 +4995,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852UGL",
@@ -6028,20 +5021,7 @@
       "longitude": 114.02376
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "3",
-          "en": "3,Cockloft,On"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -6051,7 +5031,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852UHL",
@@ -6087,7 +5067,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z701",
@@ -6113,20 +5093,7 @@
       "longitude": 114.029795
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "A",
-          "en": "A,On"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -6136,7 +5103,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FBL",
@@ -6164,18 +5131,6 @@
     "source": "api_tc",
     "quality_flags": [
       {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "24,25",
-          "en": "Nos"
-        }
-      },
-      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -6197,7 +5152,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852UCL",
@@ -6235,18 +5190,6 @@
           "tc": "71-77",
           "en": "310, 77"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "310",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -6258,7 +5201,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852UJL",
@@ -6284,20 +5227,7 @@
       "longitude": 114.003161
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "3007",
-          "en": "3007,8"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -6307,7 +5237,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z662",
@@ -6335,6 +5265,18 @@
     "source": "api_tc",
     "quality_flags": [
       {
+        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
+        "severity": "warning",
+        "fields": [
+          "address",
+          "address_en"
+        ],
+        "details": {
+          "tc": "12B,25,26A",
+          "en": "25"
+        }
+      },
+      {
         "type": "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT",
         "severity": "warning",
         "fields": [
@@ -6356,7 +5298,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852MB",
@@ -6382,20 +5324,7 @@
       "longitude": 114.152098
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "D",
-          "en": "D,Winbase"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -6405,7 +5334,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852M",
@@ -6431,20 +5360,7 @@
       "longitude": 114.151342
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "A",
-          "en": "A,Man"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -6454,7 +5370,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852MD",
@@ -6492,18 +5408,6 @@
           "tc": "15-27, 8-14",
           "en": "15, 8-14, 15-27"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "15",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -6515,7 +5419,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z501",
@@ -6553,18 +5457,6 @@
           "tc": "1Q, 1",
           "en": "1"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "1",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -6576,7 +5468,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z502",
@@ -6602,20 +5494,7 @@
       "longitude": 114.1263858
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "3",
-          "en": "Nos"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -6625,7 +5504,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852MA",
@@ -6661,7 +5540,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FHL",
@@ -6687,20 +5566,7 @@
       "longitude": 114.1406376
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "111,112",
-          "en": "111,112,Cheung"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -6710,7 +5576,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852NFL",
@@ -6736,20 +5602,7 @@
       "longitude": 114.141684
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "A",
-          "en": "17,A"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -6759,7 +5612,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z010",
@@ -6785,20 +5638,7 @@
       "longitude": 114.156047
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "7",
-          "en": "No"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -6808,7 +5648,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852Z011",
@@ -6846,18 +5686,6 @@
           "tc": "88",
           "en": "103, 88"
         }
-      },
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "103",
-          "en": "No"
-        }
       }
     ],
     "provenance": {
@@ -6869,7 +5697,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852FTL",
@@ -6895,20 +5723,7 @@
       "longitude": 114.125775
     },
     "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_UNIT_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "117",
-          "en": "117,Choi"
-        }
-      }
-    ],
+    "quality_flags": [],
     "provenance": {
       "name": "api_tc",
       "name_en": "api_en",
@@ -6918,7 +5733,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   },
   {
     "id": "852NDL",
@@ -6954,6 +5769,6 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-07-27 10:56 (HKT UTC+8)"
+    "retrieved_at": "2026-07-27 11:54 (HKT UTC+8)"
   }
 ]

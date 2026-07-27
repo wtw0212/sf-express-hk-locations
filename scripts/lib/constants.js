@@ -84,14 +84,15 @@ export const DIFF_COMPARE_FIELDS = [
 
 // ─── Configurable thresholds ────────────────────────────────────────────
 
-/** Maximum allowed percentage drop in record count before blocking publication */
-export const COUNT_DROP_THRESHOLD_PCT = 5;
-
-/** Warning threshold for percentage increase */
-export const COUNT_INCREASE_WARN_PCT = 5;
-
-/** Maximum allowed percentage increase before blocking publication */
-export const COUNT_INCREASE_BLOCK_PCT = 15;
+/** Default per-category anomaly threshold configuration */
+export const CATEGORY_ANOMALY_CONFIG = {
+  total: { dropBlockPct: 5, increaseWarnPct: 5, increaseBlockPct: 15 },
+  stores: { dropBlockPct: 5, increaseWarnPct: 5, increaseBlockPct: 15 },
+  lockers: { dropBlockPct: 5, increaseWarnPct: 5, increaseBlockPct: 15 },
+  partners: { dropBlockPct: 5, increaseWarnPct: 5, increaseBlockPct: 15 },
+  tcCodes: { dropBlockPct: 5, increaseWarnPct: 5, increaseBlockPct: 15 },
+  enCodes: { dropBlockPct: 5, increaseWarnPct: 5, increaseBlockPct: 15 }
+};
 
 /** Minimum English match rate (fraction 0-1) required for publication */
 export const EN_MATCH_RATE_THRESHOLD = 0.80;

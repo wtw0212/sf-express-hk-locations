@@ -1,38 +1,42 @@
-name: Pull Request & Main Validation CI
+name: CI
 
 on:
   pull_request:
+    branches: [ main, refactor/pipeline-hardening ]
   push:
-    branches:
-      - main
+    branches: [ refactor/pipeline-hardening ]
 
 permissions:
   contents: read
 
 jobs:
-  validate:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
           cache: 'npm'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: Code Syntax Verification
-        run: node --check scripts/*.js scripts/lib/*.js test/*.mjs
+      - name: Syntax Check
+        run: npm run check:syntax
 
-      - name: Run Unit & Integration Test Suite
+      - name: Run Test Suite
         run: npm test
 
-      - name: Deterministic Pipeline Fixture Validation
-        run: npm run sync -- --fixture
+      - name: Run Fixture Dry-Run Sync
+        run: npm run sync -- --fixture --dry-run --output-dir "$RUNNER_TEMP/sf-fixture-output"
 
-      - name: Post-Fixture Verification
+      - name: Re-run Test Suite After Dry-Run
         run: npm test
+
+      - name: Ensure Working Tree Remains Clean
+        run: |
+          git diff --exit-code
+          test -z "$(git status --porcelain)"

@@ -1,8 +1,9 @@
-name: Sync SF Express Locations
+name: Sync Locations Data
 
 on:
   schedule:
-    - cron: '7 16 * * *'
+    # Run daily at 00:00 UTC (08:00 HKT)
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:
@@ -12,49 +13,43 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
           cache: 'npm'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: Code Syntax Verification
-        run: node --check scripts/*.js scripts/lib/*.js test/*.mjs
+      - name: Syntax Check
+        run: npm run check:syntax
 
-      - name: Pre-sync Verification Tests
+      - name: Run Test Suite
         run: npm test
 
-      - name: Dry-Run Fixture Verification
-        run: npm run sync -- --fixture
+      - name: Run Fixture Dry-Run Sync
+        run: npm run sync -- --fixture --dry-run --output-dir "$RUNNER_TEMP/sf-fixture-output"
 
-      - name: Run Data Synchronization Pipeline
+      - name: Ensure Working Tree Clean Pre-Live
+        run: git diff --exit-code
+
+      - name: Run Live Sync Pipeline
         run: npm run sync
 
-      - name: Post-sync Verification Tests
+      - name: Post-Live Test Suite (Does not mutate live outputs)
         run: npm test
 
-      - name: Commit and Push Changes
+      - name: Commit and push if dataset updated
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ raw/ reports/ README.md package.json package-lock.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ raw/ reports/
           if git diff --staged --quiet; then
-            echo "No location dataset changes today." >> $GITHUB_STEP_SUMMARY
+            echo "No changes in dataset."
           else
-            if [ -f reports/latest-diff.md ]; then
-              cat reports/latest-diff.md >> $GITHUB_STEP_SUMMARY
-              echo "" >> $GITHUB_STEP_SUMMARY
-              echo "### Line Diff Statistics" >> $GITHUB_STEP_SUMMARY
-              echo '```stat' >> $GITHUB_STEP_SUMMARY
-              git diff --staged --stat >> $GITHUB_STEP_SUMMARY
-              echo '```' >> $GITHUB_STEP_SUMMARY
-            fi
-            git commit -m "chore: auto-update SF location dataset (HKT)"
-            git push origin main
+            git commit -m "chore(data): daily SF Express HK locations update [skip ci]"
+            git push
           fi

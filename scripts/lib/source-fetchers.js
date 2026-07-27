@@ -287,23 +287,27 @@ export async function fetchPartnerPdfs() {
     ];
   }
 
-  // pdf-parse is an optional dependency used only for partner PDFs
+  // pdf-parse library import: target lib file directly to avoid index.js test file bug
   let pdf;
   try {
-    pdf = (await import('pdf-parse')).default;
+    pdf = (await import('pdf-parse/lib/pdf-parse.js')).default;
   } catch {
-    const errMsg = 'pdf-parse dependency not available';
-    errors.push(errMsg);
-    console.warn('  Warning: pdf-parse not available. Skipping partner PDFs.');
-    return {
-      records: [],
-      pdfTotal: partnerPdfs.length,
-      pdfSuccessCount: 0,
-      pdfFailCount: partnerPdfs.length,
-      status: partnerPdfs.length > 0 ? 'all_pdfs_failed' : 'no_pdfs_discovered',
-      errors,
-      pdfDetails: partnerPdfs.map(url => ({ url, ok: false, error: errMsg }))
-    };
+    try {
+      pdf = (await import('pdf-parse')).default;
+    } catch {
+      const errMsg = 'pdf-parse dependency not available';
+      errors.push(errMsg);
+      console.warn('  Warning: pdf-parse not available. Skipping partner PDFs.');
+      return {
+        records: [],
+        pdfTotal: partnerPdfs.length,
+        pdfSuccessCount: 0,
+        pdfFailCount: partnerPdfs.length,
+        status: partnerPdfs.length > 0 ? 'all_pdfs_failed' : 'no_pdfs_discovered',
+        errors,
+        pdfDetails: partnerPdfs.map(url => ({ url, ok: false, error: errMsg }))
+      };
+    }
   }
 
   const partnerMap = new Map();

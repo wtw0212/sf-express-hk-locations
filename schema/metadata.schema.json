@@ -11,8 +11,8 @@
     "quality"
   ],
   "properties": {
-    "schema_version": { "type": "integer" },
-    "retrieved_at": { "type": "string" },
+    "schema_version": { "type": "integer", "enum": [2] },
+    "retrieved_at": { "type": "string", "minLength": 1 },
     "counts": {
       "type": "object",
       "required": ["total", "stores", "lockers", "partners"],
@@ -21,7 +21,8 @@
         "stores": { "type": "integer", "minimum": 0 },
         "lockers": { "type": "integer", "minimum": 0 },
         "partners": { "type": "integer", "minimum": 0 }
-      }
+      },
+      "additionalProperties": false
     },
     "source_status": {
       "type": "object",
@@ -31,41 +32,46 @@
           "type": "object",
           "required": ["areas_total", "areas_success", "areas_failed"],
           "properties": {
-            "areas_total": { "type": "integer" },
-            "areas_success": { "type": "integer" },
-            "areas_failed": { "type": "integer" }
-          }
+            "areas_total": { "type": "integer", "minimum": 0 },
+            "areas_success": { "type": "integer", "minimum": 0 },
+            "areas_failed": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
         },
         "api_en": {
           "type": "object",
           "required": ["areas_total", "areas_success", "areas_failed"],
           "properties": {
-            "areas_total": { "type": "integer" },
-            "areas_success": { "type": "integer" },
-            "areas_failed": { "type": "integer" }
-          }
+            "areas_total": { "type": "integer", "minimum": 0 },
+            "areas_success": { "type": "integer", "minimum": 0 },
+            "areas_failed": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
         },
         "ssr": {
           "type": "object",
-          "required": ["count"],
+          "required": ["count", "errors"],
           "properties": {
-            "count": { "type": "integer" },
+            "count": { "type": "integer", "minimum": 0 },
             "errors": { "type": "array", "items": { "type": "string" } }
-          }
+          },
+          "additionalProperties": false
         },
         "partner_pdf": {
           "type": "object",
-          "required": ["pdf_total", "pdf_success", "pdf_failed", "records", "errors"],
+          "required": ["pdf_total", "pdf_success", "pdf_failed", "status", "records", "errors"],
           "properties": {
-            "pdf_total": { "type": "integer" },
-            "pdf_success": { "type": "integer" },
-            "pdf_failed": { "type": "integer" },
-            "records": { "type": "integer" },
-            "status": { "type": "string" },
+            "pdf_total": { "type": "integer", "minimum": 0 },
+            "pdf_success": { "type": "integer", "minimum": 0 },
+            "pdf_failed": { "type": "integer", "minimum": 0 },
+            "status": { "type": "string", "enum": ["success", "no_pdfs_discovered", "all_pdfs_failed", "partial_pdf_failures", "zero_records_parsed"] },
+            "records": { "type": "integer", "minimum": 0 },
             "errors": { "type": "array", "items": { "type": "string" } }
-          }
+          },
+          "additionalProperties": false
         }
-      }
+      },
+      "additionalProperties": false
     },
     "coverage": {
       "type": "object",
@@ -75,16 +81,26 @@
         "bilingual_match_rate",
         "district_resolved_count",
         "district_unresolved_count"
-      ]
+      ],
+      "properties": {
+        "tc_record_count": { "type": "integer", "minimum": 0 },
+        "en_record_count": { "type": "integer", "minimum": 0 },
+        "bilingual_match_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+        "district_resolved_count": { "type": "integer", "minimum": 0 },
+        "district_unresolved_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
     },
     "quality": {
       "type": "object",
       "required": ["blocking_errors", "warnings", "flag_counts"],
       "properties": {
-        "blocking_errors": { "type": "integer" },
-        "warnings": { "type": "integer" },
-        "flag_counts": { "type": "object" }
-      }
+        "blocking_errors": { "type": "integer", "minimum": 0 },
+        "warnings": { "type": "integer", "minimum": 0 },
+        "flag_counts": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
+      },
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

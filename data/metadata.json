@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "source_retrieved_at": "2026-07-27 15:49 (HKT UTC+8)",
-  "generated_at": "2026-07-27 16:25 (HKT UTC+8)",
+  "generated_at": "2026-07-27 16:42 (HKT UTC+8)",
   "retrieved_at": "2026-07-27 15:49 (HKT UTC+8)",
   "counts": {
     "total": 1673,
@@ -118,7 +118,7 @@
           "http_ok": true,
           "parse_ok": true,
           "semantic_ok": false,
-          "within_quality_threshold": false,
+          "within_quality_threshold": true,
           "attempts": 1,
           "raw_code_count": 105,
           "candidate_count": 105,
@@ -169,7 +169,7 @@
           "http_ok": true,
           "parse_ok": true,
           "semantic_ok": false,
-          "within_quality_threshold": false,
+          "within_quality_threshold": true,
           "attempts": 1,
           "raw_code_count": 26,
           "candidate_count": 24,

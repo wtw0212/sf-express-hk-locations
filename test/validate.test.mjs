@@ -135,7 +135,7 @@ test('checkCompletenessGates: PDF failure scenarios', () => {
   assert.ok(resZeroRecs.warnings.some(e => e.includes('zero')));
 });
 
-test('checkCompletenessGates: partner subset unexpectedly drops -> operational warning', () => {
+test('checkCompletenessGates: partner subset unexpectedly drops -> blocked', () => {
   const records = Array(1100).fill(validRecord).map((r, i) => ({ ...r, id: `852${i}`, code: `852${i}` }));
   // 100 previous partner records
   const prevPartnerRecord = { ...validRecord, type: 'partner' };
@@ -151,8 +151,8 @@ test('checkCompletenessGates: partner subset unexpectedly drops -> operational w
     records, // 0 partners
     previousRecords: prevRecords
   });
-  assert.equal(resPartnerDrop.pass, true);
-  assert.ok(resPartnerDrop.warnings.some(e => e.includes("Category 'partners' count dropped")));
+  assert.equal(resPartnerDrop.pass, false);
+  assert.ok(resPartnerDrop.errors.some(e => e.includes("Category 'partners' count dropped")));
 });
 
 test('validateCrossFile: validates cross-file consistency', () => {

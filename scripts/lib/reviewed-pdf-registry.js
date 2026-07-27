@@ -95,6 +95,9 @@ export async function loadReviewedPdfRegistry(registryPath) {
       _registry_evidence: {
         source_key: item.source_key,
         source_url: item.source_url,
+        reviewed_source_url: item.reviewed_source_url,
+        reviewed_document_sha256: item.reviewed_document_sha256,
+        reviewed_source_retrieved_at: item.reviewed_source_retrieved_at,
         reviewed_at: item.reviewed_at,
         review_note: item.review_note || null
       }

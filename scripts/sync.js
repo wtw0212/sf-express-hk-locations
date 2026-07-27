@@ -65,6 +65,9 @@ export async function runSync(options = {}) {
   const customOutputDirCli = process.argv.find(arg => arg.startsWith('--output-dir='))?.split('=')[1] ||
     (process.argv.indexOf('--output-dir') >= 0 ? process.argv[process.argv.indexOf('--output-dir') + 1] : null);
 
+  const customReviewedRegistryCli = process.argv.find(arg => arg.startsWith('--reviewed-registry='))?.split('=')[1] ||
+    (process.argv.indexOf('--reviewed-registry') >= 0 ? process.argv[process.argv.indexOf('--reviewed-registry') + 1] : null);
+
   const shouldPublish = options.publish !== undefined
     ? options.publish
     : (isFixtureMode || isDryRunCli ? false : true);
@@ -134,14 +137,15 @@ export async function runSync(options = {}) {
   }
 
   // Load reviewed PDF partner registry
-  const reviewedPdfPath = resolve(baselineDir, 'reviewed-pdf-partners.json');
-  const fallbackReviewedPdfPath = resolve(ROOT_DIR, 'data', 'reviewed-pdf-partners.json');
-  const pathToReadReviewed = existsSync(reviewedPdfPath) ? reviewedPdfPath : fallbackReviewedPdfPath;
+  const reviewedRegistryPath = options.reviewedRegistryPath || customReviewedRegistryCli || resolve(baselineDir, 'reviewed-pdf-partners.json');
+  if (!existsSync(reviewedRegistryPath)) {
+    throw new Error(`Reviewed registry missing: ${reviewedRegistryPath}`);
+  }
 
   let reviewedPdfRegistry = null;
   let reviewedPdfList = [];
   try {
-    reviewedPdfRegistry = await loadReviewedPdfRegistry(pathToReadReviewed);
+    reviewedPdfRegistry = await loadReviewedPdfRegistry(reviewedRegistryPath);
     reviewedPdfList = reviewedPdfRegistry.records;
     console.log(`Loaded reviewed PDF registry: ${reviewedPdfList.length} records`);
   } catch (e) {

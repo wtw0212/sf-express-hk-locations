@@ -8,6 +8,7 @@ import { normalizeRecords } from '../scripts/lib/normalize.js';
 import { loadReviewedPdfRegistry } from '../scripts/lib/reviewed-pdf-registry.js';
 import { auditPartnerPdfRecords } from '../scripts/lib/pdf-audit.js';
 import { checkCompletenessGates, validatePreviousDataset } from '../scripts/lib/validate.js';
+import { parsePartnerPdfDocuments } from '../scripts/lib/source-fetchers.js';
 import { runSync } from '../scripts/sync.js';
 
 const reviewedPath = resolve('data/reviewed-pdf-partners.json');
@@ -55,6 +56,18 @@ test('normalization rejects an arbitrary reviewed PDF array', () => {
     }),
     /reviewedPdfRegistry must be loaded by loadReviewedPdfRegistry/
   );
+});
+
+test('reviewed registry carries immutable document evidence', async () => {
+  const registry = await loadReviewedPdfRegistry(reviewedPath);
+  const okRecord = registry.records.find(record => record.code === '852GC2003');
+  const aspRecord = registry.records.find(record => record.code === '852LA3007');
+
+  assert.equal(okRecord._registry_evidence.reviewed_source_url, 'https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf');
+  assert.equal(okRecord._registry_evidence.reviewed_document_sha256, 'a83821a509d042762210c85544959a0e2936afbd3406c8f7d66e79aade50f520');
+  assert.equal(aspRecord._registry_evidence.reviewed_source_url, 'https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf');
+  assert.equal(aspRecord._registry_evidence.reviewed_document_sha256, '9b13d21f52e855eecb23de5f6a024be0cfaf0f897850f32ab0ff2ce6e4a3854a');
+  assert.equal(aspRecord._registry_evidence.reviewed_source_retrieved_at, '2026-07-27 16:43 (HKT UTC+8)');
 });
 
 test('PDF audit distinguishes formatting, equivalent hours, and semantic conflicts with evidence', () => {
@@ -115,7 +128,7 @@ test('PDF audit failures are warnings only and do not become publication gates',
   assert.ok(result.warnings.some(item => item.includes('All partner PDFs failed')));
 });
 
-test('operational source and count anomalies remain visible without becoming publication gates', () => {
+test('canonical source and count anomalies remain publication gates', () => {
   const result = checkCompletenessGates({
     tcResults: [{ ok: false, area: { sourceRegion: 'Hong Kong', district: 'Central' }, error: 'HTTP 500' }],
     enResults: [{ ok: true, records: [] }],
@@ -123,9 +136,100 @@ test('operational source and count anomalies remain visible without becoming pub
     previousRecords: [{ code: '852PARENT1', type: 'store' }]
   });
 
-  assert.equal(result.errors.length, 0);
-  assert.ok(result.warnings.some(item => item.includes('TC API areas failed')));
-  assert.ok(result.warnings.some(item => item.includes('Record count')));
+  assert.equal(result.pass, false);
+  assert.ok(result.errors.some(item => item.includes('TC API areas failed')));
+  assert.ok(result.errors.some(item => item.includes('Record count')));
+});
+
+test('sync rejects an explicit missing reviewed registry instead of falling back', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'sf-registry-missing-'));
+  const baselineDir = join(root, 'baseline');
+  await mkdir(baselineDir, { recursive: true });
+  await writeFile(join(baselineDir, 'locations.json'), '[]');
+
+  await assert.rejects(
+    runSync({
+      isFixture: true,
+      publish: false,
+      baselineDir,
+      reviewedRegistryPath: join(root, 'does-not-exist.json')
+    }),
+    /Reviewed registry missing/
+  );
+
+  await rm(root, { recursive: true, force: true });
+});
+
+test('audit compares district and sub-district and summarizes classifications', () => {
+  const audit = auditPartnerPdfRecords({
+    tcMap: new Map([['852DIST1', {
+      serviceCode: '852DIST1',
+      name: '測試店',
+      address: '香港地址',
+      city: '灣仔區',
+      district: '灣仔',
+      serviceTime: '09:00-18:00'
+    }]]),
+    parsedPdfRecords: [{
+      serviceCode: '852DIST1',
+      name: '測試店',
+      address: '香港地址',
+      district: '中西區',
+      city: '中環',
+      serviceTime: '09:00-18:00'
+    }]
+  });
+
+  const conflict = audit.api_pdf_conflicts[0];
+  assert.equal(conflict.comparison.district.classification, 'semantic_conflict');
+  assert.equal(conflict.comparison.sub_district.classification, 'semantic_conflict');
+  assert.equal(audit.summary.api_pdf_difference_count, 1);
+  assert.equal(audit.summary.semantic_conflict_count, 1);
+  assert.equal(audit.summary.formatting_difference_count, 0);
+  assert.equal(audit.summary.equivalent_difference_count, 0);
+});
+
+test('audit classifies shared retailer names with differing specificity separately', () => {
+  const audit = auditPartnerPdfRecords({
+    tcMap: new Map([['852NAME1', {
+      serviceCode: '852NAME1',
+      name: '置富南區廣場OK便利店',
+      address: '香港薄扶林地址',
+      district: '薄扶林',
+      serviceTime: '09:00-18:00'
+    }]]),
+    parsedPdfRecords: [{
+      serviceCode: '852NAME1',
+      name: 'OK便利店 (薄扶林)',
+      address: '香港薄扶林地址',
+      district: '薄扶林',
+      city: '薄扶林',
+      serviceTime: '09:00-18:00'
+    }]
+  });
+
+  assert.equal(audit.api_pdf_conflicts[0].comparison.name.classification, 'name_specificity_difference');
+  assert.equal(audit.api_pdf_conflicts[0].classification, 'name_specificity_difference');
+  assert.equal(audit.summary.name_specificity_difference_count, 1);
+});
+
+test('PDF parser quality detail uses the shared ten-percent threshold', () => {
+  const validRows = Array.from({ length: 15 }, (_, index) => {
+    const code = `852A${String(1000 + index)}`;
+    return `測試店${index}${code}香港測試道${index}號^${code}^星期一至六:10:00-18:00`;
+  });
+  const documents = [{
+    source_key: 'ASP_TEST_TC',
+    url: 'https://example.test/ASP_TEST_TC.pdf',
+    http_ok: true,
+    parse_ok: true,
+    text: `${validRows.join('\n')}\n損壞店852A1999香港地址^852A1888^星期一至六:10:00-18:00`
+  }];
+
+  const result = parsePartnerPdfDocuments(documents);
+  assert.equal(result.pdfDetails[0].quarantine_ratio > 0.05, true);
+  assert.equal(result.pdfDetails[0].quarantine_ratio < 0.1, true);
+  assert.equal(result.pdfDetails[0].within_quality_threshold, true);
 });
 
 test('sync rejects a publication target that overlaps its read-only baseline', async () => {

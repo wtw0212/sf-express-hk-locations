@@ -1,5 +1,6 @@
 import { fetchWithRetry, withConcurrency } from './api-client.js';
 import { createHash } from 'node:crypto';
+import { PDF_PARSE_QUALITY_CONFIG } from './constants.js';
 import { parseOkPartnerPdfText } from './pdf-parsers/ok-partner-parser.js';
 import { parseAspPartnerPdfText } from './pdf-parsers/asp-partner-parser.js';
 
@@ -563,7 +564,8 @@ export function parsePartnerPdfDocuments(documents = []) {
       const fileQuarantineRatio = totalFileCandidates > 0 ? metrics.quarantineCount / totalFileCandidates : 0;
 
       const semanticClean = metrics.quarantineCount === 0;
-      const withinQualityThreshold = fileQuarantineRatio <= 0.05;
+      const withinQualityThreshold = fileQuarantineRatio <=
+        PDF_PARSE_QUALITY_CONFIG.perPdfQuarantineBlockPct / 100;
 
       let pdfStatus = 'success';
 

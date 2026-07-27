@@ -512,12 +512,7 @@ export function checkCompletenessGates({
     count_deltas: countDeltas
   };
 
-  // Completeness observations make a release reviewable, but cannot be a
-  // hidden second publication policy. The explicit blocking policy lives in
-  // trusted registry loading, canonical validation/source validation, and the
-  // atomic publisher. Preserve every signal as an operational warning.
-  const operationalWarnings = errors.map(error => `[Operational warning] ${error}`);
-  return { pass: true, errors: [], warnings: [...warnings, ...operationalWarnings], metrics };
+  return { pass: errors.length === 0, errors, warnings, metrics };
 }
 
 /**

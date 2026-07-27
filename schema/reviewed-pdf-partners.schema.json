@@ -10,6 +10,9 @@
       "address",
       "source_key",
       "source_url",
+      "reviewed_source_url",
+      "reviewed_document_sha256",
+      "reviewed_source_retrieved_at",
       "reviewed",
       "reviewed_at"
     ],
@@ -55,6 +58,18 @@
         "minLength": 1
       },
       "source_url": {
+        "type": "string",
+        "minLength": 1
+      },
+      "reviewed_source_url": {
+        "type": "string",
+        "minLength": 1
+      },
+      "reviewed_document_sha256": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      },
+      "reviewed_source_retrieved_at": {
         "type": "string",
         "minLength": 1
       },

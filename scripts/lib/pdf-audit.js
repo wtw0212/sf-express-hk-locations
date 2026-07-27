@@ -25,6 +25,10 @@ function normalizeBusinessHoursForComparison(value) {
     .replace(/[－–—至到]/g, '-');
 }
 
+function isRetailerNameSpecificityDifference(canonical, pdf) {
+  return ['OK便利店'].some(retailer => canonical.includes(retailer) && pdf.includes(retailer));
+}
+
 function compareField(field, canonicalValue, pdfValue) {
   const canonical = canonicalValue || null;
   const pdf = pdfValue || null;
@@ -40,7 +44,9 @@ function compareField(field, canonicalValue, pdfValue) {
   const normalizedPdf = normalize(pdf);
   const classification = normalizedCanonical === normalizedPdf
     ? (field === 'business_hours' ? 'equivalent_difference' : 'formatting_difference')
-    : 'semantic_conflict';
+    : (field === 'name' && isRetailerNameSpecificityDifference(canonical, pdf)
+      ? 'name_specificity_difference'
+      : 'semantic_conflict');
 
   return {
     canonical,
@@ -52,6 +58,7 @@ function compareField(field, canonicalValue, pdfValue) {
 function classifyEntry(comparison) {
   const values = Object.values(comparison);
   if (values.some(value => value.classification === 'semantic_conflict')) return 'semantic_conflict';
+  if (values.some(value => value.classification === 'name_specificity_difference')) return 'name_specificity_difference';
   if (values.some(value => value.classification === 'equivalent_difference')) return 'equivalent_difference';
   return 'formatting_difference';
 }
@@ -77,9 +84,13 @@ function compareCanonicalToPdf(canonicalItem, pdfRec, canonicalHours) {
   const name = compareField('name', canonicalItem.name, pdfRec.name);
   const address = compareField('address', canonicalItem.address, pdfRec.address);
   const businessHours = compareField('business_hours', canonicalHours, pdfRec.serviceTime);
+  const district = compareField('district', canonicalItem.district, pdfRec.district);
+  const subDistrict = compareField('sub_district', canonicalItem.district, pdfRec.city || pdfRec.district);
   if (name) comparison.name = name;
   if (address) comparison.address = address;
   if (businessHours) comparison.business_hours = businessHours;
+  if (district) comparison.district = district;
+  if (subDistrict) comparison.sub_district = subDistrict;
   return comparison;
 }
 
@@ -204,13 +215,26 @@ export function auditPartnerPdfRecords({
     }
   }));
 
+  const classifiedDifferences = [...apiPdfConflicts, ...reviewedPdfDrift];
+  const classificationCounts = Object.fromEntries(
+    ['semantic_conflict', 'name_specificity_difference', 'formatting_difference', 'equivalent_difference'].map(classification => [
+      classification,
+      classifiedDifferences.filter(item => item.classification === classification).length
+    ])
+  );
+
   return {
     source_retrieved_at: sourceRetrievedAt,
     generated_at: generatedAt,
     summary: {
       parsed_pdf_record_count: parsedPdfRecords.length,
       api_pdf_conflict_count: apiPdfConflicts.length,
+      api_pdf_difference_count: apiPdfConflicts.length,
       reviewed_pdf_drift_count: reviewedPdfDrift.length,
+      semantic_conflict_count: classificationCounts.semantic_conflict,
+      name_specificity_difference_count: classificationCounts.name_specificity_difference,
+      formatting_difference_count: classificationCounts.formatting_difference,
+      equivalent_difference_count: classificationCounts.equivalent_difference,
       new_pdf_only_candidate_count: newPdfOnlyCandidates.length,
       missing_reviewed_record_count: missingReviewedRecords.length,
       quarantined_record_count: formattedQuarantine.length

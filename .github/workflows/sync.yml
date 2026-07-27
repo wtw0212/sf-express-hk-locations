@@ -31,10 +31,18 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ raw/ README.md package.json package-lock.json
+          git add data/ raw/ reports/ README.md package.json package-lock.json
           if git diff --staged --quiet; then
-            echo "No changes to commit."
+            echo "No location dataset changes today." >> $GITHUB_STEP_SUMMARY
           else
+            if [ -f reports/latest-diff.md ]; then
+              cat reports/latest-diff.md >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "### 📈 Line Diff Statistics" >> $GITHUB_STEP_SUMMARY
+              echo '```stat' >> $GITHUB_STEP_SUMMARY
+              git diff --staged --stat >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+            fi
             git commit -m "chore: auto-update SF location dataset (HKT)"
             git push origin main
           fi

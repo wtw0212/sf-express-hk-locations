@@ -5,10 +5,12 @@ const pdf = require('pdf-parse');
 const ROOT_DIR = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT_DIR, 'data');
 const RAW_DIR = path.join(ROOT_DIR, 'raw');
+const REPORTS_DIR = path.join(ROOT_DIR, 'reports');
 const README_PATH = path.join(ROOT_DIR, 'README.md');
 
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 if (!fs.existsSync(RAW_DIR)) fs.mkdirSync(RAW_DIR, { recursive: true });
+if (!fs.existsSync(REPORTS_DIR)) fs.mkdirSync(REPORTS_DIR, { recursive: true });
 
 // ─── Fixed 18-district → region lookup table ───────────────────────────
 const DISTRICT_TO_REGION = {
@@ -623,6 +625,58 @@ async function run() {
     fs.writeFileSync(path.join(DATA_DIR, 'partners.json'), JSON.stringify(partners, null, 2), 'utf8');
     fs.writeFileSync(path.join(DATA_DIR, 'locations-by-district.json'), JSON.stringify(byDistrict, null, 2), 'utf8');
 
+    // Calculate diff between prevList and normalizedList
+    let prevList = [];
+    if (fs.existsSync(prevDataPath)) {
+      try {
+        prevList = JSON.parse(fs.readFileSync(prevDataPath, 'utf8'));
+      } catch (e) {}
+    }
+
+    const prevMap = new Map(prevList.map(item => [item.code, item]));
+    const nextMap = new Map(normalizedList.map(item => [item.code, item]));
+
+    const addedList = [];
+    const removedList = [];
+    const updatedList = [];
+
+    for (const [code, item] of nextMap.entries()) {
+      if (!prevMap.has(code)) {
+        addedList.push(item);
+      } else {
+        const prev = prevMap.get(code);
+        if (
+          prev.name !== item.name ||
+          prev.address !== item.address ||
+          prev.district !== item.district ||
+          prev.business_hours !== item.business_hours
+        ) {
+          updatedList.push({ code, old: prev, new: item });
+        }
+      }
+    }
+
+    for (const [code, item] of prevMap.entries()) {
+      if (!nextMap.has(code)) {
+        removedList.push(item);
+      }
+    }
+
+    const reportMarkdown = generateReportMarkdown({
+      hktDateStr,
+      totalCount: normalizedList.length,
+      storesCount: stores.length,
+      lockersCount: lockers.length,
+      partnersCount: partners.length,
+      addedList,
+      removedList,
+      updatedList,
+    });
+
+    const reportPath = path.join(REPORTS_DIR, 'latest-diff.md');
+    fs.writeFileSync(reportPath, reportMarkdown, 'utf8');
+    console.log(`Generated sync report at ${reportPath}`);
+
     // Update README timestamp
     if (fs.existsSync(README_PATH)) {
       let readmeContent = fs.readFileSync(README_PATH, 'utf8');
@@ -643,6 +697,74 @@ async function run() {
     console.error('\n❌ Sync failed:', error.message || error);
     process.exit(1);
   }
+}
+
+function generateReportMarkdown({
+  hktDateStr,
+  totalCount,
+  storesCount,
+  lockersCount,
+  partnersCount,
+  addedList,
+  removedList,
+  updatedList,
+}) {
+  const addedLines = addedList.length === 0
+    ? '*（無新增網點 / No added locations）*'
+    : addedList.map(i => `- **\`${i.code}\`** [${i.type_name}] ${i.name || ''} — ${i.address || ''}`).join('\n');
+
+  const removedLines = removedList.length === 0
+    ? '*（無下架網點 / No removed locations）*'
+    : removedList.map(i => `- **\`${i.code}\`** [${i.type_name}] ${i.name || ''} — ${i.address || ''}`).join('\n');
+
+  const updatedLines = updatedList.length === 0
+    ? '*（無更動網點 / No updated locations）*'
+    : updatedList.map(u => {
+        const changes = [];
+        if (u.old.name !== u.new.name) changes.push(`店名: \`${u.old.name}\` ➔ \`${u.new.name}\``);
+        if (u.old.address !== u.new.address) changes.push(`地址: \`${u.old.address}\` ➔ \`${u.new.address}\``);
+        if (u.old.district !== u.new.district) changes.push(`地區: \`${u.old.district}\` ➔ \`${u.new.district}\``);
+        if (u.old.business_hours !== u.new.business_hours) changes.push(`營業時間變更`);
+        return `- **\`${u.code}\`** ${u.new.name || u.old.name}\n  - ${changes.join('\n  - ')}`;
+      }).join('\n');
+
+  return `# 📊 最新每日順豐網點同步報告 (Latest SF Location Sync Report)
+
+> 🕒 **最後更新時間 (Last Updated)**: \`${hktDateStr}\`  
+> 🔗 **異動報告連結 (Report Link)**: [reports/latest-diff.md](https://github.com/wtw0212/sf-express-hk-locations/blob/main/reports/latest-diff.md)
+
+---
+
+### 📈 數據變動總覽 (Summary Overview)
+
+| 統計項目 (Metric) | 數量 (Count) |
+| :--- | :--- |
+| **總網點數 (Total Locations)** | \`${totalCount.toLocaleString()}\` |
+| **順豐站 (Stores)** | \`${storesCount.toLocaleString()}\` |
+| **順豐智能櫃 (Lockers)** | \`${lockersCount.toLocaleString()}\` |
+| **合作點 (Partners)** | \`${partnersCount.toLocaleString()}\` |
+| ➕ **新增網點 (Added)** | \`${addedList.length}\` |
+| ➖ **下架網點 (Removed)** | \`${removedList.length}\` |
+| ✏️ **內容變異 (Updated)** | \`${updatedList.length}\` |
+
+---
+
+### 🆕 新增網點 (Added Locations - ${addedList.length})
+
+${addedLines}
+
+---
+
+### ❌ 下架網點 (Removed Locations - ${removedList.length})
+
+${removedLines}
+
+---
+
+### ✏️ 內容更動網點 (Updated Locations - ${updatedList.length})
+
+${updatedLines}
+`;
 }
 
 run();

@@ -1,4 +1,4 @@
-> 📅 **最後更新時間 (Last Updated)**: `2026-07-27 09:11 (HKT UTC+8)`
+> 📅 **最後更新時間 (Last Updated)**: `2026-07-27 09:17 (HKT UTC+8)`
 
 # 🚚 香港順豐速運自提點 / 順豐站 / 智能櫃資料集
 # SF Express Hong Kong Stores & Lockers Dataset (Bilingual 中英雙語)
@@ -11,6 +11,9 @@ An automated, up-to-date bilingual dataset (Traditional Chinese & English) and l
 
 🌐 **GitHub Pages 門市搜尋網站 (Online Lookup Website)**:  
 👉 [https://wtw0212.github.io/sf-express-hk-locations/](https://wtw0212.github.io/sf-express-hk-locations/)
+
+📊 **最新每日網點異動報告 (Latest Daily Sync Report)**:  
+👉 [檢視最新每日更新報告 (View Latest Report)](reports/latest-diff.md)
 
 ---
 

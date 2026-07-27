@@ -1,0 +1,53 @@
+{
+  "schema_version": 2,
+  "retrieved_at": "2026-07-27 10:26 (HKT UTC+8)",
+  "counts": {
+    "total": 1668,
+    "stores": 137,
+    "lockers": 1056,
+    "partners": 475
+  },
+  "source_status": {
+    "api_tc": {
+      "areas_total": 112,
+      "areas_success": 112,
+      "areas_failed": 0
+    },
+    "api_en": {
+      "areas_total": 112,
+      "areas_success": 112,
+      "areas_failed": 0
+    },
+    "ssr": {
+      "count": 186
+    },
+    "partner_pdf": {
+      "pdf_total": 8,
+      "pdf_success": 0,
+      "pdf_failed": 8
+    }
+  },
+  "coverage": {
+    "tc_record_count": 1666,
+    "en_record_count": 1666,
+    "bilingual_match_rate": 0.9993997599039616,
+    "district_resolved_count": 1668,
+    "district_unresolved_count": 0
+  },
+  "quality": {
+    "blocking_errors": 0,
+    "warnings": 0,
+    "flag_counts": {
+      "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT": 21,
+      "ENGLISH_FIELD_CONTAINS_CJK": 105,
+      "SOURCE_TC_EN_UNIT_CONFLICT": 81,
+      "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 98,
+      "ADMIN_DISTRICT_ALIAS_APPLIED": 41,
+      "MISSING_ENGLISH_RECORD": 3,
+      "DUPLICATE_ADDRESS_SUFFIX": 14,
+      "SUBDISTRICT_ADDRESS_CONFLICT": 2,
+      "SOURCE_FORMATTING_ARTIFACT": 1,
+      "MISSING_COORDINATES": 2
+    }
+  }
+}

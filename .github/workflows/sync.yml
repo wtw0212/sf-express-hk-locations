@@ -22,10 +22,16 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Run Sync Script
-        run: node scripts/sync-sf-locations.js
+      - name: Pre-sync Verification Tests
+        run: npm test
+
+      - name: Run Data Synchronization Pipeline
+        run: npm run sync
+
+      - name: Post-sync Verification Tests
+        run: npm test
 
       - name: Commit and Push Changes
         run: |
@@ -38,7 +44,7 @@ jobs:
             if [ -f reports/latest-diff.md ]; then
               cat reports/latest-diff.md >> $GITHUB_STEP_SUMMARY
               echo "" >> $GITHUB_STEP_SUMMARY
-              echo "### 📈 Line Diff Statistics" >> $GITHUB_STEP_SUMMARY
+              echo "### Line Diff Statistics" >> $GITHUB_STEP_SUMMARY
               echo '```stat' >> $GITHUB_STEP_SUMMARY
               git diff --staged --stat >> $GITHUB_STEP_SUMMARY
               echo '```' >> $GITHUB_STEP_SUMMARY

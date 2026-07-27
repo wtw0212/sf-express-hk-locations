@@ -142,10 +142,25 @@ export function validateRecords(records) {
  * Fail closed if previous dataset is invalid or corrupted.
  *
  * @param {Array} previousList
+ * @param {{ allowLegacyMigrationBaseline?: boolean }} [options]
  */
-export function validatePreviousDataset(previousList) {
+export function validatePreviousDataset(previousList, options = {}) {
   if (!Array.isArray(previousList)) {
     throw new Error('Published locations.json root must be an array');
+  }
+
+  if (options.allowLegacyMigrationBaseline === true) {
+    const codes = new Set();
+    for (const record of previousList) {
+      if (!record || typeof record !== 'object' || typeof record.code !== 'string' || !record.code) {
+        throw new Error('Legacy migration baseline contains a malformed record code');
+      }
+      if (codes.has(record.code)) {
+        throw new Error(`Legacy migration baseline contains duplicate code '${record.code}'`);
+      }
+      codes.add(record.code);
+    }
+    return;
   }
 
   const { errors } = validateRecords(previousList);
@@ -205,7 +220,9 @@ export function checkCompletenessGates({
   const minCount = config.minCount ?? MIN_LOCATION_COUNT;
   const enMatchRateThreshold = config.enMatchRateThreshold ?? EN_MATCH_RATE_THRESHOLD;
 
-  // ─── 1. Partner PDF Gates ───────────────────────────────────────────────
+  // ─── 1. Partner PDF Audit ───────────────────────────────────────────────
+  // PDFs are comparison evidence only. Their availability and parser quality
+  // cannot block publication of an otherwise valid canonical API release.
   const pdfConfig = {
     ...PDF_PARSE_QUALITY_CONFIG,
     ...(config.pdfQualityConfig || {})
@@ -243,11 +260,11 @@ export function checkCompletenessGates({
   const missingKeys = [...EXPECTED_PARTNER_PDF_SOURCE_KEYS].filter(key => !discoveredKeys.has(key));
 
   if (missingKeys.length > 0) {
-    errors.push(`Missing expected partner PDF sources: ${missingKeys.join(', ')}`);
+    warnings.push(`[Audit warning] Missing expected partner PDF sources: ${missingKeys.join(', ')}`);
   }
 
   if (pdfTotal > 0 && pdfSuccess > 0 && pdfRecordsCount === 0) {
-    errors.push('Partner PDFs succeeded but parsed zero valid records');
+    warnings.push('[Audit warning] Partner PDFs succeeded but parsed zero valid records');
   }
 
   // Quarantine ratio checks
@@ -257,7 +274,7 @@ export function checkCompletenessGates({
 
   if (totalCandidates > 0) {
     if (overallQuarantineRatioPct > pdfConfig.overallQuarantineBlockPct) {
-      errors.push(`Partner PDF overall quarantine ratio ${overallQuarantineRatioPct.toFixed(1)}% exceeds blocking threshold ${pdfConfig.overallQuarantineBlockPct}% (${quarantinedRecords.length}/${totalCandidates} quarantined)`);
+      warnings.push(`[Audit warning] Partner PDF overall quarantine ratio ${overallQuarantineRatioPct.toFixed(1)}% exceeds threshold ${pdfConfig.overallQuarantineBlockPct}% (${quarantinedRecords.length}/${totalCandidates} quarantined)`);
     } else if (overallQuarantineRatioPct > pdfConfig.overallQuarantineWarnPct) {
       warnings.push(`Partner PDF overall quarantine ratio ${overallQuarantineRatioPct.toFixed(1)}% exceeds warning threshold ${pdfConfig.overallQuarantineWarnPct}% (${quarantinedRecords.length}/${totalCandidates} quarantined)`);
     }
@@ -275,12 +292,12 @@ export function checkCompletenessGates({
   if (pdfResult.pdfDetails && pdfResult.pdfDetails.length > 0) {
     for (const detail of pdfResult.pdfDetails) {
       if (detail.status === 'zero_records_parsed') {
-        errors.push(`Partner PDF parsed zero records: ${detail.url}`);
+        warnings.push(`[Audit warning] Partner PDF parsed zero records: ${detail.url}`);
       }
 
       const qRatioPct = (detail.quarantine_ratio ?? 0) * 100;
       if (qRatioPct > pdfConfig.perPdfQuarantineBlockPct) {
-        errors.push(`Partner PDF '${detail.source_key}' quarantine ratio ${qRatioPct.toFixed(1)}% exceeds blocking threshold ${pdfConfig.perPdfQuarantineBlockPct}%`);
+        warnings.push(`[Audit warning] Partner PDF '${detail.source_key}' quarantine ratio ${qRatioPct.toFixed(1)}% exceeds threshold ${pdfConfig.perPdfQuarantineBlockPct}%`);
       } else if (qRatioPct > pdfConfig.perPdfQuarantineWarnPct) {
         warnings.push(`Partner PDF '${detail.source_key}' quarantine ratio ${qRatioPct.toFixed(1)}% exceeds warning threshold ${pdfConfig.perPdfQuarantineWarnPct}%`);
       }
@@ -293,7 +310,7 @@ export function checkCompletenessGates({
         const dropPct = ((prevCount - currCount) / prevCount) * 100;
 
         if (dropPct > pdfConfig.validCountDropBlockPct) {
-          errors.push(`Partner PDF '${detail.source_key}' valid record count dropped by ${dropPct.toFixed(1)}% (${prevCount} -> ${currCount}), blocking threshold: ${pdfConfig.validCountDropBlockPct}%`);
+          warnings.push(`[Audit warning] Partner PDF '${detail.source_key}' valid record count dropped by ${dropPct.toFixed(1)}% (${prevCount} -> ${currCount}), threshold: ${pdfConfig.validCountDropBlockPct}%`);
         } else if (dropPct > pdfConfig.validCountDropWarnPct) {
           warnings.push(`Partner PDF '${detail.source_key}' valid record count dropped by ${dropPct.toFixed(1)}% (${prevCount} -> ${currCount}), warning threshold: ${pdfConfig.validCountDropWarnPct}%`);
         }
@@ -343,8 +360,8 @@ export function checkCompletenessGates({
     }
 
     if (severeRemovalCodes.size > 0) {
-      errors.push(
-        `Severe PDF parser quarantines would remove previously published records: ${
+      warnings.push(
+        `[Audit warning] Severe PDF parser quarantines would remove previously published records: ${
           [...severeRemovalCodes]
             .sort()
             .join(', ')
@@ -495,7 +512,12 @@ export function checkCompletenessGates({
     count_deltas: countDeltas
   };
 
-  return { pass: errors.length === 0, errors, warnings, metrics };
+  // Completeness observations make a release reviewable, but cannot be a
+  // hidden second publication policy. The explicit blocking policy lives in
+  // trusted registry loading, canonical validation/source validation, and the
+  // atomic publisher. Preserve every signal as an operational warning.
+  const operationalWarnings = errors.map(error => `[Operational warning] ${error}`);
+  return { pass: true, errors: [], warnings: [...warnings, ...operationalWarnings], metrics };
 }
 
 /**

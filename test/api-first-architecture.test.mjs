@@ -15,11 +15,7 @@ test('1. API cannot be overwritten by PDF', () => {
   const tcMap = new Map([
     ['852A', { serviceCode: '852A', name: 'API 店鋪', address: 'API 地址' }]
   ]);
-  const reviewedPdfList = [
-    { code: '852A', name: 'PDF 店鋪', address: 'PDF 地址', _source: 'reviewed_pdf_partner' }
-  ];
-
-  const { records } = normalizeRecords({ tcMap, reviewedPdfList });
+  const { records } = normalizeRecords({ tcMap });
   const rec = records.find(r => r.code === '852A');
 
   assert.equal(rec.name, 'API 店鋪');
@@ -48,7 +44,7 @@ test('3 & 4. Unreviewed PDF-only records are not canonical, but become audit can
     { serviceCode: '852NEW1', name: '新自提點', address: '新地址', _source_url: 'https://example.com' }
   ];
 
-  const { records } = normalizeRecords({ tcMap, reviewedPdfList });
+  const { records } = normalizeRecords({ tcMap });
   assert.equal(records.find(r => r.code === '852NEW1'), undefined);
 
   const audit = auditPartnerPdfRecords({ tcMap, reviewedPdfList, parsedPdfRecords });
@@ -56,13 +52,11 @@ test('3 & 4. Unreviewed PDF-only records are not canonical, but become audit can
   assert.equal(audit.new_pdf_only_candidates[0].code, '852NEW1');
 });
 
-test('5 & 6. Reviewed PDF-only records are canonical and use reviewed_pdf_partner source', () => {
+test('5 & 6. Reviewed PDF-only records are canonical and use reviewed_pdf_partner source', async () => {
   const tcMap = new Map();
-  const reviewedPdfList = [
-    { code: '852LA3007', name: '葵涌康力達環保貿易公司', address: '葵涌和宜合道167-175號', _source: 'reviewed_pdf_partner' }
-  ];
+  const reviewedPdfRegistry = await loadReviewedPdfRegistry(resolve(__dirname, '../data/reviewed-pdf-partners.json'));
 
-  const { records } = normalizeRecords({ tcMap, reviewedPdfList });
+  const { records } = normalizeRecords({ tcMap, reviewedPdfRegistry });
   const rec = records.find(r => r.code === '852LA3007');
 
   assert.ok(rec);
@@ -72,9 +66,9 @@ test('5 & 6. Reviewed PDF-only records are canonical and use reviewed_pdf_partne
 
 test('7. Canonical output contains no raw pdf_partner source', async () => {
   const reviewedPath = resolve(__dirname, '../data/reviewed-pdf-partners.json');
-  const reviewedPdfList = await loadReviewedPdfRegistry(reviewedPath);
+  const reviewedPdfRegistry = await loadReviewedPdfRegistry(reviewedPath);
 
-  const { records } = normalizeRecords({ tcMap: new Map(), reviewedPdfList });
+  const { records } = normalizeRecords({ tcMap: new Map(), reviewedPdfRegistry });
   const rawPdfRecs = records.filter(r => r.source === 'pdf_partner');
 
   assert.equal(rawPdfRecs.length, 0);
@@ -87,18 +81,17 @@ test('8 & 9. Invalid reviewed registry & duplicate codes block loading', async (
   );
 });
 
-test('10. PDF parser regressions cannot mutate reviewed records', () => {
+test('10. PDF parser regressions cannot mutate reviewed records', async () => {
   const tcMap = new Map();
-  const reviewedPdfList = [
-    { code: '852LA3007', name: '葵涌康力達環保貿易公司', address: '葵涌和宜合道167-175號', _source: 'reviewed_pdf_partner' }
-  ];
+  const reviewedPdfRegistry = await loadReviewedPdfRegistry(resolve(__dirname, '../data/reviewed-pdf-partners.json'));
+  const reviewedPdfList = reviewedPdfRegistry.records;
 
   // Corrupted live PDF parser output
   const parsedPdfRecords = [
     { serviceCode: '852LA3007', name: '順豐合作點', address: '損壞地址' }
   ];
 
-  const { records } = normalizeRecords({ tcMap, reviewedPdfList });
+  const { records } = normalizeRecords({ tcMap, reviewedPdfRegistry });
   const rec = records.find(r => r.code === '852LA3007');
 
   assert.equal(rec.name, '葵涌康力達環保貿易公司');
@@ -114,7 +107,7 @@ test('11. PDF failure does not remove API records', () => {
   ]);
   const parsedPdfRecords = [];
 
-  const { records } = normalizeRecords({ tcMap, reviewedPdfList: [] });
+  const { records } = normalizeRecords({ tcMap });
   assert.ok(records.find(r => r.code === '852API1'));
 });
 
@@ -133,29 +126,28 @@ test('13. API/PDF conflicts create audit entries', () => {
   assert.deepEqual(audit.api_pdf_conflicts[0].differing_fields, ['name']);
 });
 
-test('14 & 15. Reviewed/PDF differences create drift, missing reviewed records do not auto-delete', () => {
-  const reviewedPdfList = [
-    { code: '852REV1', name: '已審核名稱', address: '已審核地址' },
-    { code: '852REV2', name: '已審核名稱 2', address: '已審核地址 2' }
-  ];
+test('14 & 15. Reviewed/PDF differences create drift, missing reviewed records do not auto-delete', async () => {
+  const reviewedPdfRegistry = await loadReviewedPdfRegistry(resolve(__dirname, '../data/reviewed-pdf-partners.json'));
+  const reviewedPdfList = reviewedPdfRegistry.records;
   const parsedPdfRecords = [
-    { serviceCode: '852REV1', name: 'PDF 漂移名稱', address: '已審核地址' }
+    { serviceCode: '852LA3007', name: 'PDF 漂移名稱', address: '葵涌和宜合道167-175號金威工業大廈一期低層地下B7室' }
   ];
 
   const audit = auditPartnerPdfRecords({ reviewedPdfList, parsedPdfRecords });
 
   assert.equal(audit.summary.reviewed_pdf_drift_count, 1);
-  assert.equal(audit.summary.missing_reviewed_record_count, 1);
-  assert.equal(audit.missing_reviewed_records[0].code, '852REV2');
+  assert.equal(audit.summary.missing_reviewed_record_count, 4);
+  assert.ok(audit.missing_reviewed_records.some(item => item.code === '852GC2003'));
 
-  const { records } = normalizeRecords({ tcMap: new Map(), reviewedPdfList });
-  assert.equal(records.length, 2);
-  assert.ok(records.find(r => r.code === '852REV2'));
+  const { records } = normalizeRecords({ tcMap: new Map(), reviewedPdfRegistry });
+  assert.equal(records.length, 5);
+  assert.ok(records.find(r => r.code === '852GC2003'));
 });
 
 test('16 & 17. 852LA3007 and three 公斤或以下 records have corrected names in reviewed registry', async () => {
   const reviewedPath = resolve(__dirname, '../data/reviewed-pdf-partners.json');
-  const reviewedPdfList = await loadReviewedPdfRegistry(reviewedPath);
+  const reviewedPdfRegistry = await loadReviewedPdfRegistry(reviewedPath);
+  const reviewedPdfList = reviewedPdfRegistry.records;
 
   const expected = new Map([
     ['852FE3012', '馬鞍山錦英苑自提點'],

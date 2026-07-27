@@ -1,17 +1,91 @@
 // @ts-check
 
 /**
+ * These normalizers are comparison-only. They must never be used to mutate
+ * canonical values or reviewed registry entries.
+ */
+function normalizeTextForComparison(value) {
+  return String(value || '')
+    .normalize('NFKC')
+    .replace(/[\u200B-\u200D\uFEFF]/g, '')
+    .replace(/[\s]/g, '')
+    .replace(/[，、,;；:：()（）\[\]【】「」『』'".]/g, '');
+}
+
+function normalizeAddressForComparison(value) {
+  return normalizeTextForComparison(value)
+    .replace(/[－–—-]/g, '')
+    .replace(/號鋪/g, '號舖');
+}
+
+function normalizeBusinessHoursForComparison(value) {
+  return normalizeTextForComparison(value)
+    .replace(/24小時|24hours?/gi, '0000-2359')
+    .replace(/00:00[-至到]23:59/g, '0000-2359')
+    .replace(/[－–—至到]/g, '-');
+}
+
+function compareField(field, canonicalValue, pdfValue) {
+  const canonical = canonicalValue || null;
+  const pdf = pdfValue || null;
+  if (canonical === pdf) return null;
+
+  const normalize = field === 'address'
+    ? normalizeAddressForComparison
+    : field === 'business_hours'
+      ? normalizeBusinessHoursForComparison
+      : normalizeTextForComparison;
+
+  const normalizedCanonical = normalize(canonical);
+  const normalizedPdf = normalize(pdf);
+  const classification = normalizedCanonical === normalizedPdf
+    ? (field === 'business_hours' ? 'equivalent_difference' : 'formatting_difference')
+    : 'semantic_conflict';
+
+  return {
+    canonical,
+    pdf,
+    classification
+  };
+}
+
+function classifyEntry(comparison) {
+  const values = Object.values(comparison);
+  if (values.some(value => value.classification === 'semantic_conflict')) return 'semantic_conflict';
+  if (values.some(value => value.classification === 'equivalent_difference')) return 'equivalent_difference';
+  return 'formatting_difference';
+}
+
+function getPdfEvidence(pdfRec, sourceRetrievedAt) {
+  const parserLocation = pdfRec._parser_location || pdfRec._provenance || pdfRec.provenance || null;
+  return {
+    source_key: pdfRec._source_key || parserLocation?.source_key || null,
+    source_url: pdfRec._source_url || parserLocation?.source_url || null,
+    document_retrieved_at: pdfRec._document_retrieved_at || sourceRetrievedAt || null,
+    document_sha256: pdfRec._document_sha256 || null,
+    parser_location: parserLocation
+      ? {
+          row_index: parserLocation.row_index ?? null,
+          raw_row: parserLocation.raw_row ?? null
+        }
+      : null
+  };
+}
+
+function compareCanonicalToPdf(canonicalItem, pdfRec, canonicalHours) {
+  const comparison = {};
+  const name = compareField('name', canonicalItem.name, pdfRec.name);
+  const address = compareField('address', canonicalItem.address, pdfRec.address);
+  const businessHours = compareField('business_hours', canonicalHours, pdfRec.serviceTime);
+  if (name) comparison.name = name;
+  if (address) comparison.address = address;
+  if (businessHours) comparison.business_hours = businessHours;
+  return comparison;
+}
+
+/**
  * Pure audit function for live partner PDF records against canonical sources.
- *
- * @param {object} params
- * @param {Map<string, object>} [params.tcMap] - TC API records map
- * @param {Array<object>} [params.ssrList] - SSR records list
- * @param {Array<object>} [params.reviewedPdfList] - Reviewed PDF partner registry list
- * @param {Array<object>} [params.parsedPdfRecords] - Valid parsed live PDF records
- * @param {Array<object>} [params.quarantinedRecords] - Quarantined PDF records
- * @param {string} [params.sourceRetrievedAt] - Source retrieval HKT timestamp
- * @param {string} [params.generatedAt] - Audit artifact generation HKT timestamp
- * @returns {object} PDF audit artifact data
+ * PDF records remain audit evidence and never enter canonical normalization.
  */
 export function auditPartnerPdfRecords({
   tcMap = new Map(),
@@ -23,7 +97,7 @@ export function auditPartnerPdfRecords({
   generatedAt = ''
 }) {
   const ssrCodes = new Set(ssrList.map(item => item.serviceCode || item.code).filter(Boolean));
-  const reviewedMap = new Map(reviewedPdfList.map(item => [item.code, item]));
+  const reviewedMap = new Map(reviewedPdfList.map(item => [item.code || item.serviceCode, item]));
 
   const apiPdfConflicts = [];
   const reviewedPdfDrift = [];
@@ -37,15 +111,11 @@ export function auditPartnerPdfRecords({
 
     const apiItem = tcMap.get(code);
     const reviewedItem = reviewedMap.get(code);
+    const evidence = getPdfEvidence(pdfRec, sourceRetrievedAt);
 
-    // Case A — Code exists in TC API
     if (apiItem) {
-      const differingFields = [];
-      if ((apiItem.name || '').trim() !== (pdfRec.name || '').trim()) differingFields.push('name');
-      if ((apiItem.address || '').trim() !== (pdfRec.address || '').trim()) differingFields.push('address');
-      if ((apiItem.serviceTime || '').trim() !== (pdfRec.serviceTime || '').trim()) differingFields.push('business_hours');
-
-      if (differingFields.length > 0) {
+      const comparison = compareCanonicalToPdf(apiItem, pdfRec, apiItem.serviceTime);
+      if (Object.keys(comparison).length > 0) {
         apiPdfConflicts.push({
           code,
           api_name: apiItem.name || null,
@@ -54,35 +124,35 @@ export function auditPartnerPdfRecords({
           pdf_address: pdfRec.address || null,
           api_business_hours: apiItem.serviceTime || null,
           pdf_business_hours: pdfRec.serviceTime || null,
-          differing_fields: differingFields
+          differing_fields: Object.keys(comparison),
+          classification: classifyEntry(comparison),
+          comparison,
+          evidence
         });
       }
       continue;
     }
 
-    // Case B — Code exists in reviewed registry
     if (reviewedItem) {
-      const differingFields = [];
-      if ((reviewedItem.name || '').trim() !== (pdfRec.name || '').trim()) differingFields.push('name');
-      if ((reviewedItem.address || '').trim() !== (pdfRec.address || '').trim()) differingFields.push('address');
-      if ((reviewedItem.business_hours || '').trim() !== (pdfRec.serviceTime || '').trim()) differingFields.push('business_hours');
-
-      if (differingFields.length > 0) {
+      const comparison = compareCanonicalToPdf(reviewedItem, pdfRec, reviewedItem.business_hours || reviewedItem.serviceTime);
+      if (Object.keys(comparison).length > 0) {
         reviewedPdfDrift.push({
           code,
           reviewed_name: reviewedItem.name || null,
           pdf_name: pdfRec.name || null,
           reviewed_address: reviewedItem.address || null,
           pdf_address: pdfRec.address || null,
-          reviewed_business_hours: reviewedItem.business_hours || null,
+          reviewed_business_hours: reviewedItem.business_hours || reviewedItem.serviceTime || null,
           pdf_business_hours: pdfRec.serviceTime || null,
-          differing_fields: differingFields
+          differing_fields: Object.keys(comparison),
+          classification: classifyEntry(comparison),
+          comparison,
+          evidence
         });
       }
       continue;
     }
 
-    // Case C — Code is absent from API, SSR and reviewed registry
     if (!ssrCodes.has(code)) {
       newPdfOnlyCandidates.push({
         code,
@@ -91,31 +161,47 @@ export function auditPartnerPdfRecords({
         district: pdfRec.district || null,
         sub_district: pdfRec.city || pdfRec.district || null,
         business_hours: pdfRec.serviceTime || null,
-        source_url: pdfRec._source_url || null
+        source_url: evidence.source_url,
+        evidence
       });
     }
   }
 
-  // Case D — Reviewed record is not present in current live PDF
   const missingReviewedRecords = [];
   for (const reviewedItem of reviewedPdfList) {
-    if (!livePdfCodes.has(reviewedItem.code)) {
+    const code = reviewedItem.code || reviewedItem.serviceCode;
+    if (!livePdfCodes.has(code)) {
       missingReviewedRecords.push({
-        code: reviewedItem.code,
+        code,
         name: reviewedItem.name || null,
-        address: reviewedItem.address || null
+        address: reviewedItem.address || null,
+        evidence: {
+          source_key: reviewedItem._source_key || null,
+          source_url: reviewedItem._source_url || null,
+          document_retrieved_at: reviewedItem._reviewed_at || null,
+          document_sha256: null,
+          parser_location: null
+        }
       });
     }
   }
 
-  // Case E — Quarantined records formatting
   const formattedQuarantine = quarantinedRecords.map(q => ({
     extractedCode: q.extractedCode ?? null,
     involvedCodes: q.involvedCodes?.length > 0 ? q.involvedCodes : [q.extractedCode].filter(Boolean),
     rawSegment: q.rawSegment || q.provenance?.raw_row || '',
     candidateRecord: q.candidateRecord || null,
     reasonCodes: q.reasonCodes || [],
-    provenance: q.provenance || {}
+    provenance: q.provenance || {},
+    evidence: {
+      source_key: q.provenance?.source_key || null,
+      source_url: q.provenance?.source_url || null,
+      document_retrieved_at: q.provenance?.document_retrieved_at || sourceRetrievedAt || null,
+      document_sha256: q.provenance?.document_sha256 || null,
+      parser_location: q.provenance
+        ? { row_index: q.provenance.row_index ?? null, raw_row: q.provenance.raw_row ?? null }
+        : null
+    }
   }));
 
   return {

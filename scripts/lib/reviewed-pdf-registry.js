@@ -9,6 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const SCHEMA_PATH = resolve(__dirname, '../../schema/reviewed-pdf-partners.schema.json');
 
 let validator = null;
+const REVIEWED_REGISTRY = Symbol('reviewed-pdf-registry');
 
 async function getRegistryValidator() {
   if (validator) return validator;
@@ -23,7 +24,7 @@ async function getRegistryValidator() {
  * Load and validate the reviewed PDF partner registry.
  *
  * @param {string} registryPath - Path to reviewed-pdf-partners.json
- * @returns {Promise<Array<object>>}
+ * @returns {Promise<{ records: readonly object[] }>}
  */
 export async function loadReviewedPdfRegistry(registryPath) {
   if (!existsSync(registryPath)) {
@@ -90,9 +91,33 @@ export async function loadReviewedPdfRegistry(registryPath) {
       _source_url: item.source_url,
       _reviewed: item.reviewed,
       _reviewed_at: item.reviewed_at,
-      _review_note: item.review_note || null
+      _review_note: item.review_note || null,
+      _registry_evidence: {
+        source_key: item.source_key,
+        source_url: item.source_url,
+        reviewed_at: item.reviewed_at,
+        review_note: item.review_note || null
+      }
     });
   }
 
-  return records;
+  return Object.freeze({
+    [REVIEWED_REGISTRY]: true,
+    records: Object.freeze(records.map(record => Object.freeze(record)))
+  });
+}
+
+/**
+ * Return records only from the schema-validated registry capability.
+ * The private symbol prevents callers from passing parser output as reviewed data.
+ *
+ * @param {unknown} registry
+ * @returns {readonly object[]}
+ */
+export function getReviewedPdfRegistryRecords(registry) {
+  if (!registry || typeof registry !== 'object' || registry[REVIEWED_REGISTRY] !== true || !Array.isArray(registry.records)) {
+    throw new TypeError('reviewedPdfRegistry must be loaded by loadReviewedPdfRegistry');
+  }
+
+  return registry.records;
 }

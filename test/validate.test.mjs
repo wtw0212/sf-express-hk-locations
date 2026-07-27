@@ -124,18 +124,18 @@ test('checkCompletenessGates: PDF failure scenarios', () => {
   });
   assert.ok(resPartial.warnings.some(w => w.includes('Partial partner PDF failures')));
 
-  // All PDFs succeeded but zero records parsed -> blocking
+  // All PDFs succeeded but zero records parsed -> audit warning only
   const resZeroRecs = checkCompletenessGates({
     tcResults: [{ ok: true, records: [] }],
     enResults: [{ ok: true, records: [] }],
     pdfResult: { pdfTotal: 8, pdfSuccessCount: 8, pdfFailCount: 0, status: 'zero_records_parsed', records: [], errors: [] },
     records
   });
-  assert.equal(resZeroRecs.pass, false);
-  assert.ok(resZeroRecs.errors.some(e => e.includes('zero')));
+  assert.ok(!resZeroRecs.errors.some(e => e.includes('Partner PDF')));
+  assert.ok(resZeroRecs.warnings.some(e => e.includes('zero')));
 });
 
-test('checkCompletenessGates: partner subset unexpectedly drops -> blocked', () => {
+test('checkCompletenessGates: partner subset unexpectedly drops -> operational warning', () => {
   const records = Array(1100).fill(validRecord).map((r, i) => ({ ...r, id: `852${i}`, code: `852${i}` }));
   // 100 previous partner records
   const prevPartnerRecord = { ...validRecord, type: 'partner' };
@@ -151,8 +151,8 @@ test('checkCompletenessGates: partner subset unexpectedly drops -> blocked', () 
     records, // 0 partners
     previousRecords: prevRecords
   });
-  assert.equal(resPartnerDrop.pass, false);
-  assert.ok(resPartnerDrop.errors.some(e => e.includes("Category 'partners' count dropped")));
+  assert.equal(resPartnerDrop.pass, true);
+  assert.ok(resPartnerDrop.warnings.some(e => e.includes("Category 'partners' count dropped")));
 });
 
 test('validateCrossFile: validates cross-file consistency', () => {

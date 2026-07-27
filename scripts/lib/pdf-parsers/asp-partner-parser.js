@@ -132,7 +132,8 @@ export function parseAspPartnerPdfText({ text, sourceUrl }) {
       serviceTime: businessHours,
       isPartner: true,
       _source: 'pdf_partner',
-      _source_url: sourceUrl
+      _source_url: sourceUrl,
+      _parser_location: { row_index: idx + 1, raw_row: rawRow }
     };
 
     provenance.parsed_fields = {

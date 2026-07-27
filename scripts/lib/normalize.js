@@ -3,6 +3,7 @@ import { SOURCES } from './constants.js';
 import { resolveAdminDistrict } from './district-resolver.js';
 import { classifyLocation } from './classify.js';
 import { generateQualityFlags } from './quality-flags.js';
+import { getReviewedPdfRegistryRecords } from './reviewed-pdf-registry.js';
 
 /**
  * Get current time as HKT string.
@@ -29,33 +30,30 @@ function getHKTDateString() {
  *
  * Live parsed PDF records are audit-only and are NEVER passed to normalizeRecords.
  *
- * @param {object|Map} options - Options object or legacy tcMap
- * @param {Map} [enMapArg]
- * @param {Array} [ssrListArg]
- * @param {Array} [reviewedPdfListArg]
- * @param {string} [timestampArg]
+ * @param {object} options
  * @returns {{ records: Array, stats: object }}
  */
-export function normalizeRecords(options, enMapArg, ssrListArg, reviewedPdfListArg, timestampArg) {
-  let tcMap, enMap, ssrList, reviewedPdfList, generatedAt, sourceRetrievedAt;
-
-  if (options instanceof Map) {
-    tcMap = options;
-    enMap = enMapArg || new Map();
-    ssrList = ssrListArg || [];
-    reviewedPdfList = reviewedPdfListArg || [];
-    generatedAt = timestampArg || getHKTDateString();
-    sourceRetrievedAt = generatedAt;
-  } else {
-    ({
-      tcMap = new Map(),
-      enMap = new Map(),
-      ssrList = [],
-      reviewedPdfList = [],
-      generatedAt = getHKTDateString(),
-      sourceRetrievedAt = generatedAt
-    } = options || {});
+export function normalizeRecords(options = {}) {
+  if (!options || typeof options !== 'object' || options instanceof Map) {
+    throw new TypeError('normalizeRecords requires an options object');
   }
+
+  if (Object.hasOwn(options, 'reviewedPdfList')) {
+    throw new TypeError('reviewedPdfRegistry must be loaded by loadReviewedPdfRegistry');
+  }
+
+  const {
+    tcMap = new Map(),
+    enMap = new Map(),
+    ssrList = [],
+    reviewedPdfRegistry = null,
+    generatedAt = getHKTDateString(),
+    sourceRetrievedAt = generatedAt
+  } = options;
+
+  const reviewedPdfList = reviewedPdfRegistry == null
+    ? []
+    : getReviewedPdfRegistryRecords(reviewedPdfRegistry);
 
   const mergedMap = new Map();
 
@@ -97,14 +95,26 @@ export function normalizeRecords(options, enMapArg, ssrListArg, reviewedPdfListA
     const enItem = enMap.get(code) ?? null;
     if (!enItem) missingEnCount++;
 
-    const nameEn = enItem ? (enItem.name || '').trim() || null : null;
-    const subDistrictEn = enItem ? (enItem.district || '').trim() || null : null;
-    let addressEn = enItem ? (enItem.address || '').trim() || null : null;
+    const reviewedFallback = source === SOURCES.REVIEWED_PDF_PARTNER;
+    const nameEn = enItem
+      ? (enItem.name || '').trim() || null
+      : (reviewedFallback ? (item.name_en || '').trim() || null : null);
+    const subDistrictEn = enItem
+      ? (enItem.district || '').trim() || null
+      : (reviewedFallback ? (item.sub_district_en || '').trim() || null : null);
+    let addressEn = enItem
+      ? (enItem.address || '').trim() || null
+      : (reviewedFallback ? (item.address_en || '').trim() || null : null);
     if (addressEn) {
       addressEn = addressEn.replace(/\*\^/g, '*').replace(/\^/g, '').trim();
     }
-    const businessHoursEn = enItem ? (enItem.serviceTime || '').trim() || null : null;
-    const businessHours = (item.serviceTime || '').trim() || null;
+    const businessHoursEn = enItem
+      ? (enItem.serviceTime || '').trim() || null
+      : (reviewedFallback ? (item.business_hours_en || '').trim() || null : null);
+    const businessHours = (item.serviceTime || item.business_hours || '').trim() || null;
+    const subDistrict = reviewedFallback
+      ? (item.sub_district || '').trim() || districtResult.sub_district
+      : districtResult.sub_district;
 
     const normalized = {
       id: code,
@@ -118,7 +128,7 @@ export function normalizeRecords(options, enMapArg, ssrListArg, reviewedPdfListA
       region_en: districtResult.region_en,
       district: districtResult.district,
       district_en: districtResult.district_en,
-      sub_district: districtResult.sub_district,
+      sub_district: subDistrict,
       sub_district_en: subDistrictEn ?? districtResult.sub_district_en,
       address: address || (districtResult.sub_district || districtResult.district || name || '香港'),
       address_en: addressEn,
@@ -133,13 +143,13 @@ export function normalizeRecords(options, enMapArg, ssrListArg, reviewedPdfListA
       quality_flags: [],
       provenance: {
         name: source,
-        name_en: enItem ? SOURCES.API_EN : null,
+        name_en: enItem ? SOURCES.API_EN : (nameEn ? source : null),
         address: source,
-        address_en: enItem ? SOURCES.API_EN : null,
+        address_en: enItem ? SOURCES.API_EN : (addressEn ? source : null),
         district: districtResult.flags.some(f => f.type === 'ADMIN_DISTRICT_ALIAS_APPLIED')
           ? SOURCES.DERIVED : source,
         business_hours: source,
-        business_hours_en: enItem ? SOURCES.API_EN : null
+        business_hours_en: enItem ? SOURCES.API_EN : (businessHoursEn ? source : null)
       },
       retrieved_at: sourceRetrievedAt
     };

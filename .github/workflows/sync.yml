@@ -36,8 +36,11 @@ jobs:
       - name: Ensure Working Tree Clean Pre-Live
         run: git diff --exit-code
 
+      - name: Snapshot published baseline before live sync
+        run: cp -R data "$RUNNER_TEMP/sf-published-baseline"
+
       - name: Run Live Sync Pipeline
-        run: npm run sync
+        run: npm run sync -- --baseline-dir "$RUNNER_TEMP/sf-published-baseline"
 
       - name: Post-Live Test Suite (Does not mutate live outputs)
         run: npm test

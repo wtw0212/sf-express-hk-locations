@@ -26,7 +26,7 @@ test('852TC: preserves official address for Tung Wai Commercial Mansion / Flemin
     serviceTime: 'Mon to Sat 09:00-20:00; Sun & Statutory Holidays Closed'
   }]]);
 
-  const { records } = normalizeRecords(tcMap, enMap, [], [], '2024-01-01');
+  const { records } = normalizeRecords({ tcMap, enMap, generatedAt: '2024-01-01' });
   const r = records[0];
 
   // Address must NOT be replaced with Jaffe Road
@@ -55,7 +55,7 @@ test('852Z351: resolves 大嶼山區 to 離島區 via alias, not null', () => {
 
   // Also test via normalize
   const tcMap = new Map([['852Z351', item]]);
-  const { records } = normalizeRecords(tcMap, new Map(), [], [], '2024-01-01');
+  const { records } = normalizeRecords({ tcMap, enMap: new Map(), generatedAt: '2024-01-01' });
   assert.equal(records[0].district, '離島區');
   assert.equal(records[0].region, '新界');
   assert.notEqual(records[0].district, null);
@@ -84,7 +84,7 @@ test('852Z152: detects subdistrict/address conflict and preserves source values'
   const tcMap = new Map([['852Z152', tcItem]]);
   const enMap = new Map([['852Z152', enItem]]);
 
-  const { records } = normalizeRecords(tcMap, enMap, [], [], '2024-01-01');
+  const { records } = normalizeRecords({ tcMap, enMap, generatedAt: '2024-01-01' });
   const r = records[0];
 
   // Source values preserved
@@ -161,7 +161,7 @@ test('852PAL: preserves 天悅 without character conversion', () => {
     longitude: 114.226465
   }]]);
 
-  const { records } = normalizeRecords(tcMap, new Map(), [], [], '2024-01-01');
+  const { records } = normalizeRecords({ tcMap, enMap: new Map(), generatedAt: '2024-01-01' });
   const r = records[0];
 
   assert.ok(r.name.includes('天悅'), '852PAL must preserve 天悅 in name');

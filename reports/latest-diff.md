@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-07-27 15:49 (HKT UTC+8)`
+> **Last Updated**: `2026-07-27 16:25 (HKT UTC+8)`
 
 ---
 
@@ -15,8 +15,8 @@
 | **Partners** | 480 |
 | **Added** | 0 |
 | **Removed** | 0 |
-| **Updated** | 0 |
-| **Unchanged** | 1673 |
+| **Updated** | 5 |
+| **Unchanged** | 1668 |
 
 ---
 
@@ -108,6 +108,20 @@
 
 ---
 
-## Updated Locations (0)
+## Updated Locations (5)
 
-*(No updated locations)*
+- `852GC2003` OK便利店 (青衣)
+  - sub_district: `"葵青區"` -> `"青衣"`
+  - business_hours: `null` -> `"24小時"`
+- `852LA3007` 葵涌康力達環保貿易公司
+  - sub_district: `"葵青區"` -> `"葵涌"`
+  - business_hours: `null` -> `"星期一至六:12:00-18:00 星期日及公眾假期:休息"`
+- `852FE3012` 馬鞍山錦英苑自提點
+  - sub_district: `"沙田區"` -> `"馬鞍山"`
+  - business_hours: `null` -> `"星期一至六:12:00-20:00 星期日及公眾假期:12:00-18:00"`
+- `852G3004` 荃灣提點坪有限公司
+  - sub_district: `"荃灣區"` -> `"荃灣"`
+  - business_hours: `null` -> `"星期一至六: 12:00-20:30 星期日、公眾假期: 休息"`
+- `852G3008` 荃灣星羽便利店
+  - sub_district: `"荃灣區"` -> `"荃灣"`
+  - business_hours: `null` -> `"星期一至六:10:00-21:00 星期日:10:00-21:00 公眾假期:休息"`

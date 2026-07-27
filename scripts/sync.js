@@ -77,6 +77,13 @@ export async function runSync(options = {}) {
   const targetRawDir = options.outputPaths?.rawDir || options.paths?.rawDir || options.rawDir || (customOutDir ? resolve(customOutDir, 'raw') : resolve(baseRootDir, 'raw'));
   const targetReportsDir = options.outputPaths?.reportsDir || options.paths?.reportsDir || options.reportsDir || (customOutDir ? resolve(customOutDir, 'reports') : resolve(baseRootDir, 'reports'));
 
+  // A sync may read an existing publication as its baseline, but it must never
+  // publish over that same directory. Callers must snapshot the baseline first
+  // and provide a distinct output directory, preserving a stable diff input.
+  if (shouldPublish && resolve(baselineDir) === resolve(targetDataDir)) {
+    throw new Error('baseline data directory must be distinct from the publication data directory');
+  }
+
   console.log(`Starting SF Express HK Location Data Sync... (${isFixtureMode ? 'FIXTURE MODE' : 'LIVE MODE'}, publish=${shouldPublish})`);
   const hktDateStr = getHKTDateString();
   console.log(`Baseline Dir: ${baselineDir}`);
@@ -103,7 +110,15 @@ export async function runSync(options = {}) {
       throw new Error(`Published locations.json is malformed JSON: ${e.message}`);
     }
 
-    validatePreviousDataset(previousList);
+    const isLegacyMigrationBaseline = previousList.length > 0 && previousList.every(record =>
+      record &&
+      !record.provenance &&
+      ['api', 'pdf_partner', 'ssr_locker'].includes(record.source)
+    );
+    validatePreviousDataset(previousList, { allowLegacyMigrationBaseline: isLegacyMigrationBaseline });
+    if (isLegacyMigrationBaseline) {
+      console.log('Loaded immutable legacy migration baseline (diff-only validation).');
+    }
     console.log(`Loaded previous baseline dataset: ${previousList.length} records`);
 
     if (existsSync(prevMetadataPath)) {
@@ -123,9 +138,11 @@ export async function runSync(options = {}) {
   const fallbackReviewedPdfPath = resolve(ROOT_DIR, 'data', 'reviewed-pdf-partners.json');
   const pathToReadReviewed = existsSync(reviewedPdfPath) ? reviewedPdfPath : fallbackReviewedPdfPath;
 
+  let reviewedPdfRegistry = null;
   let reviewedPdfList = [];
   try {
-    reviewedPdfList = await loadReviewedPdfRegistry(pathToReadReviewed);
+    reviewedPdfRegistry = await loadReviewedPdfRegistry(pathToReadReviewed);
+    reviewedPdfList = reviewedPdfRegistry.records;
     console.log(`Loaded reviewed PDF registry: ${reviewedPdfList.length} records`);
   } catch (e) {
     throw new Error(`Failed to load reviewed PDF registry: ${e.message}`);
@@ -229,7 +246,7 @@ export async function runSync(options = {}) {
     tcMap,
     enMap,
     ssrList: ssrResult.records,
-    reviewedPdfList,
+    reviewedPdfRegistry,
     generatedAt: hktDateStr,
     sourceRetrievedAt
   });

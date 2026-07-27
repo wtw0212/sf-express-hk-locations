@@ -15,7 +15,7 @@ test('preserves official source values without character conversion', () => {
   }]]);
   const enMap = new Map();
 
-  const { records } = normalizeRecords(tcMap, enMap, [], [], '2024-01-01');
+  const { records } = normalizeRecords({ tcMap, enMap, generatedAt: '2024-01-01' });
 
   assert.equal(records.length, 1);
   const r = records[0];
@@ -43,7 +43,7 @@ test('removes caret ^ from EN address but preserves TC address', () => {
     serviceTime: ''
   }]]);
 
-  const { records } = normalizeRecords(tcMap, enMap, [], [], '2024-01-01');
+  const { records } = normalizeRecords({ tcMap, enMap, generatedAt: '2024-01-01' });
   const r = records[0];
   assert.ok(!r.address_en.includes('^'), 'EN address should have carets removed');
   assert.ok(r.address.includes('^'), 'TC address should preserve carets (source value)');
@@ -68,7 +68,7 @@ test('includes provenance on every record', () => {
     serviceTime: 'Mon to Sat 09:00-20:00'
   }]]);
 
-  const { records } = normalizeRecords(tcMap, enMap, [], [], '2024-01-01');
+  const { records } = normalizeRecords({ tcMap, enMap, generatedAt: '2024-01-01' });
   const r = records[0];
 
   assert.ok(r.provenance, 'Record should have provenance');
@@ -83,7 +83,7 @@ test('quality_flags is always an array', () => {
     serviceCode: '852AA', name: '測試順豐站', address: '香港大埔區', city: '大埔區', district: '大埔',
     serviceTime: '', latitude: 22.45, longitude: 114.17
   }]]);
-  const { records } = normalizeRecords(tcMap, new Map(), [], [], '2024-01-01');
+  const { records } = normalizeRecords({ tcMap, enMap: new Map(), generatedAt: '2024-01-01' });
   assert.ok(Array.isArray(records[0].quality_flags));
 });
 
@@ -93,16 +93,13 @@ test('SSR and Reviewed PDF records used only when not in TC API', () => {
     serviceTime: '', latitude: 22.45, longitude: 114.17
   }]]);
   const ssrList = [{ serviceCode: '852AA', name: 'SSR Version', address: 'SSR Addr', district: '', city: '' }];
-  const pdfList = [{ serviceCode: '852BB', name: 'PDF Partner', address: 'PDF Addr', district: '', city: '', isPartner: true }];
-
-  const { records } = normalizeRecords(tcMap, new Map(), ssrList, pdfList, '2024-01-01');
+  const { records } = normalizeRecords({ tcMap, enMap: new Map(), ssrList, generatedAt: '2024-01-01' });
 
   const aaRecord = records.find(r => r.code === '852AA');
   assert.equal(aaRecord.name, 'API Version', 'TC API should take priority over SSR');
   assert.equal(aaRecord.source, 'api_tc');
 
-  const bbRecord = records.find(r => r.code === '852BB');
-  assert.equal(bbRecord.source, 'reviewed_pdf_partner');
+  assert.equal(records.find(r => r.code === '852BB'), undefined);
 });
 
 test('no OpenCC or global character conversion exists', () => {
@@ -115,7 +112,7 @@ test('no OpenCC or global character conversion exists', () => {
     serviceTime: '', latitude: 22.45, longitude: 114.17
   }]]);
 
-  const { records } = normalizeRecords(tcMap, new Map(), [], [], '2024-01-01');
+  const { records } = normalizeRecords({ tcMap, enMap: new Map(), generatedAt: '2024-01-01' });
   const r = records[0];
   assert.ok(r.name.includes('舖'), 'Should preserve 舖 (not convert to 鋪)');
   assert.ok(r.name.includes('湧'), 'Should preserve 湧 (not convert to 涌)');

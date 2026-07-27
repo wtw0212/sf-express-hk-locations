@@ -1,4 +1,5 @@
 import { fetchWithRetry, withConcurrency } from './api-client.js';
+import { createHash } from 'node:crypto';
 import { parseOkPartnerPdfText } from './pdf-parsers/ok-partner-parser.js';
 import { parseAspPartnerPdfText } from './pdf-parsers/asp-partner-parser.js';
 
@@ -434,6 +435,10 @@ export function parsePartnerPdfDocuments(documents = []) {
 
   for (const doc of documents) {
     const { source_key: sourceKey, url, http_ok: httpOk, parse_ok: parseOk, attempts, text, error: docErr, parse_error: parseErr } = doc;
+    const documentRetrievedAt = doc.document_retrieved_at || doc.retrieved_at || null;
+    const documentSha256 = doc.document_sha256 || (typeof text === 'string'
+      ? createHash('sha256').update(text).digest('hex')
+      : null);
     if (!httpOk) {
       errors.push(`PDF fetch failed for ${url}: ${docErr || 'HTTP Error'}`);
       pdfFailCount++;
@@ -491,16 +496,29 @@ export function parsePartnerPdfDocuments(documents = []) {
         : parseAspPartnerPdfText({ text: text || '', sourceUrl: url });
 
       const { validRecords, quarantinedRecords: fileQuarantined, metrics } = parseResult;
-      quarantinedRecords.push(...fileQuarantined);
+      quarantinedRecords.push(...fileQuarantined.map(record => ({
+        ...record,
+        provenance: {
+          ...(record.provenance || {}),
+          source_key: sourceKey,
+          source_url: url,
+          document_retrieved_at: documentRetrievedAt,
+          document_sha256: documentSha256
+        }
+      })));
 
       for (const rec of validRecords) {
+        rec._source_key = sourceKey;
+        rec._source_url = url;
+        rec._document_retrieved_at = documentRetrievedAt;
+        rec._document_sha256 = documentSha256;
         if (conflictedCodes.has(rec.serviceCode)) {
           quarantinedRecords.push({
             extractedCode: rec.serviceCode,
             involvedCodes: [rec.serviceCode],
             candidateRecord: rec,
             reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
-            provenance: { source_key: sourceKey, source_url: url }
+            provenance: { source_key: sourceKey, source_url: url, document_retrieved_at: documentRetrievedAt, document_sha256: documentSha256 }
           });
           continue;
         }
@@ -529,14 +547,14 @@ export function parsePartnerPdfDocuments(documents = []) {
             involvedCodes: [rec.serviceCode],
             candidateRecord: existing.record,
             reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
-            provenance: { source_key: existing.sourceKey, source_url: existing.sourceUrl }
+            provenance: { source_key: existing.sourceKey, source_url: existing.sourceUrl, document_retrieved_at: existing.record._document_retrieved_at || null, document_sha256: existing.record._document_sha256 || null }
           },
           {
             extractedCode: rec.serviceCode,
             involvedCodes: [rec.serviceCode],
             candidateRecord: rec,
             reasonCodes: ['DUPLICATE_CODE_CONFLICT'],
-            provenance: { source_key: sourceKey, source_url: url }
+            provenance: { source_key: sourceKey, source_url: url, document_retrieved_at: documentRetrievedAt, document_sha256: documentSha256 }
           }
         );
       }
@@ -677,7 +695,9 @@ export async function fetchPartnerPdfs() {
         http_ok: true,
         parse_ok: true,
         attempts: pdfRes.attempts,
-        text: data.text || ''
+        text: data.text || '',
+        document_retrieved_at: new Date().toISOString(),
+        document_sha256: createHash('sha256').update(Buffer.from(buffer)).digest('hex')
       });
     } catch (e) {
       pdfDocuments.push({
@@ -687,7 +707,9 @@ export async function fetchPartnerPdfs() {
         parse_ok: false,
         attempts: pdfRes.attempts,
         parse_error: e.message,
-        text: null
+        text: null,
+        document_retrieved_at: new Date().toISOString(),
+        document_sha256: createHash('sha256').update(Buffer.from(pdfRes.data)).digest('hex')
       });
     }
   }

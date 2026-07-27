@@ -119,13 +119,11 @@ test('source-fetchers: precedence policy ensures PDF cannot overwrite API-backed
     isPartner: true
   };
 
-  const { records } = normalizeRecords(
-    new Map([['852A', tcRecord]]),
-    new Map(),
-    [],
-    [pdfRecord],
-    '2026-07-27 14:00'
-  );
+  const { records } = normalizeRecords({
+    tcMap: new Map([['852A', tcRecord]]),
+    enMap: new Map(),
+    generatedAt: '2026-07-27 14:00'
+  });
 
   const finalRecord = records.find(r => r.code === '852A');
   assert.ok(finalRecord);

@@ -1,6 +1,40 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "SF Express HK PDF Audit Artifact Schema",
+  "definitions": {
+    "evidence": {
+      "type": "object",
+      "required": ["source_key", "source_url", "document_retrieved_at", "document_sha256", "parser_location"],
+      "properties": {
+        "source_key": { "type": ["string", "null"] },
+        "source_url": { "type": ["string", "null"] },
+        "document_retrieved_at": { "type": ["string", "null"] },
+        "document_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+        "parser_location": {
+          "type": ["object", "null"],
+          "properties": {
+            "row_index": { "type": ["integer", "null"], "minimum": 1 },
+            "raw_row": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "comparison": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["canonical", "pdf", "classification"],
+        "properties": {
+          "canonical": { "type": ["string", "null"] },
+          "pdf": { "type": ["string", "null"] },
+          "classification": { "type": "string", "enum": ["formatting_difference", "equivalent_difference", "semantic_conflict"] }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
   "type": "object",
   "required": [
     "source_retrieved_at",
@@ -45,7 +79,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["code", "differing_fields"],
+        "required": ["code", "differing_fields", "classification", "comparison", "evidence"],
         "properties": {
           "code": { "type": "string" },
           "api_name": { "type": ["string", "null"] },
@@ -57,7 +91,10 @@
           "differing_fields": {
             "type": "array",
             "items": { "type": "string" }
-          }
+          },
+          "classification": { "type": "string", "enum": ["formatting_difference", "equivalent_difference", "semantic_conflict"] },
+          "comparison": { "$ref": "#/definitions/comparison" },
+          "evidence": { "$ref": "#/definitions/evidence" }
         },
         "additionalProperties": false
       }
@@ -66,7 +103,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["code", "differing_fields"],
+        "required": ["code", "differing_fields", "classification", "comparison", "evidence"],
         "properties": {
           "code": { "type": "string" },
           "reviewed_name": { "type": ["string", "null"] },
@@ -78,7 +115,10 @@
           "differing_fields": {
             "type": "array",
             "items": { "type": "string" }
-          }
+          },
+          "classification": { "type": "string", "enum": ["formatting_difference", "equivalent_difference", "semantic_conflict"] },
+          "comparison": { "$ref": "#/definitions/comparison" },
+          "evidence": { "$ref": "#/definitions/evidence" }
         },
         "additionalProperties": false
       }
@@ -87,7 +127,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["code", "name"],
+        "required": ["code", "name", "evidence"],
         "properties": {
           "code": { "type": "string" },
           "name": { "type": "string" },
@@ -95,7 +135,8 @@
           "district": { "type": ["string", "null"] },
           "sub_district": { "type": ["string", "null"] },
           "business_hours": { "type": ["string", "null"] },
-          "source_url": { "type": ["string", "null"] }
+          "source_url": { "type": ["string", "null"] },
+          "evidence": { "$ref": "#/definitions/evidence" }
         },
         "additionalProperties": false
       }
@@ -104,11 +145,12 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["code"],
+        "required": ["code", "evidence"],
         "properties": {
           "code": { "type": "string" },
           "name": { "type": ["string", "null"] },
-          "address": { "type": ["string", "null"] }
+          "address": { "type": ["string", "null"] },
+          "evidence": { "$ref": "#/definitions/evidence" }
         },
         "additionalProperties": false
       }
@@ -117,14 +159,15 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["reasonCodes"],
+        "required": ["reasonCodes", "evidence"],
         "properties": {
           "extractedCode": { "type": ["string", "null"] },
           "involvedCodes": { "type": "array", "items": { "type": "string" } },
           "rawSegment": { "type": "string" },
           "candidateRecord": { "type": ["object", "null"] },
           "reasonCodes": { "type": "array", "items": { "type": "string" } },
-          "provenance": { "type": "object" }
+          "provenance": { "type": "object" },
+          "evidence": { "$ref": "#/definitions/evidence" }
         },
         "additionalProperties": false
       }

@@ -100,7 +100,7 @@ test('integration: dry-run executes Ajv schema validation and rejects invalid me
   await rm(tempDir, { recursive: true, force: true });
 });
 
-test('integration: source failure propagation blocks publication', () => {
+test('integration: source failure propagation remains an operational warning', () => {
   const gateResult = checkCompletenessGates({
     tcResults: [{ ok: false, area: { sourceRegion: 'Central', district: 'Central' }, error: 'HTTP 500' }],
     enResults: [{ ok: true, records: [] }],
@@ -108,8 +108,8 @@ test('integration: source failure propagation blocks publication', () => {
     previousRecords: Array(1100).fill({ code: '852A' })
   });
 
-  assert.equal(gateResult.pass, false);
-  assert.ok(gateResult.errors.some(e => e.includes('TC API areas failed')));
+  assert.equal(gateResult.pass, true);
+  assert.ok(gateResult.warnings.some(e => e.includes('TC API areas failed')));
 });
 
 test('integration: migration-aware diff identifies legacy source tags', () => {

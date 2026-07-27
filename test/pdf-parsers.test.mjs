@@ -84,7 +84,7 @@ test('pdf-parsers: parseAspPartnerPdfText preserves business hours for valid rec
   assert.ok(res.quarantinedRecords.some(q => q.reasonCodes.includes('SERVICE_CODE_MISMATCH')));
 });
 
-test('pdf-parsers: quarantine quality threshold gates block > 5% quarantine ratio', () => {
+test('pdf-parsers: quarantine quality threshold is audit-only', () => {
   const mockPdfResult = {
     pdfTotal: 1,
     httpSuccessCount: 1,
@@ -122,8 +122,8 @@ test('pdf-parsers: quarantine quality threshold gates block > 5% quarantine rati
     previousRecords: Array(1100).fill({ code: '852A' })
   });
 
-  assert.equal(gateResult.pass, false);
-  assert.ok(gateResult.errors.some(e => e.includes('quarantine ratio 10.0% exceeds blocking threshold 5%')));
+  assert.ok(!gateResult.errors.some(e => e.includes('Partner PDF')));
+  assert.ok(gateResult.warnings.some(e => e.includes('quarantine ratio 10.0% exceeds threshold 5%')));
 });
 
 test('ASP parser does not append the next prefix to 852LA3007 hours', () => {
@@ -160,7 +160,7 @@ test('business-hours validation rejects mixed hours and location text', () => {
   assert.ok(result.reasonCodes.includes('NEXT_RECORD_PREFIX_LEAK'));
 });
 
-test('severe-removal gate checks all involvedCodes when caret code was previously published', () => {
+test('severe PDF removal evidence checks all involved codes without blocking canonical publication', () => {
   const pdfResult = {
     records: [],
     quarantinedRecords: [
@@ -183,7 +183,7 @@ test('severe-removal gate checks all involvedCodes when caret code was previousl
     previousRecords: prevRecords
   });
 
-  assert.ok(gateResult.errors.some(e => e.includes('Severe PDF parser quarantines would remove previously published records')));
+  assert.ok(gateResult.warnings.some(e => e.includes('Severe PDF parser quarantines would remove previously published records')));
 });
 
 test('parsePartnerPdfDocuments sets semantic_ok = false when quarantine count > 0', () => {

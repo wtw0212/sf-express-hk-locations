@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,8 +32,13 @@ jobs:
       - name: Run Test Suite
         run: npm test
 
-      - name: Run Fixture Dry-Run Sync with Baseline and Temp Output
-        run: npm run sync -- --fixture --dry-run --baseline-dir "$GITHUB_WORKSPACE/data" --output-dir "$RUNNER_TEMP/sf-fixture-output"
+      - name: Materialize immutable parent baseline
+        run: |
+          mkdir -p "$RUNNER_TEMP/sf-parent-baseline"
+          git show "${{ github.event.pull_request.base.sha }}:data/locations.json" > "$RUNNER_TEMP/sf-parent-baseline/locations.json"
+
+      - name: Run Fixture Sync Against Parent Baseline
+        run: npm run sync -- --fixture --dry-run --baseline-dir "$RUNNER_TEMP/sf-parent-baseline" --output-dir "$RUNNER_TEMP/sf-fixture-output"
 
       - name: Re-run Test Suite After Dry-Run
         run: npm test

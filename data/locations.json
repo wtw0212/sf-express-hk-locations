@@ -25234,8 +25234,8 @@
     "retrieved_at": "2026-07-27 19:28 (HKT UTC+8)"
   },
   {
-    "id": "H852A011P",
-    "code": "H852A011P",
+    "id": "H852M034P",
+    "code": "H852M034P",
     "type": "locker",
     "type_name": "順豐智能櫃",
     "type_name_en": "SF Locker",
@@ -25253,8 +25253,8 @@
     "business_hours": "00:00-23:59 周六:00:00-23:59 周日:00:00-23:59 節假日:00:00-23:59",
     "business_hours_en": "00:00-23:59",
     "location": {
-      "latitude": 22.55185,
-      "longitude": 114.153924
+      "latitude": 22.210733,
+      "longitude": 114.028565
     },
     "source": "api_tc",
     "quality_flags": [],

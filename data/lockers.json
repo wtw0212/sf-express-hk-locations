@@ -7337,8 +7337,8 @@
     "retrieved_at": "2026-07-27 19:28 (HKT UTC+8)"
   },
   {
-    "id": "H852CD10P",
-    "code": "H852CD10P",
+    "id": "H852H037P",
+    "code": "H852H037P",
     "type": "locker",
     "type_name": "順豐智能櫃",
     "type_name_en": "SF Locker",
@@ -7348,16 +7348,16 @@
     "region_en": "Kowloon",
     "district": "觀塘區",
     "district_en": "Kwun Tong District",
-    "sub_district": "順利",
-    "sub_district_en": "Shun Lee",
-    "address": "觀塘順利邨巴士總站(近利溢樓及利富樓)*",
-    "address_en": "Bus Terminus (Near Lee Yat House & Lee Foo House), Shun Lee Estate, Kwun Tong*",
+    "sub_district": "九龍灣",
+    "sub_district_en": "Kowloon Bay",
+    "address": "九龍灣同力工業中心B座地下(順豐站)*",
+    "address_en": "G/F, Block B, Tonic Industrial Centre, Kowloon Bay *",
     "telephone": null,
     "business_hours": "00:00-23:59 周六:00:00-23:59 周日:00:00-23:59 節假日:00:00-23:59",
     "business_hours_en": "00:00-23:59",
     "location": {
-      "latitude": 22.331101,
-      "longitude": 114.226699
+      "latitude": 22.32473,
+      "longitude": 114.21041
     },
     "source": "api_tc",
     "quality_flags": [],
@@ -13892,8 +13892,8 @@
     "retrieved_at": "2026-07-27 19:28 (HKT UTC+8)"
   },
   {
-    "id": "H852FE97P",
-    "code": "H852FE97P",
+    "id": "H852FB13P",
+    "code": "H852FB13P",
     "type": "locker",
     "type_name": "順豐智能櫃",
     "type_name_en": "SF Locker",
@@ -13903,16 +13903,16 @@
     "region_en": "New Territories",
     "district": "沙田區",
     "district_en": "Sha Tin District",
-    "sub_district": "九肚山",
-    "sub_district_en": "Kau To Shan",
-    "address": "馬料水大學站巴士總站(九巴員工休息室旁)*",
-    "address_en": "Bus Terminus (Near Staff Rest Room), University Station, Sha Tin*",
+    "sub_district": "小瀝源",
+    "sub_district_en": "Siu Lek Yuen",
+    "address": "小瀝源香港恒生大學賽馬會住宿書院地下大堂*",
+    "address_en": "Lift Lobby, G/F, The Hang Seng University of Hong Kong Jockey Club Residential Colleges, Siu Lek Yuen(Only for Staff & Students)*",
     "telephone": null,
     "business_hours": "00:00-23:59 周六:00:00-23:59 周日:00:00-23:59 節假日:00:00-23:59",
     "business_hours_en": "00:00-23:59",
     "location": {
-      "latitude": 22.412728,
-      "longitude": 114.210286
+      "latitude": 22.3776,
+      "longitude": 114.213
     },
     "source": "api_tc",
     "quality_flags": [],

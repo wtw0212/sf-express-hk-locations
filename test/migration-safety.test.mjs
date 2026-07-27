@@ -160,15 +160,47 @@ test('SSR failure blocks publication only when it would remove a previously publ
   });
   assert.equal(destructive.pass, false);
   assert.ok(destructive.errors.some(error =>
-    error.includes('SSR source failure would remove previously published SSR-only records: H852SSR1')
+    error.includes('Previously published SSR-only records were removed: H852SSR1')
   ));
 
   const preserved = checkCompletenessGates({
     ...common,
     records: previousRecords
   });
-  assert.equal(preserved.errors.some(error => error.includes('SSR source failure would remove')), false);
+  assert.equal(preserved.errors.some(error => error.includes('SSR-only records were removed')), false);
   assert.ok(preserved.warnings.some(warning => warning.includes('[SSR Source] temporary SSR outage')));
+});
+
+test('SSR silent zero-record parse cannot remove a previously published SSR-only record', () => {
+  const result = checkCompletenessGates({
+    tcResults: [{ ok: true, records: [{ serviceCode: '852API1' }] }],
+    enResults: [{ ok: true, records: [{ serviceCode: '852API1' }] }],
+    ssrResult: { ok: true, records: [], errors: [] },
+    previousRecords: [
+      { code: '852API1', source: 'api_tc', type: 'store' },
+      { code: 'H852SSR1', source: 'ssr', type: 'locker' }
+    ],
+    records: [{ code: '852API1', source: 'api_tc', type: 'store' }],
+    config: { minCount: 1 }
+  });
+
+  assert.equal(result.pass, false);
+  assert.ok(result.errors.some(error =>
+    error.includes('Previously published SSR-only records were removed: H852SSR1')
+  ));
+});
+
+test('SSR zero records do not create a removal blocker without previous SSR-only records', () => {
+  const result = checkCompletenessGates({
+    tcResults: [{ ok: true, records: [{ serviceCode: '852API1' }] }],
+    enResults: [{ ok: true, records: [{ serviceCode: '852API1' }] }],
+    ssrResult: { ok: true, records: [], errors: [] },
+    previousRecords: [{ code: '852API1', source: 'api_tc', type: 'store' }],
+    records: [{ code: '852API1', source: 'api_tc', type: 'store' }],
+    config: { minCount: 1 }
+  });
+
+  assert.equal(result.errors.some(error => error.includes('SSR-only records were removed')), false);
 });
 
 test('sync rejects an explicit missing reviewed registry instead of falling back', async () => {

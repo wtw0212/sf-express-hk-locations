@@ -381,23 +381,23 @@ export function checkCompletenessGates({
   }
   if (ssrResult.errors && ssrResult.errors.length > 0) {
     ssrResult.errors.forEach(e => warnings.push(`[SSR Source] ${e}`));
+  }
 
-    const previousSsrCodes = new Set(
-      (previousRecords || [])
-        .filter(record => record.source === SOURCES.SSR)
-        .map(record => record.code)
-        .filter(Boolean)
+  const previousSsrCodes = new Set(
+    (previousRecords || [])
+      .filter(record => record.source === SOURCES.SSR)
+      .map(record => record.code)
+      .filter(Boolean)
+  );
+  const finalCodes = new Set(records.map(record => record.code));
+  const removedSsrCodes = [...previousSsrCodes]
+    .filter(code => !finalCodes.has(code))
+    .sort();
+
+  if (removedSsrCodes.length > 0) {
+    errors.push(
+      `Previously published SSR-only records were removed: ${removedSsrCodes.join(', ')}`
     );
-    const finalCodes = new Set(records.map(record => record.code));
-    const removedSsrCodes = [...previousSsrCodes]
-      .filter(code => !finalCodes.has(code))
-      .sort();
-
-    if (removedSsrCodes.length > 0) {
-      errors.push(
-        `SSR source failure would remove previously published SSR-only records: ${removedSsrCodes.join(', ')}`
-      );
-    }
   }
 
   // ─── 2. TC API Gate ─────────────────────────────────────────────────────

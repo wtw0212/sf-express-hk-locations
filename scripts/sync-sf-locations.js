@@ -156,34 +156,46 @@ function resolveRegion(district) {
 async function fetchDistrictTreeAreas() {
   const versionUrl = "https://ucmp-static.sf-express.com/proxy/ccspBase/cxDistrictData/queryDistrictActiveVersionData?area=hkmotw";
   const vRes = await fetch(versionUrl).then(r => r.json());
-  const fileUrl = vRes?.obj?.fileTcUrl;
-  if (!fileUrl) throw new Error("SF district version response did not include fileTcUrl");
+  const fileTcUrl = vRes?.obj?.fileTcUrl;
+  const fileEnUrl = vRes?.obj?.fileEnUrl;
+  if (!fileTcUrl || !fileEnUrl) throw new Error("SF district version response did not include file URLs");
 
-  const regionData = await fetch(fileUrl).then(r => r.json());
-  const hongKong = regionData.find((region) => region?.f === "香港");
-  const city = hongKong?.city?.find((item) => item?.f === "香港");
-  const counties = city?.county || [];
+  const [regionTcData, regionEnData] = await Promise.all([
+    fetch(fileTcUrl).then(r => r.json()),
+    fetch(fileEnUrl).then(r => r.json())
+  ]);
 
-  const areas = [];
-  for (const county of counties) {
-    for (const town of (county.town || [])) {
-      areas.push({
-        sourceRegion: (county.f || '').trim(),
-        district: (town.f || '').trim()
-      });
+  const extractAreas = (data, rootName) => {
+    const hk = data.find((region) => region?.f === rootName);
+    const city = hk?.city?.find((item) => item?.f === rootName);
+    const counties = city?.county || [];
+
+    const list = [];
+    for (const county of counties) {
+      for (const town of (county.town || [])) {
+        list.push({
+          sourceRegion: (county.f || '').trim(),
+          district: (town.f || '').trim()
+        });
+      }
     }
-  }
-  return areas;
+    return list;
+  };
+
+  const tcAreas = extractAreas(regionTcData, "香港");
+  const enAreas = extractAreas(regionEnData, "Hong Kong");
+
+  return { tcAreas, enAreas };
 }
 
-async function fetchFromOfficialApiHk(areas) {
-  console.log(`Fetching locations from SF Express official API by sub-districts (${areas.length} areas, lang=tc)...`);
+async function fetchFromOfficialApiHk(tcAreas) {
+  console.log(`Fetching locations from SF Express official API by sub-districts (${tcAreas.length} areas, lang=tc)...`);
   const url = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=tc&region=hk&translate=tc';
 
   const hkMap = new Map();
   const chunkSize = 10;
-  for (let i = 0; i < areas.length; i += chunkSize) {
-    const chunk = areas.slice(i, i + chunkSize);
+  for (let i = 0; i < tcAreas.length; i += chunkSize) {
+    const chunk = tcAreas.slice(i, i + chunkSize);
     await Promise.all(chunk.map(async (area) => {
       try {
         const response = await fetch(url, {
@@ -223,38 +235,50 @@ async function fetchFromOfficialApiHk(areas) {
   return Array.from(hkMap.values());
 }
 
-async function fetchFromOfficialApiEn() {
-  console.log('Fetching English locations from SF Express official API (lang=en)...');
+async function fetchFromOfficialApiEn(enAreas) {
+  console.log(`Fetching English locations from SF Express official API by sub-districts (${enAreas.length} areas, lang=en)...`);
   const url = 'https://hk.sf-express.com/sf-service-core-web/service/serviceSupport/queryServiceNetworkList?lang=en&region=hk&translate=en';
 
   const enMap = new Map();
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Referer': 'https://hk.sf-express.com/hk/en/store',
-        'Origin': 'https://hk.sf-express.com'
-      },
-      body: JSON.stringify({ locationCode: '852' })
-    });
-
-    if (response.ok) {
-      const data = await response.json();
-      if (data.success && Array.isArray(data.result)) {
-        data.result.forEach(item => {
-          const code = item.serviceCode || item.code;
-          if (code) enMap.set(code, item);
+  const chunkSize = 10;
+  for (let i = 0; i < enAreas.length; i += chunkSize) {
+    const chunk = enAreas.slice(i, i + chunkSize);
+    await Promise.all(chunk.map(async (area) => {
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'Referer': 'https://hk.sf-express.com/hk/en/store',
+            'Origin': 'https://hk.sf-express.com'
+          },
+          body: JSON.stringify({
+            province: 'Hong Kong',
+            city: area.sourceRegion,
+            district: area.district,
+            serviceType: '',
+            locationCode: '852',
+            keyWord: '',
+            bizTypeCodes: ''
+          })
         });
-      }
-    }
-  } catch (e) {
-    console.warn('Warning: Could not fetch EN API:', e.message);
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success && Array.isArray(data.result)) {
+            data.result.forEach(item => {
+              const code = item.serviceCode || item.code;
+              if (code) enMap.set(code, item);
+            });
+          }
+        }
+      } catch (err) {}
+    }));
   }
 
-  console.log(`Fetched ${enMap.size} EN locations via API.`);
+  console.log(`Fetched ${enMap.size} unique EN locations via sub-district queries.`);
   return enMap;
 }
 
@@ -510,9 +534,9 @@ async function run() {
   console.log(`Current HKT Time: ${hktDateStr}`);
 
   try {
-    const areas = await fetchDistrictTreeAreas();
-    const rawApiList = await fetchFromOfficialApiHk(areas);
-    const rawApiEnMap = await fetchFromOfficialApiEn();
+    const { tcAreas, enAreas } = await fetchDistrictTreeAreas();
+    const rawApiList = await fetchFromOfficialApiHk(tcAreas);
+    const rawApiEnMap = await fetchFromOfficialApiEn(enAreas);
     const rawSsrList = await fetchFromSsrPages();
     const { partners: rawPartnerList, pdfSuccessCount, pdfFailCount, pdfTotal } = await fetchFromPartnerPdfs();
 

@@ -1,4 +1,4 @@
-> 📅 **最後更新時間 (Last Updated)**: `2026-07-27 01:12 (HKT UTC+8)`
+> 📅 **最後更新時間 (Last Updated)**: `2026-07-27 09:11 (HKT UTC+8)`
 
 # 🚚 香港順豐速運自提點 / 順豐站 / 智能櫃資料集
 # SF Express Hong Kong Stores & Lockers Dataset (Bilingual 中英雙語)
@@ -16,7 +16,7 @@ An automated, up-to-date bilingual dataset (Traditional Chinese & English) and l
 
 ## 📦 GitHub Direct Raw 存取 (Direct Access URLs in `data/`)
 
-您可以直接在您的網店（如 Next.js, StayVintage, Shopify, WooCommerce, iOS/Android App）中透過 **GitHub Raw** 存取所有位於 `data/` 資料夾內的雙語分類 JSON：
+您可以直接在您的網店（如 Next.js, Shopify, WooCommerce, iOS/Android App）中透過 **GitHub Raw** 存取所有位於 `data/` 資料夾內的雙語分類 JSON：
 
 | 內容 (Content) | GitHub Raw 網址 (URL) |
 | :--- | :--- |

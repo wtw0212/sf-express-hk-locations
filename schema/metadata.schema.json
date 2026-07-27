@@ -27,20 +27,16 @@
     },
     "count_deltas": {
       "type": "object",
-      "additionalProperties": {
-        "type": "object",
-        "required": ["previous", "current", "delta", "delta_pct", "baseline_available", "baseline_source", "gate_result"],
-        "properties": {
-          "previous": { "type": ["integer", "null"] },
-          "current": { "type": "integer" },
-          "delta": { "type": "integer" },
-          "delta_pct": { "type": "number" },
-          "baseline_available": { "type": "boolean" },
-          "baseline_source": { "type": "string" },
-          "gate_result": { "type": "string", "enum": ["pass", "warn", "block"] }
-        },
-        "additionalProperties": false
-      }
+      "required": ["total", "stores", "lockers", "partners", "tcCodes", "enCodes"],
+      "properties": {
+        "total": { "$ref": "#/definitions/countDeltaItem" },
+        "stores": { "$ref": "#/definitions/countDeltaItem" },
+        "lockers": { "$ref": "#/definitions/countDeltaItem" },
+        "partners": { "$ref": "#/definitions/countDeltaItem" },
+        "tcCodes": { "$ref": "#/definitions/countDeltaItem" },
+        "enCodes": { "$ref": "#/definitions/countDeltaItem" }
+      },
+      "additionalProperties": false
     },
     "source_status": {
       "type": "object",
@@ -77,15 +73,84 @@
         },
         "partner_pdf": {
           "type": "object",
-          "required": ["pdf_total", "pdf_success", "pdf_failed", "status", "records", "errors"],
+          "required": [
+            "pdf_total",
+            "http_success_count",
+            "parse_success_count",
+            "semantic_success_count",
+            "partial_quality_failure_count",
+            "failed_count",
+            "valid_record_count",
+            "quarantined_record_count",
+            "quarantine_ratio",
+            "status",
+            "errors",
+            "details"
+          ],
           "properties": {
             "pdf_total": { "type": "integer", "minimum": 0 },
-            "pdf_success": { "type": "integer", "minimum": 0 },
-            "pdf_failed": { "type": "integer", "minimum": 0 },
-            "status": { "type": "string", "enum": ["success", "no_pdfs_discovered", "all_pdfs_failed", "partial_pdf_failures", "zero_records_parsed", "partial_parse_quality_failure"] },
-            "records": { "type": "integer", "minimum": 0 },
+            "http_success_count": { "type": "integer", "minimum": 0 },
+            "parse_success_count": { "type": "integer", "minimum": 0 },
+            "semantic_success_count": { "type": "integer", "minimum": 0 },
+            "partial_quality_failure_count": { "type": "integer", "minimum": 0 },
+            "failed_count": { "type": "integer", "minimum": 0 },
+            "valid_record_count": { "type": "integer", "minimum": 0 },
+            "quarantined_record_count": { "type": "integer", "minimum": 0 },
+            "quarantine_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+            "status": {
+              "type": "string",
+              "enum": [
+                "success",
+                "no_pdfs_discovered",
+                "all_pdfs_failed",
+                "partial_pdf_failures",
+                "zero_records_parsed",
+                "partial_parse_quality_failure",
+                "semantic_failure",
+                "unsupported_layout",
+                "count_anomaly"
+              ]
+            },
             "errors": { "type": "array", "items": { "type": "string" } },
-            "details": { "type": "array" }
+            "details": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "source_key",
+                  "url",
+                  "status",
+                  "http_ok",
+                  "parse_ok",
+                  "semantic_ok",
+                  "attempts",
+                  "raw_code_count",
+                  "candidate_count",
+                  "valid_record_count",
+                  "quarantined_record_count",
+                  "duplicate_code_count",
+                  "duplicate_conflict_count",
+                  "quarantine_ratio"
+                ],
+                "properties": {
+                  "source_key": { "type": "string", "minLength": 1 },
+                  "url": { "type": "string", "minLength": 1 },
+                  "status": { "type": "string" },
+                  "http_ok": { "type": "boolean" },
+                  "parse_ok": { "type": "boolean" },
+                  "semantic_ok": { "type": "boolean" },
+                  "attempts": { "type": "integer", "minimum": 0 },
+                  "raw_code_count": { "type": "integer", "minimum": 0 },
+                  "candidate_count": { "type": "integer", "minimum": 0 },
+                  "valid_record_count": { "type": "integer", "minimum": 0 },
+                  "quarantined_record_count": { "type": "integer", "minimum": 0 },
+                  "duplicate_code_count": { "type": "integer", "minimum": 0 },
+                  "duplicate_conflict_count": { "type": "integer", "minimum": 0 },
+                  "quarantine_ratio": { "type": "number", "minimum": 0, "maximum": 1 }
+                },
+                "additionalProperties": false
+              }
+            }
           },
           "additionalProperties": false
         }
@@ -132,6 +197,22 @@
           "additionalProperties": false
         },
         "flag_counts_by_type": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
+      },
+      "additionalProperties": false
+    }
+  },
+  "definitions": {
+    "countDeltaItem": {
+      "type": "object",
+      "required": ["previous", "current", "delta", "delta_pct", "baseline_available", "baseline_source", "gate_result"],
+      "properties": {
+        "previous": { "type": ["integer", "null"] },
+        "current": { "type": "integer" },
+        "delta": { "type": "integer" },
+        "delta_pct": { "type": "number" },
+        "baseline_available": { "type": "boolean" },
+        "baseline_source": { "type": "string" },
+        "gate_result": { "type": "string", "enum": ["pass", "warn", "block"] }
       },
       "additionalProperties": false
     }

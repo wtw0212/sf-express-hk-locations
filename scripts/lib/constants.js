@@ -94,6 +94,16 @@ export const CATEGORY_ANOMALY_CONFIG = {
   enCodes: { dropBlockPct: 5, increaseWarnPct: 5, increaseBlockPct: 15 }
 };
 
+/** Default Partner PDF parse quality threshold configuration */
+export const PDF_PARSE_QUALITY_CONFIG = {
+  overallQuarantineWarnPct: 1,
+  overallQuarantineBlockPct: 5,
+  perPdfQuarantineWarnPct: 1,
+  perPdfQuarantineBlockPct: 5,
+  validCountDropWarnPct: 5,
+  validCountDropBlockPct: 15
+};
+
 /** Minimum English match rate (fraction 0-1) required for publication */
 export const EN_MATCH_RATE_THRESHOLD = 0.80;
 

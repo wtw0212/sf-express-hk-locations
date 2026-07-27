@@ -1,18 +1,18 @@
 {
   "schema_version": 2,
-  "retrieved_at": "2026-07-27 12:12 (HKT UTC+8)",
+  "retrieved_at": "2026-07-27 14:04 (HKT UTC+8)",
   "counts": {
-    "total": 1672,
+    "total": 1678,
     "stores": 137,
     "lockers": 1056,
-    "partners": 479
+    "partners": 485
   },
   "count_deltas": {
     "total": {
-      "previous": 1678,
-      "current": 1672,
-      "delta": -6,
-      "delta_pct": -0.36,
+      "previous": 1672,
+      "current": 1678,
+      "delta": 6,
+      "delta_pct": 0.36,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -36,10 +36,10 @@
       "gate_result": "pass"
     },
     "partners": {
-      "previous": 485,
-      "current": 479,
-      "delta": -6,
-      "delta_pct": -1.24,
+      "previous": 479,
+      "current": 485,
+      "delta": 6,
+      "delta_pct": 1.25,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -80,107 +80,144 @@
     },
     "partner_pdf": {
       "pdf_total": 8,
-      "pdf_success": 8,
-      "pdf_failed": 0,
-      "status": "partial_parse_quality_failure",
-      "records": 424,
+      "http_success_count": 8,
+      "parse_success_count": 8,
+      "semantic_success_count": 8,
+      "partial_quality_failure_count": 0,
+      "failed_count": 0,
+      "valid_record_count": 451,
+      "quarantined_record_count": 0,
+      "quarantine_ratio": 0,
+      "status": "success",
       "errors": [],
       "details": [
         {
+          "source_key": "OK_HK_TC",
           "url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-          "ok": true,
-          "status": "partial_parse_quality_failure",
+          "status": "success",
           "http_ok": true,
           "parse_ok": true,
+          "semantic_ok": true,
           "attempts": 1,
-          "error": null,
           "raw_code_count": 116,
-          "valid_record_count": 58,
-          "quarantined_record_count": 58
+          "candidate_count": 59,
+          "valid_record_count": 59,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
         },
         {
+          "source_key": "OK_KLN_TC",
           "url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-          "ok": true,
-          "status": "partial_parse_quality_failure",
+          "status": "success",
           "http_ok": true,
           "parse_ok": true,
+          "semantic_ok": true,
           "attempts": 1,
-          "error": null,
           "raw_code_count": 209,
-          "valid_record_count": 102,
-          "quarantined_record_count": 107
+          "candidate_count": 105,
+          "valid_record_count": 105,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
         },
         {
+          "source_key": "OK_NT_TC",
           "url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-          "ok": true,
-          "status": "partial_parse_quality_failure",
+          "status": "success",
           "http_ok": true,
           "parse_ok": true,
+          "semantic_ok": true,
           "attempts": 1,
-          "error": null,
           "raw_code_count": 280,
-          "valid_record_count": 139,
-          "quarantined_record_count": 141
+          "candidate_count": 140,
+          "valid_record_count": 140,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
         },
         {
+          "source_key": "OK_IL_TC",
           "url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-          "ok": true,
-          "status": "partial_parse_quality_failure",
+          "status": "success",
           "http_ok": true,
           "parse_ok": true,
+          "semantic_ok": true,
           "attempts": 1,
-          "error": null,
           "raw_code_count": 6,
-          "valid_record_count": 3,
-          "quarantined_record_count": 3
+          "candidate_count": 2,
+          "valid_record_count": 2,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
         },
         {
+          "source_key": "ASP_HK_TC",
           "url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-          "ok": true,
-          "status": "partial_parse_quality_failure",
+          "status": "success",
           "http_ok": true,
           "parse_ok": true,
+          "semantic_ok": true,
           "attempts": 1,
-          "error": null,
           "raw_code_count": 47,
-          "valid_record_count": 23,
-          "quarantined_record_count": 23
+          "candidate_count": 22,
+          "valid_record_count": 22,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
         },
         {
+          "source_key": "ASP_KLN_TC",
           "url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-          "ok": true,
-          "status": "partial_parse_quality_failure",
+          "status": "success",
           "http_ok": true,
           "parse_ok": true,
+          "semantic_ok": true,
           "attempts": 1,
-          "error": null,
           "raw_code_count": 83,
-          "valid_record_count": 33,
-          "quarantined_record_count": 50
+          "candidate_count": 44,
+          "valid_record_count": 44,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
         },
         {
+          "source_key": "ASP_NT_TC",
           "url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-          "ok": true,
-          "status": "partial_parse_quality_failure",
+          "status": "success",
           "http_ok": true,
           "parse_ok": true,
+          "semantic_ok": true,
           "attempts": 1,
-          "error": null,
           "raw_code_count": 139,
-          "valid_record_count": 65,
-          "quarantined_record_count": 74
+          "candidate_count": 73,
+          "valid_record_count": 73,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
         },
         {
+          "source_key": "ASP_ISLANDS_TC",
           "url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-          "ok": true,
-          "status": "partial_parse_quality_failure",
+          "status": "success",
           "http_ok": true,
           "parse_ok": true,
+          "semantic_ok": true,
           "attempts": 1,
-          "error": null,
           "raw_code_count": 12,
-          "valid_record_count": 1,
-          "quarantined_record_count": 11
+          "candidate_count": 6,
+          "valid_record_count": 6,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
         }
       ]
     }
@@ -189,15 +226,15 @@
     "tc_record_count": 1666,
     "en_record_count": 1666,
     "bilingual_match_rate": 0.9993997599039616,
-    "district_resolved_count": 1670,
-    "district_unresolved_count": 2
+    "district_resolved_count": 1672,
+    "district_unresolved_count": 6
   },
   "quality": {
     "pipeline_blocking_errors": 0,
-    "pipeline_warnings": 1,
+    "pipeline_warnings": 0,
     "record_flag_counts_by_severity": {
-      "info": 57,
-      "warning": 272,
+      "info": 63,
+      "warning": 282,
       "error": 0
     },
     "flag_counts_by_type": {
@@ -207,11 +244,11 @@
       "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 98,
       "ADMIN_DISTRICT_ALIAS_APPLIED": 41,
       "DUPLICATE_ADDRESS_SUFFIX": 9,
-      "MISSING_ENGLISH_RECORD": 6,
+      "MISSING_ENGLISH_RECORD": 12,
       "SUBDISTRICT_ADDRESS_CONFLICT": 2,
       "SOURCE_FORMATTING_ARTIFACT": 1,
-      "MISSING_COORDINATES": 6,
-      "UNRESOLVED_ADMIN_DISTRICT": 2
+      "MISSING_COORDINATES": 12,
+      "UNRESOLVED_ADMIN_DISTRICT": 6
     }
   }
 }

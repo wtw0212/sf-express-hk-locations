@@ -90,17 +90,28 @@ export function generateMarkdownReport({
       }).join('\n');
 
   // Source fetch summary
-  const pdfTotal = pdfResult?.pdfTotal ?? metrics?.pdf_total ?? 0;
-  const pdfSuccess = pdfResult?.pdfSuccessCount ?? metrics?.pdf_success ?? 0;
-  const pdfFail = pdfResult?.pdfFailCount ?? metrics?.pdf_failed ?? 0;
-  const pdfStatusStr = `${pdfSuccess}/${pdfTotal} succeeded (${pdfFail} failed)`;
+  const pdfTotal = pdfResult?.pdfTotal ?? 0;
+  const httpSuccessCount = pdfResult?.httpSuccessCount ?? pdfResult?.pdfSuccessCount ?? 0;
+  const parseSuccessCount = pdfResult?.parseSuccessCount ?? pdfResult?.pdfSuccessCount ?? 0;
+  const semanticSuccessCount = pdfResult?.semanticSuccessCount ?? 0;
+  const partialQualityFailureCount = pdfResult?.partialQualityFailureCount ?? 0;
+  const validRecordCount = pdfResult?.records?.length ?? 0;
+  const quarantinedRecordCount = pdfResult?.quarantinedRecords?.length ?? 0;
+  const totalPdfCandidates = validRecordCount + quarantinedRecordCount;
+  const quarantineRatioPct = totalPdfCandidates > 0 ? (quarantinedRecordCount / totalPdfCandidates) * 100 : 0;
 
   const sourceSummary = metrics
     ? `| TC API areas | ${metrics.tc_areas_success}/${metrics.tc_areas_total} succeeded |
 | EN API areas | ${metrics.en_areas_success}/${metrics.en_areas_total} succeeded |
 | TC unique codes | ${metrics.tc_unique_codes} |
 | EN unique codes | ${metrics.en_unique_codes} |
-| Partner PDFs | ${pdfStatusStr} |
+| Partner PDF HTTP Success | ${httpSuccessCount}/${pdfTotal} |
+| Partner PDF Parser Completed | ${parseSuccessCount}/${pdfTotal} |
+| Partner PDF Semantic Success | ${semanticSuccessCount}/${pdfTotal} |
+| Partner PDF Quality Failures | ${partialQualityFailureCount} |
+| Valid Partner PDF Records | ${validRecordCount} |
+| Quarantined PDF Records | ${quarantinedRecordCount} |
+| PDF Quarantine Ratio | ${quarantineRatioPct.toFixed(1)}% |
 | SSR records | ${ssrResult.records?.length ?? 0} |
 | Bilingual match rate | ${(metrics.en_match_rate * 100).toFixed(1)}% |`
     : '| Source metrics | unavailable |';

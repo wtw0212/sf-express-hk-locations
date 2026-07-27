@@ -196,21 +196,15 @@ export async function runSync(options = {}) {
     const rawSnap = JSON.parse(await readFile(pathToRead, 'utf8'));
 
     const rawTcResults = rawSnap.sources.api_tc?.results || [];
-    const flatTcRecords = rawSnap.sources.api_tc?.records || [];
     tcResults = rawTcResults.map(r => ({
       ...r,
-      records: r.records && r.records.length > 0
-        ? r.records
-        : (r.ok ? flatTcRecords.filter(rec => rec.district === r.area?.district) : [])
+      records: r.records || []
     }));
 
     const rawEnResults = rawSnap.sources.api_en?.results || [];
-    const flatEnRecords = rawSnap.sources.api_en?.records || [];
     enResults = rawEnResults.map(r => ({
       ...r,
-      records: r.records && r.records.length > 0
-        ? r.records
-        : (r.ok ? flatEnRecords.filter(rec => rec.district === r.area?.district) : [])
+      records: r.records || []
     }));
 
     ssrResult = {
@@ -222,8 +216,13 @@ export async function runSync(options = {}) {
     pdfResult = {
       records: rawSnap.sources.partner_pdf?.records || [],
       pdfTotal: rawSnap.sources.partner_pdf?.pdf_total ?? 8,
-      pdfSuccessCount: rawSnap.sources.partner_pdf?.pdf_success_count ?? 8,
-      pdfFailCount: rawSnap.sources.partner_pdf?.pdf_failure_count ?? 0,
+      httpSuccessCount: rawSnap.sources.partner_pdf?.http_success_count ?? 8,
+      parseSuccessCount: rawSnap.sources.partner_pdf?.parse_success_count ?? 8,
+      semanticSuccessCount: rawSnap.sources.partner_pdf?.semantic_success_count ?? 8,
+      partialQualityFailureCount: rawSnap.sources.partner_pdf?.partial_quality_failure_count ?? 0,
+      failedCount: rawSnap.sources.partner_pdf?.failed_count ?? 0,
+      pdfSuccessCount: rawSnap.sources.partner_pdf?.http_success_count ?? 8,
+      pdfFailCount: rawSnap.sources.partner_pdf?.failed_count ?? 0,
       status: rawSnap.sources.partner_pdf?.status || 'success',
       errors: rawSnap.sources.partner_pdf?.errors || [],
       pdfDetails: rawSnap.sources.partner_pdf?.details || [],
@@ -355,11 +354,18 @@ export async function runSync(options = {}) {
         errors: ssrResult.errors || []
       },
       partner_pdf: {
-        pdf_total: pdfResult.pdfTotal,
-        pdf_success: pdfResult.pdfSuccessCount,
-        pdf_failed: pdfResult.pdfFailCount,
+        pdf_total: pdfResult.pdfTotal ?? 0,
+        http_success_count: pdfResult.httpSuccessCount ?? pdfResult.pdfSuccessCount ?? 0,
+        parse_success_count: pdfResult.parseSuccessCount ?? pdfResult.pdfSuccessCount ?? 0,
+        semantic_success_count: pdfResult.semanticSuccessCount ?? 0,
+        partial_quality_failure_count: pdfResult.partialQualityFailureCount ?? 0,
+        failed_count: pdfResult.failedCount ?? pdfResult.pdfFailCount ?? 0,
+        valid_record_count: pdfResult.records?.length ?? 0,
+        quarantined_record_count: pdfResult.quarantinedRecords?.length ?? 0,
+        quarantine_ratio: Number((pdfResult.records?.length + (pdfResult.quarantinedRecords?.length || 0)) > 0
+          ? ((pdfResult.quarantinedRecords?.length || 0) / (pdfResult.records.length + (pdfResult.quarantinedRecords?.length || 0))).toFixed(4)
+          : 0),
         status: pdfResult.status,
-        records: pdfResult.records.length,
         errors: pdfResult.errors || [],
         details: pdfResult.pdfDetails || []
       }

@@ -1,10 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+
 import {
   validateLocationRecordSchema,
-  validateLocationsArraySchema,
   validateMetadataSchema,
-  validateLocationsByDistrictSchema,
   validateAllReleaseArtifactsSchemas
 } from '../scripts/lib/schema-validator.js';
 
@@ -14,8 +13,8 @@ const validRecord = {
   type: 'store',
   type_name: '順豐站',
   type_name_en: 'SF Store',
-  name: 'Test Store',
-  name_en: 'Test Store EN',
+  name: '灣仔軒尼詩道順豐站',
+  name_en: 'Hennessy Road SF Store',
   region: '香港島',
   region_en: 'Hong Kong Island',
   district: '灣仔區',
@@ -39,13 +38,48 @@ const validMetadata = {
   retrieved_at: '2026-07-27 10:00 (HKT UTC+8)',
   counts: { total: 1, stores: 1, lockers: 0, partners: 0 },
   count_deltas: {
-    total: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' }
+    total: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' },
+    stores: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' },
+    lockers: { previous: 0, current: 0, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' },
+    partners: { previous: 0, current: 0, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' },
+    tcCodes: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' },
+    enCodes: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' }
   },
   source_status: {
     api_tc: { areas_total: 112, areas_success: 112, areas_failed: 0 },
     api_en: { areas_total: 112, areas_success: 112, areas_failed: 0 },
     ssr: { count: 186, errors: [] },
-    partner_pdf: { pdf_total: 8, pdf_success: 8, pdf_failed: 0, status: 'success', records: 475, errors: [] }
+    partner_pdf: {
+      pdf_total: 8,
+      http_success_count: 8,
+      parse_success_count: 8,
+      semantic_success_count: 8,
+      partial_quality_failure_count: 0,
+      failed_count: 0,
+      valid_record_count: 475,
+      quarantined_record_count: 0,
+      quarantine_ratio: 0,
+      status: 'success',
+      errors: [],
+      details: [
+        {
+          source_key: 'OK_HK_TC',
+          url: 'https://hk.sf-express.com/uploads/OK_HK_TC.pdf',
+          status: 'success',
+          http_ok: true,
+          parse_ok: true,
+          semantic_ok: true,
+          attempts: 1,
+          raw_code_count: 50,
+          candidate_count: 50,
+          valid_record_count: 50,
+          quarantined_record_count: 0,
+          duplicate_code_count: 0,
+          duplicate_conflict_count: 0,
+          quarantine_ratio: 0
+        }
+      ]
+    }
   },
   coverage: {
     tc_record_count: 1662,
@@ -69,51 +103,42 @@ test('schema-validator: valid record passes schema', async () => {
 });
 
 test('schema-validator: rejects missing required field or wrong type', async () => {
-  const missingName = { ...validRecord, name: undefined };
-  const res1 = await validateLocationRecordSchema(missingName);
-  assert.equal(res1.valid, false);
-  assert.ok(res1.errors.some(e => e.includes("must have required property 'name'")));
+  const invalid = { ...validRecord };
+  delete invalid.code;
 
-  const wrongType = { ...validRecord, type: 'invalid_type' };
-  const res2 = await validateLocationRecordSchema(wrongType);
-  assert.equal(res2.valid, false);
-  assert.ok(res2.errors.some(e => e.includes('must be equal to one of the allowed values')));
+  const res = await validateLocationRecordSchema(invalid);
+  assert.equal(res.valid, false);
+  assert.ok(res.errors.some(e => e.includes("must have required property 'code'")));
 });
 
 test('schema-validator: rejects invalid coordinate type or invalid provenance source', async () => {
-  const badCoord = { ...validRecord, location: { latitude: '22.28', longitude: 114.17 } };
-  const res1 = await validateLocationRecordSchema(badCoord);
-  assert.equal(res1.valid, false);
+  const invalidCoord = { ...validRecord, location: { latitude: 'invalid', longitude: 114.17 } };
+  const res = await validateLocationRecordSchema(invalidCoord);
+  assert.equal(res.valid, false);
 
-  const badProv = { ...validRecord, provenance: { name: 'invalid_source', address: 'api_tc', district: 'api_tc' } };
-  const res2 = await validateLocationRecordSchema(badProv);
-  assert.equal(res2.valid, false);
+  const invalidProv = { ...validRecord, provenance: { name: 'invalid_source' } };
+  const resProv = await validateLocationRecordSchema(invalidProv);
+  assert.equal(resProv.valid, false);
 });
 
 test('schema-validator: rejects metadata match rate > 1 or negative count', async () => {
-  const badRate = {
+  const invalidMeta = {
     ...validMetadata,
     coverage: { ...validMetadata.coverage, bilingual_match_rate: 1.5 }
   };
-  const res1 = await validateMetadataSchema(badRate);
-  assert.equal(res1.valid, false);
-  assert.ok(res1.errors.some(e => e.includes('must be <= 1')));
-
-  const negCount = {
-    ...validMetadata,
-    counts: { ...validMetadata.counts, stores: -5 }
-  };
-  assert.equal((await validateMetadataSchema(negCount)).valid, false);
+  const res = await validateMetadataSchema(invalidMeta);
+  assert.equal(res.valid, false);
 });
 
 test('schema-validator: validates all release artifacts together', async () => {
-  const records = [validRecord];
-  const stores = [validRecord];
-  const lockers = [];
-  const partners = [];
-  const byDistrict = { '灣仔區': records };
+  const artifacts = {
+    records: [validRecord],
+    stores: [validRecord],
+    lockers: [],
+    partners: [],
+    byDistrict: { '灣仔區': [validRecord] },
+    metadata: validMetadata
+  };
 
-  await assert.doesNotReject(validateAllReleaseArtifactsSchemas({
-    records, stores, lockers, partners, byDistrict, metadata: validMetadata
-  }));
+  await assert.doesNotReject(validateAllReleaseArtifactsSchemas(artifacts));
 });

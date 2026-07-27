@@ -37,13 +37,31 @@ const mockMetadata = {
   retrieved_at: '2026-07-27',
   counts: { total: 1, stores: 1, lockers: 0, partners: 0 },
   count_deltas: {
-    total: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' }
+    total: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' },
+    stores: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' },
+    lockers: { previous: 0, current: 0, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' },
+    partners: { previous: 0, current: 0, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' },
+    tcCodes: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' },
+    enCodes: { previous: 1, current: 1, delta: 0, delta_pct: 0, baseline_available: true, baseline_source: 'test', gate_result: 'pass' }
   },
   source_status: {
     api_tc: { areas_total: 1, areas_success: 1, areas_failed: 0 },
     api_en: { areas_total: 1, areas_success: 1, areas_failed: 0 },
     ssr: { count: 0, errors: [] },
-    partner_pdf: { pdf_total: 0, pdf_success: 0, pdf_failed: 0, status: 'success', records: 0, errors: [] }
+    partner_pdf: {
+      pdf_total: 0,
+      http_success_count: 0,
+      parse_success_count: 0,
+      semantic_success_count: 0,
+      partial_quality_failure_count: 0,
+      failed_count: 0,
+      valid_record_count: 0,
+      quarantined_record_count: 0,
+      quarantine_ratio: 0,
+      status: 'success',
+      errors: [],
+      details: []
+    }
   },
   coverage: { tc_record_count: 1, en_record_count: 1, bilingual_match_rate: 1, district_resolved_count: 1, district_unresolved_count: 0 },
   quality: {

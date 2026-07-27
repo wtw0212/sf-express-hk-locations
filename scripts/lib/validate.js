@@ -2,7 +2,7 @@
 import {
   VALID_DISTRICTS, DISTRICT_TO_REGION, VALID_TYPES, VALID_SOURCES,
   HK_BOUNDING_BOX, MIN_LOCATION_COUNT,
-  CATEGORY_ANOMALY_CONFIG, EN_MATCH_RATE_THRESHOLD
+  CATEGORY_ANOMALY_CONFIG, PDF_PARSE_QUALITY_CONFIG, EN_MATCH_RATE_THRESHOLD
 } from './constants.js';
 
 /**
@@ -206,8 +206,13 @@ export function checkCompletenessGates({
   const enMatchRateThreshold = config.enMatchRateThreshold ?? EN_MATCH_RATE_THRESHOLD;
 
   // ─── 1. Partner PDF Gates ───────────────────────────────────────────────
+  const pdfConfig = {
+    ...PDF_PARSE_QUALITY_CONFIG,
+    ...(config.pdfQualityConfig || {})
+  };
+
   const pdfTotal = pdfResult.pdfTotal ?? 0;
-  const pdfSuccess = pdfResult.pdfSuccessCount ?? 0;
+  const pdfSuccess = pdfResult.pdfSuccessCount ?? pdfResult.httpSuccessCount ?? 0;
   const pdfFail = pdfResult.pdfFailCount ?? 0;
   const pdfRecordsCount = pdfResult.records?.length ?? 0;
 
@@ -221,25 +226,64 @@ export function checkCompletenessGates({
     errors.push('Partner PDFs succeeded but parsed zero valid records');
   }
 
-  // Check individual per-PDF status for zero records or layout failure
+  // Quarantine ratio checks
+  const quarantinedRecords = pdfResult.quarantinedRecords || [];
+  const totalCandidates = pdfRecordsCount + quarantinedRecords.length;
+  const overallQuarantineRatioPct = totalCandidates > 0 ? (quarantinedRecords.length / totalCandidates) * 100 : 0;
+
+  if (totalCandidates > 0) {
+    if (overallQuarantineRatioPct > pdfConfig.overallQuarantineBlockPct) {
+      errors.push(`Partner PDF overall quarantine ratio ${overallQuarantineRatioPct.toFixed(1)}% exceeds blocking threshold ${pdfConfig.overallQuarantineBlockPct}% (${quarantinedRecords.length}/${totalCandidates} quarantined)`);
+    } else if (overallQuarantineRatioPct > pdfConfig.overallQuarantineWarnPct) {
+      warnings.push(`Partner PDF overall quarantine ratio ${overallQuarantineRatioPct.toFixed(1)}% exceeds warning threshold ${pdfConfig.overallQuarantineWarnPct}% (${quarantinedRecords.length}/${totalCandidates} quarantined)`);
+    }
+  }
+
+  // Check individual per-PDF status, quarantine ratio, and historical count drop
+  const previousMetadata = config.previousMetadata || null;
+  const prevPdfDetailsMap = new Map();
+  if (previousMetadata?.source_status?.partner_pdf?.details) {
+    for (const d of previousMetadata.source_status.partner_pdf.details) {
+      if (d.source_key) prevPdfDetailsMap.set(d.source_key, d);
+    }
+  }
+
   if (pdfResult.pdfDetails && pdfResult.pdfDetails.length > 0) {
     for (const detail of pdfResult.pdfDetails) {
       if (detail.status === 'zero_records_parsed') {
         errors.push(`Partner PDF parsed zero records: ${detail.url}`);
       }
+
+      const qRatioPct = (detail.quarantine_ratio ?? 0) * 100;
+      if (qRatioPct > pdfConfig.perPdfQuarantineBlockPct) {
+        errors.push(`Partner PDF '${detail.source_key}' quarantine ratio ${qRatioPct.toFixed(1)}% exceeds blocking threshold ${pdfConfig.perPdfQuarantineBlockPct}%`);
+      } else if (qRatioPct > pdfConfig.perPdfQuarantineWarnPct) {
+        warnings.push(`Partner PDF '${detail.source_key}' quarantine ratio ${qRatioPct.toFixed(1)}% exceeds warning threshold ${pdfConfig.perPdfQuarantineWarnPct}%`);
+      }
+
+      // Per-PDF historical baseline check
+      const prevDetail = prevPdfDetailsMap.get(detail.source_key);
+      if (prevDetail && prevDetail.valid_record_count > 0) {
+        const prevCount = prevDetail.valid_record_count;
+        const currCount = detail.valid_record_count ?? 0;
+        const dropPct = ((prevCount - currCount) / prevCount) * 100;
+
+        if (dropPct > pdfConfig.validCountDropBlockPct) {
+          errors.push(`Partner PDF '${detail.source_key}' valid record count dropped by ${dropPct.toFixed(1)}% (${prevCount} -> ${currCount}), blocking threshold: ${pdfConfig.validCountDropBlockPct}%`);
+        } else if (dropPct > pdfConfig.validCountDropWarnPct) {
+          warnings.push(`Partner PDF '${detail.source_key}' valid record count dropped by ${dropPct.toFixed(1)}% (${prevCount} -> ${currCount}), warning threshold: ${pdfConfig.validCountDropWarnPct}%`);
+        }
+      }
     }
   }
 
-  // Quarantine checks: block publication if corrupted records were quarantined
-  const quarantinedRecords = pdfResult.quarantinedRecords || [];
+  // Quarantine checks: block publication if severe corrupted or duplicate conflict records were quarantined
   if (quarantinedRecords.length > 0) {
-    const severeReasons = ['EMBEDDED_SERVICE_CODE', 'RESIDUAL_SEPARATOR', 'PLACEHOLDER_ADDRESS', 'NAME_EQUALS_ADDRESS'];
+    const severeReasons = ['EMBEDDED_SERVICE_CODE', 'RESIDUAL_SEPARATOR', 'PLACEHOLDER_ADDRESS', 'NAME_EQUALS_ADDRESS', 'DUPLICATE_CODE_CONFLICT'];
     const severeQuarantined = quarantinedRecords.filter(q => q.reasonCodes.some(r => severeReasons.includes(r)));
 
     if (severeQuarantined.length > 0) {
       errors.push(`Publication blocked due to ${severeQuarantined.length} corrupted partner PDF records in quarantine (reasons: ${[...new Set(severeQuarantined.flatMap(q => q.reasonCodes))].join(', ')})`);
-    } else {
-      warnings.push(`${quarantinedRecords.length} partner PDF records quarantined during parsing`);
     }
   }
 
@@ -315,7 +359,6 @@ export function checkCompletenessGates({
     enCodes: enCodes.size
   };
 
-  const previousMetadata = config.previousMetadata || null;
   const baselineAvailable = previousRecords != null && previousRecords.length > 0;
 
   const prevCounts = {

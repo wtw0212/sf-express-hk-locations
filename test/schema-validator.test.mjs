@@ -34,7 +34,7 @@ const validRecord = {
 };
 
 const validMetadata = {
-  schema_version: 2,
+  schema_version: 3,
   source_retrieved_at: '2026-07-27 10:00 (HKT UTC+8)',
   generated_at: '2026-07-27 10:00 (HKT UTC+8)',
   retrieved_at: '2026-07-27 10:00 (HKT UTC+8)',
@@ -113,30 +113,34 @@ const validMetadata = {
       raw_snapshot_sha256: 'a'.repeat(64),
       semantic_sha256: 'b'.repeat(64),
       record_count: 1,
-      record_hashes: { '852A': 'c'.repeat(64) },
-      duplicate_codes: []
+      duplicate_codes: [],
+      record_hashes_ref: '/sources/api_tc/record_hashes'
     },
     api_en: {
       raw_snapshot_sha256: 'd'.repeat(64),
       semantic_sha256: 'e'.repeat(64),
       record_count: 1,
-      record_hashes: { '852A': 'f'.repeat(64) },
-      duplicate_codes: []
+      duplicate_codes: [],
+      record_hashes_ref: '/sources/api_en/record_hashes'
     },
     ssr: {
       semantic_sha256: '1'.repeat(64),
       record_count: 0,
-      record_hashes: {}
+      duplicate_codes: []
     },
     reviewed_registry: {
       semantic_sha256: '2'.repeat(64),
       record_count: 0,
-      record_hashes: {}
+      duplicate_codes: []
     },
     canonical: {
       semantic_sha256: '3'.repeat(64),
       record_count: 1,
-      record_hashes: { '852A': '4'.repeat(64) }
+      duplicate_codes: []
+    },
+    partner_pdf: {
+      semantic_sha256: '4'.repeat(64),
+      document_count: 8
     }
   }
 };
@@ -173,6 +177,11 @@ test('schema-validator: rejects metadata match rate > 1 or negative count', asyn
   };
   const res = await validateMetadataSchema(invalidMeta);
   assert.equal(res.valid, false);
+});
+
+test('schema-validator: metadata schema v3 rejects legacy v2 artifacts', async () => {
+  const result = await validateMetadataSchema({ ...validMetadata, schema_version: 2 });
+  assert.equal(result.valid, false);
 });
 
 test('schema-validator: validates all release artifacts together', async () => {

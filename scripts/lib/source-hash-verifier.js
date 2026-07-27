@@ -1,6 +1,10 @@
 // @ts-check
 import {
   calculateApiSnapshotHashes,
+  calculateCanonicalDatasetHash,
+  calculatePdfTextSnapshotHash,
+  calculateReviewedRegistryHash,
+  calculateSsrHash,
   canonicalizeApiRecords,
   sha256,
   stableStringify
@@ -76,13 +80,6 @@ function verifyApiSource(name, source) {
   if (stableStringify(recalculated.duplicate_codes) !== stableStringify(source.duplicate_codes)) {
     errors.push(`${name}: duplicate-code evidence mismatch`);
   }
-  const summarizedRecords = canonicalizeApiRecords(source.records || []);
-  if (
-    summarizedRecords.semantic_sha256 !== recalculated.semantic_sha256 ||
-    stableStringify(summarizedRecords.record_hashes) !== stableStringify(recalculated.record_hashes)
-  ) {
-    errors.push(`${name}: source summary records mismatch`);
-  }
   return errors;
 }
 
@@ -130,9 +127,13 @@ export function verifySourceHashes(snapshot, metadata = null) {
           errors.push(`${sourceName}: metadata ${field} mismatch`);
         }
       }
-      if (stableStringify(snapshotSource?.record_hashes || {}) !==
-          stableStringify(metadataSource.record_hashes || {})) {
-        errors.push(`${sourceName}: metadata record hashes mismatch`);
+      const expectedRef = `/sources/${sourceName}/record_hashes`;
+      if (metadataSource.record_hashes_ref !== expectedRef) {
+        errors.push(`${sourceName}: metadata record_hashes_ref mismatch`);
+      }
+      if (stableStringify(snapshotSource?.duplicate_codes || []) !==
+          stableStringify(metadataSource.duplicate_codes || [])) {
+        errors.push(`${sourceName}: metadata duplicate-code evidence mismatch`);
       }
     }
   }
@@ -140,4 +141,68 @@ export function verifySourceHashes(snapshot, metadata = null) {
     throw new Error(`Source hash verification failed:\n${errors.join('\n')}`);
   }
   return true;
+}
+
+function compareSemanticSection(name, calculated, stored, errors) {
+  if (!stored) {
+    errors.push(`${name}: metadata source_integrity missing`);
+    return;
+  }
+  for (const field of Object.keys(calculated)) {
+    const matches = calculated[field] && typeof calculated[field] === 'object'
+      ? stableStringify(calculated[field]) === stableStringify(stored[field])
+      : calculated[field] === stored[field];
+    if (!matches) {
+      errors.push(`${name}: metadata ${field} mismatch`);
+    }
+  }
+}
+
+/**
+ * Verify every committed integrity section from its authoritative artifact.
+ */
+export function verifyReleaseIntegrity({
+  snapshot,
+  metadata,
+  locations,
+  reviewedRegistryRecords
+}) {
+  verifySourceHashes(snapshot, metadata);
+  const errors = [];
+  compareSemanticSection(
+    'ssr',
+    omitRecordHashes(calculateSsrHash(snapshot.sources.ssr.records)),
+    metadata.source_integrity.ssr,
+    errors
+  );
+  compareSemanticSection(
+    'reviewed_registry',
+    omitRecordHashes(calculateReviewedRegistryHash(reviewedRegistryRecords)),
+    metadata.source_integrity.reviewed_registry,
+    errors
+  );
+  compareSemanticSection(
+    'canonical',
+    omitRecordHashes(calculateCanonicalDatasetHash(locations)),
+    metadata.source_integrity.canonical,
+    errors
+  );
+  compareSemanticSection(
+    'partner_pdf',
+    calculatePdfTextSnapshotHash(snapshot.sources.partner_pdf.documents),
+    metadata.source_integrity.partner_pdf,
+    errors
+  );
+  if (metadata.counts.total !== locations.length) {
+    errors.push('canonical: metadata total count mismatch');
+  }
+  if (errors.length > 0) {
+    throw new Error(`Release integrity verification failed:\n${errors.join('\n')}`);
+  }
+  return true;
+}
+
+function omitRecordHashes(value) {
+  const { record_hashes: _recordHashes, ...compact } = value;
+  return compact;
 }

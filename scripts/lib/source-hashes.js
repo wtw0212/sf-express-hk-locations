@@ -258,7 +258,8 @@ export function calculateCanonicalDatasetHash(records = []) {
   return {
     semantic_sha256: sha256(stableStringify(canonical)),
     record_count: canonical.length,
-    record_hashes: recordHashes
+    record_hashes: recordHashes,
+    duplicate_codes: []
   };
 }
 
@@ -276,17 +277,26 @@ function calculateNamedRecordSetHash(records, canonicalize, codeField = 'code') 
 
   const selected = [];
   const recordHashes = {};
+  const duplicateCodes = [];
   for (const code of [...grouped.keys()].sort()) {
     const variants = grouped.get(code)
       .map(record => ({ record, serialized: stableStringify(record) }))
       .sort((a, b) => a.serialized.localeCompare(b.serialized));
     selected.push(variants[0].record);
     recordHashes[code] = sha256(variants[0].serialized);
+    if (variants.length > 1) {
+      duplicateCodes.push({
+        serviceCode: code,
+        occurrences: variants.length,
+        conflicting: new Set(variants.map(item => item.serialized)).size > 1
+      });
+    }
   }
   return {
     semantic_sha256: sha256(stableStringify(selected)),
     record_count: selected.length,
-    record_hashes: recordHashes
+    record_hashes: recordHashes,
+    duplicate_codes: duplicateCodes
   };
 }
 
@@ -324,6 +334,21 @@ export function calculateReviewedRegistryHash(records = []) {
     source_url: record?._source_url ?? record?.source_url ?? null,
     evidence: record?._registry_evidence ?? null
   }));
+}
+
+export function calculatePdfTextSnapshotHash(documents = []) {
+  const evidence = documents.map(document => ({
+    source_key: document?.source_key ?? null,
+    extracted_text_sha256: document?.extracted_text_sha256 ?? null
+  })).sort((a, b) => String(a.source_key).localeCompare(String(b.source_key)));
+  const keys = evidence.map(item => item.source_key).filter(Boolean);
+  if (new Set(keys).size !== keys.length) {
+    throw new Error('Duplicate partner PDF source_key');
+  }
+  return {
+    semantic_sha256: sha256(stableStringify(evidence)),
+    document_count: evidence.length
+  };
 }
 
 /**

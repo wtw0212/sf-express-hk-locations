@@ -83,7 +83,7 @@ export function normalizeRecords(options = {}) {
 
   for (const [code, { item, source }] of mergedMap) {
     const name = (item.name || '').trim();
-    const address = (item.address || '').trim();
+    const sourceAddress = (item.address || '').trim();
 
     // Resolve district
     const districtResult = resolveAdminDistrict(item);
@@ -115,6 +115,9 @@ export function normalizeRecords(options = {}) {
     const subDistrict = reviewedFallback
       ? (item.sub_district || '').trim() || districtResult.sub_district
       : districtResult.sub_district;
+    const derivedAddress =
+      districtResult.sub_district || districtResult.district || name || '香港';
+    const address = sourceAddress || derivedAddress;
 
     const normalized = {
       id: code,
@@ -130,7 +133,7 @@ export function normalizeRecords(options = {}) {
       district_en: districtResult.district_en,
       sub_district: subDistrict,
       sub_district_en: subDistrictEn ?? districtResult.sub_district_en,
-      address: address || (districtResult.sub_district || districtResult.district || name || '香港'),
+      address,
       address_en: addressEn,
       telephone: item.telephone || null,
       business_hours: businessHours,
@@ -144,7 +147,7 @@ export function normalizeRecords(options = {}) {
       provenance: {
         name: source,
         name_en: enItem ? SOURCES.API_EN : (nameEn ? source : null),
-        address: source,
+        address: sourceAddress ? source : SOURCES.DERIVED,
         address_en: enItem ? SOURCES.API_EN : (addressEn ? source : null),
         district: districtResult.flags.some(f => f.type === 'ADMIN_DISTRICT_ALIAS_APPLIED')
           ? SOURCES.DERIVED : source,
@@ -158,7 +161,21 @@ export function normalizeRecords(options = {}) {
     normalized.quality_flags = [
       ...districtResult.flags,
       ...classification.flags,
-      ...bilingualFlags
+      ...bilingualFlags,
+      ...(!sourceAddress ? [
+        {
+          type: 'MISSING_SOURCE_ADDRESS',
+          severity: classification.type === 'partner' ? 'warning' : 'error',
+          fields: ['address'],
+          details: { source }
+        },
+        {
+          type: 'ADDRESS_DERIVED_FROM_LOCATION',
+          severity: 'warning',
+          fields: ['address'],
+          details: { derived_from: districtResult.sub_district ? 'sub_district' : districtResult.district ? 'district' : name ? 'name' : 'country' }
+        }
+      ] : [])
     ];
 
     records.push(normalized);

@@ -111,6 +111,25 @@ function getPdfEvidence(pdfRec, sourceRetrievedAt) {
   };
 }
 
+function documentFromEvidence(evidence) {
+  return {
+    source_key: evidence.source_key,
+    source_url: evidence.source_url,
+    document_retrieved_at: evidence.document_retrieved_at,
+    document_binary_sha256: evidence.document_binary_sha256,
+    extracted_text_sha256: evidence.extracted_text_sha256
+  };
+}
+
+function evidenceReference(evidence, documents, fallbackId) {
+  const documentId = evidence.source_key || fallbackId;
+  if (!documents[documentId]) documents[documentId] = documentFromEvidence(evidence);
+  return {
+    document_id: documentId,
+    parser_location: evidence.parser_location
+  };
+}
+
 function compareCanonicalToPdf(canonicalItem, pdfRec, canonicalHours, canonicalSource) {
   const comparison = {};
   const name = compareField('name', canonicalItem.name, pdfRec.name);
@@ -144,6 +163,7 @@ export function auditPartnerPdfRecords({
   reviewedPdfList = [],
   parsedPdfRecords = [],
   quarantinedRecords = [],
+  pdfDocuments = [],
   sourceRetrievedAt = '',
   generatedAt = ''
 }) {
@@ -154,6 +174,17 @@ export function auditPartnerPdfRecords({
   const reviewedPdfDrift = [];
   const newPdfOnlyCandidates = [];
   const livePdfCodes = new Set();
+  const documents = {};
+  for (const [index, document] of pdfDocuments.entries()) {
+    const documentId = document.source_key || `document-${index + 1}`;
+    documents[documentId] = {
+      source_key: document.source_key || null,
+      source_url: document.url || null,
+      document_retrieved_at: document.document_retrieved_at || sourceRetrievedAt || null,
+      document_binary_sha256: document.document_binary_sha256 || null,
+      extracted_text_sha256: document.extracted_text_sha256 || null
+    };
+  }
 
   for (const pdfRec of parsedPdfRecords) {
     const code = pdfRec.serviceCode || pdfRec.code;
@@ -163,6 +194,7 @@ export function auditPartnerPdfRecords({
     const apiItem = tcMap.get(code);
     const reviewedItem = reviewedMap.get(code);
     const evidence = getPdfEvidence(pdfRec, sourceRetrievedAt);
+    const evidenceRef = evidenceReference(evidence, documents, `record-${code}`);
 
     if (apiItem) {
       const comparison = compareCanonicalToPdf(apiItem, pdfRec, apiItem.serviceTime, 'api');
@@ -178,7 +210,7 @@ export function auditPartnerPdfRecords({
           differing_fields: Object.keys(comparison),
           classification: classifyEntry(comparison),
           comparison,
-          evidence
+          ...evidenceRef
         });
       }
       continue;
@@ -203,7 +235,7 @@ export function auditPartnerPdfRecords({
           differing_fields: Object.keys(comparison),
           classification: classifyEntry(comparison),
           comparison,
-          evidence
+          ...evidenceRef
         });
       }
       continue;
@@ -217,8 +249,7 @@ export function auditPartnerPdfRecords({
         district: projectPdfLocation(pdfRec).district,
         sub_district: projectPdfLocation(pdfRec).sub_district,
         business_hours: pdfRec.serviceTime || null,
-        source_url: evidence.source_url,
-        evidence
+        ...evidenceRef
       });
     }
   }
@@ -228,31 +259,26 @@ export function auditPartnerPdfRecords({
     const code = reviewedItem.code || reviewedItem.serviceCode;
     if (!livePdfCodes.has(code)) {
       const registryEvidence = reviewedItem._registry_evidence || {};
+      const evidence = {
+        source_key: registryEvidence.source_key || reviewedItem._source_key || null,
+        source_url: registryEvidence.reviewed_source_url || reviewedItem._source_url || null,
+        document_retrieved_at:
+          registryEvidence.reviewed_source_retrieved_at || reviewedItem._reviewed_at || null,
+        document_binary_sha256: registryEvidence.reviewed_document_binary_sha256 || null,
+        extracted_text_sha256: registryEvidence.reviewed_extracted_text_sha256 || null,
+        parser_location: null
+      };
       missingReviewedRecords.push({
         code,
         name: reviewedItem.name || null,
         address: reviewedItem.address || null,
-        evidence: {
-          source_key: registryEvidence.source_key || reviewedItem._source_key || null,
-          source_url: registryEvidence.reviewed_source_url || reviewedItem._source_url || null,
-          document_retrieved_at:
-            registryEvidence.reviewed_source_retrieved_at || reviewedItem._reviewed_at || null,
-          document_binary_sha256: registryEvidence.reviewed_document_binary_sha256 || null,
-          extracted_text_sha256: registryEvidence.reviewed_extracted_text_sha256 || null,
-          parser_location: null
-        }
+        ...evidenceReference(evidence, documents, `reviewed-${code}`)
       });
     }
   }
 
-  const formattedQuarantine = quarantinedRecords.map(q => ({
-    extractedCode: q.extractedCode ?? null,
-    involvedCodes: q.involvedCodes?.length > 0 ? q.involvedCodes : [q.extractedCode].filter(Boolean),
-    rawSegment: q.rawSegment || q.provenance?.raw_row || '',
-    candidateRecord: q.candidateRecord || null,
-    reasonCodes: q.reasonCodes || [],
-    provenance: q.provenance || {},
-    evidence: {
+  const formattedQuarantine = quarantinedRecords.map((q, index) => {
+    const evidence = {
       source_key: q.provenance?.source_key || null,
       source_url: q.provenance?.source_url || null,
       document_retrieved_at: q.provenance?.document_retrieved_at || sourceRetrievedAt || null,
@@ -261,8 +287,16 @@ export function auditPartnerPdfRecords({
       parser_location: q.provenance
         ? { row_index: q.provenance.row_index ?? null, raw_row: q.provenance.raw_row ?? null }
         : null
-    }
-  }));
+    };
+    return {
+      extractedCode: q.extractedCode ?? null,
+      involvedCodes: q.involvedCodes?.length > 0 ? q.involvedCodes : [q.extractedCode].filter(Boolean),
+      rawSegment: q.rawSegment || q.provenance?.raw_row || '',
+      candidateRecord: q.candidateRecord || null,
+      reasonCodes: q.reasonCodes || [],
+      ...evidenceReference(evidence, documents, `quarantine-${index + 1}`)
+    };
+  });
 
   const classifiedDifferences = [...apiPdfConflicts, ...reviewedPdfDrift];
   const entryClassificationCounts = Object.fromEntries(
@@ -288,6 +322,7 @@ export function auditPartnerPdfRecords({
   return {
     source_retrieved_at: sourceRetrievedAt,
     generated_at: generatedAt,
+    documents,
     summary: {
       parsed_pdf_record_count: parsedPdfRecords.length,
       api_pdf_conflict_count: apiSemanticConflicts.length,

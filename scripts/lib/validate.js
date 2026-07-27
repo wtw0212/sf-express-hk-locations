@@ -62,6 +62,26 @@ export function validateRecords(records) {
     if (!Array.isArray(r.quality_flags)) {
       errors.push(`${r.code}: missing quality_flags array`);
     }
+    const flagTypes = new Set(Array.isArray(r.quality_flags)
+      ? r.quality_flags.map(flag => flag?.type)
+      : []);
+    const hasDerivedAddressEvidence =
+      r.provenance?.address === SOURCES.DERIVED &&
+      flagTypes.has('MISSING_SOURCE_ADDRESS') &&
+      flagTypes.has('ADDRESS_DERIVED_FROM_LOCATION');
+    if (
+      (r.type === 'store' || r.type === 'locker') &&
+      flagTypes.has('MISSING_SOURCE_ADDRESS')
+    ) {
+      errors.push(`${r.code} (${r.type}): derived fallback address cannot be published`);
+    }
+    if (
+      r.type === 'partner' &&
+      (r.provenance?.address === SOURCES.DERIVED || flagTypes.has('MISSING_SOURCE_ADDRESS')) &&
+      !hasDerivedAddressEvidence
+    ) {
+      errors.push(`${r.code} (partner): derived address requires explicit provenance and quality flags`);
+    }
 
     // 5. Source & Provenance validation
     if (!VALID_SOURCES.includes(r.source)) {
@@ -174,20 +194,36 @@ export function checkPipelineRegression({
   previousIntegrity,
   currentIntegrity,
   migrationApproved = false,
-  schemaMigration = false
+  baselineSchemaVersion = null,
+  allowLegacyIntegrityBaseline = false
 }) {
   const errors = [];
   const warnings = [];
   const requiredSources = ['api_tc', 'api_en', 'ssr', 'reviewed_registry', 'canonical'];
 
-  if (
-    !previousIntegrity ||
-    !currentIntegrity ||
-    requiredSources.some(key => !previousIntegrity[key]?.semantic_sha256) ||
-    requiredSources.some(key => !currentIntegrity[key]?.semantic_sha256)
-  ) {
-    warnings.push('Pipeline regression comparison unavailable: baseline source_integrity is missing or incomplete');
-    return { pass: true, errors, warnings };
+  const currentComplete =
+    currentIntegrity &&
+    requiredSources.every(key => currentIntegrity[key]?.semantic_sha256);
+  if (!currentComplete) {
+    errors.push('Current schema v3 source_integrity is missing or incomplete');
+    return { pass: false, errors, warnings };
+  }
+
+  if (baselineSchemaVersion !== 3) {
+    if (allowLegacyIntegrityBaseline) {
+      warnings.push('Pipeline regression comparison skipped for explicitly approved legacy integrity baseline');
+    } else {
+      errors.push('Legacy integrity baseline requires explicit approval');
+    }
+    return { pass: errors.length === 0, errors, warnings };
+  }
+
+  const previousComplete =
+    previousIntegrity &&
+    requiredSources.every(key => previousIntegrity[key]?.semantic_sha256);
+  if (!previousComplete) {
+    errors.push('Baseline schema v3 source_integrity is missing or incomplete');
+    return { pass: errors.length === 0, errors, warnings };
   }
 
   const canonicalChanged =
@@ -196,7 +232,7 @@ export function checkPipelineRegression({
     previousIntegrity[key].semantic_sha256 !== currentIntegrity[key].semantic_sha256
   );
 
-  if (canonicalChanged && !sourceChanged && !migrationApproved && !schemaMigration) {
+  if (canonicalChanged && !sourceChanged && !migrationApproved) {
     errors.push(
       'Canonical output changed unexpectedly while all source semantic hashes remained unchanged'
     );

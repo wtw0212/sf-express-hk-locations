@@ -22,7 +22,10 @@ test('integration: runSync with isFixture defaults to publish=false and does not
   const repoDataStat = existsSync('data/locations.json') ? await readFile('data/locations.json', 'utf8') : null;
 
   // Run in fixture mode without explicit publish -> dry-run only
-  await assert.doesNotReject(runSync({ isFixture: true }));
+  await assert.doesNotReject(runSync({
+    isFixture: true,
+    allowLegacyIntegrityBaseline: true
+  }));
 
   // Verify repo data/locations.json remained unchanged
   if (repoDataStat) {
@@ -41,7 +44,8 @@ test('integration: baselinePaths vs outputPaths separation in dry-run mode', asy
     isFixture: true,
     publish: false,
     baselineDir: baselineDataDir,
-    outputDir: tempOutputDir
+    outputDir: tempOutputDir,
+    allowLegacyIntegrityBaseline: true
   });
 
   // Baseline data/locations.json must remain 100% unchanged
@@ -63,7 +67,8 @@ test('integration: verifier CLI independently validates fixture output hashes', 
     isFixture: true,
     publish: false,
     baselineDir: resolve('data'),
-    outputDir: tempOutputDir
+    outputDir: tempOutputDir,
+    allowLegacyIntegrityBaseline: true
   });
 
   const { stdout } = await execFileAsync(process.execPath, [
@@ -71,9 +76,13 @@ test('integration: verifier CLI independently validates fixture output hashes', 
     '--snapshot',
     join(tempOutputDir, 'raw', 'latest-fetch.json'),
     '--metadata',
-    join(tempOutputDir, 'data', 'metadata.json')
+    join(tempOutputDir, 'data', 'metadata.json'),
+    '--locations',
+    join(tempOutputDir, 'data', 'locations.json'),
+    '--reviewed-registry',
+    resolve('data/reviewed-pdf-partners.json')
   ]);
-  assert.match(stdout, /Source hash verification passed/);
+  assert.match(stdout, /Full release integrity verification passed/);
   await rm(tempOutputDir, { recursive: true, force: true });
 });
 

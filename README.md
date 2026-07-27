@@ -32,10 +32,12 @@ An automated dataset and lookup web interface for SF Express Hong Kong Stores, L
 
 - **`raw/latest-fetch.json`**：保存每個 TC/EN area 在 JSON parsing 前取得的 exact HTTP response text、raw SHA-256、deterministic semantic SHA-256、record-level hashes，以及 SSR/PDF audit evidence。
 - **`data/locations.json`**：正規化後的發布資料集。針對行政區劃進行標準18區對應與品質檢測，並附帶 `quality_flags` 與 `provenance`。
-- **`data/metadata.json`**：保存 TC、EN、SSR、reviewed registry 與 canonical dataset 的 semantic integrity hashes。
-- **`data/pdf-audit.json`**：只記錄比較結果；PDF binary hash (`document_binary_sha256`) 與 extracted-text hash (`extracted_text_sha256`) 分開保存。
+- **`data/metadata.json` (schema v3)**：只保存 compact global hashes、counts、duplicate evidence 與 raw snapshot references；不重複保存 record-hash maps。
+- **`data/pdf-audit.json`**：只記錄比較結果；文件證據集中於 top-level `documents` map，各 audit entry 只保存 `document_id` 與 parser location。PDF binary hash (`document_binary_sha256`) 與 extracted-text hash (`extracted_text_sha256`) 分開保存。
 
 Repository 未保存 PDF binary，所以 fixture/offline verification 會從 committed extracted text 獨立重算 `extracted_text_sha256`；`document_binary_sha256` 是 live fetch 時按實際 PDF bytes 計算的 evidence，不會由 extracted text 代替。
+
+Artifact retention 採用單一權威副本政策：API exact raw text 與 per-area parsed records 保留在 raw snapshot，但不另存 source-level aggregate records；record-level API hashes 只保存於 raw snapshot；PDF document metadata 只保存一次。CI 亦設有大小上限（raw < 7 MB、metadata < 100 KB、PDF audit < 700 KB），防止無意義的 Git 歷史膨脹。
 
 ---
 
@@ -64,6 +66,8 @@ Repository 未保存 PDF binary，所以 fixture/offline verification 會從 com
 - `MISSING_ENGLISH_RECORD`: 官方英文 API 尚無對應紀錄
 - `MISSING_COORDINATES`: 缺少經緯度座標
 - `COORDINATES_OUTSIDE_HK`: 座標超出香港邊界範圍
+- `MISSING_SOURCE_ADDRESS`: 原始 canonical source 沒有地址
+- `ADDRESS_DERIVED_FROM_LOCATION`: 地址由小區、行政區或名稱 fallback 衍生；store/locker 會阻止發布，partner 只有在 provenance 與 flags 完整時才可保留
 
 ---
 

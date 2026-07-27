@@ -124,8 +124,7 @@
         "semantic_sha256",
         "record_hashes",
         "duplicate_codes",
-        "results",
-        "records"
+        "results"
       ],
       "properties": {
         "area_count": { "type": "integer", "minimum": 0 },
@@ -142,8 +141,7 @@
         "results": {
           "type": "array",
           "items": { "$ref": "#/definitions/apiResult" }
-        },
-        "records": { "type": "array", "items": { "type": "object" } }
+        }
       },
       "additionalProperties": false
     },

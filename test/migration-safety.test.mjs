@@ -116,10 +116,10 @@ test('PDF audit distinguishes formatting, equivalent hours, and semantic conflic
   assert.equal(formatting.comparison.name.classification, 'formatting_difference');
   assert.equal(formatting.comparison.address.classification, 'formatting_difference');
   assert.equal(formatting.comparison.business_hours.classification, 'equivalent_difference');
-  assert.equal(formatting.evidence.source_key, 'OK_HK_TC');
-  assert.equal(formatting.evidence.document_binary_sha256, 'a'.repeat(64));
-  assert.equal(formatting.evidence.extracted_text_sha256, 'c'.repeat(64));
-  assert.equal(formatting.evidence.parser_location.raw_row, 'raw PDF row');
+  assert.equal(formatting.document_id, 'OK_HK_TC');
+  assert.equal(audit.documents.OK_HK_TC.document_binary_sha256, 'a'.repeat(64));
+  assert.equal(audit.documents.OK_HK_TC.extracted_text_sha256, 'c'.repeat(64));
+  assert.equal(formatting.parser_location.raw_row, 'raw PDF row');
 
   const semantic = audit.api_pdf_conflicts.find(item => item.code === '852SEM1');
   assert.equal(semantic.comparison.name.classification, 'semantic_conflict');
@@ -235,7 +235,11 @@ test('pipeline regression gate blocks unexplained canonical drift when all seman
   const currentIntegrity = structuredClone(previousIntegrity);
   currentIntegrity.canonical.semantic_sha256 = 'new';
 
-  const result = checkPipelineRegression({ previousIntegrity, currentIntegrity });
+  const result = checkPipelineRegression({
+    previousIntegrity,
+    currentIntegrity,
+    baselineSchemaVersion: 3
+  });
   assert.equal(result.pass, false);
   assert.match(result.errors[0], /canonical output changed.*source semantic hashes remained unchanged/i);
 });
@@ -253,7 +257,8 @@ test('pipeline regression gate accepts source-explained drift or an explicit mig
   changedSsr.canonical.semantic_sha256 = 'new-canonical';
   assert.equal(checkPipelineRegression({
     previousIntegrity,
-    currentIntegrity: changedSsr
+    currentIntegrity: changedSsr,
+    baselineSchemaVersion: 3
   }).pass, true);
 
   const approved = structuredClone(previousIntegrity);
@@ -261,8 +266,71 @@ test('pipeline regression gate accepts source-explained drift or an explicit mig
   assert.equal(checkPipelineRegression({
     previousIntegrity,
     currentIntegrity: approved,
+    baselineSchemaVersion: 3,
     migrationApproved: true
   }).pass, true);
+});
+
+test('pipeline regression gate permits incomplete legacy integrity only with explicit approval', () => {
+  const currentIntegrity = {
+    api_tc: { semantic_sha256: 'a' },
+    api_en: { semantic_sha256: 'b' },
+    ssr: { semantic_sha256: 'c' },
+    reviewed_registry: { semantic_sha256: 'd' },
+    canonical: { semantic_sha256: 'e' }
+  };
+
+  const blocked = checkPipelineRegression({
+    previousIntegrity: null,
+    currentIntegrity,
+    baselineSchemaVersion: 2
+  });
+  assert.equal(blocked.pass, false);
+  assert.match(blocked.errors[0], /legacy integrity baseline requires explicit approval/i);
+
+  const approved = checkPipelineRegression({
+    previousIntegrity: null,
+    currentIntegrity,
+    baselineSchemaVersion: 2,
+    allowLegacyIntegrityBaseline: true
+  });
+  assert.equal(approved.pass, true);
+  assert.match(approved.warnings[0], /explicitly approved legacy integrity baseline/i);
+});
+
+test('pipeline regression gate treats even complete v2 integrity as legacy', () => {
+  const integrity = {
+    api_tc: { semantic_sha256: 'a' },
+    api_en: { semantic_sha256: 'b' },
+    ssr: { semantic_sha256: 'c' },
+    reviewed_registry: { semantic_sha256: 'd' },
+    canonical: { semantic_sha256: 'e' }
+  };
+  assert.equal(checkPipelineRegression({
+    previousIntegrity: integrity,
+    currentIntegrity: integrity,
+    baselineSchemaVersion: 2
+  }).pass, false);
+  assert.equal(checkPipelineRegression({
+    previousIntegrity: integrity,
+    currentIntegrity: integrity,
+    baselineSchemaVersion: 2,
+    allowLegacyIntegrityBaseline: true
+  }).pass, true);
+});
+
+test('pipeline regression gate always blocks incomplete v3 integrity', () => {
+  const incomplete = {
+    api_tc: { semantic_sha256: 'a' }
+  };
+  const result = checkPipelineRegression({
+    previousIntegrity: incomplete,
+    currentIntegrity: incomplete,
+    baselineSchemaVersion: 3,
+    allowLegacyIntegrityBaseline: true
+  });
+  assert.equal(result.pass, false);
+  assert.match(result.errors[0], /schema v3.*missing or incomplete/i);
 });
 
 test('sync rejects an explicit missing reviewed registry instead of falling back', async () => {

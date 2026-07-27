@@ -120,7 +120,7 @@ export function generateMarkdownReport({
   const ssrErrorList = (ssrResult.errors || []).map(e => `- ${e}`).join('\n');
 
   const migrationHeader = isMigration
-    ? `> [!NOTE]\n> **Schema Migration Notice**: This dataset sync represents a Schema v1 -> v2 migration. Field additions and source identifier updates are demarcated.\n\n`
+    ? `> [!NOTE]\n> **Schema Migration Notice**: This dataset sync compares the current canonical schema with an immutable legacy baseline. Field additions and source identifier updates are demarcated.\n\n`
     : '';
 
   return `# SF Express HK Location Sync Report

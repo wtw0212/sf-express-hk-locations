@@ -32,9 +32,10 @@ import { computeDiff } from './lib/diff.js';
 import { generateMarkdownReport } from './lib/report.js';
 import { atomicPublish } from './lib/atomic-publish.js';
 import { validateAllReleaseArtifactsSchemas, validateRawSnapshotSchema } from './lib/schema-validator.js';
-import { verifySourceHashes } from './lib/source-hash-verifier.js';
+import { verifyReleaseIntegrity, verifySourceHashes } from './lib/source-hash-verifier.js';
 import {
   calculateCanonicalDatasetHash,
+  calculatePdfTextSnapshotHash,
   calculateReviewedRegistryHash,
   calculateSsrHash
 } from './lib/source-hashes.js';
@@ -61,9 +62,17 @@ export function getHKTDateString() {
   return `${YYYY}-${MM}-${DD} ${hh}:${mm} (HKT UTC+8)`;
 }
 
+function compactSemanticHash(value) {
+  const { record_hashes: _recordHashes, ...compact } = value;
+  return compact;
+}
+
 export async function runSync(options = {}) {
   const isFixtureMode = options.fixture || options.isFixture || process.argv.includes('--fixture');
   const isDryRunCli = process.argv.includes('--dry-run');
+  const allowLegacyIntegrityBaseline =
+    options.allowLegacyIntegrityBaseline === true ||
+    process.argv.includes('--allow-legacy-integrity-baseline');
 
   const customBaselineDirCli = process.argv.find(arg => arg.startsWith('--baseline-dir='))?.split('=')[1] ||
     (process.argv.indexOf('--baseline-dir') >= 0 ? process.argv[process.argv.indexOf('--baseline-dir') + 1] : null);
@@ -172,6 +181,10 @@ export async function runSync(options = {}) {
       throw new Error(`Fixture file not found at ${snapshotPath} or ${fallbackPath}`);
     }
     const rawSnap = JSON.parse(await readFile(pathToRead, 'utf8'));
+    // v3 fixture migration: source-level API record aggregates were a
+    // redundant third copy. Per-area parsed records remain authoritative.
+    delete rawSnap.sources?.api_tc?.records;
+    delete rawSnap.sources?.api_en?.records;
     verifySourceHashes(rawSnap);
     const rawSchemaResult = await validateRawSnapshotSchema(rawSnap);
     if (!rawSchemaResult.valid) {
@@ -278,6 +291,7 @@ export async function runSync(options = {}) {
     reviewedPdfList,
     parsedPdfRecords: pdfResult.records,
     quarantinedRecords: pdfResult.quarantinedRecords,
+    pdfDocuments: pdfResult.documents,
     sourceRetrievedAt,
     generatedAt: hktDateStr
   });
@@ -287,28 +301,28 @@ export async function runSync(options = {}) {
       raw_snapshot_sha256: rawSnapshot.sources.api_tc.raw_snapshot_sha256,
       semantic_sha256: rawSnapshot.sources.api_tc.semantic_sha256,
       record_count: rawSnapshot.sources.api_tc.record_count,
-      record_hashes: rawSnapshot.sources.api_tc.record_hashes,
-      duplicate_codes: rawSnapshot.sources.api_tc.duplicate_codes
+      duplicate_codes: rawSnapshot.sources.api_tc.duplicate_codes,
+      record_hashes_ref: '/sources/api_tc/record_hashes'
     },
     api_en: {
       raw_snapshot_sha256: rawSnapshot.sources.api_en.raw_snapshot_sha256,
       semantic_sha256: rawSnapshot.sources.api_en.semantic_sha256,
       record_count: rawSnapshot.sources.api_en.record_count,
-      record_hashes: rawSnapshot.sources.api_en.record_hashes,
-      duplicate_codes: rawSnapshot.sources.api_en.duplicate_codes
+      duplicate_codes: rawSnapshot.sources.api_en.duplicate_codes,
+      record_hashes_ref: '/sources/api_en/record_hashes'
     },
-    ssr: calculateSsrHash(ssrResult.records),
-    reviewed_registry: calculateReviewedRegistryHash(reviewedPdfList),
-    canonical: calculateCanonicalDatasetHash(nextList)
+    ssr: compactSemanticHash(calculateSsrHash(ssrResult.records)),
+    reviewed_registry: compactSemanticHash(calculateReviewedRegistryHash(reviewedPdfList)),
+    canonical: compactSemanticHash(calculateCanonicalDatasetHash(nextList)),
+    partner_pdf: calculatePdfTextSnapshotHash(pdfResult.documents || [])
   };
 
   const regressionGate = checkPipelineRegression({
     previousIntegrity: previousMetadata?.source_integrity,
     currentIntegrity: sourceIntegrity,
     migrationApproved: options.migrationApproved === true,
-    schemaMigration:
-      previousMetadata?.schema_version != null &&
-      previousMetadata.schema_version !== 2
+    baselineSchemaVersion: previousMetadata?.schema_version ?? null,
+    allowLegacyIntegrityBaseline
   });
 
   // ─── 6. Validate next records & Completeness gates ──────────────────
@@ -383,7 +397,7 @@ export async function runSync(options = {}) {
   }
 
   const metadata = {
-    schema_version: 2,
+    schema_version: 3,
     source_retrieved_at: sourceRetrievedAt,
     generated_at: hktDateStr,
     retrieved_at: sourceRetrievedAt,
@@ -478,6 +492,12 @@ export async function runSync(options = {}) {
   };
 
   // Always run release validation in BOTH dry-run and live modes
+  verifyReleaseIntegrity({
+    snapshot: rawSnapshot,
+    metadata,
+    locations: nextList,
+    reviewedRegistryRecords: reviewedPdfList
+  });
   await validateAllReleaseArtifactsSchemas(releaseArtifacts);
   validateCrossFile(
     nextList,

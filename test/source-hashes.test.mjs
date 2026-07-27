@@ -9,6 +9,7 @@ import {
   canonicalizeApiRecords,
   calculateApiSnapshotHashes,
   calculateCanonicalDatasetHash,
+  calculateSsrHash,
   diffRecordHashes
 } from '../scripts/lib/source-hashes.js';
 
@@ -194,4 +195,17 @@ test('canonical dataset hash excludes volatile timestamps and quality flag order
     calculateCanonicalDatasetHash([first]).semantic_sha256,
     calculateCanonicalDatasetHash([reordered]).semantic_sha256
   );
+});
+
+test('SSR semantic hashing reports duplicate service codes deterministically', () => {
+  const result = calculateSsrHash([
+    { serviceCode: '852SSR', name: 'B' },
+    { serviceCode: '852SSR', name: 'A' }
+  ]);
+  assert.deepEqual(result.duplicate_codes, [{
+    serviceCode: '852SSR',
+    occurrences: 2,
+    conflicting: true
+  }]);
+  assert.equal(result.record_count, 1);
 });

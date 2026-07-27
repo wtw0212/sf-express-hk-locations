@@ -15,7 +15,7 @@
     "source_integrity"
   ],
   "properties": {
-    "schema_version": { "type": "integer", "enum": [2] },
+    "schema_version": { "type": "integer", "const": 3 },
     "source_retrieved_at": { "type": "string", "minLength": 1 },
     "generated_at": { "type": "string", "minLength": 1 },
     "retrieved_at": { "type": "string", "minLength": 1 },
@@ -246,13 +246,14 @@
     },
     "source_integrity": {
       "type": "object",
-      "required": ["api_tc", "api_en", "ssr", "reviewed_registry", "canonical"],
+      "required": ["api_tc", "api_en", "ssr", "reviewed_registry", "canonical", "partner_pdf"],
       "properties": {
         "api_tc": { "$ref": "#/definitions/apiIntegrity" },
         "api_en": { "$ref": "#/definitions/apiIntegrity" },
         "ssr": { "$ref": "#/definitions/semanticIntegrity" },
         "reviewed_registry": { "$ref": "#/definitions/semanticIntegrity" },
-        "canonical": { "$ref": "#/definitions/semanticIntegrity" }
+        "canonical": { "$ref": "#/definitions/semanticIntegrity" },
+        "partner_pdf": { "$ref": "#/definitions/pdfIntegrity" }
       },
       "additionalProperties": false
     }
@@ -262,17 +263,16 @@
       "type": "string",
       "pattern": "^[a-f0-9]{64}$"
     },
-    "recordHashes": {
-      "type": "object",
-      "additionalProperties": { "$ref": "#/definitions/sha256" }
-    },
     "semanticIntegrity": {
       "type": "object",
-      "required": ["semantic_sha256", "record_count", "record_hashes"],
+      "required": ["semantic_sha256", "record_count", "duplicate_codes"],
       "properties": {
         "semantic_sha256": { "$ref": "#/definitions/sha256" },
         "record_count": { "type": "integer", "minimum": 0 },
-        "record_hashes": { "$ref": "#/definitions/recordHashes" }
+        "duplicate_codes": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/duplicateCode" }
+        }
       },
       "additionalProperties": false
     },
@@ -282,27 +282,40 @@
         "raw_snapshot_sha256",
         "semantic_sha256",
         "record_count",
-        "record_hashes",
-        "duplicate_codes"
+        "duplicate_codes",
+        "record_hashes_ref"
       ],
       "properties": {
         "raw_snapshot_sha256": { "$ref": "#/definitions/sha256" },
         "semantic_sha256": { "$ref": "#/definitions/sha256" },
         "record_count": { "type": "integer", "minimum": 0 },
-        "record_hashes": { "$ref": "#/definitions/recordHashes" },
+        "record_hashes_ref": {
+          "type": "string",
+          "pattern": "^/sources/api_(tc|en)/record_hashes$"
+        },
         "duplicate_codes": {
           "type": "array",
-          "items": {
-            "type": "object",
-            "required": ["serviceCode", "occurrences", "conflicting"],
-            "properties": {
-              "serviceCode": { "type": "string", "minLength": 1 },
-              "occurrences": { "type": "integer", "minimum": 2 },
-              "conflicting": { "type": "boolean" }
-            },
-            "additionalProperties": false
-          }
+          "items": { "$ref": "#/definitions/duplicateCode" }
         }
+      },
+      "additionalProperties": false
+    },
+    "pdfIntegrity": {
+      "type": "object",
+      "required": ["semantic_sha256", "document_count"],
+      "properties": {
+        "semantic_sha256": { "$ref": "#/definitions/sha256" },
+        "document_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "duplicateCode": {
+      "type": "object",
+      "required": ["serviceCode", "occurrences", "conflicting"],
+      "properties": {
+        "serviceCode": { "type": "string", "minLength": 1 },
+        "occurrences": { "type": "integer", "minimum": 2 },
+        "conflicting": { "type": "boolean" }
       },
       "additionalProperties": false
     },

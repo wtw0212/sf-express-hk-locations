@@ -87,6 +87,24 @@ test('quality_flags is always an array', () => {
   assert.ok(Array.isArray(records[0].quality_flags));
 });
 
+test('missing source address is explicitly derived and flagged', () => {
+  const tcMap = new Map([['852PARTNER', {
+    serviceCode: '852PARTNER',
+    name: '合作點',
+    address: '',
+    city: '灣仔區',
+    district: '灣仔',
+    isPartner: true
+  }]]);
+  const { records } = normalizeRecords({ tcMap, enMap: new Map(), generatedAt: '2024-01-01' });
+  const record = records[0];
+
+  assert.equal(record.address, '灣仔');
+  assert.equal(record.provenance.address, 'derived');
+  assert.ok(record.quality_flags.some(flag => flag.type === 'MISSING_SOURCE_ADDRESS'));
+  assert.ok(record.quality_flags.some(flag => flag.type === 'ADDRESS_DERIVED_FROM_LOCATION'));
+});
+
 test('SSR and Reviewed PDF records used only when not in TC API', () => {
   const tcMap = new Map([['852AA', {
     serviceCode: '852AA', name: 'API Version', address: 'API Addr', city: '大埔區', district: '大埔',

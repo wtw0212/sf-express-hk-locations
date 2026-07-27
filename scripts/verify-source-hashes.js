@@ -2,7 +2,8 @@
 // @ts-check
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import { verifySourceHashes } from './lib/source-hash-verifier.js';
+import { verifyReleaseIntegrity } from './lib/source-hash-verifier.js';
+import { loadReviewedPdfRegistry } from './lib/reviewed-pdf-registry.js';
 import {
   validateMetadataSchema,
   validateRawSnapshotSchema
@@ -16,12 +17,18 @@ function valueAfter(flag) {
 async function main() {
   const snapshotPath = valueAfter('--snapshot');
   const metadataPath = valueAfter('--metadata');
-  if (!snapshotPath || !metadataPath) {
-    throw new Error('Usage: verify-source-hashes.js --snapshot <path> --metadata <path>');
+  const locationsPath = valueAfter('--locations');
+  const reviewedRegistryPath = valueAfter('--reviewed-registry');
+  if (!snapshotPath || !metadataPath || !locationsPath || !reviewedRegistryPath) {
+    throw new Error(
+      'Usage: verify-source-hashes.js --snapshot <path> --metadata <path> --locations <path> --reviewed-registry <path>'
+    );
   }
 
   const snapshot = JSON.parse(await readFile(resolve(snapshotPath), 'utf8'));
   const metadata = JSON.parse(await readFile(resolve(metadataPath), 'utf8'));
+  const locations = JSON.parse(await readFile(resolve(locationsPath), 'utf8'));
+  const reviewedRegistry = await loadReviewedPdfRegistry(resolve(reviewedRegistryPath));
 
   const rawSchema = await validateRawSnapshotSchema(snapshot);
   if (!rawSchema.valid) {
@@ -32,8 +39,13 @@ async function main() {
     throw new Error(`Metadata schema validation failed:\n${metadataSchema.errors.join('\n')}`);
   }
 
-  verifySourceHashes(snapshot, metadata);
-  console.log('Source hash verification passed.');
+  verifyReleaseIntegrity({
+    snapshot,
+    metadata,
+    locations,
+    reviewedRegistryRecords: reviewedRegistry.records
+  });
+  console.log('Full release integrity verification passed.');
 }
 
 main().catch(error => {

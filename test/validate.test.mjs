@@ -174,3 +174,30 @@ test('validateCrossFile: validates cross-file consistency', () => {
   const badMetadata = { counts: { total: 4, stores: 1, lockers: 1, partners: 1 } };
   assert.throws(() => validateCrossFile(allRecords, stores, lockers, partners, byDistrict, badMetadata), /Metadata total count/);
 });
+
+test('store and locker records cannot publish a derived fallback address', () => {
+  const record = {
+    ...validRecord,
+    address: '灣仔',
+    provenance: { ...validRecord.provenance, address: 'derived' },
+    quality_flags: [
+      { type: 'MISSING_SOURCE_ADDRESS', severity: 'error', fields: ['address'] },
+      { type: 'ADDRESS_DERIVED_FROM_LOCATION', severity: 'warning', fields: ['address'] }
+    ]
+  };
+  assert.ok(validateRecords([record]).errors.some(error => /derived fallback address/i.test(error)));
+});
+
+test('partner record may retain a derived address only with explicit provenance and flags', () => {
+  const record = {
+    ...validRecord,
+    type: 'partner',
+    address: '灣仔',
+    provenance: { ...validRecord.provenance, address: 'derived' },
+    quality_flags: [
+      { type: 'MISSING_SOURCE_ADDRESS', severity: 'warning', fields: ['address'] },
+      { type: 'ADDRESS_DERIVED_FROM_LOCATION', severity: 'warning', fields: ['address'] }
+    ]
+  };
+  assert.equal(validateRecords([record]).errors.length, 0);
+});

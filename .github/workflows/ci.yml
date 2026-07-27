@@ -3,8 +3,6 @@ name: CI
 on:
   pull_request:
     branches: [ main ]
-  push:
-    branches: [ refactor/pipeline-hardening ]
 
 permissions:
   contents: read
@@ -13,7 +11,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      IMMUTABLE_BASELINE_SHA: 9b6a14e24116da9973052d6bfff7ae07b793e025
+      IMMUTABLE_BASELINE_SHA: ${{ github.event.pull_request.base.sha }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -43,10 +41,10 @@ jobs:
           fi
 
       - name: Run Fixture Sync Against Parent Baseline
-        run: npm run sync -- --fixture --dry-run --baseline-dir "$RUNNER_TEMP/sf-parent-baseline" --reviewed-registry "$GITHUB_WORKSPACE/data/reviewed-pdf-partners.json" --output-dir "$RUNNER_TEMP/sf-fixture-output"
+        run: npm run sync -- --fixture --dry-run --allow-legacy-integrity-baseline --baseline-dir "$RUNNER_TEMP/sf-parent-baseline" --reviewed-registry "$GITHUB_WORKSPACE/data/reviewed-pdf-partners.json" --output-dir "$RUNNER_TEMP/sf-fixture-output"
 
       - name: Verify Source Hashes and Schemas
-        run: node scripts/verify-source-hashes.js --snapshot "$RUNNER_TEMP/sf-fixture-output/raw/latest-fetch.json" --metadata "$RUNNER_TEMP/sf-fixture-output/data/metadata.json"
+        run: node scripts/verify-source-hashes.js --snapshot "$RUNNER_TEMP/sf-fixture-output/raw/latest-fetch.json" --metadata "$RUNNER_TEMP/sf-fixture-output/data/metadata.json" --locations "$RUNNER_TEMP/sf-fixture-output/data/locations.json" --reviewed-registry "$GITHUB_WORKSPACE/data/reviewed-pdf-partners.json"
 
       - name: Re-run Test Suite After Dry-Run
         run: npm test

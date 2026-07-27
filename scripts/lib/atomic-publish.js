@@ -8,6 +8,14 @@ import {
   validateRawSnapshotSchema
 } from './schema-validator.js';
 
+export function serializeJsonArtifact(value) {
+  return `${JSON.stringify(value, null, 2)}\n`;
+}
+
+export function serializeTextArtifact(value) {
+  return `${String(value).replace(/\s+$/u, '')}\n`;
+}
+
 /**
  * Real Atomic Release Publication (All-or-Nothing with Atomic Rename and Journaled Rollback).
  *
@@ -90,13 +98,13 @@ export async function atomicPublish({
 
     // ─── Step 2: Write release files to staging ───────────────────────
     for (const file of dataFiles) {
-      const content = JSON.stringify(file.data, null, 2);
+      const content = serializeJsonArtifact(file.data);
       const filePath = join(releaseDir, file.name);
       await fs.writeFile(filePath, content, 'utf8');
     }
 
     const reportPath = join(releaseDir, 'latest-diff.md');
-    await fs.writeFile(reportPath, reportMarkdown, 'utf8');
+    await fs.writeFile(reportPath, serializeTextArtifact(reportMarkdown), 'utf8');
 
     // ─── Step 3: Validate Schemas & Cross-File Constraints ─────────────
     await validateAllReleaseArtifactsSchemas({

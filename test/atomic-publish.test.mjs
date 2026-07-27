@@ -8,6 +8,7 @@ import { atomicPublish } from '../scripts/lib/atomic-publish.js';
 import { buildRawSnapshot } from '../scripts/lib/raw-snapshot.js';
 import {
   calculateCanonicalDatasetHash,
+  calculatePdfTextSnapshotHash,
   calculateReviewedRegistryHash,
   calculateSsrHash,
   sha256
@@ -66,7 +67,7 @@ const mockRawSnapshot = buildRawSnapshot({
 }, '2026-07-27');
 
 const mockMetadata = {
-  schema_version: 2,
+  schema_version: 3,
   source_retrieved_at: '2026-07-27',
   generated_at: '2026-07-27',
   retrieved_at: '2026-07-27',
@@ -121,21 +122,27 @@ const mockMetadata = {
       raw_snapshot_sha256: mockRawSnapshot.sources.api_tc.raw_snapshot_sha256,
       semantic_sha256: mockRawSnapshot.sources.api_tc.semantic_sha256,
       record_count: mockRawSnapshot.sources.api_tc.record_count,
-      record_hashes: mockRawSnapshot.sources.api_tc.record_hashes,
-      duplicate_codes: mockRawSnapshot.sources.api_tc.duplicate_codes
+      duplicate_codes: mockRawSnapshot.sources.api_tc.duplicate_codes,
+      record_hashes_ref: '/sources/api_tc/record_hashes'
     },
     api_en: {
       raw_snapshot_sha256: mockRawSnapshot.sources.api_en.raw_snapshot_sha256,
       semantic_sha256: mockRawSnapshot.sources.api_en.semantic_sha256,
       record_count: mockRawSnapshot.sources.api_en.record_count,
-      record_hashes: mockRawSnapshot.sources.api_en.record_hashes,
-      duplicate_codes: mockRawSnapshot.sources.api_en.duplicate_codes
+      duplicate_codes: mockRawSnapshot.sources.api_en.duplicate_codes,
+      record_hashes_ref: '/sources/api_en/record_hashes'
     },
-    ssr: calculateSsrHash([]),
-    reviewed_registry: calculateReviewedRegistryHash([]),
-    canonical: calculateCanonicalDatasetHash([mockRecord])
+    ssr: compact(calculateSsrHash([])),
+    reviewed_registry: compact(calculateReviewedRegistryHash([])),
+    canonical: compact(calculateCanonicalDatasetHash([mockRecord])),
+    partner_pdf: calculatePdfTextSnapshotHash([])
   }
 };
+
+function compact(value) {
+  const { record_hashes: _recordHashes, ...result } = value;
+  return result;
+}
 
 test('atomicPublish: successful publication updates all files atomically', async () => {
   const rootDir = join(tmpdir(), `test-pub-success-${Date.now()}`);
@@ -162,6 +169,19 @@ test('atomicPublish: successful publication updates all files atomically', async
   assert.ok(existsSync(join(dataDir, 'partners.json')));
   assert.ok(existsSync(join(dataDir, 'locations-by-district.json')));
   assert.ok(existsSync(join(dataDir, 'metadata.json')));
+  for (const path of [
+    join(dataDir, 'locations.json'),
+    join(dataDir, 'stores.json'),
+    join(dataDir, 'lockers.json'),
+    join(dataDir, 'partners.json'),
+    join(dataDir, 'locations-by-district.json'),
+    join(dataDir, 'metadata.json'),
+    join(rawDir, 'latest-fetch.json'),
+    join(reportsDir, 'latest-diff.md')
+  ]) {
+    const content = await readFile(path, 'utf8');
+    assert.match(content, /[^\n]\n$/u, `${path} must have exactly one trailing newline`);
+  }
   assert.ok(existsSync(join(rawDir, 'latest-fetch.json')));
   assert.ok(existsSync(join(reportsDir, 'latest-diff.md')));
 

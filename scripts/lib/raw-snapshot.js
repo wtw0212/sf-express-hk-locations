@@ -41,8 +41,7 @@ function buildApiSource(results = []) {
     semantic_sha256: hashes.semantic_sha256,
     record_hashes: hashes.record_hashes,
     duplicate_codes: hashes.duplicate_codes,
-    results: normalizedResults,
-    records: normalizedResults.flatMap(result => result.records)
+    results: normalizedResults
   };
 }
 
@@ -84,6 +83,6 @@ export async function saveRawSnapshot(rawDir, sources, retrievedAt) {
   const snapshot = sources?.schema_version === 3
     ? sources
     : buildRawSnapshot(sources, retrievedAt);
-  await writeFile(join(rawDir, 'latest-fetch.json'), JSON.stringify(snapshot, null, 2), 'utf8');
+  await writeFile(join(rawDir, 'latest-fetch.json'), `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
   return snapshot;
 }

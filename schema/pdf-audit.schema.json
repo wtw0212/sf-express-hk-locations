@@ -1,0 +1,208 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SF Express HK PDF Audit Artifact Schema",
+  "definitions": {
+    "document": {
+      "type": "object",
+      "required": ["source_key", "source_url", "document_retrieved_at", "document_binary_sha256", "extracted_text_sha256"],
+      "properties": {
+        "source_key": { "type": ["string", "null"] },
+        "source_url": { "type": ["string", "null"] },
+        "document_retrieved_at": { "type": ["string", "null"] },
+        "document_binary_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+        "extracted_text_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" }
+      },
+      "additionalProperties": false
+    },
+    "parserLocation": {
+      "type": ["object", "null"],
+      "properties": {
+        "row_index": { "type": ["integer", "null"], "minimum": 1 },
+        "raw_row": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "comparison": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["canonical", "pdf", "classification"],
+        "properties": {
+          "canonical": { "type": ["string", "null"] },
+          "pdf": { "type": ["string", "null"] },
+          "classification": { "type": "string", "enum": ["formatting_difference", "equivalent_difference", "semantic_conflict", "name_specificity_difference"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "classificationCounts": {
+      "type": "object",
+      "required": [
+        "semantic_conflict",
+        "name_specificity_difference",
+        "formatting_difference",
+        "equivalent_difference"
+      ],
+      "properties": {
+        "semantic_conflict": { "type": "integer", "minimum": 0 },
+        "name_specificity_difference": { "type": "integer", "minimum": 0 },
+        "formatting_difference": { "type": "integer", "minimum": 0 },
+        "equivalent_difference": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "source_retrieved_at",
+    "generated_at",
+    "documents",
+    "summary",
+    "api_pdf_conflicts",
+    "reviewed_pdf_drift",
+    "new_pdf_only_candidates",
+    "missing_reviewed_records",
+    "quarantined_records"
+  ],
+  "properties": {
+    "source_retrieved_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "documents": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/definitions/document" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "parsed_pdf_record_count",
+        "api_pdf_conflict_count",
+        "api_pdf_difference_count",
+        "reviewed_pdf_drift_count",
+        "entry_classification_counts",
+        "field_classification_counts",
+        "new_pdf_only_candidate_count",
+        "missing_reviewed_record_count",
+        "quarantined_record_count"
+      ],
+      "properties": {
+        "parsed_pdf_record_count": { "type": "integer", "minimum": 0 },
+        "api_pdf_conflict_count": { "type": "integer", "minimum": 0 },
+        "api_pdf_difference_count": { "type": "integer", "minimum": 0 },
+        "reviewed_pdf_drift_count": { "type": "integer", "minimum": 0 },
+        "entry_classification_counts": { "$ref": "#/definitions/classificationCounts" },
+        "field_classification_counts": { "$ref": "#/definitions/classificationCounts" },
+        "new_pdf_only_candidate_count": { "type": "integer", "minimum": 0 },
+        "missing_reviewed_record_count": { "type": "integer", "minimum": 0 },
+        "quarantined_record_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "api_pdf_conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "differing_fields", "classification", "comparison", "document_id", "parser_location"],
+        "properties": {
+          "code": { "type": "string" },
+          "api_name": { "type": ["string", "null"] },
+          "pdf_name": { "type": ["string", "null"] },
+          "api_address": { "type": ["string", "null"] },
+          "pdf_address": { "type": ["string", "null"] },
+          "api_business_hours": { "type": ["string", "null"] },
+          "pdf_business_hours": { "type": ["string", "null"] },
+          "differing_fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "classification": { "type": "string", "enum": ["formatting_difference", "equivalent_difference", "semantic_conflict", "name_specificity_difference"] },
+          "comparison": { "$ref": "#/definitions/comparison" },
+          "document_id": { "type": "string", "minLength": 1 },
+          "parser_location": { "$ref": "#/definitions/parserLocation" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "reviewed_pdf_drift": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "differing_fields", "classification", "comparison", "document_id", "parser_location"],
+        "properties": {
+          "code": { "type": "string" },
+          "reviewed_name": { "type": ["string", "null"] },
+          "pdf_name": { "type": ["string", "null"] },
+          "reviewed_address": { "type": ["string", "null"] },
+          "pdf_address": { "type": ["string", "null"] },
+          "reviewed_business_hours": { "type": ["string", "null"] },
+          "pdf_business_hours": { "type": ["string", "null"] },
+          "differing_fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "classification": { "type": "string", "enum": ["formatting_difference", "equivalent_difference", "semantic_conflict", "name_specificity_difference"] },
+          "comparison": { "$ref": "#/definitions/comparison" },
+          "document_id": { "type": "string", "minLength": 1 },
+          "parser_location": { "$ref": "#/definitions/parserLocation" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "new_pdf_only_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "name", "document_id", "parser_location"],
+        "properties": {
+          "code": { "type": "string" },
+          "name": { "type": "string" },
+          "address": { "type": ["string", "null"] },
+          "district": { "type": ["string", "null"] },
+          "sub_district": { "type": ["string", "null"] },
+          "business_hours": { "type": ["string", "null"] },
+          "document_id": { "type": "string", "minLength": 1 },
+          "parser_location": { "$ref": "#/definitions/parserLocation" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "missing_reviewed_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "document_id", "parser_location"],
+        "properties": {
+          "code": { "type": "string" },
+          "name": { "type": ["string", "null"] },
+          "address": { "type": ["string", "null"] },
+          "document_id": { "type": "string", "minLength": 1 },
+          "parser_location": { "$ref": "#/definitions/parserLocation" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "quarantined_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["reasonCodes", "document_id", "parser_location"],
+        "properties": {
+          "extractedCode": { "type": ["string", "null"] },
+          "involvedCodes": { "type": "array", "items": { "type": "string" } },
+          "rawSegment": { "type": "string" },
+          "candidateRecord": { "type": ["object", "null"] },
+          "reasonCodes": { "type": "array", "items": { "type": "string" } },
+          "document_id": { "type": "string", "minLength": 1 },
+          "parser_location": { "$ref": "#/definitions/parserLocation" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

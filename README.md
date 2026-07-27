@@ -1,13 +1,11 @@
-> **最後更新時間 (Last Updated)**: `2026-07-27 09:32 (HKT UTC+8)`
+> **最後更新時間與動態元數據 (Last Updated & Metadata)**: 請參考 [`data/metadata.json`](data/metadata.json) 中的 `retrieved_at` 欄位。 (Refer to `retrieved_at` in `data/metadata.json`).
 
 # 香港順豐速運自提點 / 順豐站 / 智能櫃資料集
-# SF Express Hong Kong Stores & Lockers Dataset (Bilingual 中英雙語)
+# SF Express Hong Kong Stores & Lockers Dataset
 
-[中文] | [English]
+一個自動化更新的香港順豐速運（SF Express HK）自提點、順豐站及智能櫃公開資料集與搜尋網站。提供結構化的 JSON 資料以及 GitHub Raw 直接存取。
 
-一個自動化更新的香港順豐速運（SF Express HK）自提點、順豐站及智能櫃公開資料集與搜尋網站。提供結構化的雙語（繁體中文 / English）JSON 資料以及 GitHub Raw 直接存取。
-
-An automated, up-to-date bilingual dataset (Traditional Chinese & English) and lookup website for SF Express Hong Kong Stores, Lockers, and Service Partners. Provides clean JSON files and GitHub Raw direct access.
+An automated dataset and lookup web interface for SF Express Hong Kong Stores, Lockers, and Service Partners. Provides structured JSON data via GitHub Raw.
 
 **GitHub Pages 門市搜尋網站 (Online Lookup Website)**:  
 [https://wtw0212.github.io/sf-express-hk-locations/](https://wtw0212.github.io/sf-express-hk-locations/)
@@ -17,36 +15,70 @@ An automated, up-to-date bilingual dataset (Traditional Chinese & English) and l
 
 ---
 
-## GitHub Direct Raw 存取 (Direct Access URLs in `data/`)
+## 數據來源與政策 (Data Policy & Source Hierarchy)
 
-您可以直接在您的網店（如 Next.js, Shopify, WooCommerce, iOS/Android App）中透過 **GitHub Raw** 存取所有位於 `data/` 資料夾內的雙語分類 JSON：
+1. **官方 Traditional Chinese API** 為中文欄位的主要來源。
+2. **官方 English API** 為英文欄位的主要來源。
+3. **SSR 頁面**可補充 API 未提供的記錄；只有經 schema 驗證及人工審核的 PDF registry 記錄才可補充 canonical dataset。
+4. **即時 PDF 解析結果只供 audit 比對**，不會直接進入 canonical output。
+5. **來源衝突處理原則**：
+   - 官方中英文資料若有歧異（如門牌號碼、營業時間、店名 mismatch），本資料集**完整保留雙方官方原值**，絕不依據第三方或單一方隨意覆蓋。
+   - 衝突資訊會記錄於紀錄內的 `quality_flags` 機器可讀陣列中。
+   - 不使用任何 OpenCC 或全域繁簡/字符自動替換規則。
+
+---
+
+## 原始快照與正規化資料 (Raw vs Normalized Data)
+
+- **`raw/latest-fetch.json`**：保存每個 TC/EN area 在 JSON parsing 前取得的 exact HTTP response text、raw SHA-256、deterministic semantic SHA-256、record-level hashes，以及 SSR/PDF audit evidence。
+- **`data/locations.json`**：正規化後的發布資料集。針對行政區劃進行標準18區對應與品質檢測，並附帶 `quality_flags` 與 `provenance`。
+- **`data/metadata.json` (schema v3)**：只保存 compact global hashes、counts、duplicate evidence 與 raw snapshot references；不重複保存 record-hash maps。
+- **`data/pdf-audit.json`**：只記錄比較結果；文件證據集中於 top-level `documents` map，各 audit entry 只保存 `document_id` 與 parser location。PDF binary hash (`document_binary_sha256`) 與 extracted-text hash (`extracted_text_sha256`) 分開保存。
+
+Repository 未保存 PDF binary，所以 fixture/offline verification 會從 committed extracted text 獨立重算 `extracted_text_sha256`；`document_binary_sha256` 是 live fetch 時按實際 PDF bytes 計算的 evidence，不會由 extracted text 代替。
+
+Artifact retention 採用單一權威副本政策：API exact raw text 與 per-area parsed records 保留在 raw snapshot，但不另存 source-level aggregate records；record-level API hashes 只保存於 raw snapshot；PDF document metadata 只保存一次。CI 亦設有大小上限（raw < 7 MB、metadata < 100 KB、PDF audit < 700 KB），防止無意義的 Git 歷史膨脹。
+
+---
+
+## GitHub Direct Raw 存取 (Direct Access URLs in `data/`)
 
 | 內容 (Content) | GitHub Raw 網址 (URL) |
 | :--- | :--- |
-| **完整雙語資料集 (All Locations)** | `https://raw.githubusercontent.com/wtw0212/sf-express-hk-locations/main/data/locations.json` |
+| **完整資料集 (All Locations)** | `https://raw.githubusercontent.com/wtw0212/sf-express-hk-locations/main/data/locations.json` |
 | **純 順豐站 (Stores Only)** | `https://raw.githubusercontent.com/wtw0212/sf-express-hk-locations/main/data/stores.json` |
 | **純 順豐智能櫃 (Lockers Only)** | `https://raw.githubusercontent.com/wtw0212/sf-express-hk-locations/main/data/lockers.json` |
 | **純 合作點 (Partners Only)** | `https://raw.githubusercontent.com/wtw0212/sf-express-hk-locations/main/data/partners.json` |
 | **按地區分組 (By District)** | `https://raw.githubusercontent.com/wtw0212/sf-express-hk-locations/main/data/locations-by-district.json` |
+| **元數據與覆蓋率 (Metadata & Coverage)** | `https://raw.githubusercontent.com/wtw0212/sf-express-hk-locations/main/data/metadata.json` |
 
 ---
 
-## 代碼調用範例 (Usage Examples)
+## 品質標籤說明 (Quality Flags)
 
-### JavaScript / TypeScript / Next.js
-```javascript
-// 透過 GitHub Raw 取得中英雙語順豐點位清單
-async function getSFLocations() {
-  const url = 'https://raw.githubusercontent.com/wtw0212/sf-express-hk-locations/main/data/locations.json';
-  const response = await fetch(url);
-  const locations = await response.json();
-  return locations;
-}
-```
+每筆紀錄皆包含 `quality_flags` 陣列，標示潛在的資料差異或格式特徵：
+
+- `SOURCE_TC_EN_STREET_NUMBER_CONFLICT`: 中英文地址門牌號碼不一致 (例如 6號 vs 6A)
+- `SOURCE_TC_EN_UNIT_CONFLICT`: 中英文鋪號不一致
+- `SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT`: 中英文營業時間不一致
+- `SUBDISTRICT_ADDRESS_CONFLICT`: 搜尋小區與地址記載地名有差異 (例如 秀茂坪 vs 油塘)
+- `ADMIN_DISTRICT_ALIAS_APPLIED`: 已套用官方非標準地區別名 (例如 大嶼山區 → 離島區)
+- `MISSING_ENGLISH_RECORD`: 官方英文 API 尚無對應紀錄
+- `MISSING_COORDINATES`: 缺少經緯度座標
+- `COORDINATES_OUTSIDE_HK`: 座標超出香港邊界範圍
+- `MISSING_SOURCE_ADDRESS`: 原始 canonical source 沒有地址
+- `ADDRESS_DERIVED_FROM_LOCATION`: 地址由小區、行政區或名稱 fallback 衍生；store/locker 會阻止發布，partner 只有在 provenance 與 flags 完整時才可保留
 
 ---
 
-## JSON Schema 雙語結構說明 (Bilingual Data Schema)
+## 局限性與注意事項 (Limitations)
+
+1. **英文覆蓋率與官方差異**：順豐官方 Traditional Chinese 與 English API 在部分新網點上可能存在更新時間差或拼寫差異，具體中英匹配率請參考 `data/metadata.json`。
+2. **合作點 PDF 解析局限**：即時 PDF 解析只供 audit；只有經審核 registry 記錄可進入 canonical dataset。PDF 排版變動不會直接改寫已發布記錄。
+
+---
+
+## JSON Schema 結構說明 (Data Schema)
 
 ```json
 {
@@ -72,16 +104,29 @@ async function getSFLocations() {
     "latitude": 22.449009,
     "longitude": 114.167336
   },
-  "source": "api",
-  "retrieved_at": "2026-07-26 23:35 (HKT UTC+8)"
+  "source": "api_tc",
+  "quality_flags": [],
+  "provenance": {
+    "name": "api_tc",
+    "name_en": "api_en",
+    "address": "api_tc",
+    "address_en": "api_en",
+    "district": "api_tc"
+  },
+  "retrieved_at": "2026-07-27 09:31 (HKT UTC+8)"
 }
 ```
 
 ---
 
-## 自動更新機制 (Automated Sync)
+## 自動更新機制 (Automated Sync Schedule)
 
-本 Repository 使用 **GitHub Actions** 每天定時（每日 00:07 HKT）自動執行雙語 API 抓取、動態 PDF 解析、18區校正與 Quality Gate 驗證腳本，自動更新 `data/` 資料夾下的所有雙語 JSON 檔，並同步更新 README 最頂部的最後更新時間。
+本 Repository 使用 **GitHub Actions** 每日自動執行完整同步管線：
+- 單元測試與閘門驗證 (`npm test`)
+- 抓取 TC/EN API, SSR 與 Partner PDF
+- 備份真實 Raw 數據 (`raw/latest-fetch.json`)
+- 正規化與比對 (產生 `reports/latest-diff.md`)
+- 原子化發布 (Atomic publish) 至 `data/`
 
 ---
 

@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SF Express source snapshot schema",
+  "type": "object",
+  "required": ["schema_version", "retrieved_at", "sources"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 3 },
+    "retrieved_at": { "type": "string", "minLength": 1 },
+    "sources": {
+      "type": "object",
+      "required": ["api_tc", "api_en", "ssr", "partner_pdf"],
+      "properties": {
+        "api_tc": { "$ref": "#/definitions/apiSource" },
+        "api_en": { "$ref": "#/definitions/apiSource" },
+        "ssr": {
+          "type": "object",
+          "required": ["records", "errors"],
+          "properties": {
+            "records": { "type": "array", "items": { "type": "object" } },
+            "errors": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        },
+        "partner_pdf": {
+          "type": "object",
+          "required": [
+            "documents",
+            "pdf_total",
+            "pdf_success_count",
+            "pdf_failure_count",
+            "status",
+            "details",
+            "records",
+            "quarantined_records",
+            "errors"
+          ],
+          "properties": {
+            "documents": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/pdfDocument" }
+            },
+            "pdf_total": { "type": "integer", "minimum": 0 },
+            "pdf_success_count": { "type": "integer", "minimum": 0 },
+            "pdf_failure_count": { "type": "integer", "minimum": 0 },
+            "status": { "type": "string", "minLength": 1 },
+            "details": { "type": "array", "items": { "type": "object" } },
+            "records": { "type": "array", "items": { "type": "object" } },
+            "quarantined_records": { "type": "array", "items": { "type": "object" } },
+            "errors": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "recordHashes": {
+      "type": "object",
+      "propertyNames": { "minLength": 1 },
+      "additionalProperties": { "$ref": "#/definitions/sha256" }
+    },
+    "duplicateCode": {
+      "type": "object",
+      "required": ["serviceCode", "occurrences", "conflicting"],
+      "properties": {
+        "serviceCode": { "type": "string", "minLength": 1 },
+        "occurrences": { "type": "integer", "minimum": 2 },
+        "conflicting": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "apiResult": {
+      "type": "object",
+      "required": [
+        "area",
+        "language",
+        "ok",
+        "status",
+        "attempts",
+        "error",
+        "record_count",
+        "raw_response_text",
+        "raw_sha256",
+        "semantic_sha256",
+        "records"
+      ],
+      "properties": {
+        "area": {
+          "type": "object",
+          "required": ["sourceRegion", "district"],
+          "properties": {
+            "sourceRegion": { "type": "string" },
+            "district": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "language": { "type": "string", "enum": ["tc", "en"] },
+        "ok": { "type": "boolean" },
+        "status": { "type": ["integer", "null"] },
+        "attempts": { "type": "integer", "minimum": 0 },
+        "error": { "type": ["string", "null"] },
+        "record_count": { "type": "integer", "minimum": 0 },
+        "raw_response_text": { "type": "string" },
+        "raw_sha256": { "$ref": "#/definitions/sha256" },
+        "semantic_sha256": { "$ref": "#/definitions/sha256" },
+        "records": { "type": "array", "items": { "type": "object" } }
+      },
+      "additionalProperties": false
+    },
+    "apiSource": {
+      "type": "object",
+      "required": [
+        "area_count",
+        "success_count",
+        "failure_count",
+        "record_count",
+        "raw_snapshot_sha256",
+        "semantic_sha256",
+        "record_hashes",
+        "duplicate_codes",
+        "results"
+      ],
+      "properties": {
+        "area_count": { "type": "integer", "minimum": 0 },
+        "success_count": { "type": "integer", "minimum": 0 },
+        "failure_count": { "type": "integer", "minimum": 0 },
+        "record_count": { "type": "integer", "minimum": 0 },
+        "raw_snapshot_sha256": { "$ref": "#/definitions/sha256" },
+        "semantic_sha256": { "$ref": "#/definitions/sha256" },
+        "record_hashes": { "$ref": "#/definitions/recordHashes" },
+        "duplicate_codes": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/duplicateCode" }
+        },
+        "results": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/apiResult" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "pdfDocument": {
+      "type": "object",
+      "required": [
+        "source_key",
+        "url",
+        "http_ok",
+        "attempts",
+        "document_binary_sha256",
+        "extracted_text_sha256"
+      ],
+      "properties": {
+        "source_key": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "minLength": 1 },
+        "http_ok": { "type": "boolean" },
+        "parse_ok": { "type": "boolean" },
+        "attempts": { "type": "integer", "minimum": 0 },
+        "error": { "type": "string" },
+        "parse_error": { "type": "string" },
+        "text": { "type": ["string", "null"] },
+        "document_retrieved_at": { "type": "string", "minLength": 1 },
+        "document_binary_sha256": {
+          "anyOf": [
+            { "$ref": "#/definitions/sha256" },
+            { "type": "null" }
+          ]
+        },
+        "extracted_text_sha256": {
+          "anyOf": [
+            { "$ref": "#/definitions/sha256" },
+            { "type": "null" }
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

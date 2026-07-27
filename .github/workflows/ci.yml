@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      IMMUTABLE_BASELINE_SHA: ${{ github.event.pull_request.base.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Syntax Check
+        run: npm run check:syntax
+
+      - name: Run Test Suite
+        run: npm test
+
+      - name: Materialize immutable migration baseline
+        run: |
+          mkdir -p "$RUNNER_TEMP/sf-parent-baseline"
+          git show "$IMMUTABLE_BASELINE_SHA:data/locations.json" > "$RUNNER_TEMP/sf-parent-baseline/locations.json"
+          if git cat-file -e "$IMMUTABLE_BASELINE_SHA:data/metadata.json"; then
+            git show "$IMMUTABLE_BASELINE_SHA:data/metadata.json" > "$RUNNER_TEMP/sf-parent-baseline/metadata.json"
+          fi
+
+      - name: Run Fixture Sync Against Parent Baseline
+        run: npm run sync -- --fixture --dry-run --allow-legacy-integrity-baseline --baseline-dir "$RUNNER_TEMP/sf-parent-baseline" --reviewed-registry "$GITHUB_WORKSPACE/data/reviewed-pdf-partners.json" --output-dir "$RUNNER_TEMP/sf-fixture-output"
+
+      - name: Verify Source Hashes and Schemas
+        run: node scripts/verify-source-hashes.js --snapshot "$RUNNER_TEMP/sf-fixture-output/raw/latest-fetch.json" --metadata "$RUNNER_TEMP/sf-fixture-output/data/metadata.json" --locations "$RUNNER_TEMP/sf-fixture-output/data/locations.json" --reviewed-registry "$GITHUB_WORKSPACE/data/reviewed-pdf-partners.json"
+
+      - name: Re-run Test Suite After Dry-Run
+        run: npm test
+
+      - name: Ensure Working Tree Remains Clean
+        run: |
+          git diff --exit-code
+          test -z "$(git status --porcelain)"

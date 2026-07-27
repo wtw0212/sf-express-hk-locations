@@ -1,0 +1,782 @@
+{
+  "schema_version": 3,
+  "source_retrieved_at": "2026-07-27 19:28 (HKT UTC+8)",
+  "generated_at": "2026-07-27 20:33 (HKT UTC+8)",
+  "retrieved_at": "2026-07-27 19:28 (HKT UTC+8)",
+  "counts": {
+    "total": 1673,
+    "stores": 137,
+    "lockers": 1056,
+    "partners": 480
+  },
+  "count_deltas": {
+    "total": {
+      "previous": 1678,
+      "current": 1673,
+      "delta": -5,
+      "delta_pct": -0.3,
+      "baseline_available": true,
+      "baseline_source": "previous_locations_feed",
+      "gate_result": "pass"
+    },
+    "stores": {
+      "previous": 138,
+      "current": 137,
+      "delta": -1,
+      "delta_pct": -0.72,
+      "baseline_available": true,
+      "baseline_source": "previous_locations_feed",
+      "gate_result": "pass"
+    },
+    "lockers": {
+      "previous": 1056,
+      "current": 1056,
+      "delta": 0,
+      "delta_pct": 0,
+      "baseline_available": true,
+      "baseline_source": "previous_locations_feed",
+      "gate_result": "pass"
+    },
+    "partners": {
+      "previous": 484,
+      "current": 480,
+      "delta": -4,
+      "delta_pct": -0.83,
+      "baseline_available": true,
+      "baseline_source": "previous_locations_feed",
+      "gate_result": "pass"
+    },
+    "tcCodes": {
+      "previous": 0,
+      "current": 1666,
+      "delta": 1666,
+      "delta_pct": 0,
+      "baseline_available": false,
+      "baseline_source": "unavailable",
+      "gate_result": "pass"
+    },
+    "enCodes": {
+      "previous": 0,
+      "current": 1666,
+      "delta": 1666,
+      "delta_pct": 0,
+      "baseline_available": false,
+      "baseline_source": "unavailable",
+      "gate_result": "pass"
+    }
+  },
+  "source_status": {
+    "api_tc": {
+      "areas_total": 112,
+      "areas_success": 112,
+      "areas_failed": 0
+    },
+    "api_en": {
+      "areas_total": 112,
+      "areas_success": 112,
+      "areas_failed": 0
+    },
+    "ssr": {
+      "count": 186,
+      "errors": []
+    },
+    "partner_pdf": {
+      "pdf_total": 8,
+      "http_success_count": 8,
+      "parse_success_count": 8,
+      "semantic_success_count": 5,
+      "partial_quality_failure_count": 3,
+      "failed_count": 0,
+      "valid_record_count": 443,
+      "quarantined_record_count": 12,
+      "quarantine_ratio": 0.0264,
+      "cross_pdf_duplicate_conflict_count": 0,
+      "status": "partial_parse_quality_failure",
+      "errors": [],
+      "details": [
+        {
+          "source_key": "OK_HK_TC",
+          "url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
+          "status": "success",
+          "http_ok": true,
+          "parse_ok": true,
+          "semantic_ok": true,
+          "within_quality_threshold": true,
+          "attempts": 1,
+          "raw_code_count": 59,
+          "candidate_count": 59,
+          "valid_record_count": 59,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
+        },
+        {
+          "source_key": "OK_KLN_TC",
+          "url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
+          "status": "partial_parse_quality_failure",
+          "http_ok": true,
+          "parse_ok": true,
+          "semantic_ok": false,
+          "within_quality_threshold": true,
+          "attempts": 1,
+          "raw_code_count": 105,
+          "candidate_count": 105,
+          "valid_record_count": 98,
+          "quarantined_record_count": 7,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0.0667
+        },
+        {
+          "source_key": "OK_NT_TC",
+          "url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
+          "status": "success",
+          "http_ok": true,
+          "parse_ok": true,
+          "semantic_ok": true,
+          "within_quality_threshold": true,
+          "attempts": 1,
+          "raw_code_count": 140,
+          "candidate_count": 140,
+          "valid_record_count": 140,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
+        },
+        {
+          "source_key": "OK_IL_TC",
+          "url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
+          "status": "success",
+          "http_ok": true,
+          "parse_ok": true,
+          "semantic_ok": true,
+          "within_quality_threshold": true,
+          "attempts": 1,
+          "raw_code_count": 3,
+          "candidate_count": 3,
+          "valid_record_count": 3,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
+        },
+        {
+          "source_key": "ASP_HK_TC",
+          "url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
+          "status": "partial_parse_quality_failure",
+          "http_ok": true,
+          "parse_ok": true,
+          "semantic_ok": false,
+          "within_quality_threshold": true,
+          "attempts": 1,
+          "raw_code_count": 26,
+          "candidate_count": 24,
+          "valid_record_count": 22,
+          "quarantined_record_count": 2,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0.0833
+        },
+        {
+          "source_key": "ASP_KLN_TC",
+          "url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
+          "status": "success",
+          "http_ok": true,
+          "parse_ok": true,
+          "semantic_ok": true,
+          "within_quality_threshold": true,
+          "attempts": 1,
+          "raw_code_count": 45,
+          "candidate_count": 45,
+          "valid_record_count": 45,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
+        },
+        {
+          "source_key": "ASP_NT_TC",
+          "url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
+          "status": "partial_parse_quality_failure",
+          "http_ok": true,
+          "parse_ok": true,
+          "semantic_ok": false,
+          "within_quality_threshold": true,
+          "attempts": 1,
+          "raw_code_count": 76,
+          "candidate_count": 73,
+          "valid_record_count": 70,
+          "quarantined_record_count": 3,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0.0411
+        },
+        {
+          "source_key": "ASP_ISLANDS_TC",
+          "url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
+          "status": "success",
+          "http_ok": true,
+          "parse_ok": true,
+          "semantic_ok": true,
+          "within_quality_threshold": true,
+          "attempts": 1,
+          "raw_code_count": 6,
+          "candidate_count": 6,
+          "valid_record_count": 6,
+          "quarantined_record_count": 0,
+          "duplicate_code_count": 0,
+          "duplicate_conflict_count": 0,
+          "quarantine_ratio": 0
+        }
+      ]
+    }
+  },
+  "source_policy": {
+    "canonical_priority": [
+      "api_tc",
+      "api_en",
+      "ssr",
+      "reviewed_pdf_partner"
+    ],
+    "audit_only_sources": [
+      "pdf_partner"
+    ],
+    "counts": {
+      "api_canonical_count": 1666,
+      "ssr_only_count": 2,
+      "reviewed_pdf_supplement_count": 5,
+      "unreviewed_pdf_candidate_count": 0
+    }
+  },
+  "coverage": {
+    "tc_record_count": 1666,
+    "en_record_count": 1666,
+    "bilingual_match_rate": 0.9993997599039616,
+    "district_resolved_count": 1673,
+    "district_unresolved_count": 0
+  },
+  "quality": {
+    "pipeline_blocking_errors": 0,
+    "pipeline_warnings": 8,
+    "record_flag_counts_by_severity": {
+      "info": 58,
+      "warning": 271,
+      "error": 0
+    },
+    "flag_counts_by_type": {
+      "SOURCE_TC_EN_UNIT_CONFLICT": 38,
+      "ENGLISH_FIELD_CONTAINS_CJK": 105,
+      "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 98,
+      "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT": 21,
+      "DUPLICATE_ADDRESS_SUFFIX": 9,
+      "ADMIN_DISTRICT_ALIAS_APPLIED": 41,
+      "MISSING_ENGLISH_RECORD": 7,
+      "SOURCE_FORMATTING_ARTIFACT": 1,
+      "SUBDISTRICT_ADDRESS_CONFLICT": 2,
+      "MISSING_COORDINATES": 7
+    }
+  },
+  "source_integrity": {
+    "api_tc": {
+      "raw_snapshot_sha256": "a49865218d978c35deae898e1b637bb14f9adce24b2c6d95cf37fe17f19cb348",
+      "semantic_sha256": "d7f03fa4be22d6b93f8dcedbc3577c2a31659f019b6b83fb30b8a6747002dd41",
+      "record_count": 1666,
+      "duplicate_codes": [],
+      "record_hashes_ref": "/sources/api_tc/record_hashes"
+    },
+    "api_en": {
+      "raw_snapshot_sha256": "a7c6db4623183ba60dfebc1bc83dd78c15eead3141afdb87900ef2bf349f8b4c",
+      "semantic_sha256": "3f611e3e6b759df3fa3652cda4d9510015312bbfb9034493db4e7fef20eb57d9",
+      "record_count": 1666,
+      "duplicate_codes": [],
+      "record_hashes_ref": "/sources/api_en/record_hashes"
+    },
+    "ssr": {
+      "semantic_sha256": "9a1e72e8a0664b378cb4989b0c5619123b02d6dd11079abeaa2cd8561d61353b",
+      "record_count": 93,
+      "duplicate_codes": [
+        {
+          "serviceCode": "H852A001S",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852A013P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852A033P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852A058P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852AA03S",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852AA26P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852B034P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852B047P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852BA14P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852BA16P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852BA42P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852BB12P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852BD08P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852BD26P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852BD85P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852C100P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852CA33P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852CB77P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852CC29P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852CC46P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852CC72P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852D017P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852D027P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852D037P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852DA01S",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852DB38P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852E010P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852EA05P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852F001S",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852F011P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852FE01S",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852FE34P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852FE56P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852FG61P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852G011P",
+          "occurrences": 2,
+          "conflicting": true
+        },
+        {
+          "serviceCode": "H852G082P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852GA34P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852GC01S",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852GC08P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852GC10P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852GC21P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852GC40P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852GC62P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852GH01S",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852H008P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852H015P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852H031P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852J002P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852J008P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852J013P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852J014P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852J024P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852J044P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852J054P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852K002P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852K039P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852K063P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852KA06P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852LB31P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852M015P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852M034P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852M035P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852M038P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852MA12P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852MA23P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852MA28P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852P022P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852P037P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852PA01P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852PA01S",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852PA02P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852PA09P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852PB06P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852PB33P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852PB53P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852PB71P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852PB79P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852PC02S",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852Q002P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852Q005P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852Q007P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852T048P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852TB16P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852TB37P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852TB38P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852TB50P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852TD08P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852TD14P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852U011P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852U051P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852UA02S",
+          "occurrences": 2,
+          "conflicting": true
+        },
+        {
+          "serviceCode": "H852UA12P",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
+          "serviceCode": "H852UB01S",
+          "occurrences": 2,
+          "conflicting": false
+        }
+      ]
+    },
+    "reviewed_registry": {
+      "semantic_sha256": "72dadac797917355dcae81a58340b772962c25c61270a15a8b67e89bc6923286",
+      "record_count": 5,
+      "duplicate_codes": []
+    },
+    "canonical": {
+      "semantic_sha256": "b2bab735d74734f8e0ba2a4ba6126069b0790d63e573254f3ee82bfc7ac84722",
+      "record_count": 1673,
+      "duplicate_codes": []
+    },
+    "partner_pdf": {
+      "semantic_sha256": "5b76c0983b98eb791a7a1f68ac3ceec3a725313bf717287136e15293b63f2adf",
+      "document_count": 8
+    }
+  }
+}

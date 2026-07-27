@@ -1,0 +1,338 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SF Express HK Metadata Schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source_retrieved_at",
+    "generated_at",
+    "counts",
+    "count_deltas",
+    "source_status",
+    "source_policy",
+    "coverage",
+    "quality",
+    "source_integrity"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 3 },
+    "source_retrieved_at": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string", "minLength": 1 },
+    "retrieved_at": { "type": "string", "minLength": 1 },
+    "counts": {
+      "type": "object",
+      "required": ["total", "stores", "lockers", "partners"],
+      "properties": {
+        "total": { "type": "integer", "minimum": 0 },
+        "stores": { "type": "integer", "minimum": 0 },
+        "lockers": { "type": "integer", "minimum": 0 },
+        "partners": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "count_deltas": {
+      "type": "object",
+      "required": ["total", "stores", "lockers", "partners", "tcCodes", "enCodes"],
+      "properties": {
+        "total": { "$ref": "#/definitions/countDeltaItem" },
+        "stores": { "$ref": "#/definitions/countDeltaItem" },
+        "lockers": { "$ref": "#/definitions/countDeltaItem" },
+        "partners": { "$ref": "#/definitions/countDeltaItem" },
+        "tcCodes": { "$ref": "#/definitions/countDeltaItem" },
+        "enCodes": { "$ref": "#/definitions/countDeltaItem" }
+      },
+      "additionalProperties": false
+    },
+    "source_status": {
+      "type": "object",
+      "required": ["api_tc", "api_en", "ssr", "partner_pdf"],
+      "properties": {
+        "api_tc": {
+          "type": "object",
+          "required": ["areas_total", "areas_success", "areas_failed"],
+          "properties": {
+            "areas_total": { "type": "integer", "minimum": 0 },
+            "areas_success": { "type": "integer", "minimum": 0 },
+            "areas_failed": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "api_en": {
+          "type": "object",
+          "required": ["areas_total", "areas_success", "areas_failed"],
+          "properties": {
+            "areas_total": { "type": "integer", "minimum": 0 },
+            "areas_success": { "type": "integer", "minimum": 0 },
+            "areas_failed": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "ssr": {
+          "type": "object",
+          "required": ["count", "errors"],
+          "properties": {
+            "count": { "type": "integer", "minimum": 0 },
+            "errors": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        },
+        "partner_pdf": {
+          "type": "object",
+          "required": [
+            "pdf_total",
+            "http_success_count",
+            "parse_success_count",
+            "semantic_success_count",
+            "partial_quality_failure_count",
+            "failed_count",
+            "valid_record_count",
+            "quarantined_record_count",
+            "quarantine_ratio",
+            "cross_pdf_duplicate_conflict_count",
+            "status",
+            "errors",
+            "details"
+          ],
+          "properties": {
+            "pdf_total": { "type": "integer", "minimum": 0 },
+            "http_success_count": { "type": "integer", "minimum": 0 },
+            "parse_success_count": { "type": "integer", "minimum": 0 },
+            "semantic_success_count": { "type": "integer", "minimum": 0 },
+            "partial_quality_failure_count": { "type": "integer", "minimum": 0 },
+            "failed_count": { "type": "integer", "minimum": 0 },
+            "valid_record_count": { "type": "integer", "minimum": 0 },
+            "quarantined_record_count": { "type": "integer", "minimum": 0 },
+            "quarantine_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+            "cross_pdf_duplicate_conflict_count": { "type": "integer", "minimum": 0 },
+            "status": {
+              "type": "string",
+              "enum": [
+                "success",
+                "no_pdfs_discovered",
+                "all_pdfs_failed",
+                "partial_pdf_failures",
+                "zero_records_parsed",
+                "partial_parse_quality_failure",
+                "semantic_failure",
+                "unsupported_layout",
+                "count_anomaly"
+              ]
+            },
+            "errors": { "type": "array", "items": { "type": "string" } },
+            "details": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "source_key",
+                  "url",
+                  "status",
+                  "http_ok",
+                  "parse_ok",
+                  "semantic_ok",
+                  "within_quality_threshold",
+                  "attempts",
+                  "raw_code_count",
+                  "candidate_count",
+                  "valid_record_count",
+                  "quarantined_record_count",
+                  "duplicate_code_count",
+                  "duplicate_conflict_count",
+                  "quarantine_ratio"
+                ],
+                "properties": {
+                  "source_key": { "type": "string", "minLength": 1 },
+                  "url": { "type": "string", "minLength": 1 },
+                  "status": { "type": "string" },
+                  "http_ok": { "type": "boolean" },
+                  "parse_ok": { "type": "boolean" },
+                  "semantic_ok": { "type": "boolean" },
+                  "within_quality_threshold": { "type": "boolean" },
+                  "attempts": { "type": "integer", "minimum": 0 },
+                  "raw_code_count": { "type": "integer", "minimum": 0 },
+                  "candidate_count": { "type": "integer", "minimum": 0 },
+                  "valid_record_count": { "type": "integer", "minimum": 0 },
+                  "quarantined_record_count": { "type": "integer", "minimum": 0 },
+                  "duplicate_code_count": { "type": "integer", "minimum": 0 },
+                  "duplicate_conflict_count": { "type": "integer", "minimum": 0 },
+                  "quarantine_ratio": { "type": "number", "minimum": 0, "maximum": 1 }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_policy": {
+      "type": "object",
+      "required": [
+        "canonical_priority",
+        "audit_only_sources",
+        "counts"
+      ],
+      "properties": {
+        "canonical_priority": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "audit_only_sources": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "counts": {
+          "type": "object",
+          "required": [
+            "api_canonical_count",
+            "ssr_only_count",
+            "reviewed_pdf_supplement_count",
+            "unreviewed_pdf_candidate_count"
+          ],
+          "properties": {
+            "api_canonical_count": { "type": "integer", "minimum": 0 },
+            "ssr_only_count": { "type": "integer", "minimum": 0 },
+            "reviewed_pdf_supplement_count": { "type": "integer", "minimum": 0 },
+            "unreviewed_pdf_candidate_count": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "tc_record_count",
+        "en_record_count",
+        "bilingual_match_rate",
+        "district_resolved_count",
+        "district_unresolved_count"
+      ],
+      "properties": {
+        "tc_record_count": { "type": "integer", "minimum": 0 },
+        "en_record_count": { "type": "integer", "minimum": 0 },
+        "bilingual_match_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+        "district_resolved_count": { "type": "integer", "minimum": 0 },
+        "district_unresolved_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "quality": {
+      "type": "object",
+      "required": [
+        "pipeline_blocking_errors",
+        "pipeline_warnings",
+        "record_flag_counts_by_severity",
+        "flag_counts_by_type"
+      ],
+      "properties": {
+        "pipeline_blocking_errors": { "type": "integer", "minimum": 0 },
+        "pipeline_warnings": { "type": "integer", "minimum": 0 },
+        "record_flag_counts_by_severity": {
+          "type": "object",
+          "required": ["info", "warning", "error"],
+          "properties": {
+            "info": { "type": "integer", "minimum": 0 },
+            "warning": { "type": "integer", "minimum": 0 },
+            "error": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "flag_counts_by_type": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
+      },
+      "additionalProperties": false
+    },
+    "source_integrity": {
+      "type": "object",
+      "required": ["api_tc", "api_en", "ssr", "reviewed_registry", "canonical", "partner_pdf"],
+      "properties": {
+        "api_tc": { "$ref": "#/definitions/apiIntegrity" },
+        "api_en": { "$ref": "#/definitions/apiIntegrity" },
+        "ssr": { "$ref": "#/definitions/semanticIntegrity" },
+        "reviewed_registry": { "$ref": "#/definitions/semanticIntegrity" },
+        "canonical": { "$ref": "#/definitions/semanticIntegrity" },
+        "partner_pdf": { "$ref": "#/definitions/pdfIntegrity" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "definitions": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "semanticIntegrity": {
+      "type": "object",
+      "required": ["semantic_sha256", "record_count", "duplicate_codes"],
+      "properties": {
+        "semantic_sha256": { "$ref": "#/definitions/sha256" },
+        "record_count": { "type": "integer", "minimum": 0 },
+        "duplicate_codes": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/duplicateCode" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "apiIntegrity": {
+      "type": "object",
+      "required": [
+        "raw_snapshot_sha256",
+        "semantic_sha256",
+        "record_count",
+        "duplicate_codes",
+        "record_hashes_ref"
+      ],
+      "properties": {
+        "raw_snapshot_sha256": { "$ref": "#/definitions/sha256" },
+        "semantic_sha256": { "$ref": "#/definitions/sha256" },
+        "record_count": { "type": "integer", "minimum": 0 },
+        "record_hashes_ref": {
+          "type": "string",
+          "pattern": "^/sources/api_(tc|en)/record_hashes$"
+        },
+        "duplicate_codes": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/duplicateCode" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "pdfIntegrity": {
+      "type": "object",
+      "required": ["semantic_sha256", "document_count"],
+      "properties": {
+        "semantic_sha256": { "$ref": "#/definitions/sha256" },
+        "document_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "duplicateCode": {
+      "type": "object",
+      "required": ["serviceCode", "occurrences", "conflicting"],
+      "properties": {
+        "serviceCode": { "type": "string", "minLength": 1 },
+        "occurrences": { "type": "integer", "minimum": 2 },
+        "conflicting": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "countDeltaItem": {
+      "type": "object",
+      "required": ["previous", "current", "delta", "delta_pct", "baseline_available", "baseline_source", "gate_result"],
+      "properties": {
+        "previous": { "type": ["integer", "null"] },
+        "current": { "type": "integer" },
+        "delta": { "type": "integer" },
+        "delta_pct": { "type": "number" },
+        "baseline_available": { "type": "boolean" },
+        "baseline_source": { "type": "string" },
+        "gate_result": { "type": "string", "enum": ["pass", "warn", "block"] }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

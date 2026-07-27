@@ -1,10 +1,13 @@
 {
   "name": "sf-express-hk-locations",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "type": "module",
   "description": "Automated dataset and lookup website for SF Express Hong Kong Stores and Lockers",
-  "main": "scripts/sync-sf-locations.js",
+  "main": "scripts/sync.js",
   "scripts": {
-    "sync": "node scripts/sync-sf-locations.js"
+    "sync": "node scripts/sync.js",
+    "test": "node --test",
+    "check:syntax": "node scripts/lib/check-syntax.js"
   },
   "keywords": [
     "sf-express",
@@ -16,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "ajv": "^8.20.0",
     "pdf-parse": "^1.1.1"
   }
 }

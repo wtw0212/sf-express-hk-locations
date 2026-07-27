@@ -25,13 +25,14 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { fetchDistrictTree, fetchTcApi, fetchEnApi, fetchSsrPages, fetchPartnerPdfs, parsePartnerPdfDocuments, buildRecordMap } from './lib/source-fetchers.js';
-import { saveRawSnapshot } from './lib/raw-snapshot.js';
+import { buildRawSnapshot } from './lib/raw-snapshot.js';
 import { normalizeRecords } from './lib/normalize.js';
 import { validateRecords, validatePreviousDataset, checkCompletenessGates, validateCrossFile } from './lib/validate.js';
 import { computeDiff } from './lib/diff.js';
 import { generateMarkdownReport } from './lib/report.js';
 import { atomicPublish } from './lib/atomic-publish.js';
-import { validateAllReleaseArtifactsSchemas } from './lib/schema-validator.js';
+import { validateAllReleaseArtifactsSchemas, validateRawSnapshotSchema } from './lib/schema-validator.js';
+import { verifySourceHashes } from './lib/source-hash-verifier.js';
 import { loadReviewedPdfRegistry } from './lib/reviewed-pdf-registry.js';
 import { auditPartnerPdfRecords } from './lib/pdf-audit.js';
 
@@ -153,7 +154,7 @@ export async function runSync(options = {}) {
   }
 
   // ─── 2. Fetch current sources (or load fixtures) ───────────────────
-  let tcResults, enResults, ssrResult, pdfResult;
+  let tcResults, enResults, ssrResult, pdfResult, rawSnapshot;
   let sourceRetrievedAt = hktDateStr;
 
   if (isFixtureMode) {
@@ -166,6 +167,12 @@ export async function runSync(options = {}) {
       throw new Error(`Fixture file not found at ${snapshotPath} or ${fallbackPath}`);
     }
     const rawSnap = JSON.parse(await readFile(pathToRead, 'utf8'));
+    verifySourceHashes(rawSnap);
+    const rawSchemaResult = await validateRawSnapshotSchema(rawSnap);
+    if (!rawSchemaResult.valid) {
+      throw new Error(`Raw snapshot schema validation failed:\n${rawSchemaResult.errors.join('\n')}`);
+    }
+    rawSnapshot = rawSnap;
     sourceRetrievedAt = rawSnap.retrieved_at || rawSnap.created_at || hktDateStr;
 
     const rawTcResults = rawSnap.sources.api_tc?.results || [];
@@ -219,15 +226,8 @@ export async function runSync(options = {}) {
     pdfResult = await fetchPartnerPdfs();
   }
 
-  // Build record maps for normalization
-  const tcMap = buildRecordMap(tcResults);
-  const enMap = buildRecordMap(enResults);
-
-  console.log(`\nSource summary: TC=${tcMap.size}, EN=${enMap.size}, SSR=${ssrResult.records.length}, ReviewedPDF=${reviewedPdfList.length}, LivePDFParsed=${pdfResult.records.length} (status: ${pdfResult.status})`);
-
-  // ─── 3. Save raw snapshot ──────────────────────────────────────────
-  if (!isFixtureMode && shouldPublish) {
-    await saveRawSnapshot(targetRawDir, {
+  if (!isFixtureMode) {
+    rawSnapshot = buildRawSnapshot({
       tcResults,
       enResults,
       ssrRecords: ssrResult.records,
@@ -242,8 +242,18 @@ export async function runSync(options = {}) {
       pdfDetails: pdfResult.pdfDetails,
       quarantinedRecords: pdfResult.quarantinedRecords
     }, sourceRetrievedAt);
-    console.log('Saved raw snapshot.');
+    verifySourceHashes(rawSnapshot);
+    const rawSchemaResult = await validateRawSnapshotSchema(rawSnapshot);
+    if (!rawSchemaResult.valid) {
+      throw new Error(`Raw snapshot schema validation failed:\n${rawSchemaResult.errors.join('\n')}`);
+    }
   }
+
+  // Build record maps for normalization
+  const tcMap = buildRecordMap(tcResults);
+  const enMap = buildRecordMap(enResults);
+
+  console.log(`\nSource summary: TC=${tcMap.size}, EN=${enMap.size}, SSR=${ssrResult.records.length}, ReviewedPDF=${reviewedPdfList.length}, LivePDFParsed=${pdfResult.records.length} (status: ${pdfResult.status})`);
 
   // ─── 4. Normalize Canonical Sources (TC API > SSR > Reviewed PDF Registry) ──
   const { records: nextList, stats } = normalizeRecords({
@@ -428,6 +438,7 @@ export async function runSync(options = {}) {
     byDistrict,
     metadata,
     pdfAudit,
+    rawSnapshot,
     reportMarkdown
   };
 

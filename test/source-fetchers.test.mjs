@@ -5,7 +5,28 @@ import {
   validateParsedPartnerRecord,
   validateServiceNetworkApiPayload
 } from '../scripts/lib/source-fetchers.js';
+import { fetchWithRetry } from '../scripts/lib/api-client.js';
+import { sha256 } from '../scripts/lib/source-hashes.js';
 import { normalizeRecords } from '../scripts/lib/normalize.js';
+
+test('api-client: preserves and hashes exact JSON response text before parsing', async () => {
+  const originalFetch = globalThis.fetch;
+  const exact = '{ "success": true, "result": [] }\n';
+  globalThis.fetch = async () => new Response(exact, {
+    status: 200,
+    headers: { 'content-type': 'application/json' }
+  });
+
+  try {
+    const result = await fetchWithRetry('https://example.test/api', {}, { maxAttempts: 1 });
+    assert.equal(result.ok, true);
+    assert.equal(result.rawText, exact);
+    assert.equal(result.raw_sha256, sha256(exact));
+    assert.deepEqual(result.data, { success: true, result: [] });
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
 
 test('source-fetchers: extractLineSegments splits multi-code lines deterministically', () => {
   const line = '香港柴灣 852PC3002 興華邨和興樓210號鋪^09:00-20:00 852PC3004 興華邨安興樓101號鋪^10:00-20:00';

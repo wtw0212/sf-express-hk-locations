@@ -122,7 +122,7 @@ export function canonicalizeApiRecord(record) {
 
 Run: `node --test test/source-hashes.test.mjs`
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/lib/source-hashes.js test/source-hashes.test.mjs
@@ -146,7 +146,7 @@ git commit -m "Add deterministic source hashing"
 - Each raw area adds `raw_response_text`, `raw_sha256`, and `semantic_sha256`.
 - API source summaries add `record_count`, `raw_snapshot_sha256`, `semantic_sha256`, `record_hashes`, and `duplicate_codes`.
 
-- [ ] **Step 1: Add an HTTP test proving raw hash uses exact text**
+- [x] **Step 1: Add an HTTP test proving raw hash uses exact text**
 
 ```js
 const exact = '{ "success": true, "result": [] }\n';
@@ -154,7 +154,7 @@ assert.equal(result.rawText, exact);
 assert.equal(result.raw_sha256, createHash('sha256').update(exact).digest('hex'));
 ```
 
-- [ ] **Step 2: Add fixture-verifier tests that mutate raw text, records, and stored hashes**
+- [x] **Step 2: Add fixture-verifier tests that mutate raw text, records, and stored hashes**
 
 ```js
 const tampered = structuredClone(snapshot);
@@ -162,11 +162,11 @@ tampered.sources.api_tc.results[0].raw_response_text += ' ';
 assert.throws(() => verifySourceHashes({ snapshot: tampered, metadata }), /raw hash mismatch/);
 ```
 
-- [ ] **Step 3: Run the focused tests and verify RED**
+- [x] **Step 3: Run the focused tests and verify RED**
 
 Run: `node --test test/source-fetchers.test.mjs test/source-hash-verifier.test.mjs`
 
-- [ ] **Step 4: Read JSON responses as text first and build the hash-rich snapshot in memory**
+- [x] **Step 4: Read JSON responses as text first and build the hash-rich snapshot in memory**
 
 ```js
 const rawText = await response.text();
@@ -175,14 +175,14 @@ const data = JSON.parse(rawText);
 return { ok: true, status: response.status, attempts: attempt, error: null, data, rawText, raw_sha256 };
 ```
 
-- [ ] **Step 5: Validate fixture hashes before normalization and validate raw-snapshot schema**
+- [x] **Step 5: Validate fixture hashes before normalization and validate raw-snapshot schema**
 
 ```js
 verifySourceHashes({ snapshot: rawSnap });
 await validateRawSnapshotSchema(rawSnap);
 ```
 
-- [ ] **Step 6: Run focused tests and verify GREEN**
+- [x] **Step 6: Run focused tests and verify GREEN**
 
 Run: `node --test test/source-fetchers.test.mjs test/source-hash-verifier.test.mjs`
 

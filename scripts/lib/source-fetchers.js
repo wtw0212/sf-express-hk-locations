@@ -147,6 +147,8 @@ export async function fetchTcApi(tcAreas) {
           status: result.status,
           attempts: result.attempts,
           error: null,
+          rawText: result.rawText,
+          raw_sha256: result.raw_sha256,
           records: result.data.result
         };
       } catch (err) {
@@ -158,6 +160,8 @@ export async function fetchTcApi(tcAreas) {
           status: result.status,
           attempts: result.attempts,
           error: err.message,
+          rawText: result.rawText,
+          raw_sha256: result.raw_sha256,
           records: []
         };
       }
@@ -173,6 +177,8 @@ export async function fetchTcApi(tcAreas) {
       status: result.status,
       attempts: result.attempts,
       error,
+      rawText: result.rawText,
+      raw_sha256: result.raw_sha256,
       records: []
     };
   }, API_CONCURRENCY);
@@ -222,6 +228,8 @@ export async function fetchEnApi(enAreas) {
           status: result.status,
           attempts: result.attempts,
           error: null,
+          rawText: result.rawText,
+          raw_sha256: result.raw_sha256,
           records: result.data.result
         };
       } catch (err) {
@@ -233,6 +241,8 @@ export async function fetchEnApi(enAreas) {
           status: result.status,
           attempts: result.attempts,
           error: err.message,
+          rawText: result.rawText,
+          raw_sha256: result.raw_sha256,
           records: []
         };
       }
@@ -248,6 +258,8 @@ export async function fetchEnApi(enAreas) {
       status: result.status,
       attempts: result.attempts,
       error,
+      rawText: result.rawText,
+      raw_sha256: result.raw_sha256,
       records: []
     };
   }, API_CONCURRENCY);

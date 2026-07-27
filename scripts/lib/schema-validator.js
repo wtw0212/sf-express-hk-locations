@@ -20,6 +20,7 @@ async function getValidators() {
   const locationsByDistrictSchema = JSON.parse(await readFile(resolve(SCHEMA_DIR, 'locations-by-district.schema.json'), 'utf8'));
   const metadataSchema = JSON.parse(await readFile(resolve(SCHEMA_DIR, 'metadata.schema.json'), 'utf8'));
   const pdfAuditSchema = JSON.parse(await readFile(resolve(SCHEMA_DIR, 'pdf-audit.schema.json'), 'utf8'));
+  const rawSnapshotSchema = JSON.parse(await readFile(resolve(SCHEMA_DIR, 'raw-snapshot.schema.json'), 'utf8'));
 
   ajv.addSchema(locationSchema, 'location.schema.json');
   ajv.addSchema(locationsArraySchema, 'locations-array.schema.json');
@@ -29,7 +30,8 @@ async function getValidators() {
     locationsArray: ajv.compile(locationsArraySchema),
     locationsByDistrict: ajv.compile(locationsByDistrictSchema),
     metadata: ajv.compile(metadataSchema),
-    pdfAudit: ajv.compile(pdfAuditSchema)
+    pdfAudit: ajv.compile(pdfAuditSchema),
+    rawSnapshot: ajv.compile(rawSnapshotSchema)
   };
 
   ajvInstance = ajv;
@@ -119,6 +121,15 @@ export async function validatePdfAuditSchema(pdfAudit) {
   return {
     valid: Boolean(valid),
     errors: valid ? [] : formatAjvErrors(valPdfAudit.errors, '[PDF Audit Schema]')
+  };
+}
+
+export async function validateRawSnapshotSchema(rawSnapshot) {
+  const { rawSnapshot: validateRawSnapshot } = await getValidators();
+  const valid = validateRawSnapshot(rawSnapshot);
+  return {
+    valid: Boolean(valid),
+    errors: valid ? [] : formatAjvErrors(validateRawSnapshot.errors, '[Raw Snapshot Schema]')
   };
 }
 

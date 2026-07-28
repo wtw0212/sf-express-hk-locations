@@ -1,8 +1,24 @@
 // @ts-check
-import { SOURCES } from './constants.js';
+import { SOURCES, GEOGRAPHIC_TYPO_MAP } from './constants.js';
 import { resolveAdminDistrict } from './district-resolver.js';
 import { classifyLocation } from './classify.js';
 import { generateQualityFlags } from './quality-flags.js';
+
+/**
+ * Apply geographic typo corrections (controlled replacement map).
+ * @param {string|null} str
+ * @returns {string|null}
+ */
+function fixGeographicTypos(str) {
+  if (!str) return str;
+  let fixed = str;
+  for (const [wrong, right] of Object.entries(GEOGRAPHIC_TYPO_MAP)) {
+    if (fixed.includes(wrong)) {
+      fixed = fixed.replaceAll(wrong, right);
+    }
+  }
+  return fixed;
+}
 import { getReviewedPdfRegistryRecords } from './reviewed-pdf-registry.js';
 
 /**
@@ -82,8 +98,8 @@ export function normalizeRecords(options = {}) {
   let missingEnCount = 0;
 
   for (const [code, { item, source }] of mergedMap) {
-    const name = (item.name || '').trim();
-    const sourceAddress = (item.address || '').trim();
+    const name = fixGeographicTypos((item.name || '').trim());
+    const sourceAddress = fixGeographicTypos((item.address || '').trim());
 
     // Resolve district
     const districtResult = resolveAdminDistrict(item);
@@ -112,11 +128,12 @@ export function normalizeRecords(options = {}) {
       ? (enItem.serviceTime || '').trim() || null
       : (reviewedFallback ? (item.business_hours_en || '').trim() || null : null);
     const businessHours = (item.serviceTime || item.business_hours || '').trim() || null;
-    const subDistrict = reviewedFallback
+    const rawSubDistrict = reviewedFallback
       ? (item.sub_district || '').trim() || districtResult.sub_district
       : districtResult.sub_district;
+    const subDistrict = fixGeographicTypos(rawSubDistrict);
     const derivedAddress =
-      districtResult.sub_district || districtResult.district || name || '香港';
+      subDistrict || districtResult.district || name || '香港';
     const address = sourceAddress || derivedAddress;
 
     const normalized = {

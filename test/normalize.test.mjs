@@ -136,3 +136,20 @@ test('no OpenCC or global character conversion exists', () => {
   assert.ok(r.name.includes('湧'), 'Should preserve 湧 (not convert to 涌)');
   assert.ok(r.name.includes('裏'), 'Should preserve 裏 (not convert to 里)');
 });
+
+test('corrects controlled geographic typos like 天後 -> 天后 in name, address, and sub_district', () => {
+  const tcMap = new Map([['852P2008', {
+    serviceCode: '852P2008',
+    name: '便利店 僑興大廈OK便利店',
+    address: '香港天後英皇道14號僑興大廈地下1H號鋪',
+    city: '東區',
+    district: '天後'
+  }]]);
+
+  const { records } = normalizeRecords({ tcMap, enMap: new Map(), generatedAt: '2026-07-28' });
+  const rec = records.find(r => r.code === '852P2008');
+
+  assert.ok(rec);
+  assert.equal(rec.sub_district, '天后');
+  assert.equal(rec.address, '香港天后英皇道14號僑興大廈地下1H號鋪');
+});

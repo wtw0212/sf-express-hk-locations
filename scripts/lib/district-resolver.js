@@ -1,7 +1,8 @@
 // @ts-check
 import {
   DISTRICT_TO_REGION, REGION_EN_MAP, DISTRICT_EN_MAP,
-  ADMIN_DISTRICT_ALIASES, CITY_TO_DISTRICT, VALID_DISTRICTS
+  ADMIN_DISTRICT_ALIASES, CITY_TO_DISTRICT, VALID_DISTRICTS,
+  GEOGRAPHIC_TYPO_MAP
 } from './constants.js';
 
 /**
@@ -26,7 +27,12 @@ export function resolveAdminDistrict(item, queryContext = null) {
   let adminDistrict = null;
 
   const city = (item.city || '').trim();
-  const itemDistrict = (item.district || '').trim();
+  let itemDistrict = (item.district || '').trim();
+  for (const [wrong, right] of Object.entries(GEOGRAPHIC_TYPO_MAP)) {
+    if (itemDistrict.includes(wrong)) {
+      itemDistrict = itemDistrict.replaceAll(wrong, right);
+    }
+  }
   const address = (item.address || '').trim();
 
   // 1. Try city field directly (most authoritative from API)

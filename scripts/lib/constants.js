@@ -58,6 +58,13 @@ export const ADMIN_DISTRICT_ALIASES = {
   'Cheung Chau District': 'Islands District'
 };
 
+// ─── Known geographic typos (controlled replacements) ────────────────────
+
+/** @type {Record<string, string>} */
+export const GEOGRAPHIC_TYPO_MAP = {
+  '天後': '天后'
+};
+
 export const VALID_DISTRICTS = new Set(Object.keys(DISTRICT_TO_REGION));
 
 // Build CITY_TO_DISTRICT lookup (with and without 區 suffix)

@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-07-28 10:41 (HKT UTC+8)`
+> **Last Updated**: `2026-07-28 10:46 (HKT UTC+8)`
 
 ---
 
@@ -13,10 +13,10 @@
 | **Stores** | 137 |
 | **Lockers** | 1054 |
 | **Partners** | 482 |
-| **Added** | 2 |
-| **Removed** | 2 |
-| **Updated** | 0 |
-| **Unchanged** | 1671 |
+| **Added** | 0 |
+| **Removed** | 0 |
+| **Updated** | 4 |
+| **Unchanged** | 1669 |
 
 ---
 
@@ -26,8 +26,8 @@
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
 | total | 1673 | 1673 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1056 | 1054 | -2 | -0.19% | previous_locations_feed | ✅ PASS |
-| partners | 480 | 482 | +2 | +0.42% | previous_locations_feed | ✅ PASS |
+| lockers | 1054 | 1054 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| partners | 482 | 482 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | tcCodes | 1666 | 1666 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
 | enCodes | 1666 | 1666 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
@@ -96,20 +96,32 @@
 
 ---
 
-## Added Locations (2)
+## Added Locations (0)
 
-- `852HC3004` [順豐合作點] 合作店 提點坪彩雲一邨 -- 牛池灣彩雲一邨飛鳳樓地下B119號鋪(提點坪彩雲一邨)*
-- `852PA3004` [順豐合作點] 合作點 速寄2 -- 香港鰂魚涌英皇道1056號東匯坊商場地庫Z2號鋪（鰂魚涌圖書館對面*
-
----
-
-## Removed Locations (2)
-
-- `H852BD37P` [順豐智能櫃] 自助櫃 大角咀凱帆軒 -- 大角咀凱帆軒地下近穿巴上車位只供住戶使用*
-- `H852PA17P` [順豐智能櫃] 自助櫃 筲箕灣麗東海景豪園(洗衣寶洗衣店) -- 香港筲箕灣麗東海景豪園地下11鋪洗衣店內*
+*(No added locations)*
 
 ---
 
-## Updated Locations (0)
+## Removed Locations (0)
 
-*(No updated locations)*
+*(No removed locations)*
+
+---
+
+## Updated Locations (4)
+
+- `852P2008` 便利店 僑興大廈OK便利店
+  - sub_district: `"天後"` -> `"天后"`
+  - address: `"香港天後英皇道14號僑興大廈地下1H號鋪"` -> `"香港天后英皇道14號僑興大廈地下1H號鋪"`
+- `H852P022P` 自助櫃 天后木星街1號(LaundrYup洗衣店)
+  - name: `"自助櫃 天後木星街1號(LaundrYup洗衣店)"` -> `"自助櫃 天后木星街1號(LaundrYup洗衣店)"`
+  - sub_district: `"天後"` -> `"天后"`
+  - address: `"天後木星街1號地下1A號鋪(洗衣店內)*"` -> `"天后木星街1號地下1A號鋪(洗衣店內)*"`
+- `H852P090P` 自助櫃 天后金山閣(自洗王國)
+  - name: `"自助櫃 天後金山閣(自洗王國)"` -> `"自助櫃 天后金山閣(自洗王國)"`
+  - sub_district: `"天後"` -> `"天后"`
+  - address: `"香港天後英皇道37號金山閣地下2鋪自洗王國*"` -> `"香港天后英皇道37號金山閣地下2鋪自洗王國*"`
+- `H852P095P` 自助櫃 天后柏傲山
+  - name: `"自助櫃 天後柏傲山"` -> `"自助櫃 天后柏傲山"`
+  - sub_district: `"天後"` -> `"天后"`
+  - address: `"天後柏傲山2樓會所(只供住戶使用)*"` -> `"天后柏傲山2樓會所(只供住戶使用)*"`

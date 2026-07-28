@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "source_retrieved_at": "2026-07-28 10:41 (HKT UTC+8)",
-  "generated_at": "2026-07-28 10:41 (HKT UTC+8)",
+  "generated_at": "2026-07-28 10:46 (HKT UTC+8)",
   "retrieved_at": "2026-07-28 10:41 (HKT UTC+8)",
   "counts": {
     "total": 1673,
@@ -29,19 +29,19 @@
       "gate_result": "pass"
     },
     "lockers": {
-      "previous": 1056,
+      "previous": 1054,
       "current": 1054,
-      "delta": -2,
-      "delta_pct": -0.19,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
     },
     "partners": {
-      "previous": 480,
+      "previous": 482,
       "current": 482,
-      "delta": 2,
-      "delta_pct": 0.42,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -770,7 +770,7 @@
       "duplicate_codes": []
     },
     "canonical": {
-      "semantic_sha256": "ae4da505c2402ec5d051b8f57202b26ebedc6f9b18e3a2cefd0ed3c2c902a6cc",
+      "semantic_sha256": "03375128470941ae8302c683520f5762d795e21e49f3fb84462fe33800963c69",
       "record_count": 1673,
       "duplicate_codes": []
     },

@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-07-28 10:46 (HKT UTC+8)`
+> **Last Updated**: `2026-07-29 10:47 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1673 |
-| **Current total** | 1673 |
+| **Current total** | 1672 |
 | **Stores** | 137 |
-| **Lockers** | 1054 |
+| **Lockers** | 1053 |
 | **Partners** | 482 |
 | **Added** | 0 |
-| **Removed** | 0 |
-| **Updated** | 4 |
-| **Unchanged** | 1669 |
+| **Removed** | 1 |
+| **Updated** | 0 |
+| **Unchanged** | 1672 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1673 | 1673 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1673 | 1672 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1054 | 1054 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1054 | 1053 | -1 | -0.09% | previous_locations_feed | ✅ PASS |
 | partners | 482 | 482 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1666 | 1666 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1666 | 1666 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1666 | 1665 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1666 | 1665 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1666 |
-| EN unique codes | 1666 |
+| TC unique codes | 1665 |
+| EN unique codes | 1665 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 186 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1673 |
+| District resolved | 1672 |
 | District unresolved | 0 |
-| With English data | 1666 |
+| With English data | 1665 |
 | Missing English | 7 |
 
 ---
@@ -102,26 +102,12 @@
 
 ---
 
-## Removed Locations (0)
+## Removed Locations (1)
 
-*(No removed locations)*
+- `H852AA06P` [順豐智能櫃] 自助櫃 大埔圍頭村(寵物國度) -- 香港大埔圍頭村寵物國度康樂園對面圍頭村牌坊*
 
 ---
 
-## Updated Locations (4)
+## Updated Locations (0)
 
-- `852P2008` 便利店 僑興大廈OK便利店
-  - sub_district: `"天後"` -> `"天后"`
-  - address: `"香港天後英皇道14號僑興大廈地下1H號鋪"` -> `"香港天后英皇道14號僑興大廈地下1H號鋪"`
-- `H852P022P` 自助櫃 天后木星街1號(LaundrYup洗衣店)
-  - name: `"自助櫃 天後木星街1號(LaundrYup洗衣店)"` -> `"自助櫃 天后木星街1號(LaundrYup洗衣店)"`
-  - sub_district: `"天後"` -> `"天后"`
-  - address: `"天後木星街1號地下1A號鋪(洗衣店內)*"` -> `"天后木星街1號地下1A號鋪(洗衣店內)*"`
-- `H852P090P` 自助櫃 天后金山閣(自洗王國)
-  - name: `"自助櫃 天後金山閣(自洗王國)"` -> `"自助櫃 天后金山閣(自洗王國)"`
-  - sub_district: `"天後"` -> `"天后"`
-  - address: `"香港天後英皇道37號金山閣地下2鋪自洗王國*"` -> `"香港天后英皇道37號金山閣地下2鋪自洗王國*"`
-- `H852P095P` 自助櫃 天后柏傲山
-  - name: `"自助櫃 天後柏傲山"` -> `"自助櫃 天后柏傲山"`
-  - sub_district: `"天後"` -> `"天后"`
-  - address: `"天後柏傲山2樓會所(只供住戶使用)*"` -> `"天后柏傲山2樓會所(只供住戶使用)*"`
+*(No updated locations)*

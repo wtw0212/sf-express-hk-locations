@@ -1,80 +1,80 @@
 {
-  "source_retrieved_at": "2026-07-29 10:47 (HKT UTC+8)",
-  "generated_at": "2026-07-29 10:47 (HKT UTC+8)",
+  "source_retrieved_at": "2026-07-30 10:32 (HKT UTC+8)",
+  "generated_at": "2026-07-30 10:32 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-07-29T02:48:11.792Z",
+      "document_retrieved_at": "2026-07-30T02:33:21.156Z",
       "document_binary_sha256": "ef32199d4804cf161fa58ddc53613e44e1f304b2486cc7c84ebbba6c561276c6",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-07-29T02:48:11.908Z",
+      "document_retrieved_at": "2026-07-30T02:33:21.374Z",
       "document_binary_sha256": "e41e65e4937ede5403f01a8229f63b50dfa593dffe827aa5c7212b0be9b2b1d7",
       "extracted_text_sha256": "34722a3331e2624dbb5e4d41856eddda3af01d123e5e35d85f58ddf0cd6cc4b3"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-07-29T02:48:12.311Z",
+      "document_retrieved_at": "2026-07-30T02:33:21.677Z",
       "document_binary_sha256": "a83821a509d042762210c85544959a0e2936afbd3406c8f7d66e79aade50f520",
       "extracted_text_sha256": "8c9fd67e2458bcca149b7556c71a2d0908b5fc9e0c930ec01bbcc5e5baa7695d"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-07-29T02:48:12.701Z",
+      "document_retrieved_at": "2026-07-30T02:33:21.744Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-07-29T02:48:12.828Z",
+      "document_retrieved_at": "2026-07-30T02:33:21.852Z",
       "document_binary_sha256": "1a195e02d6da737325dcea5c6b603d4ec5176f36b40d1405af8924a31e08fa5d",
       "extracted_text_sha256": "2520f09a884d0b06422f2423c4ede121a02ed819e80f8ca55638e5a9f672b072"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-07-29T02:48:12.963Z",
+      "document_retrieved_at": "2026-07-30T02:33:22.015Z",
       "document_binary_sha256": "81498e5e8cf76bb5404ddbdbaf4e1d42ab391c47d8c71f75d1828b2375709ad5",
       "extracted_text_sha256": "0b48d9c036a954981ff78155a3972c83f25da9f52a9d648426a7578c8c6ffe84"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-07-29T02:48:13.071Z",
+      "document_retrieved_at": "2026-07-30T02:33:22.212Z",
       "document_binary_sha256": "9b13d21f52e855eecb23de5f6a024be0cfaf0f897850f32ab0ff2ce6e4a3854a",
       "extracted_text_sha256": "c0f4ffc4d15d126151195450d0d91fc89dbc64f0281c281eb07f92e51a979432"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-07-29T02:48:13.700Z",
+      "document_retrieved_at": "2026-07-30T02:33:22.305Z",
       "document_binary_sha256": "9a9e2984384f10ddeec4643fd79698990e579808e8a5be78102d99b2c3e0f36d",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
   },
   "summary": {
     "parsed_pdf_record_count": 444,
-    "api_pdf_conflict_count": 365,
-    "api_pdf_difference_count": 439,
+    "api_pdf_conflict_count": 440,
+    "api_pdf_difference_count": 440,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 365,
-      "name_specificity_difference": 74,
+      "semantic_conflict": 440,
+      "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 881,
-      "name_specificity_difference": 209,
-      "formatting_difference": 69,
-      "equivalent_difference": 129
+      "semantic_conflict": 975,
+      "name_specificity_difference": 210,
+      "formatting_difference": 0,
+      "equivalent_difference": 130
     },
     "new_pdf_only_candidate_count": 0,
     "missing_reviewed_record_count": 0,
@@ -85,7 +85,7 @@
       "code": "852TB2003",
       "api_name": "置富南區廣場OK便利店",
       "pdf_name": "OK便利店 (薄扶林)",
-      "api_address": "香港薄扶林置富南區廣場5樓503號鋪7-8號檔",
+      "api_address": "香港薄扶林置富南區廣場5樓503號鋪7-8號檔OK #264*",
       "pdf_address": "香港薄扶林置富南區廣場5樓503號舖7-8號檔",
       "api_business_hours": "06:00-23:00",
       "pdf_business_hours": "06:00-22:00",
@@ -102,9 +102,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港薄扶林置富南區廣場5樓503號鋪7-8號檔",
+          "canonical": "香港薄扶林置富南區廣場5樓503號鋪7-8號檔OK #264*",
           "pdf": "香港薄扶林置富南區廣場5樓503號舖7-8號檔",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:00-23:00",
@@ -122,7 +122,7 @@
       "code": "852P2004",
       "api_name": "城市花園OK便利店",
       "pdf_name": "OK便利店 (北角)",
-      "api_address": "香港北角電器道233號城市花園1,2及3座平台地下5號鋪",
+      "api_address": "香港北角電器道233號城市花園1,2及3座平台地下5號鋪OK #237*",
       "pdf_address": "香港北角電器道233號城市花園1,2及3座平臺地下5號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -131,7 +131,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "城市花園OK便利店",
@@ -139,9 +139,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港北角電器道233號城市花園1,2及3座平台地下5號鋪",
+          "canonical": "香港北角電器道233號城市花園1,2及3座平台地下5號鋪OK #237*",
           "pdf": "香港北角電器道233號城市花園1,2及3座平臺地下5號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -159,20 +159,26 @@
       "code": "852P2006",
       "api_name": "堡壘街OK便利店",
       "pdf_name": "OK便利店 (北角)",
-      "api_address": "香港北角堡壘街22號地下",
+      "api_address": "香港北角堡壘街22號地下OK #321*",
       "pdf_address": "香港北角堡壘街22號地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "堡壘街OK便利店",
           "pdf": "OK便利店 (北角)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "香港北角堡壘街22號地下OK #321*",
+          "pdf": "香港北角堡壘街22號地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -227,7 +233,7 @@
       "code": "852PB2001",
       "api_name": "便利店 興華村OK便利店",
       "pdf_name": "OK便利店 (柴灣)",
-      "api_address": "香港柴灣興華邨和興樓210號鋪",
+      "api_address": "香港柴灣興華邨和興樓210號鋪OK #32*",
       "pdf_address": "香港柴灣興華村和興樓209至210號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -244,7 +250,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港柴灣興華邨和興樓210號鋪",
+          "canonical": "香港柴灣興華邨和興樓210號鋪OK #32*",
           "pdf": "香港柴灣興華村和興樓209至210號舖",
           "classification": "semantic_conflict"
         },
@@ -264,7 +270,7 @@
       "code": "852PB2009",
       "api_name": "便利店 康翠台商場OK便利店",
       "pdf_name": "OK便利店 (柴灣)",
-      "api_address": "香港柴灣泰民街16號康翠台商場L5樓3A&3B號鋪",
+      "api_address": "香港柴灣泰民街16號康翠台商場L5樓3A&3B號鋪OK #304*",
       "pdf_address": "香港柴灣泰民街16號康翠臺商場L5樓3A&3B號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -281,7 +287,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港柴灣泰民街16號康翠台商場L5樓3A&3B號鋪",
+          "canonical": "香港柴灣泰民街16號康翠台商場L5樓3A&3B號鋪OK #304*",
           "pdf": "香港柴灣泰民街16號康翠臺商場L5樓3A&3B號舖",
           "classification": "semantic_conflict"
         },
@@ -301,7 +307,7 @@
       "code": "852TB2011",
       "api_name": "便利店 海洋公園港鐵OK便利店",
       "pdf_name": "OK便利店 (黃竹坑)",
-      "api_address": "香港海洋公園港鐵站OCP5號鋪",
+      "api_address": "香港海洋公園港鐵站OCP5號鋪OK #537*",
       "pdf_address": "香港海洋公園港鐵站OCP 5 號舖",
       "api_business_hours": "07:00-19:00 周六:07:00-19:00 周日:08:00-19:00",
       "pdf_business_hours": "07:00-16:00 星期日及公眾假期: 08:00-16:00",
@@ -318,9 +324,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港海洋公園港鐵站OCP5號鋪",
+          "canonical": "香港海洋公園港鐵站OCP5號鋪OK #537*",
           "pdf": "香港海洋公園港鐵站OCP 5 號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "07:00-19:00 周六:07:00-19:00 周日:08:00-19:00",
@@ -338,20 +344,26 @@
       "code": "852MC2001",
       "api_name": "便利店 吉席街OK便利店",
       "pdf_name": "OK便利店 (堅尼地城)",
-      "api_address": "香港堅尼地城吉席街2號海怡花園2期3座地下2C鋪",
+      "api_address": "香港堅尼地城吉席街2號海怡花園2期3座地下2C鋪OK #584*",
       "pdf_address": "香港堅尼地城吉席街2號海怡花園2期3座地下2C鋪",
       "api_business_hours": "07:00-00:00",
       "pdf_business_hours": "07:00-24:00",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 吉席街OK便利店",
           "pdf": "OK便利店 (堅尼地城)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "香港堅尼地城吉席街2號海怡花園2期3座地下2C鋪OK #584*",
+          "pdf": "香港堅尼地城吉席街2號海怡花園2期3座地下2C鋪",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "07:00-00:00",
@@ -369,20 +381,26 @@
       "code": "852MA2010",
       "api_name": "卑路乍街OK便利店",
       "pdf_name": "OK便利店 (堅尼地城)",
-      "api_address": "香港卑路乍街39號及山市街18號山市樓地下6號鋪",
+      "api_address": "香港卑路乍街39號及山市街18號山市樓地下6號鋪OK #706*",
       "pdf_address": "香港卑路乍街39號及山市街18號山市樓地下6號鋪",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "卑路乍街OK便利店",
           "pdf": "OK便利店 (堅尼地城)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "香港卑路乍街39號及山市街18號山市樓地下6號鋪OK #706*",
+          "pdf": "香港卑路乍街39號及山市街18號山市樓地下6號鋪",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -443,7 +461,7 @@
       "code": "852TA2005",
       "api_name": "便利店 統一中心OK便利店",
       "pdf_name": "OK便利店 (金鐘)",
-      "api_address": "金鐘金鐘道95號統一中心1樓1002B號鋪",
+      "api_address": "金鐘金鐘道95號統一中心1樓1002B號鋪OK #420*",
       "pdf_address": "香港中環金鐘道95號統一中心1樓1002B號舖",
       "api_business_hours": "07:00-20:00 周六:07:00-20:00 周日:08:00-18:00 節假日:08:00-18:00",
       "pdf_business_hours": "星期一至六:07:00-20:00 星期日及公眾假期:08:00-18:00",
@@ -460,7 +478,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "金鐘金鐘道95號統一中心1樓1002B號鋪",
+          "canonical": "金鐘金鐘道95號統一中心1樓1002B號鋪OK #420*",
           "pdf": "香港中環金鐘道95號統一中心1樓1002B號舖",
           "classification": "semantic_conflict"
         },
@@ -480,7 +498,7 @@
       "code": "852TA2008",
       "api_name": "便利店 金鐘廊OK便利店",
       "pdf_name": "OK便利店 (金鐘)",
-      "api_address": "金鐘道93號金鐘廊1樓LabConceptF01-02號鋪",
+      "api_address": "金鐘道93號金鐘廊1樓LabConceptF01-02號鋪OK #549*",
       "pdf_address": "香港金鐘道93號金鐘廊1樓LabConceptF01-02號舖",
       "api_business_hours": "07:00-21:00 周六:08:00-21:00 周日:08:00-00:00",
       "pdf_business_hours": "07:00-21:00",
@@ -497,7 +515,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "金鐘道93號金鐘廊1樓LabConceptF01-02號鋪",
+          "canonical": "金鐘道93號金鐘廊1樓LabConceptF01-02號鋪OK #549*",
           "pdf": "香港金鐘道93號金鐘廊1樓LabConceptF01-02號舖",
           "classification": "semantic_conflict"
         },
@@ -517,7 +535,7 @@
       "code": "852T2002",
       "api_name": "便利店 黃泥涌道OK便利店",
       "pdf_name": "OK便利店 (跑馬地)",
-      "api_address": "香港跑馬地黃泥涌道21-23號浩利大廈地下B號鋪",
+      "api_address": "香港跑馬地黃泥涌道21-23號浩利大廈地下B號鋪OK #349*",
       "pdf_address": "香港跑馬地黃泥涌道21-23號浩利大廈地下B號舖",
       "api_business_hours": "06:00-00:00",
       "pdf_business_hours": "06:00-24:00",
@@ -526,7 +544,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 黃泥涌道OK便利店",
@@ -534,9 +552,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港跑馬地黃泥涌道21-23號浩利大廈地下B號鋪",
+          "canonical": "香港跑馬地黃泥涌道21-23號浩利大廈地下B號鋪OK #349*",
           "pdf": "香港跑馬地黃泥涌道21-23號浩利大廈地下B號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:00-00:00",
@@ -812,7 +830,7 @@
       "code": "852MA2006",
       "api_name": "便利店 海景大廈OK便利店",
       "pdf_name": "OK便利店 (上環)",
-      "api_address": "香港上環修打蘭街21-27號海景大廈地下D及H號鋪",
+      "api_address": "香港上環修打蘭街21-27號海景大廈地下D及H號鋪OK #413*",
       "pdf_address": "香港上環修打蘭街21-27號海景大廈地下D及H號舖",
       "api_business_hours": "07:00-22:00 周六:07:00-22:00",
       "pdf_business_hours": "07:00-22:00",
@@ -829,9 +847,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港上環修打蘭街21-27號海景大廈地下D及H號鋪",
+          "canonical": "香港上環修打蘭街21-27號海景大廈地下D及H號鋪OK #413*",
           "pdf": "香港上環修打蘭街21-27號海景大廈地下D及H號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "07:00-22:00 周六:07:00-22:00",
@@ -849,7 +867,7 @@
       "code": "852MD2001",
       "api_name": "便利店 OK #720",
       "pdf_name": "OK便利店 (上環)",
-      "api_address": "香港皇后大道西2-12號聯發商業中心地下A1外牆(OK便利店)",
+      "api_address": "香港皇后大道西2-12號聯發商業中心地下A1外牆OK #720*",
       "pdf_address": "香港皇後大道西2-12號聯發商業中心地下A1舖連店舖外牆",
       "api_business_hours": "07:00-00:00 周六:07:00-00:00 周日:07:00-00:00 節假日:07:00-00:00",
       "pdf_business_hours": "07:00-00:00",
@@ -866,7 +884,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港皇后大道西2-12號聯發商業中心地下A1外牆(OK便利店)",
+          "canonical": "香港皇后大道西2-12號聯發商業中心地下A1外牆OK #720*",
           "pdf": "香港皇後大道西2-12號聯發商業中心地下A1舖連店舖外牆",
           "classification": "semantic_conflict"
         },
@@ -886,7 +904,7 @@
       "code": "852PA2001",
       "api_name": "愛東商場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "香港筲萁灣愛東商場地下14號鋪",
+      "api_address": "香港筲萁灣愛東商場地下14號鋪OK #189*",
       "pdf_address": "香港筲萁灣愛東商場地下14號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -895,7 +913,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "愛東商場OK便利店",
@@ -903,9 +921,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港筲萁灣愛東商場地下14號鋪",
+          "canonical": "香港筲萁灣愛東商場地下14號鋪OK #189*",
           "pdf": "香港筲萁灣愛東商場地下14號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -923,7 +941,7 @@
       "code": "852PA2008",
       "api_name": "東大街OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "香港筲箕灣東大街51號東灣閣地下B號鋪",
+      "api_address": "香港筲箕灣東大街51號東灣閣地下B號鋪OK #499*",
       "pdf_address": "香港筲箕灣東大街51號東灣閣地下B號舖",
       "api_business_hours": "06:30-23:30",
       "pdf_business_hours": "06:30-23:30",
@@ -931,7 +949,7 @@
         "name",
         "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "東大街OK便利店",
@@ -939,9 +957,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港筲箕灣東大街51號東灣閣地下B號鋪",
+          "canonical": "香港筲箕灣東大街51號東灣閣地下B號鋪OK #499*",
           "pdf": "香港筲箕灣東大街51號東灣閣地下B號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_HK_TC",
@@ -991,7 +1009,7 @@
       "code": "852PA2004",
       "api_name": "便利店 康山花園OK便利店",
       "pdf_name": "OK便利店 (太古)",
-      "api_address": "香港太古康山花園第一座地下H1-H2號鋪*",
+      "api_address": "香港太古康山花園第一座地下H1-H2號鋪OK #39*",
       "pdf_address": "香港太古康山花園第一座地下H1-H2號舖",
       "api_business_hours": "07:00-23:00 周六:07:00-23:00 周日:07:00-23:00 節假日:07:00-23:00",
       "pdf_business_hours": "07:00-23:00",
@@ -1008,7 +1026,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港太古康山花園第一座地下H1-H2號鋪*",
+          "canonical": "香港太古康山花園第一座地下H1-H2號鋪OK #39*",
           "pdf": "香港太古康山花園第一座地下H1-H2號舖",
           "classification": "semantic_conflict"
         },
@@ -1028,7 +1046,7 @@
       "code": "852P2008",
       "api_name": "便利店 僑興大廈OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "香港天後英皇道14號僑興大廈地下1H號鋪",
+      "api_address": "香港天後英皇道14號僑興大廈地下1H號鋪OK #410*",
       "pdf_address": "香港天后英皇道14號僑興大廈地下1H號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -1045,7 +1063,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港天後英皇道14號僑興大廈地下1H號鋪",
+          "canonical": "香港天後英皇道14號僑興大廈地下1H號鋪OK #410*",
           "pdf": "香港天后英皇道14號僑興大廈地下1H號舖",
           "classification": "semantic_conflict"
         },
@@ -1065,7 +1083,7 @@
       "code": "852T2006",
       "api_name": "便利店 怡東商場OK便利店",
       "pdf_name": "OK便利店 (銅鑼灣)",
-      "api_address": "香港東角道26號怡安大廈怡東商場地下9-12號鋪",
+      "api_address": "香港東角道26號怡安大廈怡東商場地下9-12號鋪OK #543*",
       "pdf_address": "香港東角道26號怡安大廈怡東商場地下9-12號舖及1樓9-11號單位",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -1082,7 +1100,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港東角道26號怡安大廈怡東商場地下9-12號鋪",
+          "canonical": "香港東角道26號怡安大廈怡東商場地下9-12號鋪OK #543*",
           "pdf": "香港東角道26號怡安大廈怡東商場地下9-12號舖及1樓9-11號單位",
           "classification": "semantic_conflict"
         },
@@ -1102,20 +1120,26 @@
       "code": "852T2005",
       "api_name": "便利店 堅拿道東OK便利店",
       "pdf_name": "OK便利店 (銅鑼灣)",
-      "api_address": "香港銅鑼灣堅拿道東5號地下及閣樓",
+      "api_address": "香港銅鑼灣堅拿道東5號地下及閣樓OK #521*",
       "pdf_address": "香港銅鑼灣堅拿道東5號地下及閣樓",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 堅拿道東OK便利店",
           "pdf": "OK便利店 (銅鑼灣)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "香港銅鑼灣堅拿道東5號地下及閣樓OK #521*",
+          "pdf": "香港銅鑼灣堅拿道東5號地下及閣樓",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -1133,7 +1157,7 @@
       "code": "852T2004",
       "api_name": "利園山道OK便利店",
       "pdf_name": "OK便利店 (銅鑼灣)",
-      "api_address": "銅鑼灣利園山道49號地下k鋪",
+      "api_address": "銅鑼灣利園山道49號地下k鋪OK #443*",
       "pdf_address": "銅鑼灣利園山道49號地下k舖",
       "api_business_hours": "00:00-23:59 周六:00:00-23:59 周日:00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -1150,9 +1174,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "銅鑼灣利園山道49號地下k鋪",
+          "canonical": "銅鑼灣利園山道49號地下k鋪OK #443*",
           "pdf": "銅鑼灣利園山道49號地下k舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59 周六:00:00-23:59 周日:00:00-23:59",
@@ -1170,20 +1194,26 @@
       "code": "852TB2014",
       "api_name": "便利店 恩平道OK便利店",
       "pdf_name": "OK便利店 (銅鑼灣)",
-      "api_address": "香港恩平道50號地下",
+      "api_address": "香港恩平道50號地下OK #587*",
       "pdf_address": "香港恩平道50號地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 恩平道OK便利店",
           "pdf": "OK便利店 (銅鑼灣)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "香港恩平道50號地下OK #587*",
+          "pdf": "香港恩平道50號地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -1201,7 +1231,7 @@
       "code": "852T2007",
       "api_name": "便利店 波斯富街OK便利店",
       "pdf_name": "OK便利店 (銅鑼灣)",
-      "api_address": "香港波斯富街24-30號寶漢大廈地下B號鋪",
+      "api_address": "香港波斯富街24-30號寶漢大廈地下B號鋪OK #547*",
       "pdf_address": "香港波斯富街24-30號寶漢大廈地下B號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時 服務時間 (星期一至六,星期日及公眾假期)",
@@ -1218,9 +1248,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港波斯富街24-30號寶漢大廈地下B號鋪",
+          "canonical": "香港波斯富街24-30號寶漢大廈地下B號鋪OK #547*",
           "pdf": "香港波斯富街24-30號寶漢大廈地下B號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -1238,7 +1268,7 @@
       "code": "852TA2004",
       "api_name": "便利店 庄士敦道OK便利店",
       "pdf_name": "OK便利店 (灣仔)",
-      "api_address": "香港庄士敦道112號地下1號鋪",
+      "api_address": "香港庄士敦道112號地下1號鋪OK #546*",
       "pdf_address": "香港莊士敦道112號地下1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -1255,7 +1285,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港庄士敦道112號地下1號鋪",
+          "canonical": "香港庄士敦道112號地下1號鋪OK #546*",
           "pdf": "香港莊士敦道112號地下1號舖",
           "classification": "semantic_conflict"
         },
@@ -1275,7 +1305,7 @@
       "code": "852TC2003",
       "api_name": "便利店 利榮大樓OK便利店",
       "pdf_name": "OK便利店 (灣仔)",
-      "api_address": "灣仔軒尼詩道156、160至162號利榮大樓地下E號鋪",
+      "api_address": "灣仔軒尼詩道156、160至162號利榮大樓地下E號鋪OK #484*",
       "pdf_address": "香港灣仔柯布連道7A至7B號及軒尼詩道156、160至162號利榮大樓地下E號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "824小時",
@@ -1292,7 +1322,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "灣仔軒尼詩道156、160至162號利榮大樓地下E號鋪",
+          "canonical": "灣仔軒尼詩道156、160至162號利榮大樓地下E號鋪OK #484*",
           "pdf": "香港灣仔柯布連道7A至7B號及軒尼詩道156、160至162號利榮大樓地下E號舖",
           "classification": "semantic_conflict"
         },
@@ -1312,20 +1342,26 @@
       "code": "852TA2003",
       "api_name": "灣仔道OK便利店",
       "pdf_name": "OK便利店 (灣仔)",
-      "api_address": "香港灣仔灣仔道89號地下",
+      "api_address": "香港灣仔灣仔道89號地下OK #357*",
       "pdf_address": "香港灣仔灣仔道89號地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "灣仔道OK便利店",
           "pdf": "OK便利店 (灣仔)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "香港灣仔灣仔道89號地下OK #357*",
+          "pdf": "香港灣仔灣仔道89號地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -1343,20 +1379,26 @@
       "code": "852TA2001",
       "api_name": "便利店 軒尼詩道38號OK便利店",
       "pdf_name": "OK便利店 (灣仔)",
-      "api_address": "香港灣仔軒尼詩道38號地下",
+      "api_address": "香港灣仔軒尼詩道38號地下OK #1*",
       "pdf_address": "香港灣仔軒尼詩道38號地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 軒尼詩道38號OK便利店",
           "pdf": "OK便利店 (灣仔)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "香港灣仔軒尼詩道38號地下OK #1*",
+          "pdf": "香港灣仔軒尼詩道38號地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -1374,19 +1416,25 @@
       "code": "852TC2006",
       "api_name": "便利店 駱克道146號OK便利店",
       "pdf_name": "OK便利店 (灣仔)",
-      "api_address": "香港駱克道146號地下A號",
+      "api_address": "香港駱克道146號地下A號OK #388*",
       "pdf_address": "香港駱克道146號地下A號",
       "api_business_hours": "06:30-23:00",
       "pdf_business_hours": "06:30-23:00",
       "differing_fields": [
-        "name"
+        "name",
+        "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 駱克道146號OK便利店",
           "pdf": "OK便利店 (灣仔)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "香港駱克道146號地下A號OK #388*",
+          "pdf": "香港駱克道146號地下A號",
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_HK_TC",
@@ -1473,7 +1521,7 @@
       "code": "852M2015",
       "api_name": "便利店 正街OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "香港西環正街64號地下A號鋪",
+      "api_address": "香港西環正街64號地下A號鋪OK #507*",
       "pdf_address": "香港西環正街64號地下A號舖",
       "api_business_hours": "07:00-23:00",
       "pdf_business_hours": "07:00-23:00",
@@ -1481,7 +1529,7 @@
         "name",
         "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 正街OK便利店",
@@ -1489,9 +1537,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港西環正街64號地下A號鋪",
+          "canonical": "香港西環正街64號地下A號鋪OK #507*",
           "pdf": "香港西環正街64號地下A號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_HK_TC",
@@ -1504,20 +1552,26 @@
       "code": "852MA2002",
       "api_name": "便利店 德輔道西333號OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "香港西環德輔道西333及335號地下",
+      "api_address": "香港西環德輔道西333及335號地下OK #284*",
       "pdf_address": "香港西環德輔道西333及335號地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 德輔道西333號OK便利店",
           "pdf": "OK便利店",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "香港西環德輔道西333及335號地下OK #284*",
+          "pdf": "香港西環德輔道西333及335號地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -1609,7 +1663,7 @@
       "code": "852M2016",
       "api_name": "便利店 般咸道OK便利店",
       "pdf_name": "OK便利店 (西營盤)",
-      "api_address": "香港般咸道13-15號金寧大廈地下A號鋪連低層地下",
+      "api_address": "香港般咸道13-15號金寧大廈地下A號鋪連低層地下OK #544*",
       "pdf_address": "香港般鹹道13-15號金寧大廈地下A號舖連低層地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -1626,7 +1680,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港般咸道13-15號金寧大廈地下A號鋪連低層地下",
+          "canonical": "香港般咸道13-15號金寧大廈地下A號鋪連低層地下OK #544*",
           "pdf": "香港般鹹道13-15號金寧大廈地下A號舖連低層地下",
           "classification": "semantic_conflict"
         },
@@ -1646,20 +1700,26 @@
       "code": "852MA2009",
       "api_name": "便利店 德輔道西202號OK便利店",
       "pdf_name": "OK便利店 (西營盤)",
-      "api_address": "香港德輔道西202號202中心地下",
+      "api_address": "香港德輔道西202號202中心地下OK #599*",
       "pdf_address": "香港德輔道西202號202中心地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 德輔道西202號OK便利店",
           "pdf": "OK便利店 (西營盤)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "香港德輔道西202號202中心地下OK #599*",
+          "pdf": "香港德輔道西202號202中心地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -1677,7 +1737,7 @@
       "code": "852TB2001",
       "api_name": "便利店 華富中心OK便利店",
       "pdf_name": "OK便利店 (香港仔)",
-      "api_address": "華富華富中心7及8號鋪",
+      "api_address": "華富華富中心7及8號鋪OK #13*",
       "pdf_address": "香港香港仔華富中心7及8號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -1695,7 +1755,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "華富華富中心7及8號鋪",
+          "canonical": "華富華富中心7及8號鋪OK #13*",
           "pdf": "香港香港仔華富中心7及8號舖",
           "classification": "semantic_conflict"
         },
@@ -1720,7 +1780,7 @@
       "code": "852TB2004",
       "api_name": "便利店 石排灣道OK便利店",
       "pdf_name": "OK便利店 (香港仔)",
-      "api_address": "香港香港仔石排灣道81號兆輝大廈地下3及4號鋪",
+      "api_address": "香港香港仔石排灣道81號兆輝大廈地下3及4號鋪OK #336*",
       "pdf_address": "香港香港仔石排灣道81號兆輝大廈地下3及4號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -1729,7 +1789,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 石排灣道OK便利店",
@@ -1737,9 +1797,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港香港仔石排灣道81號兆輝大廈地下3及4號鋪",
+          "canonical": "香港香港仔石排灣道81號兆輝大廈地下3及4號鋪OK #336*",
           "pdf": "香港香港仔石排灣道81號兆輝大廈地下3及4號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -1757,7 +1817,7 @@
       "code": "852TB2002",
       "api_name": "便利店 香港仔中心OK便利店",
       "pdf_name": "OK便利店 (香港仔)",
-      "api_address": "香港仔香港仔中心第五期地下7號鋪",
+      "api_address": "香港仔香港仔中心第五期地下7號鋪OK #163*",
       "pdf_address": "香港香港仔香港仔中心第五期地下7號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -1774,7 +1834,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港仔香港仔中心第五期地下7號鋪",
+          "canonical": "香港仔香港仔中心第五期地下7號鋪OK #163*",
           "pdf": "香港香港仔香港仔中心第五期地下7號舖",
           "classification": "semantic_conflict"
         },
@@ -1794,7 +1854,7 @@
       "code": "852TB2010",
       "api_name": "便利店 華富(二)商場OK便利店",
       "pdf_name": "OK便利店 (香港仔)",
-      "api_address": "香港香港仔華富(二)邨華富(二)商場30號鋪",
+      "api_address": "香港香港仔華富(二)邨華富(二)商場30號鋪OK #473*",
       "pdf_address": "香港香港仔華富(二)村華富(二)商場30號舖",
       "api_business_hours": "06:30-23:30",
       "pdf_business_hours": "06:30-23:30",
@@ -1811,7 +1871,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港香港仔華富(二)邨華富(二)商場30號鋪",
+          "canonical": "香港香港仔華富(二)邨華富(二)商場30號鋪OK #473*",
           "pdf": "香港香港仔華富(二)村華富(二)商場30號舖",
           "classification": "semantic_conflict"
         },
@@ -1831,20 +1891,26 @@
       "code": "852TB2009",
       "api_name": "便利店 東勝道OK便利店",
       "pdf_name": "OK便利店 (香港仔)",
-      "api_address": "香港香港仔東勝道23號地下",
+      "api_address": "香港香港仔東勝道23號地下OK #445*",
       "pdf_address": "香港香港仔東勝道23號地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 東勝道OK便利店",
           "pdf": "OK便利店 (香港仔)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "香港香港仔東勝道23號地下OK #445*",
+          "pdf": "香港香港仔東勝道23號地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -1862,7 +1928,7 @@
       "code": "852TB2007",
       "api_name": "便利店 石排灣商場OK便利店",
       "pdf_name": "OK便利店 (香港仔)",
-      "api_address": "香港香港仔石排灣商場7號鋪",
+      "api_address": "香港香港仔石排灣商場7號鋪OK #393*",
       "pdf_address": "香港香港仔石排灣商場7號舖",
       "api_business_hours": "06:00-00:00",
       "pdf_business_hours": "06:00-24:00",
@@ -1871,7 +1937,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 石排灣商場OK便利店",
@@ -1879,9 +1945,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港香港仔石排灣商場7號鋪",
+          "canonical": "香港香港仔石排灣商場7號鋪OK #393*",
           "pdf": "香港香港仔石排灣商場7號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:00-00:00",
@@ -1899,7 +1965,7 @@
       "code": "852PB2006",
       "api_name": "便利店 小西灣商場OK便利店",
       "pdf_name": "OK便利店 (小西灣)",
-      "api_address": "小西灣小西灣商場地下6A號鋪",
+      "api_address": "小西灣小西灣商場地下6A號鋪OK #390*",
       "pdf_address": "香港小西灣小西灣商場地下6A號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -1916,7 +1982,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "小西灣小西灣商場地下6A號鋪",
+          "canonical": "小西灣小西灣商場地下6A號鋪OK #390*",
           "pdf": "香港小西灣小西灣商場地下6A號舖",
           "classification": "semantic_conflict"
         },
@@ -1936,7 +2002,7 @@
       "code": "852PB2007",
       "api_name": "便利店 小西灣商場OK便利店",
       "pdf_name": "OK便利店 (小西灣)",
-      "api_address": "柴灣小西灣商場四樓401號鋪",
+      "api_address": "柴灣小西灣商場四樓401號鋪OK #166*",
       "pdf_address": "柴灣小西灣邨小西灣商場四樓401號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -1953,7 +2019,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "柴灣小西灣商場四樓401號鋪",
+          "canonical": "柴灣小西灣商場四樓401號鋪OK #166*",
           "pdf": "柴灣小西灣邨小西灣商場四樓401號舖",
           "classification": "semantic_conflict"
         },
@@ -1973,7 +2039,7 @@
       "code": "852PB2008",
       "api_name": "便利店 藍灣半島OK便利店",
       "pdf_name": "OK便利店 (小西灣)",
-      "api_address": "香港小西灣道28號藍灣半島地下18號鋪",
+      "api_address": "香港小西灣道28號藍灣半島地下18號鋪OK #199*",
       "pdf_address": "香港小西灣道28號藍灣半島地下18號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -1982,7 +2048,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 藍灣半島OK便利店",
@@ -1990,9 +2056,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港小西灣道28號藍灣半島地下18號鋪",
+          "canonical": "香港小西灣道28號藍灣半島地下18號鋪OK #199*",
           "pdf": "香港小西灣道28號藍灣半島地下18號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -2010,7 +2076,7 @@
       "code": "852PB2005",
       "api_name": "便利店 杏花村港鐵OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "香港杏花邨港鐵站HFC5及6號鋪",
+      "api_address": "香港杏花邨港鐵站HFC5及6號鋪OK #342*",
       "pdf_address": "香港杏花村港鐵站HFC5及6號舖",
       "api_business_hours": "06:00-00:00",
       "pdf_business_hours": "06:00-24:00",
@@ -2027,7 +2093,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港杏花邨港鐵站HFC5及6號鋪",
+          "canonical": "香港杏花邨港鐵站HFC5及6號鋪OK #342*",
           "pdf": "香港杏花村港鐵站HFC5及6號舖",
           "classification": "semantic_conflict"
         },
@@ -2127,7 +2193,7 @@
       "code": "852PA2009",
       "api_name": "便利店 海光苑OK便利店",
       "pdf_name": "OK便利店 (鰂魚涌)",
-      "api_address": "香港海光街13-15號海光苑地下16號鋪",
+      "api_address": "香港海光街13-15號海光苑地下16號鋪OK #348*",
       "pdf_address": "香港海光街13-15號海光苑地下16號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2136,7 +2202,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 海光苑OK便利店",
@@ -2144,9 +2210,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港海光街13-15號海光苑地下16號鋪",
+          "canonical": "香港海光街13-15號海光苑地下16號鋪OK #348*",
           "pdf": "香港海光街13-15號海光苑地下16號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -2164,7 +2230,7 @@
       "code": "852M2002",
       "api_name": "便利店 閣麟街OK便利店",
       "pdf_name": "OK便利店 (中環)",
-      "api_address": "香港中環閣麟街10-16號致發大廈地下1號鋪",
+      "api_address": "香港中環閣麟街10-16號致發大廈地下1號鋪OK #188*",
       "pdf_address": "香港中環閣麟街10-16號致發大廈地下1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2173,7 +2239,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 閣麟街OK便利店",
@@ -2181,9 +2247,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港中環閣麟街10-16號致發大廈地下1號鋪",
+          "canonical": "香港中環閣麟街10-16號致發大廈地下1號鋪OK #188*",
           "pdf": "香港中環閣麟街10-16號致發大廈地下1號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -2238,7 +2304,7 @@
       "code": "852J2012",
       "api_name": "便利店 彩虹港鐵OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "彩虹港鐵站CHH18及19號鋪",
+      "api_address": "彩虹港鐵站CHH18及19號鋪OK #259*",
       "pdf_address": "九龍彩虹港鐵站CHH18及19號舖",
       "api_business_hours": "06:00-00:00",
       "pdf_business_hours": "06:00-24:00",
@@ -2255,7 +2321,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "彩虹港鐵站CHH18及19號鋪",
+          "canonical": "彩虹港鐵站CHH18及19號鋪OK #259*",
           "pdf": "九龍彩虹港鐵站CHH18及19號舖",
           "classification": "semantic_conflict"
         },
@@ -2275,7 +2341,7 @@
       "code": "852J2003",
       "api_name": "便利店 彩虹村OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "九龍彩虹彩虹邨金碧樓地下",
+      "api_address": "九龍彩虹彩虹邨金碧樓地下OK #97*",
       "pdf_address": "九龍彩虹彩虹村金碧樓地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2292,7 +2358,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍彩虹彩虹邨金碧樓地下",
+          "canonical": "九龍彩虹彩虹邨金碧樓地下OK #97*",
           "pdf": "九龍彩虹彩虹村金碧樓地下",
           "classification": "semantic_conflict"
         },
@@ -2312,7 +2378,7 @@
       "code": "852J2019",
       "api_name": "便利店 采頤花園OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "九龍彩虹道采頤花園地下767鋪",
+      "api_address": "九龍彩虹道采頤花園地下767鋪OK #578*",
       "pdf_address": "九龍彩虹道242號采頤花園地下767號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2329,7 +2395,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍彩虹道采頤花園地下767鋪",
+          "canonical": "九龍彩虹道采頤花園地下767鋪OK #578*",
           "pdf": "九龍彩虹道242號采頤花園地下767號舖",
           "classification": "semantic_conflict"
         },
@@ -2349,7 +2415,7 @@
       "code": "852DA2004",
       "api_name": "便利店 蘇屋商場OK便利店",
       "pdf_name": "OK便利店 (長沙灣)",
-      "api_address": "深水埗蘇屋商場地下G04號鋪",
+      "api_address": "深水埗蘇屋商場地下G04號鋪OK #569*",
       "pdf_address": "深水埗蘇屋邨蘇屋商場地下G04號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2366,7 +2432,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "深水埗蘇屋商場地下G04號鋪",
+          "canonical": "深水埗蘇屋商場地下G04號鋪OK #569*",
           "pdf": "深水埗蘇屋邨蘇屋商場地下G04號舖",
           "classification": "semantic_conflict"
         },
@@ -2386,20 +2452,26 @@
       "code": "852DA2003",
       "api_name": "便利店 長發街OK便利店",
       "pdf_name": "OK便利店 (長沙灣)",
-      "api_address": "九龍長沙灣長發街13及13號A地下",
+      "api_address": "九龍長沙灣長發街13及13號A地下OK #314*",
       "pdf_address": "九龍長沙灣長發街13及13號A地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 長發街OK便利店",
           "pdf": "OK便利店 (長沙灣)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "九龍長沙灣長發街13及13號A地下OK #314*",
+          "pdf": "九龍長沙灣長發街13及13號A地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -2417,7 +2489,7 @@
       "code": "852D2005",
       "api_name": "便利店 海盈邨OK便利店",
       "pdf_name": "OK便利店 (長沙灣)",
-      "api_address": "長沙灣海盈邨盈昌樓地下4號鋪",
+      "api_address": "長沙灣海盈邨盈昌樓地下4號鋪OK #564*",
       "pdf_address": "長沙灣海盈邨盈昌樓地下4號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2426,7 +2498,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 海盈邨OK便利店",
@@ -2434,9 +2506,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "長沙灣海盈邨盈昌樓地下4號鋪",
+          "canonical": "長沙灣海盈邨盈昌樓地下4號鋪OK #564*",
           "pdf": "長沙灣海盈邨盈昌樓地下4號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -2454,7 +2526,7 @@
       "code": "852D2004",
       "api_name": "便利店 長沙灣廣場OK便利店",
       "pdf_name": "OK便利店 (長沙灣)",
-      "api_address": "長沙灣道833號長沙灣廣場地下G03號鋪",
+      "api_address": "長沙灣道833號長沙灣廣場地下G03號鋪OK #497*",
       "pdf_address": "九龍荔枝角長沙灣道833號長沙灣廣場地下G03號舖",
       "api_business_hours": "06:30-23:00",
       "pdf_business_hours": "06:30-23:00",
@@ -2470,7 +2542,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "長沙灣道833號長沙灣廣場地下G03號鋪",
+          "canonical": "長沙灣道833號長沙灣廣場地下G03號鋪OK #497*",
           "pdf": "九龍荔枝角長沙灣道833號長沙灣廣場地下G03號舖",
           "classification": "semantic_conflict"
         }
@@ -2522,7 +2594,7 @@
       "code": "852J2005",
       "api_name": "便利店 慈正商場OK便利店",
       "pdf_name": "OK便利店 (慈雲山)",
-      "api_address": "九龍慈雲山慈正邨慈正商場1號鋪",
+      "api_address": "九龍慈雲山慈正邨慈正商場1號鋪OK #140*",
       "pdf_address": "九龍慈雲山慈正村慈正商場1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2539,7 +2611,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍慈雲山慈正邨慈正商場1號鋪",
+          "canonical": "九龍慈雲山慈正邨慈正商場1號鋪OK #140*",
           "pdf": "九龍慈雲山慈正村慈正商場1號舖",
           "classification": "semantic_conflict"
         },
@@ -2559,7 +2631,7 @@
       "code": "852J2007",
       "api_name": "便利店 慈正商場OK便利店",
       "pdf_name": "OK便利店 (慈雲山)",
-      "api_address": "九龍慈雲山慈正商場2期地下2鋪",
+      "api_address": "九龍慈雲山慈正商場2期地下2鋪OK #183*",
       "pdf_address": "九龍慈雲山慈正村慈正商場2期地下2號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2576,7 +2648,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍慈雲山慈正商場2期地下2鋪",
+          "canonical": "九龍慈雲山慈正商場2期地下2鋪OK #183*",
           "pdf": "九龍慈雲山慈正村慈正商場2期地下2號舖",
           "classification": "semantic_conflict"
         },
@@ -2596,7 +2668,7 @@
       "code": "852B2006",
       "api_name": "便利店 港灣豪庭OK便利店",
       "pdf_name": "OK便利店 (大角咀)",
-      "api_address": "大角咀港灣豪庭地下G10號鋪",
+      "api_address": "大角咀港灣豪庭地下G10號鋪OK #247*",
       "pdf_address": "九龍大角咀港灣豪庭地下G10號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2613,7 +2685,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "大角咀港灣豪庭地下G10號鋪",
+          "canonical": "大角咀港灣豪庭地下G10號鋪OK #247*",
           "pdf": "九龍大角咀港灣豪庭地下G10號舖",
           "classification": "semantic_conflict"
         },
@@ -2633,7 +2705,7 @@
       "code": "852BD2001",
       "api_name": "便利店 奧運港鐵站OK便利店",
       "pdf_name": "OK便利店 (大角咀)",
-      "api_address": "香港油尖旺區大角咀九龍奧運港鐵站OLY8號鋪",
+      "api_address": "香港油尖旺區大角咀九龍奧運港鐵站OLY8號鋪OK #281*",
       "pdf_address": "九龍奧運港鐵站OLY8號舖",
       "api_business_hours": "06:00-23:30",
       "pdf_business_hours": "06:00-23:30",
@@ -2649,7 +2721,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港油尖旺區大角咀九龍奧運港鐵站OLY8號鋪",
+          "canonical": "香港油尖旺區大角咀九龍奧運港鐵站OLY8號鋪OK #281*",
           "pdf": "九龍奧運港鐵站OLY8號舖",
           "classification": "semantic_conflict"
         }
@@ -2664,7 +2736,7 @@
       "code": "852B2014",
       "api_name": "便利店 富善商場OK便利店",
       "pdf_name": "OK便利店 (大角咀)",
-      "api_address": "九龍大角咀詩歌舞街亮賢居地下",
+      "api_address": "九龍大角咀詩歌舞街亮賢居地下OK #701*",
       "pdf_address": "九龍大角咀詩歌舞街83號亮賢居地下7號鋪",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2681,7 +2753,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍大角咀詩歌舞街亮賢居地下",
+          "canonical": "九龍大角咀詩歌舞街亮賢居地下OK #701*",
           "pdf": "九龍大角咀詩歌舞街83號亮賢居地下7號鋪",
           "classification": "semantic_conflict"
         },
@@ -2738,7 +2810,7 @@
       "code": "852CA2001",
       "api_name": "便利店 觀塘港鐵OK便利店",
       "pdf_name": "OK便利店 (觀塘)",
-      "api_address": "九龍觀塘港鐵站KWT33-34號鋪",
+      "api_address": "九龍觀塘港鐵站KWT33-34號鋪OK #513*",
       "pdf_address": "九龍觀塘港鐵站KWT33-34號舖",
       "api_business_hours": "06:30-00:00",
       "pdf_business_hours": "06:30-24:00",
@@ -2747,7 +2819,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 觀塘港鐵OK便利店",
@@ -2755,9 +2827,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍觀塘港鐵站KWT33-34號鋪",
+          "canonical": "九龍觀塘港鐵站KWT33-34號鋪OK #513*",
           "pdf": "九龍觀塘港鐵站KWT33-34號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:30-00:00",
@@ -2775,7 +2847,7 @@
       "code": "852CC2001",
       "api_name": "便利店 翠屏商場OK便利店",
       "pdf_name": "OK便利店 (觀塘)",
-      "api_address": "九龍觀塘翠屏商場6號鋪",
+      "api_address": "九龍觀塘翠屏商場6號鋪OK #78*",
       "pdf_address": "九龍觀塘翠屏商場6號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2784,7 +2856,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 翠屏商場OK便利店",
@@ -2792,9 +2864,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍觀塘翠屏商場6號鋪",
+          "canonical": "九龍觀塘翠屏商場6號鋪OK #78*",
           "pdf": "九龍觀塘翠屏商場6號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -2812,7 +2884,7 @@
       "code": "852CB2010",
       "api_name": "便利店 物華街OK便利店",
       "pdf_name": "OK便利店 (觀塘)",
-      "api_address": "九龍物華街19-29號，群星大廈地下連天井E號鋪",
+      "api_address": "九龍物華街19-29號，群星大廈地下連天井E號鋪OK #575*",
       "pdf_address": "九龍物華街19-29號，群星大廈地下連天井E號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2821,7 +2893,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 物華街OK便利店",
@@ -2829,9 +2901,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍物華街19-29號，群星大廈地下連天井E號鋪",
+          "canonical": "九龍物華街19-29號，群星大廈地下連天井E號鋪OK #575*",
           "pdf": "九龍物華街19-29號，群星大廈地下連天井E號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -2849,7 +2921,7 @@
       "code": "852CB2004",
       "api_name": "麗港城OK便利店",
       "pdf_name": "OK便利店 (觀塘)",
-      "api_address": "觀塘茶果嶺道93號麗港城第三期麗港城中薈地下25及26B號鋪",
+      "api_address": "觀塘茶果嶺道93號麗港城第三期麗港城中薈地下25及26B號鋪OK #338*",
       "pdf_address": "九龍觀塘茶果嶺道93號麗港城第三期麗港城中薈地下25及26B號鋪",
       "api_business_hours": "00:00-23:59 周六:00:00-23:59 周日:00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -2866,7 +2938,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "觀塘茶果嶺道93號麗港城第三期麗港城中薈地下25及26B號鋪",
+          "canonical": "觀塘茶果嶺道93號麗港城第三期麗港城中薈地下25及26B號鋪OK #338*",
           "pdf": "九龍觀塘茶果嶺道93號麗港城第三期麗港城中薈地下25及26B號鋪",
           "classification": "semantic_conflict"
         },
@@ -3034,7 +3106,7 @@
       "code": "852K2009",
       "api_name": "便利店 海濱南岸OK便利店",
       "pdf_name": "OK便利店 (紅磡)",
-      "api_address": "紅磡愛景街海濱南岸1樓商場3A",
+      "api_address": "紅磡愛景街海濱南岸1樓商場3A OK #435*",
       "pdf_address": "九龍紅磡愛景街8號海濱南岸1樓商場3A號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -3051,7 +3123,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "紅磡愛景街海濱南岸1樓商場3A",
+          "canonical": "紅磡愛景街海濱南岸1樓商場3A OK #435*",
           "pdf": "九龍紅磡愛景街8號海濱南岸1樓商場3A號舖",
           "classification": "semantic_conflict"
         },
@@ -3071,7 +3143,7 @@
       "code": "852K2016",
       "api_name": "便利店 湖光街OK便利店",
       "pdf_name": "OK便利店 (紅磡)",
-      "api_address": "九龍紅磡湖光街1-7號聯盛大廈地下17F號鋪",
+      "api_address": "九龍紅磡湖光街1-7號聯盛大廈地下17F號鋪OK #514*",
       "pdf_address": "九龍紅磡湖光街1-7號聯盛大廈地下17F號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -3080,7 +3152,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 湖光街OK便利店",
@@ -3088,9 +3160,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍紅磡湖光街1-7號聯盛大廈地下17F號鋪",
+          "canonical": "九龍紅磡湖光街1-7號聯盛大廈地下17F號鋪OK #514*",
           "pdf": "九龍紅磡湖光街1-7號聯盛大廈地下17F號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -3108,7 +3180,7 @@
       "code": "852K2007",
       "api_name": "便利店 馬頭圍村OK便利店",
       "pdf_name": "OK便利店 (紅磡)",
-      "api_address": "馬頭圍邨洋葵樓地下111號鋪",
+      "api_address": "馬頭圍邨洋葵樓地下111號鋪OK #365*",
       "pdf_address": "九龍紅磡馬頭圍村洋葵樓地下111號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -3125,7 +3197,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "馬頭圍邨洋葵樓地下111號鋪",
+          "canonical": "馬頭圍邨洋葵樓地下111號鋪OK #365*",
           "pdf": "九龍紅磡馬頭圍村洋葵樓地下111號舖",
           "classification": "semantic_conflict"
         },
@@ -3145,7 +3217,7 @@
       "code": "852K2017",
       "api_name": "便利店 海逸坊OK便利店",
       "pdf_name": "OK便利店 (紅磡)",
-      "api_address": "九龍紅磡海逸道8號海逸坊低層地下LG09號鋪",
+      "api_address": "九龍紅磡海逸道8號海逸坊低層地下LG09號鋪OK #449*",
       "pdf_address": "九龍紅磡海逸道8號海逸坊低層地下LG09號舖",
       "api_business_hours": "07:00-19:00",
       "pdf_business_hours": "07:00-19:00",
@@ -3153,7 +3225,7 @@
         "name",
         "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 海逸坊OK便利店",
@@ -3161,9 +3233,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍紅磡海逸道8號海逸坊低層地下LG09號鋪",
+          "canonical": "九龍紅磡海逸道8號海逸坊低層地下LG09號鋪OK #449*",
           "pdf": "九龍紅磡海逸道8號海逸坊低層地下LG09號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_KLN_TC",
@@ -3250,7 +3322,7 @@
       "code": "852J2013",
       "api_name": "便利店 黃大仙港鐵OK便利店",
       "pdf_name": "OK便利店 (黃大仙)",
-      "api_address": "九龍黃大仙港鐵站WTS12號鋪",
+      "api_address": "九龍黃大仙港鐵站WTS12號鋪OK #274*",
       "pdf_address": "九龍黃大仙港鐵站WTS12號舖",
       "api_business_hours": "06:00-00:00",
       "pdf_business_hours": "06:00-24:00",
@@ -3259,7 +3331,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 黃大仙港鐵OK便利店",
@@ -3267,9 +3339,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍黃大仙港鐵站WTS12號鋪",
+          "canonical": "九龍黃大仙港鐵站WTS12號鋪OK #274*",
           "pdf": "九龍黃大仙港鐵站WTS12號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:00-00:00",
@@ -3287,7 +3359,7 @@
       "code": "852J2006",
       "api_name": "盈福苑OK便利店",
       "pdf_name": "OK便利店 (黃大仙)",
-      "api_address": "九龍黃大仙盈福苑停車場大樓地下1號鋪",
+      "api_address": "九龍黃大仙盈福苑停車場大樓地下1號鋪OK #181*",
       "pdf_address": "九龍黃大仙盈福苑停車場大樓地下1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -3296,7 +3368,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "盈福苑OK便利店",
@@ -3304,9 +3376,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍黃大仙盈福苑停車場大樓地下1號鋪",
+          "canonical": "九龍黃大仙盈福苑停車場大樓地下1號鋪OK #181*",
           "pdf": "九龍黃大仙盈福苑停車場大樓地下1號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -3324,7 +3396,7 @@
       "code": "852J2010",
       "api_name": "蒲崗村道OK便利店",
       "pdf_name": "OK便利店 (黃大仙)",
-      "api_address": "九龍黃大仙蒲崗村道35-37號好景樓地下B號鋪",
+      "api_address": "九龍黃大仙蒲崗村道35-37號好景樓地下B號鋪OK #478*",
       "pdf_address": "九龍黃大仙蒲崗村道35-37號好景樓地下B號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -3333,7 +3405,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "蒲崗村道OK便利店",
@@ -3341,9 +3413,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍黃大仙蒲崗村道35-37號好景樓地下B號鋪",
+          "canonical": "九龍黃大仙蒲崗村道35-37號好景樓地下B號鋪OK #478*",
           "pdf": "九龍黃大仙蒲崗村道35-37號好景樓地下B號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -3398,7 +3470,7 @@
       "code": "852E2001",
       "api_name": "便利店 寶勒巷OK便利店",
       "pdf_name": "OK便利店 (尖沙咀)",
-      "api_address": "九龍尖沙咀寶勒巷1號玫瑰大廈地下A及B號鋪",
+      "api_address": "九龍尖沙咀寶勒巷1號玫瑰大廈地下A及B號鋪OK #169*",
       "pdf_address": "九龍尖沙咀寶勒巷1號玫瑰大廈地下A及B號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -3407,7 +3479,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 寶勒巷OK便利店",
@@ -3415,9 +3487,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍尖沙咀寶勒巷1號玫瑰大廈地下A及B號鋪",
+          "canonical": "九龍尖沙咀寶勒巷1號玫瑰大廈地下A及B號鋪OK #169*",
           "pdf": "九龍尖沙咀寶勒巷1號玫瑰大廈地下A及B號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -3435,7 +3507,7 @@
       "code": "852E2013",
       "api_name": "便利店 格蘭中心OK便利店",
       "pdf_name": "OK便利店 (尖沙咀)",
-      "api_address": "香港油尖旺區尖沙咀堪富利士道8號格蘭中心地下G06-09號",
+      "api_address": "香港油尖旺區尖沙咀堪富利士道8號格蘭中心地下G06-09號OK #541*",
       "pdf_address": "九龍堪富利士道8號格蘭中心地下G06-09號舖",
       "api_business_hours": "07:00-00:00",
       "pdf_business_hours": "07:00-24:00",
@@ -3452,7 +3524,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港油尖旺區尖沙咀堪富利士道8號格蘭中心地下G06-09號",
+          "canonical": "香港油尖旺區尖沙咀堪富利士道8號格蘭中心地下G06-09號OK #541*",
           "pdf": "九龍堪富利士道8號格蘭中心地下G06-09號舖",
           "classification": "semantic_conflict"
         },
@@ -3509,7 +3581,7 @@
       "code": "852E2002",
       "api_name": "便利店 尖東港鐵站OK便利店",
       "pdf_name": "OK便利店 (尖沙咀)",
-      "api_address": "油尖旺區尖沙咀尖東港鐵站3號鋪",
+      "api_address": "油尖旺區尖沙咀尖東港鐵站3號鋪OK #269*",
       "pdf_address": "九龍尖東港鐵站3號舖",
       "api_business_hours": "06:30-00:00",
       "pdf_business_hours": "06:30-24:00",
@@ -3526,7 +3598,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "油尖旺區尖沙咀尖東港鐵站3號鋪",
+          "canonical": "油尖旺區尖沙咀尖東港鐵站3號鋪OK #269*",
           "pdf": "九龍尖東港鐵站3號舖",
           "classification": "semantic_conflict"
         },
@@ -3546,7 +3618,7 @@
       "code": "852J2020",
       "api_name": "便利店 東匯邨OK便利店",
       "pdf_name": "OK便利店 (九龍城)",
-      "api_address": "香港黃大仙東匯邨匯智樓地下1號鋪",
+      "api_address": "香港黃大仙東匯邨匯智樓地下1號鋪OK #586*",
       "pdf_address": "黃大仙東匯邨匯智樓地下1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -3563,7 +3635,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港黃大仙東匯邨匯智樓地下1號鋪",
+          "canonical": "香港黃大仙東匯邨匯智樓地下1號鋪OK #586*",
           "pdf": "黃大仙東匯邨匯智樓地下1號舖",
           "classification": "semantic_conflict"
         },
@@ -3583,7 +3655,7 @@
       "code": "852K2008",
       "api_name": "便利店 衙前圍道47號OK便利店",
       "pdf_name": "OK便利店 (九龍城)",
-      "api_address": "九龍城衙前圍道47號地下C單位",
+      "api_address": "九龍城衙前圍道47號地下C單位OK #386*",
       "pdf_address": "九龍九龍城衙前圍道47號地下C單位",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -3600,7 +3672,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍城衙前圍道47號地下C單位",
+          "canonical": "九龍城衙前圍道47號地下C單位OK #386*",
           "pdf": "九龍九龍城衙前圍道47號地下C單位",
           "classification": "semantic_conflict"
         },
@@ -3731,7 +3803,7 @@
       "code": "852DA2002",
       "api_name": "便利店  升悅商場OK便利店",
       "pdf_name": "OK便利店 (荔枝角)",
-      "api_address": "九龍荔枝角荔枝角道833號升悅商場一樓126號鋪",
+      "api_address": "九龍荔枝角荔枝角道833號升悅商場一樓126號鋪OK #411*",
       "pdf_address": "九龍荔枝角荔枝角道833號昇悅商場一樓126號舖",
       "api_business_hours": "07:00-23:00",
       "pdf_business_hours": "07:00-23:00",
@@ -3747,7 +3819,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍荔枝角荔枝角道833號升悅商場一樓126號鋪",
+          "canonical": "九龍荔枝角荔枝角道833號升悅商場一樓126號鋪OK #411*",
           "pdf": "九龍荔枝角荔枝角道833號昇悅商場一樓126號舖",
           "classification": "semantic_conflict"
         }
@@ -3762,20 +3834,26 @@
       "code": "852D2002",
       "api_name": "便利店 紗廠工業大廈OK便利店",
       "pdf_name": "OK便利店 (荔枝角)",
-      "api_address": "九龍荔枝角長沙灣道800號香港紗廠工業大廈一及二期地下",
+      "api_address": "九龍荔枝角長沙灣道800號香港紗廠工業大廈一及二期地下OK #241*",
       "pdf_address": "九龍荔枝角長沙灣道800號香港紗廠工業大廈一及二期地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 紗廠工業大廈OK便利店",
           "pdf": "OK便利店 (荔枝角)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "九龍荔枝角長沙灣道800號香港紗廠工業大廈一及二期地下OK #241*",
+          "pdf": "九龍荔枝角長沙灣道800號香港紗廠工業大廈一及二期地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -4015,7 +4093,7 @@
       "code": "852CB2006",
       "api_name": "便利店 花園大廈OK便利店",
       "pdf_name": "OK便利店 (牛頭角)",
-      "api_address": "九龍觀塘牛頭角道239號觀塘花園大廈喜鵲樓地下239號鋪",
+      "api_address": "九龍觀塘牛頭角道239號觀塘花園大廈喜鵲樓地下239號鋪OK #490*",
       "pdf_address": "九龍觀塘牛頭角道239號觀塘花園大廈喜鵲樓地下239號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -4024,7 +4102,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 花園大廈OK便利店",
@@ -4032,9 +4110,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍觀塘牛頭角道239號觀塘花園大廈喜鵲樓地下239號鋪",
+          "canonical": "九龍觀塘牛頭角道239號觀塘花園大廈喜鵲樓地下239號鋪OK #490*",
           "pdf": "九龍觀塘牛頭角道239號觀塘花園大廈喜鵲樓地下239號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -4052,7 +4130,7 @@
       "code": "852CB2005",
       "api_name": "便利店 牛頭角道OK便利店",
       "pdf_name": "OK便利店 (牛頭角)",
-      "api_address": "九龍牛頭角道305-325及325A號觀塘立成大廈地下K號鋪",
+      "api_address": "九龍牛頭角道305-325及325A號觀塘立成大廈地下K號鋪OK #399*",
       "pdf_address": "九龍牛頭角道305-325及325A號觀塘立成大廈地下K號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -4061,7 +4139,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 牛頭角道OK便利店",
@@ -4069,9 +4147,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍牛頭角道305-325及325A號觀塘立成大廈地下K號鋪",
+          "canonical": "九龍牛頭角道305-325及325A號觀塘立成大廈地下K號鋪OK #399*",
           "pdf": "九龍牛頭角道305-325及325A號觀塘立成大廈地下K號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -4089,7 +4167,7 @@
       "code": "852H2006",
       "api_name": "便利店 彩盈坊OK便利店",
       "pdf_name": "OK便利店 (牛頭角)",
-      "api_address": "九龍牛頭角彩盈邨彩盈坊3號鋪",
+      "api_address": "九龍牛頭角彩盈邨彩盈坊3號鋪OK #366*",
       "pdf_address": "九龍牛頭角彩盈村彩盈坊3號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -4106,7 +4184,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍牛頭角彩盈邨彩盈坊3號鋪",
+          "canonical": "九龍牛頭角彩盈邨彩盈坊3號鋪OK #366*",
           "pdf": "九龍牛頭角彩盈村彩盈坊3號舖",
           "classification": "semantic_conflict"
         },
@@ -4126,7 +4204,7 @@
       "code": "852H2007",
       "api_name": "便利店 彩德商場OK便利店",
       "pdf_name": "OK便利店 (牛頭角)",
-      "api_address": "牛頭角彩德商場地下G04號鋪",
+      "api_address": "牛頭角彩德商場地下G04號鋪OK #428*",
       "pdf_address": "九龍牛頭角彩德商場地下G04號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時 服務時間 (星期一至六,星期日及公眾假期)",
@@ -4143,7 +4221,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "牛頭角彩德商場地下G04號鋪",
+          "canonical": "牛頭角彩德商場地下G04號鋪OK #428*",
           "pdf": "九龍牛頭角彩德商場地下G04號舖",
           "classification": "semantic_conflict"
         },
@@ -4163,7 +4241,7 @@
       "code": "852H2008",
       "api_name": "便利店 晴朗商場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "九龍城晴朗商場地下B002號鋪",
+      "api_address": "九龍城晴朗商場地下B002號鋪OK #492*",
       "pdf_address": "九龍九龍城晴朗商場地下B002號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -4180,7 +4258,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍城晴朗商場地下B002號鋪",
+          "canonical": "九龍城晴朗商場地下B002號鋪OK #492*",
           "pdf": "九龍九龍城晴朗商場地下B002號舖",
           "classification": "semantic_conflict"
         },
@@ -4237,7 +4315,7 @@
       "code": "852BA2004",
       "api_name": "便利店 白田商場OK便利店",
       "pdf_name": "OK便利店 (深水埗)",
-      "api_address": "深水埗白田邨白田商場第七及八期地下低層第四層LG401號鋪",
+      "api_address": "深水埗白田邨白田商場第七及八期地下低層第四層LG401號鋪OK #593*",
       "pdf_address": "深水埗白田邨白田商場第七期及第八期地下低層第四層LG401號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -4255,7 +4333,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "深水埗白田邨白田商場第七及八期地下低層第四層LG401號鋪",
+          "canonical": "深水埗白田邨白田商場第七及八期地下低層第四層LG401號鋪OK #593*",
           "pdf": "深水埗白田邨白田商場第七期及第八期地下低層第四層LG401號舖",
           "classification": "semantic_conflict"
         },
@@ -4280,7 +4358,7 @@
       "code": "852BA2001",
       "api_name": "便利店 桂林街OK便利店",
       "pdf_name": "OK便利店 (深水埗)",
-      "api_address": "九龍深水埗桂林街42-44號地下E號鋪",
+      "api_address": "九龍深水埗桂林街42-44號地下E號鋪OK #180*",
       "pdf_address": "九龍深水埗桂林街42-44號地下E號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -4289,7 +4367,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 桂林街OK便利店",
@@ -4297,9 +4375,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍深水埗桂林街42-44號地下E號鋪",
+          "canonical": "九龍深水埗桂林街42-44號地下E號鋪OK #180*",
           "pdf": "九龍深水埗桂林街42-44號地下E號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -4391,7 +4469,7 @@
       "code": "852BA2005",
       "api_name": "便利店 譽華大廈OK便利店",
       "pdf_name": "OK便利店 (太子)",
-      "api_address": "九龍白楊街34號長沙灣道15-19A號譽華大廈地下C鋪",
+      "api_address": "九龍白楊街34號長沙灣道15-19A號譽華大廈地下C鋪OK #722*",
       "pdf_address": "九龍白楊街34號、長沙灣道15-19 & 19A號譽華大廈地下C舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -4408,7 +4486,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍白楊街34號長沙灣道15-19A號譽華大廈地下C鋪",
+          "canonical": "九龍白楊街34號長沙灣道15-19A號譽華大廈地下C鋪OK #722*",
           "pdf": "九龍白楊街34號、長沙灣道15-19 & 19A號譽華大廈地下C舖",
           "classification": "semantic_conflict"
         },
@@ -4465,7 +4543,7 @@
       "code": "852K2014",
       "api_name": "便利店 翔龍灣廣場OK便利店",
       "pdf_name": "OK便利店 (土瓜灣)",
-      "api_address": "九龍土瓜灣馬頭角新馬頭街38號翔龍灣廣場地下G06號鋪",
+      "api_address": "九龍土瓜灣馬頭角新馬頭街38號翔龍灣廣場地下G06號鋪OK #407*",
       "pdf_address": "九龍土瓜灣馬頭角新馬頭街38號翔龍灣廣場地下G06號舖",
       "api_business_hours": "06:30-00:00",
       "pdf_business_hours": "06:30-24:00",
@@ -4474,7 +4552,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 翔龍灣廣場OK便利店",
@@ -4482,9 +4560,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍土瓜灣馬頭角新馬頭街38號翔龍灣廣場地下G06號鋪",
+          "canonical": "九龍土瓜灣馬頭角新馬頭街38號翔龍灣廣場地下G06號鋪OK #407*",
           "pdf": "九龍土瓜灣馬頭角新馬頭街38號翔龍灣廣場地下G06號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:30-00:00",
@@ -4502,20 +4580,26 @@
       "code": "852K2004",
       "api_name": "土瓜灣道OK便利店",
       "pdf_name": "OK便利店 (土瓜灣)",
-      "api_address": "九龍土瓜灣土瓜灣道273號地下",
+      "api_address": "九龍土瓜灣土瓜灣道273號地下OK #131*",
       "pdf_address": "九龍土瓜灣土瓜灣道273號地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "土瓜灣道OK便利店",
           "pdf": "OK便利店 (土瓜灣)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "九龍土瓜灣土瓜灣道273號地下OK #131*",
+          "pdf": "九龍土瓜灣土瓜灣道273號地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -4533,7 +4617,7 @@
       "code": "852K2002",
       "api_name": "便利店 機利士路OK便利店",
       "pdf_name": "OK便利店 (土瓜灣)",
-      "api_address": "九龍土瓜灣機利士路669號昌盛金鋪大廈地下",
+      "api_address": "九龍土瓜灣機利士路669號昌盛金鋪大廈地下OK #94*",
       "pdf_address": "九龍土瓜灣機利士路669號昌盛金舖大廈地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -4542,7 +4626,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 機利士路OK便利店",
@@ -4550,9 +4634,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍土瓜灣機利士路669號昌盛金鋪大廈地下",
+          "canonical": "九龍土瓜灣機利士路669號昌盛金鋪大廈地下OK #94*",
           "pdf": "九龍土瓜灣機利士路669號昌盛金舖大廈地下",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -4644,20 +4728,26 @@
       "code": "852B2012",
       "api_name": "便利店 弼街OK便利店",
       "pdf_name": "OK便利店 (旺角)",
-      "api_address": "九龍旺角弼街43號地下",
+      "api_address": "九龍旺角弼街43號地下OK #208*",
       "pdf_address": "九龍旺角弼街43號地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 弼街OK便利店",
           "pdf": "OK便利店 (旺角)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "九龍旺角弼街43號地下OK #208*",
+          "pdf": "九龍旺角弼街43號地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -4675,20 +4765,26 @@
       "code": "852BB2004",
       "api_name": "便利店 洗衣街OK便利店",
       "pdf_name": "OK便利店 (旺角)",
-      "api_address": "九龍旺角洗衣街92號地下",
+      "api_address": "九龍旺角洗衣街92號地下OK #419*",
       "pdf_address": "九龍旺角洗衣街92號地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 洗衣街OK便利店",
           "pdf": "OK便利店 (旺角)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "九龍旺角洗衣街92號地下OK #419*",
+          "pdf": "九龍旺角洗衣街92號地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -4706,7 +4802,7 @@
       "code": "852BB2007",
       "api_name": "便利店 利豐大樓OK便利店",
       "pdf_name": "OK便利店 (旺角)",
-      "api_address": "九龍旺角亞皆老街88至96號利豐大樓地下C號鋪",
+      "api_address": "九龍旺角亞皆老街88至96號利豐大樓地下C號鋪OK #245*",
       "pdf_address": "九龍旺角亞皆老街88至96號利豐大樓地下C號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -4715,7 +4811,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 利豐大樓OK便利店",
@@ -4723,9 +4819,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍旺角亞皆老街88至96號利豐大樓地下C號鋪",
+          "canonical": "九龍旺角亞皆老街88至96號利豐大樓地下C號鋪OK #245*",
           "pdf": "九龍旺角亞皆老街88至96號利豐大樓地下C號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -4965,7 +5061,7 @@
       "code": "852J2017",
       "api_name": "便利店 康強街OK便利店",
       "pdf_name": "OK便利店 (新蒲崗)",
-      "api_address": "九龍新蒲崗康強街35-49號地下連天井1A號鋪",
+      "api_address": "九龍新蒲崗康強街35-49號地下連天井1A號鋪OK #516*",
       "pdf_address": "九龍新蒲崗康強街35-49號地下連天井1A號舖",
       "api_business_hours": "06:30-23:00",
       "pdf_business_hours": "06:30-23:00",
@@ -4973,7 +5069,7 @@
         "name",
         "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 康強街OK便利店",
@@ -4981,9 +5077,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍新蒲崗康強街35-49號地下連天井1A號鋪",
+          "canonical": "九龍新蒲崗康強街35-49號地下連天井1A號鋪OK #516*",
           "pdf": "九龍新蒲崗康強街35-49號地下連天井1A號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_KLN_TC",
@@ -5033,7 +5129,7 @@
       "code": "852C2009",
       "api_name": "便利店 寶達商場OK便利店",
       "pdf_name": "OK便利店 (秀茂坪)",
-      "api_address": "九龍觀塘秀茂坪寶達邨寶達商場二樓205號鋪",
+      "api_address": "九龍觀塘秀茂坪寶達邨寶達商場二樓205號鋪OK #218*",
       "pdf_address": "九龍觀塘秀茂坪寶達村寶達商場二樓205號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5050,7 +5146,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍觀塘秀茂坪寶達邨寶達商場二樓205號鋪",
+          "canonical": "九龍觀塘秀茂坪寶達邨寶達商場二樓205號鋪OK #218*",
           "pdf": "九龍觀塘秀茂坪寶達村寶達商場二樓205號舖",
           "classification": "semantic_conflict"
         },
@@ -5070,7 +5166,7 @@
       "code": "852C2023",
       "api_name": "便利店 秀茂坪南OK便利店",
       "pdf_name": "OK便利店 (秀茂坪)",
-      "api_address": "九龍觀塘秀茂坪南秀德樓1號鋪",
+      "api_address": "九龍觀塘秀茂坪南秀德樓1號鋪OK #429*",
       "pdf_address": "九龍觀塘秀茂坪(南)秀德樓1號舖",
       "api_business_hours": "06:00-23:00",
       "pdf_business_hours": "06:00-23:00",
@@ -5078,7 +5174,7 @@
         "name",
         "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 秀茂坪南OK便利店",
@@ -5086,9 +5182,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍觀塘秀茂坪南秀德樓1號鋪",
+          "canonical": "九龍觀塘秀茂坪南秀德樓1號鋪OK #429*",
           "pdf": "九龍觀塘秀茂坪(南)秀德樓1號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_KLN_TC",
@@ -5101,7 +5197,7 @@
       "code": "852CC2002",
       "api_name": "便利店 秀茂坪OK便利店",
       "pdf_name": "OK便利店 (秀茂坪)",
-      "api_address": "九龍觀塘秀茂坪十五期停車場大廈地下1號鋪",
+      "api_address": "九龍觀塘秀茂坪十五期停車場大廈地下1號鋪OK #191*",
       "pdf_address": "九龍觀塘秀茂坪十五期停車場大廈地下1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5110,7 +5206,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 秀茂坪OK便利店",
@@ -5118,9 +5214,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍觀塘秀茂坪十五期停車場大廈地下1號鋪",
+          "canonical": "九龍觀塘秀茂坪十五期停車場大廈地下1號鋪OK #191*",
           "pdf": "九龍觀塘秀茂坪十五期停車場大廈地下1號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -5138,7 +5234,7 @@
       "code": "852CC2003",
       "api_name": "便利店 安達商場OK便利店",
       "pdf_name": "OK便利店 (秀茂坪)",
-      "api_address": "秀茂坪安達邨安達商場G06號鋪",
+      "api_address": "秀茂坪安達邨安達商場G06號鋪OK #536*",
       "pdf_address": "九龍秀茂坪安達邨安達商場G06號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5155,7 +5251,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "秀茂坪安達邨安達商場G06號鋪",
+          "canonical": "秀茂坪安達邨安達商場G06號鋪OK #536*",
           "pdf": "九龍秀茂坪安達邨安達商場G06號舖",
           "classification": "semantic_conflict"
         },
@@ -5175,12 +5271,13 @@
       "code": "852BB2002",
       "api_name": "碧街OK便利店",
       "pdf_name": "OK便利店 (油麻地)",
-      "api_address": "九龍油麻地碧街50號地下",
+      "api_address": "九龍油麻地碧街50號地下OK #381*",
       "pdf_address": "九龍油麻地碧街50號地下",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時 服務時間 (星期一至六,星期日及公眾假期)",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
       "classification": "semantic_conflict",
@@ -5189,6 +5286,11 @@
           "canonical": "碧街OK便利店",
           "pdf": "OK便利店 (油麻地)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "九龍油麻地碧街50號地下OK #381*",
+          "pdf": "九龍油麻地碧街50號地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -5206,7 +5308,7 @@
       "code": "852BB2001",
       "api_name": "便利店 文明裡OK便利店",
       "pdf_name": "OK便利店 (油麻地)",
-      "api_address": "九龍油麻地文明裡4-6號地下2號鋪",
+      "api_address": "九龍油麻地文明裡4-6號地下2號鋪OK #316*",
       "pdf_address": "九龍油麻地文明裡4-6號地下2號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5215,7 +5317,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 文明裡OK便利店",
@@ -5223,9 +5325,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍油麻地文明裡4-6號地下2號鋪",
+          "canonical": "九龍油麻地文明裡4-6號地下2號鋪OK #316*",
           "pdf": "九龍油麻地文明裡4-6號地下2號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -5243,7 +5345,7 @@
       "code": "852BB2012",
       "api_name": "便利店 新填地街OK便利店",
       "pdf_name": "OK便利店 (油麻地)",
-      "api_address": "九龍油麻地新填地街恆運樓地下",
+      "api_address": "九龍油麻地新填地街恆運樓地下OK #512*",
       "pdf_address": "九龍油麻地新填地街141號恆運樓地下A號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5260,7 +5362,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍油麻地新填地街恆運樓地下",
+          "canonical": "九龍油麻地新填地街恆運樓地下OK #512*",
           "pdf": "九龍油麻地新填地街141號恆運樓地下A號舖",
           "classification": "semantic_conflict"
         },
@@ -5465,7 +5567,7 @@
       "code": "852J2001",
       "api_name": "樂富中心OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "九龍樂富樂富中心LG6號鋪",
+      "api_address": "九龍樂富樂富中心LG6號鋪OK #27*",
       "pdf_address": "九龍樂富樂富中心LG6號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5474,7 +5576,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "樂富中心OK便利店",
@@ -5482,9 +5584,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍樂富樂富中心LG6號鋪",
+          "canonical": "九龍樂富樂富中心LG6號鋪OK #27*",
           "pdf": "九龍樂富樂富中心LG6號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -5502,7 +5604,7 @@
       "code": "852J2004",
       "api_name": "便利店 龍蟠苑商場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "鑽石山龍蟠苑商場中心101號鋪",
+      "api_address": "鑽石山龍蟠苑商場中心101號鋪OK #100*",
       "pdf_address": "九龍鑽石山龍蟠苑龍蟠苑商場中心101號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5519,7 +5621,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "鑽石山龍蟠苑商場中心101號鋪",
+          "canonical": "鑽石山龍蟠苑商場中心101號鋪OK #100*",
           "pdf": "九龍鑽石山龍蟠苑龍蟠苑商場中心101號舖",
           "classification": "semantic_conflict"
         },
@@ -5539,7 +5641,7 @@
       "code": "852J2016",
       "api_name": "便利店 鑽石山港鐵OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "九龍鑽石山港鐵站DIH17號鋪",
+      "api_address": "九龍鑽石山港鐵站DIH17號鋪OK #510*",
       "pdf_address": "九龍鑽石山港鐵站DIH17號舖",
       "api_business_hours": "06:30-00:00",
       "pdf_business_hours": "06:30-24:00",
@@ -5548,7 +5650,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 鑽石山港鐵OK便利店",
@@ -5556,9 +5658,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍鑽石山港鐵站DIH17號鋪",
+          "canonical": "九龍鑽石山港鐵站DIH17號鋪OK #510*",
           "pdf": "九龍鑽石山港鐵站DIH17號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:30-00:00",
@@ -5576,7 +5678,7 @@
       "code": "852J2018",
       "api_name": "便利店 鳳德商場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "九龍鑽石山鳳德邨鳳德商場2樓210號鋪",
+      "api_address": "九龍鑽石山鳳德邨鳳德商場2樓210號鋪OK #530*",
       "pdf_address": "九龍鑽石山鳳德村鳳德商場2樓210號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5593,7 +5695,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍鑽石山鳳德邨鳳德商場2樓210號鋪",
+          "canonical": "九龍鑽石山鳳德邨鳳德商場2樓210號鋪OK #530*",
           "pdf": "九龍鑽石山鳳德村鳳德商場2樓210號舖",
           "classification": "semantic_conflict"
         },
@@ -5613,7 +5715,7 @@
       "code": "852J2011",
       "api_name": "便利店 富山村OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "鑽石山富山邨富信樓地下3C號鋪",
+      "api_address": "鑽石山富山邨富信樓地下3C號鋪OK #12*",
       "pdf_address": "九龍鑽石山富山村富信樓地下3C號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5630,7 +5732,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "鑽石山富山邨富信樓地下3C號鋪",
+          "canonical": "鑽石山富山邨富信樓地下3C號鋪OK #12*",
           "pdf": "九龍鑽石山富山村富信樓地下3C號舖",
           "classification": "semantic_conflict"
         },
@@ -5650,7 +5752,7 @@
       "code": "852EA2002",
       "api_name": "便利店 佐敦道OK便利店",
       "pdf_name": "OK便利店 (佐敦)",
-      "api_address": "九龍佐敦佐敦道9-11號高基大廈地下4號鋪",
+      "api_address": "九龍佐敦佐敦道9-11號高基大廈地下4號鋪OK #438*",
       "pdf_address": "九龍佐敦佐敦道9-11號高基大廈地下4號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5659,7 +5761,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 佐敦道OK便利店",
@@ -5667,9 +5769,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍佐敦佐敦道9-11號高基大廈地下4號鋪",
+          "canonical": "九龍佐敦佐敦道9-11號高基大廈地下4號鋪OK #438*",
           "pdf": "九龍佐敦佐敦道9-11號高基大廈地下4號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -5687,7 +5789,7 @@
       "code": "852EA2008",
       "api_name": "便利店 永盛大廈OK便利店",
       "pdf_name": "OK便利店 (佐敦)",
-      "api_address": "九龍上海街89至93號及佐敦道30號永盛大廈地下A鋪",
+      "api_address": "九龍上海街89至93號及佐敦道30號永盛大廈地下A鋪OK #718*",
       "pdf_address": "九龍上海街89至93號及佐敦道30號永盛大廈地下A舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5696,7 +5798,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 永盛大廈OK便利店",
@@ -5704,9 +5806,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍上海街89至93號及佐敦道30號永盛大廈地下A鋪",
+          "canonical": "九龍上海街89至93號及佐敦道30號永盛大廈地下A鋪OK #718*",
           "pdf": "九龍上海街89至93號及佐敦道30號永盛大廈地下A舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -5761,7 +5863,7 @@
       "code": "852EA2006",
       "api_name": "便利店 佐敦港鐵OK便利店",
       "pdf_name": "OK便利店 (佐敦)",
-      "api_address": "九龍佐敦港鐵站JOR10及11號鋪",
+      "api_address": "九龍佐敦港鐵站JOR10及11號鋪OK #297*",
       "pdf_address": "九龍佐敦港鐵站JOR10及11號舖",
       "api_business_hours": "06:30-00:00",
       "pdf_business_hours": "06:30-00:00",
@@ -5769,7 +5871,7 @@
         "name",
         "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 佐敦港鐵OK便利店",
@@ -5777,9 +5879,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "九龍佐敦港鐵站JOR10及11號鋪",
+          "canonical": "九龍佐敦港鐵站JOR10及11號鋪OK #297*",
           "pdf": "九龍佐敦港鐵站JOR10及11號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_KLN_TC",
@@ -5792,7 +5894,7 @@
       "code": "852CC2022",
       "api_name": "便利店 寶琳村OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界將軍澳寶琳邨寶勤樓110-112號鋪",
+      "api_address": "新界將軍澳寶琳邨寶勤樓110-112號鋪OK #55*",
       "pdf_address": "新界將軍澳寶琳村寶勤樓110-112號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5809,7 +5911,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界將軍澳寶琳邨寶勤樓110-112號鋪",
+          "canonical": "新界將軍澳寶琳邨寶勤樓110-112號鋪OK #55*",
           "pdf": "新界將軍澳寶琳村寶勤樓110-112號舖",
           "classification": "semantic_conflict"
         },
@@ -5829,7 +5931,7 @@
       "code": "852CC2023",
       "api_name": "便利店 欣明苑OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "將軍澳欣明苑停車場大廈地下1鋪",
+      "api_address": "將軍澳欣明苑停車場大廈地下1鋪OK #76*",
       "pdf_address": "新界將軍澳欣明苑停車場大廈地下1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5846,7 +5948,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "將軍澳欣明苑停車場大廈地下1鋪",
+          "canonical": "將軍澳欣明苑停車場大廈地下1鋪OK #76*",
           "pdf": "新界將軍澳欣明苑停車場大廈地下1號舖",
           "classification": "semantic_conflict"
         },
@@ -5866,7 +5968,7 @@
       "code": "852CC2028",
       "api_name": "便利店 新都城中心OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界將軍澳新都城中心三期都會豪庭商場2樓209號鋪",
+      "api_address": "新界將軍澳新都城中心三期都會豪庭商場2樓209號鋪OK #280*",
       "pdf_address": "新界將軍澳新都城中心三期都會豪庭商場2樓209號舖",
       "api_business_hours": "06:00-22:00",
       "pdf_business_hours": "06:00-22:00",
@@ -5874,7 +5976,7 @@
         "name",
         "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 新都城中心OK便利店",
@@ -5882,9 +5984,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界將軍澳新都城中心三期都會豪庭商場2樓209號鋪",
+          "canonical": "新界將軍澳新都城中心三期都會豪庭商場2樓209號鋪OK #280*",
           "pdf": "新界將軍澳新都城中心三期都會豪庭商場2樓209號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_NT_TC",
@@ -5897,7 +5999,7 @@
       "code": "852CC2036",
       "api_name": "便利店 寶琳港鐵OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界寶琳港鐵站POA14號鋪",
+      "api_address": "新界寶琳港鐵站POA14號鋪OK #545*",
       "pdf_address": "新界寶琳港鐵站POA 14號舖",
       "api_business_hours": "06:30-00:00",
       "pdf_business_hours": "06:30-00:00",
@@ -5905,7 +6007,7 @@
         "name",
         "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 寶琳港鐵OK便利店",
@@ -5913,9 +6015,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界寶琳港鐵站POA14號鋪",
+          "canonical": "新界寶琳港鐵站POA14號鋪OK #545*",
           "pdf": "新界寶琳港鐵站POA 14號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_NT_TC",
@@ -5928,7 +6030,7 @@
       "code": "852CC2018",
       "api_name": "便利店 景林商場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界將軍澳景林邨景林商場地下6號鋪",
+      "api_address": "新界將軍澳景林邨景林商場地下6號鋪OK #502*",
       "pdf_address": "新界將軍澳景林村景林商場地下6號舖",
       "api_business_hours": "06:00-23:00",
       "pdf_business_hours": "06:00-23:00",
@@ -5944,7 +6046,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界將軍澳景林邨景林商場地下6號鋪",
+          "canonical": "新界將軍澳景林邨景林商場地下6號鋪OK #502*",
           "pdf": "新界將軍澳景林村景林商場地下6號舖",
           "classification": "semantic_conflict"
         }
@@ -5959,7 +6061,7 @@
       "code": "852AA2014",
       "api_name": "便利店 富善商場OK便利店",
       "pdf_name": "OK便利店 (大埔)",
-      "api_address": "新界大埔富善邨富善商場地下G19A及G20號鋪",
+      "api_address": "新界大埔富善邨富善商場地下G19A及G20號鋪OK #392*",
       "pdf_address": "新界大埔富善村富善商場地下G19A及G20號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -5976,7 +6078,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界大埔富善邨富善商場地下G19A及G20號鋪",
+          "canonical": "新界大埔富善邨富善商場地下G19A及G20號鋪OK #392*",
           "pdf": "新界大埔富善村富善商場地下G19A及G20號舖",
           "classification": "semantic_conflict"
         },
@@ -5996,7 +6098,7 @@
       "code": "852AA2001",
       "api_name": "大榮里OK便利店",
       "pdf_name": "OK便利店 (大埔)",
-      "api_address": "香港新界大埔大榮里26號地下A號鋪",
+      "api_address": "香港新界大埔大榮里26號地下A號鋪OK #7*",
       "pdf_address": "新界大埔大榮裡26號地下A號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -6013,7 +6115,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港新界大埔大榮里26號地下A號鋪",
+          "canonical": "香港新界大埔大榮里26號地下A號鋪OK #7*",
           "pdf": "新界大埔大榮裡26號地下A號舖",
           "classification": "semantic_conflict"
         },
@@ -6033,7 +6135,7 @@
       "code": "852AA2005",
       "api_name": "便利店 運頭塘OK便利店",
       "pdf_name": "OK便利店 (大埔)",
-      "api_address": "新界大埔運頭塘村商場1號鋪",
+      "api_address": "新界大埔運頭塘村商場1號鋪OK #86*",
       "pdf_address": "新界大埔運頭塘村商場1號舖",
       "api_business_hours": "00:00-23:55",
       "pdf_business_hours": "24小時",
@@ -6050,9 +6152,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界大埔運頭塘村商場1號鋪",
+          "canonical": "新界大埔運頭塘村商場1號鋪OK #86*",
           "pdf": "新界大埔運頭塘村商場1號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:55",
@@ -6144,7 +6246,7 @@
       "code": "852AA2004",
       "api_name": "富亨商場OK便利店",
       "pdf_name": "OK便利店 (大埔)",
-      "api_address": "香港新界大埔富亨邨富亨商場中心23-24號鋪OK #84",
+      "api_address": "新界大埔富亨邨富亨商場中心23-24號鋪OK #84",
       "pdf_address": "大埔富亨邨富亨商場中心23-24號舖",
       "api_business_hours": "00:00-00:00 周六:00:00-00:00 周日:00:00-00:00 節假日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -6161,7 +6263,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港新界大埔富亨邨富亨商場中心23-24號鋪OK #84",
+          "canonical": "新界大埔富亨邨富亨商場中心23-24號鋪OK #84",
           "pdf": "大埔富亨邨富亨商場中心23-24號舖",
           "classification": "semantic_conflict"
         },
@@ -6434,7 +6536,7 @@
       "code": "852FE2018",
       "api_name": "便利店 美田商場OK便利店",
       "pdf_name": "OK便利店 (大圍)",
-      "api_address": "香港沙田美田商場地下1號鋪",
+      "api_address": "香港沙田美田商場地下1號鋪OK #310*",
       "pdf_address": "新界大圍美田商場地下1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -6451,7 +6553,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港沙田美田商場地下1號鋪",
+          "canonical": "香港沙田美田商場地下1號鋪OK #310*",
           "pdf": "新界大圍美田商場地下1號舖",
           "classification": "semantic_conflict"
         },
@@ -6508,7 +6610,7 @@
       "code": "852FE2014",
       "api_name": "便利店 美田村OK便利店",
       "pdf_name": "OK便利店 (大圍)",
-      "api_address": "新界沙田美田邨美全樓地下2號鋪",
+      "api_address": "新界沙田美田邨美全樓地下2號鋪OK #489*",
       "pdf_address": "新界沙田美田村美全樓地下2號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -6525,7 +6627,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界沙田美田邨美全樓地下2號鋪",
+          "canonical": "新界沙田美田邨美全樓地下2號鋪OK #489*",
           "pdf": "新界沙田美田村美全樓地下2號舖",
           "classification": "semantic_conflict"
         },
@@ -6545,7 +6647,7 @@
       "code": "852FE2013",
       "api_name": "便利店 金禧花園OK便利店",
       "pdf_name": "OK便利店 (大圍)",
-      "api_address": "沙田大圍道55-65號積輝街14-18號金禧花園地下6號鋪",
+      "api_address": "沙田大圍道55-65號積輝街14-18號金禧花園地下6號鋪OK #447*",
       "pdf_address": "新界沙田大圍道55-65號積輝街14-18號金禧花園地下6號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -6562,7 +6664,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "沙田大圍道55-65號積輝街14-18號金禧花園地下6號鋪",
+          "canonical": "沙田大圍道55-65號積輝街14-18號金禧花園地下6號鋪OK #447*",
           "pdf": "新界沙田大圍道55-65號積輝街14-18號金禧花園地下6號舖",
           "classification": "semantic_conflict"
         },
@@ -6582,7 +6684,7 @@
       "code": "852G2011",
       "api_name": "便利店 大窩口村商場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界荃灣大窩口邨商場10號鋪",
+      "api_address": "新界荃灣大窩口邨商場10號鋪OK #37*",
       "pdf_address": "新界荃灣大窩口村商場C9至10號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -6599,7 +6701,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界荃灣大窩口邨商場10號鋪",
+          "canonical": "新界荃灣大窩口邨商場10號鋪OK #37*",
           "pdf": "新界荃灣大窩口村商場C9至10號舖",
           "classification": "semantic_conflict"
         },
@@ -6656,7 +6758,7 @@
       "code": "852CC2033",
       "api_name": "便利店 彩明商場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界將軍澳彩明商場擴展部份二樓244號鋪",
+      "api_address": "新界將軍澳彩明商場擴展部份二樓244號鋪OK #251*",
       "pdf_address": "新界將軍澳彩明商場擴展部份二樓244號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -6665,7 +6767,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 彩明商場OK便利店",
@@ -6673,9 +6775,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界將軍澳彩明商場擴展部份二樓244號鋪",
+          "canonical": "新界將軍澳彩明商場擴展部份二樓244號鋪OK #251*",
           "pdf": "新界將軍澳彩明商場擴展部份二樓244號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -6693,7 +6795,7 @@
       "code": "852GH2001",
       "api_name": "便利店 逸東商場OK便利店",
       "pdf_name": "OK便利店 (東涌)",
-      "api_address": "新界東涌逸東街8號逸東邨逸東商場地下4號鋪",
+      "api_address": "新界東涌逸東街8號逸東邨逸東商場地下4號鋪OK #566*",
       "pdf_address": "新界東涌逸東街8號逸東邨逸東商場地下4號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -6702,7 +6804,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 逸東商場OK便利店",
@@ -6710,9 +6812,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界東涌逸東街8號逸東邨逸東商場地下4號鋪",
+          "canonical": "新界東涌逸東街8號逸東邨逸東商場地下4號鋪OK #566*",
           "pdf": "新界東涌逸東街8號逸東邨逸東商場地下4號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -6730,7 +6832,7 @@
       "code": "852A2006",
       "api_name": "便利店 嘉福村商場OK便利店",
       "pdf_name": "OK便利店 (粉嶺)",
-      "api_address": "新界粉嶺嘉福邨商場中心6號鋪",
+      "api_address": "新界粉嶺嘉福邨商場中心6號鋪*OK #127",
       "pdf_address": "新界粉嶺嘉福村商場中心6號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -6747,7 +6849,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界粉嶺嘉福邨商場中心6號鋪",
+          "canonical": "新界粉嶺嘉福邨商場中心6號鋪*OK #127",
           "pdf": "新界粉嶺嘉福村商場中心6號舖",
           "classification": "semantic_conflict"
         },
@@ -6767,7 +6869,7 @@
       "code": "852A2008",
       "api_name": "便利店 雍盛商場OK便利店",
       "pdf_name": "OK便利店 (粉嶺)",
-      "api_address": "新界粉嶺雍盛商場地下12號鋪",
+      "api_address": "新界粉嶺雍盛商場地下12號鋪*OK #185",
       "pdf_address": "新界粉嶺雍盛苑雍盛商場地下12號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -6784,7 +6886,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界粉嶺雍盛商場地下12號鋪",
+          "canonical": "新界粉嶺雍盛商場地下12號鋪*OK #185",
           "pdf": "新界粉嶺雍盛苑雍盛商場地下12號舖",
           "classification": "semantic_conflict"
         },
@@ -6804,7 +6906,7 @@
       "code": "852A2014",
       "api_name": "便利店 暉明邨OK便利店",
       "pdf_name": "OK便利店 (粉嶺)",
-      "api_address": "粉嶺暉明邨升暉樓地下1號鋪",
+      "api_address": "粉嶺暉明邨升暉樓地下1號鋪OK #590*",
       "pdf_address": "粉嶺暉明邨昇暉樓地下1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -6821,7 +6923,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "粉嶺暉明邨升暉樓地下1號鋪",
+          "canonical": "粉嶺暉明邨升暉樓地下1號鋪OK #590*",
           "pdf": "粉嶺暉明邨昇暉樓地下1號舖",
           "classification": "semantic_conflict"
         },
@@ -6989,7 +7091,7 @@
       "code": "852U2023",
       "api_name": "洪福商場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "香港元朗區洪水橋洪福邨洪福商場地下6號鋪",
+      "api_address": "香港元朗區洪水橋洪福邨洪福商場地下6號鋪OK #519*",
       "pdf_address": "新界元朗洪水橋洪福村洪福商場地下6號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -7006,7 +7108,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港元朗區洪水橋洪福邨洪福商場地下6號鋪",
+          "canonical": "香港元朗區洪水橋洪福邨洪福商場地下6號鋪OK #519*",
           "pdf": "新界元朗洪水橋洪福村洪福商場地下6號舖",
           "classification": "semantic_conflict"
         },
@@ -7063,12 +7165,13 @@
       "code": "852F2014",
       "api_name": "便利店 安盛工業大廈OK便利店",
       "pdf_name": "OK便利店 (火炭)",
-      "api_address": "新界火炭禾寮坑路2-16號安盛工業大廈地下部份B號單位",
+      "api_address": "新界火炭禾寮坑路2-16號安盛工業大廈地下部份B號單位OK #276*",
       "pdf_address": "新界火炭禾寮坑路2-16號安盛工業大廈地下部份B號單位",
       "api_business_hours": "06:00-23:00 周六:06:00-23:00",
       "pdf_business_hours": "06:00-23:00",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
       "classification": "semantic_conflict",
@@ -7077,6 +7180,11 @@
           "canonical": "便利店 安盛工業大廈OK便利店",
           "pdf": "OK便利店 (火炭)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "新界火炭禾寮坑路2-16號安盛工業大廈地下部份B號單位OK #276*",
+          "pdf": "新界火炭禾寮坑路2-16號安盛工業大廈地下部份B號單位",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:00-23:00 周六:06:00-23:00",
@@ -7094,12 +7202,13 @@
       "code": "852F2017",
       "api_name": "便利店 宇宙工業中心OK便利店",
       "pdf_name": "OK便利店 (火炭)",
-      "api_address": "新界火炭山尾街19-25號宇宙工業中心地下I號單位",
+      "api_address": "新界火炭山尾街19-25號宇宙工業中心地下I號單位OK #405*",
       "pdf_address": "新界火炭山尾街19-25號宇宙工業中心地下I號單位",
       "api_business_hours": "07:00-21:30 周六:07:00-21:30",
       "pdf_business_hours": "07:00-21:30",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
       "classification": "semantic_conflict",
@@ -7108,6 +7217,11 @@
           "canonical": "便利店 宇宙工業中心OK便利店",
           "pdf": "OK便利店 (火炭)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "新界火炭山尾街19-25號宇宙工業中心地下I號單位OK #405*",
+          "pdf": "新界火炭山尾街19-25號宇宙工業中心地下I號單位",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "07:00-21:30 周六:07:00-21:30",
@@ -7162,7 +7276,7 @@
       "code": "852CC2039",
       "api_name": "便利店 都會駅商場OK便利店",
       "pdf_name": "OK便利店 (將軍澳)",
-      "api_address": "將軍澳景嶺路八號都會駅商場2樓36號鋪 ",
+      "api_address": "將軍澳景嶺路八號都會駅商場2樓36號鋪 OK #725*",
       "pdf_address": "新界將軍澳景嶺路八號都會駅商場2樓39及40號舖",
       "api_business_hours": "07:00-22:00",
       "pdf_business_hours": "07:00-22:00",
@@ -7178,7 +7292,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "將軍澳景嶺路八號都會駅商場2樓36號鋪 ",
+          "canonical": "將軍澳景嶺路八號都會駅商場2樓36號鋪 OK #725*",
           "pdf": "新界將軍澳景嶺路八號都會駅商場2樓39及40號舖",
           "classification": "semantic_conflict"
         }
@@ -7230,7 +7344,7 @@
       "code": "852CC2027",
       "api_name": "便利店 將軍澳中心OK便利店",
       "pdf_name": "OK便利店 (將軍澳)",
-      "api_address": "新界將軍澳唐德街將軍澳中心地下B04號鋪",
+      "api_address": "新界將軍澳唐德街將軍澳中心地下B04號鋪OK #223*",
       "pdf_address": "新界將軍澳唐德街將軍澳中心地下B04號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -7239,7 +7353,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 將軍澳中心OK便利店",
@@ -7247,9 +7361,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界將軍澳唐德街將軍澳中心地下B04號鋪",
+          "canonical": "新界將軍澳唐德街將軍澳中心地下B04號鋪OK #223*",
           "pdf": "新界將軍澳唐德街將軍澳中心地下B04號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -7378,7 +7492,7 @@
       "code": "852CC2038",
       "api_name": "便利店 The LOHAS康城OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界將軍澳TheLOHAS康城3樓315號鋪",
+      "api_address": "新界將軍澳TheLOHAS康城3樓315號鋪OK #585*",
       "pdf_address": "新界將軍澳The LOHAS康城3樓315號舖",
       "api_business_hours": "07:00-00:00",
       "pdf_business_hours": "07:00 - 24:00",
@@ -7387,7 +7501,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 The LOHAS康城OK便利店",
@@ -7395,9 +7509,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界將軍澳TheLOHAS康城3樓315號鋪",
+          "canonical": "新界將軍澳TheLOHAS康城3樓315號鋪OK #585*",
           "pdf": "新界將軍澳The LOHAS康城3樓315號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "07:00-00:00",
@@ -7415,7 +7529,7 @@
       "code": "852CC2024",
       "api_name": "便利店 明德商場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界將軍澳明德邨明德商場19號鋪",
+      "api_address": "新界將軍澳明德邨明德商場19號鋪OK #145*",
       "pdf_address": "新界將軍澳明德村明德商場19號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -7432,7 +7546,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界將軍澳明德邨明德商場19號鋪",
+          "canonical": "新界將軍澳明德邨明德商場19號鋪OK #145*",
           "pdf": "新界將軍澳明德村明德商場19號舖",
           "classification": "semantic_conflict"
         },
@@ -7452,7 +7566,7 @@
       "code": "852CC2031",
       "api_name": "便利店 厚德商場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界將軍澳厚德邨商場(西翼)地下G11及G12號鋪",
+      "api_address": "新界將軍澳厚德邨商場(西翼)地下G11及G12號鋪OK #352*",
       "pdf_address": "新界將軍澳厚德村商場(西翼)地下G11及G12號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -7469,7 +7583,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界將軍澳厚德邨商場(西翼)地下G11及G12號鋪",
+          "canonical": "新界將軍澳厚德邨商場(西翼)地下G11及G12號鋪OK #352*",
           "pdf": "新界將軍澳厚德村商場(西翼)地下G11及G12號舖",
           "classification": "semantic_conflict"
         },
@@ -7489,7 +7603,7 @@
       "code": "852LB2007",
       "api_name": "便利店 葵涌廣場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界葵涌葵富路7-11號，葵涌廣場地下26號鋪",
+      "api_address": "新界葵涌葵富路7-11號，葵涌廣場地下26號鋪OK #556*",
       "pdf_address": "新界葵涌葵富路7-11號，葵涌廣場地下26號舖",
       "api_business_hours": "06:30-23:00",
       "pdf_business_hours": "06:30-23:00",
@@ -7497,7 +7611,7 @@
         "name",
         "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 葵涌廣場OK便利店",
@@ -7505,9 +7619,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界葵涌葵富路7-11號，葵涌廣場地下26號鋪",
+          "canonical": "新界葵涌葵富路7-11號，葵涌廣場地下26號鋪OK #556*",
           "pdf": "新界葵涌葵富路7-11號，葵涌廣場地下26號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_NT_TC",
@@ -7520,7 +7634,7 @@
       "code": "852LB2006",
       "api_name": "便利店 葵興商場OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界葵涌葵興商場地下2號鋪",
+      "api_address": "新界葵涌葵興商場地下2號鋪OK #493*",
       "pdf_address": "新界葵涌禾葵裡2號葵興商場地下2號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -7537,7 +7651,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界葵涌葵興商場地下2號鋪",
+          "canonical": "新界葵涌葵興商場地下2號鋪OK #493*",
           "pdf": "新界葵涌禾葵裡2號葵興商場地下2號舖",
           "classification": "semantic_conflict"
         },
@@ -7557,7 +7671,7 @@
       "code": "852LA2002",
       "api_name": "便利店 梨木商場OK便利店",
       "pdf_name": "OK便利店 (葵涌)",
-      "api_address": "新界葵涌梨木商場LG1號鋪",
+      "api_address": "新界葵涌梨木商場LG1號鋪OK #265*",
       "pdf_address": "新界葵涌梨木樹村梨木商場LG1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -7574,7 +7688,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界葵涌梨木商場LG1號鋪",
+          "canonical": "新界葵涌梨木商場LG1號鋪OK #265*",
           "pdf": "新界葵涌梨木樹村梨木商場LG1號舖",
           "classification": "semantic_conflict"
         },
@@ -7594,7 +7708,7 @@
       "code": "852LA2003",
       "api_name": "便利店 石蔭東村OK便利店",
       "pdf_name": "OK便利店 (葵涌)",
-      "api_address": "新界葵涌石蔭東邨蔭興樓1及2號鋪",
+      "api_address": "新界葵涌石蔭東邨蔭興樓1及2號鋪OK #143*",
       "pdf_address": "新界葵涌石蔭東村蔭興樓1及2號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -7611,7 +7725,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界葵涌石蔭東邨蔭興樓1及2號鋪",
+          "canonical": "新界葵涌石蔭東邨蔭興樓1及2號鋪OK #143*",
           "pdf": "新界葵涌石蔭東村蔭興樓1及2號舖",
           "classification": "semantic_conflict"
         },
@@ -7631,7 +7745,7 @@
       "code": "852LA2005",
       "api_name": "便利店 梨木商場OK便利店",
       "pdf_name": "OK便利店 (葵涌)",
-      "api_address": "新界葵涌梨木商場1樓102號鋪",
+      "api_address": "新界葵涌梨木商場1樓102號鋪OK #266*",
       "pdf_address": "新界葵涌梨木樹村梨木商場1樓102號舖",
       "api_business_hours": "07:00-21:00",
       "pdf_business_hours": "07:00-21:00",
@@ -7647,7 +7761,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界葵涌梨木商場1樓102號鋪",
+          "canonical": "新界葵涌梨木商場1樓102號鋪OK #266*",
           "pdf": "新界葵涌梨木樹村梨木商場1樓102號舖",
           "classification": "semantic_conflict"
         }
@@ -7662,7 +7776,7 @@
       "code": "852LB2001",
       "api_name": "便利店 葵涌村OK便利店",
       "pdf_name": "OK便利店 (葵涌)",
-      "api_address": "葵涌葵涌邨第一期秋葵樓地下6鋪",
+      "api_address": "葵涌葵涌邨第一期秋葵樓地下6鋪OK #156*",
       "pdf_address": "新界葵涌葵涌村第一期秋葵樓地下6號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -7679,7 +7793,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "葵涌葵涌邨第一期秋葵樓地下6鋪",
+          "canonical": "葵涌葵涌邨第一期秋葵樓地下6鋪OK #156*",
           "pdf": "新界葵涌葵涌村第一期秋葵樓地下6號舖",
           "classification": "semantic_conflict"
         },
@@ -7699,12 +7813,13 @@
       "code": "852Q2001",
       "api_name": "便利店 葵涌貨櫃碼頭OK便利店",
       "pdf_name": "OK便利店 (葵涌)",
-      "api_address": "新界葵涌貨櫃碼頭亞洲貨運大廈第三期A座7樓",
+      "api_address": "新界葵涌貨櫃碼頭亞洲貨運大廈第三期A座7樓OK #116*",
       "pdf_address": "新界葵涌貨櫃碼頭亞洲貨運大廈第三期A座7樓",
       "api_business_hours": "06:30-20:00 周六:06:30-20:00",
       "pdf_business_hours": "06:30-20:00, 星期六:06:00-20:00 星期日及公眾假期: 休息",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
       "classification": "semantic_conflict",
@@ -7713,6 +7828,11 @@
           "canonical": "便利店 葵涌貨櫃碼頭OK便利店",
           "pdf": "OK便利店 (葵涌)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "新界葵涌貨櫃碼頭亞洲貨運大廈第三期A座7樓OK #116*",
+          "pdf": "新界葵涌貨櫃碼頭亞洲貨運大廈第三期A座7樓",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:30-20:00 周六:06:30-20:00",
@@ -7804,7 +7924,7 @@
       "code": "852L2001",
       "api_name": "便利店 華星街OK便利店",
       "pdf_name": "OK便利店 (葵涌)",
-      "api_address": "新界葵涌華星街1至7號美華工業大廈地下B號鋪OK #403",
+      "api_address": "新界葵涌華星街1至7號美華工業大廈地下B號鋪OK #403*",
       "pdf_address": "葵涌華星街1至7號，美華工業大厦地下B號",
       "api_business_hours": "06:00-22:00 周六:06:00-22:00 周日:08:00-18:00 節假日:08:00-18:00",
       "pdf_business_hours": "06:00-22:00",
@@ -7821,7 +7941,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界葵涌華星街1至7號美華工業大廈地下B號鋪OK #403",
+          "canonical": "新界葵涌華星街1至7號美華工業大廈地下B號鋪OK #403*",
           "pdf": "葵涌華星街1至7號，美華工業大厦地下B號",
           "classification": "semantic_conflict"
         },
@@ -7878,7 +7998,7 @@
       "code": "852LA2006",
       "api_name": "石蔭商場OK便利店",
       "pdf_name": "OK便利店 (葵涌)",
-      "api_address": "葵涌梨木道120號石蔭邨石蔭商場地下12-13號鋪OK #597",
+      "api_address": "葵涌梨木道120號石蔭邨石蔭商場地下12-13號鋪OK #597*",
       "pdf_address": "葵涌梨木道120號石蔭邨石蔭商場地下12-13號舖",
       "api_business_hours": "07:00-23:00 周六:07:00-23:00 周日:07:00-23:00 節假日:07:00-23:00",
       "pdf_business_hours": "07:00-23:00",
@@ -7895,7 +8015,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "葵涌梨木道120號石蔭邨石蔭商場地下12-13號鋪OK #597",
+          "canonical": "葵涌梨木道120號石蔭邨石蔭商場地下12-13號鋪OK #597*",
           "pdf": "葵涌梨木道120號石蔭邨石蔭商場地下12-13號舖",
           "classification": "semantic_conflict"
         },
@@ -7915,7 +8035,7 @@
       "code": "852FE2008",
       "api_name": "便利店 頌安商場OK便利店",
       "pdf_name": "OK便利店 (馬鞍山)",
-      "api_address": "香港新界馬鞍山頌安邨頌安商場1號鋪",
+      "api_address": "香港新界馬鞍山頌安邨頌安商場1號鋪OK #147*",
       "pdf_address": "新界馬鞍山頌安村頌安商場1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -7932,7 +8052,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港新界馬鞍山頌安邨頌安商場1號鋪",
+          "canonical": "香港新界馬鞍山頌安邨頌安商場1號鋪OK #147*",
           "pdf": "新界馬鞍山頌安村頌安商場1號舖",
           "classification": "semantic_conflict"
         },
@@ -7952,7 +8072,7 @@
       "code": "852FE2004",
       "api_name": "富安花園OK便利店",
       "pdf_name": "OK便利店 (馬鞍山)",
-      "api_address": "香港新界馬鞍山富安花園商場中心22號鋪",
+      "api_address": "香港新界馬鞍山富安花園商場中心22號鋪OK #48*",
       "pdf_address": "新界馬鞍山富安花園商場中心22號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -7969,7 +8089,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港新界馬鞍山富安花園商場中心22號鋪",
+          "canonical": "香港新界馬鞍山富安花園商場中心22號鋪OK #48*",
           "pdf": "新界馬鞍山富安花園商場中心22號舖",
           "classification": "semantic_conflict"
         },
@@ -7989,7 +8109,7 @@
       "code": "852FE2019",
       "api_name": "迎海薈OK便利店",
       "pdf_name": "OK便利店 (馬鞍山)",
-      "api_address": "香港馬鞍山落禾沙迎海薈2樓2號鋪",
+      "api_address": "香港馬鞍山落禾沙迎海薈2樓2號鋪OK #577*",
       "pdf_address": "馬鞍山落禾沙迎海薈2樓2號舖",
       "api_business_hours": "06:00-00:00",
       "pdf_business_hours": "06:00-24:00",
@@ -8006,7 +8126,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港馬鞍山落禾沙迎海薈2樓2號鋪",
+          "canonical": "香港馬鞍山落禾沙迎海薈2樓2號鋪OK #577*",
           "pdf": "馬鞍山落禾沙迎海薈2樓2號舖",
           "classification": "semantic_conflict"
         },
@@ -8026,7 +8146,7 @@
       "code": "852FE2016",
       "api_name": "便利店 新港城中心OK便利店",
       "pdf_name": "OK便利店 (馬鞍山)",
-      "api_address": "新界馬鞍山新港城中心二樓2408號鋪",
+      "api_address": "新界馬鞍山新港城中心二樓2408號鋪OK #557*",
       "pdf_address": "新界馬鞍山新港城中心二樓2408號舖",
       "api_business_hours": "06:00-00:00",
       "pdf_business_hours": "06:00-24:00",
@@ -8035,7 +8155,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 新港城中心OK便利店",
@@ -8043,9 +8163,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界馬鞍山新港城中心二樓2408號鋪",
+          "canonical": "新界馬鞍山新港城中心二樓2408號鋪OK #557*",
           "pdf": "新界馬鞍山新港城中心二樓2408號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:00-00:00",
@@ -8063,7 +8183,7 @@
       "code": "852FE2011",
       "api_name": "便利店 烏溪沙港鐵OK便利店",
       "pdf_name": "OK便利店 (馬鞍山)",
-      "api_address": "香港沙田區馬鞍山烏溪沙港鐵站大堂2號鋪",
+      "api_address": "香港沙田區馬鞍山烏溪沙港鐵站大堂2號鋪OK #271*",
       "pdf_address": "新界烏溪沙港鐵站大堂2號舖",
       "api_business_hours": "06:00-00:00",
       "pdf_business_hours": "06:00-24:00 服務時間 (星期一至六,星期日及公眾假期)",
@@ -8080,7 +8200,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港沙田區馬鞍山烏溪沙港鐵站大堂2號鋪",
+          "canonical": "香港沙田區馬鞍山烏溪沙港鐵站大堂2號鋪OK #271*",
           "pdf": "新界烏溪沙港鐵站大堂2號舖",
           "classification": "semantic_conflict"
         },
@@ -8137,7 +8257,7 @@
       "code": "852FE2006",
       "api_name": "錦英苑商場OK便利店",
       "pdf_name": "OK便利店 (馬鞍山)",
-      "api_address": "香港新界馬鞍山錦英苑商場中心低層地下2號鋪OK #087*",
+      "api_address": "新界馬鞍山錦英苑商場中心低層地下2號鋪OK #087*",
       "pdf_address": "沙田馬鞍山錦英苑商場中心低層地下2號",
       "api_business_hours": "00:00-00:00 周六:00:00-00:00 周日:00:00-00:00 節假日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -8154,7 +8274,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港新界馬鞍山錦英苑商場中心低層地下2號鋪OK #087*",
+          "canonical": "新界馬鞍山錦英苑商場中心低層地下2號鋪OK #087*",
           "pdf": "沙田馬鞍山錦英苑商場中心低層地下2號",
           "classification": "semantic_conflict"
         },
@@ -8174,7 +8294,7 @@
       "code": "852FE2009",
       "api_name": "錦泰商場OK便利店",
       "pdf_name": "OK便利店 (馬鞍山)",
-      "api_address": "香港新界馬鞍山錦泰苑錦泰商場地下2號鋪OK #179*",
+      "api_address": "新界馬鞍山錦泰苑錦泰商場地下2號鋪OK #179*",
       "pdf_address": "沙田馬鞍山錦泰苑錦泰商場地下2號舖",
       "api_business_hours": "00:00-00:00 周六:00:00-00:00 周日:00:00-00:00 節假日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -8191,7 +8311,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港新界馬鞍山錦泰苑錦泰商場地下2號鋪OK #179*",
+          "canonical": "新界馬鞍山錦泰苑錦泰商場地下2號鋪OK #179*",
           "pdf": "沙田馬鞍山錦泰苑錦泰商場地下2號舖",
           "classification": "semantic_conflict"
         },
@@ -8211,19 +8331,25 @@
       "code": "852GC2005",
       "api_name": "便利店 珀林路OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界馬灣珀林路23號地下",
+      "api_address": "新界馬灣珀林路23號地下OK #485*",
       "pdf_address": "新界馬灣珀林路23號地下",
       "api_business_hours": "07:00-23:00",
       "pdf_business_hours": "07:00-23:00",
       "differing_fields": [
-        "name"
+        "name",
+        "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 珀林路OK便利店",
           "pdf": "OK便利店",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "新界馬灣珀林路23號地下OK #485*",
+          "pdf": "新界馬灣珀林路23號地下",
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_NT_TC",
@@ -8236,20 +8362,26 @@
       "code": "852GC2001",
       "api_name": "便利店 青華苑OK便利店",
       "pdf_name": "OK便利店 (青衣)",
-      "api_address": "新界青衣青華苑停車場地下",
+      "api_address": "新界青衣青華苑停車場地下OK #294*",
       "pdf_address": "新界青衣青華苑停車場地下",
       "api_business_hours": "06:00-00:00",
       "pdf_business_hours": "06:00-24:00",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 青華苑OK便利店",
           "pdf": "OK便利店 (青衣)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "新界青衣青華苑停車場地下OK #294*",
+          "pdf": "新界青衣青華苑停車場地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:00-00:00",
@@ -8261,6 +8393,43 @@
       "parser_location": {
         "row_index": 69,
         "raw_row": "青衣852GC2001新界青衣青華苑停車場地下^852GC2001^06:00-24:00"
+      }
+    },
+    {
+      "code": "852GC2003",
+      "api_name": "便利店 青衣村OK便利店",
+      "pdf_name": "OK便利店 (青衣)",
+      "api_address": "新界青衣青衣邨一期停車場大廈地下6號鋪OK #64*",
+      "pdf_address": "新界青衣青衣村一期停車場大廈地下6號舖",
+      "api_business_hours": "00:00-23:59",
+      "pdf_business_hours": "24小時",
+      "differing_fields": [
+        "name",
+        "address",
+        "business_hours"
+      ],
+      "classification": "semantic_conflict",
+      "comparison": {
+        "name": {
+          "canonical": "便利店 青衣村OK便利店",
+          "pdf": "OK便利店 (青衣)",
+          "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "新界青衣青衣邨一期停車場大廈地下6號鋪OK #64*",
+          "pdf": "新界青衣青衣村一期停車場大廈地下6號舖",
+          "classification": "semantic_conflict"
+        },
+        "business_hours": {
+          "canonical": "00:00-23:59",
+          "pdf": "24小時",
+          "classification": "equivalent_difference"
+        }
+      },
+      "document_id": "OK_NT_TC",
+      "parser_location": {
+        "row_index": 70,
+        "raw_row": "青衣852GC2003新界青衣青衣村一期停車場大廈地下6號舖^852GC2003^24小時"
       }
     },
     {
@@ -8390,7 +8559,7 @@
       "code": "852GC2007",
       "api_name": "美景花園OK便利店",
       "pdf_name": "OK便利店 (青衣)",
-      "api_address": "香港新界青衣美景花園商場L3平台97及98號鋪OK #518*",
+      "api_address": "新界青衣美景花園商場L3平台97及98號鋪OK #518*",
       "pdf_address": "新界青衣美景花園商場L3平台97及98號舖",
       "api_business_hours": "06:00-23:00 周六:06:00-23:00 周日:06:00-23:00 節假日:06:00-23:00",
       "pdf_business_hours": "06:00 - 23:00",
@@ -8407,7 +8576,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港新界青衣美景花園商場L3平台97及98號鋪OK #518*",
+          "canonical": "新界青衣美景花園商場L3平台97及98號鋪OK #518*",
           "pdf": "新界青衣美景花園商場L3平台97及98號舖",
           "classification": "semantic_conflict"
         },
@@ -8427,7 +8596,7 @@
       "code": "852G2005",
       "api_name": "便利店 圓墩圍OK便利店",
       "pdf_name": "OK便利店 (荃灣)",
-      "api_address": "荃灣圓墩圍59-61號地下A鋪",
+      "api_address": "荃灣圓墩圍59-61號地下A鋪OK #152*",
       "pdf_address": "新界荃灣圓墩圍59-61號地下A號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -8444,7 +8613,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "荃灣圓墩圍59-61號地下A鋪",
+          "canonical": "荃灣圓墩圍59-61號地下A鋪OK #152*",
           "pdf": "新界荃灣圓墩圍59-61號地下A號舖",
           "classification": "semantic_conflict"
         },
@@ -8464,7 +8633,7 @@
       "code": "852G2021",
       "api_name": "便利店 綠楊坊OK便利店",
       "pdf_name": "OK便利店 (荃灣)",
-      "api_address": "香港新界荃灣綠楊坊平台P8號鋪",
+      "api_address": "香港新界荃灣綠楊坊平台P8號鋪OK #469*",
       "pdf_address": "新界荃灣綠楊坊平台P8號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -8481,7 +8650,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港新界荃灣綠楊坊平台P8號鋪",
+          "canonical": "香港新界荃灣綠楊坊平台P8號鋪OK #469*",
           "pdf": "新界荃灣綠楊坊平台P8號舖",
           "classification": "semantic_conflict"
         },
@@ -8501,7 +8670,7 @@
       "code": "852GA2001",
       "api_name": "便利店 荃勝大廈OK便利店",
       "pdf_name": "OK便利店 (荃灣)",
-      "api_address": "新界荃灣青山道185-187號荃勝大廈地下A2號鋪",
+      "api_address": "新界荃灣青山道185-187號荃勝大廈地下A2號鋪OK #194*",
       "pdf_address": "新界荃灣青山道185-187號荃勝大廈地下A2號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -8510,7 +8679,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 荃勝大廈OK便利店",
@@ -8518,9 +8687,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界荃灣青山道185-187號荃勝大廈地下A2號鋪",
+          "canonical": "新界荃灣青山道185-187號荃勝大廈地下A2號鋪OK #194*",
           "pdf": "新界荃灣青山道185-187號荃勝大廈地下A2號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -8538,7 +8707,7 @@
       "code": "852GA2002",
       "api_name": "便利店 富利達中心OK便利店",
       "pdf_name": "OK便利店 (荃灣)",
-      "api_address": "荃灣德海街富利達中心地下E號鋪",
+      "api_address": "荃灣德海街富利達中心地下E號鋪OK #313*",
       "pdf_address": "新界荃灣德海街富利達中心地下E號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -8555,7 +8724,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "荃灣德海街富利達中心地下E號鋪",
+          "canonical": "荃灣德海街富利達中心地下E號鋪OK #313*",
           "pdf": "新界荃灣德海街富利達中心地下E號舖",
           "classification": "semantic_conflict"
         },
@@ -8575,7 +8744,7 @@
       "code": "852G2003",
       "api_name": "便利店 麗城商場OK便利店",
       "pdf_name": "OK便利店 (荃灣)",
-      "api_address": "新界荃灣麗城花園第三期麗城商場地下2號鋪",
+      "api_address": "新界荃灣麗城花園第三期麗城商場地下2號鋪OK #89*",
       "pdf_address": "新界荃灣麗城花園第三期麗城商場地下2號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -8593,9 +8762,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界荃灣麗城花園第三期麗城商場地下2號鋪",
+          "canonical": "新界荃灣麗城花園第三期麗城商場地下2號鋪OK #89*",
           "pdf": "新界荃灣麗城花園第三期麗城商場地下2號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -8618,7 +8787,7 @@
       "code": "852G2001",
       "api_name": "便利店 荃灣中心OK便利店",
       "pdf_name": "OK便利店 (荃灣)",
-      "api_address": "新界荃灣中心第一期高層平台C8,C10,C12鋪",
+      "api_address": "新界荃灣中心第一期高層平台C8,C10,C12鋪OK #67*",
       "pdf_address": "新界荃灣中心第一期高層平臺C8,C10,C12舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -8627,7 +8796,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 荃灣中心OK便利店",
@@ -8635,9 +8804,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界荃灣中心第一期高層平台C8,C10,C12鋪",
+          "canonical": "新界荃灣中心第一期高層平台C8,C10,C12鋪OK #67*",
           "pdf": "新界荃灣中心第一期高層平臺C8,C10,C12舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -8655,7 +8824,7 @@
       "code": "852G2004",
       "api_name": "便利店 海壩街18號OK便利店",
       "pdf_name": "OK便利店 (荃灣)",
-      "api_address": "新界荃灣海壩街18號鋪",
+      "api_address": "新界荃灣海壩街18號鋪OK #95*",
       "pdf_address": "新界荃灣海壩街18號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -8664,7 +8833,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 海壩街18號OK便利店",
@@ -8672,9 +8841,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界荃灣海壩街18號鋪",
+          "canonical": "新界荃灣海壩街18號鋪OK #95*",
           "pdf": "新界荃灣海壩街18號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -8692,7 +8861,7 @@
       "code": "852GA2005",
       "api_name": "便利店 卓明大廈OK便利店",
       "pdf_name": "OK便利店 (荃灣)",
-      "api_address": "新界荃灣海壩街卓明大廈地下地鋪",
+      "api_address": "新界荃灣海壩街卓明大廈地下地鋪OK #456*",
       "pdf_address": "新界荃灣海壩街102B號卓明大廈地下地舖",
       "api_business_hours": "07:00-23:00",
       "pdf_business_hours": "07:00-23:00",
@@ -8708,7 +8877,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界荃灣海壩街卓明大廈地下地鋪",
+          "canonical": "新界荃灣海壩街卓明大廈地下地鋪OK #456*",
           "pdf": "新界荃灣海壩街102B號卓明大廈地下地舖",
           "classification": "semantic_conflict"
         }
@@ -8723,7 +8892,7 @@
       "code": "852GA2004",
       "api_name": "便利店 石壁新村OK便利店",
       "pdf_name": "OK便利店 (荃灣)",
-      "api_address": "新界荃灣咸田街61號石壁新村遊樂場C座地下C6號鋪 ",
+      "api_address": "新界荃灣咸田街61號石壁新村遊樂場C座地下C6號鋪OK #356* ",
       "pdf_address": "新界荃灣鹹田街61號石壁新村遊樂場C座地下C6號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -8740,7 +8909,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界荃灣咸田街61號石壁新村遊樂場C座地下C6號鋪 ",
+          "canonical": "新界荃灣咸田街61號石壁新村遊樂場C座地下C6號鋪OK #356* ",
           "pdf": "新界荃灣鹹田街61號石壁新村遊樂場C座地下C6號舖",
           "classification": "semantic_conflict"
         },
@@ -8797,7 +8966,7 @@
       "code": "852FE2017",
       "api_name": "便利店 置富第一城OK便利店",
       "pdf_name": "OK便利店 (沙田)",
-      "api_address": "沙田第一城置富第一城地下G1鋪",
+      "api_address": "沙田第一城置富第一城地下G1鋪OK #233*",
       "pdf_address": "新界沙田第一城置富第一城地下G1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -8814,7 +8983,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "沙田第一城置富第一城地下G1鋪",
+          "canonical": "沙田第一城置富第一城地下G1鋪OK #233*",
           "pdf": "新界沙田第一城置富第一城地下G1號舖",
           "classification": "semantic_conflict"
         },
@@ -8982,7 +9151,7 @@
       "code": "852FH2004",
       "api_name": "便利店 乙明邨明耀樓OK",
       "pdf_name": "OK便利店 (沙田)",
-      "api_address": "沙田乙明邨明耀樓地下7-9號OK #24 *",
+      "api_address": "沙田乙明邨明耀樓地下7-9號OK #24*",
       "pdf_address": "沙田乙明邨明耀樓地下7-9號",
       "api_business_hours": "00:00-00:00 周六:00:00-00:00 周日:00:00-00:00 節假日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -8999,7 +9168,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "沙田乙明邨明耀樓地下7-9號OK #24 *",
+          "canonical": "沙田乙明邨明耀樓地下7-9號OK #24*",
           "pdf": "沙田乙明邨明耀樓地下7-9號",
           "classification": "semantic_conflict"
         },
@@ -9019,7 +9188,7 @@
       "code": "852FB2002",
       "api_name": "便利店 科學園OK便利店",
       "pdf_name": "OK便利店 (沙田)",
-      "api_address": "新界沙田白石角香港科學園科技大道東1號1座地下5-8號鋪OK #332",
+      "api_address": "新界沙田白石角香港科學園科技大道東1號1座地下5-8號鋪OK #332*",
       "pdf_address": "沙田白石角香港科學園科技大道東1號1座地下5-8號舖",
       "api_business_hours": "07:00-22:00 周六:07:00-19:00 周日:07:00-19:00 節假日:07:00-19:00",
       "pdf_business_hours": "07:00-20:00",
@@ -9036,7 +9205,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界沙田白石角香港科學園科技大道東1號1座地下5-8號鋪OK #332",
+          "canonical": "新界沙田白石角香港科學園科技大道東1號1座地下5-8號鋪OK #332*",
           "pdf": "沙田白石角香港科學園科技大道東1號1座地下5-8號舖",
           "classification": "semantic_conflict"
         },
@@ -9093,7 +9262,7 @@
       "code": "852A2002",
       "api_name": "便利店 彩園村OK便利店",
       "pdf_name": "OK便利店 (上水)",
-      "api_address": "新界上水彩園邨彩華樓地下301至302號鋪",
+      "api_address": "新界上水彩園邨彩華樓地下301至302號鋪OK #18*",
       "pdf_address": "新界上水彩園村彩華樓地下301至302號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -9110,7 +9279,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界上水彩園邨彩華樓地下301至302號鋪",
+          "canonical": "新界上水彩園邨彩華樓地下301至302號鋪OK #18*",
           "pdf": "新界上水彩園村彩華樓地下301至302號舖",
           "classification": "semantic_conflict"
         },
@@ -9167,7 +9336,7 @@
       "code": "852UA2020",
       "api_name": "便利店 天耀廣場OK便利店",
       "pdf_name": "OK便利店 (天水圍)",
-      "api_address": "新界元朗天水圍天湖路2號天耀廣場LG1樓LG12號鋪",
+      "api_address": "新界元朗天水圍天湖路2號天耀廣場LG1樓LG12號鋪OK #550*",
       "pdf_address": "新界元朗天水圍天湖路2號天耀廣場LG1樓LG12號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -9176,7 +9345,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 天耀廣場OK便利店",
@@ -9184,9 +9353,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界元朗天水圍天湖路2號天耀廣場LG1樓LG12號鋪",
+          "canonical": "新界元朗天水圍天湖路2號天耀廣場LG1樓LG12號鋪OK #550*",
           "pdf": "新界元朗天水圍天湖路2號天耀廣場LG1樓LG12號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -9204,7 +9373,7 @@
       "code": "852UA2008",
       "api_name": "便利店 天恩商場OK便利店",
       "pdf_name": "OK便利店 (天水圍)",
-      "api_address": "天水圍天恩商場109-110鋪",
+      "api_address": "天水圍天恩商場109-110鋪OK #288*",
       "pdf_address": "新界天水圍天恩商場109-110號舖",
       "api_business_hours": "06:00-00:00",
       "pdf_business_hours": "06:00-24:00",
@@ -9221,7 +9390,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "天水圍天恩商場109-110鋪",
+          "canonical": "天水圍天恩商場109-110鋪OK #288*",
           "pdf": "新界天水圍天恩商場109-110號舖",
           "classification": "semantic_conflict"
         },
@@ -9241,7 +9410,7 @@
       "code": "852UA2015",
       "api_name": "便利店 天瑞廣場OK便利店",
       "pdf_name": "OK便利店 (天水圍)",
-      "api_address": "天水圍天瑞廣場地下L026號鋪",
+      "api_address": "天水圍天瑞廣場地下L026號鋪OK #437*",
       "pdf_address": "新界天水圍天瑞路9號天瑞廣場地下L026號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -9258,7 +9427,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "天水圍天瑞廣場地下L026號鋪",
+          "canonical": "天水圍天瑞廣場地下L026號鋪OK #437*",
           "pdf": "新界天水圍天瑞路9號天瑞廣場地下L026號舖",
           "classification": "semantic_conflict"
         },
@@ -9278,7 +9447,7 @@
       "code": "852UA2022",
       "api_name": "便利店 天盛商場OK便利店",
       "pdf_name": "OK便利店 (天水圍)",
-      "api_address": "天水圍天盛商場地下L003號鋪",
+      "api_address": "天水圍天盛商場地下L003號鋪OK #520*",
       "pdf_address": "新界天水圍天盛商場地下L003 號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時 服務時間 (星期一至六,星期日及公眾假期)",
@@ -9295,7 +9464,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "天水圍天盛商場地下L003號鋪",
+          "canonical": "天水圍天盛商場地下L003號鋪OK #520*",
           "pdf": "新界天水圍天盛商場地下L003 號舖",
           "classification": "semantic_conflict"
         },
@@ -9315,7 +9484,7 @@
       "code": "852UA2025",
       "api_name": "便利店 俊宏軒OK便利店",
       "pdf_name": "OK便利店 (天水圍)",
-      "api_address": "天瑞路88號俊宏軒商業座外圍L12及L13號鋪",
+      "api_address": "天瑞路88號俊宏軒商業座外圍L12及L13號鋪OK #759*",
       "pdf_address": "新界元朗天瑞路88號俊宏軒商業座外圍L12及L13號舖",
       "api_business_hours": "00：00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9332,7 +9501,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "天瑞路88號俊宏軒商業座外圍L12及L13號鋪",
+          "canonical": "天瑞路88號俊宏軒商業座外圍L12及L13號鋪OK #759*",
           "pdf": "新界元朗天瑞路88號俊宏軒商業座外圍L12及L13號舖",
           "classification": "semantic_conflict"
         },
@@ -9352,7 +9521,7 @@
       "code": "852UA2023",
       "api_name": "便利店 天頌苑OK便利店",
       "pdf_name": "OK便利店 (天水圍)",
-      "api_address": "天水圍天頌苑TTownSouth,S115/S116號鋪",
+      "api_address": "天水圍天頌苑TTownSouth,S115/S116號鋪OK #567*",
       "pdf_address": "新界天水圍天華路30號天頌苑T Town South一樓S115及S116號舖",
       "api_business_hours": "06:30-00:00",
       "pdf_business_hours": "6:30-24:00",
@@ -9369,7 +9538,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "天水圍天頌苑TTownSouth,S115/S116號鋪",
+          "canonical": "天水圍天頌苑TTownSouth,S115/S116號鋪OK #567*",
           "pdf": "新界天水圍天華路30號天頌苑T Town South一樓S115及S116號舖",
           "classification": "semantic_conflict"
         },
@@ -9389,7 +9558,7 @@
       "code": "852UA2011",
       "api_name": "便利店 俊宏廣場OK便利店",
       "pdf_name": "OK便利店 (天水圍)",
-      "api_address": "新界天水圍俊宏軒俊宏廣場地下L30號鋪",
+      "api_address": "新界天水圍俊宏軒俊宏廣場地下L30號鋪OK #337*",
       "pdf_address": "新界天水圍俊宏軒俊宏廣場地下L30號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -9398,7 +9567,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 俊宏廣場OK便利店",
@@ -9406,9 +9575,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界天水圍俊宏軒俊宏廣場地下L30號鋪",
+          "canonical": "新界天水圍俊宏軒俊宏廣場地下L30號鋪OK #337*",
           "pdf": "新界天水圍俊宏軒俊宏廣場地下L30號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -9426,7 +9595,7 @@
       "code": "852U2003",
       "api_name": "便利店 蝴蝶村OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "屯門蝴蝶邨熟食市場13至16檔",
+      "api_address": "屯門蝴蝶邨熟食市場13至16檔OK #33*",
       "pdf_address": "新界屯門蝴蝶村熟食市場13至16號檔",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9443,7 +9612,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "屯門蝴蝶邨熟食市場13至16檔",
+          "canonical": "屯門蝴蝶邨熟食市場13至16檔OK #33*",
           "pdf": "新界屯門蝴蝶村熟食市場13至16號檔",
           "classification": "semantic_conflict"
         },
@@ -9463,7 +9632,7 @@
       "code": "852U2007",
       "api_name": "便利店 兆康苑OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "新界屯門兆康苑商場中心104號鋪",
+      "api_address": "新界屯門兆康苑商場中心104號鋪OK #60*",
       "pdf_address": "新界屯門兆康苑商場中心104號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9480,9 +9649,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界屯門兆康苑商場中心104號鋪",
+          "canonical": "新界屯門兆康苑商場中心104號鋪OK #60*",
           "pdf": "新界屯門兆康苑商場中心104號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
@@ -9500,7 +9669,7 @@
       "code": "852U2018",
       "api_name": "便利店 寶田商場OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "新界屯門寶田商場地下6號鋪",
+      "api_address": "新界屯門寶田商場地下6號鋪OK #324*",
       "pdf_address": "新界屯門寶田商場地下6號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9517,9 +9686,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界屯門寶田商場地下6號鋪",
+          "canonical": "新界屯門寶田商場地下6號鋪OK #324*",
           "pdf": "新界屯門寶田商場地下6號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
@@ -9537,7 +9706,7 @@
       "code": "852U2020",
       "api_name": "便利店 良景商場OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "新界屯門良景商場L106號鋪",
+      "api_address": "新界屯門良景商場L106號鋪OK #329*",
       "pdf_address": "新界屯門良景商場L106號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9554,9 +9723,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界屯門良景商場L106號鋪",
+          "canonical": "新界屯門良景商場L106號鋪OK #329*",
           "pdf": "新界屯門良景商場L106號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
@@ -9574,7 +9743,7 @@
       "code": "852U2028",
       "api_name": "便利店 大興商場OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "新界屯門大興街1號大興商場地下L106號鋪",
+      "api_address": "新界屯門大興街1號大興商場地下L106號鋪OK #526*",
       "pdf_address": "香港新界屯門大興街1號大興商場地下L106號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9591,7 +9760,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界屯門大興街1號大興商場地下L106號鋪",
+          "canonical": "新界屯門大興街1號大興商場地下L106號鋪OK #526*",
           "pdf": "香港新界屯門大興街1號大興商場地下L106號舖",
           "classification": "semantic_conflict"
         },
@@ -9611,7 +9780,7 @@
       "code": "852U2012",
       "api_name": "便利店 置樂花園OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "新界屯門置樂花園商場地下129號鋪",
+      "api_address": "新界屯門置樂花園商場地下129號鋪OK #114*",
       "pdf_address": "新界屯門置樂花園商場地下129號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9628,9 +9797,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界屯門置樂花園商場地下129號鋪",
+          "canonical": "新界屯門置樂花園商場地下129號鋪OK #114*",
           "pdf": "新界屯門置樂花園商場地下129號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
@@ -9648,7 +9817,7 @@
       "code": "852U2010",
       "api_name": "便利店 翠寧花園OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "屯門翠寧花園地下12-13號鋪",
+      "api_address": "屯門翠寧花園地下12-13號鋪OK #104*",
       "pdf_address": "新界屯門翠寧花園地下12-13號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9665,7 +9834,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "屯門翠寧花園地下12-13號鋪",
+          "canonical": "屯門翠寧花園地下12-13號鋪OK #104*",
           "pdf": "新界屯門翠寧花園地下12-13號舖",
           "classification": "semantic_conflict"
         },
@@ -9722,7 +9891,7 @@
       "code": "852U2016",
       "api_name": "便利店 德政圍OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "屯門啟發徑德政圍31-33,37-43號柏苑地下2號鋪",
+      "api_address": "屯門啟發徑德政圍31-33,37-43號柏苑地下2號鋪OK #292*",
       "pdf_address": "新界屯門啟發徑15及19號德政圍31-33,37-43號柏苑地下2號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9739,7 +9908,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "屯門啟發徑德政圍31-33,37-43號柏苑地下2號鋪",
+          "canonical": "屯門啟發徑德政圍31-33,37-43號柏苑地下2號鋪OK #292*",
           "pdf": "新界屯門啟發徑15及19號德政圍31-33,37-43號柏苑地下2號舖",
           "classification": "semantic_conflict"
         },
@@ -9759,7 +9928,7 @@
       "code": "852U2029",
       "api_name": "便利店 大興花園OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "新界屯門震寰路11號大興花園一期地下1號鋪",
+      "api_address": "新界屯門震寰路11號大興花園一期地下1號鋪OK #588*",
       "pdf_address": "新界屯門震寰路11號大興花園一期地下1號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -9768,7 +9937,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 大興花園OK便利店",
@@ -9776,9 +9945,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界屯門震寰路11號大興花園一期地下1號鋪",
+          "canonical": "新界屯門震寰路11號大興花園一期地下1號鋪OK #588*",
           "pdf": "新界屯門震寰路11號大興花園一期地下1號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -9796,7 +9965,7 @@
       "code": "852U2025",
       "api_name": "便利店 良景廣場2樓OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "屯門田景路31號良景廣場2樓L229A&L229B號鋪",
+      "api_address": "屯門田景路31號良景廣場2樓L229A&L229B號鋪OK #553*",
       "pdf_address": "新界屯門田景路31號良景廣場2樓L229A&L229B號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "06:00-23:00",
@@ -9813,7 +9982,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "屯門田景路31號良景廣場2樓L229A&L229B號鋪",
+          "canonical": "屯門田景路31號良景廣場2樓L229A&L229B號鋪OK #553*",
           "pdf": "新界屯門田景路31號良景廣場2樓L229A&L229B號舖",
           "classification": "semantic_conflict"
         },
@@ -9833,7 +10002,7 @@
       "code": "852U2017",
       "api_name": "富健花園OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "新界屯門龍門路45號富健花園地下87號鋪",
+      "api_address": "新界屯門龍門路45號富健花園地下87號鋪OK #299*",
       "pdf_address": "新界屯門龍門路45號富健花園地下87號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9850,9 +10019,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界屯門龍門路45號富健花園地下87號鋪",
+          "canonical": "新界屯門龍門路45號富健花園地下87號鋪OK #299*",
           "pdf": "新界屯門龍門路45號富健花園地下87號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
@@ -9870,7 +10039,7 @@
       "code": "852U2021",
       "api_name": "便利店 悅湖商場OK便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "新界屯門悅湖商場53-57及81-85號鋪",
+      "api_address": "新界屯門悅湖商場53-57及81-85號鋪OK #109*",
       "pdf_address": "新界屯門悅湖商場53-57及81-85號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9887,9 +10056,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界屯門悅湖商場53-57及81-85號鋪",
+          "canonical": "新界屯門悅湖商場53-57及81-85號鋪OK #109*",
           "pdf": "新界屯門悅湖商場53-57及81-85號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
@@ -9907,7 +10076,7 @@
       "code": "852U2030",
       "api_name": "龍門居OK",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "新界屯門龍門路43號龍門居地下97號鋪B部份OK #726",
+      "api_address": "新界屯門龍門路43號龍門居地下97號鋪B部份OK #726*",
       "pdf_address": "新界屯門龍門路43號龍門居地下97號舖B部份",
       "api_business_hours": "00:00-00:00 周六:00:00-00:00 周日:00:00-00:00 節假日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -9924,7 +10093,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界屯門龍門路43號龍門居地下97號鋪B部份OK #726",
+          "canonical": "新界屯門龍門路43號龍門居地下97號鋪B部份OK #726*",
           "pdf": "新界屯門龍門路43號龍門居地下97號舖B部份",
           "classification": "semantic_conflict"
         },
@@ -9944,7 +10113,7 @@
       "code": "852U2031",
       "api_name": "便利店 菁田邨商場便利店",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "新界屯門菁田商場地下G11號鋪",
+      "api_address": "新界屯門菁田商場地下G11號鋪OK #734*",
       "pdf_address": "新界屯門菁田邨菁田商場地下G11號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -9961,7 +10130,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界屯門菁田商場地下G11號鋪",
+          "canonical": "新界屯門菁田商場地下G11號鋪OK #734*",
           "pdf": "新界屯門菁田邨菁田商場地下G11號舖",
           "classification": "semantic_conflict"
         },
@@ -10203,7 +10372,7 @@
       "code": "852U2040",
       "api_name": "便利店 業旺商場OK",
       "pdf_name": "OK便利店 (屯門)",
-      "api_address": "屯門業旺邨業旺商場地下 G01 號鋪 OK #766",
+      "api_address": "屯門業旺邨業旺商場地下 G01 號鋪 OK #766*",
       "pdf_address": "屯門業旺邨業旺商場地下 G01 號舖",
       "api_business_hours": "00:00-24:00",
       "pdf_business_hours": "24小時",
@@ -10220,7 +10389,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "屯門業旺邨業旺商場地下 G01 號鋪 OK #766",
+          "canonical": "屯門業旺邨業旺商場地下 G01 號鋪 OK #766*",
           "pdf": "屯門業旺邨業旺商場地下 G01 號舖",
           "classification": "semantic_conflict"
         },
@@ -10314,7 +10483,7 @@
       "code": "852CC2026",
       "api_name": "便利店 西貢海傍廣場OK便利店",
       "pdf_name": "OK便利店 (西貢)",
-      "api_address": "西貢海傍廣場金寶閣地下12號鋪",
+      "api_address": "西貢海傍廣場金寶閣地下12號鋪OK #168*",
       "pdf_address": "新界西貢海傍廣場金寶閣地下12號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -10331,7 +10500,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "西貢海傍廣場金寶閣地下12號鋪",
+          "canonical": "西貢海傍廣場金寶閣地下12號鋪OK #168*",
           "pdf": "新界西貢海傍廣場金寶閣地下12號舖",
           "classification": "semantic_conflict"
         },
@@ -10351,7 +10520,7 @@
       "code": "852CC2034",
       "api_name": "便利店 西貢大廈OK便利店",
       "pdf_name": "OK便利店 (西貢)",
-      "api_address": "新界西貢西貢大廈地下23號鋪",
+      "api_address": "新界西貢西貢大廈地下23號鋪OK #283*",
       "pdf_address": "新界西貢西貢大廈地下23號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -10360,7 +10529,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 西貢大廈OK便利店",
@@ -10368,9 +10537,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界西貢西貢大廈地下23號鋪",
+          "canonical": "新界西貢西貢大廈地下23號鋪OK #283*",
           "pdf": "新界西貢西貢大廈地下23號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -10388,12 +10557,13 @@
       "code": "852FB2001",
       "api_name": "便利店 小瀝源OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "新界沙田小瀝源安平街2號利豐中心地下",
+      "api_address": "新界沙田小瀝源安平街2號利豐中心地下OK #211*",
       "pdf_address": "新界沙田小瀝源安平街2號利豐中心地下",
       "api_business_hours": "06:00-22:00",
       "pdf_business_hours": "06:00-22:00 星期日及公眾假期：OFF",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
       "classification": "semantic_conflict",
@@ -10402,6 +10572,11 @@
           "canonical": "便利店 小瀝源OK便利店",
           "pdf": "OK便利店",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "新界沙田小瀝源安平街2號利豐中心地下OK #211*",
+          "pdf": "新界沙田小瀝源安平街2號利豐中心地下",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "06:00-22:00",
@@ -10419,7 +10594,7 @@
       "code": "852UA2006",
       "api_name": "便利店 光華廣場OK便利店",
       "pdf_name": "OK便利店 (元朗)",
-      "api_address": "新界元朗大棠路光華廣場地下4鋪",
+      "api_address": "新界元朗大棠路光華廣場地下4鋪OK #214*",
       "pdf_address": "新界元朗大棠路11號光華廣場地下4號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -10436,7 +10611,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界元朗大棠路光華廣場地下4鋪",
+          "canonical": "新界元朗大棠路光華廣場地下4鋪OK #214*",
           "pdf": "新界元朗大棠路11號光華廣場地下4號舖",
           "classification": "semantic_conflict"
         },
@@ -10456,7 +10631,7 @@
       "code": "852UA2007",
       "api_name": "便利店 富興大廈OK便利店",
       "pdf_name": "OK便利店 (元朗)",
-      "api_address": "新界元朗青山道226-230號富興大廈地下A號鋪",
+      "api_address": "新界元朗青山道226-230號富興大廈地下A號鋪OK #285*",
       "pdf_address": "新界元朗青山道218,222,226-230號富興大廈地下A號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -10473,7 +10648,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界元朗青山道226-230號富興大廈地下A號鋪",
+          "canonical": "新界元朗青山道226-230號富興大廈地下A號鋪OK #285*",
           "pdf": "新界元朗青山道218,222,226-230號富興大廈地下A號舖",
           "classification": "semantic_conflict"
         },
@@ -10493,7 +10668,7 @@
       "code": "852UA2009",
       "api_name": "便利店 又新街OK便利店",
       "pdf_name": "OK便利店 (元朗)",
-      "api_address": "新界元朗又新街7-25號元新大廈地下4號及11號鋪",
+      "api_address": "新界元朗又新街7-25號元新大廈地下4號及11號鋪OK #325*",
       "pdf_address": "新界元朗又新街7-25號元新大廈地下4號及11號舖",
       "api_business_hours": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
       "pdf_business_hours": "24小時",
@@ -10510,9 +10685,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界元朗又新街7-25號元新大廈地下4號及11號鋪",
+          "canonical": "新界元朗又新街7-25號元新大廈地下4號及11號鋪OK #325*",
           "pdf": "新界元朗又新街7-25號元新大廈地下4號及11號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59 周六:00:00-00:00 周日:00:00-00:00",
@@ -10530,7 +10705,7 @@
       "code": "852UA2016",
       "api_name": "便利店 大棠路OK便利店",
       "pdf_name": "OK便利店 (元朗)",
-      "api_address": "新界元朗大棠路紅棉洋樓地下A鋪",
+      "api_address": "新界元朗大棠路紅棉洋樓地下A鋪OK #454*",
       "pdf_address": "新界元朗大棠路35/39號紅棉洋樓地下A號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時 服務時間 (星期一至六,星期日及公眾假期)",
@@ -10547,7 +10722,7 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界元朗大棠路紅棉洋樓地下A鋪",
+          "canonical": "新界元朗大棠路紅棉洋樓地下A鋪OK #454*",
           "pdf": "新界元朗大棠路35/39號紅棉洋樓地下A號舖",
           "classification": "semantic_conflict"
         },
@@ -10567,7 +10742,7 @@
       "code": "852UA2013",
       "api_name": "便利店 金豪大廈OK便利店",
       "pdf_name": "OK便利店 (元朗)",
-      "api_address": "新界元朗青山公路49-63號金豪大廈地下E號鋪",
+      "api_address": "新界元朗青山公路49-63號金豪大廈地下E號鋪OK #414*",
       "pdf_address": "新界元朗青山公路49-63號金豪大廈地下E號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -10576,7 +10751,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 金豪大廈OK便利店",
@@ -10584,9 +10759,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界元朗青山公路49-63號金豪大廈地下E號鋪",
+          "canonical": "新界元朗青山公路49-63號金豪大廈地下E號鋪OK #414*",
           "pdf": "新界元朗青山公路49-63號金豪大廈地下E號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -10604,7 +10779,7 @@
       "code": "852UA2017",
       "api_name": "便利店 富盛大廈OK便利店",
       "pdf_name": "OK便利店 (元朗)",
-      "api_address": "新界元朗西菁街9號富盛大廈地下13A及13E號鋪",
+      "api_address": "新界元朗西菁街9號富盛大廈地下13A及13E號鋪OK #459*",
       "pdf_address": "新界元朗西菁街9號富盛大廈地下13A及13E號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -10613,7 +10788,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 富盛大廈OK便利店",
@@ -10621,9 +10796,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "新界元朗西菁街9號富盛大廈地下13A及13E號鋪",
+          "canonical": "新界元朗西菁街9號富盛大廈地下13A及13E號鋪OK #459*",
           "pdf": "新界元朗西菁街9號富盛大廈地下13A及13E號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -10641,20 +10816,26 @@
       "code": "852UA2024",
       "api_name": "便利店 安寧路OK便利店",
       "pdf_name": "OK便利店 (元朗)",
-      "api_address": "新界元朗安寧路70/74號保輝樓地下D鋪",
+      "api_address": "新界元朗安寧路70/74號保輝樓地下D鋪OK #719*",
       "pdf_address": "新界元朗安寧路70/74號保輝樓地下D鋪",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
+        "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 安寧路OK便利店",
           "pdf": "OK便利店 (元朗)",
           "classification": "name_specificity_difference"
+        },
+        "address": {
+          "canonical": "新界元朗安寧路70/74號保輝樓地下D鋪OK #719*",
+          "pdf": "新界元朗安寧路70/74號保輝樓地下D鋪",
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -10863,7 +11044,7 @@
       "code": "852GH2002",
       "api_name": "便利店 愉景廣場OK便利店",
       "pdf_name": "OK便利店 (愉景灣)",
-      "api_address": "香港大嶼山愉景灣愉景廣場一樓161號鋪",
+      "api_address": "香港大嶼山愉景灣愉景廣場一樓161號鋪OK #717*",
       "pdf_address": "香港大嶼山愉景灣愉景廣場一樓161號舖",
       "api_business_hours": "07:30-23:00",
       "pdf_business_hours": "07:30-23:00",
@@ -10871,7 +11052,7 @@
         "name",
         "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 愉景廣場OK便利店",
@@ -10879,9 +11060,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "香港大嶼山愉景灣愉景廣場一樓161號鋪",
+          "canonical": "香港大嶼山愉景灣愉景廣場一樓161號鋪OK #717*",
           "pdf": "香港大嶼山愉景灣愉景廣場一樓161號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_IL_TC",
@@ -10894,7 +11075,7 @@
       "code": "852G2007",
       "api_name": "便利店 映灣薈OK便利店",
       "pdf_name": "OK便利店 (東涌)",
-      "api_address": "大嶼山東涌健東路1號映灣園映灣薈地面1號鋪",
+      "api_address": "大嶼山東涌健東路1號映灣園映灣薈地面1號鋪OK #295*",
       "pdf_address": "大嶼山東涌健東路1號映灣園映灣薈地面1號舖",
       "api_business_hours": "06:30-23:30",
       "pdf_business_hours": "06:30-23:30",
@@ -10902,7 +11083,7 @@
         "name",
         "address"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 映灣薈OK便利店",
@@ -10910,9 +11091,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "大嶼山東涌健東路1號映灣園映灣薈地面1號鋪",
+          "canonical": "大嶼山東涌健東路1號映灣園映灣薈地面1號鋪OK #295*",
           "pdf": "大嶼山東涌健東路1號映灣園映灣薈地面1號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         }
       },
       "document_id": "OK_IL_TC",
@@ -10925,7 +11106,7 @@
       "code": "852G2020",
       "api_name": "便利店 映灣薈OK便利店",
       "pdf_name": "OK便利店",
-      "api_address": "大嶼山東涌健東路1號映灣園映灣薈地面一樓31號鋪",
+      "api_address": "大嶼山東涌健東路1號映灣園映灣薈地面一樓31號鋪OK #441*",
       "pdf_address": "大嶼山東涌健東路1號映灣園映灣薈地面一樓31號舖",
       "api_business_hours": "00:00-23:59",
       "pdf_business_hours": "24小時",
@@ -10934,7 +11115,7 @@
         "address",
         "business_hours"
       ],
-      "classification": "name_specificity_difference",
+      "classification": "semantic_conflict",
       "comparison": {
         "name": {
           "canonical": "便利店 映灣薈OK便利店",
@@ -10942,9 +11123,9 @@
           "classification": "name_specificity_difference"
         },
         "address": {
-          "canonical": "大嶼山東涌健東路1號映灣園映灣薈地面一樓31號鋪",
+          "canonical": "大嶼山東涌健東路1號映灣園映灣薈地面一樓31號鋪OK #441*",
           "pdf": "大嶼山東涌健東路1號映灣園映灣薈地面一樓31號舖",
-          "classification": "formatting_difference"
+          "classification": "semantic_conflict"
         },
         "business_hours": {
           "canonical": "00:00-23:59",
@@ -11036,7 +11217,7 @@
       "code": "852PB3004",
       "api_name": "合作點 愛麗絲",
       "pdf_name": "柴灣愛麗絲",
-      "api_address": "香港柴灣宏德居商場B座地下81,82號*",
+      "api_address": "香港柴灣宏德居商場B座地下81,82號 愛麗斯*",
       "pdf_address": "香港柴灣宏德居商場B座地下81, 82號",
       "api_business_hours": "11:00-20:00",
       "pdf_business_hours": "星期一至六: 11:00-20:00 星期日、公眾假期: 休息",
@@ -11053,7 +11234,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港柴灣宏德居商場B座地下81,82號*",
+          "canonical": "香港柴灣宏德居商場B座地下81,82號 愛麗斯*",
           "pdf": "香港柴灣宏德居商場B座地下81, 82號",
           "classification": "semantic_conflict"
         },
@@ -11739,7 +11920,7 @@
       "code": "852PA3004",
       "api_name": "合作點 速寄2",
       "pdf_name": "鰂魚涌速寄2",
-      "api_address": "香港鰂魚涌英皇道1056號東匯坊商場地庫Z2號鋪（鰂魚涌圖書館對面*",
+      "api_address": "香港鰂魚涌英皇道1056號東匯坊商場地庫Z2號鋪（鰂魚涌圖書館對面 速寄2*",
       "pdf_address": "香港鰂魚涌英皇道1056號東匯坊商場地庫Z2號舖",
       "api_business_hours": "12:00-20:00 周六:12:00-20:00 節假日:12:00-20:00",
       "pdf_business_hours": "星期一至六:12:00-20:00 星期日: 休息 公眾假期: 12:00-20:00",
@@ -11756,7 +11937,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港鰂魚涌英皇道1056號東匯坊商場地庫Z2號鋪（鰂魚涌圖書館對面*",
+          "canonical": "香港鰂魚涌英皇道1056號東匯坊商場地庫Z2號鋪（鰂魚涌圖書館對面 速寄2*",
           "pdf": "香港鰂魚涌英皇道1056號東匯坊商場地庫Z2號舖",
           "classification": "semantic_conflict"
         },
@@ -11961,7 +12142,7 @@
       "code": "852CF3001",
       "api_name": "合作點 翠安園",
       "pdf_name": "觀塘翠安園",
-      "api_address": "香港觀塘翠屏邨翠屏北商場M2層103號鋪*",
+      "api_address": "觀塘翠屏邨翠屏北商場M2層103號鋪 翠安園*",
       "pdf_address": "觀塘翠屏邨翠屏北商場M2層103號鋪",
       "api_business_hours": "11:00-20:00 周六:11:00-20:00 周日:11:00-20:00 節假日:11:00-20:00",
       "pdf_business_hours": "11:00-20:00",
@@ -11978,7 +12159,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港觀塘翠屏邨翠屏北商場M2層103號鋪*",
+          "canonical": "觀塘翠屏邨翠屏北商場M2層103號鋪 翠安園*",
           "pdf": "觀塘翠屏邨翠屏北商場M2層103號鋪",
           "classification": "semantic_conflict"
         },
@@ -12294,7 +12475,7 @@
       "code": "852HC3002",
       "api_name": "合作點 彩淘自提點",
       "pdf_name": "九龍灣彩淘自提點",
-      "api_address": "九龍九龍灣彩福邨街市CF21號鋪*",
+      "api_address": "九龍九龍灣彩福邨街市CF21號鋪 彩淘自提點*",
       "pdf_address": "九龍九龍灣彩福邨街市CF21號鋪",
       "api_business_hours": "11:00-20:00 周六:11:00-20:00 周日:11:00-18:00",
       "pdf_business_hours": "星期一至六: 12:00-20:00 星期日: 14:00-18:00、公眾假期: 休 息",
@@ -12311,7 +12492,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "九龍九龍灣彩福邨街市CF21號鋪*",
+          "canonical": "九龍九龍灣彩福邨街市CF21號鋪 彩淘自提點*",
           "pdf": "九龍九龍灣彩福邨街市CF21號鋪",
           "classification": "semantic_conflict"
         },
@@ -12411,7 +12592,7 @@
       "code": "852CB3002",
       "api_name": "合作點 維高儲存",
       "pdf_name": "藍田維高儲存服務公司",
-      "api_address": "藍田德田廣場310號鋪*",
+      "api_address": "藍田德田廣場310號鋪 維高儲存服務公司*",
       "pdf_address": "藍田德田廣場310號鋪",
       "api_business_hours": "12:30-19:30 周六:12:30-19:00",
       "pdf_business_hours": "星期一至五: 12:30-19:30 星期六: 12:30-19:00 星期日、公眾假期: 休息",
@@ -12428,7 +12609,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "藍田德田廣場310號鋪*",
+          "canonical": "藍田德田廣場310號鋪 維高儲存服務公司*",
           "pdf": "藍田德田廣場310號鋪",
           "classification": "semantic_conflict"
         },
@@ -12972,7 +13153,7 @@
       "code": "852CH3001",
       "api_name": "合作點 速豹物流",
       "pdf_name": "順利速豹物流",
-      "api_address": "九龍觀塘順安商場安群樓地下14號鋪*",
+      "api_address": "九龍觀塘順安商場安群樓地下14號鋪 威多康速豹物流*",
       "pdf_address": "九龍觀塘順安商場安群樓地下14號鋪",
       "api_business_hours": "11:00-20:00 周六:11:00-20:00",
       "pdf_business_hours": "星期一至六: 11:00-20:00 星期日、公眾假期: 11:00-16:00",
@@ -12989,7 +13170,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "九龍觀塘順安商場安群樓地下14號鋪*",
+          "canonical": "九龍觀塘順安商場安群樓地下14號鋪 威多康速豹物流*",
           "pdf": "九龍觀塘順安商場安群樓地下14號鋪",
           "classification": "semantic_conflict"
         },
@@ -13484,7 +13665,7 @@
       "code": "852UB3003",
       "api_name": "合作點 燦利士多",
       "pdf_name": "八鄉燦利士多",
-      "api_address": "新界八鄉橫台山散村101號*",
+      "api_address": "新界八鄉橫台山散村101號 燦利士多*",
       "pdf_address": "新界八鄉橫臺山散村101號",
       "api_business_hours": "12:00-23:59",
       "pdf_business_hours": "星期一至五12:00-00:00 星期六、星期日及假期:休息",
@@ -13501,7 +13682,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界八鄉橫台山散村101號*",
+          "canonical": "新界八鄉橫台山散村101號 燦利士多*",
           "pdf": "新界八鄉橫臺山散村101號",
           "classification": "semantic_conflict"
         },
@@ -14335,7 +14516,7 @@
       "code": "852LB3001",
       "api_name": "合作點 AMI自提點",
       "pdf_name": "葵涌AMI 葵興自提點",
-      "api_address": "香港葵青區葵涌葵涌中心A12*",
+      "api_address": "香港葵青區葵涌葵涌中心A12 AMI 葵興自提點*",
       "pdf_address": "新界葵涌葵興路102號葵涌中心A12",
       "api_business_hours": "12:00-20:00 周六:12:00-20:00",
       "pdf_business_hours": "星期一至六: 12:00-20:00 星期日、公眾假期: 休息",
@@ -14352,7 +14533,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港葵青區葵涌葵涌中心A12*",
+          "canonical": "香港葵青區葵涌葵涌中心A12 AMI 葵興自提點*",
           "pdf": "新界葵涌葵興路102號葵涌中心A12",
           "classification": "semantic_conflict"
         },
@@ -14631,7 +14812,7 @@
       "code": "852FE3001",
       "api_name": "合作點 忠誠鞋業",
       "pdf_name": "馬鞍山忠誠鞋業",
-      "api_address": "香港沙田區馬鞍山恆安商場2樓209號鋪*",
+      "api_address": "香港沙田區馬鞍山恆安商場2樓209號鋪 忠誠鞋業*",
       "pdf_address": "沙田馬鞍山恆安商場2樓209號舖",
       "api_business_hours": "10:30-19:00 周六:10:30-19:00 節假日:11:00-18:00",
       "pdf_business_hours": "/本地寄件 星期一至六: 10:30-19:00 公眾假期: 11:00-18:00 星期日: 休息",
@@ -14648,7 +14829,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港沙田區馬鞍山恆安商場2樓209號鋪*",
+          "canonical": "香港沙田區馬鞍山恆安商場2樓209號鋪 忠誠鞋業*",
           "pdf": "沙田馬鞍山恆安商場2樓209號舖",
           "classification": "semantic_conflict"
         },
@@ -14668,7 +14849,7 @@
       "code": "852GH3001",
       "api_name": "合作點 大王下便利店",
       "pdf_name": "青衣大王下便利店",
-      "api_address": "青衣大王下村16號地下*",
+      "api_address": "青衣大王下村16號地下 大王下便利店*",
       "pdf_address": "青衣大王下村16號地下",
       "api_business_hours": "10:00-20:00",
       "pdf_business_hours": "星期一至日: 10:00-20:00 公眾假期: 休息",
@@ -14685,7 +14866,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "青衣大王下村16號地下*",
+          "canonical": "青衣大王下村16號地下 大王下便利店*",
           "pdf": "青衣大王下村16號地下",
           "classification": "semantic_conflict"
         },
@@ -14927,7 +15108,7 @@
       "code": "852GE3002",
       "api_name": "合作點 天空之城",
       "pdf_name": "荃灣天空之城",
-      "api_address": "荃灣西樓角路202-216號荃昌中心昌寧商場地下G21號鋪*",
+      "api_address": "荃灣西樓角路202-216號荃昌中心昌寧商場地下G21號鋪 天空之城*",
       "pdf_address": "新界荃灣西樓角路202-216號荃昌中心昌寧商場地下G21號 舖",
       "api_business_hours": "13:30-19:30 周六:12:00-18:00",
       "pdf_business_hours": "星期一至五: 13:30-19:30 星期六: 12:00-18:00 星期日、公眾假期: 休息",
@@ -14944,7 +15125,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "荃灣西樓角路202-216號荃昌中心昌寧商場地下G21號鋪*",
+          "canonical": "荃灣西樓角路202-216號荃昌中心昌寧商場地下G21號鋪 天空之城*",
           "pdf": "新界荃灣西樓角路202-216號荃昌中心昌寧商場地下G21號 舖",
           "classification": "semantic_conflict"
         },
@@ -15001,7 +15182,7 @@
       "code": "852A3004",
       "api_name": "合作點 千品城",
       "pdf_name": "上水千品城",
-      "api_address": "香港北區上水天平邨天明樓地下120號鋪*",
+      "api_address": "香港北區上水天平邨天明樓地下120號鋪 千品城*",
       "pdf_address": "新界上水天平邨天明樓地下120號舖",
       "api_business_hours": "13:00-21:00 周六:13:00-19:00 周日:13:00-19:00",
       "pdf_business_hours": "星期一至五: 13:00-21:00 星期六至日:13:00-19:00 公眾假期:休息",
@@ -15018,7 +15199,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港北區上水天平邨天明樓地下120號鋪*",
+          "canonical": "香港北區上水天平邨天明樓地下120號鋪 千品城*",
           "pdf": "新界上水天平邨天明樓地下120號舖",
           "classification": "semantic_conflict"
         },
@@ -15186,7 +15367,7 @@
       "code": "852U3006",
       "api_name": "合作點 三江書報社",
       "pdf_name": "屯門三江書報社",
-      "api_address": "屯門三聖邨豐漁樓地下S13鋪*",
+      "api_address": "屯門三聖邨豐漁樓地下S13鋪 三江書報社*",
       "pdf_address": "屯門三聖邨豐漁樓地下S13鋪",
       "api_business_hours": "09:00-19:00",
       "pdf_business_hours": "09:00-19:00",
@@ -15202,7 +15383,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "屯門三聖邨豐漁樓地下S13鋪*",
+          "canonical": "屯門三聖邨豐漁樓地下S13鋪 三江書報社*",
           "pdf": "屯門三聖邨豐漁樓地下S13鋪",
           "classification": "semantic_conflict"
         }
@@ -15599,7 +15780,7 @@
       "code": "852UB3006",
       "api_name": "合作點 奕豐士多",
       "pdf_name": "新田奕豐士多",
-      "api_address": "元朗青山公路潭美段下竹園邨1A1號地下*",
+      "api_address": "元朗青山公路潭美段下竹園邨1A1號地下 奕豐士多*",
       "pdf_address": "元朗青山公路潭美段下竹園村1A1號地下",
       "api_business_hours": "13:30-21:00",
       "pdf_business_hours": "星期一至日: 13:30-21:00 公眾假期: 休息",
@@ -15616,7 +15797,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "元朗青山公路潭美段下竹園邨1A1號地下*",
+          "canonical": "元朗青山公路潭美段下竹園邨1A1號地下 奕豐士多*",
           "pdf": "元朗青山公路潭美段下竹園村1A1號地下",
           "classification": "semantic_conflict"
         },
@@ -15636,7 +15817,7 @@
       "code": "852UB3007",
       "api_name": "合作點 NET MEAT SHOP",
       "pdf_name": "元朗NET MEAT SHOP",
-      "api_address": "元朗錦上路石湖塘石田路251A號地下*",
+      "api_address": "元朗錦上路石湖塘石田路251A號地下 NET MEAT SHOP*",
       "pdf_address": "新界錦上路石湖塘石田路251A號地下",
       "api_business_hours": "11:00-20:00",
       "pdf_business_hours": "星期一至六:11:00-20:00 星期日、公眾假期:休息",
@@ -15653,7 +15834,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "元朗錦上路石湖塘石田路251A號地下*",
+          "canonical": "元朗錦上路石湖塘石田路251A號地下 NET MEAT SHOP*",
           "pdf": "新界錦上路石湖塘石田路251A號地下",
           "classification": "semantic_conflict"
         },
@@ -15673,7 +15854,7 @@
       "code": "852UA3008",
       "api_name": "合作點 淘點易取站(好順泰)",
       "pdf_name": "元朗淘點易取站",
-      "api_address": "新界元朗西菁街10號好順泰大廈46號地鋪*",
+      "api_address": "新界元朗西菁街10號好順泰大廈46號地鋪 淘點易取站*",
       "pdf_address": "新界元朗西菁街10號好順泰大廈46號地鋪",
       "api_business_hours": "13:30-20:30",
       "pdf_business_hours": "星期一至六: 13:30-20:30 星期日、公眾假期: 休息",
@@ -15690,7 +15871,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界元朗西菁街10號好順泰大廈46號地鋪*",
+          "canonical": "新界元朗西菁街10號好順泰大廈46號地鋪 淘點易取站*",
           "pdf": "新界元朗西菁街10號好順泰大廈46號地鋪",
           "classification": "semantic_conflict"
         },
@@ -15932,7 +16113,7 @@
       "code": "852M3001",
       "api_name": "合作點 長洲橫店百貨",
       "pdf_name": "長洲橫店百貨",
-      "api_address": "香港長洲新興街53號*",
+      "api_address": "香港長洲新興街53號 橫店百貨*",
       "pdf_address": "長洲新興街53號地下",
       "api_business_hours": "11:00-20:00 周六:10:00-18:00 周日:10:00-13:00",
       "pdf_business_hours": "（收取偏遠自取附加費） / 本地寄件 星期一至五: 11:00-20:00 星期六: 10:00-18:00 星期日及公眾假期: 10:00-13:00",
@@ -15949,7 +16130,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港長洲新興街53號*",
+          "canonical": "香港長洲新興街53號 橫店百貨*",
           "pdf": "長洲新興街53號地下",
           "classification": "semantic_conflict"
         },
@@ -16043,7 +16224,7 @@
       "code": "852Q3001",
       "api_name": "合作點 利源便利店",
       "pdf_name": "南丫島利源便利店",
-      "api_address": "南丫島榕樹灣大街27號地下*",
+      "api_address": "南丫島榕樹灣大街27號地下 利源便利店*",
       "pdf_address": "南丫島榕樹灣大街27號地下",
       "api_business_hours": "14:00-23:00 周六:14:00-23:00",
       "pdf_business_hours": "（收取偏遠自取附加費） 星期一至六:14:00-23:00 星期日及公眾假期: OFF",
@@ -16060,7 +16241,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "南丫島榕樹灣大街27號地下*",
+          "canonical": "南丫島榕樹灣大街27號地下 利源便利店*",
           "pdf": "南丫島榕樹灣大街27號地下",
           "classification": "semantic_conflict"
         },

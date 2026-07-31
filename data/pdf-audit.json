@@ -1,60 +1,60 @@
 {
-  "source_retrieved_at": "2026-07-30 10:32 (HKT UTC+8)",
-  "generated_at": "2026-07-30 10:32 (HKT UTC+8)",
+  "source_retrieved_at": "2026-07-31 10:57 (HKT UTC+8)",
+  "generated_at": "2026-07-31 10:57 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-07-30T02:33:21.156Z",
+      "document_retrieved_at": "2026-07-31T02:58:47.382Z",
       "document_binary_sha256": "ef32199d4804cf161fa58ddc53613e44e1f304b2486cc7c84ebbba6c561276c6",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-07-30T02:33:21.374Z",
+      "document_retrieved_at": "2026-07-31T02:58:47.998Z",
       "document_binary_sha256": "e41e65e4937ede5403f01a8229f63b50dfa593dffe827aa5c7212b0be9b2b1d7",
       "extracted_text_sha256": "34722a3331e2624dbb5e4d41856eddda3af01d123e5e35d85f58ddf0cd6cc4b3"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-07-30T02:33:21.677Z",
+      "document_retrieved_at": "2026-07-31T02:58:48.359Z",
       "document_binary_sha256": "a83821a509d042762210c85544959a0e2936afbd3406c8f7d66e79aade50f520",
       "extracted_text_sha256": "8c9fd67e2458bcca149b7556c71a2d0908b5fc9e0c930ec01bbcc5e5baa7695d"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-07-30T02:33:21.744Z",
+      "document_retrieved_at": "2026-07-31T02:58:48.510Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-07-30T02:33:21.852Z",
+      "document_retrieved_at": "2026-07-31T02:58:49.245Z",
       "document_binary_sha256": "1a195e02d6da737325dcea5c6b603d4ec5176f36b40d1405af8924a31e08fa5d",
       "extracted_text_sha256": "2520f09a884d0b06422f2423c4ede121a02ed819e80f8ca55638e5a9f672b072"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-07-30T02:33:22.015Z",
+      "document_retrieved_at": "2026-07-31T02:58:50.084Z",
       "document_binary_sha256": "81498e5e8cf76bb5404ddbdbaf4e1d42ab391c47d8c71f75d1828b2375709ad5",
       "extracted_text_sha256": "0b48d9c036a954981ff78155a3972c83f25da9f52a9d648426a7578c8c6ffe84"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-07-30T02:33:22.212Z",
+      "document_retrieved_at": "2026-07-31T02:58:50.431Z",
       "document_binary_sha256": "9b13d21f52e855eecb23de5f6a024be0cfaf0f897850f32ab0ff2ce6e4a3854a",
       "extracted_text_sha256": "c0f4ffc4d15d126151195450d0d91fc89dbc64f0281c281eb07f92e51a979432"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-07-30T02:33:22.305Z",
+      "document_retrieved_at": "2026-07-31T02:58:50.585Z",
       "document_binary_sha256": "9a9e2984384f10ddeec4643fd79698990e579808e8a5be78102d99b2c3e0f36d",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
@@ -11143,7 +11143,7 @@
       "code": "852P3005",
       "api_name": "合作點 名豐大藥房",
       "pdf_name": "北角名豐大藥房",
-      "api_address": "香港北角春秧街107號仁德大廈地下*",
+      "api_address": "香港北角春秧街107號仁德大廈地下 名豐大藥房*",
       "pdf_address": "香港北角春秧街107號仁德大廈地下",
       "api_business_hours": "08:30-19:30 周六:08:30-19:30 周日:08:30-19:30 節假日:08:30-19:30",
       "pdf_business_hours": "星期一至日 :08:30-19:30 公眾假期:08:00-19:30",
@@ -11160,7 +11160,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港北角春秧街107號仁德大廈地下*",
+          "canonical": "香港北角春秧街107號仁德大廈地下 名豐大藥房*",
           "pdf": "香港北角春秧街107號仁德大廈地下",
           "classification": "semantic_conflict"
         },
@@ -11661,7 +11661,7 @@
       "code": "852T3003",
       "api_name": "合作點 藝舍洗衣專門店",
       "pdf_name": "灣仔藝舍洗衣專門店",
-      "api_address": "香港灣仔灣仔道177-179地下4號鋪*",
+      "api_address": "香港灣仔灣仔道177-179地下4號鋪 藝舍洗衣專門店**",
       "pdf_address": "香港灣仔灣仔道177-179地下4號舖",
       "api_business_hours": "08:00-20:00",
       "pdf_business_hours": "星期一至日: 08:00-20:00, 公眾假期: 休息",
@@ -11678,7 +11678,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港灣仔灣仔道177-179地下4號鋪*",
+          "canonical": "香港灣仔灣仔道177-179地下4號鋪 藝舍洗衣專門店**",
           "pdf": "香港灣仔灣仔道177-179地下4號舖",
           "classification": "semantic_conflict"
         },
@@ -11698,7 +11698,7 @@
       "code": "852PA3006",
       "api_name": "合作點 平記工程",
       "pdf_name": "西灣河平記工程有限公司",
-      "api_address": "香港西灣河大石街20號地鋪*",
+      "api_address": "香港西灣河大石街20號地鋪 平記工程*",
       "pdf_address": "香港西灣河大石街20號地舖",
       "api_business_hours": "12:00-20:00",
       "pdf_business_hours": "星期一至六: 12:00-20:00 星期日、公眾假期: 休息",
@@ -11715,7 +11715,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港西灣河大石街20號地鋪*",
+          "canonical": "香港西灣河大石街20號地鋪 平記工程*",
           "pdf": "香港西灣河大石街20號地舖",
           "classification": "semantic_conflict"
         },
@@ -12031,7 +12031,7 @@
       "code": "852B3001",
       "api_name": "合作點 淘寶集運自提點",
       "pdf_name": "大角咀淘寶集運自提點",
-      "api_address": "九龍大角咀鐵樹街7號金旺閣11號鋪(富多來商場一期公園仔對面)*",
+      "api_address": "九龍大角咀鐵樹街7號金旺閣11號鋪(富多來商場一期公園仔對面) 淘寶集運自提點**",
       "pdf_address": "九龍大角咀金旺閣11號鋪(富多來商場一期公園仔對 面)",
       "api_business_hours": "12:30-19:30",
       "pdf_business_hours": "星期一至六: 12:30-19:30 星期日、公眾假期: 休息",
@@ -12048,7 +12048,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "九龍大角咀鐵樹街7號金旺閣11號鋪(富多來商場一期公園仔對面)*",
+          "canonical": "九龍大角咀鐵樹街7號金旺閣11號鋪(富多來商場一期公園仔對面) 淘寶集運自提點**",
           "pdf": "九龍大角咀金旺閣11號鋪(富多來商場一期公園仔對 面)",
           "classification": "semantic_conflict"
         },
@@ -12401,7 +12401,7 @@
       "code": "852J3009",
       "api_name": "合作點 東頭邨自提點",
       "pdf_name": "九龍城東頭邨自提點",
-      "api_address": "九龍東頭邨熟食檔地下CF6號鋪*",
+      "api_address": "九龍東頭邨熟食檔地下CF6號鋪 東頭邨自提點*",
       "pdf_address": "九龍東頭邨熟食檔地下6號鋪",
       "api_business_hours": "12:00-20:00",
       "pdf_business_hours": "星期一至六: 12:00-20:00 星期日、公眾假期: 休息",
@@ -12418,7 +12418,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "九龍東頭邨熟食檔地下CF6號鋪*",
+          "canonical": "九龍東頭邨熟食檔地下CF6號鋪 東頭邨自提點*",
           "pdf": "九龍東頭邨熟食檔地下6號鋪",
           "classification": "semantic_conflict"
         },
@@ -12740,7 +12740,7 @@
       "code": "852J3012",
       "api_name": "合作點 新利加士多",
       "pdf_name": "牛池灣新利加士多",
-      "api_address": "九龍牛池灣龍池徑12A地下*",
+      "api_address": "九龍牛池灣龍池徑12A地下 新利加士多*",
       "pdf_address": "九龍牛池灣龍池徑12A地下",
       "api_business_hours": "09:00-21:00 周六:09:00-21:00 周日:09:00-20:00 節假日:09:00-20:00",
       "pdf_business_hours": "星期一至日: 09:00-20:00 公眾假期: 休息",
@@ -12757,7 +12757,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "九龍牛池灣龍池徑12A地下*",
+          "canonical": "九龍牛池灣龍池徑12A地下 新利加士多*",
           "pdf": "九龍牛池灣龍池徑12A地下",
           "classification": "semantic_conflict"
         },
@@ -13079,7 +13079,7 @@
       "code": "852BA3001",
       "api_name": "合作點 源泰文具(石硤尾邨)",
       "pdf_name": "石硤尾源泰文具",
-      "api_address": "九龍石硤尾邨美薈樓地下7號鋪*",
+      "api_address": "九龍石硤尾邨美薈樓地下7號鋪 源泰文具*",
       "pdf_address": "九龍石硤尾邨美薈樓地下 7 號舖",
       "api_business_hours": "10:00-21:00 周六:10:00-21:00 周日:10:00-21:00",
       "pdf_business_hours": "星期一至六:11:30-21:00 星期日、公眾假期:11:30-21:00",
@@ -13096,7 +13096,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "九龍石硤尾邨美薈樓地下7號鋪*",
+          "canonical": "九龍石硤尾邨美薈樓地下7號鋪 源泰文具*",
           "pdf": "九龍石硤尾邨美薈樓地下 7 號舖",
           "classification": "semantic_conflict"
         },
@@ -13375,7 +13375,7 @@
       "code": "852BB3004",
       "api_name": "合作點 業誠藥行",
       "pdf_name": "旺角業誠藥行",
-      "api_address": "九龍旺角廣東道991號地下(業誠藥行)*",
+      "api_address": "九龍旺角廣東道991號地下(業誠藥行) *",
       "pdf_address": "九龍旺角廣東道991號",
       "api_business_hours": "12:00-20:00 周六:12:00-20:00",
       "pdf_business_hours": "星期一至六: 12:00-20:00 星期日、公眾假期: 休息",
@@ -13392,7 +13392,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "九龍旺角廣東道991號地下(業誠藥行)*",
+          "canonical": "九龍旺角廣東道991號地下(業誠藥行) *",
           "pdf": "九龍旺角廣東道991號",
           "classification": "semantic_conflict"
         },
@@ -13634,7 +13634,7 @@
       "code": "852J3005",
       "api_name": "合作點 裕豐藥行",
       "pdf_name": "鑽石山裕豐參茸中西藥行",
-      "api_address": "鑽石山斧山道185號宏景花園停車場1樓E鋪藥房*",
+      "api_address": "鑽石山斧山道185號宏景花園停車場1樓E鋪藥房 裕豐藥行*",
       "pdf_address": "九龍斧山道185號宏景花園停車場1樓E鋪",
       "api_business_hours": "09:00-21:30",
       "pdf_business_hours": "09:00-21:30",
@@ -13650,7 +13650,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "鑽石山斧山道185號宏景花園停車場1樓E鋪藥房*",
+          "canonical": "鑽石山斧山道185號宏景花園停車場1樓E鋪藥房 裕豐藥行*",
           "pdf": "九龍斧山道185號宏景花園停車場1樓E鋪",
           "classification": "semantic_conflict"
         }
@@ -13739,7 +13739,7 @@
       "code": "852AA3003",
       "api_name": "合作點 小人國",
       "pdf_name": "大埔小小世界",
-      "api_address": "香港新界大埔廣福邨廣福街市地下65號鋪(小人國)*",
+      "api_address": "新界大埔廣福邨廣福街市地下65號鋪(小人國)*",
       "pdf_address": "新界大埔廣福邨廣福街市地下65號舖",
       "api_business_hours": "11:00-21:00 周六:11:00-21:00 周日:10:00-16:00",
       "pdf_business_hours": "星期一至六: 11:00-21:00 星期日:10:00-16:00 公眾假期: 休息",
@@ -13756,7 +13756,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港新界大埔廣福邨廣福街市地下65號鋪(小人國)*",
+          "canonical": "新界大埔廣福邨廣福街市地下65號鋪(小人國)*",
           "pdf": "新界大埔廣福邨廣福街市地下65號舖",
           "classification": "semantic_conflict"
         },
@@ -13850,7 +13850,7 @@
       "code": "852AB3012",
       "api_name": "合作店 俊筠速遞",
       "pdf_name": "大埔俊筠速遞",
-      "api_address": "大埔富蝶邨富蝶商場7號鋪 富蝶自提點（14:00-15:00午休）*",
+      "api_address": "大埔富蝶邨富蝶商場7號鋪 （14:00-15:00午休）俊筠速遞*",
       "pdf_address": "大埔富蝶邨富蝶商場7號舖",
       "api_business_hours": "12:00-20:00 周六:12:00-20:00 周日:12:00-20:00 節假日:12:00-20:00",
       "pdf_business_hours": "星期一至六:12:00-20:00 星期日及公眾假期:12:00-20:00",
@@ -13867,7 +13867,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "大埔富蝶邨富蝶商場7號鋪 富蝶自提點（14:00-15:00午休）*",
+          "canonical": "大埔富蝶邨富蝶商場7號鋪 （14:00-15:00午休）俊筠速遞*",
           "pdf": "大埔富蝶邨富蝶商場7號舖",
           "classification": "semantic_conflict"
         },
@@ -13998,7 +13998,7 @@
       "code": "852FH3004",
       "api_name": "合作點 穎翹公司",
       "pdf_name": "大圍穎翹公司",
-      "api_address": "新田圍村新田圍商場4樓28號鋪*",
+      "api_address": "新田圍村新田圍商場4樓28號鋪 穎翹公司*",
       "pdf_address": "新田圍村新田圍商場4樓28號鋪",
       "api_business_hours": "11:00-19:00 周六:12:00-18:00",
       "pdf_business_hours": "星期一至五: 11:00-19:00 星期六: 12:00-18:00 星期日、公眾假期: 休息",
@@ -14015,7 +14015,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新田圍村新田圍商場4樓28號鋪*",
+          "canonical": "新田圍村新田圍商場4樓28號鋪 穎翹公司*",
           "pdf": "新田圍村新田圍商場4樓28號鋪",
           "classification": "semantic_conflict"
         },
@@ -14220,7 +14220,7 @@
       "code": "852A3013",
       "api_name": "合作店 皇后自提點",
       "pdf_name": "粉嶺皇後自提點",
-      "api_address": "新界粉嶺馬料水新村926號DD83, A3-B*",
+      "api_address": "新界粉嶺馬料水新村926號DD83, A3-B 皇后自提點*",
       "pdf_address": "新界粉嶺馬料水新村926號DD83, A3-B",
       "api_business_hours": "09:00-20:00",
       "pdf_business_hours": "星期一至六: 12:30-20:00 星期日及公眾假期: 休息",
@@ -14237,7 +14237,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界粉嶺馬料水新村926號DD83, A3-B*",
+          "canonical": "新界粉嶺馬料水新村926號DD83, A3-B 皇后自提點*",
           "pdf": "新界粉嶺馬料水新村926號DD83, A3-B",
           "classification": "semantic_conflict"
         },
@@ -14368,7 +14368,7 @@
       "code": "852CH3002",
       "api_name": "合作店 東源自提",
       "pdf_name": "將軍澳東源自提",
-      "api_address": "The Parkside mall一樓B5B鋪東源自提*",
+      "api_address": "The Parkside mall一樓B5B鋪 東源自提*",
       "pdf_address": "將軍澳唐俊街18號the parkside mall 一樓B5B鋪",
       "api_business_hours": "12:00-20:00 周六:12:00-18:00 周日:12:00-18:00 節假日:12:00-18:00",
       "pdf_business_hours": "星期一至六:12:00-20:00 星期日及公眾假期:12:00-18:00",
@@ -14385,7 +14385,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "The Parkside mall一樓B5B鋪東源自提*",
+          "canonical": "The Parkside mall一樓B5B鋪 東源自提*",
           "pdf": "將軍澳唐俊街18號the parkside mall 一樓B5B鋪",
           "classification": "semantic_conflict"
         },
@@ -14553,7 +14553,7 @@
       "code": "852LA3004",
       "api_name": "合作點 佳佳超市",
       "pdf_name": "葵涌佳佳超市",
-      "api_address": "新界葵涌石籬村石寧樓地下3&4號鋪*",
+      "api_address": "新界葵涌石籬村石寧樓地下3&4號鋪 佳佳超市*",
       "pdf_address": "新界葵涌石籬村石寧樓地下3&4號舖",
       "api_business_hours": "00:00-23:00",
       "pdf_business_hours": "星期一至五: 08:00-24:00 星期六日:11:00-24:00 公眾假期: 休息",
@@ -14570,7 +14570,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界葵涌石籬村石寧樓地下3&4號鋪*",
+          "canonical": "新界葵涌石籬村石寧樓地下3&4號鋪 佳佳超市*",
           "pdf": "新界葵涌石籬村石寧樓地下3&4號舖",
           "classification": "semantic_conflict"
         },
@@ -14590,7 +14590,7 @@
       "code": "852LB3008",
       "api_name": "合作店 星通貿易",
       "pdf_name": "葵涌星通貿易",
-      "api_address": "新界葵涌葵盛圍63號葵盛東商場114C（集運天下）*",
+      "api_address": "新界葵涌葵盛圍63號葵盛東商場114C 集運天下*",
       "pdf_address": "新界葵涌葵盛圍63號葵盛東商場114C",
       "api_business_hours": "12:00-21:00 周六:12:00-21:00 周日:15:00-21:00",
       "pdf_business_hours": "星期一至六: 12:00-21:00 星期日:15:00-21:00 公眾假期: 休息",
@@ -14607,7 +14607,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界葵涌葵盛圍63號葵盛東商場114C（集運天下）*",
+          "canonical": "新界葵涌葵盛圍63號葵盛東商場114C 集運天下*",
           "pdf": "新界葵涌葵盛圍63號葵盛東商場114C",
           "classification": "semantic_conflict"
         },
@@ -14701,7 +14701,7 @@
       "code": "852D3002",
       "api_name": "合作點 豪由仔士多",
       "pdf_name": "荔景豪由仔士多",
-      "api_address": "新界念祖街1號祖堯坊A座1樓104號鋪*",
+      "api_address": "新界念祖街1號祖堯坊A座1樓104號鋪 豪由仔士多*",
       "pdf_address": "新界葵涌念祖街1號祖堯坊A座1樓104號鋪",
       "api_business_hours": "13:00-20:00 周六:13:00-17:00",
       "pdf_business_hours": "星期一至五: 13:00-20:00 星期六: 13:00-17:00 星期日、公眾假期: 休息",
@@ -14718,7 +14718,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界念祖街1號祖堯坊A座1樓104號鋪*",
+          "canonical": "新界念祖街1號祖堯坊A座1樓104號鋪 豪由仔士多*",
           "pdf": "新界葵涌念祖街1號祖堯坊A座1樓104號鋪",
           "classification": "semantic_conflict"
         },
@@ -14775,7 +14775,7 @@
       "code": "852D3001",
       "api_name": "合作點 港聯葯業",
       "pdf_name": "荔景港聯藥業",
-      "api_address": "新界荔景麗瑤邨富瑤樓6號鋪*（13:30-14:30午休）*",
+      "api_address": "新界荔景麗瑤邨富瑤樓6號鋪*（13:30-14:30午休）港聯葯業*",
       "pdf_address": "新界荔景麗瑤邨富瑤樓6號舖",
       "api_business_hours": "11:00-20:00 周六:11:00-20:00",
       "pdf_business_hours": "星期一至六:11:00-20:00(13:30- 14:30休息) 星期日、公眾假期: 休息",
@@ -14792,7 +14792,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界荔景麗瑤邨富瑤樓6號鋪*（13:30-14:30午休）*",
+          "canonical": "新界荔景麗瑤邨富瑤樓6號鋪*（13:30-14:30午休）港聯葯業*",
           "pdf": "新界荔景麗瑤邨富瑤樓6號舖",
           "classification": "semantic_conflict"
         },
@@ -14886,7 +14886,7 @@
       "code": "852G3003",
       "api_name": "合作點 康美創造實業",
       "pdf_name": "青衣康美創造實業",
-      "api_address": "新界青衣涌美老屋村20號地下*",
+      "api_address": "新界青衣涌美老屋村20號地下 康美創造實業*",
       "pdf_address": "新界青衣涌美老屋村20號地下",
       "api_business_hours": "13:00-22:00 周六:13:00-22:00 周日:13:00-18:00",
       "pdf_business_hours": "星期一至六: 13:00-22:00 星期日: 13:00-18:00，公眾假期: 休",
@@ -14903,7 +14903,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界青衣涌美老屋村20號地下*",
+          "canonical": "新界青衣涌美老屋村20號地下 康美創造實業*",
           "pdf": "新界青衣涌美老屋村20號地下",
           "classification": "semantic_conflict"
         },
@@ -15398,7 +15398,7 @@
       "code": "852U3009",
       "api_name": "合作點 啟豐自提點",
       "pdf_name": "屯門啟豐自提點",
-      "api_address": "新界屯門啟豐商場地下32號鋪(14:00-15:00午休)*",
+      "api_address": "新界屯門啟豐商場地下32號鋪(14:00-15:00午休) 啟豐自提點*",
       "pdf_address": "新界屯門啟豐園商場地下32號舖",
       "api_business_hours": "11:00-20:00 周六:12:00-18:00",
       "pdf_business_hours": "星期一至五: 11:00-20:00 星期六: 12:00-18:00 星期日、公眾假期: 休息",
@@ -15415,7 +15415,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界屯門啟豐商場地下32號鋪(14:00-15:00午休)*",
+          "canonical": "新界屯門啟豐商場地下32號鋪(14:00-15:00午休) 啟豐自提點*",
           "pdf": "新界屯門啟豐園商場地下32號舖",
           "classification": "semantic_conflict"
         },
@@ -15435,7 +15435,7 @@
       "code": "852U3017",
       "api_name": "合作點 大師藥房",
       "pdf_name": "屯門大師藥房",
-      "api_address": "屯門石排頭徑1號卓爾廣場2樓215&216號鋪*",
+      "api_address": "屯門石排頭徑1號卓爾廣場2樓215&216號鋪 大師藥房*",
       "pdf_address": "屯門石排頭徑1號卓爾廣場2樓215&216號舖",
       "api_business_hours": "11:00-20:00",
       "pdf_business_hours": "星期一至日: 11:00-20:00 公眾假期: 休息",
@@ -15452,7 +15452,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "屯門石排頭徑1號卓爾廣場2樓215&216號鋪*",
+          "canonical": "屯門石排頭徑1號卓爾廣場2樓215&216號鋪 大師藥房*",
           "pdf": "屯門石排頭徑1號卓爾廣場2樓215&216號舖",
           "classification": "semantic_conflict"
         },
@@ -15472,7 +15472,7 @@
       "code": "852U3019",
       "api_name": "合作點 新界屯門澤豐花園商場LG30號鋪",
       "pdf_name": "屯門MKMAMISHOP B",
-      "api_address": "新界屯門澤豐花園商場LG30號鋪*",
+      "api_address": "新界屯門澤豐花園商場LG30號鋪 HKMAMISHOP B*",
       "pdf_address": "新界屯門澤豐花園商場LG30號舖",
       "api_business_hours": "12:30-20:00",
       "pdf_business_hours": "星期一至五: 12:30-20:00 星期六: 13:00-18:00 星期日、公眾假期: 休息",
@@ -15489,7 +15489,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界屯門澤豐花園商場LG30號鋪*",
+          "canonical": "新界屯門澤豐花園商場LG30號鋪 HKMAMISHOP B*",
           "pdf": "新界屯門澤豐花園商場LG30號舖",
           "classification": "semantic_conflict"
         },
@@ -15928,7 +15928,7 @@
       "code": "852UA3013",
       "api_name": "合作點 小虎士多",
       "pdf_name": "元朗小虎士多",
-      "api_address": "新界元朗公庵路馬田村172號A地下*",
+      "api_address": "新界元朗公庵路馬田村172號A地下 小虎士多*",
       "pdf_address": "新界元朗公庵路馬田村172號A地下",
       "api_business_hours": "11:00-20:00 周六:11:00-19:00",
       "pdf_business_hours": "星期一至日: 12:00-21:00 公眾假期: 休息",
@@ -15945,7 +15945,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "新界元朗公庵路馬田村172號A地下*",
+          "canonical": "新界元朗公庵路馬田村172號A地下 小虎士多*",
           "pdf": "新界元朗公庵路馬田村172號A地下",
           "classification": "semantic_conflict"
         },
@@ -16187,7 +16187,7 @@
       "code": "852Q3005",
       "api_name": "合作點 利興隆",
       "pdf_name": "x 32cm x 23cm   大嶼山利興隆",
-      "api_address": "香港大嶼山區梅窩銀運路3號梅窩中心地下16號鋪*",
+      "api_address": "香港大嶼山梅窩銀運路3號梅窩中心地下16號鋪 利興隆*",
       "pdf_address": "大嶼山梅窩銀運路3號梅窩中心地下16號舖",
       "api_business_hours": "09:30-18:30 周六:09:30-18:30",
       "pdf_business_hours": "/ 本地寄件 星期一至六:09:30-18:30 星期日及公眾假期: OFF",
@@ -16204,7 +16204,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港大嶼山區梅窩銀運路3號梅窩中心地下16號鋪*",
+          "canonical": "香港大嶼山梅窩銀運路3號梅窩中心地下16號鋪 利興隆*",
           "pdf": "大嶼山梅窩銀運路3號梅窩中心地下16號舖",
           "classification": "semantic_conflict"
         },

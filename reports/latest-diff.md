@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-01 10:57 (HKT UTC+8)`
+> **Last Updated**: `2026-08-02 10:56 (HKT UTC+8)`
 
 ---
 
@@ -8,13 +8,13 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1670 |
+| **Previous total** | 1669 |
 | **Current total** | 1669 |
 | **Stores** | 137 |
 | **Lockers** | 1051 |
 | **Partners** | 481 |
 | **Added** | 0 |
-| **Removed** | 1 |
+| **Removed** | 0 |
 | **Updated** | 0 |
 | **Unchanged** | 1669 |
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1670 | 1669 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1669 | 1669 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | lockers | 1051 | 1051 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 482 | 481 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1664 | 1663 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1663 | 1662 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| partners | 481 | 481 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1663 | 1663 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1662 | 1662 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -102,9 +102,9 @@
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (0)
 
-- `852BA3014` [順豐合作點] 合作店 德記士多 -- 深水埗北河街21號地鋪德記士多*
+*(No removed locations)*
 
 ---
 

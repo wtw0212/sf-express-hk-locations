@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-04 10:42 (HKT UTC+8)`
+> **Last Updated**: `2026-08-05 10:40 (HKT UTC+8)`
 
 ---
 
@@ -8,13 +8,13 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1669 |
+| **Previous total** | 1668 |
 | **Current total** | 1668 |
 | **Stores** | 137 |
 | **Lockers** | 1050 |
 | **Partners** | 481 |
 | **Added** | 0 |
-| **Removed** | 1 |
+| **Removed** | 0 |
 | **Updated** | 0 |
 | **Unchanged** | 1668 |
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1669 | 1668 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1668 | 1668 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1051 | 1050 | -1 | -0.1% | previous_locations_feed | ✅ PASS |
+| lockers | 1050 | 1050 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 481 | 481 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1663 | 1662 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1662 | 1661 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1662 | 1662 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1661 | 1661 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -102,9 +102,9 @@
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (0)
 
-- `H852A018P` [順豐智能櫃] 自助櫃 上水奕翠園六,七,八,九座平台 -- 香港上水奕翠園六至九座平台天橋出口住戶使用*
+*(No removed locations)*
 
 ---
 

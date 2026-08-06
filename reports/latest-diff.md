@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-05 10:40 (HKT UTC+8)`
+> **Last Updated**: `2026-08-06 10:43 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1668 |
-| **Current total** | 1668 |
+| **Current total** | 1669 |
 | **Stores** | 137 |
-| **Lockers** | 1050 |
+| **Lockers** | 1051 |
 | **Partners** | 481 |
-| **Added** | 0 |
-| **Removed** | 0 |
-| **Updated** | 0 |
-| **Unchanged** | 1668 |
+| **Added** | 2 |
+| **Removed** | 1 |
+| **Updated** | 1 |
+| **Unchanged** | 1666 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1668 | 1668 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1668 | 1669 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1050 | 1050 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1050 | 1051 | +1 | +0.1% | previous_locations_feed | ✅ PASS |
 | partners | 481 | 481 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1662 | 1662 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1661 | 1661 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1662 | 1663 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1661 | 1662 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1662 |
-| EN unique codes | 1661 |
+| TC unique codes | 1663 |
+| EN unique codes | 1662 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 186 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1668 |
+| District resolved | 1669 |
 | District unresolved | 0 |
-| With English data | 1661 |
+| With English data | 1662 |
 | Missing English | 7 |
 
 ---
@@ -96,18 +96,21 @@
 
 ---
 
-## Added Locations (0)
+## Added Locations (2)
 
-*(No added locations)*
-
----
-
-## Removed Locations (0)
-
-*(No removed locations)*
+- `H852A018P` [順豐智能櫃] 自助櫃 上水奕翠園六,七,八,九座平台 -- 香港上水奕翠園六至九座平台天橋出口住戶使用*
+- `H852FEC6P` [順豐智能櫃] 自助櫃 馬鞍山雅典居 -- 馬鞍山雅典居地下東閘保安亭旁(只供住戶使用)
 
 ---
 
-## Updated Locations (0)
+## Removed Locations (1)
 
-*(No updated locations)*
+- `H852UA55P` [順豐智能櫃] 自助櫃 天水圍天富苑雅富閣 -- 天水圍天富苑雅富閣Q座地下*
+
+---
+
+## Updated Locations (1)
+
+- `H852KA03P` 自助櫃 土瓜灣興基豪園(順豐站)
+  - name: `"自助櫃 土瓜灣興基豪苑(順豐站)"` -> `"自助櫃 土瓜灣興基豪園(順豐站)"`
+  - address: `"土瓜灣興基豪苑地下B鋪(順豐站)*"` -> `"土瓜灣興基豪園地下B鋪(順豐站)*"`

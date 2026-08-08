@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-07 10:45 (HKT UTC+8)`
+> **Last Updated**: `2026-08-08 09:45 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1669 |
+| **Previous total** | 1667 |
 | **Current total** | 1667 |
 | **Stores** | 137 |
 | **Lockers** | 1049 |
 | **Partners** | 481 |
-| **Added** | 1 |
-| **Removed** | 3 |
-| **Updated** | 2 |
-| **Unchanged** | 1664 |
+| **Added** | 0 |
+| **Removed** | 0 |
+| **Updated** | 0 |
+| **Unchanged** | 1667 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1669 | 1667 | -2 | -0.12% | previous_locations_feed | ✅ PASS |
+| total | 1667 | 1667 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1051 | 1049 | -2 | -0.19% | previous_locations_feed | ✅ PASS |
+| lockers | 1049 | 1049 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 481 | 481 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1663 | 1661 | -2 | -0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1662 | 1660 | -2 | -0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1661 | 1661 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1660 | 1660 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -96,25 +96,18 @@
 
 ---
 
-## Added Locations (1)
+## Added Locations (0)
 
-- `H852UA55P` [順豐智能櫃] 自助櫃 天水圍天富苑雅富閣 -- 天水圍天富苑雅富閣Q座地下*
-
----
-
-## Removed Locations (3)
-
-- `H852BB83P` [順豐智能櫃] 自助櫃 油麻地廟街26號(C+ Laundry) -- 油麻地廟街26號地下(C+ Laundry)*
-- `H852UA54P` [順豐智能櫃] 自助櫃 天水圍天富苑元富閣 -- 天水圍天富苑元富閣A座地下*
-- `H852Z004P` [順豐智能櫃] 自助櫃 順豐大廈9樓IT簡版櫃(只限指定人仕使用) -- 123青衣航運路36號順豐大廈9樓IT簡版櫃(只限指定人仕使用)*
+*(No added locations)*
 
 ---
 
-## Updated Locations (2)
+## Removed Locations (0)
 
-- `H852A018P` 自助櫃 上水奕翠園六,七,八,九座平台
-  - address: `"香港上水奕翠園六至九座平台天橋出口住戶使用*"` -> `"上水奕翠園六至九座平台天橋出口(只供住戶使用)*"`
-- `H852FEC6P` 自助櫃 馬鞍山雅典居
-  - name_en: `"SF Locker Next to Guard House, G/F, Gate East, Villa Athena, Ma On Shan(Residentsonly)"` -> `"SF Locker Villa Athena, Ma On Shan"`
-  - address: `"馬鞍山雅典居地下東閘保安亭旁(只供住戶使用)"` -> `"馬鞍山雅典居地下東閘保安亭旁(只供住戶使用)*"`
-  - address_en: `"Next to Guard House, G/F, Gate East, Villa Athena, Ma On Shan(Residentsonly)"` -> `"Next to Guard House, G/F, Gate East, Villa Athena, Ma On Shan(Residents only)*"`
+*(No removed locations)*
+
+---
+
+## Updated Locations (0)
+
+*(No updated locations)*

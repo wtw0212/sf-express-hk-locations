@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-12 10:05 (HKT UTC+8)`
+> **Last Updated**: `2026-08-13 10:07 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1666 |
+| **Previous total** | 1667 |
 | **Current total** | 1667 |
 | **Stores** | 137 |
 | **Lockers** | 1050 |
 | **Partners** | 480 |
-| **Added** | 1 |
+| **Added** | 0 |
 | **Removed** | 0 |
 | **Updated** | 0 |
-| **Unchanged** | 1666 |
+| **Unchanged** | 1667 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1666 | 1667 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
+| total | 1667 | 1667 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1049 | 1050 | +1 | +0.1% | previous_locations_feed | ✅ PASS |
+| lockers | 1050 | 1050 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 480 | 480 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1660 | 1661 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1659 | 1660 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1661 | 1661 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1660 | 1660 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -45,7 +45,7 @@
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
-| Valid Partner PDF Records | 443 |
+| Valid Partner PDF Records | 442 |
 | Quarantined PDF Records | 12 |
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 186 |
@@ -88,7 +88,7 @@
 
 ## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.6% exceeds warning threshold 1% (12/455 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.6% exceeds warning threshold 1% (12/454 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 8.0% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.1% exceeds warning threshold 1%
@@ -96,9 +96,9 @@
 
 ---
 
-## Added Locations (1)
+## Added Locations (0)
 
-- `H852RE08P` [順豐智能櫃] 回收櫃 鴨脷洲利是大廈(順豐站) -- 鴨脷洲利是大廈地下A鋪(回收櫃)
+*(No added locations)*
 
 ---
 

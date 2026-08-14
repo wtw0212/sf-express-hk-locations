@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-13 10:07 (HKT UTC+8)`
+> **Last Updated**: `2026-08-14 10:05 (HKT UTC+8)`
 
 ---
 
@@ -11,12 +11,12 @@
 | **Previous total** | 1667 |
 | **Current total** | 1667 |
 | **Stores** | 137 |
-| **Lockers** | 1050 |
-| **Partners** | 480 |
-| **Added** | 0 |
-| **Removed** | 0 |
-| **Updated** | 0 |
-| **Unchanged** | 1667 |
+| **Lockers** | 1051 |
+| **Partners** | 479 |
+| **Added** | 1 |
+| **Removed** | 1 |
+| **Updated** | 2 |
+| **Unchanged** | 1664 |
 
 ---
 
@@ -26,8 +26,8 @@
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
 | total | 1667 | 1667 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1050 | 1050 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 480 | 480 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1050 | 1051 | +1 | +0.1% | previous_locations_feed | ✅ PASS |
+| partners | 480 | 479 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
 | tcCodes | 1661 | 1661 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
 | enCodes | 1660 | 1660 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
@@ -64,7 +64,7 @@
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
 | **Record Quality Warnings** | 270 |
-| **Record Quality Info Flags** | 57 |
+| **Record Quality Info Flags** | 58 |
 | **Record Quality Errors** | 0 |
 
 ---
@@ -75,7 +75,7 @@
 | :--- | :--- |
 | ENGLISH_FIELD_CONTAINS_CJK | 104 |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 98 |
-| ADMIN_DISTRICT_ALIAS_APPLIED | 41 |
+| ADMIN_DISTRICT_ALIAS_APPLIED | 42 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 21 |
 | DUPLICATE_ADDRESS_SUFFIX | 9 |
@@ -96,18 +96,21 @@
 
 ---
 
-## Added Locations (0)
+## Added Locations (1)
 
-*(No added locations)*
-
----
-
-## Removed Locations (0)
-
-*(No removed locations)*
+- `H852Q011P` [順豐智能櫃] 自助櫃 大嶼山航空飛行訓練中心 -- 大嶼山航空飛行訓練中心地下(只供職員使用)*
 
 ---
 
-## Updated Locations (0)
+## Removed Locations (1)
 
-*(No updated locations)*
+- `852J3006` [順豐合作點] 合作點 醉Chill -- 黃大仙中心北館二樓N210B號鋪(醉Chill)*
+
+---
+
+## Updated Locations (2)
+
+- `852BF` 旺角上海街順豐站
+  - location.latitude: `22.324645` -> `22.322376`
+- `H852DA01S` 冷凍櫃 荔枝角曼坊地下
+  - sub_district: `"荔枝角"` -> `"美孚"`

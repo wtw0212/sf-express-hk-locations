@@ -1,82 +1,82 @@
 {
-  "source_retrieved_at": "2026-08-13 10:07 (HKT UTC+8)",
-  "generated_at": "2026-08-13 10:07 (HKT UTC+8)",
+  "source_retrieved_at": "2026-08-14 10:05 (HKT UTC+8)",
+  "generated_at": "2026-08-14 10:05 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-08-13T02:07:42.252Z",
+      "document_retrieved_at": "2026-08-14T02:07:19.619Z",
       "document_binary_sha256": "ef32199d4804cf161fa58ddc53613e44e1f304b2486cc7c84ebbba6c561276c6",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-08-13T02:07:42.470Z",
+      "document_retrieved_at": "2026-08-14T02:07:19.874Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-08-13T02:07:42.769Z",
+      "document_retrieved_at": "2026-08-14T02:07:22.276Z",
       "document_binary_sha256": "a83821a509d042762210c85544959a0e2936afbd3406c8f7d66e79aade50f520",
       "extracted_text_sha256": "8c9fd67e2458bcca149b7556c71a2d0908b5fc9e0c930ec01bbcc5e5baa7695d"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-08-13T02:07:42.835Z",
+      "document_retrieved_at": "2026-08-14T02:07:22.998Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-08-13T02:07:43.351Z",
+      "document_retrieved_at": "2026-08-14T02:07:25.419Z",
       "document_binary_sha256": "1a195e02d6da737325dcea5c6b603d4ec5176f36b40d1405af8924a31e08fa5d",
       "extracted_text_sha256": "2520f09a884d0b06422f2423c4ede121a02ed819e80f8ca55638e5a9f672b072"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-08-13T02:07:45.305Z",
+      "document_retrieved_at": "2026-08-14T02:07:25.750Z",
       "document_binary_sha256": "eb5ec4e3c5b19bc9edca8a083845f278b78cea44432850781f8a1f30c1c2c90e",
       "extracted_text_sha256": "8689bda8f1ebd107fe075673e80b5a8763e4135a95d0e1ab0ebb2a0c158cf550"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-08-13T02:07:45.598Z",
+      "document_retrieved_at": "2026-08-14T02:07:31.421Z",
       "document_binary_sha256": "9b13d21f52e855eecb23de5f6a024be0cfaf0f897850f32ab0ff2ce6e4a3854a",
       "extracted_text_sha256": "c0f4ffc4d15d126151195450d0d91fc89dbc64f0281c281eb07f92e51a979432"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-08-13T02:07:45.719Z",
+      "document_retrieved_at": "2026-08-14T02:07:32.309Z",
       "document_binary_sha256": "9a9e2984384f10ddeec4643fd79698990e579808e8a5be78102d99b2c3e0f36d",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
   },
   "summary": {
     "parsed_pdf_record_count": 442,
-    "api_pdf_conflict_count": 438,
-    "api_pdf_difference_count": 438,
+    "api_pdf_conflict_count": 437,
+    "api_pdf_difference_count": 437,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 438,
+      "semantic_conflict": 437,
       "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 968,
+      "semantic_conflict": 965,
       "name_specificity_difference": 210,
       "formatting_difference": 0,
       "equivalent_difference": 130
     },
-    "new_pdf_only_candidate_count": 0,
+    "new_pdf_only_candidate_count": 1,
     "missing_reviewed_record_count": 0,
     "quarantined_record_count": 12
   },
@@ -12250,43 +12250,6 @@
       }
     },
     {
-      "code": "852J3006",
-      "api_name": "合作點 醉Chill",
-      "pdf_name": "黃大仙醉Chill",
-      "api_address": "黃大仙中心北館二樓N210B號鋪(醉Chill)*",
-      "pdf_address": "九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖",
-      "api_business_hours": "12:00-20:00",
-      "pdf_business_hours": "星期一至日: 12:00-20:00 公眾假期: 休息",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作點 醉Chill",
-          "pdf": "黃大仙醉Chill",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "黃大仙中心北館二樓N210B號鋪(醉Chill)*",
-          "pdf": "九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "12:00-20:00",
-          "pdf": "星期一至日: 12:00-20:00 公眾假期: 休息",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_KLN_TC",
-      "parser_location": {
-        "row_index": 8,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 黃大仙醉Chill852J3006 九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖^852J3006^ 取件 星期一至日: 12:00-20:00 公眾假期: 休息"
-      }
-    },
-    {
       "code": "852J3007",
       "api_name": "合作點 正德糖果",
       "pdf_name": "黃大仙正德公司",
@@ -16253,7 +16216,21 @@
     }
   ],
   "reviewed_pdf_drift": [],
-  "new_pdf_only_candidates": [],
+  "new_pdf_only_candidates": [
+    {
+      "code": "852J3006",
+      "name": "黃大仙醉Chill",
+      "address": "九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖",
+      "district": null,
+      "sub_district": "黃大仙",
+      "business_hours": "星期一至日: 12:00-20:00 公眾假期: 休息",
+      "document_id": "ASP_KLN_TC",
+      "parser_location": {
+        "row_index": 8,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 黃大仙醉Chill852J3006 九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖^852J3006^ 取件 星期一至日: 12:00-20:00 公眾假期: 休息"
+      }
+    }
+  ],
   "missing_reviewed_records": [],
   "quarantined_records": [
     {

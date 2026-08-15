@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-14 10:05 (HKT UTC+8)`
+> **Last Updated**: `2026-08-15 09:20 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1667 |
-| **Current total** | 1667 |
+| **Current total** | 1668 |
 | **Stores** | 137 |
-| **Lockers** | 1051 |
+| **Lockers** | 1052 |
 | **Partners** | 479 |
 | **Added** | 1 |
-| **Removed** | 1 |
-| **Updated** | 2 |
-| **Unchanged** | 1664 |
+| **Removed** | 0 |
+| **Updated** | 0 |
+| **Unchanged** | 1667 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1667 | 1667 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1667 | 1668 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1050 | 1051 | +1 | +0.1% | previous_locations_feed | ✅ PASS |
-| partners | 480 | 479 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1661 | 1661 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1660 | 1660 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1051 | 1052 | +1 | +0.1% | previous_locations_feed | ✅ PASS |
+| partners | 479 | 479 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1661 | 1662 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1660 | 1661 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1661 |
-| EN unique codes | 1660 |
+| TC unique codes | 1662 |
+| EN unique codes | 1661 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 186 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1667 |
+| District resolved | 1668 |
 | District unresolved | 0 |
-| With English data | 1660 |
+| With English data | 1661 |
 | Missing English | 7 |
 
 ---
@@ -98,19 +98,16 @@
 
 ## Added Locations (1)
 
-- `H852Q011P` [順豐智能櫃] 自助櫃 大嶼山航空飛行訓練中心 -- 大嶼山航空飛行訓練中心地下(只供職員使用)*
+- `H852CD27P` [順豐智能櫃] 自助櫃 油塘曦台 -- 油塘曦台三樓升降機穿梭大堂(只供住戶使用)
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (0)
 
-- `852J3006` [順豐合作點] 合作點 醉Chill -- 黃大仙中心北館二樓N210B號鋪(醉Chill)*
+*(No removed locations)*
 
 ---
 
-## Updated Locations (2)
+## Updated Locations (0)
 
-- `852BF` 旺角上海街順豐站
-  - location.latitude: `22.324645` -> `22.322376`
-- `H852DA01S` 冷凍櫃 荔枝角曼坊地下
-  - sub_district: `"荔枝角"` -> `"美孚"`
+*(No updated locations)*

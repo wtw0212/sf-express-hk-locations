@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-16 09:24 (HKT UTC+8)`
+> **Last Updated**: `2026-08-17 09:21 (HKT UTC+8)`
 
 ---
 
@@ -15,8 +15,8 @@
 | **Partners** | 479 |
 | **Added** | 0 |
 | **Removed** | 0 |
-| **Updated** | 1 |
-| **Unchanged** | 1667 |
+| **Updated** | 0 |
+| **Unchanged** | 1668 |
 
 ---
 
@@ -45,7 +45,7 @@
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
-| Valid Partner PDF Records | 442 |
+| Valid Partner PDF Records | 441 |
 | Quarantined PDF Records | 12 |
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 186 |
@@ -88,7 +88,7 @@
 
 ## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.6% exceeds warning threshold 1% (12/454 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.6% exceeds warning threshold 1% (12/453 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 8.0% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.1% exceeds warning threshold 1%
@@ -108,8 +108,6 @@
 
 ---
 
-## Updated Locations (1)
+## Updated Locations (0)
 
-- `H852CD27P` 自助櫃 油塘曦台
-  - address: `"油塘曦台三樓升降機穿梭大堂(只供住戶使用)"` -> `"油塘曦台三樓升降機穿梭大堂(只供住戶使用)*"`
-  - address_en: `"Lift Lobby, 3/F, Maya, Yau Tong(Residentsonly)"` -> `"Lift Lobby, 3/F, Maya, Yau Tong(Residents only)*"`
+*(No updated locations)*

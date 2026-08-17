@@ -1,77 +1,77 @@
 {
-  "source_retrieved_at": "2026-08-16 09:24 (HKT UTC+8)",
-  "generated_at": "2026-08-16 09:24 (HKT UTC+8)",
+  "source_retrieved_at": "2026-08-17 09:21 (HKT UTC+8)",
+  "generated_at": "2026-08-17 09:21 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-08-16T01:25:05.119Z",
+      "document_retrieved_at": "2026-08-17T01:22:12.785Z",
       "document_binary_sha256": "ef32199d4804cf161fa58ddc53613e44e1f304b2486cc7c84ebbba6c561276c6",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-08-16T01:25:05.875Z",
+      "document_retrieved_at": "2026-08-17T01:22:12.943Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-08-16T01:25:06.293Z",
+      "document_retrieved_at": "2026-08-17T01:22:13.229Z",
       "document_binary_sha256": "a83821a509d042762210c85544959a0e2936afbd3406c8f7d66e79aade50f520",
       "extracted_text_sha256": "8c9fd67e2458bcca149b7556c71a2d0908b5fc9e0c930ec01bbcc5e5baa7695d"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-08-16T01:25:06.415Z",
+      "document_retrieved_at": "2026-08-17T01:22:13.303Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-08-16T01:25:06.580Z",
+      "document_retrieved_at": "2026-08-17T01:22:13.415Z",
       "document_binary_sha256": "1a195e02d6da737325dcea5c6b603d4ec5176f36b40d1405af8924a31e08fa5d",
       "extracted_text_sha256": "2520f09a884d0b06422f2423c4ede121a02ed819e80f8ca55638e5a9f672b072"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-08-16T01:25:06.751Z",
-      "document_binary_sha256": "eb5ec4e3c5b19bc9edca8a083845f278b78cea44432850781f8a1f30c1c2c90e",
-      "extracted_text_sha256": "8689bda8f1ebd107fe075673e80b5a8763e4135a95d0e1ab0ebb2a0c158cf550"
+      "document_retrieved_at": "2026-08-17T01:22:13.580Z",
+      "document_binary_sha256": "6139a74491938868e7490e6d5209797ac3694f4384297d30156dec96f6aa41f6",
+      "extracted_text_sha256": "e1f53b8c507dc4e1f6cdcb37b8ddc469af1f8d8abac5d3dfcddfdf3f97264547"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-08-16T01:25:06.943Z",
+      "document_retrieved_at": "2026-08-17T01:22:13.765Z",
       "document_binary_sha256": "9b13d21f52e855eecb23de5f6a024be0cfaf0f897850f32ab0ff2ce6e4a3854a",
       "extracted_text_sha256": "c0f4ffc4d15d126151195450d0d91fc89dbc64f0281c281eb07f92e51a979432"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-08-16T01:25:07.016Z",
+      "document_retrieved_at": "2026-08-17T01:22:13.836Z",
       "document_binary_sha256": "9a9e2984384f10ddeec4643fd79698990e579808e8a5be78102d99b2c3e0f36d",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
   },
   "summary": {
-    "parsed_pdf_record_count": 442,
-    "api_pdf_conflict_count": 437,
-    "api_pdf_difference_count": 437,
+    "parsed_pdf_record_count": 441,
+    "api_pdf_conflict_count": 436,
+    "api_pdf_difference_count": 436,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 437,
+      "semantic_conflict": 436,
       "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 965,
+      "semantic_conflict": 962,
       "name_specificity_difference": 210,
       "formatting_difference": 0,
       "equivalent_difference": 130
@@ -12324,43 +12324,6 @@
       }
     },
     {
-      "code": "852J3009",
-      "api_name": "合作點 東頭邨自提點",
-      "pdf_name": "九龍城東頭邨自提點",
-      "api_address": "九龍東頭邨熟食檔地下CF6號鋪 東頭邨自提點*",
-      "pdf_address": "九龍東頭邨熟食檔地下6號鋪",
-      "api_business_hours": "12:00-20:00",
-      "pdf_business_hours": "星期一至六: 12:00-20:00 星期日、公眾假期: 休息",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作點 東頭邨自提點",
-          "pdf": "九龍城東頭邨自提點",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "九龍東頭邨熟食檔地下CF6號鋪 東頭邨自提點*",
-          "pdf": "九龍東頭邨熟食檔地下6號鋪",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "12:00-20:00",
-          "pdf": "星期一至六: 12:00-20:00 星期日、公眾假期: 休息",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_KLN_TC",
-      "parser_location": {
-        "row_index": 11,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 九龍城東頭邨自提點852J3009九龍東頭邨熟食檔地下6號鋪^852J3009^取件 星期一至六: 12:00-20:00 星期日、公眾假期: 休息"
-      }
-    },
-    {
       "code": "852K3005",
       "api_name": "合作店 浩基公司",
       "pdf_name": "九龍城浩基公司",
@@ -12393,7 +12356,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 12,
+        "row_index": 11,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 九龍城浩基公司852K3005 九龍九龍城賈炳達道128號九龍城廣場4樓406號鋪 ^852K3005^ 取件 星期一至六: 13:30-21:00 星期日、公眾假期: 13:30-18:00"
       }
     },
@@ -12430,7 +12393,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 13,
+        "row_index": 12,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 九龍灣彩淘自提點852HC3002九龍九龍灣彩福邨街市CF21號鋪^852HC3002^取件 星期一至六: 12:00-20:00 星期日: 14:00-18:00、公眾假期: 休"
       }
     },
@@ -12467,8 +12430,8 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 14,
-        "raw_row": "息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 九龍灣啟航自提852HD3002 九龍啟德承豐道啟航1331第2區第7街04棟G01-G02鋪 ^852HD3002^ 取件 星期一至六: 12:00-21:00 午休: 16:00-17:00 星期日、公眾假期:休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
+        "row_index": 13,
+        "raw_row": "息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 九龍灣啟航自提852HD3002 九龍啟德承豐道啟航1331第2區第7街04棟G01-G02鋪 ^852HD3002^ 取件 星期一至六: 12:00-21:00 午休: 16:00-17:00 星期日、公眾假期:休息"
       }
     },
     {
@@ -12504,8 +12467,8 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 15,
-        "raw_row": "快件限制 藍田集點公司852CA3003藍田平田商場216號鋪^852CA3003^取件 星期一至五:12:00-20:00 星期六：12:00-18:00 星期日、公眾假期:休息"
+        "row_index": 14,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 藍田集點公司852CA3003藍田平田商場216號鋪^852CA3003^取件 星期一至五:12:00-20:00 星期六：12:00-18:00 星期日、公眾假期:休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
       }
     },
     {
@@ -12541,8 +12504,8 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 16,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 藍田 維高儲存服務公 司 852CB3002藍田德田廣場310號鋪^852CB3002^取件 星期一至五: 12:30-19:30 星期六: 12:30-19:00 星期日、公眾假期: 休息"
+        "row_index": 15,
+        "raw_row": "快件限制 藍田 維高儲存服務公 司 852CB3002藍田德田廣場310號鋪^852CB3002^取件 星期一至五: 12:30-19:30 星期六: 12:30-19:00 星期日、公眾假期: 休息"
       }
     },
     {
@@ -12578,7 +12541,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 17,
+        "row_index": 16,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 藍田閃提自取點852CB3007 九龍觀塘茶果嶺道95號麗港中心商埸地下40B鋪 ^852CB3007^ 取件 星期一至六:12:00-20:00 星期日、公眾假期:OFF"
       }
     },
@@ -12615,7 +12578,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 18,
+        "row_index": 17,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 美孚螢火蟲自提點852NC3002美孚新邨第五期蘭秀道15 號N15D 地鋪^852NC3002^取件 星期一至六: 11:00-20:00 星期日、公眾假期: 11:00-16:00"
       }
     },
@@ -12652,7 +12615,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 19,
+        "row_index": 18,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 美孚MY STYLE852NC3003美孚新邨四期平台117舖^852NC3003^取件 星期一至六: 12:00-19:00 星期日、公眾假期: 休息"
       }
     },
@@ -12689,7 +12652,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 20,
+        "row_index": 19,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 牛池灣新利加士多852J3012九龍牛池灣龍池徑12A地下^852J3012^取件 星期一至日: 09:00-20:00 公眾假期: 休息"
       }
     },
@@ -12726,7 +12689,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 21,
+        "row_index": 20,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 牛池灣腦行家852J3022 牛池灣富山村富仁樓 地下16號鋪^852J3022^ 取件 星期一至五:12:00-20:00 星期六：13:30-20:00 星期日、公眾假期:12:00-20:00"
       }
     },
@@ -12763,7 +12726,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 22,
+        "row_index": 21,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 牛池灣昌渼貿易公司852J3035牛池灣村貴池徑C室^852J3035^取件 星期一至六:12:00-21:00 星期日、公眾假期:12:00-17:00"
       }
     },
@@ -12800,7 +12763,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 23,
+        "row_index": 22,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 牛頭角新健自提點852CB3005九龍牛頭角定安街100-102號G2鋪^852CB3005^取件 星期一至六: 08:00-20:00 星期日:休息 公眾假期: 08:00-20:00 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
       }
     },
@@ -12837,7 +12800,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 24,
+        "row_index": 23,
         "raw_row": "快件限制 牛頭角歡迎自提淘大店852HB3004九龍九龍灣淘大商場2期1樓F161號鋪^852HB3004^取件 星期一至五:13:00-20:00 星期六、日：13:00-18:00 公眾假期:休息"
       }
     },
@@ -12874,7 +12837,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 25,
+        "row_index": 24,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 深水埗 斜角巷（新高登 電腦廣場） 852BA3008 九龍深水埗元州街85-95號新高登電腦廣場2樓225號 鋪^852BA3008^ 取件 星期一至六: 12:00-20:00 星期日:13:00-20:00 公眾假期: 休息"
       }
     },
@@ -12911,7 +12874,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 26,
+        "row_index": 25,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 深水埗車迷店852BA3009九龍深水埗鴨寮街地下256號^852BA3009^取件 星期一至日:11:00-20:00 公眾假期: 休息"
       }
     },
@@ -12954,7 +12917,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 27,
+        "row_index": 26,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 深水埗淘寶集運自提點852BA3016九龍深水埗海壇街212號地下A1舖^852BA3016^取件 星期一至五:13:00-19:00 星期六：13:00-18:30 星期日、公眾假期:OFF"
       }
     },
@@ -12991,7 +12954,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 28,
+        "row_index": 27,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 石硤尾源泰文具852BA3001九龍石硤尾邨美薈樓地下 7 號舖^852BA3001^ 星期一至六:11:30-21:00 星期日、公眾假期:11:30-21:00"
       }
     },
@@ -13028,7 +12991,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 29,
+        "row_index": 28,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 石硤尾竣富自提點852BA3017九龍石硤尾耀東街22號後座地下^852BA3017^取件 星期一至五:11:00-21:00 (16:00-18:00 OFF) 星期六、星期日：12:30-19:30 公眾假期:休息"
       }
     },
@@ -13065,7 +13028,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 30,
+        "row_index": 29,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 順利速豹物流852CH3001九龍觀塘順安商場安群樓地下14號鋪^852CH3001^取件 星期一至六: 11:00-20:00 星期日、公眾假期: 11:00-16:00"
       }
     },
@@ -13102,7 +13065,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 31,
+        "row_index": 30,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 太子潮豐藥妝852BA3015 香港深水埗北河街165-167號太利樓地下C2號舖 ^852BA3015^ 取件 星期一至日: 14:00-23:00 公眾假期: 休息"
       }
     },
@@ -13139,7 +13102,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 32,
+        "row_index": 31,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 太子WS852BF3001太子彌敦道760號聯合廣場1樓131B^852BF3001^取件 星期一至二:12:00-19:30 星期三至星期六：12:00-20:00 星期日及公眾假期: 休息"
       }
     },
@@ -13176,7 +13139,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 33,
+        "row_index": 32,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 土瓜灣長旺辦館852KA3001馬頭圍村玫瑰樓地下111號鋪^852KA3001^取件 星期一至五: 10:00-20:00 星期六、星期日、公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
       }
     },
@@ -13213,7 +13176,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 34,
+        "row_index": 33,
         "raw_row": "快件限制 土瓜灣土友站852KA3003 土瓜灣九龍城道137號新城中心地下1號鋪 ^852KA3003^ 取件 星期一至五: 12:00-20:00 星期六:12:00-17:00 星期日、公眾假期: 休息"
       }
     },
@@ -13250,7 +13213,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 35,
+        "row_index": 34,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 土瓜灣高山劇場送禮勤852KA3005土瓜灣山西街3號利榮大廈地下7-8號鋪^852KA3005^取件 星期一至六:12:00-21：30 星期日、公眾假期:休息"
       }
     },
@@ -13287,7 +13250,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 36,
+        "row_index": 35,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 旺角業誠藥行852BB3004九龍旺角廣東道991號^852BB3004^取件 星期一至六: 12:00-20:00 星期日、公眾假期: 休息"
       }
     },
@@ -13324,7 +13287,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 37,
+        "row_index": 36,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 旺角悟空開門自提點852BB3005旺角廣東道979號地鋪^852BB3005^取件 星期一至日: 09:00-18:00 星期六、公眾假期: 休息"
       }
     },
@@ -13361,7 +13324,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 38,
+        "row_index": 37,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 新蒲崗 康頤藥行有限公 司 852J3024新蒲崗采頤花園地下770號鋪^852J3024^取件 星期一至六:09:30-20:00 星期日、公眾假期: 09:30-20:00"
       }
     },
@@ -13398,7 +13361,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 39,
+        "row_index": 38,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 新蒲崗SO GOOD852J3026九龍新蒲崗寧遠街9號越秀廣場G29號鋪^852J3026^取件 星期一至六:11:00-21:00 星期日、公眾假期: 休息"
       }
     },
@@ -13435,7 +13398,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 40,
+        "row_index": 39,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 新蒲崗FIREFLY COMPANY852J3038新蒲崗采頤花園購物商場751鋪地下 ^852J3038^取件 星期一至六:11:00-21:00 星期日:11:00-19:00 公眾假期: 休息"
       }
     },
@@ -13472,7 +13435,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 41,
+        "row_index": 40,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 油麻地悟空開門自提點852BB3006 油麻地新填地街172-176號永常大樓地下C號 ^852BB3006^ 取件 星期一至日: 12:00-21:00 星期二、公眾假期: 休息"
       }
     },
@@ -13509,7 +13472,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 42,
+        "row_index": 41,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 油塘驛家自取點852CA3006 九龍觀塘茶寮坳順安道9號順天邨天瑤樓地下13A號 ^852CA3006^ 取件 星期一至六: 10:00-21:00(13:30- 14:00午休) 星期日: 10:00-18:00 公眾假期: 休息"
       }
     },
@@ -13540,7 +13503,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 43,
+        "row_index": 42,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 鑽石山 裕豐參茸中西藥 行 852J3005九龍斧山道185號宏景花園停車場1樓E鋪^852J3005^取件09:00-21:30"
       }
     },

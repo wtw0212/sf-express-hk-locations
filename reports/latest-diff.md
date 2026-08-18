@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-17 09:21 (HKT UTC+8)`
+> **Last Updated**: `2026-08-18 09:18 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1668 |
-| **Current total** | 1668 |
+| **Current total** | 1669 |
 | **Stores** | 137 |
-| **Lockers** | 1052 |
-| **Partners** | 479 |
-| **Added** | 0 |
-| **Removed** | 0 |
-| **Updated** | 0 |
-| **Unchanged** | 1668 |
+| **Lockers** | 1054 |
+| **Partners** | 478 |
+| **Added** | 2 |
+| **Removed** | 1 |
+| **Updated** | 1 |
+| **Unchanged** | 1666 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1668 | 1668 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1668 | 1669 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1052 | 1052 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 479 | 479 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1662 | 1662 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1661 | 1661 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1052 | 1054 | +2 | +0.19% | previous_locations_feed | ✅ PASS |
+| partners | 479 | 478 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1662 | 1663 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1661 | 1662 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1662 |
-| EN unique codes | 1661 |
+| TC unique codes | 1663 |
+| EN unique codes | 1662 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -48,11 +48,11 @@
 | Valid Partner PDF Records | 441 |
 | Quarantined PDF Records | 12 |
 | PDF Quarantine Ratio | 2.6% |
-| SSR records | 186 |
+| SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1668 |
+| District resolved | 1669 |
 | District unresolved | 0 |
-| With English data | 1661 |
+| With English data | 1662 |
 | Missing English | 7 |
 
 ---
@@ -96,18 +96,21 @@
 
 ---
 
-## Added Locations (0)
+## Added Locations (2)
 
-*(No added locations)*
-
----
-
-## Removed Locations (0)
-
-*(No removed locations)*
+- `H852M053P` [順豐智能櫃] 自助櫃 中環誠利商業大廈(順豐站) -- 中環誠利商業大廈地下15號鋪
+- `H852Z004P` [順豐智能櫃] 自助櫃 順豐大廈9樓IT簡版櫃(只限指定人仕使用) -- 123青衣航運路36號順豐大廈9樓IT簡版櫃(只限指定人仕使用)*
 
 ---
 
-## Updated Locations (0)
+## Removed Locations (1)
 
-*(No updated locations)*
+- `852GH3009` [順豐合作點] 合作店 長青傢具平台 -- 新界青衣長青邨長青商場10號（長青傢具平台）*
+
+---
+
+## Updated Locations (1)
+
+- `H852Q011P` 自助櫃 大嶼山航空飛行訓練中心
+  - address: `"大嶼山航空飛行訓練中心地下(只供職員使用)*"` -> `"大嶼山航空飛行訓練中心地下(只供大廈內部員工使用)*"`
+  - address_en: `"Lobby, G/F, Hong Kong Airlines Training Centre, Lantau Island(Only for staff)*"` -> `"Lobby, G/F, Hong Kong Airlines Training Centre, Lantau Island(HKA Tower staff only)*"`

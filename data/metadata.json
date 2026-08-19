@@ -1,20 +1,20 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-08-18 09:18 (HKT UTC+8)",
-  "generated_at": "2026-08-18 09:18 (HKT UTC+8)",
-  "retrieved_at": "2026-08-18 09:18 (HKT UTC+8)",
+  "source_retrieved_at": "2026-08-19 09:20 (HKT UTC+8)",
+  "generated_at": "2026-08-19 09:20 (HKT UTC+8)",
+  "retrieved_at": "2026-08-19 09:20 (HKT UTC+8)",
   "counts": {
     "total": 1669,
     "stores": 137,
-    "lockers": 1054,
-    "partners": 478
+    "lockers": 1055,
+    "partners": 477
   },
   "count_deltas": {
     "total": {
-      "previous": 1668,
+      "previous": 1669,
       "current": 1669,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -29,17 +29,17 @@
       "gate_result": "pass"
     },
     "lockers": {
-      "previous": 1052,
-      "current": 1054,
-      "delta": 2,
-      "delta_pct": 0.19,
+      "previous": 1054,
+      "current": 1055,
+      "delta": 1,
+      "delta_pct": 0.09,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
     },
     "partners": {
-      "previous": 479,
-      "current": 478,
+      "previous": 478,
+      "current": 477,
       "delta": -1,
       "delta_pct": -0.21,
       "baseline_available": true,
@@ -47,19 +47,19 @@
       "gate_result": "pass"
     },
     "tcCodes": {
-      "previous": 1662,
+      "previous": 1663,
       "current": 1663,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.tc_record_count",
       "gate_result": "pass"
     },
     "enCodes": {
-      "previous": 1661,
+      "previous": 1662,
       "current": 1662,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.en_record_count",
       "gate_result": "pass"
@@ -262,13 +262,13 @@
     "pipeline_warnings": 5,
     "record_flag_counts_by_severity": {
       "info": 58,
-      "warning": 270,
+      "warning": 268,
       "error": 0
     },
     "flag_counts_by_type": {
       "SOURCE_TC_EN_UNIT_CONFLICT": 38,
-      "ENGLISH_FIELD_CONTAINS_CJK": 104,
-      "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 98,
+      "ENGLISH_FIELD_CONTAINS_CJK": 103,
+      "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 97,
       "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT": 21,
       "DUPLICATE_ADDRESS_SUFFIX": 9,
       "ADMIN_DISTRICT_ALIAS_APPLIED": 42,
@@ -280,15 +280,15 @@
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "2ce2543e917c99dcfa7d6e5ad1cfb8b551e738d267a3655cc3075c557e77cd95",
-      "semantic_sha256": "ee441dccb8b78b587ff4b1097464b8ceeba665c14f05e06b1f4b476ed619465b",
+      "raw_snapshot_sha256": "ccd6fbe483d3520281bba0c3a81304834d6e58dd9c60554a2b21f920b9ebaa31",
+      "semantic_sha256": "b1461bfad2036063277912ca51c32f87d758cd67824bec239a01d466fb214f44",
       "record_count": 1663,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "988518eaad4d40866e82943b6da63ae54a5690db850af629c0eb2b6e55c66437",
-      "semantic_sha256": "93c374b99fea2d2390d990c292a0d8bdff812a877abe73c5f60d779e74a19fcc",
+      "raw_snapshot_sha256": "34b1688c646e909860220bc89ccd9cfc2f02df285b65640536d71e368d282d23",
+      "semantic_sha256": "93db94304d61a7f37b2236109098e66df1e757068d759b5dbd7beff3701806d4",
       "record_count": 1662,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_en/record_hashes"
@@ -775,7 +775,7 @@
       "duplicate_codes": []
     },
     "canonical": {
-      "semantic_sha256": "e109ff6cbc9470fc3b3c0a5085a4c1a8dac27c556c1f8f79a469734b00b4cd97",
+      "semantic_sha256": "7289f86411b277abf2ee0fe92e178707f7b162b200f8a658a67069002e3d1828",
       "record_count": 1669,
       "duplicate_codes": []
     },

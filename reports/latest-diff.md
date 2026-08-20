@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-19 09:20 (HKT UTC+8)`
+> **Last Updated**: `2026-08-20 09:20 (HKT UTC+8)`
 
 ---
 
@@ -9,11 +9,11 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1669 |
-| **Current total** | 1669 |
+| **Current total** | 1668 |
 | **Stores** | 137 |
-| **Lockers** | 1055 |
+| **Lockers** | 1054 |
 | **Partners** | 477 |
-| **Added** | 1 |
+| **Added** | 0 |
 | **Removed** | 1 |
 | **Updated** | 1 |
 | **Unchanged** | 1667 |
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1669 | 1669 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1669 | 1668 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1054 | 1055 | +1 | +0.09% | previous_locations_feed | ✅ PASS |
-| partners | 478 | 477 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1663 | 1663 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1662 | 1662 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1055 | 1054 | -1 | -0.09% | previous_locations_feed | ✅ PASS |
+| partners | 477 | 477 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1663 | 1662 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1662 | 1661 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1663 |
-| EN unique codes | 1662 |
+| TC unique codes | 1662 |
+| EN unique codes | 1661 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1669 |
+| District resolved | 1668 |
 | District unresolved | 0 |
-| With English data | 1662 |
+| With English data | 1661 |
 | Missing English | 7 |
 
 ---
@@ -96,22 +96,20 @@
 
 ---
 
-## Added Locations (1)
+## Added Locations (0)
 
-- `H852MC54P` [順豐智能櫃] 自助櫃 半山區花園台 -- 半山區花園台3座地下(近管理處)(只供住戶使用)
+*(No added locations)*
 
 ---
 
 ## Removed Locations (1)
 
-- `852BF3003` [順豐合作點] 合作店 悟空開門自提點 -- 太子西洋菜北街157-163A號地下7(163)號鋪 悟空開門自提點（逢星期三休息）*
+- `H852MC54P` [順豐智能櫃] 自助櫃 半山區花園台 -- 半山區花園台3座地下(近管理處)(只供住戶使用)
 
 ---
 
 ## Updated Locations (1)
 
-- `H852M053P` 自助櫃 中環誠利商業大廈
-  - name: `"自助櫃 中環誠利商業大廈(順豐站)"` -> `"自助櫃 中環誠利商業大廈"`
-  - name_en: `"G/F, Shing Lee Commerical Building, Central"` -> `"SF Locker Shing Lee Commerical Building, Central"`
-  - address: `"中環誠利商業大廈地下15號鋪"` -> `"中環永和街3-5號誠利商業大廈地下15號*"`
-  - address_en: `"Unit 15, G/F, Shing Lee Commerical Building, Central"` -> `"Unit 15, G/F, Shing Lee Commerical Building, Central*"`
+- `H852Q011P` 自助櫃 大嶼山香港航空飛行訓練中心
+  - name: `"自助櫃 大嶼山航空飛行訓練中心"` -> `"自助櫃 大嶼山香港航空飛行訓練中心"`
+  - address: `"大嶼山航空飛行訓練中心地下(只供大廈內部員工使用)*"` -> `"大嶼山香港航空飛行訓練中心地下(只供大廈內部員工使用)*"`

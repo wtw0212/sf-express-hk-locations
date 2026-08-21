@@ -1,82 +1,82 @@
 {
-  "source_retrieved_at": "2026-08-20 09:20 (HKT UTC+8)",
-  "generated_at": "2026-08-20 09:20 (HKT UTC+8)",
+  "source_retrieved_at": "2026-08-21 10:20 (HKT UTC+8)",
+  "generated_at": "2026-08-21 10:20 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-08-20T01:20:33.945Z",
+      "document_retrieved_at": "2026-08-21T02:21:19.190Z",
       "document_binary_sha256": "ef32199d4804cf161fa58ddc53613e44e1f304b2486cc7c84ebbba6c561276c6",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-08-20T01:20:34.136Z",
+      "document_retrieved_at": "2026-08-21T02:21:19.365Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-08-20T01:20:34.453Z",
-      "document_binary_sha256": "a83821a509d042762210c85544959a0e2936afbd3406c8f7d66e79aade50f520",
-      "extracted_text_sha256": "8c9fd67e2458bcca149b7556c71a2d0908b5fc9e0c930ec01bbcc5e5baa7695d"
+      "document_retrieved_at": "2026-08-21T02:21:19.616Z",
+      "document_binary_sha256": "91c596bfe3fa79fe51a00835de5e1dbddc86def3c2a77d5009c4bc71efe1220e",
+      "extracted_text_sha256": "e1720f744eec5086dd1d74167dc076eabe1c95f279594a1ec210d7e6200f03d3"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-08-20T01:20:34.518Z",
+      "document_retrieved_at": "2026-08-21T02:21:19.673Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-08-20T01:20:34.624Z",
+      "document_retrieved_at": "2026-08-21T02:21:19.804Z",
       "document_binary_sha256": "1a195e02d6da737325dcea5c6b603d4ec5176f36b40d1405af8924a31e08fa5d",
       "extracted_text_sha256": "2520f09a884d0b06422f2423c4ede121a02ed819e80f8ca55638e5a9f672b072"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-08-20T01:20:34.770Z",
+      "document_retrieved_at": "2026-08-21T02:21:19.940Z",
       "document_binary_sha256": "6139a74491938868e7490e6d5209797ac3694f4384297d30156dec96f6aa41f6",
       "extracted_text_sha256": "e1f53b8c507dc4e1f6cdcb37b8ddc469af1f8d8abac5d3dfcddfdf3f97264547"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-08-20T01:20:34.902Z",
-      "document_binary_sha256": "9b13d21f52e855eecb23de5f6a024be0cfaf0f897850f32ab0ff2ce6e4a3854a",
-      "extracted_text_sha256": "c0f4ffc4d15d126151195450d0d91fc89dbc64f0281c281eb07f92e51a979432"
+      "document_retrieved_at": "2026-08-21T02:21:20.068Z",
+      "document_binary_sha256": "2ae6b68b8289df9da6649e607c061601967b5901d406e5cca9b1ac80640af8c8",
+      "extracted_text_sha256": "476a9f346563a8bd060a2bd1b915cf95a54827ed82ff8304f0630cb1030312a9"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-08-20T01:20:34.973Z",
+      "document_retrieved_at": "2026-08-21T02:21:20.136Z",
       "document_binary_sha256": "9a9e2984384f10ddeec4643fd79698990e579808e8a5be78102d99b2c3e0f36d",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
   },
   "summary": {
-    "parsed_pdf_record_count": 441,
-    "api_pdf_conflict_count": 436,
-    "api_pdf_difference_count": 436,
+    "parsed_pdf_record_count": 435,
+    "api_pdf_conflict_count": 429,
+    "api_pdf_difference_count": 429,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 436,
+      "semantic_conflict": 429,
       "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 962,
-      "name_specificity_difference": 210,
+      "semantic_conflict": 945,
+      "name_specificity_difference": 208,
       "formatting_difference": 0,
-      "equivalent_difference": 130
+      "equivalent_difference": 128
     },
-    "new_pdf_only_candidate_count": 1,
+    "new_pdf_only_candidate_count": 2,
     "missing_reviewed_record_count": 0,
     "quarantined_record_count": 12
   },
@@ -7378,43 +7378,6 @@
       }
     },
     {
-      "code": "852CH2001",
-      "api_name": "便利店 尚德商場地下OK",
-      "pdf_name": "OK便利店 (將軍澳)",
-      "api_address": "九龍將軍澳尚德邨尚德商場地下8號鋪OK #159*",
-      "pdf_address": "新界將軍澳尚德邨尚德商場地下8號舖",
-      "api_business_hours": "00:00-00:00 周六:00:00-00:00 周日:00:00-00:00 節假日:00:00-00:00",
-      "pdf_business_hours": "24小時",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "便利店 尚德商場地下OK",
-          "pdf": "OK便利店 (將軍澳)",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "九龍將軍澳尚德邨尚德商場地下8號鋪OK #159*",
-          "pdf": "新界將軍澳尚德邨尚德商場地下8號舖",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "00:00-00:00 周六:00:00-00:00 周日:00:00-00:00 節假日:00:00-00:00",
-          "pdf": "24小時",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "OK_NT_TC",
-      "parser_location": {
-        "row_index": 42,
-        "raw_row": "將軍澳852CH2001新界將軍澳尚德邨尚德商場地下8號舖^852CH2001^24小時"
-      }
-    },
-    {
       "code": "852CH2002",
       "api_name": "便利店 富寧花園商場地下OK",
       "pdf_name": "OK便利店 (將軍澳)",
@@ -7447,7 +7410,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 43,
+        "row_index": 42,
         "raw_row": "將軍澳852CH2002新界將軍澳寶寧路25號富寧花園商場地下10及11A號舖^852CH2002^06:00-23:00"
       }
     },
@@ -7484,45 +7447,8 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 44,
+        "row_index": 43,
         "raw_row": "將軍澳852CH2003新界將軍澳唐俊街11號寶盈花園商業中心地下S3, S3A號舖^852CH2003^24小時"
-      }
-    },
-    {
-      "code": "852CC2038",
-      "api_name": "便利店 The LOHAS康城OK便利店",
-      "pdf_name": "OK便利店",
-      "api_address": "新界將軍澳TheLOHAS康城3樓315號鋪OK #585*",
-      "pdf_address": "新界將軍澳The LOHAS康城3樓315號舖",
-      "api_business_hours": "07:00-00:00",
-      "pdf_business_hours": "07:00 - 24:00",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "便利店 The LOHAS康城OK便利店",
-          "pdf": "OK便利店",
-          "classification": "name_specificity_difference"
-        },
-        "address": {
-          "canonical": "新界將軍澳TheLOHAS康城3樓315號鋪OK #585*",
-          "pdf": "新界將軍澳The LOHAS康城3樓315號舖",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "07:00-00:00",
-          "pdf": "07:00 - 24:00",
-          "classification": "equivalent_difference"
-        }
-      },
-      "document_id": "OK_NT_TC",
-      "parser_location": {
-        "row_index": 45,
-        "raw_row": "康城852CC2038新界將軍澳The LOHAS康城3樓315號舖^852CC2038^07:00 - 24:00"
       }
     },
     {
@@ -7558,7 +7484,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 46,
+        "row_index": 44,
         "raw_row": "坑口852CC2024新界將軍澳明德村明德商場19號舖^852CC2024^24小時"
       }
     },
@@ -7595,7 +7521,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 47,
+        "row_index": 45,
         "raw_row": "坑口852CC2031新界將軍澳厚德村商場(西翼)地下G11及G12號舖^852CC2031^24小時"
       }
     },
@@ -7626,7 +7552,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 48,
+        "row_index": 46,
         "raw_row": "葵芳852LB2007新界葵涌葵富路7-11號，葵涌廣場地下26號舖^852LB2007^06:30-23:00"
       }
     },
@@ -7663,7 +7589,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 49,
+        "row_index": 47,
         "raw_row": "葵興852LB2006新界葵涌禾葵裡2號葵興商場地下2號舖^852LB2006^24小時"
       }
     },
@@ -7700,7 +7626,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 50,
+        "row_index": 48,
         "raw_row": "葵涌852LA2002新界葵涌梨木樹村梨木商場LG1號舖^852LA2002^24小時"
       }
     },
@@ -7737,7 +7663,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 51,
+        "row_index": 49,
         "raw_row": "葵涌852LA2003新界葵涌石蔭東村蔭興樓1及2號舖^852LA2003^24小時"
       }
     },
@@ -7768,7 +7694,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 52,
+        "row_index": 50,
         "raw_row": "葵涌852LA2005新界葵涌梨木樹村梨木商場1樓102號舖^852LA2005^07:00-21:00"
       }
     },
@@ -7805,7 +7731,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 53,
+        "row_index": 51,
         "raw_row": "葵涌852LB2001新界葵涌葵涌村第一期秋葵樓地下6號舖^852LB2001^24小時"
       }
     },
@@ -7842,7 +7768,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 54,
+        "row_index": 52,
         "raw_row": "葵涌852Q2001新界葵涌貨櫃碼頭亞洲貨運大廈第三期A座7樓^852Q2001^ 06:30-20:00, 星期六:06:00-20:00 星期日及公眾假期: 休息"
       }
     },
@@ -7879,7 +7805,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 55,
+        "row_index": 53,
         "raw_row": "葵涌852LB2008葵涌盛芳街15號運芳樓地下2號舖^852LB2008^24小時"
       }
     },
@@ -7916,7 +7842,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 56,
+        "row_index": 54,
         "raw_row": "葵涌852LA2001葵涌安蔭商場1號舖^852LA2001^24小時"
       }
     },
@@ -7953,7 +7879,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 57,
+        "row_index": 55,
         "raw_row": "葵涌852L2001葵涌華星街1至7號，美華工業大厦地下B號^852L2001^06:00-22:00"
       }
     },
@@ -7990,7 +7916,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 58,
+        "row_index": 56,
         "raw_row": "葵涌852LB2009葵翠邨綠翠樓地下1號舖^852LB2009^24小時"
       }
     },
@@ -8027,7 +7953,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 59,
+        "row_index": 57,
         "raw_row": "葵涌852LA2006葵涌梨木道120號石蔭邨石蔭商場地下12-13號舖^852LA2006^07:00-23:00"
       }
     },
@@ -8064,7 +7990,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 60,
+        "row_index": 58,
         "raw_row": "馬鞍山852FE2008新界馬鞍山頌安村頌安商場1號舖^852FE2008^24小時"
       }
     },
@@ -8101,45 +8027,8 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 61,
+        "row_index": 59,
         "raw_row": "馬鞍山852FE2004新界馬鞍山富安花園商場中心22號舖^852FE2004^24小時"
-      }
-    },
-    {
-      "code": "852FE2019",
-      "api_name": "迎海薈OK便利店",
-      "pdf_name": "OK便利店 (馬鞍山)",
-      "api_address": "香港馬鞍山落禾沙迎海薈2樓2號鋪OK #577*",
-      "pdf_address": "馬鞍山落禾沙迎海薈2樓2號舖",
-      "api_business_hours": "06:00-00:00",
-      "pdf_business_hours": "06:00-24:00",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "迎海薈OK便利店",
-          "pdf": "OK便利店 (馬鞍山)",
-          "classification": "name_specificity_difference"
-        },
-        "address": {
-          "canonical": "香港馬鞍山落禾沙迎海薈2樓2號鋪OK #577*",
-          "pdf": "馬鞍山落禾沙迎海薈2樓2號舖",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "06:00-00:00",
-          "pdf": "06:00-24:00",
-          "classification": "equivalent_difference"
-        }
-      },
-      "document_id": "OK_NT_TC",
-      "parser_location": {
-        "row_index": 62,
-        "raw_row": "馬鞍山852FE2019馬鞍山落禾沙迎海薈2樓2號舖^852FE2019^06:00-24:00"
       }
     },
     {
@@ -8175,7 +8064,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 63,
+        "row_index": 60,
         "raw_row": "馬鞍山852FE2016新界馬鞍山新港城中心二樓2408號舖^852FE2016^06:00-24:00"
       }
     },
@@ -8212,7 +8101,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 64,
+        "row_index": 61,
         "raw_row": "馬鞍山852FE2011新界烏溪沙港鐵站大堂2號舖^852FE2011^06:00-24:00 服務時間 (星期一至六,星期日及公眾假期)"
       }
     },
@@ -8249,7 +8138,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 65,
+        "row_index": 62,
         "raw_row": "快件限制 馬鞍山852FE2005沙田馬鞍山耀安邨耀安商場店號116^852FE2005^24小時"
       }
     },
@@ -8286,7 +8175,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 66,
+        "row_index": 63,
         "raw_row": "最大體積: 36x30x25cm 重量限制: 5公斤或以下 馬鞍山852FE2006沙田馬鞍山錦英苑商場中心低層地下2號^852FE2006^24小時"
       }
     },
@@ -8323,7 +8212,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 67,
+        "row_index": 64,
         "raw_row": "馬鞍山852FE2009沙田馬鞍山錦泰苑錦泰商場地下2號舖^852FE2009^24小時"
       }
     },
@@ -8354,7 +8243,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 68,
+        "row_index": 65,
         "raw_row": "馬灣852GC2005新界馬灣珀林路23號地下^852GC2005^07:00-23:00"
       }
     },
@@ -8391,7 +8280,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 69,
+        "row_index": 66,
         "raw_row": "青衣852GC2001新界青衣青華苑停車場地下^852GC2001^06:00-24:00"
       }
     },
@@ -8428,7 +8317,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 70,
+        "row_index": 67,
         "raw_row": "青衣852GC2003新界青衣青衣村一期停車場大廈地下6號舖^852GC2003^24小時"
       }
     },
@@ -8471,7 +8360,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 71,
+        "row_index": 68,
         "raw_row": "青衣852GH2003青衣港鐵站TSY 306號舖^852GH2003^07:00-23:30"
       }
     },
@@ -8514,7 +8403,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 72,
+        "row_index": 69,
         "raw_row": "青衣852GH2004青衣港鐵站TSY 211號舖^852GH2004^06:00-22:00"
       }
     },
@@ -8551,7 +8440,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 73,
+        "row_index": 70,
         "raw_row": "青衣852GC2006新界青衣長發廣場地下134號舖^852GC2006^24小時"
       }
     },
@@ -8588,7 +8477,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 74,
+        "row_index": 71,
         "raw_row": "青衣852GC2007新界青衣美景花園商場L3平台97及98號舖^852GC2007^06:00 - 23:00"
       }
     },
@@ -8625,7 +8514,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 75,
+        "row_index": 72,
         "raw_row": "荃灣852G2005新界荃灣圓墩圍59-61號地下A號舖^852G2005^24小時"
       }
     },
@@ -8662,7 +8551,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 76,
+        "row_index": 73,
         "raw_row": "荃灣852G2021新界荃灣綠楊坊平台P8號舖^852G2021^24小時"
       }
     },
@@ -8699,7 +8588,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 77,
+        "row_index": 74,
         "raw_row": "荃灣852GA2001新界荃灣青山道185-187號荃勝大廈地下A2號舖^852GA2001^24小時"
       }
     },
@@ -8736,7 +8625,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 78,
+        "row_index": 75,
         "raw_row": "荃灣852GA2002新界荃灣德海街富利達中心地下E號舖^852GA2002^24小時"
       }
     },
@@ -8779,7 +8668,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 79,
+        "row_index": 76,
         "raw_row": "荃灣852G2003新界荃灣麗城花園第三期麗城商場地下2號舖^852G2003^24小時"
       }
     },
@@ -8816,7 +8705,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 80,
+        "row_index": 77,
         "raw_row": "荃灣852G2001新界荃灣中心第一期高層平臺C8,C10,C12舖^852G2001^24小時"
       }
     },
@@ -8853,7 +8742,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 81,
+        "row_index": 78,
         "raw_row": "荃灣852G2004新界荃灣海壩街18號舖^852G2004^24小時"
       }
     },
@@ -8884,7 +8773,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 82,
+        "row_index": 79,
         "raw_row": "荃灣852GA2005新界荃灣海壩街102B號卓明大廈地下地舖^852GA2005^07:00-23:00"
       }
     },
@@ -8921,7 +8810,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 83,
+        "row_index": 80,
         "raw_row": "荃灣852GA2004新界荃灣鹹田街61號石壁新村遊樂場C座地下C6號舖 ^852GA2004^24小時"
       }
     },
@@ -8958,7 +8847,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 84,
+        "row_index": 81,
         "raw_row": "荃灣852GA2008新界荃灣石圍角路3號，石圍角邨商場地下M4-M5號舖^852GA2008^07:00-23:00"
       }
     },
@@ -8995,7 +8884,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 85,
+        "row_index": 82,
         "raw_row": "沙田852FE2017新界沙田第一城置富第一城地下G1號舖^852FE2017^24小時"
       }
     },
@@ -9032,7 +8921,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 86,
+        "row_index": 83,
         "raw_row": "沙田852FE2020沙田碩門邨(二期)碩門商場地下G01號舖舖^852FE2020^24小時"
       }
     },
@@ -9069,7 +8958,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 87,
+        "row_index": 84,
         "raw_row": "沙田852FE2021沙田第一城置富第一城樂薈地下33及89號舖(銀城)^852FE2021^24小時"
       }
     },
@@ -9106,7 +8995,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 88,
+        "row_index": 85,
         "raw_row": "沙田852FH2001新界沙田上徑口村696地段地舖^852FH2001^24小時"
       }
     },
@@ -9143,7 +9032,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 89,
+        "row_index": 86,
         "raw_row": "沙田852FH2002沙田田心街10-18號雲疊花園地下10A-C,19A^852FH2002^24小時"
       }
     },
@@ -9180,7 +9069,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 90,
+        "row_index": 87,
         "raw_row": "沙田852FH2004沙田乙明邨明耀樓地下7-9號^852FH2004^24小時"
       }
     },
@@ -9217,7 +9106,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 91,
+        "row_index": 88,
         "raw_row": "沙田852FB2002沙田白石角香港科學園科技大道東1號1座地下5-8號舖^852FB2002^07:00-20:00"
       }
     },
@@ -9254,7 +9143,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 92,
+        "row_index": 89,
         "raw_row": "沙田852FH2005新界沙田圍方2樓220號舖^852FH2005^07:00-23:00"
       }
     },
@@ -9291,7 +9180,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 93,
+        "row_index": 90,
         "raw_row": "上水852A2002新界上水彩園村彩華樓地下301至302號舖^852A2002^24小時"
       }
     },
@@ -9328,7 +9217,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 94,
+        "row_index": 91,
         "raw_row": "上水852A2021新界上水中心商場地下1004A及1004B號舖^852A2021^24小時"
       }
     },
@@ -9365,7 +9254,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 95,
+        "row_index": 92,
         "raw_row": "天水圍852UA2020新界元朗天水圍天湖路2號天耀廣場LG1樓LG12號舖^852UA2020^24小時"
       }
     },
@@ -9402,7 +9291,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 96,
+        "row_index": 93,
         "raw_row": "天水圍852UA2008新界天水圍天恩商場109-110號舖^852UA2008^06:00-24:00"
       }
     },
@@ -9439,7 +9328,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 97,
+        "row_index": 94,
         "raw_row": "天水圍852UA2015新界天水圍天瑞路9號天瑞廣場地下L026號舖^852UA2015^24小時"
       }
     },
@@ -9476,7 +9365,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 98,
+        "row_index": 95,
         "raw_row": "天水圍852UA2022新界天水圍天盛商場地下L003 號舖^852UA2022^24小時 服務時間 (星期一至六,星期日及公眾假期)"
       }
     },
@@ -9513,7 +9402,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 99,
+        "row_index": 96,
         "raw_row": "快件限制 天水圍852UA2025新界元朗天瑞路88號俊宏軒商業座外圍L12及L13號舖^852UA2025^24小時"
       }
     },
@@ -9550,7 +9439,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 100,
+        "row_index": 97,
         "raw_row": "最大體積: 36x30x25cm 重量限制: 5公斤或以下 天水圍852UA2023新界天水圍天華路30號天頌苑T Town South一樓S115及S116號舖^852UA2023^6:30-24:00"
       }
     },
@@ -9587,7 +9476,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 101,
+        "row_index": 98,
         "raw_row": "天水圍852UA2011新界天水圍俊宏軒俊宏廣場地下L30號舖^852UA2011^24小時"
       }
     },
@@ -9624,7 +9513,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 102,
+        "row_index": 99,
         "raw_row": "屯門852U2003新界屯門蝴蝶村熟食市場13至16號檔^852U2003^24小時"
       }
     },
@@ -9661,7 +9550,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 103,
+        "row_index": 100,
         "raw_row": "屯門852U2007新界屯門兆康苑商場中心104號舖^852U2007^24小時"
       }
     },
@@ -9698,7 +9587,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 104,
+        "row_index": 101,
         "raw_row": "屯門852U2018新界屯門寶田商場地下6號舖^852U2018^24小時"
       }
     },
@@ -9735,7 +9624,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 105,
+        "row_index": 102,
         "raw_row": "屯門852U2020新界屯門良景商場L106號舖^852U2020^24小時"
       }
     },
@@ -9772,7 +9661,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 106,
+        "row_index": 103,
         "raw_row": "屯門852U2028香港新界屯門大興街1號大興商場地下L106號舖^852U2028^24小時"
       }
     },
@@ -9809,7 +9698,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 107,
+        "row_index": 104,
         "raw_row": "屯門852U2012新界屯門置樂花園商場地下129號舖^852U2012^24小時"
       }
     },
@@ -9846,7 +9735,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 108,
+        "row_index": 105,
         "raw_row": "屯門852U2010新界屯門翠寧花園地下12-13號舖^852U2010^24小時"
       }
     },
@@ -9883,7 +9772,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 109,
+        "row_index": 106,
         "raw_row": "屯門852U2015屯門海珠路2號海典軒地下16-17號舖^852U2015^24小時"
       }
     },
@@ -9920,7 +9809,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 110,
+        "row_index": 107,
         "raw_row": "屯門852U2016新界屯門啟發徑15及19號德政圍31-33,37-43號柏苑地下2號舖^852U2016^24小時"
       }
     },
@@ -9957,7 +9846,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 111,
+        "row_index": 108,
         "raw_row": "屯門852U2029新界屯門震寰路11號大興花園一期地下1號舖^852U2029^24小時"
       }
     },
@@ -9994,7 +9883,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 112,
+        "row_index": 109,
         "raw_row": "屯門852U2025新界屯門田景路31號良景廣場2樓L229A&L229B號舖^852U2025^06:00-23:00"
       }
     },
@@ -10031,7 +9920,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 113,
+        "row_index": 110,
         "raw_row": "屯門852U2017新界屯門龍門路45號富健花園地下87號舖^852U2017^24小時"
       }
     },
@@ -10068,7 +9957,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 114,
+        "row_index": 111,
         "raw_row": "屯門852U2021新界屯門悅湖商場53-57及81-85號舖^852U2021^24小時"
       }
     },
@@ -10105,7 +9994,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 115,
+        "row_index": 112,
         "raw_row": "屯門852U2030新界屯門龍門路43號龍門居地下97號舖B部份^852U2030^24小時"
       }
     },
@@ -10142,7 +10031,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 116,
+        "row_index": 113,
         "raw_row": "屯門852U2031新界屯門菁田邨菁田商場地下G11號舖^852U2031^24小時"
       }
     },
@@ -10179,7 +10068,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 117,
+        "row_index": 114,
         "raw_row": "屯門852U2032新界屯門山景商場地下206號舖^852U2032^24小時"
       }
     },
@@ -10216,7 +10105,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 118,
+        "row_index": 115,
         "raw_row": "屯門852U2033屯門寶怡花園23-23A舖地下^852U2033^24小時"
       }
     },
@@ -10253,7 +10142,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 119,
+        "row_index": 116,
         "raw_row": "屯門852U2034屯門景峰徑2號景峰花園地下13號舖^852U2034^24小時"
       }
     },
@@ -10290,7 +10179,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 120,
+        "row_index": 117,
         "raw_row": "屯門852U2035屯門山景邨山景商場低層地下一樓122號鋪^852U2035^24小時"
       }
     },
@@ -10327,7 +10216,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 121,
+        "row_index": 118,
         "raw_row": "屯門852U2036屯門青翠徑南光樓高層地下D舖^852U2036^24小時"
       }
     },
@@ -10364,7 +10253,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 122,
+        "row_index": 119,
         "raw_row": "屯門852U2037屯門美樂花園商場81-82號地下^852U2037^24小時"
       }
     },
@@ -10401,7 +10290,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 123,
+        "row_index": 120,
         "raw_row": "屯門852U2040屯門業旺邨業旺商場地下 G01 號舖 ^852U2040^24小時"
       }
     },
@@ -10438,7 +10327,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 124,
+        "row_index": 121,
         "raw_row": "屯門852UC2002屯門富泰商場地下6號舖^852UC2002^24小時"
       }
     },
@@ -10475,7 +10364,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 125,
+        "row_index": 122,
         "raw_row": "屯門852UD2001屯門友愛邨H.A.N.D.S.地下S-114 & S-115^852UD2001^24小時"
       }
     },
@@ -10512,7 +10401,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 126,
+        "row_index": 123,
         "raw_row": "西貢852CC2026新界西貢海傍廣場金寶閣地下12號舖^852CC2026^24小時"
       }
     },
@@ -10549,7 +10438,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 127,
+        "row_index": 124,
         "raw_row": "西貢852CC2034新界西貢西貢大廈地下23號舖^852CC2034^24小時"
       }
     },
@@ -10586,7 +10475,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 128,
+        "row_index": 125,
         "raw_row": "小瀝源852FB2001新界沙田小瀝源安平街2號利豐中心地下^852FB2001^ 06:00-22:00 星期日及公眾假期：OFF"
       }
     },
@@ -10623,7 +10512,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 129,
+        "row_index": 126,
         "raw_row": "元朗852UA2006新界元朗大棠路11號光華廣場地下4號舖^852UA2006^24小時"
       }
     },
@@ -10660,7 +10549,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 130,
+        "row_index": 127,
         "raw_row": "元朗852UA2007新界元朗青山道218,222,226-230號富興大廈地下A號舖^852UA2007^24小時"
       }
     },
@@ -10697,7 +10586,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 131,
+        "row_index": 128,
         "raw_row": "元朗852UA2009新界元朗又新街7-25號元新大廈地下4號及11號舖^852UA2009^24小時"
       }
     },
@@ -10734,7 +10623,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 132,
+        "row_index": 129,
         "raw_row": "元朗852UA2016新界元朗大棠路35/39號紅棉洋樓地下A號舖^852UA2016^24小時 服務時間 (星期一至六,星期日及公眾假期)"
       }
     },
@@ -10771,7 +10660,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 133,
+        "row_index": 130,
         "raw_row": "快件限制 元朗852UA2013新界元朗青山公路49-63號金豪大廈地下E號舖^852UA2013^24小時"
       }
     },
@@ -10808,7 +10697,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 134,
+        "row_index": 131,
         "raw_row": "最大體積: 36x30x25cm 重量限制: 5公斤或以下 元朗852UA2017新界元朗西菁街9號富盛大廈地下13A及13E號舖^852UA2017^24小時"
       }
     },
@@ -10845,7 +10734,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 135,
+        "row_index": 132,
         "raw_row": "元朗852UA2024新界元朗安寧路70/74號保輝樓地下D鋪^852UA2024^24小時"
       }
     },
@@ -10882,7 +10771,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 136,
+        "row_index": 133,
         "raw_row": "元朗852UA2026元朗青山公路99-109號元朗貿易中心地下7號舖^852UA2026^24小時"
       }
     },
@@ -10919,7 +10808,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 137,
+        "row_index": 134,
         "raw_row": "元朗852UA2027元朗谷亭街1號傑文樓地舖^852UA2027^24小時"
       }
     },
@@ -10956,7 +10845,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 138,
+        "row_index": 135,
         "raw_row": "元朗852UA2028新界元朗青山公路 32 號地下^852UA2028^24小時"
       }
     },
@@ -10993,7 +10882,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 139,
+        "row_index": 136,
         "raw_row": "元朗852UA2029元朗鳳琴街18號玉龍樓地下4號舖^852UA2029^24小時"
       }
     },
@@ -11036,7 +10925,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 140,
+        "row_index": 137,
         "raw_row": "元朗852UA2031元朗屏山朗天苑朗天商場地下G10 號舖^852UA2031^07:00-23:00"
       }
     },
@@ -11507,43 +11396,6 @@
       "parser_location": {
         "row_index": 10,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 堅尼地城田園坊852MA3011香港堅尼地城吉席街30號吉豐大廈地下A舖^852MA3011^取件 星期一至六:12:00-20:30 星期日及公眾假期: 12:00-18:00"
-      }
-    },
-    {
-      "code": "852MA3013",
-      "api_name": "合作店 士美菲自提點",
-      "pdf_name": "堅尼地城士美菲自提點",
-      "api_address": "士美菲路47號聯興新樓地下H鋪(近地鐵站C出口)士美菲自提點(15:00-16:00午休)*",
-      "pdf_address": "香港堅尼地城士美菲路47號聯興新樓地下H鋪(近地鐵站C出口)取件 星期一至六:12:00-20:00(午休15:00- 16:00) 星期日及公眾假期: 休息",
-      "api_business_hours": "12:00-20:00 周六:12:00-20:00",
-      "pdf_business_hours": null,
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作店 士美菲自提點",
-          "pdf": "堅尼地城士美菲自提點",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "士美菲路47號聯興新樓地下H鋪(近地鐵站C出口)士美菲自提點(15:00-16:00午休)*",
-          "pdf": "香港堅尼地城士美菲路47號聯興新樓地下H鋪(近地鐵站C出口)取件 星期一至六:12:00-20:00(午休15:00- 16:00) 星期日及公眾假期: 休息",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "12:00-20:00 周六:12:00-20:00",
-          "pdf": null,
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_HK_TC",
-      "parser_location": {
-        "row_index": 11,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 堅尼地城士美菲自提點852MA3013香港堅尼地城士美菲路47號聯興新樓地下H鋪(近地鐵站C出口)取件 星期一至六:12:00-20:00(午休15:00- 16:00) 星期日及公眾假期: 休息"
       }
     },
     {
@@ -14248,43 +14100,6 @@
       }
     },
     {
-      "code": "852CH3005",
-      "api_name": "合作店 自由速遞",
-      "pdf_name": "將軍澳自由速遞",
-      "api_address": "新界將軍澳慧安商場A74-75號鋪自由速遞*",
-      "pdf_address": "新界將軍澳慧安商場A74-75號舖",
-      "api_business_hours": "14:00-20:00 周六:14:00-20:00",
-      "pdf_business_hours": "星期一至六:14:00-18:00 星期日及公眾假期:14:00-16:00",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作店 自由速遞",
-          "pdf": "將軍澳自由速遞",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "新界將軍澳慧安商場A74-75號鋪自由速遞*",
-          "pdf": "新界將軍澳慧安商場A74-75號舖",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "14:00-20:00 周六:14:00-20:00",
-          "pdf": "星期一至六:14:00-18:00 星期日及公眾假期:14:00-16:00",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_NT_TC",
-      "parser_location": {
-        "row_index": 21,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 將軍澳自由速遞852CH3005新界將軍澳慧安商場A74-75號舖^852CH3005^取件 星期一至六:14:00-18:00 星期日及公眾假期:14:00-16:00"
-      }
-    },
-    {
       "code": "852CH3008",
       "api_name": "合作店 牛虹安寧花園",
       "pdf_name": "將軍澳牛虹安寧花園",
@@ -14317,7 +14132,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 22,
+        "row_index": 21,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 將軍澳牛虹安寧花園852CH3008 新界將軍澳常寧路10號安寧花園第一座地下G3號鋪 ^852CH3008^ 取件 星期一至六:11:30-20:30 星期日及公眾假期:休息"
       }
     },
@@ -14354,7 +14169,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 23,
+        "row_index": 22,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 錦田亨記車行852UA3029元朗元朗錦田永隆圍173B^852UA3029^取件 星期一至五:09:00-20:00 星期六:09:00-17:00 星期日及公眾假期:休息"
       }
     },
@@ -14391,7 +14206,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 24,
+        "row_index": 23,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 葵涌AMI 葵興自提點852LB3001新界葵涌葵興路102號葵涌中心A12^852LB3001^取件 星期一至六: 12:00-20:00 星期日、公眾假期: 休息"
       }
     },
@@ -14428,7 +14243,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 25,
+        "row_index": 24,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 葵涌佳佳超市852LA3004新界葵涌石籬村石寧樓地下3&4號舖^852LA3004^取件 星期一至五: 08:00-24:00 星期六日:11:00-24:00 公眾假期: 休息"
       }
     },
@@ -14465,8 +14280,8 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 26,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 葵涌星通貿易852LB3008新界葵涌葵盛圍63號葵盛東商場114C^852LB3008^取件 星期一至六: 12:00-21:00 星期日:15:00-21:00 公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
+        "row_index": 25,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 葵涌星通貿易852LB3008新界葵涌葵盛圍63號葵盛東商場114C^852LB3008^取件 星期一至六: 12:00-21:00 星期日:15:00-21:00 公眾假期: 休息"
       }
     },
     {
@@ -14502,8 +14317,8 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 28,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 葵涌 GS集運王（瑞景大 廈） 852LA3008葵涌和宜和道瑞景大廈商場一樓13號舖^852LA3008^取件 星期一至六:13:30-19:30 星期日及公眾假期:休息"
+        "row_index": 27,
+        "raw_row": "快件限制 葵涌 GS集運王（瑞景大 廈） 852LA3008葵涌和宜和道瑞景大廈商場一樓13號舖^852LA3008^取件 星期一至六:13:30-19:30 星期日及公眾假期:休息"
       }
     },
     {
@@ -14539,7 +14354,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 29,
+        "row_index": 28,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 藍地進達餐廳852UC3001 屯門區藍地青磚 圍五柳路311號^852UC3001^ 取件 星期一至五: 13:00-19:00 星期六:11:00-16:00 星期日、公眾假期: 11:00-16:00"
       }
     },
@@ -14576,7 +14391,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 30,
+        "row_index": 29,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荔景豪由仔士多852D3002新界葵涌念祖街1號祖堯坊A座1樓104號鋪^852D3002^取件 星期一至五: 13:00-20:00 星期六: 13:00-17:00 星期日、公眾假期: 休息"
       }
     },
@@ -14613,7 +14428,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 31,
+        "row_index": 30,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荔景祖堯點852DA3003葵湧荔景念祖街1號祖堯坊A座1樓A103號^852DA3003^取件 星期一至五:11:00-20:00 星期六：12:00-20：00 星期日、公眾假期: 休息"
       }
     },
@@ -14650,7 +14465,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 32,
+        "row_index": 31,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荔景港聯藥業852D3001新界荔景麗瑤邨富瑤樓6號舖^852D3001^取件 星期一至六:11:00-20:00(13:30- 14:30休息) 星期日、公眾假期: 休息"
       }
     },
@@ -14687,7 +14502,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 33,
+        "row_index": 32,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 馬鞍山忠誠鞋業852FE3001沙田馬鞍山恆安商場2樓209號舖^852FE3001^取件/本地寄件 星期一至六: 10:30-19:00 公眾假期: 11:00-18:00 星期日: 休息"
       }
     },
@@ -14724,7 +14539,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 36,
+        "row_index": 35,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 青衣大王下便利店852GH3001青衣大王下村16號地下^852GH3001^取件 星期一至日: 10:00-20:00 公眾假期: 休息"
       }
     },
@@ -14761,7 +14576,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 37,
+        "row_index": 36,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 青衣康美創造實業852G3003新界青衣涌美老屋村20號地下^852G3003^取件 星期一至六: 13:00-22:00 星期日: 13:00-18:00，公眾假期: 休"
       }
     },
@@ -14798,7 +14613,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 38,
+        "row_index": 37,
         "raw_row": "息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荃灣TOKO MAWAR852GH3010深井青山公路42號陳記廣場後座地下L舖^852GH3010^取件 星期一至六: 10:00-18:00 星期日、公眾假期: 10:00-18:00"
       }
     },
@@ -14835,8 +14650,8 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 40,
-        "raw_row": "快件限制 荃灣斜角巷（荃立方）852GA3003新界荃灣海壩街荃立方2樓S64號鋪^852GA3003^取件 星期一至六: 12:00-20:00 星期日13:00-18:00 公眾假期: 休息"
+        "row_index": 39,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荃灣斜角巷（荃立方）852GA3003新界荃灣海壩街荃立方2樓S64號鋪^852GA3003^取件 星期一至六: 12:00-20:00 星期日13:00-18:00 公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
       }
     },
     {
@@ -14872,8 +14687,8 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 41,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荃灣自取駅公司852GA3013 荃灣海濱花園2座海珠閣地下2號鋪(A平台電梯地下出 口)^852GA3013^ 取件 星期一至五:13:00-20:30 星期六:3:00-18:00 星期日及公眾假期:休息"
+        "row_index": 40,
+        "raw_row": "快件限制 荃灣自取駅公司852GA3013 荃灣海濱花園2座海珠閣地下2號鋪(A平台電梯地下出 口)^852GA3013^ 取件 星期一至五:13:00-20:30 星期六:3:00-18:00 星期日及公眾假期:休息"
       }
     },
     {
@@ -14909,7 +14724,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 44,
+        "row_index": 43,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荃灣BeeMall852GA3010荃灣荃景圍 187-195 號荃威花園二期七號鋪^852GA3010^取件 星期一至六:14:00-22:00 星期日及公眾假期:休息"
       }
     },
@@ -14946,7 +14761,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 45,
+        "row_index": 44,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荃灣BONI SHOP TW852GA3011新界荃灣石圍角路石圍角新城地下108鋪^852GA3011^取件 星期一至六:08:00-19:00 星期日及公眾假期:09:00-18:00"
       }
     },
@@ -14983,7 +14798,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 46,
+        "row_index": 45,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荃灣天空之城852GE3002 新界荃灣西樓角路202-216號荃昌中心昌寧商場地下G21號 舖^852GE3002^ 取件 星期一至五: 13:30-19:30 星期六: 12:00-18:00 星期日、公眾假期: 休息"
       }
     },
@@ -15020,7 +14835,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 47,
+        "row_index": 46,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 沙田28鞋店852FH3009新界沙田博康邨商場2座207鋪^852FH3009^取件 星期一至五:13:00-20:00 星期六及星期日:11:00-16:00 公眾假期:休息"
       }
     },
@@ -15057,7 +14872,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 48,
+        "row_index": 47,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 上水千品城852A3004新界上水天平邨天明樓地下120號舖^852A3004^取件 星期一至五: 13:00-21:00 星期六至日:13:00-19:00 公眾假期:休息"
       }
     },
@@ -15094,7 +14909,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 49,
+        "row_index": 48,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 上水苦辛辛倉儲翠麗852A3018上水翠麗花園商場地下6號舖^852A3018^取件 星期一至六:13:00-21:00 星期日及公眾假期:休息"
       }
     },
@@ -15131,7 +14946,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 50,
+        "row_index": 49,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 上水臻成發展有限公司852A3022上水圍莆上村一巷20D^852A3022^取件 星期一至六:13:00-21:00 星期日及公眾假期:休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
       }
     },
@@ -15168,7 +14983,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 51,
+        "row_index": 50,
         "raw_row": "快件限制 天水圍概念數碼852UA3018天水圍天耀廣場LG1層LG05鋪^852UA3018^取件星期一至日、公眾假期:10:30-20:30"
       }
     },
@@ -15205,7 +15020,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 52,
+        "row_index": 51,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 天水圍LUCKY STAR852UA3021天水圍新北江商場2樓148號舖^852UA3021^取件 星期一至六:14:00-20:30 星期日及公眾假期:休息"
       }
     },
@@ -15236,7 +15051,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 53,
+        "row_index": 52,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門三江書報社852U3006屯門三聖邨豐漁樓地下S13鋪^852U3006^取件09:00-19:00"
       }
     },
@@ -15273,7 +15088,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 54,
+        "row_index": 53,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門啟豐自提點852U3009新界屯門啟豐園商場地下32號舖^852U3009^取件 星期一至五: 11:00-20:00 星期六: 12:00-18:00 星期日、公眾假期: 休息"
       }
     },
@@ -15310,7 +15125,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 55,
+        "row_index": 54,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門大師藥房852U3017屯門石排頭徑1號卓爾廣場2樓215&216號舖^852U3017^取件 星期一至日: 11:00-20:00 公眾假期: 休息"
       }
     },
@@ -15347,7 +15162,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 56,
+        "row_index": 55,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門MKMAMISHOP B852U3019新界屯門澤豐花園商場LG30號舖^852U3019^取件 星期一至五: 12:30-20:00 星期六: 13:00-18:00 星期日、公眾假期: 休息"
       }
     },
@@ -15384,7 +15199,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 57,
+        "row_index": 56,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門多彩店（良景）852U3020田景路31號良景村良景廣場L411 LEVEL 4 COMM^852U3020^取件星期一至日、公眾假期: 11:30-20:30"
       }
     },
@@ -15421,7 +15236,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 58,
+        "row_index": 57,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門富運852U3023新界屯門紫田路欣田邨欣田街市D23鋪^852U3023^取件 星期一至六:10:00-20:00 星期日及公眾假期:12:00-18:00"
       }
     },
@@ -15464,7 +15279,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 59,
+        "row_index": 58,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門韻瑤琴室852UD3001屯門掃管笏村249號村口^852UD3001^取件 星期一至五: 12:30-20:00 星期六:12:00-19:00 星期日、公眾假期: 休息"
       }
     },
@@ -15507,7 +15322,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 60,
+        "row_index": 59,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門洪美藍星站852UC3002屯門藍地大街2號B鋪^852UC3002^取件 星期一至六:11:00-20:00 星期日及公眾假期:休息"
       }
     },
@@ -15544,7 +15359,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 61,
+        "row_index": 60,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門CAR ONE852UC3004屯門新慶村422號地下^852UC3004^取件 星期一至日:09:00-19:00 公眾假期:休息"
       }
     },
@@ -15581,7 +15396,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 62,
+        "row_index": 61,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門有嘢攞852UC3006屯門屯貴路9號富泰街市44號鋪^852UC3006^取件 星期一至六:11:00-20:00 星期日及公眾假期:休息"
       }
     },
@@ -15618,7 +15433,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 63,
+        "row_index": 62,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 西貢CS便利店852FE3005新界西貢井頭村36號地下^852FE3005^取件 星期一至五: 10:00-19:00 星期六:10:00-18:00 星期日、公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
       }
     },
@@ -15655,7 +15470,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 65,
+        "row_index": 64,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 新田奕豐士多852UB3006元朗青山公路潭美段下竹園村1A1號地下^852UB3006^取件 星期一至日: 13:30-21:00 公眾假期: 休息"
       }
     },
@@ -15692,45 +15507,8 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 66,
+        "row_index": 65,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 元朗NET MEAT SHOP852UB3007新界錦上路石湖塘石田路251A號地下^852UB3007^取件 星期一至六:11:00-20:00 星期日、公眾假期:休息"
-      }
-    },
-    {
-      "code": "852UA3008",
-      "api_name": "合作點 淘點易取站(好順泰)",
-      "pdf_name": "元朗淘點易取站",
-      "api_address": "新界元朗西菁街10號好順泰大廈46號地鋪 淘點易取站*",
-      "pdf_address": "新界元朗西菁街10號好順泰大廈46號地鋪",
-      "api_business_hours": "13:30-20:30",
-      "pdf_business_hours": "星期一至六: 13:30-20:30 星期日、公眾假期: 休息",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作點 淘點易取站(好順泰)",
-          "pdf": "元朗淘點易取站",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "新界元朗西菁街10號好順泰大廈46號地鋪 淘點易取站*",
-          "pdf": "新界元朗西菁街10號好順泰大廈46號地鋪",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "13:30-20:30",
-          "pdf": "星期一至六: 13:30-20:30 星期日、公眾假期: 休息",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_NT_TC",
-      "parser_location": {
-        "row_index": 67,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 元朗淘點易取站852UA3008新界元朗西菁街10號好順泰大廈46號地鋪^852UA3008^取件 星期一至六: 13:30-20:30 星期日、公眾假期: 休息"
       }
     },
     {
@@ -15766,7 +15544,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 68,
+        "row_index": 66,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 元朗幸福美妝藥店852UA3010新界元朗青山公路68-76號榮光大廈地下3號舖^852UA3010^取件 星期一至日: 09:00-21:00 公眾假期: 休息"
       }
     },
@@ -15803,7 +15581,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 69,
+        "row_index": 67,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 元朗小虎士多852UA3013新界元朗公庵路馬田村172號A地下^852UA3013^取件 星期一至日: 12:00-21:00 公眾假期: 休息"
       }
     },
@@ -15840,7 +15618,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 70,
+        "row_index": 68,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 元朗 90's CARWASH LIMITED 852UA3016香港新界元朗橫洲福喜街37號^852UA3016^取件星期一至日、公眾假期:13:00-00:00"
       }
     },
@@ -15877,45 +15655,8 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 71,
+        "row_index": 69,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 元朗串得起士多852UA3027元朗大樹下東路682號 （682飯堂）^852UA3027^取件 星期一至六:15:00-23:00 星期日、公眾假期:休息"
-      }
-    },
-    {
-      "code": "852UA3031",
-      "api_name": "合作店 淘點易取站",
-      "pdf_name": "元朗淘点易取站",
-      "api_address": "元朗十八鄉路659號地鋪尚悅方惠康旁 淘點易取站*",
-      "pdf_address": "元朗十八鄉路659號地舖尚悅方惠康旁",
-      "api_business_hours": "13:30-20:30 周六:13:30-20:30",
-      "pdf_business_hours": "星期一至六:13:30-20:30 星期日及公眾假期:休息",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作店 淘點易取站",
-          "pdf": "元朗淘点易取站",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "元朗十八鄉路659號地鋪尚悅方惠康旁 淘點易取站*",
-          "pdf": "元朗十八鄉路659號地舖尚悅方惠康旁",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "13:30-20:30 周六:13:30-20:30",
-          "pdf": "星期一至六:13:30-20:30 星期日及公眾假期:休息",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_NT_TC",
-      "parser_location": {
-        "row_index": 72,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 元朗淘点易取站852UA3031元朗十八鄉路659號地舖尚悅方惠康旁^852UA3031^取件 星期一至六:13:30-20:30 星期日及公眾假期:休息"
       }
     },
     {
@@ -15951,7 +15692,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 73,
+        "row_index": 70,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 元朗包記士多852UA3033新界元朗水蕉新村58號^852UA3033^取件 星期一至六:14:30-23:30 星期日及公眾假期:休息"
       }
     },
@@ -16180,6 +15921,19 @@
   ],
   "reviewed_pdf_drift": [],
   "new_pdf_only_candidates": [
+    {
+      "code": "852MA3013",
+      "name": "堅尼地城士美菲自提點",
+      "address": "香港堅尼地城士美菲路47號聯興新樓地下H鋪(近地鐵站C出口)取件 星期一至六:12:00-20:00(午休15:00- 16:00) 星期日及公眾假期: 休息",
+      "district": null,
+      "sub_district": "堅尼地城",
+      "business_hours": null,
+      "document_id": "ASP_HK_TC",
+      "parser_location": {
+        "row_index": 11,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 堅尼地城士美菲自提點852MA3013香港堅尼地城士美菲路47號聯興新樓地下H鋪(近地鐵站C出口)取件 星期一至六:12:00-20:00(午休15:00- 16:00) 星期日及公眾假期: 休息"
+      }
+    },
     {
       "code": "852J3006",
       "name": "黃大仙醉Chill",
@@ -16486,7 +16240,7 @@
         "_source": "pdf_partner",
         "_source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
         "_parser_location": {
-          "row_index": 35,
+          "row_index": 34,
           "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 馬鞍山富寶花園百寶袋852FE3022新界馬鞍山富寶花園商場一樓F42^852FE3018^取件 星期一至五:13:00-20:00 星期六:13:00-18:00 星期日:休息，公眾假期:13:00-17:00"
         }
       },
@@ -16495,7 +16249,7 @@
       ],
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 35,
+        "row_index": 34,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 馬鞍山富寶花園百寶袋852FE3022新界馬鞍山富寶花園商場一樓F42^852FE3018^取件 星期一至五:13:00-20:00 星期六:13:00-18:00 星期日:休息，公眾假期:13:00-17:00"
       }
     },
@@ -16517,7 +16271,7 @@
         "_source": "pdf_partner",
         "_source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
         "_parser_location": {
-          "row_index": 42,
+          "row_index": 41,
           "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荃灣荃取營自取點852G3009荃灣沙咀道108號美華樓C2地舖^852G3006^取件 星期一至五:12:00-21:00 星期六:12:00-18:00 星期日:12:00-18:00 公眾假期:休息"
         }
       },
@@ -16526,7 +16280,7 @@
       ],
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 42,
+        "row_index": 41,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荃灣荃取營自取點852G3009荃灣沙咀道108號美華樓C2地舖^852G3006^取件 星期一至五:12:00-21:00 星期六:12:00-18:00 星期日:12:00-18:00 公眾假期:休息"
       }
     },
@@ -16548,7 +16302,7 @@
         "_source": "pdf_partner",
         "_source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
         "_parser_location": {
-          "row_index": 64,
+          "row_index": 63,
           "raw_row": "快件限制 西貢西徑士多852FE3017新界西貢西徑村32F地下^852F3017^取件 星期一至六:10:00-22:00 星期日及公眾假期:休息"
         }
       },
@@ -16557,7 +16311,7 @@
       ],
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 64,
+        "row_index": 63,
         "raw_row": "快件限制 西貢西徑士多852FE3017新界西貢西徑村32F地下^852F3017^取件 星期一至六:10:00-22:00 星期日及公眾假期:休息"
       }
     }

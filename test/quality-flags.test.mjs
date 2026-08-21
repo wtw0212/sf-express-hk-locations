@@ -6,6 +6,7 @@ import {
   extractStreetNumbers,
   hasDuplicateAddressComponents
 } from '../scripts/lib/quality-flags.js';
+import { sanitizeCoordinates } from '../scripts/lib/normalize.js';
 
 test('detects MISSING_ENGLISH_RECORD when enItem is null', () => {
   const flags = generateQualityFlags(
@@ -17,19 +18,15 @@ test('detects MISSING_ENGLISH_RECORD when enItem is null', () => {
 });
 
 test('detects MISSING_COORDINATES', () => {
-  const flags = generateQualityFlags(null, null, {
-    code: '852TEST', location: { latitude: null, longitude: null },
-    address: '', address_en: null, name_en: null, sub_district: '', district_en: null
-  });
-  assert.ok(flags.some(f => f.type === 'MISSING_COORDINATES'));
+  const { location, qualityFlags } = sanitizeCoordinates(null, null, '852TEST');
+  assert.deepEqual(location, { latitude: null, longitude: null });
+  assert.ok(qualityFlags.some(f => f.type === 'MISSING_COORDINATES'));
 });
 
 test('detects COORDINATES_OUTSIDE_HK', () => {
-  const flags = generateQualityFlags(null, null, {
-    code: '852TEST', location: { latitude: 39.9, longitude: 116.4 },
-    address: '', address_en: null, name_en: null, sub_district: '', district_en: null
-  });
-  assert.ok(flags.some(f => f.type === 'COORDINATES_OUTSIDE_HK'));
+  const { location, qualityFlags } = sanitizeCoordinates(39.9, 116.4, '852TEST');
+  assert.deepEqual(location, { latitude: null, longitude: null });
+  assert.ok(qualityFlags.some(f => f.type === 'COORDINATES_OUTSIDE_HK'));
 });
 
 test('852PC: detects street number conflict 6號 vs 6A', () => {

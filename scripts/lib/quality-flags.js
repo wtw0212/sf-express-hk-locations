@@ -1,5 +1,5 @@
 // @ts-check
-import { HK_BOUNDING_BOX } from './constants.js';
+
 
 /**
  * Normalize street range separators to canonical '-'
@@ -204,28 +204,6 @@ export function generateQualityFlags(tcItem, enItem, normalized) {
       fields: ['name_en', 'address_en', 'business_hours_en'],
       details: { code: normalized.code }
     });
-  }
-
-  // Missing coordinates
-  const lat = normalized.location?.latitude;
-  const lon = normalized.location?.longitude;
-  if (lat == null && lon == null) {
-    flags.push({
-      type: 'MISSING_COORDINATES',
-      severity: 'info',
-      fields: ['location'],
-      details: { code: normalized.code }
-    });
-  } else if (lat != null && lon != null) {
-    if (lat < HK_BOUNDING_BOX.latMin || lat > HK_BOUNDING_BOX.latMax ||
-        lon < HK_BOUNDING_BOX.lonMin || lon > HK_BOUNDING_BOX.lonMax) {
-      flags.push({
-        type: 'COORDINATES_OUTSIDE_HK',
-        severity: 'warning',
-        fields: ['location'],
-        details: { latitude: lat, longitude: lon }
-      });
-    }
   }
 
   // ─── Bilingual checks (only when both TC and EN exist) ────────────

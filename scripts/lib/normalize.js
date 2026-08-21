@@ -1,5 +1,5 @@
 // @ts-check
-import { SOURCES, GEOGRAPHIC_TYPO_MAP } from './constants.js';
+import { SOURCES, GEOGRAPHIC_TYPO_MAP, HK_BOUNDING_BOX } from './constants.js';
 import { resolveAdminDistrict } from './district-resolver.js';
 import { classifyLocation } from './classify.js';
 import { generateQualityFlags } from './quality-flags.js';
@@ -20,6 +20,109 @@ function fixGeographicTypos(str) {
   return fixed;
 }
 import { getReviewedPdfRegistryRecords } from './reviewed-pdf-registry.js';
+
+/**
+ * Check if a coordinate input value is considered absent (null, undefined, or empty/whitespace string).
+ * @param {any} val
+ * @returns {boolean}
+ */
+function isCoordinateAbsent(val) {
+  if (val == null) return true;
+  if (typeof val === 'string' && val.trim() === '') return true;
+  return false;
+}
+
+/**
+ * Parse a coordinate input into a finite number, or NaN if malformed/non-finite, or null if absent.
+ * @param {any} val
+ * @returns {number|null}
+ */
+function parseCoordinateValue(val) {
+  if (isCoordinateAbsent(val)) return null;
+  const num = typeof val === 'number' ? val : Number(val);
+  return Number.isFinite(num) ? num : NaN;
+}
+
+/**
+ * Sanitize upstream coordinates and classify into one of 4 states:
+ * 1. Valid HK coordinates -> published as-is, no quality flag
+ * 2. Both missing -> published as null/null, MISSING_COORDINATES info flag
+ * 3. Finite but outside HK -> published as null/null, COORDINATES_OUTSIDE_HK warning flag preserving source values
+ * 4. Malformed/partial/non-finite -> published as null/null, INVALID_SOURCE_COORDINATES warning flag preserving source values
+ *
+ * @param {any} latRaw - Raw latitude from source
+ * @param {any} lonRaw - Raw longitude from source
+ * @param {string} [code] - Record code
+ * @returns {{ location: { latitude: number|null, longitude: number|null }, qualityFlags: Array<{ type: string, severity: string, fields: string[], details: object }> }}
+ */
+export function sanitizeCoordinates(latRaw, lonRaw, code = '') {
+  const isLatAbsent = isCoordinateAbsent(latRaw);
+  const isLonAbsent = isCoordinateAbsent(lonRaw);
+
+  // Case 2: Both absent
+  if (isLatAbsent && isLonAbsent) {
+    return {
+      location: { latitude: null, longitude: null },
+      qualityFlags: [{
+        type: 'MISSING_COORDINATES',
+        severity: 'info',
+        fields: ['location'],
+        details: { code }
+      }]
+    };
+  }
+
+  const latNum = parseCoordinateValue(latRaw);
+  const lonNum = parseCoordinateValue(lonRaw);
+
+  // Case 4: Malformed / partial / non-finite
+  if (
+    latNum === null || lonNum === null ||
+    Number.isNaN(latNum) || Number.isNaN(lonNum)
+  ) {
+    return {
+      location: { latitude: null, longitude: null },
+      qualityFlags: [{
+        type: 'INVALID_SOURCE_COORDINATES',
+        severity: 'warning',
+        fields: ['location'],
+        details: {
+          source_latitude: latRaw ?? null,
+          source_longitude: lonRaw ?? null,
+          reason: 'malformed_or_partial_coordinates'
+        }
+      }]
+    };
+  }
+
+  // Both are finite numbers. Check HK bounding box.
+  const isOutsideHk =
+    latNum < HK_BOUNDING_BOX.latMin || latNum > HK_BOUNDING_BOX.latMax ||
+    lonNum < HK_BOUNDING_BOX.lonMin || lonNum > HK_BOUNDING_BOX.lonMax;
+
+  // Case 3: Finite but outside HK
+  if (isOutsideHk) {
+    return {
+      location: { latitude: null, longitude: null },
+      qualityFlags: [{
+        type: 'COORDINATES_OUTSIDE_HK',
+        severity: 'warning',
+        fields: ['location'],
+        details: {
+          source_latitude: latNum,
+          source_longitude: lonNum,
+          reason: 'outside_hk_bounding_box'
+        }
+      }]
+    };
+  }
+
+  // Case 1: Valid HK coordinates
+  return {
+    location: { latitude: latNum, longitude: lonNum },
+    qualityFlags: []
+  };
+}
 
 /**
  * Get current time as HKT string.
@@ -136,6 +239,9 @@ export function normalizeRecords(options = {}) {
       subDistrict || districtResult.district || name || '香港';
     const address = sourceAddress || derivedAddress;
 
+    // Coordinate sanitization & quality flags
+    const coordResult = sanitizeCoordinates(item.latitude, item.longitude, code);
+
     const normalized = {
       id: code,
       code,
@@ -155,10 +261,7 @@ export function normalizeRecords(options = {}) {
       telephone: item.telephone || null,
       business_hours: businessHours,
       business_hours_en: businessHoursEn,
-      location: {
-        latitude: toCoordinate(item.latitude),
-        longitude: toCoordinate(item.longitude)
-      },
+      location: coordResult.location,
       source,
       quality_flags: [],
       provenance: {
@@ -176,6 +279,7 @@ export function normalizeRecords(options = {}) {
 
     const bilingualFlags = generateQualityFlags(item, enItem, normalized);
     normalized.quality_flags = [
+      ...coordResult.qualityFlags,
       ...districtResult.flags,
       ...classification.flags,
       ...bilingualFlags,
@@ -210,15 +314,4 @@ export function normalizeRecords(options = {}) {
   };
 
   return { records, stats };
-}
-
-/**
- * Parse a coordinate value to a finite number or null.
- * @param {any} value
- * @returns {number|null}
- */
-function toCoordinate(value) {
-  if (value == null) return null;
-  const parsed = Number(value);
-  return Number.isFinite(parsed) ? parsed : null;
 }

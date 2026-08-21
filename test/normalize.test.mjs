@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { normalizeRecords } from '../scripts/lib/normalize.js';
+import { normalizeRecords, sanitizeCoordinates } from '../scripts/lib/normalize.js';
+import { validateRecords } from '../scripts/lib/validate.js';
 
 test('preserves official source values without character conversion', () => {
   const tcMap = new Map([['852PAL', {
@@ -152,4 +153,142 @@ test('corrects controlled geographic typos like 天後 -> 天后 in name, addres
   assert.ok(rec);
   assert.equal(rec.sub_district, '天后');
   assert.equal(rec.address, '香港天后英皇道14號僑興大廈地下1H號鋪');
+});
+
+test('sanitizeCoordinates: H852Z007P outside HK coordinates are quarantined to null and flagged', () => {
+  const result = sanitizeCoordinates(23.12134, 110.13114, 'H852Z007P');
+  assert.deepEqual(result.location, { latitude: null, longitude: null });
+  assert.equal(result.qualityFlags.length, 1);
+  const flag = result.qualityFlags[0];
+  assert.equal(flag.type, 'COORDINATES_OUTSIDE_HK');
+  assert.equal(flag.severity, 'warning');
+  assert.deepEqual(flag.fields, ['location']);
+  assert.equal(flag.details.source_latitude, 23.12134);
+  assert.equal(flag.details.source_longitude, 110.13114);
+  assert.equal(flag.details.reason, 'outside_hk_bounding_box');
+});
+
+test('sanitizeCoordinates: valid HK coordinates are preserved without quality flags', () => {
+  const result = sanitizeCoordinates(22.3, 114.2, '852TEST');
+  assert.deepEqual(result.location, { latitude: 22.3, longitude: 114.2 });
+  assert.deepEqual(result.qualityFlags, []);
+});
+
+test('sanitizeCoordinates: both missing coordinates produce null/null and MISSING_COORDINATES info flag', () => {
+  const result = sanitizeCoordinates(null, null, '852TEST');
+  assert.deepEqual(result.location, { latitude: null, longitude: null });
+  assert.equal(result.qualityFlags.length, 1);
+  assert.equal(result.qualityFlags[0].type, 'MISSING_COORDINATES');
+  assert.equal(result.qualityFlags[0].severity, 'info');
+  assert.equal(result.qualityFlags[0].details.code, '852TEST');
+});
+
+test('sanitizeCoordinates: partial coordinates produce null/null and INVALID_SOURCE_COORDINATES warning flag', () => {
+  const result = sanitizeCoordinates(22.3, null, '852TEST');
+  assert.deepEqual(result.location, { latitude: null, longitude: null });
+  assert.equal(result.qualityFlags.length, 1);
+  assert.equal(result.qualityFlags[0].type, 'INVALID_SOURCE_COORDINATES');
+  assert.equal(result.qualityFlags[0].severity, 'warning');
+  assert.equal(result.qualityFlags[0].details.source_latitude, 22.3);
+  assert.equal(result.qualityFlags[0].details.source_longitude, null);
+});
+
+test('sanitizeCoordinates: non-finite or garbage coordinates produce null/null and INVALID_SOURCE_COORDINATES warning flag', () => {
+  const result = sanitizeCoordinates('abc', 114.2, '852TEST');
+  assert.deepEqual(result.location, { latitude: null, longitude: null });
+  assert.equal(result.qualityFlags.length, 1);
+  assert.equal(result.qualityFlags[0].type, 'INVALID_SOURCE_COORDINATES');
+  assert.equal(result.qualityFlags[0].severity, 'warning');
+  assert.equal(result.qualityFlags[0].details.source_latitude, 'abc');
+  assert.equal(result.qualityFlags[0].details.source_longitude, 114.2);
+});
+
+test('sanitizeCoordinates: empty and whitespace-only strings are treated as absent (MISSING_COORDINATES)', () => {
+  const result = sanitizeCoordinates('', '   ', '852TEST');
+  assert.deepEqual(result.location, { latitude: null, longitude: null });
+  assert.equal(result.qualityFlags.length, 1);
+  assert.equal(result.qualityFlags[0].type, 'MISSING_COORDINATES');
+  assert.equal(result.qualityFlags[0].severity, 'info');
+});
+
+test('normalizeRecords integration: bad upstream coordinates are sanitized and pass validateRecords cleanly', () => {
+  const tcMap = new Map([
+    ['H852Z007P', {
+      serviceCode: 'H852Z007P',
+      name: '自助櫃 香港',
+      address: '順豐大廈9樓',
+      city: '葵青區',
+      district: '青衣',
+      serviceTime: '00:00-23:55',
+      latitude: 23.12134,
+      longitude: 110.13114
+    }],
+    ['852VALID', {
+      serviceCode: '852VALID',
+      name: '正常順豐站',
+      address: '香港大埔區大埔安埔路12號',
+      city: '大埔區',
+      district: '大埔',
+      serviceTime: '09:00-20:00',
+      latitude: 22.45,
+      longitude: 114.17
+    }],
+    ['852NOCOORD', {
+      serviceCode: '852NOCOORD',
+      name: '無座標順豐站',
+      address: '香港大埔區大埔安埔路12號',
+      city: '大埔區',
+      district: '大埔',
+      serviceTime: '09:00-20:00',
+      latitude: null,
+      longitude: null
+    }],
+    ['852EMPTYCOORD', {
+      serviceCode: '852EMPTYCOORD',
+      name: '空字串座標順豐站',
+      address: '香港大埔區大埔安埔路12號',
+      city: '大埔區',
+      district: '大埔',
+      serviceTime: '09:00-20:00',
+      latitude: '',
+      longitude: '   '
+    }],
+    ['852PARTIAL', {
+      serviceCode: '852PARTIAL',
+      name: '單邊座標順豐站',
+      address: '香港大埔區大埔安埔路12號',
+      city: '大埔區',
+      district: '大埔',
+      serviceTime: '09:00-20:00',
+      latitude: 22.45,
+      longitude: null
+    }],
+    ['852GARBAGE', {
+      serviceCode: '852GARBAGE',
+      name: '無效字串座標順豐站',
+      address: '香港大埔區大埔安埔路12號',
+      city: '大埔區',
+      district: '大埔',
+      serviceTime: '09:00-20:00',
+      latitude: 'abc',
+      longitude: 114.17
+    }]
+  ]);
+
+  const { records } = normalizeRecords({ tcMap, enMap: new Map(), generatedAt: '2026-08-21' });
+  assert.equal(records.length, 6);
+
+  // 1. H852Z007P has null location and COORDINATES_OUTSIDE_HK flag
+  const h852 = records.find(r => r.code === 'H852Z007P');
+  assert.ok(h852);
+  assert.deepEqual(h852.location, { latitude: null, longitude: null });
+  const h852Flag = h852.quality_flags.find(f => f.type === 'COORDINATES_OUTSIDE_HK');
+  assert.ok(h852Flag, 'H852Z007P should have COORDINATES_OUTSIDE_HK flag');
+  assert.equal(h852Flag.details.source_latitude, 23.12134);
+  assert.equal(h852Flag.details.source_longitude, 110.13114);
+  assert.ok(!h852.quality_flags.some(f => f.type === 'MISSING_COORDINATES'), 'H852Z007P must not have MISSING_COORDINATES flag');
+
+  // 2. Validate all normalized records through strict Tier 2 validator
+  const validationResult = validateRecords(records);
+  assert.deepEqual(validationResult.errors, [], 'validateRecords must pass with zero blocking errors');
 });

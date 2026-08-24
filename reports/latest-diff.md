@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-23 09:26 (HKT UTC+8)`
+> **Last Updated**: `2026-08-24 09:23 (HKT UTC+8)`
 
 ---
 
@@ -8,13 +8,13 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1704 |
+| **Previous total** | 1703 |
 | **Current total** | 1703 |
 | **Stores** | 137 |
 | **Lockers** | 1092 |
 | **Partners** | 474 |
 | **Added** | 0 |
-| **Removed** | 1 |
+| **Removed** | 0 |
 | **Updated** | 0 |
 | **Unchanged** | 1703 |
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1704 | 1703 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1703 | 1703 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1093 | 1092 | -1 | -0.09% | previous_locations_feed | ✅ PASS |
+| lockers | 1092 | 1092 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 474 | 474 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1698 | 1697 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1697 | 1696 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1697 | 1697 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1696 | 1696 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -103,9 +103,9 @@
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (0)
 
-- `H852Z004P` [順豐智能櫃] 自助櫃 順豐大廈9樓IT簡版櫃(只限指定人仕使用) -- 123青衣航運路36號順豐大廈9樓IT簡版櫃(只限指定人仕使用)*
+*(No removed locations)*
 
 ---
 

@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-24 09:23 (HKT UTC+8)`
+> **Last Updated**: `2026-08-25 09:20 (HKT UTC+8)`
 
 ---
 
@@ -11,12 +11,12 @@
 | **Previous total** | 1703 |
 | **Current total** | 1703 |
 | **Stores** | 137 |
-| **Lockers** | 1092 |
-| **Partners** | 474 |
-| **Added** | 0 |
-| **Removed** | 0 |
-| **Updated** | 0 |
-| **Unchanged** | 1703 |
+| **Lockers** | 1093 |
+| **Partners** | 473 |
+| **Added** | 1 |
+| **Removed** | 1 |
+| **Updated** | 1 |
+| **Unchanged** | 1701 |
 
 ---
 
@@ -26,8 +26,8 @@
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
 | total | 1703 | 1703 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1092 | 1092 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 474 | 474 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1092 | 1093 | +1 | +0.09% | previous_locations_feed | ✅ PASS |
+| partners | 474 | 473 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
 | tcCodes | 1697 | 1697 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
 | enCodes | 1696 | 1696 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 266 |
+| **Record Quality Warnings** | 267 |
 | **Record Quality Info Flags** | 59 |
 | **Record Quality Errors** | 0 |
 
@@ -73,7 +73,7 @@
 
 | Flag Type | Count |
 | :--- | :--- |
-| ENGLISH_FIELD_CONTAINS_CJK | 100 |
+| ENGLISH_FIELD_CONTAINS_CJK | 101 |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 96 |
 | ADMIN_DISTRICT_ALIAS_APPLIED | 43 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
@@ -97,18 +97,20 @@
 
 ---
 
-## Added Locations (0)
+## Added Locations (1)
 
-*(No added locations)*
-
----
-
-## Removed Locations (0)
-
-*(No removed locations)*
+- `H852Z004P` [順豐智能櫃] 自助櫃 順豐大廈9樓IT簡版櫃(只限指定人仕使用) -- 123青衣航運路36號順豐大廈9樓IT簡版櫃(只限指定人仕使用)*
 
 ---
 
-## Updated Locations (0)
+## Removed Locations (1)
 
-*(No updated locations)*
+- `852LB3001` [順豐合作點] 合作點 AMI自提點 -- 香港葵青區葵涌葵涌中心A12 AMI 葵興自提點*
+
+---
+
+## Updated Locations (1)
+
+- `H852AB07P` 自助櫃 大埔林海山城
+  - location.latitude: `22.462558` -> `22.462655`
+  - location.longitude: `114.19751` -> `114.196196`

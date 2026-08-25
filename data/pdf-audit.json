@@ -1,82 +1,82 @@
 {
-  "source_retrieved_at": "2026-08-24 09:23 (HKT UTC+8)",
-  "generated_at": "2026-08-24 09:23 (HKT UTC+8)",
+  "source_retrieved_at": "2026-08-25 09:20 (HKT UTC+8)",
+  "generated_at": "2026-08-25 09:20 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-08-24T01:24:12.953Z",
+      "document_retrieved_at": "2026-08-25T01:21:26.626Z",
       "document_binary_sha256": "ef32199d4804cf161fa58ddc53613e44e1f304b2486cc7c84ebbba6c561276c6",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-08-24T01:24:13.171Z",
+      "document_retrieved_at": "2026-08-25T01:21:26.815Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-08-24T01:24:13.571Z",
+      "document_retrieved_at": "2026-08-25T01:21:27.243Z",
       "document_binary_sha256": "91c596bfe3fa79fe51a00835de5e1dbddc86def3c2a77d5009c4bc71efe1220e",
       "extracted_text_sha256": "e1720f744eec5086dd1d74167dc076eabe1c95f279594a1ec210d7e6200f03d3"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-08-24T01:24:13.692Z",
+      "document_retrieved_at": "2026-08-25T01:21:27.343Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-08-24T01:24:13.847Z",
+      "document_retrieved_at": "2026-08-25T01:21:27.477Z",
       "document_binary_sha256": "5c762b9fd1cc6a8f8da6fcda689c18a96222a1260aa80dc28af697e82f648639",
       "extracted_text_sha256": "63ac1ac9b2077317c6c15e149793205d2dc7fb0c796381cb424742e86d5c0f21"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-08-24T01:24:14.019Z",
+      "document_retrieved_at": "2026-08-25T01:21:27.712Z",
       "document_binary_sha256": "6139a74491938868e7490e6d5209797ac3694f4384297d30156dec96f6aa41f6",
       "extracted_text_sha256": "e1f53b8c507dc4e1f6cdcb37b8ddc469af1f8d8abac5d3dfcddfdf3f97264547"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-08-24T01:24:14.208Z",
+      "document_retrieved_at": "2026-08-25T01:21:27.958Z",
       "document_binary_sha256": "2ae6b68b8289df9da6649e607c061601967b5901d406e5cca9b1ac80640af8c8",
       "extracted_text_sha256": "476a9f346563a8bd060a2bd1b915cf95a54827ed82ff8304f0630cb1030312a9"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-08-24T01:24:14.299Z",
+      "document_retrieved_at": "2026-08-25T01:21:28.069Z",
       "document_binary_sha256": "9a9e2984384f10ddeec4643fd79698990e579808e8a5be78102d99b2c3e0f36d",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
   },
   "summary": {
     "parsed_pdf_record_count": 434,
-    "api_pdf_conflict_count": 429,
-    "api_pdf_difference_count": 429,
+    "api_pdf_conflict_count": 428,
+    "api_pdf_difference_count": 428,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 429,
+      "semantic_conflict": 428,
       "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 945,
+      "semantic_conflict": 942,
       "name_specificity_difference": 208,
       "formatting_difference": 0,
       "equivalent_difference": 128
     },
-    "new_pdf_only_candidate_count": 1,
+    "new_pdf_only_candidate_count": 2,
     "missing_reviewed_record_count": 0,
     "quarantined_record_count": 12
   },
@@ -14174,43 +14174,6 @@
       }
     },
     {
-      "code": "852LB3001",
-      "api_name": "合作點 AMI自提點",
-      "pdf_name": "葵涌AMI 葵興自提點",
-      "api_address": "香港葵青區葵涌葵涌中心A12 AMI 葵興自提點*",
-      "pdf_address": "新界葵涌葵興路102號葵涌中心A12",
-      "api_business_hours": "12:00-20:00 周六:12:00-20:00",
-      "pdf_business_hours": "星期一至六: 12:00-20:00 星期日、公眾假期: 休息",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作點 AMI自提點",
-          "pdf": "葵涌AMI 葵興自提點",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "香港葵青區葵涌葵涌中心A12 AMI 葵興自提點*",
-          "pdf": "新界葵涌葵興路102號葵涌中心A12",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "12:00-20:00 周六:12:00-20:00",
-          "pdf": "星期一至六: 12:00-20:00 星期日、公眾假期: 休息",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_NT_TC",
-      "parser_location": {
-        "row_index": 23,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 葵涌AMI 葵興自提點852LB3001新界葵涌葵興路102號葵涌中心A12^852LB3001^取件 星期一至六: 12:00-20:00 星期日、公眾假期: 休息"
-      }
-    },
-    {
       "code": "852LA3004",
       "api_name": "合作點 佳佳超市",
       "pdf_name": "葵涌佳佳超市",
@@ -15932,6 +15895,19 @@
       "parser_location": {
         "row_index": 8,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 黃大仙醉Chill852J3006 九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖^852J3006^ 取件 星期一至日: 12:00-20:00 公眾假期: 休息"
+      }
+    },
+    {
+      "code": "852LB3001",
+      "name": "葵涌AMI 葵興自提點",
+      "address": "新界葵涌葵興路102號葵涌中心A12",
+      "district": null,
+      "sub_district": "葵涌",
+      "business_hours": "星期一至六: 12:00-20:00 星期日、公眾假期: 休息",
+      "document_id": "ASP_NT_TC",
+      "parser_location": {
+        "row_index": 23,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 葵涌AMI 葵興自提點852LB3001新界葵涌葵興路102號葵涌中心A12^852LB3001^取件 星期一至六: 12:00-20:00 星期日、公眾假期: 休息"
       }
     }
   ],

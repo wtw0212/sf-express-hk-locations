@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-25 09:20 (HKT UTC+8)`
+> **Last Updated**: `2026-08-26 09:24 (HKT UTC+8)`
 
 ---
 
@@ -9,13 +9,13 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1703 |
-| **Current total** | 1703 |
+| **Current total** | 1702 |
 | **Stores** | 137 |
-| **Lockers** | 1093 |
+| **Lockers** | 1092 |
 | **Partners** | 473 |
 | **Added** | 1 |
-| **Removed** | 1 |
-| **Updated** | 1 |
+| **Removed** | 2 |
+| **Updated** | 0 |
 | **Unchanged** | 1701 |
 
 ---
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1703 | 1703 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1703 | 1702 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1092 | 1093 | +1 | +0.09% | previous_locations_feed | ✅ PASS |
-| partners | 474 | 473 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1697 | 1697 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1696 | 1696 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1093 | 1092 | -1 | -0.09% | previous_locations_feed | ✅ PASS |
+| partners | 473 | 473 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1697 | 1696 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1696 | 1695 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1697 |
-| EN unique codes | 1696 |
+| TC unique codes | 1696 |
+| EN unique codes | 1695 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.7% |
 | SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1703 |
+| District resolved | 1702 |
 | District unresolved | 0 |
-| With English data | 1696 |
+| With English data | 1695 |
 | Missing English | 7 |
 
 ---
@@ -99,18 +99,17 @@
 
 ## Added Locations (1)
 
+- `852MA3013` [順豐合作點] 合作店 士美菲自提點 -- 士美菲路47號聯興新樓地下H鋪(近地鐵站C出口)士美菲自提點(15:00-16:00午休)*
+
+---
+
+## Removed Locations (2)
+
+- `852AA4001` [順豐合作點] 油站 康樂園Shell油站 -- 香港新界大埔康樂園7號地段1945號 Shell #369*
 - `H852Z004P` [順豐智能櫃] 自助櫃 順豐大廈9樓IT簡版櫃(只限指定人仕使用) -- 123青衣航運路36號順豐大廈9樓IT簡版櫃(只限指定人仕使用)*
 
 ---
 
-## Removed Locations (1)
+## Updated Locations (0)
 
-- `852LB3001` [順豐合作點] 合作點 AMI自提點 -- 香港葵青區葵涌葵涌中心A12 AMI 葵興自提點*
-
----
-
-## Updated Locations (1)
-
-- `H852AB07P` 自助櫃 大埔林海山城
-  - location.latitude: `22.462558` -> `22.462655`
-  - location.longitude: `114.19751` -> `114.196196`
+*(No updated locations)*

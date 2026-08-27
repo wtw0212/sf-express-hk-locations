@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-26 09:24 (HKT UTC+8)`
+> **Last Updated**: `2026-08-27 16:07 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1703 |
-| **Current total** | 1702 |
+| **Previous total** | 1702 |
+| **Current total** | 1701 |
 | **Stores** | 137 |
 | **Lockers** | 1092 |
-| **Partners** | 473 |
-| **Added** | 1 |
-| **Removed** | 2 |
+| **Partners** | 472 |
+| **Added** | 2 |
+| **Removed** | 3 |
 | **Updated** | 0 |
-| **Unchanged** | 1701 |
+| **Unchanged** | 1699 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1703 | 1702 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1702 | 1701 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1093 | 1092 | -1 | -0.09% | previous_locations_feed | ✅ PASS |
-| partners | 473 | 473 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1697 | 1696 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1696 | 1695 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1092 | 1092 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| partners | 473 | 472 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1696 | 1695 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1695 | 1694 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,20 +39,20 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1696 |
-| EN unique codes | 1695 |
+| TC unique codes | 1695 |
+| EN unique codes | 1694 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
-| Valid Partner PDF Records | 434 |
+| Valid Partner PDF Records | 433 |
 | Quarantined PDF Records | 12 |
 | PDF Quarantine Ratio | 2.7% |
 | SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1702 |
+| District resolved | 1701 |
 | District unresolved | 0 |
-| With English data | 1695 |
+| With English data | 1694 |
 | Missing English | 7 |
 
 ---
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 267 |
+| **Record Quality Warnings** | 266 |
 | **Record Quality Info Flags** | 59 |
 | **Record Quality Errors** | 0 |
 
@@ -83,13 +83,12 @@
 | MISSING_COORDINATES | 6 |
 | SUBDISTRICT_ADDRESS_CONFLICT | 3 |
 | SOURCE_FORMATTING_ARTIFACT | 1 |
-| COORDINATES_OUTSIDE_HK | 1 |
 
 ---
 
 ## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.7% exceeds warning threshold 1% (12/446 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.7% exceeds warning threshold 1% (12/445 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 8.3% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.3% exceeds warning threshold 1%
@@ -97,16 +96,18 @@
 
 ---
 
-## Added Locations (1)
+## Added Locations (2)
 
-- `852MA3013` [順豐合作點] 合作店 士美菲自提點 -- 士美菲路47號聯興新樓地下H鋪(近地鐵站C出口)士美菲自提點(15:00-16:00午休)*
+- `H852MC54P` [順豐智能櫃] 自助櫃 半山區花園台 -- 半山區花園台3座地下(近管理處)(只供住戶使用)*
+- `H852Z004P` [順豐智能櫃] 自助櫃 順豐大廈9樓IT簡版櫃(只限指定人仕使用) -- 123青衣航運路36號順豐大廈9樓IT簡版櫃(只限指定人仕使用)*
 
 ---
 
-## Removed Locations (2)
+## Removed Locations (3)
 
-- `852AA4001` [順豐合作點] 油站 康樂園Shell油站 -- 香港新界大埔康樂園7號地段1945號 Shell #369*
-- `H852Z004P` [順豐智能櫃] 自助櫃 順豐大廈9樓IT簡版櫃(只限指定人仕使用) -- 123青衣航運路36號順豐大廈9樓IT簡版櫃(只限指定人仕使用)*
+- `852UA3018` [順豐合作點] 合作店 概念數碼 -- 天水圍天耀廣場LG1層LG05鋪（概念數碼）*
+- `H852HB03P` [順豐智能櫃] 自助櫃 九龍灣港鐵總部大樓 -- 九龍灣港鐵總部大樓電梯大堂(只供職員使用)
+- `H852Z007P` [順豐智能櫃] 自助櫃 香港 -- 順豐大廈9樓
 
 ---
 

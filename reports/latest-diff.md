@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-27 16:07 (HKT UTC+8)`
+> **Last Updated**: `2026-08-28 18:10 (HKT UTC+8)`
 
 ---
 
@@ -8,13 +8,13 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1702 |
-| **Current total** | 1701 |
+| **Previous total** | 1701 |
+| **Current total** | 1699 |
 | **Stores** | 137 |
-| **Lockers** | 1092 |
+| **Lockers** | 1090 |
 | **Partners** | 472 |
-| **Added** | 2 |
-| **Removed** | 3 |
+| **Added** | 0 |
+| **Removed** | 2 |
 | **Updated** | 0 |
 | **Unchanged** | 1699 |
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1702 | 1701 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1701 | 1699 | -2 | -0.12% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1092 | 1092 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 473 | 472 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1696 | 1695 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1695 | 1694 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1092 | 1090 | -2 | -0.18% | previous_locations_feed | ✅ PASS |
+| partners | 472 | 472 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1695 | 1693 | -2 | -0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1694 | 1692 | -2 | -0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1695 |
-| EN unique codes | 1694 |
+| TC unique codes | 1693 |
+| EN unique codes | 1692 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.7% |
 | SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1701 |
+| District resolved | 1699 |
 | District unresolved | 0 |
-| With English data | 1694 |
+| With English data | 1692 |
 | Missing English | 7 |
 
 ---
@@ -96,18 +96,16 @@
 
 ---
 
-## Added Locations (2)
+## Added Locations (0)
 
-- `H852MC54P` [順豐智能櫃] 自助櫃 半山區花園台 -- 半山區花園台3座地下(近管理處)(只供住戶使用)*
-- `H852Z004P` [順豐智能櫃] 自助櫃 順豐大廈9樓IT簡版櫃(只限指定人仕使用) -- 123青衣航運路36號順豐大廈9樓IT簡版櫃(只限指定人仕使用)*
+*(No added locations)*
 
 ---
 
-## Removed Locations (3)
+## Removed Locations (2)
 
-- `852UA3018` [順豐合作點] 合作店 概念數碼 -- 天水圍天耀廣場LG1層LG05鋪（概念數碼）*
-- `H852HB03P` [順豐智能櫃] 自助櫃 九龍灣港鐵總部大樓 -- 九龍灣港鐵總部大樓電梯大堂(只供職員使用)
-- `H852Z007P` [順豐智能櫃] 自助櫃 香港 -- 順豐大廈9樓
+- `H852CB16P` [順豐智能櫃] 自助櫃 觀塘裕民薈 -- 觀塘裕民中心裕民薈1樓145號鋪(開放時間至晚上10時)
+- `H852J080P` [順豐智能櫃] 自助櫃 慈雲山慈雲山中心(順豐站)(六號櫃) -- 慈雲山中心四樓410B鋪順豐站六號櫃(入門口中間位置第一列)*
 
 ---
 

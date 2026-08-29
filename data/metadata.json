@@ -1,38 +1,38 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-08-28 18:10 (HKT UTC+8)",
-  "generated_at": "2026-08-28 18:10 (HKT UTC+8)",
-  "retrieved_at": "2026-08-28 18:10 (HKT UTC+8)",
+  "source_retrieved_at": "2026-08-29 14:09 (HKT UTC+8)",
+  "generated_at": "2026-08-29 14:09 (HKT UTC+8)",
+  "retrieved_at": "2026-08-29 14:09 (HKT UTC+8)",
   "counts": {
     "total": 1699,
-    "stores": 137,
-    "lockers": 1090,
+    "stores": 138,
+    "lockers": 1089,
     "partners": 472
   },
   "count_deltas": {
     "total": {
-      "previous": 1701,
+      "previous": 1699,
       "current": 1699,
-      "delta": -2,
-      "delta_pct": -0.12,
-      "baseline_available": true,
-      "baseline_source": "previous_locations_feed",
-      "gate_result": "pass"
-    },
-    "stores": {
-      "previous": 137,
-      "current": 137,
       "delta": 0,
       "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
     },
+    "stores": {
+      "previous": 137,
+      "current": 138,
+      "delta": 1,
+      "delta_pct": 0.73,
+      "baseline_available": true,
+      "baseline_source": "previous_locations_feed",
+      "gate_result": "pass"
+    },
     "lockers": {
-      "previous": 1092,
-      "current": 1090,
-      "delta": -2,
-      "delta_pct": -0.18,
+      "previous": 1090,
+      "current": 1089,
+      "delta": -1,
+      "delta_pct": -0.09,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -47,19 +47,19 @@
       "gate_result": "pass"
     },
     "tcCodes": {
-      "previous": 1695,
+      "previous": 1693,
       "current": 1693,
-      "delta": -2,
-      "delta_pct": -0.12,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.tc_record_count",
       "gate_result": "pass"
     },
     "enCodes": {
-      "previous": 1694,
+      "previous": 1692,
       "current": 1692,
-      "delta": -2,
-      "delta_pct": -0.12,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.en_record_count",
       "gate_result": "pass"
@@ -261,34 +261,34 @@
     "pipeline_blocking_errors": 0,
     "pipeline_warnings": 5,
     "record_flag_counts_by_severity": {
-      "info": 59,
-      "warning": 266,
+      "info": 61,
+      "warning": 267,
       "error": 0
     },
     "flag_counts_by_type": {
       "SOURCE_TC_EN_UNIT_CONFLICT": 38,
       "ENGLISH_FIELD_CONTAINS_CJK": 101,
-      "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 96,
+      "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 97,
       "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT": 21,
       "DUPLICATE_ADDRESS_SUFFIX": 9,
-      "ADMIN_DISTRICT_ALIAS_APPLIED": 43,
+      "ADMIN_DISTRICT_ALIAS_APPLIED": 44,
       "MISSING_ENGLISH_RECORD": 7,
-      "SOURCE_FORMATTING_ARTIFACT": 1,
+      "SOURCE_FORMATTING_ARTIFACT": 2,
       "SUBDISTRICT_ADDRESS_CONFLICT": 3,
       "MISSING_COORDINATES": 6
     }
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "fedd380cf215350166f6ce0bbd6428ea16acc111ef1a932f21758e7bda08dfc1",
-      "semantic_sha256": "61867e10e3f8de26a5671cf1496d6f2cd4ecbb121bae1b3a70734a1f0b38ca0c",
+      "raw_snapshot_sha256": "45a8d51a1f25e22813824d5159586c5d81c0bdad637561a0dd5aa51114cdd3f8",
+      "semantic_sha256": "3b45387168c02c6e1a9b758a00f5e1e68e4de87c71908d5b88e06eef38a4f696",
       "record_count": 1693,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "845968e599925c3ebc7d560068ec8171cdbf5c28e696dcb9e8a3b8b1e29c0803",
-      "semantic_sha256": "f48ab5de2dc1d73f0810a7e7ead20ac40749d0849dc1658772023aeb8d1467a8",
+      "raw_snapshot_sha256": "ef3d189f55af554e7a79edddbcdd30c15a7720f2eb94b239622454bbc0c5cab5",
+      "semantic_sha256": "3e3579d78d29b7f94730b85869a941bad7a68170d166ce54fde905f5a14ad26a",
       "record_count": 1692,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_en/record_hashes"
@@ -775,7 +775,7 @@
       "duplicate_codes": []
     },
     "canonical": {
-      "semantic_sha256": "27dc9a5711cb3045dcd0f956095752334763c5b9e7ed85f40f21e5338d56e1c0",
+      "semantic_sha256": "9c4913467a1eb0d2b1a4a7c646a5b4acbc4de448f8406fe633ba7f57b8836ca5",
       "record_count": 1699,
       "duplicate_codes": []
     },

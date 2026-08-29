@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-28 18:10 (HKT UTC+8)`
+> **Last Updated**: `2026-08-29 14:09 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1701 |
+| **Previous total** | 1699 |
 | **Current total** | 1699 |
-| **Stores** | 137 |
-| **Lockers** | 1090 |
+| **Stores** | 138 |
+| **Lockers** | 1089 |
 | **Partners** | 472 |
-| **Added** | 0 |
-| **Removed** | 2 |
+| **Added** | 1 |
+| **Removed** | 1 |
 | **Updated** | 0 |
-| **Unchanged** | 1699 |
+| **Unchanged** | 1698 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1701 | 1699 | -2 | -0.12% | previous_locations_feed | ✅ PASS |
-| stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1092 | 1090 | -2 | -0.18% | previous_locations_feed | ✅ PASS |
+| total | 1699 | 1699 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| stores | 137 | 138 | +1 | +0.73% | previous_locations_feed | ✅ PASS |
+| lockers | 1090 | 1089 | -1 | -0.09% | previous_locations_feed | ✅ PASS |
 | partners | 472 | 472 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1695 | 1693 | -2 | -0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1694 | 1692 | -2 | -0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1693 | 1693 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1692 | 1692 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -63,8 +63,8 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 266 |
-| **Record Quality Info Flags** | 59 |
+| **Record Quality Warnings** | 267 |
+| **Record Quality Info Flags** | 61 |
 | **Record Quality Errors** | 0 |
 
 ---
@@ -74,15 +74,15 @@
 | Flag Type | Count |
 | :--- | :--- |
 | ENGLISH_FIELD_CONTAINS_CJK | 101 |
-| SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 96 |
-| ADMIN_DISTRICT_ALIAS_APPLIED | 43 |
+| SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 97 |
+| ADMIN_DISTRICT_ALIAS_APPLIED | 44 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 21 |
 | DUPLICATE_ADDRESS_SUFFIX | 9 |
 | MISSING_ENGLISH_RECORD | 7 |
 | MISSING_COORDINATES | 6 |
 | SUBDISTRICT_ADDRESS_CONFLICT | 3 |
-| SOURCE_FORMATTING_ARTIFACT | 1 |
+| SOURCE_FORMATTING_ARTIFACT | 2 |
 
 ---
 
@@ -96,16 +96,15 @@
 
 ---
 
-## Added Locations (0)
+## Added Locations (1)
 
-*(No added locations)*
+- `852Z358` [順豐站] 東涌逸東商場順豐站 -- 香港大嶼山區東涌逸東街8號逸東邨逸東商場2樓216號鋪*^
 
 ---
 
-## Removed Locations (2)
+## Removed Locations (1)
 
-- `H852CB16P` [順豐智能櫃] 自助櫃 觀塘裕民薈 -- 觀塘裕民中心裕民薈1樓145號鋪(開放時間至晚上10時)
-- `H852J080P` [順豐智能櫃] 自助櫃 慈雲山慈雲山中心(順豐站)(六號櫃) -- 慈雲山中心四樓410B鋪順豐站六號櫃(入門口中間位置第一列)*
+- `H852FEA4P` [順豐智能櫃] 自助櫃 西貢西徑村 -- 西貢西徑村32F地下 (西徑士多)*
 
 ---
 

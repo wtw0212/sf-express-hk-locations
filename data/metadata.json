@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-08-29 14:09 (HKT UTC+8)",
-  "generated_at": "2026-08-29 14:09 (HKT UTC+8)",
-  "retrieved_at": "2026-08-29 14:09 (HKT UTC+8)",
+  "source_retrieved_at": "2026-08-30 12:17 (HKT UTC+8)",
+  "generated_at": "2026-08-30 12:17 (HKT UTC+8)",
+  "retrieved_at": "2026-08-30 12:17 (HKT UTC+8)",
   "counts": {
     "total": 1699,
     "stores": 138,
@@ -20,19 +20,19 @@
       "gate_result": "pass"
     },
     "stores": {
-      "previous": 137,
+      "previous": 138,
       "current": 138,
-      "delta": 1,
-      "delta_pct": 0.73,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
     },
     "lockers": {
-      "previous": 1090,
+      "previous": 1089,
       "current": 1089,
-      "delta": -1,
-      "delta_pct": -0.09,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -87,9 +87,9 @@
       "semantic_success_count": 5,
       "partial_quality_failure_count": 3,
       "failed_count": 0,
-      "valid_record_count": 433,
+      "valid_record_count": 431,
       "quarantined_record_count": 12,
-      "quarantine_ratio": 0.027,
+      "quarantine_ratio": 0.0271,
       "cross_pdf_duplicate_conflict_count": 0,
       "status": "partial_parse_quality_failure",
       "errors": [],
@@ -205,13 +205,13 @@
           "semantic_ok": false,
           "within_quality_threshold": true,
           "attempts": 1,
-          "raw_code_count": 72,
-          "candidate_count": 69,
-          "valid_record_count": 66,
+          "raw_code_count": 70,
+          "candidate_count": 67,
+          "valid_record_count": 64,
           "quarantined_record_count": 3,
           "duplicate_code_count": 0,
           "duplicate_conflict_count": 0,
-          "quarantine_ratio": 0.0435
+          "quarantine_ratio": 0.0448
         },
         {
           "source_key": "ASP_ISLANDS_TC",
@@ -247,7 +247,7 @@
       "api_canonical_count": 1693,
       "ssr_only_count": 2,
       "reviewed_pdf_supplement_count": 4,
-      "unreviewed_pdf_candidate_count": 2
+      "unreviewed_pdf_candidate_count": 1
     }
   },
   "coverage": {
@@ -280,14 +280,14 @@
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "45a8d51a1f25e22813824d5159586c5d81c0bdad637561a0dd5aa51114cdd3f8",
+      "raw_snapshot_sha256": "bbed0deed8f316547f82b9d0c550dc0de09a7c36e9199dcda3e554b5a56d3378",
       "semantic_sha256": "3b45387168c02c6e1a9b758a00f5e1e68e4de87c71908d5b88e06eef38a4f696",
       "record_count": 1693,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "ef3d189f55af554e7a79edddbcdd30c15a7720f2eb94b239622454bbc0c5cab5",
+      "raw_snapshot_sha256": "df5d8392008260277759dbaab1ad89c2bee7db70ef368623952052292d1982a4",
       "semantic_sha256": "3e3579d78d29b7f94730b85869a941bad7a68170d166ce54fde905f5a14ad26a",
       "record_count": 1692,
       "duplicate_codes": [],
@@ -780,7 +780,7 @@
       "duplicate_codes": []
     },
     "partner_pdf": {
-      "semantic_sha256": "369c78ab4bacd7c691b09b02616ebb8f8ae61b1235ccc6a6a2d8da1c5a897822",
+      "semantic_sha256": "134af7dcb3165ffc9917b39ac0f8020f219ad1e2491b0c7367e121a0c218cc89",
       "document_count": 8
     }
   }

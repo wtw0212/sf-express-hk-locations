@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-08-29 14:09 (HKT UTC+8)`
+> **Last Updated**: `2026-08-30 12:17 (HKT UTC+8)`
 
 ---
 
@@ -13,10 +13,10 @@
 | **Stores** | 138 |
 | **Lockers** | 1089 |
 | **Partners** | 472 |
-| **Added** | 1 |
-| **Removed** | 1 |
+| **Added** | 0 |
+| **Removed** | 0 |
 | **Updated** | 0 |
-| **Unchanged** | 1698 |
+| **Unchanged** | 1699 |
 
 ---
 
@@ -25,8 +25,8 @@
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
 | total | 1699 | 1699 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| stores | 137 | 138 | +1 | +0.73% | previous_locations_feed | ✅ PASS |
-| lockers | 1090 | 1089 | -1 | -0.09% | previous_locations_feed | ✅ PASS |
+| stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1089 | 1089 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 472 | 472 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | tcCodes | 1693 | 1693 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
 | enCodes | 1692 | 1692 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
@@ -45,7 +45,7 @@
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
-| Valid Partner PDF Records | 433 |
+| Valid Partner PDF Records | 431 |
 | Quarantined PDF Records | 12 |
 | PDF Quarantine Ratio | 2.7% |
 | SSR records | 188 |
@@ -88,23 +88,23 @@
 
 ## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.7% exceeds warning threshold 1% (12/445 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.7% exceeds warning threshold 1% (12/443 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 8.3% exceeds warning threshold 1%
-- ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.3% exceeds warning threshold 1%
+- ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.5% exceeds warning threshold 1%
 - ⚠️ Quarantined 5 corrupted or ambiguous partner PDF records (reasons: SERVICE_CODE_MISMATCH)
 
 ---
 
-## Added Locations (1)
+## Added Locations (0)
 
-- `852Z358` [順豐站] 東涌逸東商場順豐站 -- 香港大嶼山區東涌逸東街8號逸東邨逸東商場2樓216號鋪*^
+*(No added locations)*
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (0)
 
-- `H852FEA4P` [順豐智能櫃] 自助櫃 西貢西徑村 -- 西貢西徑村32F地下 (西徑士多)*
+*(No removed locations)*
 
 ---
 

@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-01 12:06 (HKT UTC+8)`
+> **Last Updated**: `2026-09-02 11:28 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1699 |
-| **Current total** | 1695 |
+| **Previous total** | 1695 |
+| **Current total** | 1694 |
 | **Stores** | 138 |
-| **Lockers** | 1088 |
+| **Lockers** | 1087 |
 | **Partners** | 469 |
-| **Added** | 0 |
-| **Removed** | 4 |
-| **Updated** | 4 |
-| **Unchanged** | 1691 |
+| **Added** | 1 |
+| **Removed** | 2 |
+| **Updated** | 0 |
+| **Unchanged** | 1693 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1699 | 1695 | -4 | -0.24% | previous_locations_feed | ✅ PASS |
+| total | 1695 | 1694 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
 | stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1089 | 1088 | -1 | -0.09% | previous_locations_feed | ✅ PASS |
-| partners | 472 | 469 | -3 | -0.64% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1693 | 1689 | -4 | -0.24% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1692 | 1688 | -4 | -0.24% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1088 | 1087 | -1 | -0.09% | previous_locations_feed | ✅ PASS |
+| partners | 469 | 469 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1689 | 1688 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1688 | 1687 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,20 +39,20 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1689 |
-| EN unique codes | 1688 |
+| TC unique codes | 1688 |
+| EN unique codes | 1687 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
-| Valid Partner PDF Records | 431 |
+| Valid Partner PDF Records | 432 |
 | Quarantined PDF Records | 12 |
 | PDF Quarantine Ratio | 2.7% |
 | SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1695 |
+| District resolved | 1694 |
 | District unresolved | 0 |
-| With English data | 1688 |
+| With English data | 1687 |
 | Missing English | 7 |
 
 ---
@@ -88,41 +88,27 @@
 
 ## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.7% exceeds warning threshold 1% (12/443 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.7% exceeds warning threshold 1% (12/444 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
-- ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 8.3% exceeds warning threshold 1%
+- ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 8.0% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.5% exceeds warning threshold 1%
 - ⚠️ Quarantined 5 corrupted or ambiguous partner PDF records (reasons: SERVICE_CODE_MISMATCH)
 
 ---
 
-## Added Locations (0)
+## Added Locations (1)
 
-*(No added locations)*
-
----
-
-## Removed Locations (4)
-
-- `852AB3011` [順豐合作點] 合作店 彩禧生活百貨 -- 大埔區富蝶商場地下14號鋪 彩禧生活百貨*
-- `852CH3005` [順豐合作點] 合作店 自由速遞 -- 新界將軍澳慧安商場A74-75號鋪自由速遞*
-- `852FH3012` [順豐合作點] 合作店 咪咪公社 -- 大圍大圍村第一街4號D1鋪 咪咪公社*
-- `H852BA98P` [順豐智能櫃] 自助櫃 深水埗楓華樓(你的自助洗衣) -- 深水埗楓樹街23-23B號楓華樓地下4號鋪(你的自助洗衣)*
+- `852MA3018` [順豐合作點] 合作店 士美菲自提點 -- 士美菲路47號聯興新樓地下H鋪(近地鐵站C出口)*士美菲自提點(15:00-16:00午休)
 
 ---
 
-## Updated Locations (4)
+## Removed Locations (2)
 
-- `H852GC80P` 自助櫃 青衣翠怡花園7座至8座
-  - name: `"自助櫃 青衣翠怡花園7座至8座(一號櫃)"` -> `"自助櫃 青衣翠怡花園7座至8座"`
-  - name_en: `"SF Locker Locker No.1, Block 7 and 8, Greedfield Garden, Tsing Yi"` -> `"SF Locker Block 7 and 8, Greenfield Garden, Tsing Yi"`
-  - address_en: `"Locker No.1, Block 7 and 8, Greedfield Garden, Tsing Yi*"` -> `"Locker No.1, Block 7 and 8, Greenfield Garden, Tsing Yi*"`
-- `H852GC81P` 自助櫃 青衣翠怡花園7座至8座(二號櫃)
-  - name_en: `"SF Locker Locker No.2, Block 7 and 8, Greedfield Garden, Tsing Yi"` -> `"SF Locker Locker No.2, Block 7 and 8, Greenfield Garden, Tsing Yi"`
-  - address_en: `"Locker No.2, Block 7 and 8, Greedfield Garden, Tsing Yi*"` -> `"Locker No.2, Block 7 and 8, Greenfield Garden, Tsing Yi*"`
-- `H852UB19P` 自助櫃 天水圍天澤商場
-  - business_hours: `"11:00-20:30 周六:12:00-20:00 周日:12:00-20:00 節假日:12:00-20:00"` -> `"06:00-23:59 周六:06:00-23:59 周日:06:00-23:59 節假日:06:00-23:59"`
-  - business_hours_en: `"11:00-20:30"` -> `"06:00-23:59"`
-- `H852UB54P` 自助櫃 天水圍天澤商場(二號櫃)
-  - business_hours: `"11:00-20:30 周六:12:00-20:00 周日:12:00-20:00 節假日:12:00-20:00"` -> `"06:00-23:59 周六:06:00-23:59 周日:06:00-23:59 節假日:06:00-23:59"`
-  - business_hours_en: `"11:00-20:30"` -> `"06:00-23:59"`
+- `852MA3013` [順豐合作點] 合作店 士美菲自提點 -- 士美菲路47號聯興新樓地下H鋪(近地鐵站C出口)士美菲自提點(15:00-16:00午休)*
+- `H852E031P` [順豐智能櫃] 自助櫃 尖沙咀The Austin -- 尖沙咀The Austin 1座地下
+
+---
+
+## Updated Locations (0)
+
+*(No updated locations)*

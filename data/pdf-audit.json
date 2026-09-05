@@ -1,60 +1,60 @@
 {
-  "source_retrieved_at": "2026-09-04 11:29 (HKT UTC+8)",
-  "generated_at": "2026-09-04 11:29 (HKT UTC+8)",
+  "source_retrieved_at": "2026-09-05 11:30 (HKT UTC+8)",
+  "generated_at": "2026-09-05 11:30 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-09-04T03:29:53.882Z",
-      "document_binary_sha256": "ef32199d4804cf161fa58ddc53613e44e1f304b2486cc7c84ebbba6c561276c6",
+      "document_retrieved_at": "2026-09-05T03:30:52.101Z",
+      "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-09-04T03:29:54.072Z",
+      "document_retrieved_at": "2026-09-05T03:30:52.362Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-09-04T03:29:54.459Z",
+      "document_retrieved_at": "2026-09-05T03:30:52.727Z",
       "document_binary_sha256": "91c596bfe3fa79fe51a00835de5e1dbddc86def3c2a77d5009c4bc71efe1220e",
       "extracted_text_sha256": "e1720f744eec5086dd1d74167dc076eabe1c95f279594a1ec210d7e6200f03d3"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-09-04T03:29:54.572Z",
+      "document_retrieved_at": "2026-09-05T03:30:52.883Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-09-04T03:29:54.710Z",
+      "document_retrieved_at": "2026-09-05T03:30:53.082Z",
       "document_binary_sha256": "a704d403f408f34bbfae55532ae5c5034987f7d875f843e0aef1e52e164bd236",
       "extracted_text_sha256": "e5330d1df3ee6de1c5f72b6234bdfb7c5255314866ea5e00c8becae39b75be5a"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-09-04T03:29:54.936Z",
+      "document_retrieved_at": "2026-09-05T03:30:53.945Z",
       "document_binary_sha256": "6139a74491938868e7490e6d5209797ac3694f4384297d30156dec96f6aa41f6",
       "extracted_text_sha256": "e1f53b8c507dc4e1f6cdcb37b8ddc469af1f8d8abac5d3dfcddfdf3f97264547"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-09-04T03:29:55.176Z",
+      "document_retrieved_at": "2026-09-05T03:30:54.499Z",
       "document_binary_sha256": "415fec90c1b930d88748de4b89e3a559c2fe5d28afd6647cfdd464b13355f9ef",
       "extracted_text_sha256": "bbf9acd31f8de103394c0847392eea43a1a23053c92b7749039dc013ab6ae58f"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-09-04T03:29:55.295Z",
+      "document_retrieved_at": "2026-09-05T03:30:54.707Z",
       "document_binary_sha256": "9a9e2984384f10ddeec4643fd79698990e579808e8a5be78102d99b2c3e0f36d",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
@@ -2120,8 +2120,7 @@
       "differing_fields": [
         "name",
         "address",
-        "business_hours",
-        "sub_district"
+        "business_hours"
       ],
       "classification": "semantic_conflict",
       "comparison": {
@@ -2138,11 +2137,6 @@
         "business_hours": {
           "canonical": "00:00-00:00 周六:00:00-00:00 周日:00:00-00:00 節假日:00:00-00:00",
           "pdf": "24小時",
-          "classification": "semantic_conflict"
-        },
-        "sub_district": {
-          "canonical": "灣仔",
-          "pdf": "鴨脷洲",
           "classification": "semantic_conflict"
         }
       },
@@ -13703,7 +13697,8 @@
       "differing_fields": [
         "name",
         "address",
-        "business_hours"
+        "business_hours",
+        "sub_district"
       ],
       "classification": "semantic_conflict",
       "comparison": {
@@ -13720,6 +13715,11 @@
         "business_hours": {
           "canonical": "11:00-19:00 周六:11:00-19:00 周日:10:00-15:00",
           "pdf": "星期一至六:10:00-19:00 星期日:10:00-15:00 公眾假期:休息",
+          "classification": "semantic_conflict"
+        },
+        "sub_district": {
+          "canonical": "粉嶺",
+          "pdf": "大埔",
           "classification": "semantic_conflict"
         }
       },

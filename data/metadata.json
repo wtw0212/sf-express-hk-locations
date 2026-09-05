@@ -1,20 +1,20 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-09-04 11:29 (HKT UTC+8)",
-  "generated_at": "2026-09-04 11:29 (HKT UTC+8)",
-  "retrieved_at": "2026-09-04 11:29 (HKT UTC+8)",
+  "source_retrieved_at": "2026-09-05 11:30 (HKT UTC+8)",
+  "generated_at": "2026-09-05 11:30 (HKT UTC+8)",
+  "retrieved_at": "2026-09-05 11:30 (HKT UTC+8)",
   "counts": {
-    "total": 1660,
+    "total": 1661,
     "stores": 138,
-    "lockers": 1053,
+    "lockers": 1054,
     "partners": 469
   },
   "count_deltas": {
     "total": {
-      "previous": 1694,
-      "current": 1660,
-      "delta": -34,
-      "delta_pct": -2.01,
+      "previous": 1660,
+      "current": 1661,
+      "delta": 1,
+      "delta_pct": 0.06,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -29,10 +29,10 @@
       "gate_result": "pass"
     },
     "lockers": {
-      "previous": 1087,
-      "current": 1053,
-      "delta": -34,
-      "delta_pct": -3.13,
+      "previous": 1053,
+      "current": 1054,
+      "delta": 1,
+      "delta_pct": 0.09,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -47,19 +47,19 @@
       "gate_result": "pass"
     },
     "tcCodes": {
-      "previous": 1688,
-      "current": 1654,
-      "delta": -34,
-      "delta_pct": -2.01,
+      "previous": 1654,
+      "current": 1655,
+      "delta": 1,
+      "delta_pct": 0.06,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.tc_record_count",
       "gate_result": "pass"
     },
     "enCodes": {
-      "previous": 1687,
-      "current": 1653,
-      "delta": -34,
-      "delta_pct": -2.02,
+      "previous": 1653,
+      "current": 1654,
+      "delta": 1,
+      "delta_pct": 0.06,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.en_record_count",
       "gate_result": "pass"
@@ -244,17 +244,17 @@
       "pdf_partner"
     ],
     "counts": {
-      "api_canonical_count": 1654,
+      "api_canonical_count": 1655,
       "ssr_only_count": 2,
       "reviewed_pdf_supplement_count": 4,
       "unreviewed_pdf_candidate_count": 1
     }
   },
   "coverage": {
-    "tc_record_count": 1654,
-    "en_record_count": 1653,
-    "bilingual_match_rate": 0.9993954050785974,
-    "district_resolved_count": 1660,
+    "tc_record_count": 1655,
+    "en_record_count": 1654,
+    "bilingual_match_rate": 0.9993957703927493,
+    "district_resolved_count": 1661,
     "district_unresolved_count": 0
   },
   "quality": {
@@ -280,16 +280,16 @@
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "63fa5270dca1873db8c0c06dfd643d8ff596a076e6674e19fd0d048325f451b3",
-      "semantic_sha256": "92952a73c3bfad13bc162a1cfb34d7783816f78e81d50055a28cbe7b1bef7d50",
-      "record_count": 1654,
+      "raw_snapshot_sha256": "ce05ba369689c27adc48a89eb2c3ed8a526853c14734db634d0bd9b1f2f62842",
+      "semantic_sha256": "4c2ee34ccd0d21a55e30c1a1830a87b4e3b6cf421eab2187877a3e54461ad3f0",
+      "record_count": 1655,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "4e7f1e30ce8212bb1df40ef1fc40cbceb0a8e215741f75aa25087dfbde7e0d46",
-      "semantic_sha256": "02f427a75801b82025d40c027e7efe9c14912c1400c22f9e8b69a46719657d72",
-      "record_count": 1653,
+      "raw_snapshot_sha256": "b5724ff9c6a57579035485507569e356a595610f68980a157ddffdb32ce772b7",
+      "semantic_sha256": "6bc15ac5e927f73a01cd63bd07d647c5f2eac43f074fdd416bc9ccc07f80fa82",
+      "record_count": 1654,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_en/record_hashes"
     },
@@ -775,8 +775,8 @@
       "duplicate_codes": []
     },
     "canonical": {
-      "semantic_sha256": "5a294365662a602be97f5d26b5017efd2f2f6bfd296f3c165a526cc7756f40f9",
-      "record_count": 1660,
+      "semantic_sha256": "a9b570ad51ff94a0faa0586aa650fc5c9d443d47e9ee48ce54506e57487a597c",
+      "record_count": 1661,
       "duplicate_codes": []
     },
     "partner_pdf": {

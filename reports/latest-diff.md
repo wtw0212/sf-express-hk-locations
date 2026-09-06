@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-05 11:30 (HKT UTC+8)`
+> **Last Updated**: `2026-09-06 11:30 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1660 |
+| **Previous total** | 1661 |
 | **Current total** | 1661 |
 | **Stores** | 138 |
 | **Lockers** | 1054 |
 | **Partners** | 469 |
-| **Added** | 1 |
+| **Added** | 0 |
 | **Removed** | 0 |
-| **Updated** | 2 |
-| **Unchanged** | 1658 |
+| **Updated** | 0 |
+| **Unchanged** | 1661 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1660 | 1661 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
+| total | 1661 | 1661 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1053 | 1054 | +1 | +0.09% | previous_locations_feed | ✅ PASS |
+| lockers | 1054 | 1054 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 469 | 469 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1654 | 1655 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1653 | 1654 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1655 | 1655 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1654 | 1654 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -96,9 +96,9 @@
 
 ---
 
-## Added Locations (1)
+## Added Locations (0)
 
-- `H852FEC7P` [順豐智能櫃] 自助櫃 馬鞍山樂和‧東寓 -- 馬鞍山樂和‧東寓C區地下(只供住戶使用)*
+*(No added locations)*
 
 ---
 
@@ -108,15 +108,6 @@
 
 ---
 
-## Updated Locations (2)
+## Updated Locations (0)
 
-- `852A3021` 合作店 小小世界
-  - district: `"大埔區"` -> `"北區"`
-  - district_en: `"Tai Po District"` -> `"North District"`
-  - sub_district: `"大埔"` -> `"粉嶺"`
-  - sub_district_en: `"Tai Po"` -> `"Fanling"`
-- `852TB2016` 便利店 鴨脷洲大街85號OK
-  - district: `"灣仔區"` -> `"南區"`
-  - district_en: `"Wan Chai District"` -> `"Southern District"`
-  - sub_district: `"灣仔"` -> `"鴨脷洲"`
-  - sub_district_en: `"Wan Chai"` -> `"Ap Lei Chau"`
+*(No updated locations)*

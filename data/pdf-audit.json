@@ -1,60 +1,60 @@
 {
-  "source_retrieved_at": "2026-09-05 11:30 (HKT UTC+8)",
-  "generated_at": "2026-09-05 11:30 (HKT UTC+8)",
+  "source_retrieved_at": "2026-09-06 11:30 (HKT UTC+8)",
+  "generated_at": "2026-09-06 11:30 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-09-05T03:30:52.101Z",
+      "document_retrieved_at": "2026-09-06T03:30:59.234Z",
       "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-09-05T03:30:52.362Z",
+      "document_retrieved_at": "2026-09-06T03:30:59.674Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-09-05T03:30:52.727Z",
+      "document_retrieved_at": "2026-09-06T03:31:00.002Z",
       "document_binary_sha256": "91c596bfe3fa79fe51a00835de5e1dbddc86def3c2a77d5009c4bc71efe1220e",
       "extracted_text_sha256": "e1720f744eec5086dd1d74167dc076eabe1c95f279594a1ec210d7e6200f03d3"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-09-05T03:30:52.883Z",
+      "document_retrieved_at": "2026-09-06T03:31:00.181Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-09-05T03:30:53.082Z",
+      "document_retrieved_at": "2026-09-06T03:31:00.450Z",
       "document_binary_sha256": "a704d403f408f34bbfae55532ae5c5034987f7d875f843e0aef1e52e164bd236",
       "extracted_text_sha256": "e5330d1df3ee6de1c5f72b6234bdfb7c5255314866ea5e00c8becae39b75be5a"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-09-05T03:30:53.945Z",
+      "document_retrieved_at": "2026-09-06T03:31:00.795Z",
       "document_binary_sha256": "6139a74491938868e7490e6d5209797ac3694f4384297d30156dec96f6aa41f6",
       "extracted_text_sha256": "e1f53b8c507dc4e1f6cdcb37b8ddc469af1f8d8abac5d3dfcddfdf3f97264547"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-09-05T03:30:54.499Z",
-      "document_binary_sha256": "415fec90c1b930d88748de4b89e3a559c2fe5d28afd6647cfdd464b13355f9ef",
-      "extracted_text_sha256": "bbf9acd31f8de103394c0847392eea43a1a23053c92b7749039dc013ab6ae58f"
+      "document_retrieved_at": "2026-09-06T03:31:01.024Z",
+      "document_binary_sha256": "01f1b1d663ed70317a07b8c93f8cc864db1a41856f90a182f4beaaa4dca5c144",
+      "extracted_text_sha256": "19120112a900c52875cd9c033a0cf23c7765d4db378c90a839e927c26eb7fb32"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-09-05T03:30:54.707Z",
+      "document_retrieved_at": "2026-09-06T03:31:01.273Z",
       "document_binary_sha256": "9a9e2984384f10ddeec4643fd79698990e579808e8a5be78102d99b2c3e0f36d",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
@@ -71,7 +71,7 @@
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 939,
+      "semantic_conflict": 938,
       "name_specificity_difference": 208,
       "formatting_difference": 0,
       "equivalent_difference": 128
@@ -13687,49 +13687,6 @@
       }
     },
     {
-      "code": "852A3021",
-      "api_name": "合作店 小小世界",
-      "pdf_name": "大埔小小世界",
-      "api_address": "粉嶺聯和 墟街市1樓第十一街SW31鋪‎‬‬‎‎‎ 小小世界*",
-      "pdf_address": "聯和 墟街市1樓第十一街SW31鋪",
-      "api_business_hours": "11:00-19:00 周六:11:00-19:00 周日:10:00-15:00",
-      "pdf_business_hours": "星期一至六:10:00-19:00 星期日:10:00-15:00 公眾假期:休息",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours",
-        "sub_district"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作店 小小世界",
-          "pdf": "大埔小小世界",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "粉嶺聯和 墟街市1樓第十一街SW31鋪‎‬‬‎‎‎ 小小世界*",
-          "pdf": "聯和 墟街市1樓第十一街SW31鋪",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "11:00-19:00 周六:11:00-19:00 周日:10:00-15:00",
-          "pdf": "星期一至六:10:00-19:00 星期日:10:00-15:00 公眾假期:休息",
-          "classification": "semantic_conflict"
-        },
-        "sub_district": {
-          "canonical": "粉嶺",
-          "pdf": "大埔",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_NT_TC",
-      "parser_location": {
-        "row_index": 9,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 大埔小小世界852A3021 聯和 墟街市1樓第十一街SW31鋪^852A3021^ 取件 星期一至六:10:00-19:00 星期日:10:00-15:00 公眾假期:休息"
-      }
-    },
-    {
       "code": "852FH3004",
       "api_name": "合作點 穎翹公司",
       "pdf_name": "大圍穎翹公司",
@@ -13762,7 +13719,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 10,
+        "row_index": 9,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 大圍穎翹公司852FH3004新田圍村新田圍商場4樓28號鋪^852FH3004^取件 星期一至五: 11:00-19:00 星期六: 12:00-18:00 星期日、公眾假期: 休息"
       }
     },
@@ -13799,7 +13756,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 11,
+        "row_index": 10,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 大窩口聚寶店852GA3007 大窩口荃灣花園第一期商場LG 48舖(如意閣地 下)^852GA3007^ 取件 星期一至六:11:00-19:00 星期日及公眾假期:休息"
       }
     },
@@ -13836,7 +13793,7 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 12,
+        "row_index": 11,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 大窩口集運家族852GA3008大窩口邨二期商場地下9號舖^852GA3008^取件 星期一至六:10:00-20:00 星期日及公眾假期:16:00-20:00"
       }
     },
@@ -13873,8 +13830,8 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
-        "row_index": 13,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 大窩口怡林集運852GA3012葵涌大窩口道大廈街鮮薈街市52B舖^852GA3012^取件 星期一至六:11:00-20:00 星期日及公眾假期:11:00-16:00 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
+        "row_index": 12,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 大窩口怡林集運852GA3012葵涌大窩口道大廈街鮮薈街市52B舖^852GA3012^取件 星期一至六:11:00-20:00 星期日及公眾假期:11:00-16:00"
       }
     },
     {
@@ -13910,8 +13867,45 @@
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
+        "row_index": 13,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 東涌極拚自提點852GH3013香港東涌健東路1號映灣園映灣薈1樓6B號鋪^852GH3013^取件 星期一至日: 11:00-22:00 公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
+      }
+    },
+    {
+      "code": "852A3021",
+      "api_name": "合作店 小小世界",
+      "pdf_name": "粉嶺小小世界",
+      "api_address": "粉嶺聯和 墟街市1樓第十一街SW31鋪‎‬‬‎‎‎ 小小世界*",
+      "pdf_address": "聯和 墟街市1樓第十一街SW31鋪",
+      "api_business_hours": "11:00-19:00 周六:11:00-19:00 周日:10:00-15:00",
+      "pdf_business_hours": "星期一至六:10:00-19:00 星期日:10:00-15:00 公眾假期:休息",
+      "differing_fields": [
+        "name",
+        "address",
+        "business_hours"
+      ],
+      "classification": "semantic_conflict",
+      "comparison": {
+        "name": {
+          "canonical": "合作店 小小世界",
+          "pdf": "粉嶺小小世界",
+          "classification": "semantic_conflict"
+        },
+        "address": {
+          "canonical": "粉嶺聯和 墟街市1樓第十一街SW31鋪‎‬‬‎‎‎ 小小世界*",
+          "pdf": "聯和 墟街市1樓第十一街SW31鋪",
+          "classification": "semantic_conflict"
+        },
+        "business_hours": {
+          "canonical": "11:00-19:00 周六:11:00-19:00 周日:10:00-15:00",
+          "pdf": "星期一至六:10:00-19:00 星期日:10:00-15:00 公眾假期:休息",
+          "classification": "semantic_conflict"
+        }
+      },
+      "document_id": "ASP_NT_TC",
+      "parser_location": {
         "row_index": 14,
-        "raw_row": "快件限制 東涌極拚自提點852GH3013香港東涌健東路1號映灣園映灣薈1樓6B號鋪^852GH3013^取件 星期一至日: 11:00-22:00 公眾假期: 休息"
+        "raw_row": "快件限制 粉嶺小小世界852A3021 聯和 墟街市1樓第十一街SW31鋪^852A3021^ 取件 星期一至六:10:00-19:00 星期日:10:00-15:00 公眾假期:休息"
       }
     },
     {

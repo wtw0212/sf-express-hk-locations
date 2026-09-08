@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-07 11:30 (HKT UTC+8)`
+> **Last Updated**: `2026-09-08 11:35 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1661 |
-| **Current total** | 1661 |
-| **Stores** | 138 |
+| **Current total** | 1660 |
+| **Stores** | 137 |
 | **Lockers** | 1054 |
 | **Partners** | 469 |
 | **Added** | 0 |
-| **Removed** | 0 |
+| **Removed** | 1 |
 | **Updated** | 0 |
-| **Unchanged** | 1661 |
+| **Unchanged** | 1660 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1661 | 1661 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1661 | 1660 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| stores | 138 | 137 | -1 | -0.72% | previous_locations_feed | ✅ PASS |
 | lockers | 1054 | 1054 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 469 | 469 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1655 | 1655 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1654 | 1654 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1655 | 1654 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1654 | 1653 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1655 |
-| EN unique codes | 1654 |
+| TC unique codes | 1654 |
+| EN unique codes | 1653 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.7% |
 | SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1661 |
+| District resolved | 1660 |
 | District unresolved | 0 |
-| With English data | 1654 |
+| With English data | 1653 |
 | Missing English | 7 |
 
 ---
@@ -102,9 +102,9 @@
 
 ---
 
-## Removed Locations (0)
+## Removed Locations (1)
 
-*(No removed locations)*
+- `852UAB` [順豐站] 元朗雄偉工業大廈順豐站 -- 香港元朗區元朗喜業街1-5號雄偉工業大廈地下F室*
 
 ---
 

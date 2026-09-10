@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-09 11:40 (HKT UTC+8)`
+> **Last Updated**: `2026-09-10 11:38 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1660 |
+| **Previous total** | 1661 |
 | **Current total** | 1661 |
 | **Stores** | 137 |
-| **Lockers** | 1055 |
-| **Partners** | 469 |
+| **Lockers** | 1056 |
+| **Partners** | 468 |
 | **Added** | 1 |
-| **Removed** | 0 |
-| **Updated** | 1 |
-| **Unchanged** | 1659 |
+| **Removed** | 1 |
+| **Updated** | 0 |
+| **Unchanged** | 1660 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1660 | 1661 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
+| total | 1661 | 1661 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1054 | 1055 | +1 | +0.09% | previous_locations_feed | ✅ PASS |
-| partners | 469 | 469 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1654 | 1655 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1653 | 1654 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1055 | 1056 | +1 | +0.09% | previous_locations_feed | ✅ PASS |
+| partners | 469 | 468 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1655 | 1655 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1654 | 1654 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 264 |
+| **Record Quality Warnings** | 263 |
 | **Record Quality Info Flags** | 60 |
 | **Record Quality Errors** | 0 |
 
@@ -73,7 +73,7 @@
 
 | Flag Type | Count |
 | :--- | :--- |
-| ENGLISH_FIELD_CONTAINS_CJK | 98 |
+| ENGLISH_FIELD_CONTAINS_CJK | 97 |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 97 |
 | ADMIN_DISTRICT_ALIAS_APPLIED | 43 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
@@ -98,18 +98,16 @@
 
 ## Added Locations (1)
 
-- `H852UB59P` [順豐智能櫃] 自助櫃 元朗PARK YOHO 2B期 -- 元朗PARK YOHO 2B期23座地下(只供住戶使用)*
+- `H852HD19P` [順豐智能櫃] 自助櫃 啟德Double Coast -- 啟德Double Coast地庫停車場117車位旁(只供住戶使用)*
 
 ---
 
-## Removed Locations (0)
+## Removed Locations (1)
 
-*(No removed locations)*
+- `852BA3015` [順豐合作點] 合作店 潮豐葯妝 -- 香港深水埗北河街165-167號太利樓地下C2號鋪 潮豐葯妝*
 
 ---
 
-## Updated Locations (1)
+## Updated Locations (0)
 
-- `852PCL` 柴灣國貿中心順豐站
-  - business_hours: `"周一至周五,11:00-21:00;周日及公眾假期,休息;周六,12:00-20:00"` -> `"周一至周五,12:00-21:00;周日及公眾假期,休息;周六及公眾假期,12:00-20:00"`
-  - quality_flags: +SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT
+*(No updated locations)*

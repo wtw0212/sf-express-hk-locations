@@ -1,66 +1,66 @@
 {
-  "source_retrieved_at": "2026-09-10 11:38 (HKT UTC+8)",
-  "generated_at": "2026-09-10 11:38 (HKT UTC+8)",
+  "source_retrieved_at": "2026-09-11 11:36 (HKT UTC+8)",
+  "generated_at": "2026-09-11 11:36 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-09-10T03:38:50.759Z",
+      "document_retrieved_at": "2026-09-11T03:36:42.970Z",
       "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-09-10T03:38:51.006Z",
+      "document_retrieved_at": "2026-09-11T03:36:43.157Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-09-10T03:38:51.378Z",
+      "document_retrieved_at": "2026-09-11T03:36:43.477Z",
       "document_binary_sha256": "91c596bfe3fa79fe51a00835de5e1dbddc86def3c2a77d5009c4bc71efe1220e",
       "extracted_text_sha256": "e1720f744eec5086dd1d74167dc076eabe1c95f279594a1ec210d7e6200f03d3"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-09-10T03:38:51.600Z",
+      "document_retrieved_at": "2026-09-11T03:36:43.543Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-09-10T03:38:51.790Z",
+      "document_retrieved_at": "2026-09-11T03:36:44.267Z",
       "document_binary_sha256": "a704d403f408f34bbfae55532ae5c5034987f7d875f843e0aef1e52e164bd236",
       "extracted_text_sha256": "e5330d1df3ee6de1c5f72b6234bdfb7c5255314866ea5e00c8becae39b75be5a"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-09-10T03:38:51.991Z",
-      "document_binary_sha256": "6139a74491938868e7490e6d5209797ac3694f4384297d30156dec96f6aa41f6",
-      "extracted_text_sha256": "e1f53b8c507dc4e1f6cdcb37b8ddc469af1f8d8abac5d3dfcddfdf3f97264547"
+      "document_retrieved_at": "2026-09-11T03:36:46.123Z",
+      "document_binary_sha256": "a3ee8cfab130e28746de282b9af17b989f7111b8654b3f09825a3687297b9724",
+      "extracted_text_sha256": "a21ea90a19757b40a221d4832150782a83c53233e82870ef9b505f98d660b1cf"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-09-10T03:38:52.271Z",
+      "document_retrieved_at": "2026-09-11T03:36:46.414Z",
       "document_binary_sha256": "01f1b1d663ed70317a07b8c93f8cc864db1a41856f90a182f4beaaa4dca5c144",
       "extracted_text_sha256": "19120112a900c52875cd9c033a0cf23c7765d4db378c90a839e927c26eb7fb32"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-09-10T03:38:52.374Z",
+      "document_retrieved_at": "2026-09-11T03:36:47.113Z",
       "document_binary_sha256": "9a9e2984384f10ddeec4643fd79698990e579808e8a5be78102d99b2c3e0f36d",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
   },
   "summary": {
-    "parsed_pdf_record_count": 432,
+    "parsed_pdf_record_count": 431,
     "api_pdf_conflict_count": 426,
     "api_pdf_difference_count": 426,
     "reviewed_pdf_drift_count": 0,
@@ -76,7 +76,7 @@
       "formatting_difference": 0,
       "equivalent_difference": 128
     },
-    "new_pdf_only_candidate_count": 2,
+    "new_pdf_only_candidate_count": 1,
     "missing_reviewed_record_count": 0,
     "quarantined_record_count": 12
   },
@@ -12948,7 +12948,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 31,
+        "row_index": 30,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 太子WS852BF3001太子彌敦道760號聯合廣場1樓131B^852BF3001^取件 星期一至二:12:00-19:30 星期三至星期六：12:00-20:00 星期日及公眾假期: 休息"
       }
     },
@@ -12985,7 +12985,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 32,
+        "row_index": 31,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 土瓜灣長旺辦館852KA3001馬頭圍村玫瑰樓地下111號鋪^852KA3001^取件 星期一至五: 10:00-20:00 星期六、星期日、公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
       }
     },
@@ -13022,7 +13022,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 33,
+        "row_index": 32,
         "raw_row": "快件限制 土瓜灣土友站852KA3003 土瓜灣九龍城道137號新城中心地下1號鋪 ^852KA3003^ 取件 星期一至五: 12:00-20:00 星期六:12:00-17:00 星期日、公眾假期: 休息"
       }
     },
@@ -13059,7 +13059,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 34,
+        "row_index": 33,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 土瓜灣高山劇場送禮勤852KA3005土瓜灣山西街3號利榮大廈地下7-8號鋪^852KA3005^取件 星期一至六:12:00-21：30 星期日、公眾假期:休息"
       }
     },
@@ -13096,7 +13096,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 35,
+        "row_index": 34,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 旺角業誠藥行852BB3004九龍旺角廣東道991號^852BB3004^取件 星期一至六: 12:00-20:00 星期日、公眾假期: 休息"
       }
     },
@@ -13133,7 +13133,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 36,
+        "row_index": 35,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 旺角悟空開門自提點852BB3005旺角廣東道979號地鋪^852BB3005^取件 星期一至日: 09:00-18:00 星期六、公眾假期: 休息"
       }
     },
@@ -13170,7 +13170,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 37,
+        "row_index": 36,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 新蒲崗 康頤藥行有限公 司 852J3024新蒲崗采頤花園地下770號鋪^852J3024^取件 星期一至六:09:30-20:00 星期日、公眾假期: 09:30-20:00"
       }
     },
@@ -13207,7 +13207,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 38,
+        "row_index": 37,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 新蒲崗SO GOOD852J3026九龍新蒲崗寧遠街9號越秀廣場G29號鋪^852J3026^取件 星期一至六:11:00-21:00 星期日、公眾假期: 休息"
       }
     },
@@ -13244,7 +13244,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 39,
+        "row_index": 38,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 新蒲崗FIREFLY COMPANY852J3038新蒲崗采頤花園購物商場751鋪地下 ^852J3038^取件 星期一至六:11:00-21:00 星期日:11:00-19:00 公眾假期: 休息"
       }
     },
@@ -13281,7 +13281,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 40,
+        "row_index": 39,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 油麻地悟空開門自提點852BB3006 油麻地新填地街172-176號永常大樓地下C號 ^852BB3006^ 取件 星期一至日: 12:00-21:00 星期二、公眾假期: 休息"
       }
     },
@@ -13318,7 +13318,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 41,
+        "row_index": 40,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 油塘驛家自取點852CA3006 九龍觀塘茶寮坳順安道9號順天邨天瑤樓地下13A號 ^852CA3006^ 取件 星期一至六: 10:00-21:00(13:30- 14:00午休) 星期日: 10:00-18:00 公眾假期: 休息"
       }
     },
@@ -13349,7 +13349,7 @@
       },
       "document_id": "ASP_KLN_TC",
       "parser_location": {
-        "row_index": 42,
+        "row_index": 41,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 鑽石山 裕豐參茸中西藥 行 852J3005九龍斧山道185號宏景花園停車場1樓E鋪^852J3005^取件09:00-21:30"
       }
     },
@@ -15815,19 +15815,6 @@
       "parser_location": {
         "row_index": 8,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 黃大仙醉Chill852J3006 九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖^852J3006^ 取件 星期一至日: 12:00-20:00 公眾假期: 休息"
-      }
-    },
-    {
-      "code": "852BA3015",
-      "name": "太子潮豐藥妝",
-      "address": "香港深水埗北河街165-167號太利樓地下C2號舖",
-      "district": null,
-      "sub_district": "太子",
-      "business_hours": "星期一至日: 14:00-23:00 公眾假期: 休息",
-      "document_id": "ASP_KLN_TC",
-      "parser_location": {
-        "row_index": 30,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 太子潮豐藥妝852BA3015 香港深水埗北河街165-167號太利樓地下C2號舖 ^852BA3015^ 取件 星期一至日: 14:00-23:00 公眾假期: 休息"
       }
     }
   ],

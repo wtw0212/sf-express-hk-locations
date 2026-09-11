@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-10 11:38 (HKT UTC+8)`
+> **Last Updated**: `2026-09-11 11:36 (HKT UTC+8)`
 
 ---
 
@@ -26,8 +26,8 @@
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
 | total | 1661 | 1661 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1055 | 1056 | +1 | +0.09% | previous_locations_feed | ✅ PASS |
-| partners | 469 | 468 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
+| lockers | 1056 | 1056 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| partners | 468 | 468 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | tcCodes | 1655 | 1655 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
 | enCodes | 1654 | 1654 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
@@ -45,7 +45,7 @@
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
-| Valid Partner PDF Records | 432 |
+| Valid Partner PDF Records | 431 |
 | Quarantined PDF Records | 12 |
 | PDF Quarantine Ratio | 2.7% |
 | SSR records | 188 |
@@ -88,7 +88,7 @@
 
 ## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.7% exceeds warning threshold 1% (12/444 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.7% exceeds warning threshold 1% (12/443 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 8.0% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.5% exceeds warning threshold 1%
@@ -98,13 +98,13 @@
 
 ## Added Locations (1)
 
-- `H852HD19P` [順豐智能櫃] 自助櫃 啟德Double Coast -- 啟德Double Coast地庫停車場117車位旁(只供住戶使用)*
+- `H852UA54P` [順豐智能櫃] 自助櫃 天水圍天富苑元富閣 -- 天水圍天富苑元富閣A座地下*
 
 ---
 
 ## Removed Locations (1)
 
-- `852BA3015` [順豐合作點] 合作店 潮豐葯妝 -- 香港深水埗北河街165-167號太利樓地下C2號鋪 潮豐葯妝*
+- `H852EA05P` [順豐智能櫃] 自助櫃 佐敦文苑街1-23號 (LaundrYup洗衣店) -- 佐敦文苑街1-23號文英樓地下A鋪洗衣店內*
 
 ---
 

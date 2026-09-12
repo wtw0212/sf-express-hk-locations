@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-11 11:36 (HKT UTC+8)`
+> **Last Updated**: `2026-09-12 11:40 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1661 |
-| **Current total** | 1661 |
+| **Current total** | 1662 |
 | **Stores** | 137 |
-| **Lockers** | 1056 |
+| **Lockers** | 1057 |
 | **Partners** | 468 |
 | **Added** | 1 |
-| **Removed** | 1 |
+| **Removed** | 0 |
 | **Updated** | 0 |
-| **Unchanged** | 1660 |
+| **Unchanged** | 1661 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1661 | 1661 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1661 | 1662 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1056 | 1056 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1056 | 1057 | +1 | +0.09% | previous_locations_feed | ✅ PASS |
 | partners | 468 | 468 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1655 | 1655 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1654 | 1654 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1655 | 1656 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1654 | 1655 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1655 |
-| EN unique codes | 1654 |
+| TC unique codes | 1656 |
+| EN unique codes | 1655 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.7% |
 | SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1661 |
+| District resolved | 1662 |
 | District unresolved | 0 |
-| With English data | 1654 |
+| With English data | 1655 |
 | Missing English | 7 |
 
 ---
@@ -98,13 +98,13 @@
 
 ## Added Locations (1)
 
-- `H852UA54P` [順豐智能櫃] 自助櫃 天水圍天富苑元富閣 -- 天水圍天富苑元富閣A座地下*
+- `H852FEA4P` [順豐智能櫃] 自助櫃 西貢西徑村 -- 西貢西徑村32F地下 (西徑士多)*
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (0)
 
-- `H852EA05P` [順豐智能櫃] 自助櫃 佐敦文苑街1-23號 (LaundrYup洗衣店) -- 佐敦文苑街1-23號文英樓地下A鋪洗衣店內*
+*(No removed locations)*
 
 ---
 

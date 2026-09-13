@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-12 11:40 (HKT UTC+8)`
+> **Last Updated**: `2026-09-13 11:48 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1661 |
+| **Previous total** | 1662 |
 | **Current total** | 1662 |
 | **Stores** | 137 |
 | **Lockers** | 1057 |
 | **Partners** | 468 |
-| **Added** | 1 |
+| **Added** | 0 |
 | **Removed** | 0 |
 | **Updated** | 0 |
-| **Unchanged** | 1661 |
+| **Unchanged** | 1662 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1661 | 1662 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
+| total | 1662 | 1662 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 137 | 137 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1056 | 1057 | +1 | +0.09% | previous_locations_feed | ✅ PASS |
+| lockers | 1057 | 1057 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 468 | 468 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1655 | 1656 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1654 | 1655 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1656 | 1656 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1655 | 1655 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -96,9 +96,9 @@
 
 ---
 
-## Added Locations (1)
+## Added Locations (0)
 
-- `H852FEA4P` [順豐智能櫃] 自助櫃 西貢西徑村 -- 西貢西徑村32F地下 (西徑士多)*
+*(No added locations)*
 
 ---
 

@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-13 11:48 (HKT UTC+8)`
+> **Last Updated**: `2026-09-14 11:55 (HKT UTC+8)`
 
 ---
 

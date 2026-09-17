@@ -1,29 +1,29 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-09-16 11:52 (HKT UTC+8)",
-  "generated_at": "2026-09-16 11:52 (HKT UTC+8)",
-  "retrieved_at": "2026-09-16 11:52 (HKT UTC+8)",
+  "source_retrieved_at": "2026-09-17 11:58 (HKT UTC+8)",
+  "generated_at": "2026-09-17 11:58 (HKT UTC+8)",
+  "retrieved_at": "2026-09-17 11:58 (HKT UTC+8)",
   "counts": {
-    "total": 1663,
+    "total": 1662,
     "stores": 138,
     "lockers": 1056,
-    "partners": 469
+    "partners": 468
   },
   "count_deltas": {
     "total": {
-      "previous": 1661,
-      "current": 1663,
-      "delta": 2,
-      "delta_pct": 0.12,
+      "previous": 1663,
+      "current": 1662,
+      "delta": -1,
+      "delta_pct": -0.06,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
     },
     "stores": {
-      "previous": 137,
+      "previous": 138,
       "current": 138,
-      "delta": 1,
-      "delta_pct": 0.73,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -38,28 +38,28 @@
       "gate_result": "pass"
     },
     "partners": {
-      "previous": 468,
-      "current": 469,
-      "delta": 1,
-      "delta_pct": 0.21,
+      "previous": 469,
+      "current": 468,
+      "delta": -1,
+      "delta_pct": -0.21,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
     },
     "tcCodes": {
-      "previous": 1655,
-      "current": 1657,
-      "delta": 2,
-      "delta_pct": 0.12,
+      "previous": 1657,
+      "current": 1656,
+      "delta": -1,
+      "delta_pct": -0.06,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.tc_record_count",
       "gate_result": "pass"
     },
     "enCodes": {
-      "previous": 1654,
-      "current": 1656,
-      "delta": 2,
-      "delta_pct": 0.12,
+      "previous": 1656,
+      "current": 1655,
+      "delta": -1,
+      "delta_pct": -0.06,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.en_record_count",
       "gate_result": "pass"
@@ -87,9 +87,9 @@
       "semantic_success_count": 5,
       "partial_quality_failure_count": 3,
       "failed_count": 0,
-      "valid_record_count": 431,
+      "valid_record_count": 432,
       "quarantined_record_count": 12,
-      "quarantine_ratio": 0.0271,
+      "quarantine_ratio": 0.027,
       "cross_pdf_duplicate_conflict_count": 0,
       "status": "partial_parse_quality_failure",
       "errors": [],
@@ -188,9 +188,9 @@
           "semantic_ok": true,
           "within_quality_threshold": true,
           "attempts": 1,
-          "raw_code_count": 41,
-          "candidate_count": 41,
-          "valid_record_count": 41,
+          "raw_code_count": 42,
+          "candidate_count": 42,
+          "valid_record_count": 42,
           "quarantined_record_count": 0,
           "duplicate_code_count": 0,
           "duplicate_conflict_count": 0,
@@ -244,17 +244,17 @@
       "pdf_partner"
     ],
     "counts": {
-      "api_canonical_count": 1657,
-      "ssr_only_count": 2,
-      "reviewed_pdf_supplement_count": 4,
+      "api_canonical_count": 1656,
+      "ssr_only_count": 3,
+      "reviewed_pdf_supplement_count": 3,
       "unreviewed_pdf_candidate_count": 1
     }
   },
   "coverage": {
-    "tc_record_count": 1657,
-    "en_record_count": 1656,
-    "bilingual_match_rate": 0.9993964996982498,
-    "district_resolved_count": 1663,
+    "tc_record_count": 1656,
+    "en_record_count": 1655,
+    "bilingual_match_rate": 0.9993961352657005,
+    "district_resolved_count": 1662,
     "district_unresolved_count": 0
   },
   "quality": {
@@ -262,13 +262,13 @@
     "pipeline_warnings": 5,
     "record_flag_counts_by_severity": {
       "info": 60,
-      "warning": 264,
+      "warning": 261,
       "error": 0
     },
     "flag_counts_by_type": {
       "SOURCE_TC_EN_UNIT_CONFLICT": 38,
-      "ENGLISH_FIELD_CONTAINS_CJK": 99,
-      "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 96,
+      "ENGLISH_FIELD_CONTAINS_CJK": 97,
+      "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 95,
       "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT": 22,
       "DUPLICATE_ADDRESS_SUFFIX": 9,
       "ADMIN_DISTRICT_ALIAS_APPLIED": 43,
@@ -280,16 +280,16 @@
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "c4b0960d94ed055f4d48cde1b1ef5f948dab4b0d20af8bac0447f5f199050d81",
-      "semantic_sha256": "00d96e729f51d453abef117bd51053f9d8eea09de6041c6491283c90f2f98f8e",
-      "record_count": 1657,
+      "raw_snapshot_sha256": "aa7f5e3ccdb667cd6cfccafbf4e51a37bd6572069ca1926c9b39976967263a20",
+      "semantic_sha256": "6e05e6ef5ed6cfddf1c2f66f39413d6b50da99f28371937f5d625c9e3eb9924d",
+      "record_count": 1656,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "234f98cc3455b1534ddb75bf477d7d5c5c8eaf88128880355a810a7a8c9117fc",
-      "semantic_sha256": "4de6dfdb8350d11c24f7c3d8a11b7986d0b77e5a1d6be7646405ab5a52b16876",
-      "record_count": 1656,
+      "raw_snapshot_sha256": "cdbd7671493d53901f68fba3f0b91bcbe99ecc408de3bdee65ccd6e959060c0b",
+      "semantic_sha256": "2faeb2886b82790e3e5a086ec07a53620a4949dc0897467432732f2985c00bd9",
+      "record_count": 1655,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_en/record_hashes"
     },
@@ -775,12 +775,12 @@
       "duplicate_codes": []
     },
     "canonical": {
-      "semantic_sha256": "b5abe07ec62234c24842cf818cb64abf204c20ee528edac9fa087559d876538e",
-      "record_count": 1663,
+      "semantic_sha256": "240d6d6d882c63ed9328a8d466915ecdad7d7460b49917848fbc9c8f9a0fafb7",
+      "record_count": 1662,
       "duplicate_codes": []
     },
     "partner_pdf": {
-      "semantic_sha256": "457ac50360c4875e2f841282cc78bb5db14f8733585b76fcdfee71e4afc89973",
+      "semantic_sha256": "3b6785449f4ff592f1ef5c0ff91eb2ca9d10a60648a124272f9d01715b81a898",
       "document_count": 8
     }
   }

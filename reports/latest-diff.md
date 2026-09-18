@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-17 11:58 (HKT UTC+8)`
+> **Last Updated**: `2026-09-18 11:45 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1663 |
+| **Previous total** | 1662 |
 | **Current total** | 1662 |
 | **Stores** | 138 |
 | **Lockers** | 1056 |
 | **Partners** | 468 |
-| **Added** | 1 |
-| **Removed** | 2 |
-| **Updated** | 4 |
-| **Unchanged** | 1657 |
+| **Added** | 0 |
+| **Removed** | 0 |
+| **Updated** | 0 |
+| **Unchanged** | 1662 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1663 | 1662 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1662 | 1662 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | lockers | 1056 | 1056 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 469 | 468 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1657 | 1656 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1656 | 1655 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| partners | 468 | 468 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1656 | 1656 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1655 | 1655 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -92,50 +92,22 @@
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 8.0% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.5% exceeds warning threshold 1%
-- ⚠️ [Audit warning] Severe PDF parser quarantines would remove previously published records: 852PC3004
+- ⚠️ Quarantined 5 corrupted or ambiguous partner PDF records (reasons: SERVICE_CODE_MISMATCH)
 
 ---
 
-## Added Locations (1)
+## Added Locations (0)
 
-- `H852FH27P` [順豐智能櫃] 自助櫃 沙田麗豪酒店 -- 沙田麗豪酒店地下大堂門口旁(只供酒店住戶使用)*
-
----
-
-## Removed Locations (2)
-
-- `852PC3004` [順豐合作點] 合作店 愛蝶灣自提點 -- 筲箕灣愛禮街2號愛蝶灣25號地下 愛蝶灣自提點*
-- `H852UV11P` [順豐智能櫃] 自助櫃 元朗溱柏十座平台 -- 元朗溱柏十座平台(只供住戶使用)*
+*(No added locations)*
 
 ---
 
-## Updated Locations (4)
+## Removed Locations (0)
 
-- `852G3004` 合作點 石圍角提點坪
-  - name: `"荃灣提點坪有限公司"` -> `"合作點 石圍角提點坪"`
-  - name_en: `null` -> `"Indiv. Store G/F, 20 Lam Kam Rd, Fong Ma Po, Tai Po, NT"`
-  - sub_district_en: `null` -> `"Tsuen Wan"`
-  - address: `"新界荃灣石圍角邨石芳樓210號舖"` -> `"新界荃灣石圍角邨石芳樓210號鋪 石圍角提點坪*"`
-  - address_en: `null` -> `"G/F, 20 Lam Kam Rd, Fong Ma Po, Tai Po, NT*"`
-  - business_hours: `"星期一至六: 12:00-20:30 星期日、公眾假期: 休息"` -> `"12:00-20:30"`
-  - business_hours_en: `null` -> `"12:00-20:30"`
-  - source: `"reviewed_pdf_partner"` -> `"api_tc"`
-  - location.latitude: `null` -> `22.3747808`
-  - location.longitude: `null` -> `114.1241165`
-  - quality_flags: -MISSING_COORDINATES, -MISSING_ENGLISH_RECORD
-- `852UAA` 元朗雄偉工業大廈順豐站
-  - name: `"元朗麗新元朗中心順豐站"` -> `"元朗雄偉工業大廈順豐站"`
-- `852Z503` 中環環球大廈順豐站
-  - business_hours: `"周一至周五,11:00-20:00;周日及公眾假期,休息;周六及公眾假期,12:00-20:00"` -> `"周一至周五,11:00-20:00;周日及公眾假期,休息; 周六:12:00-20:00"`
-- `H852AA26P` 順豐智能櫃 大埔
-  - name: `"自助櫃 大埔大日子廣場2樓"` -> `"順豐智能櫃 大埔"`
-  - name_en: `"SF Locker 2/F, Big Day Mall, Tai Po"` -> `null`
-  - sub_district_en: `"Tai Po"` -> `null`
-  - address: `"香港大埔大日子廣場2樓*"` -> `"香港新界大埔區大埔鄉事會街9號大日子廣場2樓順豐自助櫃"`
-  - address_en: `"2/F, Big Day Mall, Tai Po*"` -> `null`
-  - business_hours: `"09:30-21:30 周六:09:30-21:30 周日:09:30-21:30 節假日:09:30-21:30"` -> `"09:30-21:30"`
-  - business_hours_en: `"09:30-21:30"` -> `null`
-  - source: `"api_tc"` -> `"ssr"`
-  - location.latitude: `22.44689` -> `null`
-  - location.longitude: `114.166257` -> `null`
-  - quality_flags: +MISSING_COORDINATES, +MISSING_ENGLISH_RECORD
+*(No removed locations)*
+
+---
+
+## Updated Locations (0)
+
+*(No updated locations)*

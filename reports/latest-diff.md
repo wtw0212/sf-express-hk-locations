@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-18 11:45 (HKT UTC+8)`
+> **Last Updated**: `2026-09-19 11:41 (HKT UTC+8)`
 
 ---
 
@@ -15,8 +15,8 @@
 | **Partners** | 468 |
 | **Added** | 0 |
 | **Removed** | 0 |
-| **Updated** | 0 |
-| **Unchanged** | 1662 |
+| **Updated** | 1 |
+| **Unchanged** | 1661 |
 
 ---
 
@@ -108,6 +108,8 @@
 
 ---
 
-## Updated Locations (0)
+## Updated Locations (1)
 
-*(No updated locations)*
+- `852Z503` 中環環球大廈順豐站
+  - address: `"香港中西區中環德輔道中19號環球大廈1樓131號鋪*"` -> `"香港中西區中環德輔道中19號環球大廈1樓131號鋪(一樓天橋平台)*"`
+  - address_en: `"Shop 131, 1/F, World Wide House, No. 19 Des Voeux Road Central*,Central,Central and Western District,Hong Kong"` -> `"Shop 131, 1/F, World Wide House, No. 19 Des Voeux Road Central(1st-floor footbridge podium; )*,Central,Central and Western District,Hong Kong"`

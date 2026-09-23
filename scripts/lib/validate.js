@@ -461,8 +461,9 @@ export function checkCompletenessGates({
       .filter(Boolean)
   );
   const finalCodes = new Set(records.map(record => record.code));
+  const confirmedSsrRemovalCodes = new Set(config.confirmedSsrRemovalCodes || []);
   const removedSsrCodes = [...previousSsrCodes]
-    .filter(code => !finalCodes.has(code))
+    .filter(code => !finalCodes.has(code) && !confirmedSsrRemovalCodes.has(code))
     .sort();
 
   if (removedSsrCodes.length > 0) {

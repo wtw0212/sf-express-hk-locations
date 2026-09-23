@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-09-23 10:36 (HKT UTC+8)",
-  "generated_at": "2026-09-23 10:36 (HKT UTC+8)",
-  "retrieved_at": "2026-09-23 10:36 (HKT UTC+8)",
+  "source_retrieved_at": "2026-09-23 11:50 (HKT UTC+8)",
+  "generated_at": "2026-09-23 11:50 (HKT UTC+8)",
+  "retrieved_at": "2026-09-23 11:50 (HKT UTC+8)",
   "counts": {
     "total": 1661,
     "stores": 138,
@@ -11,10 +11,10 @@
   },
   "count_deltas": {
     "total": {
-      "previous": 1662,
+      "previous": 1661,
       "current": 1661,
-      "delta": -1,
-      "delta_pct": -0.06,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -29,10 +29,10 @@
       "gate_result": "pass"
     },
     "lockers": {
-      "previous": 1056,
+      "previous": 1055,
       "current": 1055,
-      "delta": -1,
-      "delta_pct": -0.09,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -280,14 +280,14 @@
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "aca43532b3b956f55994259b67ccbc9f63b00e2a1d1becc2f0e3db9af4602f36",
+      "raw_snapshot_sha256": "3e8b1ff4416e63bb5ffb08ab6d9118c81b2feaf1e81ca63f0d6108dcd013e641",
       "semantic_sha256": "a90ff501ab2dd35363174df4354eaa59db82975503bbc1add56c2c34107ff3a2",
       "record_count": 1656,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "d38bd07127b83fe9bebb1d029d5437a85c0f4440c3406d6a94be716d87e64af9",
+      "raw_snapshot_sha256": "28a7cbbb007841529983c3bb1418ea4fd2db6425076af70d8cd751190738a596",
       "semantic_sha256": "fecaa21e83efdcdc3ecb8ad7295a23b614dab304b94562c1d88d103319930ad1",
       "record_count": 1655,
       "duplicate_codes": [],

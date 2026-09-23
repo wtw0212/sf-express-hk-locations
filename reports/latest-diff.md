@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-23 10:36 (HKT UTC+8)`
+> **Last Updated**: `2026-09-23 11:50 (HKT UTC+8)`
 
 ---
 
@@ -8,13 +8,13 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1662 |
+| **Previous total** | 1661 |
 | **Current total** | 1661 |
 | **Stores** | 138 |
 | **Lockers** | 1055 |
 | **Partners** | 468 |
 | **Added** | 0 |
-| **Removed** | 1 |
+| **Removed** | 0 |
 | **Updated** | 0 |
 | **Unchanged** | 1661 |
 
@@ -24,9 +24,9 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1662 | 1661 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1661 | 1661 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1056 | 1055 | -1 | -0.09% | previous_locations_feed | ✅ PASS |
+| lockers | 1055 | 1055 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 468 | 468 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | tcCodes | 1656 | 1656 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
 | enCodes | 1655 | 1655 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
@@ -102,9 +102,9 @@
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (0)
 
-- `H852AA26P` [順豐智能櫃] 順豐智能櫃 大埔 -- 香港新界大埔區大埔鄉事會街9號大日子廣場2樓順豐自助櫃
+*(No removed locations)*
 
 ---
 

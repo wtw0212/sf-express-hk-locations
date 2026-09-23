@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-20 11:57 (HKT UTC+8)`
+> **Last Updated**: `2026-09-23 10:36 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1662 |
-| **Current total** | 1662 |
+| **Current total** | 1661 |
 | **Stores** | 138 |
-| **Lockers** | 1056 |
+| **Lockers** | 1055 |
 | **Partners** | 468 |
 | **Added** | 0 |
-| **Removed** | 0 |
+| **Removed** | 1 |
 | **Updated** | 0 |
-| **Unchanged** | 1662 |
+| **Unchanged** | 1661 |
 
 ---
 
@@ -24,9 +24,9 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1662 | 1662 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1662 | 1661 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
 | stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1056 | 1056 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1056 | 1055 | -1 | -0.09% | previous_locations_feed | ✅ PASS |
 | partners | 468 | 468 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | tcCodes | 1656 | 1656 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
 | enCodes | 1655 | 1655 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
@@ -50,10 +50,10 @@
 | PDF Quarantine Ratio | 2.7% |
 | SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1662 |
+| District resolved | 1661 |
 | District unresolved | 0 |
 | With English data | 1655 |
-| Missing English | 7 |
+| Missing English | 6 |
 
 ---
 
@@ -63,8 +63,8 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 261 |
-| **Record Quality Info Flags** | 60 |
+| **Record Quality Warnings** | 260 |
+| **Record Quality Info Flags** | 59 |
 | **Record Quality Errors** | 0 |
 
 ---
@@ -79,8 +79,8 @@
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 22 |
 | DUPLICATE_ADDRESS_SUFFIX | 9 |
-| MISSING_ENGLISH_RECORD | 7 |
-| MISSING_COORDINATES | 6 |
+| MISSING_ENGLISH_RECORD | 6 |
+| MISSING_COORDINATES | 5 |
 | SOURCE_FORMATTING_ARTIFACT | 2 |
 | SUBDISTRICT_ADDRESS_CONFLICT | 2 |
 
@@ -102,9 +102,9 @@
 
 ---
 
-## Removed Locations (0)
+## Removed Locations (1)
 
-*(No removed locations)*
+- `H852AA26P` [順豐智能櫃] 順豐智能櫃 大埔 -- 香港新界大埔區大埔鄉事會街9號大日子廣場2樓順豐自助櫃
 
 ---
 

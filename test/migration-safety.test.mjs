@@ -252,23 +252,6 @@ test('SSR failure blocks publication only when it would remove a previously publ
   assert.ok(preserved.warnings.some(warning => warning.includes('[SSR Source] temporary SSR outage')));
 });
 
-test('confirmed SSR removal does not mask another missing SSR record', () => {
-  const result = checkCompletenessGates({
-    tcResults: [{ ok: true, records: [{ serviceCode: '852API1' }] }],
-    enResults: [{ ok: true, records: [{ serviceCode: '852API1' }] }],
-    ssrResult: { records: [], errors: [] },
-    previousRecords: [
-      { code: 'H852AA26P', source: 'ssr', type: 'locker' },
-      { code: 'H852OTHER', source: 'ssr', type: 'locker' }
-    ],
-    records: [{ code: '852API1', source: 'api_tc', type: 'store' }],
-    config: { minCount: 1, confirmedSsrRemovalCodes: ['H852AA26P'] }
-  });
-
-  assert.deepEqual(result.errors.filter(error => error.includes('SSR-only records were removed')),
-    ['Previously published SSR-only records were removed: H852OTHER']);
-});
-
 test('SSR silent zero-record parse cannot remove a previously published SSR-only record', () => {
   const result = checkCompletenessGates({
     tcResults: [{ ok: true, records: [{ serviceCode: '852API1' }] }],

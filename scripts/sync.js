@@ -335,8 +335,7 @@ export async function runSync(options = {}) {
     pdfResult,
     records: nextList,
     previousRecords: previousList,
-    // H852AA26P was confirmed absent from the official listing on 2026-09-23.
-    config: { previousMetadata, confirmedSsrRemovalCodes: ['H852AA26P'] }
+    config: { previousMetadata }
   });
 
   const allErrors = [...validationErrors, ...gateResult.errors, ...regressionGate.errors];

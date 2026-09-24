@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-23 11:50 (HKT UTC+8)`
+> **Last Updated**: `2026-09-24 11:42 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1661 |
-| **Current total** | 1661 |
+| **Current total** | 1659 |
 | **Stores** | 138 |
-| **Lockers** | 1055 |
+| **Lockers** | 1053 |
 | **Partners** | 468 |
 | **Added** | 0 |
-| **Removed** | 0 |
+| **Removed** | 2 |
 | **Updated** | 0 |
-| **Unchanged** | 1661 |
+| **Unchanged** | 1659 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1661 | 1661 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1661 | 1659 | -2 | -0.12% | previous_locations_feed | ✅ PASS |
 | stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1055 | 1055 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1055 | 1053 | -2 | -0.19% | previous_locations_feed | ✅ PASS |
 | partners | 468 | 468 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1656 | 1656 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1655 | 1655 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1656 | 1654 | -2 | -0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1655 | 1653 | -2 | -0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,20 +39,20 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1656 |
-| EN unique codes | 1655 |
+| TC unique codes | 1654 |
+| EN unique codes | 1653 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
 | Valid Partner PDF Records | 432 |
-| Quarantined PDF Records | 12 |
-| PDF Quarantine Ratio | 2.7% |
+| Quarantined PDF Records | 11 |
+| PDF Quarantine Ratio | 2.5% |
 | SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1661 |
+| District resolved | 1659 |
 | District unresolved | 0 |
-| With English data | 1655 |
+| With English data | 1653 |
 | Missing English | 6 |
 
 ---
@@ -88,11 +88,11 @@
 
 ## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.7% exceeds warning threshold 1% (12/444 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.5% exceeds warning threshold 1% (11/443 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
-- ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 8.0% exceeds warning threshold 1%
+- ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 4.2% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.5% exceeds warning threshold 1%
-- ⚠️ Quarantined 5 corrupted or ambiguous partner PDF records (reasons: SERVICE_CODE_MISMATCH)
+- ⚠️ Quarantined 4 corrupted or ambiguous partner PDF records (reasons: SERVICE_CODE_MISMATCH)
 
 ---
 
@@ -102,9 +102,10 @@
 
 ---
 
-## Removed Locations (0)
+## Removed Locations (2)
 
-*(No removed locations)*
+- `H852TB55P` [順豐智能櫃] 自助櫃 鴨脷洲利東商場二期三樓(二號櫃) -- 鴨脷洲利東商場二期三樓LK03(二號櫃)*
+- `H852UA95P` [順豐智能櫃] 自助櫃 元朗路德會雙魚薈 -- 元朗路德會雙魚薈二座地下信箱旁(只供住戶使用)*
 
 ---
 

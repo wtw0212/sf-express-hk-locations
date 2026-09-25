@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-24 11:42 (HKT UTC+8)`
+> **Last Updated**: `2026-09-25 11:58 (HKT UTC+8)`
 
 ---
 
@@ -8,13 +8,13 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1661 |
+| **Previous total** | 1659 |
 | **Current total** | 1659 |
 | **Stores** | 138 |
 | **Lockers** | 1053 |
 | **Partners** | 468 |
 | **Added** | 0 |
-| **Removed** | 2 |
+| **Removed** | 0 |
 | **Updated** | 0 |
 | **Unchanged** | 1659 |
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1661 | 1659 | -2 | -0.12% | previous_locations_feed | ✅ PASS |
+| total | 1659 | 1659 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1055 | 1053 | -2 | -0.19% | previous_locations_feed | ✅ PASS |
+| lockers | 1053 | 1053 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 468 | 468 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1656 | 1654 | -2 | -0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1655 | 1653 | -2 | -0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1654 | 1654 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1653 | 1653 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -102,10 +102,9 @@
 
 ---
 
-## Removed Locations (2)
+## Removed Locations (0)
 
-- `H852TB55P` [順豐智能櫃] 自助櫃 鴨脷洲利東商場二期三樓(二號櫃) -- 鴨脷洲利東商場二期三樓LK03(二號櫃)*
-- `H852UA95P` [順豐智能櫃] 自助櫃 元朗路德會雙魚薈 -- 元朗路德會雙魚薈二座地下信箱旁(只供住戶使用)*
+*(No removed locations)*
 
 ---
 

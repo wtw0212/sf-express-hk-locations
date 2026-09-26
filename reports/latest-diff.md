@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-25 11:58 (HKT UTC+8)`
+> **Last Updated**: `2026-09-26 12:03 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1659 |
-| **Current total** | 1659 |
+| **Current total** | 1657 |
 | **Stores** | 138 |
-| **Lockers** | 1053 |
+| **Lockers** | 1051 |
 | **Partners** | 468 |
 | **Added** | 0 |
-| **Removed** | 0 |
+| **Removed** | 2 |
 | **Updated** | 0 |
-| **Unchanged** | 1659 |
+| **Unchanged** | 1657 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1659 | 1659 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1659 | 1657 | -2 | -0.12% | previous_locations_feed | ✅ PASS |
 | stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1053 | 1053 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1053 | 1051 | -2 | -0.19% | previous_locations_feed | ✅ PASS |
 | partners | 468 | 468 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1654 | 1654 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1653 | 1653 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1654 | 1652 | -2 | -0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1653 | 1651 | -2 | -0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1654 |
-| EN unique codes | 1653 |
+| TC unique codes | 1652 |
+| EN unique codes | 1651 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.5% |
 | SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1659 |
+| District resolved | 1657 |
 | District unresolved | 0 |
-| With English data | 1653 |
+| With English data | 1651 |
 | Missing English | 6 |
 
 ---
@@ -102,9 +102,10 @@
 
 ---
 
-## Removed Locations (0)
+## Removed Locations (2)
 
-*(No removed locations)*
+- `H852AA60P` [順豐智能櫃] 自助櫃 大埔太和邨福和樓 -- 香港大埔區太和邨福和樓地下*
+- `H852BD82P` [順豐智能櫃] 自助櫃 大角咀瓏璽 -- 大角咀瓏璽8座B2層升降機大堂只供住戶使用*
 
 ---
 

@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-26 12:03 (HKT UTC+8)`
+> **Last Updated**: `2026-09-27 12:17 (HKT UTC+8)`
 
 ---
 
@@ -8,13 +8,13 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1659 |
+| **Previous total** | 1657 |
 | **Current total** | 1657 |
 | **Stores** | 138 |
 | **Lockers** | 1051 |
 | **Partners** | 468 |
 | **Added** | 0 |
-| **Removed** | 2 |
+| **Removed** | 0 |
 | **Updated** | 0 |
 | **Unchanged** | 1657 |
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1659 | 1657 | -2 | -0.12% | previous_locations_feed | ✅ PASS |
+| total | 1657 | 1657 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1053 | 1051 | -2 | -0.19% | previous_locations_feed | ✅ PASS |
+| lockers | 1051 | 1051 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 468 | 468 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1654 | 1652 | -2 | -0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1653 | 1651 | -2 | -0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1652 | 1652 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1651 | 1651 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -102,10 +102,9 @@
 
 ---
 
-## Removed Locations (2)
+## Removed Locations (0)
 
-- `H852AA60P` [順豐智能櫃] 自助櫃 大埔太和邨福和樓 -- 香港大埔區太和邨福和樓地下*
-- `H852BD82P` [順豐智能櫃] 自助櫃 大角咀瓏璽 -- 大角咀瓏璽8座B2層升降機大堂只供住戶使用*
+*(No removed locations)*
 
 ---
 

@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-28 12:18 (HKT UTC+8)`
+> **Last Updated**: `2026-09-29 12:48 (HKT UTC+8)`
 
 ---
 
@@ -13,10 +13,10 @@
 | **Stores** | 138 |
 | **Lockers** | 1051 |
 | **Partners** | 468 |
-| **Added** | 0 |
-| **Removed** | 0 |
-| **Updated** | 0 |
-| **Unchanged** | 1657 |
+| **Added** | 1 |
+| **Removed** | 1 |
+| **Updated** | 1 |
+| **Unchanged** | 1655 |
 
 ---
 
@@ -96,18 +96,19 @@
 
 ---
 
-## Added Locations (0)
+## Added Locations (1)
 
-*(No added locations)*
-
----
-
-## Removed Locations (0)
-
-*(No removed locations)*
+- `H852TF01P` [順豐智能櫃] 自助櫃 天后銅鑼灣道134號 -- 天后銅鑼灣道134號地下
 
 ---
 
-## Updated Locations (0)
+## Removed Locations (1)
 
-*(No updated locations)*
+- `H852AA64P` [順豐智能櫃] 自助櫃 大埔大元商場地下 -- 香港大埔大元商場地下(近商場指示牌)*
+
+---
+
+## Updated Locations (1)
+
+- `852UD3001` 合作店 韻瑤琴室
+  - address_en: `"G/F 249 So Kwun Wat Tsuen Road, Tuen Mun,NT*"` -> `"G/F 249 So Kwun Wat Tsuen Road, So Kwun Wat，Tuen Mun,NT*"`

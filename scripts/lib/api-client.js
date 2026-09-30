@@ -95,15 +95,14 @@ export async function fetchWithRetry(url, options = {}, config = {}) {
 
       lastError = `HTTP ${response.status} ${response.statusText}`;
     } catch (err) {
-      lastError = err.message || String(err);
+      const errorCode = err.cause?.code || err.code;
+      lastError = [err.message || String(err), errorCode, err.cause?.message].filter(Boolean).join(': ');
 
       const isRetryable =
         err.name === 'TimeoutError' ||
         err.name === 'AbortError' ||
-        err.code === 'ECONNRESET' ||
-        err.code === 'ECONNREFUSED' ||
-        err.code === 'ENOTFOUND' ||
-        err.cause?.code === 'ECONNRESET';
+        ['ECONNRESET', 'ECONNREFUSED', 'ENOTFOUND', 'EAI_AGAIN', 'ETIMEDOUT',
+          'UND_ERR_CONNECT_TIMEOUT', 'UND_ERR_SOCKET'].includes(errorCode);
 
       if (!isRetryable) {
         return { ok: false, status: null, attempts: attempt, error: lastError, data: null };

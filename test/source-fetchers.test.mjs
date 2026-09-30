@@ -29,6 +29,26 @@ test('api-client: preserves and hashes exact JSON response text before parsing',
   }
 });
 
+test('api-client: retries wrapped connection timeouts and preserves their cause', async () => {
+  const originalFetch = globalThis.fetch;
+  let calls = 0;
+  globalThis.fetch = async () => {
+    calls++;
+    throw new TypeError('fetch failed', {
+      cause: Object.assign(new Error('Connection timed out'), { code: 'UND_ERR_CONNECT_TIMEOUT' })
+    });
+  };
+  try {
+    const result = await fetchWithRetry('https://example.test/api', {}, { maxAttempts: 2 });
+    assert.equal(calls, 2);
+    assert.equal(result.attempts, 2);
+    assert.equal(result.ok, false);
+    assert.equal(result.error, 'fetch failed: UND_ERR_CONNECT_TIMEOUT: Connection timed out');
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
 test('source-fetchers: extractLineSegments splits multi-code lines deterministically', () => {
   const line = '香港柴灣 852PC3002 興華邨和興樓210號鋪^09:00-20:00 852PC3004 興華邨安興樓101號鋪^10:00-20:00';
   const segments = extractLineSegments(line);

@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-09-30 13:39 (HKT UTC+8)`
+> **Last Updated**: `2026-10-01 12:46 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1657 |
-| **Current total** | 1656 |
+| **Previous total** | 1656 |
+| **Current total** | 1654 |
 | **Stores** | 138 |
-| **Lockers** | 1051 |
+| **Lockers** | 1049 |
 | **Partners** | 467 |
 | **Added** | 0 |
-| **Removed** | 1 |
+| **Removed** | 2 |
 | **Updated** | 1 |
-| **Unchanged** | 1655 |
+| **Unchanged** | 1653 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1657 | 1656 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1656 | 1654 | -2 | -0.12% | previous_locations_feed | ✅ PASS |
 | stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1051 | 1051 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 468 | 467 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1652 | 1651 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1651 | 1650 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1051 | 1049 | -2 | -0.19% | previous_locations_feed | ✅ PASS |
+| partners | 467 | 467 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1651 | 1649 | -2 | -0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1650 | 1648 | -2 | -0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1651 |
-| EN unique codes | 1650 |
+| TC unique codes | 1649 |
+| EN unique codes | 1648 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.5% |
 | SSR records | 188 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1656 |
+| District resolved | 1654 |
 | District unresolved | 0 |
-| With English data | 1650 |
+| With English data | 1648 |
 | Missing English | 6 |
 
 ---
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 258 |
+| **Record Quality Warnings** | 259 |
 | **Record Quality Info Flags** | 59 |
 | **Record Quality Errors** | 0 |
 
@@ -73,7 +73,7 @@
 
 | Flag Type | Count |
 | :--- | :--- |
-| ENGLISH_FIELD_CONTAINS_CJK | 96 |
+| ENGLISH_FIELD_CONTAINS_CJK | 97 |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 95 |
 | ADMIN_DISTRICT_ALIAS_APPLIED | 43 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
@@ -102,14 +102,20 @@
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (2)
 
-- `852PB3009` [順豐合作點] 合作店 家的方便站 -- 柴灣祥利街18號祥達中心地下4a鋪 家的方便站*
+- `H852BD94P` [順豐智能櫃] 自助櫃 大角咀利奧坊．凱岸 -- 大角咀利奧坊．凱岸會所室內位置只供住戶使用*
+- `H852TF01P` [順豐智能櫃] 自助櫃 天后銅鑼灣道134號 -- 天后銅鑼灣道134號地下
 
 ---
 
 ## Updated Locations (1)
 
-- `852FBL` 天水圍天瑞商場順豐站
-  - business_hours: `"周一至周五,10:30-22:00;周日及公眾假期,12:00-20:00；周六:12:00-20:00"` -> `"周一至周五,11:00-22:00;周日及公眾假期,12:00-20:00; 周六,12:00-20:00"`
-  - quality_flags: -SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT
+- `852UA3013` 合作點 法靈自提點
+  - name: `"合作點 小虎士多"` -> `"合作點 法靈自提點"`
+  - name_en: `"Indiv. Store Shop A, G/F, Ma Tin Tsuen, 172 Kung Um Rd, Yuen Long, NT"` -> `"法靈自提點"`
+  - address: `"新界元朗公庵路馬田村172號A地下 小虎士多*"` -> `"新界元朗公庵路馬田村122號 法靈自提點*"`
+  - address_en: `"Shop A, G/F, Ma Tin Tsuen, 172 Kung Um Rd, Yuen Long, NT*"` -> `"Shop A, G/F, Ma Tin Tsuen, 122 Kung Um Rd, Yuen Long, NT*"`
+  - location.latitude: `22.4394573` -> `22.44012209`
+  - location.longitude: `114.025686` -> `114.0240116`
+  - quality_flags: +ENGLISH_FIELD_CONTAINS_CJK

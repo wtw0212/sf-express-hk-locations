@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-10-01 12:46 (HKT UTC+8)`
+> **Last Updated**: `2026-10-02 12:38 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1656 |
+| **Previous total** | 1654 |
 | **Current total** | 1654 |
 | **Stores** | 138 |
 | **Lockers** | 1049 |
 | **Partners** | 467 |
 | **Added** | 0 |
-| **Removed** | 2 |
-| **Updated** | 1 |
-| **Unchanged** | 1653 |
+| **Removed** | 0 |
+| **Updated** | 0 |
+| **Unchanged** | 1654 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1656 | 1654 | -2 | -0.12% | previous_locations_feed | ✅ PASS |
+| total | 1654 | 1654 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1051 | 1049 | -2 | -0.19% | previous_locations_feed | ✅ PASS |
+| lockers | 1049 | 1049 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 467 | 467 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1651 | 1649 | -2 | -0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1650 | 1648 | -2 | -0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1649 | 1649 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1648 | 1648 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -102,20 +102,12 @@
 
 ---
 
-## Removed Locations (2)
+## Removed Locations (0)
 
-- `H852BD94P` [順豐智能櫃] 自助櫃 大角咀利奧坊．凱岸 -- 大角咀利奧坊．凱岸會所室內位置只供住戶使用*
-- `H852TF01P` [順豐智能櫃] 自助櫃 天后銅鑼灣道134號 -- 天后銅鑼灣道134號地下
+*(No removed locations)*
 
 ---
 
-## Updated Locations (1)
+## Updated Locations (0)
 
-- `852UA3013` 合作點 法靈自提點
-  - name: `"合作點 小虎士多"` -> `"合作點 法靈自提點"`
-  - name_en: `"Indiv. Store Shop A, G/F, Ma Tin Tsuen, 172 Kung Um Rd, Yuen Long, NT"` -> `"法靈自提點"`
-  - address: `"新界元朗公庵路馬田村172號A地下 小虎士多*"` -> `"新界元朗公庵路馬田村122號 法靈自提點*"`
-  - address_en: `"Shop A, G/F, Ma Tin Tsuen, 172 Kung Um Rd, Yuen Long, NT*"` -> `"Shop A, G/F, Ma Tin Tsuen, 122 Kung Um Rd, Yuen Long, NT*"`
-  - location.latitude: `22.4394573` -> `22.44012209`
-  - location.longitude: `114.025686` -> `114.0240116`
-  - quality_flags: +ENGLISH_FIELD_CONTAINS_CJK
+*(No updated locations)*

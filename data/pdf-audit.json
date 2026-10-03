@@ -1,77 +1,77 @@
 {
-  "source_retrieved_at": "2026-10-02 12:38 (HKT UTC+8)",
-  "generated_at": "2026-10-02 12:38 (HKT UTC+8)",
+  "source_retrieved_at": "2026-10-03 12:20 (HKT UTC+8)",
+  "generated_at": "2026-10-03 12:20 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-10-02T04:38:40.539Z",
+      "document_retrieved_at": "2026-10-03T04:20:56.991Z",
       "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-10-02T04:38:40.977Z",
+      "document_retrieved_at": "2026-10-03T04:20:57.391Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-10-02T04:38:41.281Z",
+      "document_retrieved_at": "2026-10-03T04:20:58.384Z",
       "document_binary_sha256": "91c596bfe3fa79fe51a00835de5e1dbddc86def3c2a77d5009c4bc71efe1220e",
       "extracted_text_sha256": "e1720f744eec5086dd1d74167dc076eabe1c95f279594a1ec210d7e6200f03d3"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-10-02T04:38:41.493Z",
+      "document_retrieved_at": "2026-10-03T04:20:58.548Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-10-02T04:38:41.648Z",
-      "document_binary_sha256": "317043d2b97b6b2b4eb87d23b295be228c96b63396b96c1ee12b28ecc05ad4ad",
-      "extracted_text_sha256": "dd2c12e0a1991a9565f25592754aa463f2db3aa593d5e8199f8ce461d133d3c4"
+      "document_retrieved_at": "2026-10-03T04:20:58.710Z",
+      "document_binary_sha256": "d11d9c1c8a104fe0ad62e6b68fad494f4624271e5b3238c16834979a32e24dcf",
+      "extracted_text_sha256": "d1b5c46caade264dd006972735cfef315ddab880d6a428fd5ce31317b30507a1"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-10-02T04:38:42.168Z",
+      "document_retrieved_at": "2026-10-03T04:20:59.014Z",
       "document_binary_sha256": "f16310d0ec6a3b7612635ddba08a9c69aac9a87d0625b7ac22e5fe671489e5ee",
       "extracted_text_sha256": "4988771b1d6034a2e176a05e17c9547abb298465a84863fc056fcf7a6e4b51b1"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-10-02T04:38:42.416Z",
+      "document_retrieved_at": "2026-10-03T04:20:59.209Z",
       "document_binary_sha256": "b10da1048819ee4afad1947dd366de8fe10c32ba5b9db8ddb3982ef722d81f1a",
       "extracted_text_sha256": "72962a1876dc5bb1c3403838040bf8aadd5f104f13f3981e8f29a77c3e75485b"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-10-02T04:38:42.658Z",
+      "document_retrieved_at": "2026-10-03T04:20:59.444Z",
       "document_binary_sha256": "9a9e2984384f10ddeec4643fd79698990e579808e8a5be78102d99b2c3e0f36d",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
   },
   "summary": {
-    "parsed_pdf_record_count": 432,
-    "api_pdf_conflict_count": 427,
-    "api_pdf_difference_count": 427,
+    "parsed_pdf_record_count": 431,
+    "api_pdf_conflict_count": 426,
+    "api_pdf_difference_count": 426,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 427,
+      "semantic_conflict": 426,
       "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 939,
+      "semantic_conflict": 936,
       "name_specificity_difference": 208,
       "formatting_difference": 0,
       "equivalent_difference": 128
@@ -11166,7 +11166,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 5,
+        "row_index": 4,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 柴灣快提站852PB3007香港柴灣宏德居B商場1/F，E鋪^852PB3007^取件 星期一至六: 13:00-20:00 星期日、公眾假期: 休息"
       }
     },
@@ -11203,7 +11203,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 6,
+        "row_index": 5,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 柴灣易提站852PB3008香港柴灣道111號高威閣東港城商場G樓139鋪^852PB3008^取件 星期一至六: 14:00-20:00 星期日、公眾假期: 休息"
       }
     },
@@ -11240,7 +11240,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 7,
+        "row_index": 6,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 黃竹坑阿婆自提點852TE3006香港香港仔興和街11號田灣街市1MN82號舖^852TE3006^取件 星期一至六:13:00-20:00 星期日:13:00-20:00 公眾假期:休息"
       }
     },
@@ -11277,7 +11277,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 8,
+        "row_index": 7,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 堅尼地城盈盈乾洗852MA3007堅尼地城北街7號地舖&852MA3007^取件 星期一至六:09:00-20:00 星期日及公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
       }
     },
@@ -11314,7 +11314,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 9,
+        "row_index": 8,
         "raw_row": "快件限制 堅尼地城富麗美沖印852MA3010堅尼地城卑路乍街144-148號金豪閣2J鋪^852MA3010^取件 星期一：12:30-20:30 星期二至六： 11:00-20:30（16:30- 17:30午休） 星期日： 12:30-18:30，公眾假期休息"
       }
     },
@@ -11351,7 +11351,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 10,
+        "row_index": 9,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 堅尼地城田園坊852MA3011香港堅尼地城吉席街30號吉豐大廈地下A舖^852MA3011^取件 星期一至六:12:00-20:30 星期日及公眾假期: 12:00-18:00"
       }
     },
@@ -11388,7 +11388,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 11,
+        "row_index": 10,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 堅尼地城士美菲自提點852MA3018士美菲路47號聯興新樓地下H鋪^852MA3018^取件 星期一至六:12:00-20:00（15:00- 16:00午休） 星期日及公眾假期: 12:00-16:00"
       }
     },
@@ -11425,7 +11425,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 12,
+        "row_index": 11,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 金鐘 揚壹物流統一中 心 852TA3003金鐘金鐘道95號統一中心2樓2041舖^852TA3003^取件 星期一至六:12:00-21:00(午休15:00- 16:00) 星期日及公眾假期: 11:00-15:00"
       }
     },
@@ -11462,7 +11462,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 13,
+        "row_index": 12,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 上環上環寶寶852MD3001 香港上環皇后大道西2 -12號百匯電腦城廣場(聯發商業中心)1 樓 A42鋪^852MD3001^ 取件 星期一至五:11:00-19:00 星期六:13:00-18:00 星期日、公眾假期: 休息"
       }
     },
@@ -11499,7 +11499,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 14,
+        "row_index": 13,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 筲箕灣 rainbow pet shop 852PC3003香港筲箕灣東大街54-60號東強大廈5-6號地舖地下^852PC3003取件 星期一至五: 12:00-20:30 星期六、日、公眾假期: 12:00-20:00 (午休16:30-17:30)"
       }
     },
@@ -11536,7 +11536,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 15,
+        "row_index": 14,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 灣仔藝舍洗衣專門店852T3003香港灣仔灣仔道177-179地下4號舖^852T3003^取件 星期一至日: 08:00-20:00, 公眾假期: 休息"
       }
     },
@@ -11573,7 +11573,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 16,
+        "row_index": 15,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 西灣河 平記工程有限公 司 852PA3006香港西灣河大石街20號地舖^852PA3006^取件 星期一至六: 12:00-20:00 星期日、公眾假期: 休息"
       }
     },
@@ -11610,7 +11610,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 17,
+        "row_index": 16,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 西營盤樹熊屋自取站852MA3002西營盤德輔道西343號均益大厦2期13號B鋪^852MA3002^取件 星期一至六: 13:00-19:00 星期日、公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
       }
     },
@@ -11647,7 +11647,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 19,
+        "row_index": 18,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 西營盤花膠雜貨小店852MA3009西營盤正街18號啟正中心20樓05室^852MA3009^取件 星期一至五: 13:00-19:00 星期六:13:00-17:00 星期日、公眾假期:休息"
       }
     },
@@ -11684,7 +11684,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 20,
+        "row_index": 19,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 西營盤第一街自提點852MA3015香港西營盤第一街77B號地下^852MA3015^取件 星期一至六: 12:00-19:30 星期日:12:00-16:00 公眾假期:休息"
       }
     },
@@ -11721,7 +11721,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 21,
+        "row_index": 20,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 香港仔家藝屋852TE3005香港香港仔中心利群商場1樓32號^852TE3005^取件 星期一至六:12:00-20:00 星期日:12:00-18:00 公眾假期: 休息"
       }
     },
@@ -11758,7 +11758,7 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 22,
+        "row_index": 21,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 鴨脷洲利澤樓自取點852TB3005鴨脷洲西村利澤樓16B號舖羽毛球場^852TB3005^取件 星期一至六: 12:00-21:00 星期日、公眾假期:10:00-18:00"
       }
     },
@@ -11795,45 +11795,8 @@
       },
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 23,
+        "row_index": 22,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 鰂魚涌速寄2852PA3004香港鰂魚涌英皇道1056號東匯坊商場地庫Z2號舖^852PA3004^取件 星期一至六:12:00-20:00 星期日: 休息 公眾假期: 12:00-20:00"
-      }
-    },
-    {
-      "code": "852PA3012",
-      "api_name": "合作店 海光自提點",
-      "pdf_name": "鰂魚涌海光自提點",
-      "api_address": "香港鰂魚涌海光商場2A3號鋪 (海光自提點)*",
-      "pdf_address": "香港鰂魚涌海光商場2A3號舖",
-      "api_business_hours": "12:00-19:30 周六:12:00-19:30 周日:12:00-16:00",
-      "pdf_business_hours": "星期一至六: 12:00-19:30 星期日、公眾假期:12:00-16:00",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作店 海光自提點",
-          "pdf": "鰂魚涌海光自提點",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "香港鰂魚涌海光商場2A3號鋪 (海光自提點)*",
-          "pdf": "香港鰂魚涌海光商場2A3號舖",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "12:00-19:30 周六:12:00-19:30 周日:12:00-16:00",
-          "pdf": "星期一至六: 12:00-19:30 星期日、公眾假期:12:00-16:00",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_HK_TC",
-      "parser_location": {
-        "row_index": 24,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 鰂魚涌海光自提點852PA3012香港鰂魚涌海光商場2A3號舖^852PA3012^取件 星期一至六: 12:00-19:30 星期日、公眾假期:12:00-16:00"
       }
     },
     {
@@ -15848,16 +15811,16 @@
   "reviewed_pdf_drift": [],
   "new_pdf_only_candidates": [
     {
-      "code": "852PB3009",
-      "name": "柴灣家的方便站",
-      "address": "柴灣祥利街18號祥達中心地下4a鋪",
+      "code": "852PA3012",
+      "name": "鰂魚涌海光自提點",
+      "address": "香港鰂魚涌海光商場2A3號舖",
       "district": null,
-      "sub_district": "柴灣",
-      "business_hours": "星期一至五: 11:30-20:30 星期六:11:30-20:30 星期日、公眾假期:11:30-20:30",
+      "sub_district": "鰂魚涌",
+      "business_hours": "星期一至六: 12:00-19:30 星期日、公眾假期:12:00-16:00",
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 4,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 柴灣家的方便站852PB3009柴灣祥利街18號祥達中心地下4a鋪^852PB3009^取件 星期一至五: 11:30-20:30 星期六:11:30-20:30 星期日、公眾假期:11:30-20:30"
+        "row_index": 23,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 鰂魚涌海光自提點852PA3012香港鰂魚涌海光商場2A3號舖^852PA3012^取件 星期一至六: 12:00-19:30 星期日、公眾假期:12:00-16:00"
       }
     },
     {
@@ -16104,7 +16067,7 @@
         "_source": "pdf_partner",
         "_source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
         "_parser_location": {
-          "row_index": 18,
+          "row_index": 17,
           "raw_row": "快件限制 西營盤港大自提點852MA3017石塘咀皇后大道西425Z永華大廈後座地舖^852MA3003^取件 星期一至五: 11:00-20:00 星期六:11:00-17:00 星期日、公眾假期: OFF"
         }
       },
@@ -16113,7 +16076,7 @@
       ],
       "document_id": "ASP_HK_TC",
       "parser_location": {
-        "row_index": 18,
+        "row_index": 17,
         "raw_row": "快件限制 西營盤港大自提點852MA3017石塘咀皇后大道西425Z永華大廈後座地舖^852MA3003^取件 星期一至五: 11:00-20:00 星期六:11:00-17:00 星期日、公眾假期: OFF"
       }
     },

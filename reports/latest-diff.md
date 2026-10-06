@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-10-05 12:39 (HKT UTC+8)`
+> **Last Updated**: `2026-10-06 13:25 (HKT UTC+8)`
 
 ---
 
@@ -10,13 +10,13 @@
 | :--- | :--- |
 | **Previous total** | 1654 |
 | **Current total** | 1654 |
-| **Stores** | 138 |
+| **Stores** | 139 |
 | **Lockers** | 1050 |
-| **Partners** | 466 |
-| **Added** | 0 |
-| **Removed** | 0 |
-| **Updated** | 0 |
-| **Unchanged** | 1654 |
+| **Partners** | 465 |
+| **Added** | 1 |
+| **Removed** | 1 |
+| **Updated** | 1 |
+| **Unchanged** | 1652 |
 
 ---
 
@@ -25,9 +25,9 @@
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
 | total | 1654 | 1654 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| stores | 138 | 138 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| stores | 138 | 139 | +1 | +0.72% | previous_locations_feed | ✅ PASS |
 | lockers | 1050 | 1050 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 466 | 466 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| partners | 466 | 465 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
 | tcCodes | 1649 | 1649 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
 | enCodes | 1648 | 1648 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
@@ -63,8 +63,8 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 258 |
-| **Record Quality Info Flags** | 59 |
+| **Record Quality Warnings** | 257 |
+| **Record Quality Info Flags** | 61 |
 | **Record Quality Errors** | 0 |
 
 ---
@@ -73,15 +73,15 @@
 
 | Flag Type | Count |
 | :--- | :--- |
-| ENGLISH_FIELD_CONTAINS_CJK | 96 |
+| ENGLISH_FIELD_CONTAINS_CJK | 95 |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 95 |
 | ADMIN_DISTRICT_ALIAS_APPLIED | 43 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 21 |
-| DUPLICATE_ADDRESS_SUFFIX | 9 |
+| DUPLICATE_ADDRESS_SUFFIX | 10 |
 | MISSING_ENGLISH_RECORD | 6 |
 | MISSING_COORDINATES | 5 |
-| SOURCE_FORMATTING_ARTIFACT | 2 |
+| SOURCE_FORMATTING_ARTIFACT | 3 |
 | SUBDISTRICT_ADDRESS_CONFLICT | 2 |
 
 ---
@@ -96,18 +96,19 @@
 
 ---
 
-## Added Locations (0)
+## Added Locations (1)
 
-*(No added locations)*
-
----
-
-## Removed Locations (0)
-
-*(No removed locations)*
+- `852TF` [順豐站] 大坑銅鑼灣道順豐站 -- 香港灣仔區大坑香港大坑銅鑼灣道134號地下*^
 
 ---
 
-## Updated Locations (0)
+## Removed Locations (1)
 
-*(No updated locations)*
+- `852GA3007` [順豐合作點] 合作店 聚寶店 -- 大窩口荃灣花園第一期商場LG 48鋪(如意閣地下) 聚寶店*
+
+---
+
+## Updated Locations (1)
+
+- `852MA` 西營盤兆祥坊順豐站
+  - business_hours: `"周一至周六,09:00-20:00;周日及勞工假期,休息"` -> `"周一至周六,09:00-20:00"`

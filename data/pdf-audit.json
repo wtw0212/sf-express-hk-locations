@@ -1,82 +1,82 @@
 {
-  "source_retrieved_at": "2026-10-05 12:39 (HKT UTC+8)",
-  "generated_at": "2026-10-05 12:39 (HKT UTC+8)",
+  "source_retrieved_at": "2026-10-06 13:25 (HKT UTC+8)",
+  "generated_at": "2026-10-06 13:25 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-10-05T04:40:44.321Z",
+      "document_retrieved_at": "2026-10-06T05:26:10.277Z",
       "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-10-05T04:40:44.543Z",
+      "document_retrieved_at": "2026-10-06T05:26:10.481Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-10-05T04:40:44.846Z",
+      "document_retrieved_at": "2026-10-06T05:26:10.776Z",
       "document_binary_sha256": "91c596bfe3fa79fe51a00835de5e1dbddc86def3c2a77d5009c4bc71efe1220e",
       "extracted_text_sha256": "e1720f744eec5086dd1d74167dc076eabe1c95f279594a1ec210d7e6200f03d3"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-10-05T04:40:44.919Z",
+      "document_retrieved_at": "2026-10-06T05:26:10.854Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-10-05T04:40:45.030Z",
+      "document_retrieved_at": "2026-10-06T05:26:10.955Z",
       "document_binary_sha256": "d11d9c1c8a104fe0ad62e6b68fad494f4624271e5b3238c16834979a32e24dcf",
       "extracted_text_sha256": "d1b5c46caade264dd006972735cfef315ddab880d6a428fd5ce31317b30507a1"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-10-05T04:40:45.212Z",
+      "document_retrieved_at": "2026-10-06T05:26:11.129Z",
       "document_binary_sha256": "f16310d0ec6a3b7612635ddba08a9c69aac9a87d0625b7ac22e5fe671489e5ee",
       "extracted_text_sha256": "4988771b1d6034a2e176a05e17c9547abb298465a84863fc056fcf7a6e4b51b1"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-10-05T04:40:45.464Z",
+      "document_retrieved_at": "2026-10-06T05:26:11.323Z",
       "document_binary_sha256": "b10da1048819ee4afad1947dd366de8fe10c32ba5b9db8ddb3982ef722d81f1a",
       "extracted_text_sha256": "72962a1876dc5bb1c3403838040bf8aadd5f104f13f3981e8f29a77c3e75485b"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-10-05T04:40:45.552Z",
+      "document_retrieved_at": "2026-10-06T05:26:11.413Z",
       "document_binary_sha256": "9a9e2984384f10ddeec4643fd79698990e579808e8a5be78102d99b2c3e0f36d",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
   },
   "summary": {
     "parsed_pdf_record_count": 431,
-    "api_pdf_conflict_count": 426,
-    "api_pdf_difference_count": 426,
+    "api_pdf_conflict_count": 425,
+    "api_pdf_difference_count": 425,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 426,
+      "semantic_conflict": 425,
       "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 936,
+      "semantic_conflict": 933,
       "name_specificity_difference": 208,
       "formatting_difference": 0,
       "equivalent_difference": 128
     },
-    "new_pdf_only_candidate_count": 2,
+    "new_pdf_only_candidate_count": 3,
     "missing_reviewed_record_count": 0,
     "quarantined_record_count": 11
   },
@@ -13656,43 +13656,6 @@
       }
     },
     {
-      "code": "852GA3007",
-      "api_name": "合作店 聚寶店",
-      "pdf_name": "大窩口聚寶店",
-      "api_address": "大窩口荃灣花園第一期商場LG 48鋪(如意閣地下) 聚寶店*",
-      "pdf_address": "大窩口荃灣花園第一期商場LG 48舖(如意閣地 下)",
-      "api_business_hours": "11:00-19:00 周六:11:00-19:00",
-      "pdf_business_hours": "星期一至六:11:00-19:00 星期日及公眾假期:休息",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作店 聚寶店",
-          "pdf": "大窩口聚寶店",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "大窩口荃灣花園第一期商場LG 48鋪(如意閣地下) 聚寶店*",
-          "pdf": "大窩口荃灣花園第一期商場LG 48舖(如意閣地 下)",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "11:00-19:00 周六:11:00-19:00",
-          "pdf": "星期一至六:11:00-19:00 星期日及公眾假期:休息",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_NT_TC",
-      "parser_location": {
-        "row_index": 10,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 大窩口聚寶店852GA3007 大窩口荃灣花園第一期商場LG 48舖(如意閣地 下)^852GA3007^ 取件 星期一至六:11:00-19:00 星期日及公眾假期:休息"
-      }
-    },
-    {
       "code": "852GA3008",
       "api_name": "合作店 集運家族",
       "pdf_name": "大窩口集運家族",
@@ -15834,6 +15797,19 @@
       "parser_location": {
         "row_index": 8,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 黃大仙醉Chill852J3006 九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖^852J3006^ 取件 星期一至日: 12:00-20:00 公眾假期: 休息"
+      }
+    },
+    {
+      "code": "852GA3007",
+      "name": "大窩口聚寶店",
+      "address": "大窩口荃灣花園第一期商場LG 48舖(如意閣地 下)",
+      "district": null,
+      "sub_district": null,
+      "business_hours": "星期一至六:11:00-19:00 星期日及公眾假期:休息",
+      "document_id": "ASP_NT_TC",
+      "parser_location": {
+        "row_index": 10,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 大窩口聚寶店852GA3007 大窩口荃灣花園第一期商場LG 48舖(如意閣地 下)^852GA3007^ 取件 星期一至六:11:00-19:00 星期日及公眾假期:休息"
       }
     }
   ],

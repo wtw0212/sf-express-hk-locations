@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-10-06 13:25 (HKT UTC+8)`
+> **Last Updated**: `2026-10-07 12:54 (HKT UTC+8)`
 
 ---
 
@@ -11,12 +11,12 @@
 | **Previous total** | 1654 |
 | **Current total** | 1654 |
 | **Stores** | 139 |
-| **Lockers** | 1050 |
-| **Partners** | 465 |
-| **Added** | 1 |
-| **Removed** | 1 |
+| **Lockers** | 1051 |
+| **Partners** | 464 |
+| **Added** | 2 |
+| **Removed** | 2 |
 | **Updated** | 1 |
-| **Unchanged** | 1652 |
+| **Unchanged** | 1651 |
 
 ---
 
@@ -25,9 +25,9 @@
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
 | total | 1654 | 1654 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| stores | 138 | 139 | +1 | +0.72% | previous_locations_feed | ✅ PASS |
-| lockers | 1050 | 1050 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 466 | 465 | -1 | -0.21% | previous_locations_feed | ✅ PASS |
+| stores | 139 | 139 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1050 | 1051 | +1 | +0.1% | previous_locations_feed | ✅ PASS |
+| partners | 465 | 464 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
 | tcCodes | 1649 | 1649 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
 | enCodes | 1648 | 1648 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
@@ -64,7 +64,7 @@
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
 | **Record Quality Warnings** | 257 |
-| **Record Quality Info Flags** | 61 |
+| **Record Quality Info Flags** | 60 |
 | **Record Quality Errors** | 0 |
 
 ---
@@ -75,7 +75,7 @@
 | :--- | :--- |
 | ENGLISH_FIELD_CONTAINS_CJK | 95 |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 95 |
-| ADMIN_DISTRICT_ALIAS_APPLIED | 43 |
+| ADMIN_DISTRICT_ALIAS_APPLIED | 42 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 21 |
 | DUPLICATE_ADDRESS_SUFFIX | 10 |
@@ -96,19 +96,22 @@
 
 ---
 
-## Added Locations (1)
+## Added Locations (2)
 
-- `852TF` [順豐站] 大坑銅鑼灣道順豐站 -- 香港灣仔區大坑香港大坑銅鑼灣道134號地下*^
+- `H852BD94P` [順豐智能櫃] 自助櫃 大角咀利奧坊．凱岸 -- 大角咀利奧坊．凱岸會所室內位置只供住戶使用*
+- `H852TF01P` [順豐智能櫃] 自助櫃 天后銅鑼灣道134號地下順豐站 -- 天后銅鑼灣道134號地下順豐站*
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (2)
 
-- `852GA3007` [順豐合作點] 合作店 聚寶店 -- 大窩口荃灣花園第一期商場LG 48鋪(如意閣地下) 聚寶店*
+- `852M3002` [順豐合作點] 合作點 潮點集運 -- 香港長洲大新後街122號地下潮點集運*
+- `H852FE27P` [順豐智能櫃] 自助櫃 馬鞍山欣安邨欣悅樓 -- 香港馬鞍山欣安邨欣悅樓地下*
 
 ---
 
 ## Updated Locations (1)
 
-- `852MA` 西營盤兆祥坊順豐站
-  - business_hours: `"周一至周六,09:00-20:00;周日及勞工假期,休息"` -> `"周一至周六,09:00-20:00"`
+- `852AAL` 將軍澳茵怡花園順豐站
+  - business_hours: `"周一至周五,10:30-22:00;周日及公眾假期,12:00-20:00; 周六, 12:00-20:00"` -> `"周一至周五,10:30-22:00"`
+  - quality_flags: ~SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT

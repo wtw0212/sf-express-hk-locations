@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-10-09 13:07 (HKT UTC+8)",
-  "generated_at": "2026-10-09 13:07 (HKT UTC+8)",
-  "retrieved_at": "2026-10-09 13:07 (HKT UTC+8)",
+  "source_retrieved_at": "2026-10-10 12:53 (HKT UTC+8)",
+  "generated_at": "2026-10-10 12:53 (HKT UTC+8)",
+  "retrieved_at": "2026-10-10 12:53 (HKT UTC+8)",
   "counts": {
     "total": 1656,
     "stores": 139,
@@ -11,10 +11,10 @@
   },
   "count_deltas": {
     "total": {
-      "previous": 1655,
+      "previous": 1656,
       "current": 1656,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -38,28 +38,28 @@
       "gate_result": "pass"
     },
     "partners": {
-      "previous": 464,
+      "previous": 465,
       "current": 465,
-      "delta": 1,
-      "delta_pct": 0.22,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
     },
     "tcCodes": {
-      "previous": 1650,
+      "previous": 1651,
       "current": 1651,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.tc_record_count",
       "gate_result": "pass"
     },
     "enCodes": {
-      "previous": 1649,
+      "previous": 1650,
       "current": 1650,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.en_record_count",
       "gate_result": "pass"
@@ -77,7 +77,7 @@
       "areas_failed": 0
     },
     "ssr": {
-      "count": 188,
+      "count": 190,
       "errors": []
     },
     "partner_pdf": {
@@ -259,19 +259,19 @@
   },
   "quality": {
     "pipeline_blocking_errors": 0,
-    "pipeline_warnings": 6,
+    "pipeline_warnings": 5,
     "record_flag_counts_by_severity": {
-      "info": 60,
-      "warning": 258,
+      "info": 61,
+      "warning": 257,
       "error": 0
     },
     "flag_counts_by_type": {
       "SOURCE_TC_EN_UNIT_CONFLICT": 38,
-      "ENGLISH_FIELD_CONTAINS_CJK": 96,
+      "ENGLISH_FIELD_CONTAINS_CJK": 95,
       "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 95,
       "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT": 21,
       "DUPLICATE_ADDRESS_SUFFIX": 10,
-      "ADMIN_DISTRICT_ALIAS_APPLIED": 42,
+      "ADMIN_DISTRICT_ALIAS_APPLIED": 43,
       "MISSING_ENGLISH_RECORD": 6,
       "SOURCE_FORMATTING_ARTIFACT": 3,
       "SUBDISTRICT_ADDRESS_CONFLICT": 2,
@@ -280,22 +280,22 @@
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "53863e693c154e03ca67a28f417e3c88fe40b641201b7283e477f74cbbac2d5f",
-      "semantic_sha256": "602d869d1eeb03e10b5a71e87e55cb0c466833bef21b18e3f8f181000c05709f",
+      "raw_snapshot_sha256": "921bd4b4e01a1a8475f6a9d0d3880ad4f51fe3b4bd66c0c2fd82dafebc20ed52",
+      "semantic_sha256": "5e5d32e00735f4bcf2b8bb643cf09b6397e53ca4b149b97ebc2b2aefe55f3ead",
       "record_count": 1651,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "dc21fe7c8b4020d11bb9b0a5e3e8786643b17d44db8a1922251a26741243eb48",
-      "semantic_sha256": "1e08dfdca0813270a4cfb6a1b73fadd7983981a955243320486bccab39c6ab91",
+      "raw_snapshot_sha256": "15269ed298cd6dd56e39b36a7071f5469e64856190a14a4a9d42432f3740b252",
+      "semantic_sha256": "1844f2e367f25b9d386a7e5f4359097c5999b75ab5185851b904e1afe38dfb7f",
       "record_count": 1650,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_en/record_hashes"
     },
     "ssr": {
-      "semantic_sha256": "034bd3587451aa4c7a01df303c8c3aec5229c6d0f4461ecd76bea3e512f674cc",
-      "record_count": 94,
+      "semantic_sha256": "14aa55aebb9a996746b59e2aa06c23f0732a52887007c02fdf0ee6782f707282",
+      "record_count": 95,
       "duplicate_codes": [
         {
           "serviceCode": "H852A001S",
@@ -743,6 +743,11 @@
           "conflicting": false
         },
         {
+          "serviceCode": "H852U001S",
+          "occurrences": 2,
+          "conflicting": false
+        },
+        {
           "serviceCode": "H852U011P",
           "occurrences": 2,
           "conflicting": false
@@ -775,7 +780,7 @@
       "duplicate_codes": []
     },
     "canonical": {
-      "semantic_sha256": "bafdc058ebc8afbfbed4189b52aadb585f9e80297cc4eae3f92a5895fd386267",
+      "semantic_sha256": "1eab6fd6c2c3f261906340e002b9575ae8ab984b121e5c2b922cc250e6dbb44b",
       "record_count": 1656,
       "duplicate_codes": []
     },

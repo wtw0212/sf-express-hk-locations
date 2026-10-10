@@ -1,60 +1,60 @@
 {
-  "source_retrieved_at": "2026-10-09 13:07 (HKT UTC+8)",
-  "generated_at": "2026-10-09 13:07 (HKT UTC+8)",
+  "source_retrieved_at": "2026-10-10 12:53 (HKT UTC+8)",
+  "generated_at": "2026-10-10 12:53 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-10-09T05:08:30.550Z",
+      "document_retrieved_at": "2026-10-10T04:54:22.152Z",
       "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-10-09T05:08:31.421Z",
+      "document_retrieved_at": "2026-10-10T04:54:22.564Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-10-09T05:08:31.774Z",
+      "document_retrieved_at": "2026-10-10T04:54:23.167Z",
       "document_binary_sha256": "91c596bfe3fa79fe51a00835de5e1dbddc86def3c2a77d5009c4bc71efe1220e",
       "extracted_text_sha256": "e1720f744eec5086dd1d74167dc076eabe1c95f279594a1ec210d7e6200f03d3"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-10-09T05:08:31.921Z",
+      "document_retrieved_at": "2026-10-10T04:54:23.289Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-10-09T05:08:32.641Z",
+      "document_retrieved_at": "2026-10-10T04:54:23.425Z",
       "document_binary_sha256": "d11d9c1c8a104fe0ad62e6b68fad494f4624271e5b3238c16834979a32e24dcf",
       "extracted_text_sha256": "d1b5c46caade264dd006972735cfef315ddab880d6a428fd5ce31317b30507a1"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-10-09T05:08:33.484Z",
+      "document_retrieved_at": "2026-10-10T04:54:23.736Z",
       "document_binary_sha256": "f16310d0ec6a3b7612635ddba08a9c69aac9a87d0625b7ac22e5fe671489e5ee",
       "extracted_text_sha256": "4988771b1d6034a2e176a05e17c9547abb298465a84863fc056fcf7a6e4b51b1"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-10-09T05:08:33.741Z",
+      "document_retrieved_at": "2026-10-10T04:54:23.910Z",
       "document_binary_sha256": "b10da1048819ee4afad1947dd366de8fe10c32ba5b9db8ddb3982ef722d81f1a",
       "extracted_text_sha256": "72962a1876dc5bb1c3403838040bf8aadd5f104f13f3981e8f29a77c3e75485b"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-10-09T05:08:35.664Z",
+      "document_retrieved_at": "2026-10-10T04:54:24.037Z",
       "document_binary_sha256": "923690a00084c727761d7532f0e0730a02467288bc8d693f60116c0ead907192",
       "extracted_text_sha256": "d5cdd55ac26073d4b1f3e73f89f3de52aa3421c3f6f9b8b58098cd8a1de63a1e"
     }

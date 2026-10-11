@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-10-10 12:53 (HKT UTC+8)",
-  "generated_at": "2026-10-10 12:53 (HKT UTC+8)",
-  "retrieved_at": "2026-10-10 12:53 (HKT UTC+8)",
+  "source_retrieved_at": "2026-10-11 12:40 (HKT UTC+8)",
+  "generated_at": "2026-10-11 12:40 (HKT UTC+8)",
+  "retrieved_at": "2026-10-11 12:40 (HKT UTC+8)",
   "counts": {
     "total": 1656,
     "stores": 139,
@@ -87,9 +87,9 @@
       "semantic_success_count": 5,
       "partial_quality_failure_count": 3,
       "failed_count": 0,
-      "valid_record_count": 430,
+      "valid_record_count": 429,
       "quarantined_record_count": 11,
-      "quarantine_ratio": 0.0249,
+      "quarantine_ratio": 0.025,
       "cross_pdf_duplicate_conflict_count": 0,
       "status": "partial_parse_quality_failure",
       "errors": [],
@@ -205,13 +205,13 @@
           "semantic_ok": false,
           "within_quality_threshold": true,
           "attempts": 1,
-          "raw_code_count": 70,
-          "candidate_count": 67,
-          "valid_record_count": 64,
+          "raw_code_count": 69,
+          "candidate_count": 66,
+          "valid_record_count": 63,
           "quarantined_record_count": 3,
           "duplicate_code_count": 0,
           "duplicate_conflict_count": 0,
-          "quarantine_ratio": 0.0448
+          "quarantine_ratio": 0.0455
         },
         {
           "source_key": "ASP_ISLANDS_TC",
@@ -247,7 +247,7 @@
       "api_canonical_count": 1651,
       "ssr_only_count": 2,
       "reviewed_pdf_supplement_count": 3,
-      "unreviewed_pdf_candidate_count": 2
+      "unreviewed_pdf_candidate_count": 1
     }
   },
   "coverage": {
@@ -280,14 +280,14 @@
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "921bd4b4e01a1a8475f6a9d0d3880ad4f51fe3b4bd66c0c2fd82dafebc20ed52",
+      "raw_snapshot_sha256": "f2564d38c71ec73049fd37414a6a75a420ebff58cd8be125e867132bc07ff129",
       "semantic_sha256": "5e5d32e00735f4bcf2b8bb643cf09b6397e53ca4b149b97ebc2b2aefe55f3ead",
       "record_count": 1651,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "15269ed298cd6dd56e39b36a7071f5469e64856190a14a4a9d42432f3740b252",
+      "raw_snapshot_sha256": "1a714102f72738dd8c69f1d91bfad5142758bc538b3799cab328b98544995a86",
       "semantic_sha256": "1844f2e367f25b9d386a7e5f4359097c5999b75ab5185851b904e1afe38dfb7f",
       "record_count": 1650,
       "duplicate_codes": [],
@@ -785,7 +785,7 @@
       "duplicate_codes": []
     },
     "partner_pdf": {
-      "semantic_sha256": "b5dddd130b3bbc9ed7f852eaaaf1e2e1b409b71036aacf0fa57a1f99c56bf967",
+      "semantic_sha256": "041270224d7367b5d1e97300a13e3d0ab4170e1dccae728bcf37297e95211df6",
       "document_count": 8
     }
   }

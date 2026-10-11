@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-10-10 12:53 (HKT UTC+8)`
+> **Last Updated**: `2026-10-11 12:40 (HKT UTC+8)`
 
 ---
 
@@ -13,10 +13,10 @@
 | **Stores** | 139 |
 | **Lockers** | 1052 |
 | **Partners** | 465 |
-| **Added** | 1 |
-| **Removed** | 1 |
-| **Updated** | 1 |
-| **Unchanged** | 1654 |
+| **Added** | 0 |
+| **Removed** | 0 |
+| **Updated** | 0 |
+| **Unchanged** | 1656 |
 
 ---
 
@@ -45,7 +45,7 @@
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
-| Valid Partner PDF Records | 430 |
+| Valid Partner PDF Records | 429 |
 | Quarantined PDF Records | 11 |
 | PDF Quarantine Ratio | 2.5% |
 | SSR records | 190 |
@@ -88,7 +88,7 @@
 
 ## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.5% exceeds warning threshold 1% (11/441 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.5% exceeds warning threshold 1% (11/440 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 4.3% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.5% exceeds warning threshold 1%
@@ -96,19 +96,18 @@
 
 ---
 
-## Added Locations (1)
+## Added Locations (0)
 
-- `852M3002` [順豐合作點] 合作點 潮點集運 -- 香港長洲大新後街122號地下潮點集運*
-
----
-
-## Removed Locations (1)
-
-- `852J3027` [順豐合作點] 合作店 點拎貳 -- 九龍翠竹街8號翠竹花園商場3樓307號鋪(點拎貳)*
+*(No added locations)*
 
 ---
 
-## Updated Locations (1)
+## Removed Locations (0)
 
-- `H852U001S` 冷凍櫃 屯門欣田邨欣田商場地下
-  - address: `"屯門欣田邨欣田商場地下19號鋪"` -> `"屯門欣田邨欣田商場地下19號鋪冷凍櫃"`
+*(No removed locations)*
+
+---
+
+## Updated Locations (0)
+
+*(No updated locations)*

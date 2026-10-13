@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-10-12 12:55 (HKT UTC+8)`
+> **Last Updated**: `2026-10-13 13:57 (HKT UTC+8)`
 
 ---
 
@@ -15,8 +15,8 @@
 | **Partners** | 465 |
 | **Added** | 0 |
 | **Removed** | 0 |
-| **Updated** | 0 |
-| **Unchanged** | 1656 |
+| **Updated** | 1 |
+| **Unchanged** | 1655 |
 
 ---
 
@@ -45,7 +45,7 @@
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
-| Valid Partner PDF Records | 429 |
+| Valid Partner PDF Records | 430 |
 | Quarantined PDF Records | 11 |
 | PDF Quarantine Ratio | 2.5% |
 | SSR records | 190 |
@@ -88,7 +88,7 @@
 
 ## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.5% exceeds warning threshold 1% (11/440 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.5% exceeds warning threshold 1% (11/441 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 4.3% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.5% exceeds warning threshold 1%
@@ -108,6 +108,8 @@
 
 ---
 
-## Updated Locations (0)
+## Updated Locations (1)
 
-*(No updated locations)*
+- `852CB3003` 合作點 壹路易有限公司
+  - business_hours: `"10:00-19:30 周六:11:00-18:00"` -> `"10:00-20:30 周六:10:00-18:00 周日:10:00-15:30"`
+  - business_hours_en: `"10:00-19:30"` -> `"10:00-20:30"`

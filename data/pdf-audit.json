@@ -1,77 +1,77 @@
 {
-  "source_retrieved_at": "2026-10-12 12:55 (HKT UTC+8)",
-  "generated_at": "2026-10-12 12:55 (HKT UTC+8)",
+  "source_retrieved_at": "2026-10-13 13:57 (HKT UTC+8)",
+  "generated_at": "2026-10-13 13:57 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-10-12T04:56:08.560Z",
+      "document_retrieved_at": "2026-10-13T05:58:33.838Z",
       "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-10-12T04:56:08.704Z",
+      "document_retrieved_at": "2026-10-13T05:58:33.950Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-10-12T04:56:08.968Z",
+      "document_retrieved_at": "2026-10-13T05:58:34.497Z",
       "document_binary_sha256": "91c596bfe3fa79fe51a00835de5e1dbddc86def3c2a77d5009c4bc71efe1220e",
       "extracted_text_sha256": "e1720f744eec5086dd1d74167dc076eabe1c95f279594a1ec210d7e6200f03d3"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-10-12T04:56:09.021Z",
+      "document_retrieved_at": "2026-10-13T05:58:34.558Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-10-12T04:56:09.085Z",
+      "document_retrieved_at": "2026-10-13T05:58:34.640Z",
       "document_binary_sha256": "d11d9c1c8a104fe0ad62e6b68fad494f4624271e5b3238c16834979a32e24dcf",
       "extracted_text_sha256": "d1b5c46caade264dd006972735cfef315ddab880d6a428fd5ce31317b30507a1"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-10-12T04:56:09.197Z",
+      "document_retrieved_at": "2026-10-13T05:58:34.781Z",
       "document_binary_sha256": "f16310d0ec6a3b7612635ddba08a9c69aac9a87d0625b7ac22e5fe671489e5ee",
       "extracted_text_sha256": "4988771b1d6034a2e176a05e17c9547abb298465a84863fc056fcf7a6e4b51b1"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-10-12T04:56:09.316Z",
+      "document_retrieved_at": "2026-10-13T05:58:36.621Z",
       "document_binary_sha256": "2288fbcfbdc4586d6c72a46abc121f897ed37e2a74c3d55d1c653bcc08ad8793",
       "extracted_text_sha256": "6eec6f15a274174fd6ffd571911d46074fe6e8a321e3fbf396ce29a740bbc11d"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-10-12T04:56:09.372Z",
-      "document_binary_sha256": "923690a00084c727761d7532f0e0730a02467288bc8d693f60116c0ead907192",
-      "extracted_text_sha256": "d5cdd55ac26073d4b1f3e73f89f3de52aa3421c3f6f9b8b58098cd8a1de63a1e"
+      "document_retrieved_at": "2026-10-13T05:58:36.843Z",
+      "document_binary_sha256": "0ad07a7018bd0639876e46384b420fc0ba071ec9a42acdfbb133d0c2f2a6e5c6",
+      "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
   },
   "summary": {
-    "parsed_pdf_record_count": 429,
-    "api_pdf_conflict_count": 425,
-    "api_pdf_difference_count": 425,
+    "parsed_pdf_record_count": 430,
+    "api_pdf_conflict_count": 426,
+    "api_pdf_difference_count": 426,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 425,
+      "semantic_conflict": 426,
       "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 933,
+      "semantic_conflict": 936,
       "name_specificity_difference": 208,
       "formatting_difference": 0,
       "equivalent_difference": 128
@@ -11916,7 +11916,7 @@
       "pdf_name": "觀塘壹路易有限公司",
       "api_address": "九龍觀塘瑞和街162號地下（壹路易）*",
       "pdf_address": "九龍觀塘瑞和街162號地下",
-      "api_business_hours": "10:00-19:30 周六:11:00-18:00",
+      "api_business_hours": "10:00-20:30 周六:10:00-18:00 周日:10:00-15:30",
       "pdf_business_hours": "星期一至五: 10:00-19:30 星期六: 11:00-18:00 星期日: 11:00-15:30 公眾假期: 休息",
       "differing_fields": [
         "name",
@@ -11936,7 +11936,7 @@
           "classification": "semantic_conflict"
         },
         "business_hours": {
-          "canonical": "10:00-19:30 周六:11:00-18:00",
+          "canonical": "10:00-20:30 周六:10:00-18:00 周日:10:00-15:30",
           "pdf": "星期一至五: 10:00-19:30 星期六: 11:00-18:00 星期日: 11:00-15:30 公眾假期: 休息",
           "classification": "semantic_conflict"
         }
@@ -15623,9 +15623,46 @@
       }
     },
     {
+      "code": "852M3002",
+      "api_name": "合作點 潮點集運",
+      "pdf_name": "取件取件寄件: 順豐3,5,6號箱長洲潮點集運",
+      "api_address": "香港長洲大新後街122號地下潮點集運*",
+      "pdf_address": "香港長洲大新後街122號地下",
+      "api_business_hours": "12:00-21:00 周六:12:00-19:00",
+      "pdf_business_hours": "（收取偏遠自取附加費） 星期一至五: 12:00-21:00 星期六: 12:00-19:00 星期日及公眾假期: OFF",
+      "differing_fields": [
+        "name",
+        "address",
+        "business_hours"
+      ],
+      "classification": "semantic_conflict",
+      "comparison": {
+        "name": {
+          "canonical": "合作點 潮點集運",
+          "pdf": "取件取件寄件: 順豐3,5,6號箱長洲潮點集運",
+          "classification": "semantic_conflict"
+        },
+        "address": {
+          "canonical": "香港長洲大新後街122號地下潮點集運*",
+          "pdf": "香港長洲大新後街122號地下",
+          "classification": "semantic_conflict"
+        },
+        "business_hours": {
+          "canonical": "12:00-21:00 周六:12:00-19:00",
+          "pdf": "（收取偏遠自取附加費） 星期一至五: 12:00-21:00 星期六: 12:00-19:00 星期日及公眾假期: OFF",
+          "classification": "semantic_conflict"
+        }
+      },
+      "document_id": "ASP_ISLANDS_TC",
+      "parser_location": {
+        "row_index": 2,
+        "raw_row": "取件體積: 70x45x38cm 取件重量: 20公斤或以下 寄件: 順豐3,5,6號箱 長洲潮點集運852M3002 香港長洲大新後街122號地下^852M3002^ （收取偏遠自取附加費） 取件 星期一至五: 12:00-21:00 星期六: 12:00-19:00 星期日及公眾假期: OFF"
+      }
+    },
+    {
       "code": "852Q3005",
       "api_name": "合作點 利興隆",
-      "pdf_name": "取件取件寄件: 順豐3,5,6號箱大嶼山利興隆",
+      "pdf_name": "x 32cm x 23cm   大嶼山利興隆",
       "api_address": "香港大嶼山梅窩銀運路3號梅窩中心地下16號鋪 利興隆*",
       "pdf_address": "大嶼山梅窩銀運路3號梅窩中心地下16號舖",
       "api_business_hours": "09:30-18:30 周六:09:30-18:30",
@@ -15639,7 +15676,7 @@
       "comparison": {
         "name": {
           "canonical": "合作點 利興隆",
-          "pdf": "取件取件寄件: 順豐3,5,6號箱大嶼山利興隆",
+          "pdf": "x 32cm x 23cm   大嶼山利興隆",
           "classification": "semantic_conflict"
         },
         "address": {
@@ -15655,8 +15692,8 @@
       },
       "document_id": "ASP_ISLANDS_TC",
       "parser_location": {
-        "row_index": 2,
-        "raw_row": "取件體積: 70x45x38cm 取件重量: 20公斤或以下 寄件: 順豐3,5,6號箱 大嶼山利興隆852Q3005 大嶼山梅窩銀運路3號梅窩中心地下16號舖 ^852Q3005^ 取件/ 本地寄件 星期一至六:09:30-18:30 星期日及公眾假期: OFF"
+        "row_index": 3,
+        "raw_row": "體積: 53cm x 32cm x 23cm 重量: 15公斤或以下 大嶼山利興隆852Q3005 大嶼山梅窩銀運路3號梅窩中心地下16號舖 ^852Q3005^ 取件/ 本地寄件 星期一至六:09:30-18:30 星期日及公眾假期: OFF"
       }
     },
     {
@@ -15692,7 +15729,7 @@
       },
       "document_id": "ASP_ISLANDS_TC",
       "parser_location": {
-        "row_index": 3,
+        "row_index": 4,
         "raw_row": "體積: 100x100x100 cm 重量: 10公斤或以下 南丫島利源便利店852Q3001 南丫島榕樹灣大街27號地下^852Q3001^ （收取偏遠自取附加費） 取件 星期一至六:14:00-23:00 星期日及公眾假期: OFF"
       }
     },
@@ -15729,7 +15766,7 @@
       },
       "document_id": "ASP_ISLANDS_TC",
       "parser_location": {
-        "row_index": 4,
+        "row_index": 5,
         "raw_row": "體積: 30x25x20cm 重量: 10公斤或以下 南丫島華昌行852Q3008 南丫島榕樹灣大街33號^852Q3008^ （收取偏遠自取附加費） 取件 星期一至六: 11:00-21:00 星期日及公眾假期: 11:00-19:00"
       }
     },
@@ -15766,7 +15803,7 @@
       },
       "document_id": "ASP_ISLANDS_TC",
       "parser_location": {
-        "row_index": 5,
+        "row_index": 6,
         "raw_row": "體積: 30x25x20cm 重量: 10公斤或以下 大嶼山梅窩集運店852GH3011梅窩鄉事會路14號^852GH3011^取件 星期一至五: 11:45-19:45 星期六: 11:45-17:45 星期日及公眾假期: OFF"
       }
     }

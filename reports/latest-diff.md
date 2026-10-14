@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-10-13 13:57 (HKT UTC+8)`
+> **Last Updated**: `2026-10-14 11:59 (HKT UTC+8)`
 
 ---
 
@@ -9,13 +9,13 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1656 |
-| **Current total** | 1656 |
+| **Current total** | 1655 |
 | **Stores** | 139 |
 | **Lockers** | 1052 |
-| **Partners** | 465 |
+| **Partners** | 464 |
 | **Added** | 0 |
-| **Removed** | 0 |
-| **Updated** | 1 |
+| **Removed** | 1 |
+| **Updated** | 0 |
 | **Unchanged** | 1655 |
 
 ---
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1656 | 1656 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1656 | 1655 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
 | stores | 139 | 139 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | lockers | 1052 | 1052 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 465 | 465 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1651 | 1651 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1650 | 1650 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| partners | 465 | 464 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1651 | 1650 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1650 | 1649 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1651 |
-| EN unique codes | 1650 |
+| TC unique codes | 1650 |
+| EN unique codes | 1649 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.5% |
 | SSR records | 190 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1656 |
+| District resolved | 1655 |
 | District unresolved | 0 |
-| With English data | 1650 |
+| With English data | 1649 |
 | Missing English | 6 |
 
 ---
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 257 |
+| **Record Quality Warnings** | 256 |
 | **Record Quality Info Flags** | 61 |
 | **Record Quality Errors** | 0 |
 
@@ -73,8 +73,8 @@
 
 | Flag Type | Count |
 | :--- | :--- |
-| ENGLISH_FIELD_CONTAINS_CJK | 95 |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 95 |
+| ENGLISH_FIELD_CONTAINS_CJK | 94 |
 | ADMIN_DISTRICT_ALIAS_APPLIED | 43 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 21 |
@@ -102,14 +102,12 @@
 
 ---
 
-## Removed Locations (0)
+## Removed Locations (1)
 
-*(No removed locations)*
+- `852PA3012` [順豐合作點] 合作店 海光自提點 -- 香港鰂魚涌海光商場2A3號鋪 (海光自提點)*
 
 ---
 
-## Updated Locations (1)
+## Updated Locations (0)
 
-- `852CB3003` 合作點 壹路易有限公司
-  - business_hours: `"10:00-19:30 周六:11:00-18:00"` -> `"10:00-20:30 周六:10:00-18:00 周日:10:00-15:30"`
-  - business_hours_en: `"10:00-19:30"` -> `"10:00-20:30"`
+*(No updated locations)*

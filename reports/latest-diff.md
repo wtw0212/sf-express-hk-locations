@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-10-16 11:38 (HKT UTC+8)`
+> **Last Updated**: `2026-10-17 11:28 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1654 |
+| **Previous total** | 1655 |
 | **Current total** | 1655 |
 | **Stores** | 139 |
 | **Lockers** | 1052 |
 | **Partners** | 464 |
-| **Added** | 1 |
+| **Added** | 0 |
 | **Removed** | 0 |
-| **Updated** | 1 |
-| **Unchanged** | 1653 |
+| **Updated** | 0 |
+| **Unchanged** | 1655 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1654 | 1655 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
+| total | 1655 | 1655 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 139 | 139 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | lockers | 1052 | 1052 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 463 | 464 | +1 | +0.22% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1648 | 1650 | +2 | +0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1647 | 1649 | +2 | +0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| partners | 464 | 464 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1650 | 1650 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1649 | 1649 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -62,7 +62,7 @@
 | Metric | Count |
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
-| **Pipeline Execution Warnings** | 6 |
+| **Pipeline Execution Warnings** | 5 |
 | **Record Quality Warnings** | 256 |
 | **Record Quality Info Flags** | 61 |
 | **Record Quality Errors** | 0 |
@@ -86,20 +86,19 @@
 
 ---
 
-## Pipeline Execution Warnings (6)
+## Pipeline Execution Warnings (5)
 
 - ⚠️ Partner PDF overall quarantine ratio 2.5% exceeds warning threshold 1% (11/440 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 4.3% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.5% exceeds warning threshold 1%
-- ⚠️ [Audit warning] Partner PDF 'ASP_ISLANDS_TC' valid record count dropped by 16.7% (6 -> 5), threshold: 15%
 - ⚠️ Quarantined 4 corrupted or ambiguous partner PDF records (reasons: SERVICE_CODE_MISMATCH)
 
 ---
 
-## Added Locations (1)
+## Added Locations (0)
 
-- `852GH3011` [順豐合作點] 合作店 梅窩集運店 -- 新界梅窩鄉事會路14號(梅窩集運店)*
+*(No added locations)*
 
 ---
 
@@ -109,17 +108,6 @@
 
 ---
 
-## Updated Locations (1)
+## Updated Locations (0)
 
-- `H852GC01S` 冷凍櫃 青衣順豐大廈九樓(只供大廈員工使用)
-  - name: `"順豐智能櫃 青衣"` -> `"冷凍櫃 青衣順豐大廈九樓(只供大廈員工使用)"`
-  - name_en: `null` -> `"Next to Lift, 9/F,Asia Logistics Hub SFCentre,Tsing Yi"`
-  - sub_district_en: `null` -> `"Tsing Yi"`
-  - address: `"香港新界葵青區青衣航運路36號順豐大廈九樓電梯旁順豐冷凍櫃(只供住戶使用)"` -> `"青衣順豐大廈九樓電梯旁(只供大廈員工使用)"`
-  - address_en: `null` -> `"Next to Lift, 9/F,Asia Logistics Hub SFCentre,Tsing Yi (Only for staff)"`
-  - business_hours: `"24小時"` -> `"00:00-23:59 周六:00:00-23:59 周日:00:00-23:59 節假日:00:00-23:59"`
-  - business_hours_en: `null` -> `"00:00-23:59"`
-  - source: `"ssr"` -> `"api_tc"`
-  - location.latitude: `null` -> `22.33543`
-  - location.longitude: `null` -> `114.11069`
-  - quality_flags: -MISSING_COORDINATES, -MISSING_ENGLISH_RECORD
+*(No updated locations)*

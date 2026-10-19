@@ -1,77 +1,77 @@
 {
-  "source_retrieved_at": "2026-10-18 11:34 (HKT UTC+8)",
-  "generated_at": "2026-10-18 11:34 (HKT UTC+8)",
+  "source_retrieved_at": "2026-10-19 11:45 (HKT UTC+8)",
+  "generated_at": "2026-10-19 11:45 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-10-18T03:35:31.010Z",
+      "document_retrieved_at": "2026-10-19T03:45:37.436Z",
       "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-10-18T03:35:31.447Z",
+      "document_retrieved_at": "2026-10-19T03:45:37.807Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-10-18T03:35:32.614Z",
+      "document_retrieved_at": "2026-10-19T03:45:38.558Z",
       "document_binary_sha256": "91c596bfe3fa79fe51a00835de5e1dbddc86def3c2a77d5009c4bc71efe1220e",
       "extracted_text_sha256": "e1720f744eec5086dd1d74167dc076eabe1c95f279594a1ec210d7e6200f03d3"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-10-18T03:35:33.081Z",
+      "document_retrieved_at": "2026-10-19T03:45:38.708Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-10-18T03:35:33.294Z",
+      "document_retrieved_at": "2026-10-19T03:45:39.364Z",
       "document_binary_sha256": "d11d9c1c8a104fe0ad62e6b68fad494f4624271e5b3238c16834979a32e24dcf",
       "extracted_text_sha256": "d1b5c46caade264dd006972735cfef315ddab880d6a428fd5ce31317b30507a1"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-10-18T03:35:33.679Z",
+      "document_retrieved_at": "2026-10-19T03:45:39.684Z",
       "document_binary_sha256": "345b2b5235924d4a97031c7746a8198fbf220338550282950ba9018b61370625",
       "extracted_text_sha256": "1bfd35ed3e15c546b62c4ce9333d2cdcc23059bcb2af5f2a666168e171cd016b"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-10-18T03:35:33.873Z",
+      "document_retrieved_at": "2026-10-19T03:45:40.169Z",
       "document_binary_sha256": "2288fbcfbdc4586d6c72a46abc121f897ed37e2a74c3d55d1c653bcc08ad8793",
       "extracted_text_sha256": "6eec6f15a274174fd6ffd571911d46074fe6e8a321e3fbf396ce29a740bbc11d"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-10-18T03:35:34.108Z",
-      "document_binary_sha256": "13ae7ffd322734627858c18777dfcaba1a666172f414b3a6d5383498c5e3de42",
-      "extracted_text_sha256": "aaa5c87677fe65850f42a7b5489a5c37538f756b91525d39665bf25a5acd5b1a"
+      "document_retrieved_at": "2026-10-19T03:45:40.359Z",
+      "document_binary_sha256": "30ae27841d835446d431acc773f55defbe0fbf23f3cbb29459e3ac17d9963c35",
+      "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
   },
   "summary": {
-    "parsed_pdf_record_count": 429,
-    "api_pdf_conflict_count": 424,
-    "api_pdf_difference_count": 424,
+    "parsed_pdf_record_count": 430,
+    "api_pdf_conflict_count": 425,
+    "api_pdf_difference_count": 425,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 424,
+      "semantic_conflict": 425,
       "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 930,
+      "semantic_conflict": 933,
       "name_specificity_difference": 208,
       "formatting_difference": 0,
       "equivalent_difference": 128
@@ -15731,6 +15731,43 @@
       "parser_location": {
         "row_index": 5,
         "raw_row": "體積: 30x25x20cm 重量: 10公斤或以下 南丫島華昌行852Q3008 南丫島榕樹灣大街33號^852Q3008^ （收取偏遠自取附加費） 取件 星期一至六: 11:00-21:00 星期日及公眾假期: 11:00-19:00"
+      }
+    },
+    {
+      "code": "852GH3011",
+      "api_name": "合作店 梅窩集運店",
+      "pdf_name": "大嶼山梅窩集運店",
+      "api_address": "新界梅窩鄉事會路14號(梅窩集運店)*",
+      "pdf_address": "梅窩鄉事會路14號",
+      "api_business_hours": "11:45-19:45 周六:11:45-17:45",
+      "pdf_business_hours": "星期一至五: 11:45-19:45 星期六: 11:45-17:45 星期日及公眾假期: OFF",
+      "differing_fields": [
+        "name",
+        "address",
+        "business_hours"
+      ],
+      "classification": "semantic_conflict",
+      "comparison": {
+        "name": {
+          "canonical": "合作店 梅窩集運店",
+          "pdf": "大嶼山梅窩集運店",
+          "classification": "semantic_conflict"
+        },
+        "address": {
+          "canonical": "新界梅窩鄉事會路14號(梅窩集運店)*",
+          "pdf": "梅窩鄉事會路14號",
+          "classification": "semantic_conflict"
+        },
+        "business_hours": {
+          "canonical": "11:45-19:45 周六:11:45-17:45",
+          "pdf": "星期一至五: 11:45-19:45 星期六: 11:45-17:45 星期日及公眾假期: OFF",
+          "classification": "semantic_conflict"
+        }
+      },
+      "document_id": "ASP_ISLANDS_TC",
+      "parser_location": {
+        "row_index": 6,
+        "raw_row": "體積: 30x25x20cm 重量: 10公斤或以下 大嶼山梅窩集運店852GH3011梅窩鄉事會路14號^852GH3011^取件 星期一至五: 11:45-19:45 星期六: 11:45-17:45 星期日及公眾假期: OFF"
       }
     }
   ],

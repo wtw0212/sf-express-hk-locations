@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-10-21 11:46 (HKT UTC+8)`
+> **Last Updated**: `2026-10-22 11:45 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1655 |
-| **Current total** | 1655 |
+| **Current total** | 1656 |
 | **Stores** | 140 |
 | **Lockers** | 1051 |
-| **Partners** | 464 |
+| **Partners** | 465 |
 | **Added** | 1 |
-| **Removed** | 1 |
+| **Removed** | 0 |
 | **Updated** | 0 |
-| **Unchanged** | 1654 |
+| **Unchanged** | 1655 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1655 | 1655 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| stores | 139 | 140 | +1 | +0.72% | previous_locations_feed | ✅ PASS |
-| lockers | 1052 | 1051 | -1 | -0.1% | previous_locations_feed | ✅ PASS |
-| partners | 464 | 464 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1650 | 1650 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1649 | 1649 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| total | 1655 | 1656 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
+| stores | 140 | 140 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1051 | 1051 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| partners | 464 | 465 | +1 | +0.22% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1650 | 1651 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1649 | 1650 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1650 |
-| EN unique codes | 1649 |
+| TC unique codes | 1651 |
+| EN unique codes | 1650 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.5% |
 | SSR records | 190 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1655 |
+| District resolved | 1656 |
 | District unresolved | 0 |
-| With English data | 1649 |
+| With English data | 1650 |
 | Missing English | 6 |
 
 ---
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 257 |
+| **Record Quality Warnings** | 258 |
 | **Record Quality Info Flags** | 62 |
 | **Record Quality Errors** | 0 |
 
@@ -74,7 +74,7 @@
 | Flag Type | Count |
 | :--- | :--- |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 96 |
-| ENGLISH_FIELD_CONTAINS_CJK | 94 |
+| ENGLISH_FIELD_CONTAINS_CJK | 95 |
 | ADMIN_DISTRICT_ALIAS_APPLIED | 43 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 21 |
@@ -98,13 +98,13 @@
 
 ## Added Locations (1)
 
-- `852AB` [順豐站] 大埔美新里順豐站 -- 香港大埔區大埔汀角路51A號太平工業大廈二座8樓A室*^
+- `852PA3012` [順豐合作點] 合作店 海光自提點 -- 香港鰂魚涌海光商場2A3號鋪 (海光自提點)*
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (0)
 
-- `H852K031P` [順豐智能櫃] 自助櫃 九龍城啟德道83號(LaundrYup洗衣店) -- 香港啟德道83號地下(洗衣店內)*
+*(No removed locations)*
 
 ---
 

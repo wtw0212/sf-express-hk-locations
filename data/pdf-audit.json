@@ -1,82 +1,82 @@
 {
-  "source_retrieved_at": "2026-10-22 11:45 (HKT UTC+8)",
-  "generated_at": "2026-10-22 11:45 (HKT UTC+8)",
+  "source_retrieved_at": "2026-10-23 11:49 (HKT UTC+8)",
+  "generated_at": "2026-10-23 11:49 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-10-22T03:46:17.886Z",
+      "document_retrieved_at": "2026-10-23T03:50:26.804Z",
       "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-10-22T03:46:18.144Z",
+      "document_retrieved_at": "2026-10-23T03:50:27.054Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-10-22T03:46:18.505Z",
-      "document_binary_sha256": "91c596bfe3fa79fe51a00835de5e1dbddc86def3c2a77d5009c4bc71efe1220e",
-      "extracted_text_sha256": "e1720f744eec5086dd1d74167dc076eabe1c95f279594a1ec210d7e6200f03d3"
+      "document_retrieved_at": "2026-10-23T03:50:27.265Z",
+      "document_binary_sha256": "c50052da2a64ce74d6eac3bceacb85ef0816637841df5b06b1db3b3c43280cc0",
+      "extracted_text_sha256": "eb95bd589e2f26e24f4306d35a0a8c2de07dadd2ed6c77cb7f9e92395a4eebcd"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-10-22T03:46:18.667Z",
+      "document_retrieved_at": "2026-10-23T03:50:27.371Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-10-22T03:46:18.840Z",
+      "document_retrieved_at": "2026-10-23T03:50:27.446Z",
       "document_binary_sha256": "d11d9c1c8a104fe0ad62e6b68fad494f4624271e5b3238c16834979a32e24dcf",
       "extracted_text_sha256": "d1b5c46caade264dd006972735cfef315ddab880d6a428fd5ce31317b30507a1"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-10-22T03:46:19.073Z",
+      "document_retrieved_at": "2026-10-23T03:50:27.607Z",
       "document_binary_sha256": "345b2b5235924d4a97031c7746a8198fbf220338550282950ba9018b61370625",
       "extracted_text_sha256": "1bfd35ed3e15c546b62c4ce9333d2cdcc23059bcb2af5f2a666168e171cd016b"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-10-22T03:46:19.322Z",
+      "document_retrieved_at": "2026-10-23T03:50:27.734Z",
       "document_binary_sha256": "2288fbcfbdc4586d6c72a46abc121f897ed37e2a74c3d55d1c653bcc08ad8793",
       "extracted_text_sha256": "6eec6f15a274174fd6ffd571911d46074fe6e8a321e3fbf396ce29a740bbc11d"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-10-22T03:46:19.500Z",
+      "document_retrieved_at": "2026-10-23T03:50:27.875Z",
       "document_binary_sha256": "30ae27841d835446d431acc773f55defbe0fbf23f3cbb29459e3ac17d9963c35",
       "extracted_text_sha256": "8e6badda0f11e980a517e33476710fc02369c95413cbcf576b367bed44328a07"
     }
   },
   "summary": {
-    "parsed_pdf_record_count": 430,
-    "api_pdf_conflict_count": 426,
-    "api_pdf_difference_count": 426,
+    "parsed_pdf_record_count": 429,
+    "api_pdf_conflict_count": 423,
+    "api_pdf_difference_count": 423,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 426,
+      "semantic_conflict": 423,
       "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 936,
-      "name_specificity_difference": 208,
+      "semantic_conflict": 928,
+      "name_specificity_difference": 207,
       "formatting_difference": 0,
       "equivalent_difference": 128
     },
-    "new_pdf_only_candidate_count": 1,
+    "new_pdf_only_candidate_count": 3,
     "missing_reviewed_record_count": 0,
     "quarantined_record_count": 11
   },
@@ -9808,43 +9808,6 @@
       }
     },
     {
-      "code": "852U2029",
-      "api_name": "便利店 大興花園OK便利店",
-      "pdf_name": "OK便利店 (屯門)",
-      "api_address": "新界屯門震寰路11號大興花園一期地下1號鋪OK #588*",
-      "pdf_address": "新界屯門震寰路11號大興花園一期地下1號舖",
-      "api_business_hours": "00:00-23:59",
-      "pdf_business_hours": "24小時",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "便利店 大興花園OK便利店",
-          "pdf": "OK便利店 (屯門)",
-          "classification": "name_specificity_difference"
-        },
-        "address": {
-          "canonical": "新界屯門震寰路11號大興花園一期地下1號鋪OK #588*",
-          "pdf": "新界屯門震寰路11號大興花園一期地下1號舖",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "00:00-23:59",
-          "pdf": "24小時",
-          "classification": "equivalent_difference"
-        }
-      },
-      "document_id": "OK_NT_TC",
-      "parser_location": {
-        "row_index": 108,
-        "raw_row": "屯門852U2029新界屯門震寰路11號大興花園一期地下1號舖^852U2029^24小時"
-      }
-    },
-    {
       "code": "852U2025",
       "api_name": "便利店 良景廣場2樓OK便利店",
       "pdf_name": "OK便利店 (屯門)",
@@ -9877,7 +9840,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 109,
+        "row_index": 108,
         "raw_row": "屯門852U2025新界屯門田景路31號良景廣場2樓L229A&L229B號舖^852U2025^06:00-23:00"
       }
     },
@@ -9914,7 +9877,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 110,
+        "row_index": 109,
         "raw_row": "屯門852U2017新界屯門龍門路45號富健花園地下87號舖^852U2017^24小時"
       }
     },
@@ -9951,7 +9914,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 111,
+        "row_index": 110,
         "raw_row": "屯門852U2021新界屯門悅湖商場53-57及81-85號舖^852U2021^24小時"
       }
     },
@@ -9988,7 +9951,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 112,
+        "row_index": 111,
         "raw_row": "屯門852U2030新界屯門龍門路43號龍門居地下97號舖B部份^852U2030^24小時"
       }
     },
@@ -10025,7 +9988,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 113,
+        "row_index": 112,
         "raw_row": "屯門852U2031新界屯門菁田邨菁田商場地下G11號舖^852U2031^24小時"
       }
     },
@@ -10062,7 +10025,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 114,
+        "row_index": 113,
         "raw_row": "屯門852U2032新界屯門山景商場地下206號舖^852U2032^24小時"
       }
     },
@@ -10099,7 +10062,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 115,
+        "row_index": 114,
         "raw_row": "屯門852U2033屯門寶怡花園23-23A舖地下^852U2033^24小時"
       }
     },
@@ -10136,7 +10099,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 116,
+        "row_index": 115,
         "raw_row": "屯門852U2034屯門景峰徑2號景峰花園地下13號舖^852U2034^24小時"
       }
     },
@@ -10173,7 +10136,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 117,
+        "row_index": 116,
         "raw_row": "屯門852U2035屯門山景邨山景商場低層地下一樓122號鋪^852U2035^24小時"
       }
     },
@@ -10210,7 +10173,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 118,
+        "row_index": 117,
         "raw_row": "屯門852U2036屯門青翠徑南光樓高層地下D舖^852U2036^24小時"
       }
     },
@@ -10247,7 +10210,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 119,
+        "row_index": 118,
         "raw_row": "屯門852U2037屯門美樂花園商場81-82號地下^852U2037^24小時"
       }
     },
@@ -10284,7 +10247,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 120,
+        "row_index": 119,
         "raw_row": "屯門852U2040屯門業旺邨業旺商場地下 G01 號舖 ^852U2040^24小時"
       }
     },
@@ -10321,7 +10284,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 121,
+        "row_index": 120,
         "raw_row": "屯門852UC2002屯門富泰商場地下6號舖^852UC2002^24小時"
       }
     },
@@ -10358,7 +10321,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 122,
+        "row_index": 121,
         "raw_row": "屯門852UD2001屯門友愛邨H.A.N.D.S.地下S-114 & S-115^852UD2001^24小時"
       }
     },
@@ -10395,7 +10358,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 123,
+        "row_index": 122,
         "raw_row": "西貢852CC2026新界西貢海傍廣場金寶閣地下12號舖^852CC2026^24小時"
       }
     },
@@ -10432,7 +10395,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 124,
+        "row_index": 123,
         "raw_row": "西貢852CC2034新界西貢西貢大廈地下23號舖^852CC2034^24小時"
       }
     },
@@ -10469,7 +10432,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 125,
+        "row_index": 124,
         "raw_row": "小瀝源852FB2001新界沙田小瀝源安平街2號利豐中心地下^852FB2001^ 06:00-22:00 星期日及公眾假期：OFF"
       }
     },
@@ -10506,7 +10469,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 126,
+        "row_index": 125,
         "raw_row": "元朗852UA2006新界元朗大棠路11號光華廣場地下4號舖^852UA2006^24小時"
       }
     },
@@ -10543,7 +10506,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 127,
+        "row_index": 126,
         "raw_row": "元朗852UA2007新界元朗青山道218,222,226-230號富興大廈地下A號舖^852UA2007^24小時"
       }
     },
@@ -10580,7 +10543,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 128,
+        "row_index": 127,
         "raw_row": "元朗852UA2009新界元朗又新街7-25號元新大廈地下4號及11號舖^852UA2009^24小時"
       }
     },
@@ -10591,7 +10554,7 @@
       "api_address": "新界元朗大棠路紅棉洋樓地下A鋪OK #454*",
       "pdf_address": "新界元朗大棠路35/39號紅棉洋樓地下A號舖",
       "api_business_hours": "00:00-23:59",
-      "pdf_business_hours": "24小時 服務時間 (星期一至六,星期日及公眾假期)",
+      "pdf_business_hours": "24小時",
       "differing_fields": [
         "name",
         "address",
@@ -10611,14 +10574,14 @@
         },
         "business_hours": {
           "canonical": "00:00-23:59",
-          "pdf": "24小時 服務時間 (星期一至六,星期日及公眾假期)",
-          "classification": "semantic_conflict"
+          "pdf": "24小時",
+          "classification": "equivalent_difference"
         }
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 129,
-        "raw_row": "元朗852UA2016新界元朗大棠路35/39號紅棉洋樓地下A號舖^852UA2016^24小時 服務時間 (星期一至六,星期日及公眾假期)"
+        "row_index": 128,
+        "raw_row": "元朗852UA2016新界元朗大棠路35/39號紅棉洋樓地下A號舖^852UA2016^24小時"
       }
     },
     {
@@ -10654,8 +10617,8 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 130,
-        "raw_row": "快件限制 元朗852UA2013新界元朗青山公路49-63號金豪大廈地下E號舖^852UA2013^24小時"
+        "row_index": 129,
+        "raw_row": "元朗852UA2013新界元朗青山公路49-63號金豪大廈地下E號舖^852UA2013^24小時 最大體積: 36x30x25cm 重量限制: 5公斤或以下 服務時間 (星期一至六,星期日及公眾假期)"
       }
     },
     {
@@ -10691,8 +10654,8 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 131,
-        "raw_row": "最大體積: 36x30x25cm 重量限制: 5公斤或以下 元朗852UA2017新界元朗西菁街9號富盛大廈地下13A及13E號舖^852UA2017^24小時"
+        "row_index": 130,
+        "raw_row": "快件限制 元朗852UA2017新界元朗西菁街9號富盛大廈地下13A及13E號舖^852UA2017^24小時"
       }
     },
     {
@@ -10728,8 +10691,8 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 132,
-        "raw_row": "元朗852UA2024新界元朗安寧路70/74號保輝樓地下D鋪^852UA2024^24小時"
+        "row_index": 131,
+        "raw_row": "最大體積: 36x30x25cm 重量限制: 5公斤或以下 元朗852UA2024新界元朗安寧路70/74號保輝樓地下D鋪^852UA2024^24小時"
       }
     },
     {
@@ -10765,7 +10728,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 133,
+        "row_index": 132,
         "raw_row": "元朗852UA2026元朗青山公路99-109號元朗貿易中心地下7號舖^852UA2026^24小時"
       }
     },
@@ -10802,7 +10765,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 134,
+        "row_index": 133,
         "raw_row": "元朗852UA2027元朗谷亭街1號傑文樓地舖^852UA2027^24小時"
       }
     },
@@ -10839,7 +10802,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 135,
+        "row_index": 134,
         "raw_row": "元朗852UA2028新界元朗青山公路 32 號地下^852UA2028^24小時"
       }
     },
@@ -10876,7 +10839,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 136,
+        "row_index": 135,
         "raw_row": "元朗852UA2029元朗鳳琴街18號玉龍樓地下4號舖^852UA2029^24小時"
       }
     },
@@ -10919,7 +10882,7 @@
       },
       "document_id": "OK_NT_TC",
       "parser_location": {
-        "row_index": 137,
+        "row_index": 136,
         "raw_row": "元朗852UA2031元朗屏山朗天苑朗天商場地下G10 號舖^852UA2031^07:00-23:00"
       }
     },
@@ -11390,43 +11353,6 @@
       "parser_location": {
         "row_index": 10,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 堅尼地城士美菲自提點852MA3018士美菲路47號聯興新樓地下H鋪^852MA3018^取件 星期一至六:12:00-20:00（15:00- 16:00午休） 星期日及公眾假期: 12:00-16:00"
-      }
-    },
-    {
-      "code": "852TA3003",
-      "api_name": "合作店 揚壹物流統一中心",
-      "pdf_name": "金鐘揚壹物流統一中心",
-      "api_address": "金鐘道95號統一中心2樓2041鋪 揚壹物流統一中心 (15:00-16:00午休)*",
-      "pdf_address": "金鐘金鐘道95號統一中心2樓2041舖",
-      "api_business_hours": "12:00-21:00 周六:12:00-21:00 周日:11:00-15:00 節假日:11:00-15:00",
-      "pdf_business_hours": "星期一至六:12:00-21:00(午休15:00- 16:00) 星期日及公眾假期: 11:00-15:00",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作店 揚壹物流統一中心",
-          "pdf": "金鐘揚壹物流統一中心",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "金鐘道95號統一中心2樓2041鋪 揚壹物流統一中心 (15:00-16:00午休)*",
-          "pdf": "金鐘金鐘道95號統一中心2樓2041舖",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "12:00-21:00 周六:12:00-21:00 周日:11:00-15:00 節假日:11:00-15:00",
-          "pdf": "星期一至六:12:00-21:00(午休15:00- 16:00) 星期日及公眾假期: 11:00-15:00",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_HK_TC",
-      "parser_location": {
-        "row_index": 11,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 金鐘 揚壹物流統一中 心 852TA3003金鐘金鐘道95號統一中心2樓2041舖^852TA3003^取件 星期一至六:12:00-21:00(午休15:00- 16:00) 星期日及公眾假期: 11:00-15:00"
       }
     },
     {
@@ -12685,43 +12611,6 @@
       "parser_location": {
         "row_index": 24,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 深水埗 斜角巷（新高登 電腦廣場） 852BA3008 九龍深水埗元州街85-95號新高登電腦廣場2樓225號 鋪^852BA3008^ 取件 星期一至六: 12:00-20:00 星期日:13:00-20:00 公眾假期: 休息"
-      }
-    },
-    {
-      "code": "852BA3009",
-      "api_name": "合作店 車迷店",
-      "pdf_name": "深水埗車迷店",
-      "api_address": "九龍深水埗鴨寮街地下256號（車迷店）*",
-      "pdf_address": "九龍深水埗鴨寮街地下256號",
-      "api_business_hours": "11:00-20:00 周六:11:00-20:00 周日:11:00-20:00",
-      "pdf_business_hours": "星期一至日:11:00-20:00 公眾假期: 休息",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作店 車迷店",
-          "pdf": "深水埗車迷店",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "九龍深水埗鴨寮街地下256號（車迷店）*",
-          "pdf": "九龍深水埗鴨寮街地下256號",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "11:00-20:00 周六:11:00-20:00 周日:11:00-20:00",
-          "pdf": "星期一至日:11:00-20:00 公眾假期: 休息",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_KLN_TC",
-      "parser_location": {
-        "row_index": 25,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 深水埗車迷店852BA3009九龍深水埗鴨寮街地下256號^852BA3009^取件 星期一至日:11:00-20:00 公眾假期: 休息"
       }
     },
     {
@@ -15811,6 +15700,19 @@
   "reviewed_pdf_drift": [],
   "new_pdf_only_candidates": [
     {
+      "code": "852TA3003",
+      "name": "金鐘揚壹物流統一中心",
+      "address": "金鐘金鐘道95號統一中心2樓2041舖",
+      "district": null,
+      "sub_district": "金鐘",
+      "business_hours": "星期一至六:12:00-21:00(午休15:00- 16:00) 星期日及公眾假期: 11:00-15:00",
+      "document_id": "ASP_HK_TC",
+      "parser_location": {
+        "row_index": 11,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 金鐘 揚壹物流統一中 心 852TA3003金鐘金鐘道95號統一中心2樓2041舖^852TA3003^取件 星期一至六:12:00-21:00(午休15:00- 16:00) 星期日及公眾假期: 11:00-15:00"
+      }
+    },
+    {
       "code": "852J3006",
       "name": "黃大仙醉Chill",
       "address": "九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖",
@@ -15821,6 +15723,19 @@
       "parser_location": {
         "row_index": 8,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 黃大仙醉Chill852J3006 九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖^852J3006^ 取件 星期一至日: 12:00-20:00 公眾假期: 休息"
+      }
+    },
+    {
+      "code": "852BA3009",
+      "name": "深水埗車迷店",
+      "address": "九龍深水埗鴨寮街地下256號",
+      "district": null,
+      "sub_district": "深水埗",
+      "business_hours": "星期一至日:11:00-20:00 公眾假期: 休息",
+      "document_id": "ASP_KLN_TC",
+      "parser_location": {
+        "row_index": 25,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 深水埗車迷店852BA3009九龍深水埗鴨寮街地下256號^852BA3009^取件 星期一至日:11:00-20:00 公眾假期: 休息"
       }
     }
   ],

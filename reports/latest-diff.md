@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-10-24 11:44 (HKT UTC+8)`
+> **Last Updated**: `2026-10-25 11:42 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1652 |
+| **Previous total** | 1653 |
 | **Current total** | 1653 |
 | **Stores** | 140 |
 | **Lockers** | 1050 |
 | **Partners** | 463 |
-| **Added** | 1 |
+| **Added** | 0 |
 | **Removed** | 0 |
-| **Updated** | 1 |
-| **Unchanged** | 1651 |
+| **Updated** | 0 |
+| **Unchanged** | 1653 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1652 | 1653 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
+| total | 1653 | 1653 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 140 | 140 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1049 | 1050 | +1 | +0.1% | previous_locations_feed | ✅ PASS |
+| lockers | 1050 | 1050 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | partners | 463 | 463 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1647 | 1648 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1646 | 1647 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| tcCodes | 1648 | 1648 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1647 | 1647 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -45,7 +45,7 @@
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
-| Valid Partner PDF Records | 429 |
+| Valid Partner PDF Records | 428 |
 | Quarantined PDF Records | 11 |
 | PDF Quarantine Ratio | 2.5% |
 | SSR records | 190 |
@@ -88,7 +88,7 @@
 
 ## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.5% exceeds warning threshold 1% (11/440 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.5% exceeds warning threshold 1% (11/439 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 4.3% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.5% exceeds warning threshold 1%
@@ -96,9 +96,9 @@
 
 ---
 
-## Added Locations (1)
+## Added Locations (0)
 
-- `H852CH13P` [順豐智能櫃] 自助櫃 將軍澳Savannah地下 -- 將軍澳Savannah地下近商場電梯大堂*
+*(No added locations)*
 
 ---
 
@@ -108,8 +108,6 @@
 
 ---
 
-## Updated Locations (1)
+## Updated Locations (0)
 
-- `852Z152` 秀茂坪寶達商場順豐站
-  - business_hours_en: `"Mon - Fri: 11:00-21:00, Sat, Sun and Public Holiday: 12:00-20:00"` -> `"Mon - Fri: 12:00-21:00, Sat, Sun and Public Holiday: 12:00-20:00"`
-  - quality_flags: -SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT
+*(No updated locations)*

@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-10-25 11:42 (HKT UTC+8)",
-  "generated_at": "2026-10-25 11:42 (HKT UTC+8)",
-  "retrieved_at": "2026-10-25 11:42 (HKT UTC+8)",
+  "source_retrieved_at": "2026-10-26 11:46 (HKT UTC+8)",
+  "generated_at": "2026-10-26 11:46 (HKT UTC+8)",
+  "retrieved_at": "2026-10-26 11:46 (HKT UTC+8)",
   "counts": {
     "total": 1653,
     "stores": 140,
@@ -280,14 +280,14 @@
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "0031abdd2049da77f8478565e140b79355163c0c2713ab126e880c454d078aa2",
+      "raw_snapshot_sha256": "406c9541dfa98c754e1d92c579977be0d57a1b63d929ae1b3fd0246518e161c8",
       "semantic_sha256": "402fd77e8c5151e53ae7dfcd00f6ecb59f021101c0226afa4ff3f754b17a1188",
       "record_count": 1648,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "83f90018cf5d7cafef50aa6fead5a94d4b39776aabe4419fbfbe50ed07bcfa88",
+      "raw_snapshot_sha256": "b8d54b1473e8236add854e2f455fd87ee3709557157469ab2fd60d158a8b6d7f",
       "semantic_sha256": "1fbbd07ef6a951e3574e18b7a6aed8cd1c8290dfd130c1881ff498244c2db646",
       "record_count": 1647,
       "duplicate_codes": [],

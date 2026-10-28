@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-10-27 12:09 (HKT UTC+8)`
+> **Last Updated**: `2026-10-28 12:37 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1653 |
+| **Previous total** | 1648 |
 | **Current total** | 1648 |
 | **Stores** | 140 |
 | **Lockers** | 1047 |
 | **Partners** | 461 |
-| **Added** | 0 |
-| **Removed** | 5 |
-| **Updated** | 2 |
-| **Unchanged** | 1646 |
+| **Added** | 1 |
+| **Removed** | 1 |
+| **Updated** | 0 |
+| **Unchanged** | 1647 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1653 | 1648 | -5 | -0.3% | previous_locations_feed | ✅ PASS |
+| total | 1648 | 1648 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 140 | 140 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1050 | 1047 | -3 | -0.29% | previous_locations_feed | ✅ PASS |
-| partners | 463 | 461 | -2 | -0.43% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1648 | 1643 | -5 | -0.3% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1647 | 1642 | -5 | -0.3% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1047 | 1047 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| partners | 461 | 461 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1643 | 1643 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1642 | 1642 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -92,29 +92,22 @@
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 4.3% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.5% exceeds warning threshold 1%
-- ⚠️ [Audit warning] Severe PDF parser quarantines would remove previously published records: 852FE3017
+- ⚠️ Quarantined 4 corrupted or ambiguous partner PDF records (reasons: SERVICE_CODE_MISMATCH)
 
 ---
 
-## Added Locations (0)
+## Added Locations (1)
 
-*(No added locations)*
-
----
-
-## Removed Locations (5)
-
-- `852CH3008` [順豐合作點] 合作店 牛虹安寧花園 -- 新界將軍澳常寧路10號安寧花園第一座地下G3號鋪 牛虹安寧花園*
-- `852FE3017` [順豐合作點] 合作店 西徑士多 -- 西貢西徑村32F地下 西徑士多（14：00-16：00午休時段）*
-- `H852AB09P` [順豐智能櫃] 自助櫃 大埔大元邨泰民樓地下2號鋪(一號櫃) -- 大埔大元邨泰民樓地下2號鋪一號櫃*
 - `H852AB11P` [順豐智能櫃] 自助櫃 大埔大元村泰民樓地下2號鋪三號櫃 -- 大埔大元邨泰民樓地下2號鋪三號櫃*
-- `H852AB12P` [順豐智能櫃] 自助櫃 大埔大元邨泰民樓地下2號鋪(四號櫃) -- 大埔大元邨泰民樓地下2號鋪四號櫃*
 
 ---
 
-## Updated Locations (2)
+## Removed Locations (1)
 
-- `H852G100P` 自助櫃 荃灣麗城花園三期
-  - address: `"香港荃灣麗城花園三期3座平台只供住戶使用*"` -> `"香港荃灣麗城花園三期3座平台(只供住戶使用)*"`
-- `H852GE06P` 自助櫃 荃灣海之戀
-  - address: `"荃灣海之戀停車埸5樓第三中轉大堂住戶使用*"` -> `"荃灣海之戀停車埸5樓第三中轉大堂(只供住戶使用)*"`
+- `H852J039P` [順豐智能櫃] 自助櫃 黃大仙竹園北邨松園樓 -- 香港黃大仙竹園北邨松園樓地下*
+
+---
+
+## Updated Locations (0)
+
+*(No updated locations)*

@@ -1,18 +1,18 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-10-30 12:51 (HKT UTC+8)",
-  "generated_at": "2026-10-30 12:51 (HKT UTC+8)",
-  "retrieved_at": "2026-10-30 12:51 (HKT UTC+8)",
+  "source_retrieved_at": "2026-10-31 12:36 (HKT UTC+8)",
+  "generated_at": "2026-10-31 12:36 (HKT UTC+8)",
+  "retrieved_at": "2026-10-31 12:36 (HKT UTC+8)",
   "counts": {
-    "total": 1648,
+    "total": 1649,
     "stores": 140,
     "lockers": 1048,
-    "partners": 460
+    "partners": 461
   },
   "count_deltas": {
     "total": {
-      "previous": 1647,
-      "current": 1648,
+      "previous": 1648,
+      "current": 1649,
       "delta": 1,
       "delta_pct": 0.06,
       "baseline_available": true,
@@ -38,8 +38,8 @@
       "gate_result": "pass"
     },
     "partners": {
-      "previous": 459,
-      "current": 460,
+      "previous": 460,
+      "current": 461,
       "delta": 1,
       "delta_pct": 0.22,
       "baseline_available": true,
@@ -47,8 +47,8 @@
       "gate_result": "pass"
     },
     "tcCodes": {
-      "previous": 1642,
-      "current": 1643,
+      "previous": 1643,
+      "current": 1644,
       "delta": 1,
       "delta_pct": 0.06,
       "baseline_available": true,
@@ -56,10 +56,10 @@
       "gate_result": "pass"
     },
     "enCodes": {
-      "previous": 1641,
+      "previous": 1642,
       "current": 1642,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.en_record_count",
       "gate_result": "pass"
@@ -87,9 +87,9 @@
       "semantic_success_count": 5,
       "partial_quality_failure_count": 3,
       "failed_count": 0,
-      "valid_record_count": 427,
+      "valid_record_count": 424,
       "quarantined_record_count": 11,
-      "quarantine_ratio": 0.0251,
+      "quarantine_ratio": 0.0253,
       "cross_pdf_duplicate_conflict_count": 0,
       "status": "partial_parse_quality_failure",
       "errors": [],
@@ -188,9 +188,9 @@
           "semantic_ok": true,
           "within_quality_threshold": true,
           "attempts": 1,
-          "raw_code_count": 41,
-          "candidate_count": 41,
-          "valid_record_count": 41,
+          "raw_code_count": 39,
+          "candidate_count": 39,
+          "valid_record_count": 39,
           "quarantined_record_count": 0,
           "duplicate_code_count": 0,
           "duplicate_conflict_count": 0,
@@ -222,9 +222,9 @@
           "semantic_ok": true,
           "within_quality_threshold": true,
           "attempts": 1,
-          "raw_code_count": 6,
-          "candidate_count": 6,
-          "valid_record_count": 6,
+          "raw_code_count": 5,
+          "candidate_count": 5,
+          "valid_record_count": 5,
           "quarantined_record_count": 0,
           "duplicate_code_count": 0,
           "duplicate_conflict_count": 0,
@@ -244,51 +244,51 @@
       "pdf_partner"
     ],
     "counts": {
-      "api_canonical_count": 1643,
+      "api_canonical_count": 1644,
       "ssr_only_count": 2,
       "reviewed_pdf_supplement_count": 3,
-      "unreviewed_pdf_candidate_count": 4
+      "unreviewed_pdf_candidate_count": 2
     }
   },
   "coverage": {
-    "tc_record_count": 1643,
+    "tc_record_count": 1644,
     "en_record_count": 1642,
-    "bilingual_match_rate": 0.9993913572732805,
-    "district_resolved_count": 1648,
+    "bilingual_match_rate": 0.9987834549878345,
+    "district_resolved_count": 1649,
     "district_unresolved_count": 0
   },
   "quality": {
     "pipeline_blocking_errors": 0,
-    "pipeline_warnings": 5,
+    "pipeline_warnings": 6,
     "record_flag_counts_by_severity": {
       "info": 61,
-      "warning": 253,
+      "warning": 254,
       "error": 0
     },
     "flag_counts_by_type": {
       "SOURCE_TC_EN_UNIT_CONFLICT": 38,
-      "ENGLISH_FIELD_CONTAINS_CJK": 91,
-      "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 96,
+      "ENGLISH_FIELD_CONTAINS_CJK": 92,
+      "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 95,
       "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT": 20,
       "SOURCE_FORMATTING_ARTIFACT": 4,
       "DUPLICATE_ADDRESS_SUFFIX": 10,
       "ADMIN_DISTRICT_ALIAS_APPLIED": 42,
-      "MISSING_ENGLISH_RECORD": 6,
+      "MISSING_ENGLISH_RECORD": 7,
       "SUBDISTRICT_ADDRESS_CONFLICT": 2,
       "MISSING_COORDINATES": 5
     }
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "3b00227cd1f5d12e8c97353767c02508a17f85929ac0febe78b9bee2bd75925d",
-      "semantic_sha256": "19f90d3f6f6e860ac38da8aff9fe784c584b6cfbded8b2e91e975ef78cee9c90",
-      "record_count": 1643,
+      "raw_snapshot_sha256": "46c3ac008c61fabddf83ff180836df5373a66ed9186323ded9b254c949be35ce",
+      "semantic_sha256": "ea80d70428d846248ee77973394ee39ff47e28783773f81caa70f848be380c7c",
+      "record_count": 1644,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "74eab7e9a3ea7a28eff97ebaeca569c2c3e65ab87e8f9b8f5dea347afc60a8bb",
-      "semantic_sha256": "8eaf97e93676f78266f41a5b3d565e5aba5a09e6e9e6765267c1618e679c5199",
+      "raw_snapshot_sha256": "deb18f34f4e1bd82ecbe1f61409e496a71e2a8cb25dca209c0a22f306fafd3d1",
+      "semantic_sha256": "8bea2a01f345820d5e6ddc4aa13b5483fe79041a36a10d8c6665c1ff292b25a2",
       "record_count": 1642,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_en/record_hashes"
@@ -780,12 +780,12 @@
       "duplicate_codes": []
     },
     "canonical": {
-      "semantic_sha256": "2969db1be270ddf173e24e4b08142fc6dfa66c4e0afdc99338f83f0d76ebffba",
-      "record_count": 1648,
+      "semantic_sha256": "0e41a1fb8407ab93ea3c98edb37aa44ec04da27703a7f9282c0c3a2ab39380ee",
+      "record_count": 1649,
       "duplicate_codes": []
     },
     "partner_pdf": {
-      "semantic_sha256": "4792a37bdd5b155f268b51a50d8717c9c000de12a63085e9e19a0a7b319e17bf",
+      "semantic_sha256": "62ab4b23eed603c73325506c183a11544b0c8fd5c788ee69ea1f9197e477ff5a",
       "document_count": 8
     }
   }

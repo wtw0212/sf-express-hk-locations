@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-10-31 12:36 (HKT UTC+8)",
-  "generated_at": "2026-10-31 12:36 (HKT UTC+8)",
-  "retrieved_at": "2026-10-31 12:36 (HKT UTC+8)",
+  "source_retrieved_at": "2026-11-01 12:56 (HKT UTC+8)",
+  "generated_at": "2026-11-01 12:56 (HKT UTC+8)",
+  "retrieved_at": "2026-11-01 12:56 (HKT UTC+8)",
   "counts": {
     "total": 1649,
     "stores": 140,
@@ -11,10 +11,10 @@
   },
   "count_deltas": {
     "total": {
-      "previous": 1648,
+      "previous": 1649,
       "current": 1649,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -38,19 +38,19 @@
       "gate_result": "pass"
     },
     "partners": {
-      "previous": 460,
+      "previous": 461,
       "current": 461,
-      "delta": 1,
-      "delta_pct": 0.22,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
     },
     "tcCodes": {
-      "previous": 1643,
+      "previous": 1644,
       "current": 1644,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "delta": 0,
+      "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.tc_record_count",
       "gate_result": "pass"
@@ -87,7 +87,7 @@
       "semantic_success_count": 5,
       "partial_quality_failure_count": 3,
       "failed_count": 0,
-      "valid_record_count": 424,
+      "valid_record_count": 423,
       "quarantined_record_count": 11,
       "quarantine_ratio": 0.0253,
       "cross_pdf_duplicate_conflict_count": 0,
@@ -205,13 +205,13 @@
           "semantic_ok": false,
           "within_quality_threshold": true,
           "attempts": 1,
-          "raw_code_count": 68,
-          "candidate_count": 65,
-          "valid_record_count": 62,
+          "raw_code_count": 67,
+          "candidate_count": 64,
+          "valid_record_count": 61,
           "quarantined_record_count": 3,
           "duplicate_code_count": 0,
           "duplicate_conflict_count": 0,
-          "quarantine_ratio": 0.0462
+          "quarantine_ratio": 0.0469
         },
         {
           "source_key": "ASP_ISLANDS_TC",
@@ -259,7 +259,7 @@
   },
   "quality": {
     "pipeline_blocking_errors": 0,
-    "pipeline_warnings": 6,
+    "pipeline_warnings": 5,
     "record_flag_counts_by_severity": {
       "info": 61,
       "warning": 254,
@@ -280,14 +280,14 @@
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "46c3ac008c61fabddf83ff180836df5373a66ed9186323ded9b254c949be35ce",
+      "raw_snapshot_sha256": "4aef2f0f8dfb6ba743783361fb74255290f1e2c416a50348512c6d296a7c0436",
       "semantic_sha256": "ea80d70428d846248ee77973394ee39ff47e28783773f81caa70f848be380c7c",
       "record_count": 1644,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "deb18f34f4e1bd82ecbe1f61409e496a71e2a8cb25dca209c0a22f306fafd3d1",
+      "raw_snapshot_sha256": "07064a608964e1d2d017cc241fb4dc16d7aa9ac189bdb339278a845e3f12798f",
       "semantic_sha256": "8bea2a01f345820d5e6ddc4aa13b5483fe79041a36a10d8c6665c1ff292b25a2",
       "record_count": 1642,
       "duplicate_codes": [],
@@ -785,7 +785,7 @@
       "duplicate_codes": []
     },
     "partner_pdf": {
-      "semantic_sha256": "62ab4b23eed603c73325506c183a11544b0c8fd5c788ee69ea1f9197e477ff5a",
+      "semantic_sha256": "3609c282ead9196bc5cf2247110f69f0f739303a754264b3df005a21e39d53f8",
       "document_count": 8
     }
   }

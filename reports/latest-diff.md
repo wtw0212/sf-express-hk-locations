@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-10-31 12:36 (HKT UTC+8)`
+> **Last Updated**: `2026-11-01 12:56 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1648 |
+| **Previous total** | 1649 |
 | **Current total** | 1649 |
 | **Stores** | 140 |
 | **Lockers** | 1048 |
 | **Partners** | 461 |
-| **Added** | 2 |
-| **Removed** | 1 |
-| **Updated** | 1 |
-| **Unchanged** | 1646 |
+| **Added** | 0 |
+| **Removed** | 0 |
+| **Updated** | 0 |
+| **Unchanged** | 1649 |
 
 ---
 
@@ -24,11 +24,11 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1648 | 1649 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
+| total | 1649 | 1649 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 140 | 140 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | lockers | 1048 | 1048 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 460 | 461 | +1 | +0.22% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1643 | 1644 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| partners | 461 | 461 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1644 | 1644 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
 | enCodes | 1642 | 1642 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
@@ -45,7 +45,7 @@
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
-| Valid Partner PDF Records | 424 |
+| Valid Partner PDF Records | 423 |
 | Quarantined PDF Records | 11 |
 | PDF Quarantine Ratio | 2.5% |
 | SSR records | 190 |
@@ -62,7 +62,7 @@
 | Metric | Count |
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
-| **Pipeline Execution Warnings** | 6 |
+| **Pipeline Execution Warnings** | 5 |
 | **Record Quality Warnings** | 254 |
 | **Record Quality Info Flags** | 61 |
 | **Record Quality Errors** | 0 |
@@ -86,33 +86,28 @@
 
 ---
 
-## Pipeline Execution Warnings (6)
+## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.5% exceeds warning threshold 1% (11/435 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.5% exceeds warning threshold 1% (11/434 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 4.3% exceeds warning threshold 1%
-- ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.6% exceeds warning threshold 1%
-- ⚠️ [Audit warning] Partner PDF 'ASP_ISLANDS_TC' valid record count dropped by 16.7% (6 -> 5), threshold: 15%
+- ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.7% exceeds warning threshold 1%
 - ⚠️ Quarantined 4 corrupted or ambiguous partner PDF records (reasons: SERVICE_CODE_MISMATCH)
 
 ---
 
-## Added Locations (2)
+## Added Locations (0)
 
-- `852FE3017` [順豐合作點] 合作店 西徑士多 -- 西貢西徑村32F地下 西徑士多（14：00-16：00午休時段）*
-- `H852A066P` [順豐智能櫃] 自助櫃 粉嶺聯昌街(365 Laundry) -- 粉嶺聯昌街31號地下(洗衣店內)*
-
----
-
-## Removed Locations (1)
-
-- `H852GC02P` [順豐智能櫃] 自助櫃 青衣順豐大廈地下 -- 青衣航運路36號順豐大廈地下*
+*(No added locations)*
 
 ---
 
-## Updated Locations (1)
+## Removed Locations (0)
 
-- `852AB` 大埔美新里順豐站
-  - address: `"香港大埔區大埔汀角路51A號太平工業大廈二座8樓A室*^"` -> `"香港大埔區大埔美新里5號地下A鋪*^"`
-  - address_en: `"Shop A, G/F, No.5 Mei San Lane, Tai Po*,Tai Po,Tai Po District,Hong Kong"` -> `"Shop A, G/F, No.5 Mei San Lane*,Tai Po,Tai Po District,Hong Kong"`
-  - quality_flags: -SOURCE_TC_EN_STREET_NUMBER_CONFLICT
+*(No removed locations)*
+
+---
+
+## Updated Locations (0)
+
+*(No updated locations)*

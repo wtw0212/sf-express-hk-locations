@@ -1,82 +1,82 @@
 {
-  "source_retrieved_at": "2026-11-02 12:57 (HKT UTC+8)",
-  "generated_at": "2026-11-02 12:57 (HKT UTC+8)",
+  "source_retrieved_at": "2026-11-03 13:46 (HKT UTC+8)",
+  "generated_at": "2026-11-03 13:46 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-11-02T04:58:13.588Z",
+      "document_retrieved_at": "2026-11-03T05:47:39.676Z",
       "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-11-02T04:58:14.199Z",
+      "document_retrieved_at": "2026-11-03T05:47:39.870Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-11-02T04:58:14.390Z",
+      "document_retrieved_at": "2026-11-03T05:47:40.987Z",
       "document_binary_sha256": "c50052da2a64ce74d6eac3bceacb85ef0816637841df5b06b1db3b3c43280cc0",
       "extracted_text_sha256": "eb95bd589e2f26e24f4306d35a0a8c2de07dadd2ed6c77cb7f9e92395a4eebcd"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-11-02T04:58:14.513Z",
+      "document_retrieved_at": "2026-11-03T05:47:41.158Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-11-02T04:58:14.628Z",
+      "document_retrieved_at": "2026-11-03T05:47:41.322Z",
       "document_binary_sha256": "d11d9c1c8a104fe0ad62e6b68fad494f4624271e5b3238c16834979a32e24dcf",
       "extracted_text_sha256": "d1b5c46caade264dd006972735cfef315ddab880d6a428fd5ce31317b30507a1"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-11-02T04:58:14.858Z",
+      "document_retrieved_at": "2026-11-03T05:47:41.570Z",
       "document_binary_sha256": "bd0bec0563e00f9602d15cdaa64a48784819cf68e12383ad708c76ddb6073e78",
       "extracted_text_sha256": "38d9eaea65301a6386ea75df8796879e4b3a9ab65463c65ea740593d0a3a6186"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-11-02T04:58:15.002Z",
+      "document_retrieved_at": "2026-11-03T05:47:41.760Z",
       "document_binary_sha256": "58eafdf0a17e4f9f71a2301855cedf1017c35a6573b1a1d97892968548ccccdc",
       "extracted_text_sha256": "b1d8897059470c002240a67305b9e6f7d00092213ed5c5f71836ce098495817a"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-11-02T04:58:15.176Z",
+      "document_retrieved_at": "2026-11-03T05:47:41.878Z",
       "document_binary_sha256": "4c7efbac82092a3631acdf241b98fee6ab00308f55fe9570c443f25ddbbf4703",
       "extracted_text_sha256": "d5cdd55ac26073d4b1f3e73f89f3de52aa3421c3f6f9b8b58098cd8a1de63a1e"
     }
   },
   "summary": {
     "parsed_pdf_record_count": 423,
-    "api_pdf_conflict_count": 418,
-    "api_pdf_difference_count": 418,
+    "api_pdf_conflict_count": 416,
+    "api_pdf_difference_count": 416,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 418,
+      "semantic_conflict": 416,
       "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 913,
+      "semantic_conflict": 907,
       "name_specificity_difference": 207,
       "formatting_difference": 0,
       "equivalent_difference": 128
     },
-    "new_pdf_only_candidate_count": 2,
+    "new_pdf_only_candidate_count": 5,
     "missing_reviewed_record_count": 0,
     "quarantined_record_count": 11
   },
@@ -11763,43 +11763,6 @@
       }
     },
     {
-      "code": "852J3019",
-      "api_name": "合作店 大新工程",
-      "pdf_name": "慈雲山大新工程",
-      "api_address": "慈雲山崇華街22B號地下(大新工程)*",
-      "pdf_address": "慈雲山崇華街22B號地下",
-      "api_business_hours": "12:00-19:00 周六:14:00-18:00",
-      "pdf_business_hours": "星期一至五: 12:00-19:00 星期六:14:00-18:00 星期日、公眾假期: 休息",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作店 大新工程",
-          "pdf": "慈雲山大新工程",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "慈雲山崇華街22B號地下(大新工程)*",
-          "pdf": "慈雲山崇華街22B號地下",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "12:00-19:00 周六:14:00-18:00",
-          "pdf": "星期一至五: 12:00-19:00 星期六:14:00-18:00 星期日、公眾假期: 休息",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_KLN_TC",
-      "parser_location": {
-        "row_index": 1,
-        "raw_row": "服務時間 (星期一至日及公眾假期) 快件限制 慈雲山大新工程852J3019慈雲山崇華街22B號地下^852J3019^取件 星期一至五: 12:00-19:00 星期六:14:00-18:00 星期日、公眾假期: 休息"
-      }
-    },
-    {
       "code": "852B3001",
       "api_name": "合作點 淘寶集運自提點",
       "pdf_name": "大角咀淘寶集運自提點",
@@ -13730,43 +13693,6 @@
       }
     },
     {
-      "code": "852A3017",
-      "api_name": "合作店 路卡斯士多",
-      "pdf_name": "粉嶺路卡斯士多",
-      "api_address": "粉嶺粉嶺圍14號地下(路卡斯士多)*",
-      "pdf_address": "粉嶺粉嶺圍14號地下",
-      "api_business_hours": "09:00-20:00 周六:09:00-20:00 周日:09:00-20:00 節假日:09：00-20:00",
-      "pdf_business_hours": "星期一至六:09:00-20:00 星期日及公眾假期:09:00-20:00",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作店 路卡斯士多",
-          "pdf": "粉嶺路卡斯士多",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "粉嶺粉嶺圍14號地下(路卡斯士多)*",
-          "pdf": "粉嶺粉嶺圍14號地下",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "09:00-20:00 周六:09:00-20:00 周日:09:00-20:00 節假日:09：00-20:00",
-          "pdf": "星期一至六:09:00-20:00 星期日及公眾假期:09:00-20:00",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_NT_TC",
-      "parser_location": {
-        "row_index": 16,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 粉嶺路卡斯士多852A3017粉嶺粉嶺圍14號地下^852A3017^取件 星期一至六:09:00-20:00 星期日及公眾假期:09:00-20:00"
-      }
-    },
-    {
       "code": "852F3001",
       "api_name": "合作點 集腳點",
       "pdf_name": "火炭集腳點",
@@ -14171,6 +14097,43 @@
       "parser_location": {
         "row_index": 28,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 馬鞍山忠誠鞋業852FE3001沙田馬鞍山恆安商場2樓209號舖^852FE3001^取件/本地寄件 星期一至六: 10:30-19:00 公眾假期: 11:00-18:00 星期日: 休息"
+      }
+    },
+    {
+      "code": "852FE3012",
+      "api_name": "合作店 錦英苑自提點",
+      "pdf_name": "馬鞍山錦英苑自提點",
+      "api_address": "馬鞍山錦英苑街市3A（錦英苑自提點）*",
+      "pdf_address": "馬鞍山錦英苑街市16號",
+      "api_business_hours": "12:00-20:00 周六:12:00-20:00 周日:12：00-18:00 節假日:12:00-18:00",
+      "pdf_business_hours": "星期一至六:12:00-20:00 星期日及公眾假期:12:00-18:00",
+      "differing_fields": [
+        "name",
+        "address",
+        "business_hours"
+      ],
+      "classification": "semantic_conflict",
+      "comparison": {
+        "name": {
+          "canonical": "合作店 錦英苑自提點",
+          "pdf": "馬鞍山錦英苑自提點",
+          "classification": "semantic_conflict"
+        },
+        "address": {
+          "canonical": "馬鞍山錦英苑街市3A（錦英苑自提點）*",
+          "pdf": "馬鞍山錦英苑街市16號",
+          "classification": "semantic_conflict"
+        },
+        "business_hours": {
+          "canonical": "12:00-20:00 周六:12:00-20:00 周日:12：00-18:00 節假日:12:00-18:00",
+          "pdf": "星期一至六:12:00-20:00 星期日及公眾假期:12:00-18:00",
+          "classification": "semantic_conflict"
+        }
+      },
+      "document_id": "ASP_NT_TC",
+      "parser_location": {
+        "row_index": 29,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 馬鞍山錦英苑自提點852FE3012馬鞍山錦英苑街市16號^852FE3012^取件 星期一至六:12:00-20:00 星期日及公眾假期:12:00-18:00"
       }
     },
     {
@@ -14720,43 +14683,6 @@
       "parser_location": {
         "row_index": 47,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門三江書報社852U3006屯門三聖邨豐漁樓地下S13鋪^852U3006^取件09:00-19:00"
-      }
-    },
-    {
-      "code": "852U3009",
-      "api_name": "合作點 啟豐自提點",
-      "pdf_name": "屯門啟豐自提點",
-      "api_address": "新界屯門啟豐商場地下32號鋪(14:00-15:00午休) 啟豐自提點*",
-      "pdf_address": "新界屯門啟豐園商場地下32號舖",
-      "api_business_hours": "11:00-20:00 周六:12:00-18:00",
-      "pdf_business_hours": "星期一至五: 11:00-20:00 星期六: 12:00-18:00 星期日、公眾假期: 休息",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作點 啟豐自提點",
-          "pdf": "屯門啟豐自提點",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "新界屯門啟豐商場地下32號鋪(14:00-15:00午休) 啟豐自提點*",
-          "pdf": "新界屯門啟豐園商場地下32號舖",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "11:00-20:00 周六:12:00-18:00",
-          "pdf": "星期一至五: 11:00-20:00 星期六: 12:00-18:00 星期日、公眾假期: 休息",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_NT_TC",
-      "parser_location": {
-        "row_index": 48,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門啟豐自提點852U3009新界屯門啟豐園商場地下32號舖^852U3009^取件 星期一至五: 11:00-20:00 星期六: 12:00-18:00 星期日、公眾假期: 休息"
       }
     },
     {
@@ -15528,6 +15454,19 @@
       }
     },
     {
+      "code": "852J3019",
+      "name": "慈雲山大新工程",
+      "address": "慈雲山崇華街22B號地下",
+      "district": null,
+      "sub_district": "慈雲山",
+      "business_hours": "星期一至五: 12:00-19:00 星期六:14:00-18:00 星期日、公眾假期: 休息",
+      "document_id": "ASP_KLN_TC",
+      "parser_location": {
+        "row_index": 1,
+        "raw_row": "服務時間 (星期一至日及公眾假期) 快件限制 慈雲山大新工程852J3019慈雲山崇華街22B號地下^852J3019^取件 星期一至五: 12:00-19:00 星期六:14:00-18:00 星期日、公眾假期: 休息"
+      }
+    },
+    {
       "code": "852J3006",
       "name": "黃大仙醉Chill",
       "address": "九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖",
@@ -15538,6 +15477,32 @@
       "parser_location": {
         "row_index": 6,
         "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 黃大仙醉Chill852J3006 九龍黃大仙龍翔道136號黃大仙上邨黃大仙中心北館 二樓N210B號舖^852J3006^ 取件 星期一至日: 12:00-20:00 公眾假期: 休息"
+      }
+    },
+    {
+      "code": "852A3017",
+      "name": "粉嶺路卡斯士多",
+      "address": "粉嶺粉嶺圍14號地下",
+      "district": null,
+      "sub_district": "粉嶺",
+      "business_hours": "星期一至六:09:00-20:00 星期日及公眾假期:09:00-20:00",
+      "document_id": "ASP_NT_TC",
+      "parser_location": {
+        "row_index": 16,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 粉嶺路卡斯士多852A3017粉嶺粉嶺圍14號地下^852A3017^取件 星期一至六:09:00-20:00 星期日及公眾假期:09:00-20:00"
+      }
+    },
+    {
+      "code": "852U3009",
+      "name": "屯門啟豐自提點",
+      "address": "新界屯門啟豐園商場地下32號舖",
+      "district": null,
+      "sub_district": "屯門",
+      "business_hours": "星期一至五: 11:00-20:00 星期六: 12:00-18:00 星期日、公眾假期: 休息",
+      "document_id": "ASP_NT_TC",
+      "parser_location": {
+        "row_index": 48,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 屯門啟豐自提點852U3009新界屯門啟豐園商場地下32號舖^852U3009^取件 星期一至五: 11:00-20:00 星期六: 12:00-18:00 星期日、公眾假期: 休息"
       }
     }
   ],

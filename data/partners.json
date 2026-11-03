@@ -33,7 +33,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2006",
@@ -69,7 +69,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2008",
@@ -105,7 +105,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2014",
@@ -141,7 +141,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2016",
@@ -177,7 +177,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2017",
@@ -213,7 +213,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2018",
@@ -249,7 +249,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2019",
@@ -298,7 +298,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2020",
@@ -334,7 +334,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2021",
@@ -370,7 +370,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2022",
@@ -406,7 +406,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2023",
@@ -442,7 +442,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A2024",
@@ -489,7 +489,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A3004",
@@ -525,7 +525,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A3012",
@@ -561,7 +561,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A3013",
@@ -597,7 +597,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A3015",
@@ -644,54 +644,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
-  },
-  {
-    "id": "852A3017",
-    "code": "852A3017",
-    "type": "partner",
-    "type_name": "順豐合作點",
-    "type_name_en": "Service Partner",
-    "name": "合作店 路卡斯士多",
-    "name_en": "路卡斯士多",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "北區",
-    "district_en": "North District",
-    "sub_district": "粉嶺",
-    "sub_district_en": "Fanling",
-    "address": "粉嶺粉嶺圍14號地下(路卡斯士多)*",
-    "address_en": "G/F, 14 Fanling Wai, Fanling*",
-    "telephone": null,
-    "business_hours": "09:00-20:00 周六:09:00-20:00 周日:09:00-20:00 節假日:09：00-20:00",
-    "business_hours_en": "09:00-20:00",
-    "location": {
-      "latitude": 22.498614,
-      "longitude": 114.135272
-    },
-    "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "ENGLISH_FIELD_CONTAINS_CJK",
-        "severity": "warning",
-        "fields": [
-          "name_en"
-        ],
-        "details": {
-          "value": "路卡斯士多"
-        }
-      }
-    ],
-    "provenance": {
-      "name": "api_tc",
-      "name_en": "api_en",
-      "address": "api_tc",
-      "address_en": "api_en",
-      "district": "api_tc",
-      "business_hours": "api_tc",
-      "business_hours_en": "api_en"
-    },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A3018",
@@ -738,7 +691,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A3021",
@@ -785,7 +738,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852A3022",
@@ -832,7 +785,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AA2001",
@@ -868,7 +821,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AA2004",
@@ -917,7 +870,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AA2005",
@@ -953,7 +906,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AA2014",
@@ -989,7 +942,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AA2015",
@@ -1038,7 +991,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AA2019",
@@ -1087,7 +1040,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AA3003",
@@ -1123,7 +1076,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AA3005",
@@ -1170,7 +1123,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AA3006",
@@ -1217,7 +1170,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AA3007",
@@ -1264,7 +1217,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AB2001",
@@ -1313,7 +1266,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AB2002",
@@ -1362,7 +1315,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AB2003",
@@ -1398,7 +1351,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AB2004",
@@ -1445,7 +1398,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AB3005",
@@ -1492,7 +1445,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AB3010",
@@ -1539,7 +1492,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852AB3012",
@@ -1586,7 +1539,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852B2001",
@@ -1622,7 +1575,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852B2006",
@@ -1658,7 +1611,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852B2012",
@@ -1694,7 +1647,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852B2014",
@@ -1730,7 +1683,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852B3001",
@@ -1766,7 +1719,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BA2001",
@@ -1802,7 +1755,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BA2004",
@@ -1838,7 +1791,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BA2005",
@@ -1887,7 +1840,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BA2006",
@@ -1923,7 +1876,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BA2007",
@@ -1959,7 +1912,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BA3001",
@@ -1995,7 +1948,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BA3004",
@@ -2031,7 +1984,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BA3008",
@@ -2078,7 +2031,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BA3015",
@@ -2125,7 +2078,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BA3016",
@@ -2172,7 +2125,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BA3017",
@@ -2219,7 +2172,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB2001",
@@ -2268,7 +2221,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB2002",
@@ -2317,7 +2270,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB2004",
@@ -2353,7 +2306,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB2005",
@@ -2389,7 +2342,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB2007",
@@ -2425,7 +2378,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB2012",
@@ -2461,7 +2414,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB2013",
@@ -2497,7 +2450,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB2014",
@@ -2533,7 +2486,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB2015",
@@ -2569,7 +2522,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB3004",
@@ -2605,7 +2558,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB3005",
@@ -2652,7 +2605,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BB3006",
@@ -2699,7 +2652,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BD2001",
@@ -2735,7 +2688,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BD2002",
@@ -2782,7 +2735,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BD2003",
@@ -2831,7 +2784,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BE2002",
@@ -2880,7 +2833,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BF2001",
@@ -2916,7 +2869,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852BF3001",
@@ -2952,7 +2905,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852C2009",
@@ -2988,7 +2941,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852C2023",
@@ -3024,7 +2977,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852C2024",
@@ -3060,7 +3013,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CA2001",
@@ -3096,7 +3049,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CA2004",
@@ -3132,7 +3085,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CA2007",
@@ -3181,7 +3134,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CA2008",
@@ -3217,7 +3170,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CA2009",
@@ -3253,7 +3206,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CA2010",
@@ -3289,7 +3242,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CA2011",
@@ -3325,7 +3278,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CA3003",
@@ -3372,7 +3325,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CA3006",
@@ -3431,7 +3384,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CAD3001",
@@ -3478,7 +3431,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CB2001",
@@ -3527,7 +3480,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CB2003",
@@ -3563,7 +3516,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CB2004",
@@ -3612,7 +3565,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CB2005",
@@ -3648,7 +3601,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CB2006",
@@ -3684,7 +3637,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CB2010",
@@ -3720,7 +3673,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CB3002",
@@ -3756,7 +3709,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CB3003",
@@ -3792,7 +3745,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CB3005",
@@ -3839,7 +3792,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CB3007",
@@ -3886,7 +3839,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2001",
@@ -3922,7 +3875,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2002",
@@ -3958,7 +3911,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2003",
@@ -3994,7 +3947,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2018",
@@ -4030,7 +3983,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2021",
@@ -4066,7 +4019,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2022",
@@ -4102,7 +4055,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2023",
@@ -4138,7 +4091,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2024",
@@ -4174,7 +4127,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2026",
@@ -4210,7 +4163,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2027",
@@ -4246,7 +4199,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2028",
@@ -4282,7 +4235,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2029",
@@ -4318,7 +4271,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2031",
@@ -4367,7 +4320,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2033",
@@ -4403,7 +4356,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2034",
@@ -4439,7 +4392,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2036",
@@ -4475,7 +4428,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2038",
@@ -4511,7 +4464,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC2039",
@@ -4547,7 +4500,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC3006",
@@ -4594,7 +4547,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CC3007",
@@ -4641,7 +4594,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CF3001",
@@ -4677,7 +4630,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CH2001",
@@ -4713,7 +4666,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CH2002",
@@ -4749,7 +4702,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CH2003",
@@ -4785,7 +4738,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CH3001",
@@ -4821,7 +4774,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CH3002",
@@ -4868,7 +4821,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852CH3007",
@@ -4915,7 +4868,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852D2001",
@@ -4951,7 +4904,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852D2002",
@@ -4987,7 +4940,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852D2004",
@@ -5023,7 +4976,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852D2005",
@@ -5059,7 +5012,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852D2006",
@@ -5095,7 +5048,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852D3001",
@@ -5131,7 +5084,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852D3002",
@@ -5180,7 +5133,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852DA2002",
@@ -5216,7 +5169,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852DA2003",
@@ -5265,7 +5218,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852DA2004",
@@ -5301,7 +5254,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852DA2005",
@@ -5337,7 +5290,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852DA3003",
@@ -5396,7 +5349,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852DB2002",
@@ -5432,7 +5385,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852E2001",
@@ -5468,7 +5421,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852E2002",
@@ -5504,7 +5457,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852E2013",
@@ -5553,7 +5506,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852E2014",
@@ -5589,7 +5542,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852EA2002",
@@ -5625,7 +5578,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852EA2006",
@@ -5661,7 +5614,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852EA2008",
@@ -5697,7 +5650,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852EA2009",
@@ -5733,7 +5686,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852F2014",
@@ -5769,7 +5722,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852F2017",
@@ -5805,7 +5758,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852F3001",
@@ -5841,7 +5794,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FB2001",
@@ -5877,7 +5830,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FB2002",
@@ -5913,7 +5866,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2001",
@@ -5949,7 +5902,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2003",
@@ -5985,7 +5938,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2004",
@@ -6021,7 +5974,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2005",
@@ -6057,7 +6010,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2006",
@@ -6093,7 +6046,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2008",
@@ -6129,7 +6082,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2009",
@@ -6165,7 +6118,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2011",
@@ -6201,7 +6154,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2013",
@@ -6250,7 +6203,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2014",
@@ -6286,7 +6239,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2016",
@@ -6322,7 +6275,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2017",
@@ -6358,7 +6311,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2018",
@@ -6394,7 +6347,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2019",
@@ -6430,7 +6383,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2020",
@@ -6466,7 +6419,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE2021",
@@ -6502,7 +6455,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE3001",
@@ -6538,7 +6491,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE3005",
@@ -6574,7 +6527,54 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
+  },
+  {
+    "id": "852FE3012",
+    "code": "852FE3012",
+    "type": "partner",
+    "type_name": "順豐合作點",
+    "type_name_en": "Service Partner",
+    "name": "合作店 錦英苑自提點",
+    "name_en": "錦英苑自提點",
+    "region": "新界",
+    "region_en": "New Territories",
+    "district": "沙田區",
+    "district_en": "Sha Tin District",
+    "sub_district": "馬鞍山",
+    "sub_district_en": "Ma On Shan",
+    "address": "馬鞍山錦英苑街市3A（錦英苑自提點）*",
+    "address_en": "Shop 3A ,Kam Ying Court Market,Ma On Shan*",
+    "telephone": null,
+    "business_hours": "12:00-20:00 周六:12:00-20:00 周日:12：00-18:00 節假日:12:00-18:00",
+    "business_hours_en": "12:00-20:00",
+    "location": {
+      "latitude": 22.422989,
+      "longitude": 114.236216
+    },
+    "source": "api_tc",
+    "quality_flags": [
+      {
+        "type": "ENGLISH_FIELD_CONTAINS_CJK",
+        "severity": "warning",
+        "fields": [
+          "name_en"
+        ],
+        "details": {
+          "value": "錦英苑自提點"
+        }
+      }
+    ],
+    "provenance": {
+      "name": "api_tc",
+      "name_en": "api_en",
+      "address": "api_tc",
+      "address_en": "api_en",
+      "district": "api_tc",
+      "business_hours": "api_tc",
+      "business_hours_en": "api_en"
+    },
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE3017",
@@ -6621,7 +6621,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE3021",
@@ -6668,7 +6668,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FE3022",
@@ -6715,7 +6715,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FH2001",
@@ -6751,7 +6751,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FH2002",
@@ -6787,7 +6787,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FH2003",
@@ -6823,7 +6823,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FH2004",
@@ -6872,7 +6872,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FH2005",
@@ -6908,7 +6908,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FH3004",
@@ -6944,7 +6944,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852FH3009",
@@ -6991,7 +6991,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G2001",
@@ -7027,7 +7027,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G2003",
@@ -7063,7 +7063,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G2004",
@@ -7099,7 +7099,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G2005",
@@ -7135,7 +7135,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G2007",
@@ -7183,7 +7183,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G2011",
@@ -7232,7 +7232,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G2020",
@@ -7280,7 +7280,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G2021",
@@ -7316,7 +7316,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G3003",
@@ -7352,7 +7352,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G3004",
@@ -7388,7 +7388,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G3009",
@@ -7424,7 +7424,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GA2001",
@@ -7460,7 +7460,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GA2002",
@@ -7496,7 +7496,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GA2004",
@@ -7545,7 +7545,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GA2005",
@@ -7581,7 +7581,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GA2008",
@@ -7617,7 +7617,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GA3003",
@@ -7664,7 +7664,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GA3008",
@@ -7711,7 +7711,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GA3010",
@@ -7747,7 +7747,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GA3011",
@@ -7783,7 +7783,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GA3012",
@@ -7830,7 +7830,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GA3013",
@@ -7877,7 +7877,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GC2001",
@@ -7913,7 +7913,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GC2003",
@@ -7949,7 +7949,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GC2005",
@@ -7997,7 +7997,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GC2006",
@@ -8033,7 +8033,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GC2007",
@@ -8069,7 +8069,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GE3002",
@@ -8105,7 +8105,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GH2001",
@@ -8153,7 +8153,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GH2002",
@@ -8201,7 +8201,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GH2003",
@@ -8237,7 +8237,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GH2004",
@@ -8273,7 +8273,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GH3001",
@@ -8309,7 +8309,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GH3010",
@@ -8345,7 +8345,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GH3011",
@@ -8403,7 +8403,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852GH3013",
@@ -8473,7 +8473,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852H2003",
@@ -8509,7 +8509,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852H2005",
@@ -8545,7 +8545,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852H2006",
@@ -8581,7 +8581,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852H2007",
@@ -8617,7 +8617,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852H2008",
@@ -8653,7 +8653,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852H2009",
@@ -8702,7 +8702,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852HB2001",
@@ -8738,7 +8738,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852HB3004",
@@ -8785,7 +8785,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852HC3002",
@@ -8821,7 +8821,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852HC3004",
@@ -8868,7 +8868,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852HD2002",
@@ -8904,7 +8904,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852HD2003",
@@ -8963,7 +8963,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852HD3002",
@@ -9010,7 +9010,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2001",
@@ -9059,7 +9059,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2003",
@@ -9095,7 +9095,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2004",
@@ -9131,7 +9131,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2005",
@@ -9167,7 +9167,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2006",
@@ -9203,7 +9203,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2007",
@@ -9239,7 +9239,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2010",
@@ -9288,7 +9288,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2011",
@@ -9324,7 +9324,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2012",
@@ -9360,7 +9360,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2013",
@@ -9396,7 +9396,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2016",
@@ -9432,7 +9432,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2017",
@@ -9468,7 +9468,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2018",
@@ -9504,7 +9504,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2019",
@@ -9540,7 +9540,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2020",
@@ -9589,7 +9589,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2021",
@@ -9625,7 +9625,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2022",
@@ -9661,7 +9661,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2023",
@@ -9697,7 +9697,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J2024",
@@ -9744,7 +9744,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3005",
@@ -9780,7 +9780,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3007",
@@ -9816,7 +9816,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3009",
@@ -9852,7 +9852,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3012",
@@ -9888,7 +9888,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3015",
@@ -9924,54 +9924,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
-  },
-  {
-    "id": "852J3019",
-    "code": "852J3019",
-    "type": "partner",
-    "type_name": "順豐合作點",
-    "type_name_en": "Service Partner",
-    "name": "合作店 大新工程",
-    "name_en": "大新工程",
-    "region": "九龍",
-    "region_en": "Kowloon",
-    "district": "黃大仙區",
-    "district_en": "Wong Tai Sin District",
-    "sub_district": "慈雲山",
-    "sub_district_en": "Tsz Wan Shan",
-    "address": "慈雲山崇華街22B號地下(大新工程)*",
-    "address_en": "G/F,No.22B Shung Wah Street,Tsz Wan Shan, KLN*",
-    "telephone": null,
-    "business_hours": "12:00-19:00 周六:14:00-18:00",
-    "business_hours_en": "12:00-19:00",
-    "location": {
-      "latitude": 22.346246,
-      "longitude": 114.198043
-    },
-    "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "ENGLISH_FIELD_CONTAINS_CJK",
-        "severity": "warning",
-        "fields": [
-          "name_en"
-        ],
-        "details": {
-          "value": "大新工程"
-        }
-      }
-    ],
-    "provenance": {
-      "name": "api_tc",
-      "name_en": "api_en",
-      "address": "api_tc",
-      "address_en": "api_en",
-      "district": "api_tc",
-      "business_hours": "api_tc",
-      "business_hours_en": "api_en"
-    },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3022",
@@ -10018,7 +9971,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3023",
@@ -10054,7 +10007,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3024",
@@ -10101,7 +10054,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3026",
@@ -10150,7 +10103,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3035",
@@ -10197,7 +10150,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3037",
@@ -10244,7 +10197,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852J3038",
@@ -10291,7 +10244,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2002",
@@ -10338,7 +10291,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2004",
@@ -10374,7 +10327,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2005",
@@ -10410,7 +10363,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2007",
@@ -10446,7 +10399,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2008",
@@ -10482,7 +10435,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2009",
@@ -10518,7 +10471,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2014",
@@ -10554,7 +10507,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2016",
@@ -10590,7 +10543,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2017",
@@ -10626,7 +10579,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2018",
@@ -10662,7 +10615,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2019",
@@ -10711,7 +10664,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K2020",
@@ -10747,7 +10700,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K3005",
@@ -10794,7 +10747,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852K3009",
@@ -10841,7 +10794,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852KA2001",
@@ -10877,7 +10830,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852KA2002",
@@ -10913,7 +10866,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852KA2003",
@@ -10949,7 +10902,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852KA2004",
@@ -10985,7 +10938,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852KA3001",
@@ -11032,7 +10985,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852KA3003",
@@ -11079,7 +11032,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852KA3005",
@@ -11126,7 +11079,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852L2001",
@@ -11162,7 +11115,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LA2001",
@@ -11198,7 +11151,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LA2002",
@@ -11234,7 +11187,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LA2003",
@@ -11270,7 +11223,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LA2005",
@@ -11306,7 +11259,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LA2006",
@@ -11342,7 +11295,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LA3004",
@@ -11378,7 +11331,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LA3008",
@@ -11425,7 +11378,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LB2001",
@@ -11461,7 +11414,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LB2006",
@@ -11497,7 +11450,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LB2007",
@@ -11546,7 +11499,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LB2008",
@@ -11595,7 +11548,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LB2009",
@@ -11631,7 +11584,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LB3008",
@@ -11678,7 +11631,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852M2002",
@@ -11714,7 +11667,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852M2015",
@@ -11750,7 +11703,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852M2016",
@@ -11799,7 +11752,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852M3001",
@@ -11847,7 +11800,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA2002",
@@ -11883,7 +11836,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA2006",
@@ -11919,7 +11872,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA2009",
@@ -11955,7 +11908,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA2010",
@@ -12002,7 +11955,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA2012",
@@ -12038,7 +11991,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA2013",
@@ -12087,7 +12040,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA3002",
@@ -12146,7 +12099,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA3007",
@@ -12193,7 +12146,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA3009",
@@ -12240,7 +12193,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA3010",
@@ -12287,7 +12240,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA3011",
@@ -12334,7 +12287,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA3015",
@@ -12381,7 +12334,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA3016",
@@ -12428,7 +12381,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA3017",
@@ -12475,7 +12428,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MA3018",
@@ -12522,7 +12475,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MB2001",
@@ -12558,7 +12511,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MC2001",
@@ -12594,7 +12547,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MC2002",
@@ -12630,7 +12583,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MD2001",
@@ -12666,7 +12619,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852MD3001",
@@ -12713,7 +12666,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852NC2001",
@@ -12749,7 +12702,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852NC2002",
@@ -12785,7 +12738,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852NC2003",
@@ -12821,7 +12774,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852NC2004",
@@ -12857,7 +12810,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852NC3001",
@@ -12906,7 +12859,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852NC3002",
@@ -12953,7 +12906,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852NC3003",
@@ -12989,7 +12942,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P2004",
@@ -13025,7 +12978,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P2006",
@@ -13061,7 +13014,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P2008",
@@ -13097,7 +13050,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P2010",
@@ -13133,7 +13086,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P2011",
@@ -13169,7 +13122,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P2012",
@@ -13205,7 +13158,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P2013",
@@ -13254,7 +13207,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P2014",
@@ -13290,7 +13243,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P2015",
@@ -13326,7 +13279,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P2016",
@@ -13375,7 +13328,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P3005",
@@ -13411,7 +13364,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852P3006",
@@ -13458,7 +13411,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PA2001",
@@ -13494,7 +13447,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PA2004",
@@ -13543,7 +13496,7 @@
       "business_hours": "api_tc",
       "business_hours_en": null
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PA2008",
@@ -13579,7 +13532,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PA2009",
@@ -13628,7 +13581,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PA3004",
@@ -13664,7 +13617,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PA3006",
@@ -13700,7 +13653,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PA3012",
@@ -13747,7 +13700,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PB2001",
@@ -13806,7 +13759,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PB2005",
@@ -13842,7 +13795,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PB2006",
@@ -13878,7 +13831,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PB2007",
@@ -13927,7 +13880,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PB2008",
@@ -13963,7 +13916,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PB2009",
@@ -14012,7 +13965,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PB3003",
@@ -14048,7 +14001,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PB3004",
@@ -14097,7 +14050,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PB3007",
@@ -14144,7 +14097,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PB3008",
@@ -14191,7 +14144,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PC2001",
@@ -14227,7 +14180,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852PC3003",
@@ -14276,7 +14229,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852Q2001",
@@ -14312,7 +14265,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852Q3001",
@@ -14360,7 +14313,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852Q3005",
@@ -14408,7 +14361,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852Q3008",
@@ -14456,7 +14409,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852T2001",
@@ -14505,7 +14458,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852T2002",
@@ -14541,7 +14494,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852T2004",
@@ -14590,7 +14543,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852T2005",
@@ -14626,7 +14579,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852T2006",
@@ -14662,7 +14615,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852T2007",
@@ -14698,7 +14651,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852T3003",
@@ -14734,7 +14687,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852T3006",
@@ -14781,7 +14734,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TA2001",
@@ -14817,7 +14770,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TA2003",
@@ -14853,7 +14806,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TA2004",
@@ -14889,7 +14842,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TA2005",
@@ -14925,7 +14878,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TA2008",
@@ -14961,7 +14914,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB2001",
@@ -14997,7 +14950,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB2002",
@@ -15033,7 +14986,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB2003",
@@ -15069,7 +15022,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB2004",
@@ -15105,7 +15058,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB2007",
@@ -15141,7 +15094,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB2009",
@@ -15177,7 +15130,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB2010",
@@ -15213,7 +15166,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB2011",
@@ -15249,7 +15202,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB2014",
@@ -15285,7 +15238,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB2015",
@@ -15334,7 +15287,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB2016",
@@ -15370,7 +15323,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TB3005",
@@ -15429,7 +15382,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TC2003",
@@ -15478,7 +15431,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TC2006",
@@ -15514,7 +15467,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TC2007",
@@ -15550,7 +15503,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TE3005",
@@ -15597,7 +15550,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852TE3006",
@@ -15656,7 +15609,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2003",
@@ -15692,7 +15645,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2007",
@@ -15728,7 +15681,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2010",
@@ -15777,7 +15730,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2012",
@@ -15813,7 +15766,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2015",
@@ -15849,7 +15802,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2016",
@@ -15898,7 +15851,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2017",
@@ -15934,7 +15887,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2018",
@@ -15970,7 +15923,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2020",
@@ -16006,7 +15959,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2021",
@@ -16055,7 +16008,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2023",
@@ -16091,7 +16044,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2025",
@@ -16127,7 +16080,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2028",
@@ -16163,7 +16116,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2029",
@@ -16199,7 +16152,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2030",
@@ -16248,7 +16201,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2031",
@@ -16297,7 +16250,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2032",
@@ -16333,7 +16286,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2033",
@@ -16369,7 +16322,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2034",
@@ -16418,7 +16371,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2035",
@@ -16454,7 +16407,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2036",
@@ -16490,7 +16443,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2037",
@@ -16526,7 +16479,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U2040",
@@ -16573,7 +16526,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U3006",
@@ -16609,43 +16562,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
-  },
-  {
-    "id": "852U3009",
-    "code": "852U3009",
-    "type": "partner",
-    "type_name": "順豐合作點",
-    "type_name_en": "Service Partner",
-    "name": "合作點 啟豐自提點",
-    "name_en": "Indiv. Store Shop 6, 1/F Richland Garden Shopping Center, Tuen Mun, New Territories",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "屯門區",
-    "district_en": "Tuen Mun District",
-    "sub_district": "屯門",
-    "sub_district_en": "Tuen Mun",
-    "address": "新界屯門啟豐商場地下32號鋪(14:00-15:00午休) 啟豐自提點*",
-    "address_en": "Shop 32,  Richland Garden Shopping Center, Tuen Mun(14:00-15:00 Closed)*",
-    "telephone": null,
-    "business_hours": "11:00-20:00 周六:12:00-18:00",
-    "business_hours_en": "11:00-20:00",
-    "location": {
-      "latitude": 22.3728091,
-      "longitude": 113.9646099
-    },
-    "source": "api_tc",
-    "quality_flags": [],
-    "provenance": {
-      "name": "api_tc",
-      "name_en": "api_en",
-      "address": "api_tc",
-      "address_en": "api_en",
-      "district": "api_tc",
-      "business_hours": "api_tc",
-      "business_hours_en": "api_en"
-    },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U3017",
@@ -16681,7 +16598,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U3019",
@@ -16717,7 +16634,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U3020",
@@ -16764,7 +16681,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U3023",
@@ -16811,7 +16728,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852U3024",
@@ -16858,7 +16775,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2006",
@@ -16894,7 +16811,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2007",
@@ -16930,7 +16847,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2008",
@@ -16966,7 +16883,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2009",
@@ -17015,7 +16932,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2010",
@@ -17051,7 +16968,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2011",
@@ -17087,7 +17004,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2013",
@@ -17123,7 +17040,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2015",
@@ -17159,7 +17076,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2016",
@@ -17195,7 +17112,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2017",
@@ -17231,7 +17148,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2018",
@@ -17267,7 +17184,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2020",
@@ -17303,7 +17220,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2022",
@@ -17339,7 +17256,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2023",
@@ -17375,7 +17292,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2024",
@@ -17424,7 +17341,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2025",
@@ -17460,7 +17377,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2026",
@@ -17496,7 +17413,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2027",
@@ -17532,7 +17449,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2028",
@@ -17568,7 +17485,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2029",
@@ -17617,7 +17534,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA2031",
@@ -17653,7 +17570,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA230",
@@ -17702,56 +17619,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
-  },
-  {
-    "id": "852UA3010",
-    "code": "852UA3010",
-    "type": "partner",
-    "type_name": "順豐合作點",
-    "type_name_en": "Service Partner",
-    "name": "合作點 幸福美妝藥店",
-    "name_en": "Indiv. Store Shop No.3, G/F, Wing Light BLDG, 68-76 Castle Peak Rd, Yuen Long, NT",
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "元朗區",
-    "district_en": "Yuen Long District",
-    "sub_district": "元朗",
-    "sub_district_en": "Yuen Long",
-    "address": "新界元朗青山公路68-76號榮光大廈地下3號鋪(幸福美妝藥店)*",
-    "address_en": "Shop No.3, G/F, Wing Light BLDG, 68-76 Castle Peak Rd, Yuen Long, NT*",
-    "telephone": null,
-    "business_hours": "09:00-21:00",
-    "business_hours_en": "09:00-21:00",
-    "location": {
-      "latitude": 22.4442473,
-      "longitude": 114.030194
-    },
-    "source": "api_tc",
-    "quality_flags": [
-      {
-        "type": "SOURCE_TC_EN_STREET_NUMBER_CONFLICT",
-        "severity": "warning",
-        "fields": [
-          "address",
-          "address_en"
-        ],
-        "details": {
-          "tc": "68-76",
-          "en": "3"
-        }
-      }
-    ],
-    "provenance": {
-      "name": "api_tc",
-      "name_en": "api_en",
-      "address": "api_tc",
-      "address_en": "api_en",
-      "district": "api_tc",
-      "business_hours": "api_tc",
-      "business_hours_en": "api_en"
-    },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA3013",
@@ -17798,7 +17666,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA3016",
@@ -17834,7 +17702,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA3021",
@@ -17870,7 +17738,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA3027",
@@ -17917,7 +17785,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA3029",
@@ -17964,7 +17832,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UA3033",
@@ -18011,7 +17879,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UB3003",
@@ -18047,7 +17915,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UB3006",
@@ -18096,7 +17964,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UB3007",
@@ -18132,7 +18000,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UC2001",
@@ -18168,7 +18036,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UC2002",
@@ -18204,7 +18072,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UC3001",
@@ -18251,7 +18119,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UC3002",
@@ -18310,7 +18178,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UC3004",
@@ -18346,7 +18214,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UC3006",
@@ -18393,7 +18261,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UD2001",
@@ -18429,7 +18297,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852UD3001",
@@ -18476,7 +18344,7 @@
       "business_hours": "api_tc",
       "business_hours_en": "api_en"
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852LA3007",
@@ -18535,66 +18403,7 @@
       "business_hours": "reviewed_pdf_partner",
       "business_hours_en": null
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
-  },
-  {
-    "id": "852FE3012",
-    "code": "852FE3012",
-    "type": "partner",
-    "type_name": "順豐合作點",
-    "type_name_en": "Service Partner",
-    "name": "馬鞍山錦英苑自提點",
-    "name_en": null,
-    "region": "新界",
-    "region_en": "New Territories",
-    "district": "沙田區",
-    "district_en": "Sha Tin District",
-    "sub_district": "馬鞍山",
-    "sub_district_en": null,
-    "address": "馬鞍山錦英苑街市16號",
-    "address_en": null,
-    "telephone": null,
-    "business_hours": "星期一至六:12:00-20:00 星期日及公眾假期:12:00-18:00",
-    "business_hours_en": null,
-    "location": {
-      "latitude": null,
-      "longitude": null
-    },
-    "source": "reviewed_pdf_partner",
-    "quality_flags": [
-      {
-        "type": "MISSING_COORDINATES",
-        "severity": "info",
-        "fields": [
-          "location"
-        ],
-        "details": {
-          "code": "852FE3012"
-        }
-      },
-      {
-        "type": "MISSING_ENGLISH_RECORD",
-        "severity": "warning",
-        "fields": [
-          "name_en",
-          "address_en",
-          "business_hours_en"
-        ],
-        "details": {
-          "code": "852FE3012"
-        }
-      }
-    ],
-    "provenance": {
-      "name": "reviewed_pdf_partner",
-      "name_en": null,
-      "address": "reviewed_pdf_partner",
-      "address_en": null,
-      "district": "reviewed_pdf_partner",
-      "business_hours": "reviewed_pdf_partner",
-      "business_hours_en": null
-    },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   },
   {
     "id": "852G3008",
@@ -18653,6 +18462,6 @@
       "business_hours": "reviewed_pdf_partner",
       "business_hours_en": null
     },
-    "retrieved_at": "2026-11-02 12:57 (HKT UTC+8)"
+    "retrieved_at": "2026-11-03 13:46 (HKT UTC+8)"
   }
 ]

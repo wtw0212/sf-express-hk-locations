@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-06 13:37 (HKT UTC+8)`
+> **Last Updated**: `2026-11-07 13:05 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1643 |
-| **Current total** | 1645 |
+| **Previous total** | 1645 |
+| **Current total** | 1644 |
 | **Stores** | 140 |
 | **Lockers** | 1049 |
-| **Partners** | 456 |
-| **Added** | 2 |
-| **Removed** | 0 |
+| **Partners** | 455 |
+| **Added** | 0 |
+| **Removed** | 1 |
 | **Updated** | 0 |
-| **Unchanged** | 1643 |
+| **Unchanged** | 1644 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1643 | 1645 | +2 | +0.12% | previous_locations_feed | ✅ PASS |
+| total | 1645 | 1644 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
 | stores | 140 | 140 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1047 | 1049 | +2 | +0.19% | previous_locations_feed | ✅ PASS |
-| partners | 456 | 456 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1639 | 1641 | +2 | +0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1637 | 1639 | +2 | +0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1049 | 1049 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| partners | 456 | 455 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1641 | 1640 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1639 | 1638 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1641 |
-| EN unique codes | 1639 |
+| TC unique codes | 1640 |
+| EN unique codes | 1638 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 190 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1645 |
+| District resolved | 1644 |
 | District unresolved | 0 |
-| With English data | 1639 |
+| With English data | 1638 |
 | Missing English | 6 |
 
 ---
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 250 |
+| **Record Quality Warnings** | 249 |
 | **Record Quality Info Flags** | 60 |
 | **Record Quality Errors** | 0 |
 
@@ -74,7 +74,7 @@
 | Flag Type | Count |
 | :--- | :--- |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 94 |
-| ENGLISH_FIELD_CONTAINS_CJK | 90 |
+| ENGLISH_FIELD_CONTAINS_CJK | 89 |
 | ADMIN_DISTRICT_ALIAS_APPLIED | 42 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 20 |
@@ -96,16 +96,15 @@
 
 ---
 
-## Added Locations (2)
+## Added Locations (0)
 
-- `H852G099P` [順豐智能櫃] 自助櫃 東涌迎東邨迎悅樓 -- 東涌迎東邨迎悅樓地下*
-- `H852GH23P` [順豐智能櫃] 自助櫃 青衣職業訓練局青衣學生舍堂 -- 青衣職業訓練局青衣學生舍堂地下(只供職員及學生使用)
+*(No added locations)*
 
 ---
 
-## Removed Locations (0)
+## Removed Locations (1)
 
-*(No removed locations)*
+- `852MA3007` [順豐合作點] 合作店 盈盈乾洗 -- 堅尼地城北街7號地鋪(盈盈乾洗)*
 
 ---
 

@@ -1,20 +1,20 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-11-06 13:37 (HKT UTC+8)",
-  "generated_at": "2026-11-06 13:37 (HKT UTC+8)",
-  "retrieved_at": "2026-11-06 13:37 (HKT UTC+8)",
+  "source_retrieved_at": "2026-11-07 13:05 (HKT UTC+8)",
+  "generated_at": "2026-11-07 13:05 (HKT UTC+8)",
+  "retrieved_at": "2026-11-07 13:05 (HKT UTC+8)",
   "counts": {
-    "total": 1645,
+    "total": 1644,
     "stores": 140,
     "lockers": 1049,
-    "partners": 456
+    "partners": 455
   },
   "count_deltas": {
     "total": {
-      "previous": 1643,
-      "current": 1645,
-      "delta": 2,
-      "delta_pct": 0.12,
+      "previous": 1645,
+      "current": 1644,
+      "delta": -1,
+      "delta_pct": -0.06,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -29,37 +29,37 @@
       "gate_result": "pass"
     },
     "lockers": {
-      "previous": 1047,
+      "previous": 1049,
       "current": 1049,
-      "delta": 2,
-      "delta_pct": 0.19,
-      "baseline_available": true,
-      "baseline_source": "previous_locations_feed",
-      "gate_result": "pass"
-    },
-    "partners": {
-      "previous": 456,
-      "current": 456,
       "delta": 0,
       "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
     },
+    "partners": {
+      "previous": 456,
+      "current": 455,
+      "delta": -1,
+      "delta_pct": -0.22,
+      "baseline_available": true,
+      "baseline_source": "previous_locations_feed",
+      "gate_result": "pass"
+    },
     "tcCodes": {
-      "previous": 1639,
-      "current": 1641,
-      "delta": 2,
-      "delta_pct": 0.12,
+      "previous": 1641,
+      "current": 1640,
+      "delta": -1,
+      "delta_pct": -0.06,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.tc_record_count",
       "gate_result": "pass"
     },
     "enCodes": {
-      "previous": 1637,
-      "current": 1639,
-      "delta": 2,
-      "delta_pct": 0.12,
+      "previous": 1639,
+      "current": 1638,
+      "delta": -1,
+      "delta_pct": -0.06,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.en_record_count",
       "gate_result": "pass"
@@ -244,17 +244,17 @@
       "pdf_partner"
     ],
     "counts": {
-      "api_canonical_count": 1641,
+      "api_canonical_count": 1640,
       "ssr_only_count": 2,
       "reviewed_pdf_supplement_count": 2,
-      "unreviewed_pdf_candidate_count": 3
+      "unreviewed_pdf_candidate_count": 4
     }
   },
   "coverage": {
-    "tc_record_count": 1641,
-    "en_record_count": 1639,
-    "bilingual_match_rate": 0.9987812309567337,
-    "district_resolved_count": 1645,
+    "tc_record_count": 1640,
+    "en_record_count": 1638,
+    "bilingual_match_rate": 0.998780487804878,
+    "district_resolved_count": 1644,
     "district_unresolved_count": 0
   },
   "quality": {
@@ -262,12 +262,12 @@
     "pipeline_warnings": 5,
     "record_flag_counts_by_severity": {
       "info": 60,
-      "warning": 250,
+      "warning": 249,
       "error": 0
     },
     "flag_counts_by_type": {
       "SOURCE_TC_EN_UNIT_CONFLICT": 38,
-      "ENGLISH_FIELD_CONTAINS_CJK": 90,
+      "ENGLISH_FIELD_CONTAINS_CJK": 89,
       "SOURCE_TC_EN_STREET_NUMBER_CONFLICT": 94,
       "SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT": 20,
       "SOURCE_FORMATTING_ARTIFACT": 4,
@@ -280,16 +280,16 @@
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "8e13d197ee46f27aa2b7ef06f68122337bbcd6a637e186ce4d661b53b460d73d",
-      "semantic_sha256": "5da4a0596ad1a6bb93c4f42e4b0f267a4aa03a268f6602571314aec0e6fc4dac",
-      "record_count": 1641,
+      "raw_snapshot_sha256": "c220d297c4b81997522cdaa5b72c4473b8842566d70adbafcc5133f596534d5a",
+      "semantic_sha256": "2cce2622fb06563c4eb168d2ad50ca18aa7f9353a78d5119c5b6486b51a4f465",
+      "record_count": 1640,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "3ed542bb27cb94875a859072ab59b124c1513c25b30480a19894ed02257ca4c5",
-      "semantic_sha256": "5bfca38e3e14afcc227b71c4c061fb087197f42fb72462d83f5f798ea7fccffd",
-      "record_count": 1639,
+      "raw_snapshot_sha256": "dbd753610a9ae095c62cf1167c85616b47014fa768588bbcb4c703fbc1045dc6",
+      "semantic_sha256": "2528716fa3b00ccd745af0871ea033d5fcc2c92e7abd70ba841db7c11a7ad62c",
+      "record_count": 1638,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_en/record_hashes"
     },
@@ -780,8 +780,8 @@
       "duplicate_codes": []
     },
     "canonical": {
-      "semantic_sha256": "0452591f0ee61ee1ba9a893fa7048dfa70b08f162b90793852340bf26bf7ed1a",
-      "record_count": 1645,
+      "semantic_sha256": "3802f207a28c086d6f89be0ed9233aff8b5e35f5705d5cd6218c63f0d9caab42",
+      "record_count": 1644,
       "duplicate_codes": []
     },
     "partner_pdf": {

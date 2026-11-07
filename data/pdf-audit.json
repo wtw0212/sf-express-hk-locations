@@ -1,82 +1,82 @@
 {
-  "source_retrieved_at": "2026-11-06 13:37 (HKT UTC+8)",
-  "generated_at": "2026-11-06 13:37 (HKT UTC+8)",
+  "source_retrieved_at": "2026-11-07 13:05 (HKT UTC+8)",
+  "generated_at": "2026-11-07 13:05 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-11-06T05:38:14.320Z",
+      "document_retrieved_at": "2026-11-07T05:06:40.578Z",
       "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-11-06T05:38:14.547Z",
+      "document_retrieved_at": "2026-11-07T05:06:40.730Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-11-06T05:38:15.290Z",
+      "document_retrieved_at": "2026-11-07T05:06:40.967Z",
       "document_binary_sha256": "c50052da2a64ce74d6eac3bceacb85ef0816637841df5b06b1db3b3c43280cc0",
       "extracted_text_sha256": "eb95bd589e2f26e24f4306d35a0a8c2de07dadd2ed6c77cb7f9e92395a4eebcd"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-11-06T05:38:15.406Z",
+      "document_retrieved_at": "2026-11-07T05:06:41.045Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-11-06T05:38:15.589Z",
+      "document_retrieved_at": "2026-11-07T05:06:41.151Z",
       "document_binary_sha256": "d11d9c1c8a104fe0ad62e6b68fad494f4624271e5b3238c16834979a32e24dcf",
       "extracted_text_sha256": "d1b5c46caade264dd006972735cfef315ddab880d6a428fd5ce31317b30507a1"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-11-06T05:38:15.769Z",
+      "document_retrieved_at": "2026-11-07T05:06:41.269Z",
       "document_binary_sha256": "bd0bec0563e00f9602d15cdaa64a48784819cf68e12383ad708c76ddb6073e78",
       "extracted_text_sha256": "38d9eaea65301a6386ea75df8796879e4b3a9ab65463c65ea740593d0a3a6186"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-11-06T05:38:15.998Z",
+      "document_retrieved_at": "2026-11-07T05:06:41.403Z",
       "document_binary_sha256": "f9378c56b4252419eba1e7d8ec24b4daf7a6b43c5fcb92eb6d41e03de1bdb8fc",
       "extracted_text_sha256": "309f142a53dd8528d6b031e70ab67f3d81ada0c2d2081667317984ecf50565f5"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-11-06T05:38:16.127Z",
+      "document_retrieved_at": "2026-11-07T05:06:41.485Z",
       "document_binary_sha256": "4c7efbac82092a3631acdf241b98fee6ab00308f55fe9570c443f25ddbbf4703",
       "extracted_text_sha256": "d5cdd55ac26073d4b1f3e73f89f3de52aa3421c3f6f9b8b58098cd8a1de63a1e"
     }
   },
   "summary": {
     "parsed_pdf_record_count": 420,
-    "api_pdf_conflict_count": 415,
-    "api_pdf_difference_count": 415,
+    "api_pdf_conflict_count": 414,
+    "api_pdf_difference_count": 414,
     "reviewed_pdf_drift_count": 0,
     "entry_classification_counts": {
-      "semantic_conflict": 415,
+      "semantic_conflict": 414,
       "name_specificity_difference": 0,
       "formatting_difference": 0,
       "equivalent_difference": 0
     },
     "field_classification_counts": {
-      "semantic_conflict": 904,
+      "semantic_conflict": 901,
       "name_specificity_difference": 207,
       "formatting_difference": 0,
       "equivalent_difference": 128
     },
-    "new_pdf_only_candidate_count": 3,
+    "new_pdf_only_candidate_count": 4,
     "missing_reviewed_record_count": 0,
     "quarantined_record_count": 11
   },
@@ -11208,43 +11208,6 @@
       }
     },
     {
-      "code": "852MA3007",
-      "api_name": "合作店 盈盈乾洗",
-      "pdf_name": "堅尼地城盈盈乾洗",
-      "api_address": "堅尼地城北街7號地鋪(盈盈乾洗)*",
-      "pdf_address": "堅尼地城北街7號地舖852MA3007",
-      "api_business_hours": "09:00-20:00 周六:09:00-20:00",
-      "pdf_business_hours": "星期一至六:09:00-20:00 星期日及公眾假期: 休息",
-      "differing_fields": [
-        "name",
-        "address",
-        "business_hours"
-      ],
-      "classification": "semantic_conflict",
-      "comparison": {
-        "name": {
-          "canonical": "合作店 盈盈乾洗",
-          "pdf": "堅尼地城盈盈乾洗",
-          "classification": "semantic_conflict"
-        },
-        "address": {
-          "canonical": "堅尼地城北街7號地鋪(盈盈乾洗)*",
-          "pdf": "堅尼地城北街7號地舖852MA3007",
-          "classification": "semantic_conflict"
-        },
-        "business_hours": {
-          "canonical": "09:00-20:00 周六:09:00-20:00",
-          "pdf": "星期一至六:09:00-20:00 星期日及公眾假期: 休息",
-          "classification": "semantic_conflict"
-        }
-      },
-      "document_id": "ASP_HK_TC",
-      "parser_location": {
-        "row_index": 7,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 堅尼地城盈盈乾洗852MA3007堅尼地城北街7號地舖&852MA3007^取件 星期一至六:09:00-20:00 星期日及公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
-      }
-    },
-    {
       "code": "852MA3010",
       "api_name": "合作店 富麗美沖印",
       "pdf_name": "堅尼地城富麗美沖印",
@@ -15403,6 +15366,19 @@
   ],
   "reviewed_pdf_drift": [],
   "new_pdf_only_candidates": [
+    {
+      "code": "852MA3007",
+      "name": "堅尼地城盈盈乾洗",
+      "address": "堅尼地城北街7號地舖852MA3007",
+      "district": null,
+      "sub_district": "堅尼地城",
+      "business_hours": "星期一至六:09:00-20:00 星期日及公眾假期: 休息",
+      "document_id": "ASP_HK_TC",
+      "parser_location": {
+        "row_index": 7,
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 堅尼地城盈盈乾洗852MA3007堅尼地城北街7號地舖&852MA3007^取件 星期一至六:09:00-20:00 星期日及公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
+      }
+    },
     {
       "code": "852TA3003",
       "name": "金鐘揚壹物流統一中心",

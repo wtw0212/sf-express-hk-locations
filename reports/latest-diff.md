@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-07 13:05 (HKT UTC+8)`
+> **Last Updated**: `2026-11-08 13:00 (HKT UTC+8)`
 
 ---
 
@@ -8,13 +8,13 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1645 |
+| **Previous total** | 1644 |
 | **Current total** | 1644 |
 | **Stores** | 140 |
 | **Lockers** | 1049 |
 | **Partners** | 455 |
 | **Added** | 0 |
-| **Removed** | 1 |
+| **Removed** | 0 |
 | **Updated** | 0 |
 | **Unchanged** | 1644 |
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1645 | 1644 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1644 | 1644 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 140 | 140 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | lockers | 1049 | 1049 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 456 | 455 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1641 | 1640 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1639 | 1638 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| partners | 455 | 455 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1640 | 1640 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1638 | 1638 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -102,9 +102,9 @@
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (0)
 
-- `852MA3007` [順豐合作點] 合作店 盈盈乾洗 -- 堅尼地城北街7號地鋪(盈盈乾洗)*
+*(No removed locations)*
 
 ---
 

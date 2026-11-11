@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-10 14:25 (HKT UTC+8)`
+> **Last Updated**: `2026-11-11 13:11 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1644 |
-| **Current total** | 1639 |
+| **Previous total** | 1639 |
+| **Current total** | 1638 |
 | **Stores** | 140 |
-| **Lockers** | 1045 |
+| **Lockers** | 1044 |
 | **Partners** | 454 |
 | **Added** | 0 |
-| **Removed** | 5 |
+| **Removed** | 1 |
 | **Updated** | 0 |
-| **Unchanged** | 1639 |
+| **Unchanged** | 1638 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1644 | 1639 | -5 | -0.3% | previous_locations_feed | ✅ PASS |
+| total | 1639 | 1638 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
 | stores | 140 | 140 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1049 | 1045 | -4 | -0.38% | previous_locations_feed | ✅ PASS |
-| partners | 455 | 454 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1640 | 1635 | -5 | -0.3% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1638 | 1633 | -5 | -0.31% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1045 | 1044 | -1 | -0.1% | previous_locations_feed | ✅ PASS |
+| partners | 454 | 454 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1635 | 1634 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1633 | 1632 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1635 |
-| EN unique codes | 1633 |
+| TC unique codes | 1634 |
+| EN unique codes | 1632 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 190 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1639 |
+| District resolved | 1638 |
 | District unresolved | 0 |
-| With English data | 1633 |
+| With English data | 1632 |
 | Missing English | 6 |
 
 ---
@@ -102,13 +102,9 @@
 
 ---
 
-## Removed Locations (5)
+## Removed Locations (1)
 
-- `852PB3003` [順豐合作點] 合作點 歐亞汽車 -- 柴灣萃文道7-7D號文華樓7A號鋪地下 歐亞汽車*
-- `H852KA05P` [順豐智能櫃] 自助櫃 土瓜灣明倫街8號A (都會洗衣) -- 土瓜灣明倫街8號A地下(都會洗衣)*
-- `H852LA07P` [順豐智能櫃] 自助櫃 葵涌石蔭商場地下 -- 葵涌石蔭商場G/F(近寧峰苑出入口)*
-- `H852NC19P` [順豐智能櫃] 自助櫃 旺角富榮花園2期(順豐站) -- 旺角富榮花園2期地下38鋪(順豐站)*
-- `H852TE02P` [順豐智能櫃] 自助櫃 香港仔香港仔市政大廈 -- 香港仔市政大廈2樓洗手間外*
+- `H852J072P` [順豐智能櫃] 自助櫃 牛池灣嘉峰台商場一樓(二號櫃) -- 牛池灣嘉峰台商場一樓(P17A鋪對面)二號櫃*
 
 ---
 

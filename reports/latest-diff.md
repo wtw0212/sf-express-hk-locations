@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-11 13:11 (HKT UTC+8)`
+> **Last Updated**: `2026-11-12 14:16 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1639 |
+| **Previous total** | 1638 |
 | **Current total** | 1638 |
 | **Stores** | 140 |
-| **Lockers** | 1044 |
-| **Partners** | 454 |
-| **Added** | 0 |
-| **Removed** | 1 |
+| **Lockers** | 1046 |
+| **Partners** | 452 |
+| **Added** | 2 |
+| **Removed** | 2 |
 | **Updated** | 0 |
-| **Unchanged** | 1638 |
+| **Unchanged** | 1636 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1639 | 1638 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1638 | 1638 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 140 | 140 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1045 | 1044 | -1 | -0.1% | previous_locations_feed | ✅ PASS |
-| partners | 454 | 454 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1635 | 1634 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1633 | 1632 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1044 | 1046 | +2 | +0.19% | previous_locations_feed | ✅ PASS |
+| partners | 454 | 452 | -2 | -0.44% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1634 | 1634 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1632 | 1632 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 248 |
+| **Record Quality Warnings** | 247 |
 | **Record Quality Info Flags** | 60 |
 | **Record Quality Errors** | 0 |
 
@@ -74,7 +74,7 @@
 | Flag Type | Count |
 | :--- | :--- |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 93 |
-| ENGLISH_FIELD_CONTAINS_CJK | 89 |
+| ENGLISH_FIELD_CONTAINS_CJK | 88 |
 | ADMIN_DISTRICT_ALIAS_APPLIED | 42 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 20 |
@@ -96,15 +96,17 @@
 
 ---
 
-## Added Locations (0)
+## Added Locations (2)
 
-*(No added locations)*
+- `H852GC02P` [順豐智能櫃] 自助櫃 青衣順豐大廈地下 -- 青衣航運路36號順豐大廈地下*
+- `H852LA07P` [順豐智能櫃] 自助櫃 葵涌石蔭商場地下 -- 葵涌石蔭商場G/F(近寧峰苑出入口)*
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (2)
 
-- `H852J072P` [順豐智能櫃] 自助櫃 牛池灣嘉峰台商場一樓(二號櫃) -- 牛池灣嘉峰台商場一樓(P17A鋪對面)二號櫃*
+- `852HC3002` [順豐合作點] 合作點 彩淘自提點 -- 九龍九龍灣彩福邨街市CF21號鋪 彩淘自提點*
+- `852U3023` [順豐合作點] 合作店 富運 -- 新界屯門紫田路欣田邨欣田街市D23鋪（富運）*
 
 ---
 

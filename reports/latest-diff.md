@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-12 14:16 (HKT UTC+8)`
+> **Last Updated**: `2026-11-13 13:37 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1638 |
-| **Current total** | 1638 |
+| **Current total** | 1639 |
 | **Stores** | 140 |
 | **Lockers** | 1046 |
-| **Partners** | 452 |
-| **Added** | 2 |
-| **Removed** | 2 |
+| **Partners** | 453 |
+| **Added** | 1 |
+| **Removed** | 0 |
 | **Updated** | 0 |
-| **Unchanged** | 1636 |
+| **Unchanged** | 1638 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1638 | 1638 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1638 | 1639 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
 | stores | 140 | 140 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1044 | 1046 | +2 | +0.19% | previous_locations_feed | ✅ PASS |
-| partners | 454 | 452 | -2 | -0.44% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1634 | 1634 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1632 | 1632 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1046 | 1046 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| partners | 452 | 453 | +1 | +0.22% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1634 | 1635 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1632 | 1633 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1634 |
-| EN unique codes | 1632 |
+| TC unique codes | 1635 |
+| EN unique codes | 1633 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 190 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1638 |
+| District resolved | 1639 |
 | District unresolved | 0 |
-| With English data | 1632 |
+| With English data | 1633 |
 | Missing English | 6 |
 
 ---
@@ -96,17 +96,15 @@
 
 ---
 
-## Added Locations (2)
+## Added Locations (1)
 
-- `H852GC02P` [順豐智能櫃] 自助櫃 青衣順豐大廈地下 -- 青衣航運路36號順豐大廈地下*
-- `H852LA07P` [順豐智能櫃] 自助櫃 葵涌石蔭商場地下 -- 葵涌石蔭商場G/F(近寧峰苑出入口)*
+- `852HC3002` [順豐合作點] 合作點 彩淘自提點 -- 九龍九龍灣彩福邨街市CF21號鋪 彩淘自提點*
 
 ---
 
-## Removed Locations (2)
+## Removed Locations (0)
 
-- `852HC3002` [順豐合作點] 合作點 彩淘自提點 -- 九龍九龍灣彩福邨街市CF21號鋪 彩淘自提點*
-- `852U3023` [順豐合作點] 合作店 富運 -- 新界屯門紫田路欣田邨欣田街市D23鋪（富運）*
+*(No removed locations)*
 
 ---
 

@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-14 13:27 (HKT UTC+8)`
+> **Last Updated**: `2026-11-15 13:25 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1639 |
+| **Previous total** | 1638 |
 | **Current total** | 1638 |
 | **Stores** | 139 |
 | **Lockers** | 1047 |
 | **Partners** | 452 |
-| **Added** | 2 |
-| **Removed** | 3 |
+| **Added** | 0 |
+| **Removed** | 0 |
 | **Updated** | 0 |
-| **Unchanged** | 1636 |
+| **Unchanged** | 1638 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1639 | 1638 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
-| stores | 140 | 139 | -1 | -0.71% | previous_locations_feed | ✅ PASS |
-| lockers | 1046 | 1047 | +1 | +0.1% | previous_locations_feed | ✅ PASS |
-| partners | 453 | 452 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1635 | 1634 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1633 | 1632 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| total | 1638 | 1638 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| stores | 139 | 139 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| lockers | 1047 | 1047 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| partners | 452 | 452 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1634 | 1634 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1632 | 1632 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -96,18 +96,15 @@
 
 ---
 
-## Added Locations (2)
+## Added Locations (0)
 
-- `852U3009` [順豐合作點] 合作點 啟豐自提點 -- 新界屯門啟豐商場地下32號鋪(14:00-15:00午休) 啟豐自提點*
-- `H852TE02P` [順豐智能櫃] 自助櫃 香港仔香港仔市政大廈 -- 香港仔市政大廈2樓洗手間外*
+*(No added locations)*
 
 ---
 
-## Removed Locations (3)
+## Removed Locations (0)
 
-- `852BAL` [順豐站] 旺角富榮花園順豐站 -- 香港油尖旺區旺角海庭道8號富榮花園2期地下38號鋪*
-- `852HB3004` [順豐合作點] 合作店 在時有限公司 -- 九龍灣淘大商場2期1樓F161號鋪（歡迎自提淘大店）*
-- `852KA3001` [順豐合作點] 合作店 長旺辦館 -- 馬頭圍村玫瑰樓地下111號鋪（長旺辦館）*
+*(No removed locations)*
 
 ---
 

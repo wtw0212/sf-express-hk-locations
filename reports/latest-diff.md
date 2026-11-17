@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-16 13:23 (HKT UTC+8)`
+> **Last Updated**: `2026-11-17 15:01 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1638 |
-| **Current total** | 1638 |
+| **Current total** | 1636 |
 | **Stores** | 139 |
-| **Lockers** | 1047 |
-| **Partners** | 452 |
+| **Lockers** | 1046 |
+| **Partners** | 451 |
 | **Added** | 0 |
-| **Removed** | 0 |
+| **Removed** | 2 |
 | **Updated** | 0 |
-| **Unchanged** | 1638 |
+| **Unchanged** | 1636 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1638 | 1638 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1638 | 1636 | -2 | -0.12% | previous_locations_feed | ✅ PASS |
 | stores | 139 | 139 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1047 | 1047 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 452 | 452 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1634 | 1634 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1632 | 1632 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1047 | 1046 | -1 | -0.1% | previous_locations_feed | ✅ PASS |
+| partners | 452 | 451 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1634 | 1632 | -2 | -0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1632 | 1630 | -2 | -0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,20 +39,20 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1634 |
-| EN unique codes | 1632 |
+| TC unique codes | 1632 |
+| EN unique codes | 1630 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
 | Partner PDF Quality Failures | 3 |
-| Valid Partner PDF Records | 419 |
+| Valid Partner PDF Records | 420 |
 | Quarantined PDF Records | 11 |
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 190 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1638 |
+| District resolved | 1636 |
 | District unresolved | 0 |
-| With English data | 1632 |
+| With English data | 1630 |
 | Missing English | 6 |
 
 ---
@@ -88,10 +88,10 @@
 
 ## Pipeline Execution Warnings (5)
 
-- ⚠️ Partner PDF overall quarantine ratio 2.6% exceeds warning threshold 1% (11/430 quarantined)
+- ⚠️ Partner PDF overall quarantine ratio 2.6% exceeds warning threshold 1% (11/431 quarantined)
 - ⚠️ Partner PDF 'OK_KLN_TC' quarantine ratio 6.7% exceeds warning threshold 1%
 - ⚠️ Partner PDF 'ASP_HK_TC' quarantine ratio 4.5% exceeds warning threshold 1%
-- ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.9% exceeds warning threshold 1%
+- ⚠️ Partner PDF 'ASP_NT_TC' quarantine ratio 4.8% exceeds warning threshold 1%
 - ⚠️ Quarantined 4 corrupted or ambiguous partner PDF records (reasons: SERVICE_CODE_MISMATCH)
 
 ---
@@ -102,9 +102,10 @@
 
 ---
 
-## Removed Locations (0)
+## Removed Locations (2)
 
-*(No removed locations)*
+- `852J3023` [順豐合作點] 合作店 S AND K -- 新蒲崗廣場1樓B72鋪(（S AND K）*
+- `H852LB13P` [順豐智能櫃] 自助櫃 葵涌葵聯邨 -- 葵涌葵聯邨升降機樓地下*
 
 ---
 

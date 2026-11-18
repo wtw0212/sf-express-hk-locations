@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-17 15:01 (HKT UTC+8)`
+> **Last Updated**: `2026-11-18 14:26 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1638 |
-| **Current total** | 1636 |
+| **Previous total** | 1636 |
+| **Current total** | 1635 |
 | **Stores** | 139 |
 | **Lockers** | 1046 |
-| **Partners** | 451 |
+| **Partners** | 450 |
 | **Added** | 0 |
-| **Removed** | 2 |
+| **Removed** | 1 |
 | **Updated** | 0 |
-| **Unchanged** | 1636 |
+| **Unchanged** | 1635 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1638 | 1636 | -2 | -0.12% | previous_locations_feed | ✅ PASS |
+| total | 1636 | 1635 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
 | stores | 139 | 139 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1047 | 1046 | -1 | -0.1% | previous_locations_feed | ✅ PASS |
-| partners | 452 | 451 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1634 | 1632 | -2 | -0.12% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1632 | 1630 | -2 | -0.12% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1046 | 1046 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| partners | 451 | 450 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1632 | 1631 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1630 | 1629 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1632 |
-| EN unique codes | 1630 |
+| TC unique codes | 1631 |
+| EN unique codes | 1629 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 190 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1636 |
+| District resolved | 1635 |
 | District unresolved | 0 |
-| With English data | 1630 |
+| With English data | 1629 |
 | Missing English | 6 |
 
 ---
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 244 |
+| **Record Quality Warnings** | 243 |
 | **Record Quality Info Flags** | 60 |
 | **Record Quality Errors** | 0 |
 
@@ -74,7 +74,7 @@
 | Flag Type | Count |
 | :--- | :--- |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 93 |
-| ENGLISH_FIELD_CONTAINS_CJK | 86 |
+| ENGLISH_FIELD_CONTAINS_CJK | 85 |
 | ADMIN_DISTRICT_ALIAS_APPLIED | 42 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 19 |
@@ -102,10 +102,9 @@
 
 ---
 
-## Removed Locations (2)
+## Removed Locations (1)
 
-- `852J3023` [順豐合作點] 合作店 S AND K -- 新蒲崗廣場1樓B72鋪(（S AND K）*
-- `H852LB13P` [順豐智能櫃] 自助櫃 葵涌葵聯邨 -- 葵涌葵聯邨升降機樓地下*
+- `852J3024` [順豐合作點] 合作店 康頤藥行 -- 新蒲崗采頤花園地下770號鋪(康頤藥行)*
 
 ---
 

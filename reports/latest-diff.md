@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-18 14:26 (HKT UTC+8)`
+> **Last Updated**: `2026-11-19 14:27 (HKT UTC+8)`
 
 ---
 
@@ -8,13 +8,13 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1636 |
+| **Previous total** | 1635 |
 | **Current total** | 1635 |
 | **Stores** | 139 |
 | **Lockers** | 1046 |
 | **Partners** | 450 |
 | **Added** | 0 |
-| **Removed** | 1 |
+| **Removed** | 0 |
 | **Updated** | 0 |
 | **Unchanged** | 1635 |
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1636 | 1635 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1635 | 1635 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 139 | 139 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | lockers | 1046 | 1046 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 451 | 450 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1632 | 1631 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1630 | 1629 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| partners | 450 | 450 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1631 | 1631 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1629 | 1629 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -102,9 +102,9 @@
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (0)
 
-- `852J3024` [順豐合作點] 合作店 康頤藥行 -- 新蒲崗采頤花園地下770號鋪(康頤藥行)*
+*(No removed locations)*
 
 ---
 

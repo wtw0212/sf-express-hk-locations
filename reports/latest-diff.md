@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-19 14:27 (HKT UTC+8)`
+> **Last Updated**: `2026-11-20 14:14 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1635 |
-| **Current total** | 1635 |
+| **Current total** | 1636 |
 | **Stores** | 139 |
 | **Lockers** | 1046 |
-| **Partners** | 450 |
-| **Added** | 0 |
+| **Partners** | 451 |
+| **Added** | 1 |
 | **Removed** | 0 |
-| **Updated** | 0 |
-| **Unchanged** | 1635 |
+| **Updated** | 1 |
+| **Unchanged** | 1634 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1635 | 1635 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1635 | 1636 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
 | stores | 139 | 139 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | lockers | 1046 | 1046 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 450 | 450 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1631 | 1631 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1629 | 1629 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| partners | 450 | 451 | +1 | +0.22% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1631 | 1632 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1629 | 1630 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1631 |
-| EN unique codes | 1629 |
+| TC unique codes | 1632 |
+| EN unique codes | 1630 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 190 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1635 |
+| District resolved | 1636 |
 | District unresolved | 0 |
-| With English data | 1629 |
+| With English data | 1630 |
 | Missing English | 6 |
 
 ---
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 243 |
+| **Record Quality Warnings** | 244 |
 | **Record Quality Info Flags** | 60 |
 | **Record Quality Errors** | 0 |
 
@@ -74,7 +74,7 @@
 | Flag Type | Count |
 | :--- | :--- |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 93 |
-| ENGLISH_FIELD_CONTAINS_CJK | 85 |
+| ENGLISH_FIELD_CONTAINS_CJK | 86 |
 | ADMIN_DISTRICT_ALIAS_APPLIED | 42 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 19 |
@@ -96,9 +96,9 @@
 
 ---
 
-## Added Locations (0)
+## Added Locations (1)
 
-*(No added locations)*
+- `852A3017` [順豐合作點] 合作店 路卡斯士多 -- 粉嶺粉嶺圍14號地下(路卡斯士多)*
 
 ---
 
@@ -108,6 +108,7 @@
 
 ---
 
-## Updated Locations (0)
+## Updated Locations (1)
 
-*(No updated locations)*
+- `852J` 新蒲崗福和工廈順豐站
+  - telephone: `"97005361"` -> `"52024837"`

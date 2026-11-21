@@ -1,20 +1,20 @@
 {
   "schema_version": 3,
-  "source_retrieved_at": "2026-11-20 14:14 (HKT UTC+8)",
-  "generated_at": "2026-11-20 14:14 (HKT UTC+8)",
-  "retrieved_at": "2026-11-20 14:14 (HKT UTC+8)",
+  "source_retrieved_at": "2026-11-21 14:03 (HKT UTC+8)",
+  "generated_at": "2026-11-21 14:03 (HKT UTC+8)",
+  "retrieved_at": "2026-11-21 14:03 (HKT UTC+8)",
   "counts": {
-    "total": 1636,
+    "total": 1632,
     "stores": 139,
-    "lockers": 1046,
+    "lockers": 1042,
     "partners": 451
   },
   "count_deltas": {
     "total": {
-      "previous": 1635,
-      "current": 1636,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "previous": 1636,
+      "current": 1632,
+      "delta": -4,
+      "delta_pct": -0.24,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
@@ -30,36 +30,36 @@
     },
     "lockers": {
       "previous": 1046,
-      "current": 1046,
+      "current": 1042,
+      "delta": -4,
+      "delta_pct": -0.38,
+      "baseline_available": true,
+      "baseline_source": "previous_locations_feed",
+      "gate_result": "pass"
+    },
+    "partners": {
+      "previous": 451,
+      "current": 451,
       "delta": 0,
       "delta_pct": 0,
       "baseline_available": true,
       "baseline_source": "previous_locations_feed",
       "gate_result": "pass"
     },
-    "partners": {
-      "previous": 450,
-      "current": 451,
-      "delta": 1,
-      "delta_pct": 0.22,
-      "baseline_available": true,
-      "baseline_source": "previous_locations_feed",
-      "gate_result": "pass"
-    },
     "tcCodes": {
-      "previous": 1631,
-      "current": 1632,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "previous": 1632,
+      "current": 1627,
+      "delta": -5,
+      "delta_pct": -0.31,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.tc_record_count",
       "gate_result": "pass"
     },
     "enCodes": {
-      "previous": 1629,
-      "current": 1630,
-      "delta": 1,
-      "delta_pct": 0.06,
+      "previous": 1630,
+      "current": 1625,
+      "delta": -5,
+      "delta_pct": -0.31,
       "baseline_available": true,
       "baseline_source": "previous_metadata.coverage.en_record_count",
       "gate_result": "pass"
@@ -87,9 +87,9 @@
       "semantic_success_count": 5,
       "partial_quality_failure_count": 3,
       "failed_count": 0,
-      "valid_record_count": 420,
+      "valid_record_count": 418,
       "quarantined_record_count": 11,
-      "quarantine_ratio": 0.0255,
+      "quarantine_ratio": 0.0256,
       "cross_pdf_duplicate_conflict_count": 0,
       "status": "partial_parse_quality_failure",
       "errors": [],
@@ -188,9 +188,9 @@
           "semantic_ok": true,
           "within_quality_threshold": true,
           "attempts": 1,
-          "raw_code_count": 39,
-          "candidate_count": 39,
-          "valid_record_count": 39,
+          "raw_code_count": 37,
+          "candidate_count": 37,
+          "valid_record_count": 37,
           "quarantined_record_count": 0,
           "duplicate_code_count": 0,
           "duplicate_conflict_count": 0,
@@ -244,25 +244,25 @@
       "pdf_partner"
     ],
     "counts": {
-      "api_canonical_count": 1632,
-      "ssr_only_count": 2,
+      "api_canonical_count": 1627,
+      "ssr_only_count": 3,
       "reviewed_pdf_supplement_count": 2,
-      "unreviewed_pdf_candidate_count": 7
+      "unreviewed_pdf_candidate_count": 5
     }
   },
   "coverage": {
-    "tc_record_count": 1632,
-    "en_record_count": 1630,
-    "bilingual_match_rate": 0.9987745098039216,
-    "district_resolved_count": 1636,
+    "tc_record_count": 1627,
+    "en_record_count": 1625,
+    "bilingual_match_rate": 0.9987707437000615,
+    "district_resolved_count": 1632,
     "district_unresolved_count": 0
   },
   "quality": {
     "pipeline_blocking_errors": 0,
-    "pipeline_warnings": 5,
+    "pipeline_warnings": 6,
     "record_flag_counts_by_severity": {
-      "info": 60,
-      "warning": 244,
+      "info": 61,
+      "warning": 245,
       "error": 0
     },
     "flag_counts_by_type": {
@@ -273,23 +273,23 @@
       "SOURCE_FORMATTING_ARTIFACT": 4,
       "DUPLICATE_ADDRESS_SUFFIX": 10,
       "ADMIN_DISTRICT_ALIAS_APPLIED": 42,
-      "MISSING_ENGLISH_RECORD": 6,
+      "MISSING_ENGLISH_RECORD": 7,
       "SUBDISTRICT_ADDRESS_CONFLICT": 2,
-      "MISSING_COORDINATES": 4
+      "MISSING_COORDINATES": 5
     }
   },
   "source_integrity": {
     "api_tc": {
-      "raw_snapshot_sha256": "241471832ccff5ed644d92cc8eb8b6f47ae225f24ce85fd01dfbf960551811ca",
-      "semantic_sha256": "16c5c761ca3f5aecc94eb46bc25c8ef03359eb1f9fb719189a2793e33d5d9589",
-      "record_count": 1632,
+      "raw_snapshot_sha256": "77bb95f3d07a53451e59e001d06f82d1759ea4ca9ca8138bb2a3156d14296e54",
+      "semantic_sha256": "58f3fde88fd02a7eab14a1b75a7b5aa2032e8b63f3c0a64fd39c3707e03770c5",
+      "record_count": 1627,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_tc/record_hashes"
     },
     "api_en": {
-      "raw_snapshot_sha256": "5e9001434eeb86a703a200056bb121661af3b9ee3b102e5b2d4492045bf8ae69",
-      "semantic_sha256": "d47d73fc05159a00068042805775bf3bb86be9b24b7efa8c016bf443cebefd1f",
-      "record_count": 1630,
+      "raw_snapshot_sha256": "c8a6f6f58d13b82ba5a0362fa8284306cbb9230aa67e0b6ff5d18ed02cb2f9b1",
+      "semantic_sha256": "b0830ad8d68305afc148e3947e9041b92c960e15f5f27b80c7626f37c36c4b39",
+      "record_count": 1625,
       "duplicate_codes": [],
       "record_hashes_ref": "/sources/api_en/record_hashes"
     },
@@ -780,12 +780,12 @@
       "duplicate_codes": []
     },
     "canonical": {
-      "semantic_sha256": "20d8ecdb08d56505f962f1f34fd6b3681627a33d0abbdfbbf179c3f5c73e1768",
-      "record_count": 1636,
+      "semantic_sha256": "338b11fc297d3b00ad6635a9803813bcfb0f39ab038644b1e38940d7dfba269f",
+      "record_count": 1632,
       "duplicate_codes": []
     },
     "partner_pdf": {
-      "semantic_sha256": "9934ec1caf4671858e22feacd7dcf85c5f1d369ffce50f8655b4db93d568d8c7",
+      "semantic_sha256": "077fecff12d9f3c953c7a8060f4120ead4d7f6f58e9d2d52fb5fe69c866b2bfa",
       "document_count": 8
     }
   }

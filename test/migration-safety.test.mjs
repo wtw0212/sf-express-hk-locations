@@ -284,6 +284,41 @@ test('SSR zero records do not create a removal blocker without previous SSR-only
   assert.equal(result.errors.some(error => error.includes('SSR-only records were removed')), false);
 });
 
+test('SSR upstream single-record removal warns without blocking when SSR succeeds with records', () => {
+  const apiLockers = Array.from({ length: 23 }, (_, i) => ({
+    code: `H852API${i + 1}`,
+    source: 'api_tc',
+    type: 'locker'
+  }));
+  const apiItems = [
+    { serviceCode: '852API1' },
+    ...apiLockers.map(r => ({ serviceCode: r.code }))
+  ];
+  const result = checkCompletenessGates({
+    tcResults: [{ ok: true, records: apiItems }],
+    enResults: [{ ok: true, records: apiItems }],
+    ssrResult: { ok: true, records: [{ code: 'H852SSR2' }], errors: [] },
+    previousRecords: [
+      { code: '852API1', source: 'api_tc', type: 'store' },
+      ...apiLockers,
+      { code: 'H852SSR1', source: 'ssr', type: 'locker' },
+      { code: 'H852SSR2', source: 'ssr', type: 'locker' }
+    ],
+    records: [
+      { code: '852API1', source: 'api_tc', type: 'store' },
+      ...apiLockers,
+      { code: 'H852SSR2', source: 'ssr', type: 'locker' }
+    ],
+    config: { minCount: 1 }
+  });
+
+  assert.equal(result.pass, true);
+  assert.equal(result.errors.some(error => error.includes('SSR-only records were removed')), false);
+  assert.ok(result.warnings.some(warning =>
+    warning.includes('Previously published SSR-only records were removed upstream: H852SSR1')
+  ));
+});
+
 test('pipeline regression gate blocks unexplained canonical drift when all semantic sources are unchanged', () => {
   const previousIntegrity = {
     api_tc: { semantic_sha256: 'a' },

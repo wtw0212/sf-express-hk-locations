@@ -466,9 +466,23 @@ export function checkCompletenessGates({
     .sort();
 
   if (removedSsrCodes.length > 0) {
-    errors.push(
-      `Previously published SSR-only records were removed: ${removedSsrCodes.join(', ')}`
-    );
+    const ssrMassDrop =
+      previousSsrCodes.size >= 5 &&
+      removedSsrCodes.length / previousSsrCodes.size > 0.2;
+    const ssrBroken =
+      !ssrResult?.ok ||
+      (ssrResult?.records?.length ?? 0) === 0 ||
+      ssrMassDrop;
+
+    if (ssrBroken) {
+      errors.push(
+        `Previously published SSR-only records were removed: ${removedSsrCodes.join(', ')}`
+      );
+    } else {
+      warnings.push(
+        `Previously published SSR-only records were removed upstream: ${removedSsrCodes.join(', ')}`
+      );
+    }
   }
 
   // ─── 2. TC API Gate ─────────────────────────────────────────────────────

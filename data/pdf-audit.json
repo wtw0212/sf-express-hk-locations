@@ -1,60 +1,60 @@
 {
-  "source_retrieved_at": "2026-11-24 19:09 (HKT UTC+8)",
-  "generated_at": "2026-11-24 19:09 (HKT UTC+8)",
+  "source_retrieved_at": "2026-11-25 15:31 (HKT UTC+8)",
+  "generated_at": "2026-11-25 15:31 (HKT UTC+8)",
   "documents": {
     "OK_HK_TC": {
       "source_key": "OK_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_HK_TC_810b70d735.pdf",
-      "document_retrieved_at": "2026-11-24T11:10:04.520Z",
+      "document_retrieved_at": "2026-11-25T07:32:30.525Z",
       "document_binary_sha256": "1fd5e9e291ab86b173d0c981f1d7d6a28d1afcecc8c8676f3caa14111567e54c",
       "extracted_text_sha256": "3298ce8ed680bd038dbae2bdd1dbfd462a8cb07247a2e4ebc0b84511f8b6e811"
     },
     "OK_KLN_TC": {
       "source_key": "OK_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_KLN_TC_fb9d070cdb.pdf",
-      "document_retrieved_at": "2026-11-24T11:10:04.690Z",
+      "document_retrieved_at": "2026-11-25T07:32:30.733Z",
       "document_binary_sha256": "a766e456c40e0736f7553bbcdccf69d1fe7af534ff65feadaa690b16ea7dcddb",
       "extracted_text_sha256": "9441a64fa0c82edc6bb2f6f41a38d55a790596a83822361d2ca21f2d362f663f"
     },
     "OK_NT_TC": {
       "source_key": "OK_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_NT_TC_6df1516024.pdf",
-      "document_retrieved_at": "2026-11-24T11:10:04.960Z",
+      "document_retrieved_at": "2026-11-25T07:32:31.022Z",
       "document_binary_sha256": "c50052da2a64ce74d6eac3bceacb85ef0816637841df5b06b1db3b3c43280cc0",
       "extracted_text_sha256": "eb95bd589e2f26e24f4306d35a0a8c2de07dadd2ed6c77cb7f9e92395a4eebcd"
     },
     "OK_IL_TC": {
       "source_key": "OK_IL_TC",
       "source_url": "https://hk.sf-express.com/uploads/OK_IL_TC_78edfa0b85.pdf",
-      "document_retrieved_at": "2026-11-24T11:10:05.043Z",
+      "document_retrieved_at": "2026-11-25T07:32:31.114Z",
       "document_binary_sha256": "aa0139ed2295e719d1bb929cd193cd96a796352cbcc001e61f5845288d8bf6f6",
       "extracted_text_sha256": "f533a531a655c22a52b0d3b0bde1bde28773ec0b0dcdb9c9c4bb84566e8d4789"
     },
     "ASP_HK_TC": {
       "source_key": "ASP_HK_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_HK_TC_974ad5c1ba.pdf",
-      "document_retrieved_at": "2026-11-24T11:10:05.195Z",
+      "document_retrieved_at": "2026-11-25T07:32:31.246Z",
       "document_binary_sha256": "d7379132f67fbb77d3e19fc3327d051326c1e0e04fa2c1b76b0560518ceafee9",
       "extracted_text_sha256": "eaa89cd4fae9e1f19ec1d9cb717c6a9ab88262196d2d3aee265363f51d477307"
     },
     "ASP_KLN_TC": {
       "source_key": "ASP_KLN_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_KLN_TC_8c8e57432f.pdf",
-      "document_retrieved_at": "2026-11-24T11:10:05.342Z",
+      "document_retrieved_at": "2026-11-25T07:32:31.392Z",
       "document_binary_sha256": "e2b0867838e85eefa51d93a8c323c9f0f38e9bef7c10840791288ebf3539f181",
       "extracted_text_sha256": "d571fb64f6d23b8186fff25165916bb34dd4e2f35737bbbdb2576d5cec8ac6a6"
     },
     "ASP_NT_TC": {
       "source_key": "ASP_NT_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_NT_TC_307f591507.pdf",
-      "document_retrieved_at": "2026-11-24T11:10:05.521Z",
-      "document_binary_sha256": "96423ae131aeaefc84ccd5465d0fcad3a76edeee2ea6f09b424884f6f27be11e",
-      "extracted_text_sha256": "2899a17062dd993616753f3299fbf2aa085a9727f4f011ae0634791e019b6a2c"
+      "document_retrieved_at": "2026-11-25T07:32:31.564Z",
+      "document_binary_sha256": "0d6bac79023459912ba854e590cd9cb8a69e318b0e4135874f9cd35cbe4a0990",
+      "extracted_text_sha256": "898b376201e307723f649700bdcd4f9942d27084855ad02bfef546755cd4b814"
     },
     "ASP_ISLANDS_TC": {
       "source_key": "ASP_ISLANDS_TC",
       "source_url": "https://hk.sf-express.com/uploads/ASP_Islands_TC_aa3d66b729.pdf",
-      "document_retrieved_at": "2026-11-24T11:10:05.615Z",
+      "document_retrieved_at": "2026-11-25T07:32:31.669Z",
       "document_binary_sha256": "4c7efbac82092a3631acdf241b98fee6ab00308f55fe9570c443f25ddbbf4703",
       "extracted_text_sha256": "d5cdd55ac26073d4b1f3e73f89f3de52aa3421c3f6f9b8b58098cd8a1de63a1e"
     }
@@ -11211,7 +11211,7 @@
       "code": "852MA3011",
       "api_name": "合作店 田園坊",
       "pdf_name": "堅尼地城田園坊",
-      "api_address": "香港堅尼地城吉席街30號吉豐大廈地下A鋪 田園坊*",
+      "api_address": "香港堅尼地城吉席街46至60號吉豐大廈地下A鋪 田園坊*",
       "pdf_address": "香港堅尼地城吉席街30號吉豐大廈地下A舖",
       "api_business_hours": "12:00-20:30 周六:12:00-20:30 周日:12:00-18:00 節假日:12:00-18:00",
       "pdf_business_hours": "星期一至六:12:00-20:30 星期日及公眾假期: 12:00-18:00",
@@ -11228,7 +11228,7 @@
           "classification": "semantic_conflict"
         },
         "address": {
-          "canonical": "香港堅尼地城吉席街30號吉豐大廈地下A鋪 田園坊*",
+          "canonical": "香港堅尼地城吉席街46至60號吉豐大廈地下A鋪 田園坊*",
           "pdf": "香港堅尼地城吉席街30號吉豐大廈地下A舖",
           "classification": "semantic_conflict"
         },
@@ -13847,7 +13847,7 @@
       "api_address": "新界荔景麗瑤邨富瑤樓6號鋪*（13:30-14:30午休）港聯葯業*",
       "pdf_address": "新界荔景麗瑤邨富瑤樓6號舖",
       "api_business_hours": "11:00-20:00 周六:11:00-20:00",
-      "pdf_business_hours": "星期一至六:11:00-20:00(13:30- 14:30休息) 星期日、公眾假期: 休息",
+      "pdf_business_hours": "星期一至六:11:00-19:00(13:00- 14:00休息) 星期日、公眾假期: 休息",
       "differing_fields": [
         "name",
         "address",
@@ -13867,14 +13867,14 @@
         },
         "business_hours": {
           "canonical": "11:00-20:00 周六:11:00-20:00",
-          "pdf": "星期一至六:11:00-20:00(13:30- 14:30休息) 星期日、公眾假期: 休息",
+          "pdf": "星期一至六:11:00-19:00(13:00- 14:00休息) 星期日、公眾假期: 休息",
           "classification": "semantic_conflict"
         }
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
         "row_index": 26,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荔景港聯藥業852D3001新界荔景麗瑤邨富瑤樓6號舖^852D3001^取件 星期一至六:11:00-20:00(13:30- 14:30休息) 星期日、公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 荔景港聯藥業852D3001新界荔景麗瑤邨富瑤樓6號舖^852D3001^取件 星期一至六:11:00-19:00(13:00- 14:00休息) 星期日、公眾假期: 休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
       }
     },
     {
@@ -14439,7 +14439,7 @@
       "api_address": "天水圍新北江商場2樓148號鋪（LUCKY STAR）*",
       "pdf_address": "天水圍新北江商場2樓148號舖",
       "api_business_hours": "14:00-20:00 周六:14:00-20:00",
-      "pdf_business_hours": "星期一至六:14:00-20:30 星期日及公眾假期:休息",
+      "pdf_business_hours": "星期一至六:14:00-20:00 星期日及公眾假期:休息",
       "differing_fields": [
         "name",
         "address",
@@ -14459,14 +14459,14 @@
         },
         "business_hours": {
           "canonical": "14:00-20:00 周六:14:00-20:00",
-          "pdf": "星期一至六:14:00-20:30 星期日及公眾假期:休息",
+          "pdf": "星期一至六:14:00-20:00 星期日及公眾假期:休息",
           "classification": "semantic_conflict"
         }
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
         "row_index": 45,
-        "raw_row": "快件限制 天水圍LUCKY STAR852UA3021天水圍新北江商場2樓148號舖^852UA3021^取件 星期一至六:14:00-20:30 星期日及公眾假期:休息"
+        "raw_row": "快件限制 天水圍LUCKY STAR852UA3021天水圍新北江商場2樓148號舖^852UA3021^取件 星期一至六:14:00-20:00 星期日及公眾假期:休息"
       }
     },
     {
@@ -14852,7 +14852,7 @@
       "api_address": "元朗錦上路石湖塘石田路251A號地下 NET MEAT SHOP*",
       "pdf_address": "新界錦上路石湖塘石田路251A號地下",
       "api_business_hours": "11:00-20:00 周六:11:00-19:30",
-      "pdf_business_hours": "星期一至六:11:00-20:00 星期日、公眾假期:休息",
+      "pdf_business_hours": "星期一至五:11:00-20:00 星期六:11:00-19:30 星期日、公眾假期:休息",
       "differing_fields": [
         "name",
         "address",
@@ -14872,14 +14872,14 @@
         },
         "business_hours": {
           "canonical": "11:00-20:00 周六:11:00-19:30",
-          "pdf": "星期一至六:11:00-20:00 星期日、公眾假期:休息",
+          "pdf": "星期一至五:11:00-20:00 星期六:11:00-19:30 星期日、公眾假期:休息",
           "classification": "semantic_conflict"
         }
       },
       "document_id": "ASP_NT_TC",
       "parser_location": {
         "row_index": 57,
-        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 元朗NET MEAT SHOP852UB3007新界錦上路石湖塘石田路251A號地下^852UB3007^取件 星期一至六:11:00-20:00 星期日、公眾假期:休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
+        "raw_row": "體積: 53 x 32 x 23 cm 重量: 15公斤或以下 元朗NET MEAT SHOP852UB3007新界錦上路石湖塘石田路251A號地下^852UB3007^取件 星期一至五:11:00-20:00 星期六:11:00-19:30 星期日、公眾假期:休息 體積: 53 x 32 x 23 cm 重量: 15公斤或以下 服務時間 (星期一至日及公眾假期)"
       }
     },
     {

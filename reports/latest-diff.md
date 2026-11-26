@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-25 15:31 (HKT UTC+8)`
+> **Last Updated**: `2026-11-26 15:21 (HKT UTC+8)`
 
 ---
 
@@ -8,15 +8,15 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1628 |
-| **Current total** | 1629 |
+| **Previous total** | 1629 |
+| **Current total** | 1628 |
 | **Stores** | 139 |
 | **Lockers** | 1039 |
-| **Partners** | 451 |
-| **Added** | 2 |
+| **Partners** | 450 |
+| **Added** | 0 |
 | **Removed** | 1 |
-| **Updated** | 1 |
-| **Unchanged** | 1626 |
+| **Updated** | 0 |
+| **Unchanged** | 1628 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1628 | 1629 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
+| total | 1629 | 1628 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
 | stores | 139 | 139 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| lockers | 1040 | 1039 | -1 | -0.1% | previous_locations_feed | ✅ PASS |
-| partners | 449 | 451 | +2 | +0.45% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1624 | 1625 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1622 | 1623 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| lockers | 1039 | 1039 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| partners | 451 | 450 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1625 | 1624 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1623 | 1622 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1625 |
-| EN unique codes | 1623 |
+| TC unique codes | 1624 |
+| EN unique codes | 1622 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 190 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1629 |
+| District resolved | 1628 |
 | District unresolved | 0 |
-| With English data | 1623 |
+| With English data | 1622 |
 | Missing English | 6 |
 
 ---
@@ -96,23 +96,18 @@
 
 ---
 
-## Added Locations (2)
+## Added Locations (0)
 
-- `852A3017` [順豐合作點] 合作店 路卡斯士多 -- 粉嶺粉嶺圍14號地下(路卡斯士多)*
-- `852PB3006` [順豐合作點] 合作店 CK SHOP -- 香港柴灣道333號永利中心G34鋪（CK SHOP）*
+*(No added locations)*
 
 ---
 
 ## Removed Locations (1)
 
-- `H852FE12P` [順豐智能櫃] 自助櫃 馬鞍山翠擁華庭11座 -- 香港馬鞍山翠擁華庭11座地下車場升降機大堂*
+- `852CC2028` [順豐合作點] 便利店 新都城中心OK便利店 -- 新界將軍澳新都城中心三期都會豪庭商場2樓209號鋪OK #280*
 
 ---
 
-## Updated Locations (1)
+## Updated Locations (0)
 
-- `852MA3011` 合作店 田園坊
-  - address: `"香港堅尼地城吉席街30號吉豐大廈地下A鋪 田園坊*"` -> `"香港堅尼地城吉席街46至60號吉豐大廈地下A鋪 田園坊*"`
-  - address_en: `"Shop A ,G/F,Kuk Fung Building,30 Catchick Street,Kennedy Town*"` -> `"Shop A ,G/F,Kuk Fung Building,46-60 Catchick Street,Kennedy Town*"`
-  - location.latitude: `22.2831362` -> `22.2831166`
-  - location.longitude: `114.12683689` -> `114.127717`
+*(No updated locations)*

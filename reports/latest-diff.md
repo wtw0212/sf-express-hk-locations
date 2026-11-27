@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-26 15:21 (HKT UTC+8)`
+> **Last Updated**: `2026-11-27 15:17 (HKT UTC+8)`
 
 ---
 
@@ -8,13 +8,13 @@
 
 | Metric | Count |
 | :--- | :--- |
-| **Previous total** | 1629 |
+| **Previous total** | 1628 |
 | **Current total** | 1628 |
 | **Stores** | 139 |
 | **Lockers** | 1039 |
 | **Partners** | 450 |
 | **Added** | 0 |
-| **Removed** | 1 |
+| **Removed** | 0 |
 | **Updated** | 0 |
 | **Unchanged** | 1628 |
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1629 | 1628 | -1 | -0.06% | previous_locations_feed | ✅ PASS |
+| total | 1628 | 1628 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | stores | 139 | 139 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | lockers | 1039 | 1039 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 451 | 450 | -1 | -0.22% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1625 | 1624 | -1 | -0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1623 | 1622 | -1 | -0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| partners | 450 | 450 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1624 | 1624 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1622 | 1622 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -102,9 +102,9 @@
 
 ---
 
-## Removed Locations (1)
+## Removed Locations (0)
 
-- `852CC2028` [順豐合作點] 便利店 新都城中心OK便利店 -- 新界將軍澳新都城中心三期都會豪庭商場2樓209號鋪OK #280*
+*(No removed locations)*
 
 ---
 

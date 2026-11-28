@@ -1,6 +1,6 @@
 # SF Express HK Location Sync Report
 
-> **Last Updated**: `2026-11-27 15:17 (HKT UTC+8)`
+> **Last Updated**: `2026-11-28 14:49 (HKT UTC+8)`
 
 ---
 
@@ -9,14 +9,14 @@
 | Metric | Count |
 | :--- | :--- |
 | **Previous total** | 1628 |
-| **Current total** | 1628 |
+| **Current total** | 1629 |
 | **Stores** | 139 |
 | **Lockers** | 1039 |
-| **Partners** | 450 |
-| **Added** | 0 |
-| **Removed** | 0 |
+| **Partners** | 451 |
+| **Added** | 2 |
+| **Removed** | 1 |
 | **Updated** | 0 |
-| **Unchanged** | 1628 |
+| **Unchanged** | 1627 |
 
 ---
 
@@ -24,12 +24,12 @@
 
 | Category | Previous | Current | Delta | Delta % | Baseline Source | Gate Result |
 | :--- | ---: | ---: | ---: | ---: | :--- | :--- |
-| total | 1628 | 1628 | +0 | +0% | previous_locations_feed | ✅ PASS |
+| total | 1628 | 1629 | +1 | +0.06% | previous_locations_feed | ✅ PASS |
 | stores | 139 | 139 | +0 | +0% | previous_locations_feed | ✅ PASS |
 | lockers | 1039 | 1039 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| partners | 450 | 450 | +0 | +0% | previous_locations_feed | ✅ PASS |
-| tcCodes | 1624 | 1624 | +0 | +0% | previous_metadata.coverage.tc_record_count | ✅ PASS |
-| enCodes | 1622 | 1622 | +0 | +0% | previous_metadata.coverage.en_record_count | ✅ PASS |
+| partners | 450 | 451 | +1 | +0.22% | previous_locations_feed | ✅ PASS |
+| tcCodes | 1624 | 1625 | +1 | +0.06% | previous_metadata.coverage.tc_record_count | ✅ PASS |
+| enCodes | 1622 | 1623 | +1 | +0.06% | previous_metadata.coverage.en_record_count | ✅ PASS |
 
 ---
 
@@ -39,8 +39,8 @@
 | :--- | :--- |
 | TC API areas | 112/112 succeeded |
 | EN API areas | 112/112 succeeded |
-| TC unique codes | 1624 |
-| EN unique codes | 1622 |
+| TC unique codes | 1625 |
+| EN unique codes | 1623 |
 | Partner PDF HTTP Success | 8/8 |
 | Partner PDF Parser Completed | 8/8 |
 | Partner PDF Semantic Success | 5/8 |
@@ -50,9 +50,9 @@
 | PDF Quarantine Ratio | 2.6% |
 | SSR records | 190 |
 | Bilingual match rate | 99.9% |
-| District resolved | 1628 |
+| District resolved | 1629 |
 | District unresolved | 0 |
-| With English data | 1622 |
+| With English data | 1623 |
 | Missing English | 6 |
 
 ---
@@ -63,7 +63,7 @@
 | :--- | :--- |
 | **Pipeline Blocking Errors** | 0 |
 | **Pipeline Execution Warnings** | 5 |
-| **Record Quality Warnings** | 244 |
+| **Record Quality Warnings** | 245 |
 | **Record Quality Info Flags** | 60 |
 | **Record Quality Errors** | 0 |
 
@@ -74,7 +74,7 @@
 | Flag Type | Count |
 | :--- | :--- |
 | SOURCE_TC_EN_STREET_NUMBER_CONFLICT | 93 |
-| ENGLISH_FIELD_CONTAINS_CJK | 86 |
+| ENGLISH_FIELD_CONTAINS_CJK | 87 |
 | ADMIN_DISTRICT_ALIAS_APPLIED | 42 |
 | SOURCE_TC_EN_UNIT_CONFLICT | 38 |
 | SOURCE_TC_EN_BUSINESS_HOURS_CONFLICT | 19 |
@@ -96,15 +96,16 @@
 
 ---
 
-## Added Locations (0)
+## Added Locations (2)
 
-*(No added locations)*
+- `852GA3014` [順豐合作點] 合作店 荃豐自提點 -- 新界荃灣西樓角路138-168號荃豐中心商場地下A10*荃豐自提點（14:00-15:00午休）
+- `H852FE86P` [順豐智能櫃] 自助櫃 馬鞍山恆安邨巴士總站(二號櫃) -- 香港馬鞍山恆安邨巴士總站對出位置(二號櫃)*
 
 ---
 
-## Removed Locations (0)
+## Removed Locations (1)
 
-*(No removed locations)*
+- `H852FE04P` [順豐智能櫃] 自助櫃 大圍新翠商場 -- 大圍新翠商場2樓(稻香酒樓轉彎,診所對面)*
 
 ---
 
